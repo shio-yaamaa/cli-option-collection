@@ -1,3 +1,4 @@
+import { FetchFunction, Command } from '../types';
 import { SourceDef, man7 } from '../common-fetchers/man7';
 
 // NOTE: --ignore-command-error has incorrect indentation
@@ -28,4 +29,4 @@ const sourceDef: SourceDef = {
   },
 };
 
-export const fetchTar = () => man7(sourceDef);
+export const fetchTar: FetchFunction = (): Command[] => man7(sourceDef);

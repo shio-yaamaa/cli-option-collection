@@ -1,4 +1,4 @@
-import { Fetcher } from '../types';
+import { Fetcher, Command } from '../types';
 
 export interface SourceDef {
   url: string;
@@ -24,4 +24,6 @@ export interface SourceDef {
   };
 }
 
-export const man7: Fetcher<SourceDef> = (sourceDef: SourceDef) => {};
+export const man7: Fetcher<SourceDef> = (sourceDef: SourceDef): Command[] => {
+  return [];
+};

@@ -1,3 +1,4 @@
+import { FetchFunction, Command } from '../types';
 import { SourceDef, man7 } from '../common-fetchers/man7';
 
 const sourceDef: SourceDef = {
@@ -21,4 +22,4 @@ const sourceDef: SourceDef = {
   },
 };
 
-export const fetchMkdir = () => man7(sourceDef);
+export const fetchMkdir: FetchFunction = (): Command[] => man7(sourceDef);
