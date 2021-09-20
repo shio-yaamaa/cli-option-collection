@@ -1,0 +1,8 @@
+{
+  "name": "cli-option-fetcher",
+  "version": "0.0.1",
+  "description": "Fetches options of various CLI commands.",
+  "main": "dist/index.js",
+  "author": "YaaMaa <shio.yama520@gmail.com>",
+  "license": "MIT"
+}
