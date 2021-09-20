@@ -1,5 +1,6 @@
 import { FetchFunction } from './types';
 
+import { fetchCurl } from './command-defs/curl';
 import { fetchDiff } from './command-defs/diff';
 import { fetchEcho } from './command-defs/echo';
 import { fetchFind } from './command-defs/find';
@@ -20,6 +21,7 @@ import { fetchTouch } from './command-defs/touch';
 import { fetchWhoami } from './command-defs/whoami';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
+  ['curl', fetchCurl],
   ['diff', fetchDiff],
   ['echo', fetchEcho],
   ['find', fetchFind],
