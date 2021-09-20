@@ -4,5 +4,8 @@
   "description": "Fetches options of various CLI commands.",
   "main": "dist/index.js",
   "author": "YaaMaa <shio.yama520@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.9"
+  }
 }
