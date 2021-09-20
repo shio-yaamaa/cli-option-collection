@@ -2,6 +2,7 @@ import { FetchFunction } from './types';
 
 import { fetchCurl } from './command-defs/curl';
 import { fetchDiff } from './command-defs/diff';
+import { fetchDocker } from './command-defs/docker';
 import { fetchEcho } from './command-defs/echo';
 import { fetchFind } from './command-defs/find';
 import { fetchGrep } from './command-defs/grep';
@@ -23,6 +24,7 @@ import { fetchWhoami } from './command-defs/whoami';
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['curl', fetchCurl],
   ['diff', fetchDiff],
+  ['docker', fetchDocker],
   ['echo', fetchEcho],
   ['find', fetchFind],
   ['grep', fetchGrep],
