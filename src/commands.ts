@@ -7,6 +7,7 @@ import { fetchGrep } from './command-defs/grep';
 import { fetchMkdir } from './command-defs/mkdir';
 import { fetchMv } from './command-defs/mv';
 import { fetchMysqldump } from './command-defs/mysqldump';
+import { fetchPs } from './command-defs/ps';
 import { fetchPwd } from './command-defs/pwd';
 import { fetchRm } from './command-defs/rm';
 import { fetchRsync } from './command-defs/rsync';
@@ -26,6 +27,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mkdir', fetchMkdir],
   ['mv', fetchMv],
   ['mysqldump', fetchMysqldump],
+  ['ps', fetchPs],
   ['pwd', fetchPwd],
   ['rm', fetchRm],
   ['rsync', fetchRsync],
