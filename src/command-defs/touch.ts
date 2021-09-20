@@ -22,4 +22,5 @@ const sourceDef: SourceDef = {
   },
 };
 
-export const fetchTouch: FetchFunction = (): Command[] => man7(sourceDef);
+export const fetchTouch: FetchFunction = async (): Promise<Command[]> =>
+  man7(sourceDef);

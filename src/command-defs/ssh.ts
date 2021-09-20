@@ -5,4 +5,5 @@ const sourceDef: SourceDef = {
   url: 'https://man.openbsd.org/ssh',
 };
 
-export const fetchSsh: FetchFunction = (): Command[] => openssh(sourceDef);
+export const fetchSsh: FetchFunction = async (): Promise<Command[]> =>
+  openssh(sourceDef);

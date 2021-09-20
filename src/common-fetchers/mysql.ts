@@ -4,6 +4,8 @@ export interface SourceDef {
   url: string;
 }
 
-export const mysql: Fetcher<SourceDef> = (sourceDef: SourceDef): Command[] => {
+export const mysql: Fetcher<SourceDef> = async (
+  sourceDef: SourceDef
+): Promise<Command[]> => {
   return [];
 };

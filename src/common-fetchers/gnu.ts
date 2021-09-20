@@ -4,6 +4,8 @@ export interface SourceDef {
   url: string;
 }
 
-export const gnu: Fetcher<SourceDef> = (sourceDef: SourceDef): Command[] => {
+export const gnu: Fetcher<SourceDef> = async (
+  sourceDef: SourceDef
+): Promise<Command[]> => {
   return [];
 };

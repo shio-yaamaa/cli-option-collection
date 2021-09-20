@@ -4,8 +4,8 @@ export interface SourceDef {
   url: string;
 }
 
-export const openssh: Fetcher<SourceDef> = (
+export const openssh: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
-): Command[] => {
+): Promise<Command[]> => {
   return [];
 };

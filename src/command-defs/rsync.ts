@@ -5,4 +5,5 @@ const sourceDef: SourceDef = {
   url: 'https://raw.githubusercontent.com/WayneD/rsync/master/rsync.1.md',
 };
 
-export const fetchRsync: FetchFunction = (): Command[] => rsync(sourceDef);
+export const fetchRsync: FetchFunction = async (): Promise<Command[]> =>
+  rsync(sourceDef);

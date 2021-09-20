@@ -22,4 +22,5 @@ const sourceDef: SourceDef = {
   },
 };
 
-export const fetchWhoami: FetchFunction = (): Command[] => man7(sourceDef);
+export const fetchWhoami: FetchFunction = async (): Promise<Command[]> =>
+  man7(sourceDef);

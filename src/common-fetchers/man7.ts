@@ -24,6 +24,8 @@ export interface SourceDef {
   };
 }
 
-export const man7: Fetcher<SourceDef> = (sourceDef: SourceDef): Command[] => {
+export const man7: Fetcher<SourceDef> = async (
+  sourceDef: SourceDef
+): Promise<Command[]> => {
   return [];
 };

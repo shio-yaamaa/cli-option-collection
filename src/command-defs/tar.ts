@@ -29,4 +29,5 @@ const sourceDef: SourceDef = {
   },
 };
 
-export const fetchTar: FetchFunction = (): Command[] => man7(sourceDef);
+export const fetchTar: FetchFunction = async (): Promise<Command[]> =>
+  man7(sourceDef);

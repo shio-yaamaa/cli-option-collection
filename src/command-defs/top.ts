@@ -4,6 +4,6 @@ import { FetchFunction, Command } from '../types';
 // The format is different from both coreutils and ps,
 // so maybe implement a fetcher just for top command
 
-export const fetchTop: FetchFunction = (): Command[] => {
+export const fetchTop: FetchFunction = async (): Promise<Command[]> => {
   return [];
 };

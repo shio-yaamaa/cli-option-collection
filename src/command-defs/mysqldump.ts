@@ -5,4 +5,5 @@ const sourceDef: SourceDef = {
   url: 'https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html',
 };
 
-export const fetchMysqldump: FetchFunction = (): Command[] => mysql(sourceDef);
+export const fetchMysqldump: FetchFunction = async (): Promise<Command[]> =>
+  mysql(sourceDef);

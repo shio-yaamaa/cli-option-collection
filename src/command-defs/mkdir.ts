@@ -22,4 +22,5 @@ const sourceDef: SourceDef = {
   },
 };
 
-export const fetchMkdir: FetchFunction = (): Command[] => man7(sourceDef);
+export const fetchMkdir: FetchFunction = async (): Promise<Command[]> =>
+  man7(sourceDef);

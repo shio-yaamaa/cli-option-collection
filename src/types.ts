@@ -1,5 +1,5 @@
-export type Fetcher<T> = (sourceDef: T) => Command[];
-export type FetchFunction = () => Command[];
+export type Fetcher<T> = (sourceDef: T) => Promise<Command[]>;
+export type FetchFunction = () => Promise<Command[]>;
 
 export interface Command {
   command: string;
