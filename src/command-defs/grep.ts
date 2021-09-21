@@ -1,6 +1,9 @@
 import { FetchFunction, Command } from '../types';
 import { SourceDef, man7 } from '../common-fetchers/man7';
 
+// Alternative sources:
+// - Clone https://git.savannah.gnu.org/git/grep.git and get doc/grep.texi
+
 const sourceDef: SourceDef = {
   url: 'https://man7.org/linux/man-pages/man1/grep.1.html',
   source: 'https://www.gnu.org/software/grep/', // Can be generalized as GNU. No difference from --help regarding succinctness
