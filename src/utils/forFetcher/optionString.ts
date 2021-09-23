@@ -1,5 +1,5 @@
 const SHORT_OPTION_PATTERN = /^-([A-Za-z0-9])$/;
-const LONG_OPTION_PATTERN = /^--([A-Za-z0-9]+)$/;
+const LONG_OPTION_PATTERN = /^--([A-Za-z0-9][A-Za-z0-9-]*)$/;
 
 // Example: ["-I", "--ignore"] -> { shortOptionLabels: ["I"], longOptionLabels: ["ignore"] }
 // It ignores empty option names.
