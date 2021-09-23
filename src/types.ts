@@ -7,7 +7,7 @@ export interface Command {
   longOptionDictionary: OptionDictionary;
 }
 
-type OptionDictionary = Map<string, Option>;
+export type OptionDictionary = Map<string, Option>;
 
 export interface Option {
   representation: string; // e.g. "-I, --ignore=PATTERN"
