@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'development',
@@ -19,4 +21,11 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  plugins: [
+    new webpack.IgnorePlugin({
+      resourceRegExp: /canvas/,
+      contextRegExp: /jsdom/,
+    }),
+  ],
+  externals: [nodeExternals()],
 };
