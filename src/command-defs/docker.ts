@@ -1,7 +1,7 @@
 import { URL } from 'url';
-import { JSDOM } from 'jsdom';
 
 import { FetchFunction, Command, OptionDictionary, Option } from '../types';
+import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { partitionShortAndLongOptionLabels } from '../utils/forFetcher/optionString';
 import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
 
@@ -37,7 +37,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
 const fetchSubcommandLocationsRecursively = async (
   parent: SubcommandLocation
 ): Promise<SubcommandLocation[]> => {
-  const { document } = (await JSDOM.fromURL(parent.url.toString())).window;
+  const document = await fetchDocumentFromURL(parent.url);
   const tds = Array.from(document.querySelectorAll('td'));
 
   const subcommandLocations: SubcommandLocation[] = [];
@@ -73,7 +73,7 @@ const fetchSubcommandLocationsRecursively = async (
 const fetchSubcommand = async (
   location: SubcommandLocation
 ): Promise<Command> => {
-  const { document } = (await JSDOM.fromURL(location.url.toString())).window;
+  const document = await fetchDocumentFromURL(location.url);
 
   const shortOptionDictionary: OptionDictionary = new Map();
   const longOptionDictionary: OptionDictionary = new Map();
