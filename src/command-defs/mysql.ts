@@ -5,8 +5,6 @@ import { SourceDef, mysql } from '../common-fetchers/mysql';
 // - https://github.com/mysql/mysql-server/blob/8.0/client/mysql.cc#L1637
 // - https://github.com/mysql/mysql-server/blob/8.0/man/mysql.1
 
-// BUG: "--safe-updates, --i-am-a-dummy" are not correctly fetched
-
 const sourceDef: SourceDef = {
   commandName: 'mysql',
   url: new URL(

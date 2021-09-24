@@ -78,6 +78,10 @@
         "representation": "--raw, -r",
         "description": "Write column values without escape conversion"
       },
+      "U": {
+        "representation": "--safe-updates, --i-am-a-dummy, -U",
+        "description": "Allow only UPDATE and DELETE statements that specify key values"
+      },
       "s": {
         "representation": "--silent, -s",
         "description": "Silent mode"
@@ -367,6 +371,14 @@
       "reconnect": {
         "representation": "--reconnect",
         "description": "If the connection to the server is lost, automatically try to reconnect"
+      },
+      "safe-updates": {
+        "representation": "--safe-updates, --i-am-a-dummy, -U",
+        "description": "Allow only UPDATE and DELETE statements that specify key values"
+      },
+      "i-am-a-dummy": {
+        "representation": "--safe-updates, --i-am-a-dummy, -U",
+        "description": "Allow only UPDATE and DELETE statements that specify key values"
       },
       "select-limit": {
         "representation": "--select-limit=value",

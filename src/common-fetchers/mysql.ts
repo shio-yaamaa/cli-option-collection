@@ -145,7 +145,7 @@ const findOptionCorrespondingToOptionTableItem = (
   );
 
   // Example: "--skip-named-commands" links to "--named-commands"
-  if (labels[0] !== optionTableItem.representation) {
+  if (labels[0] !== optionTableItem.representation.split(',')[0]) {
     return null;
   }
 
