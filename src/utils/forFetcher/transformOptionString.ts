@@ -1,3 +1,5 @@
+import parse from 'parenthesis';
+
 type OptionStringsTransformer = (string: string[]) => string[];
 
 export const transformOptionStrings = (
@@ -39,6 +41,11 @@ export const trimOptionalElements: OptionStringsTransformer = (
   strings: string[]
 ): string[] => {
   return strings.map((string) => {
-    return '';
+    const parsed = parse(string, {
+      brackets: ['[]'],
+      flat: true,
+      escape: '___',
+    });
+    return parsed[0].replace(/\[___[0-9]+___\]/, '');
   });
 };
