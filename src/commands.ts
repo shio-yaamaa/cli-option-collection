@@ -20,6 +20,7 @@ import { fetchTar } from './command-defs/tar';
 import { fetchTop } from './command-defs/top';
 import { fetchTouch } from './command-defs/touch';
 import { fetchWhoami } from './command-defs/whoami';
+import { fetchYarn } from './command-defs/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['curl', fetchCurl],
@@ -42,4 +43,5 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['top', fetchTop],
   ['touch', fetchTouch],
   ['whoami', fetchWhoami],
+  ['yarn', fetchYarn],
 ]);
