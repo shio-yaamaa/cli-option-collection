@@ -106,6 +106,23 @@ const sectionToCommand = (section: Section): Command | null => {
   const shortOptionDictionary: OptionDictionary = new Map();
   const longOptionDictionary: OptionDictionary = new Map();
 
+  for (const pre of section.pres) {
+    const options = preToOptions(pre);
+    const additionalShortOptionDictionary = options.shortOptionDictionary;
+    const additionalLongOptionDictionary = options.longOptionDictionary;
+
+    for (const [key, value] of additionalShortOptionDictionary.entries()) {
+      if (!shortOptionDictionary.has(key)) {
+        shortOptionDictionary.set(key, value);
+      }
+    }
+    for (const [key, value] of additionalLongOptionDictionary.entries()) {
+      if (!longOptionDictionary.has(key)) {
+        longOptionDictionary.set(key, value);
+      }
+    }
+  }
+
   for (const paragraph of section.paragraphs) {
     const maybeOption = paragraphToOption(paragraph);
     if (!maybeOption) {
@@ -150,6 +167,63 @@ const usageToCommand = (usage: string): string | null => {
     return null;
   }
   return commandWords.join(' ');
+};
+
+const FLAG_LIKE_PATTERN = /^-[A-Za-z]/;
+const DESCRIPTION_LIKE_PATTERN = /^(?:\t|(\s{4}))[^\t\s]/;
+const preToOptions = (
+  pre: string
+): {
+  shortOptionDictionary: OptionDictionary;
+  longOptionDictionary: OptionDictionary;
+} => {
+  const shortOptionDictionary: OptionDictionary = new Map();
+  const longOptionDictionary: OptionDictionary = new Map();
+
+  const lines = pre.split('\n');
+  const flagDescriptionLinesPairs: {
+    flag: string;
+    descriptionLines: string[];
+  }[] = [];
+  let isInFlag = false;
+  for (const line of lines) {
+    if (FLAG_LIKE_PATTERN.test(line)) {
+      isInFlag = true;
+      flagDescriptionLinesPairs.push({
+        flag: line,
+        descriptionLines: [],
+      });
+    } else if (DESCRIPTION_LIKE_PATTERN.test(line)) {
+      if (isInFlag) {
+        flagDescriptionLinesPairs[
+          flagDescriptionLinesPairs.length - 1
+        ].descriptionLines.push(line);
+      }
+    } else {
+      isInFlag = false;
+    }
+  }
+
+  for (const { flag, descriptionLines } of flagDescriptionLinesPairs) {
+    const label = transformOptionStrings(
+      [flag],
+      [trimOptionalElements, trimOptionArguments, trimOptionValues]
+    )[0].slice(1);
+    const description = descriptionLines.map((line) => line.trim()).join(' ');
+    const option: Option = {
+      representation: flag.trim(),
+      description,
+    };
+    (label.length === 1 ? shortOptionDictionary : longOptionDictionary).set(
+      label,
+      option
+    );
+  }
+
+  return {
+    shortOptionDictionary,
+    longOptionDictionary,
+  };
 };
 
 // Examples
