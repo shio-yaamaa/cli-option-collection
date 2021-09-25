@@ -9,6 +9,7 @@ import { fetchGrep } from './command-defs/grep';
 import { fetchMkdir } from './command-defs/mkdir';
 import { fetchMv } from './command-defs/mv';
 import { fetchMysql } from './command-defs/mysql';
+import { fetchMysqladmin } from './command-defs/mysqladmin';
 import { fetchMysqldump } from './command-defs/mysqldump';
 import { fetchPs } from './command-defs/ps';
 import { fetchPwd } from './command-defs/pwd';
@@ -33,6 +34,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mkdir', fetchMkdir],
   ['mv', fetchMv],
   ['mysql', fetchMysql],
+  ['mysqladmin', fetchMysqladmin],
   ['mysqldump', fetchMysqldump],
   ['ps', fetchPs],
   ['pwd', fetchPwd],
