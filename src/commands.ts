@@ -12,6 +12,7 @@ import { fetchMysql } from './command-defs/mysql';
 import { fetchMysqladmin } from './command-defs/mysqladmin';
 import { fetchMysqlcheck } from './command-defs/mysqlcheck';
 import { fetchMysqldump } from './command-defs/mysqldump';
+import { fetchMysqlimport } from './command-defs/mysqlimport';
 import { fetchPs } from './command-defs/ps';
 import { fetchPwd } from './command-defs/pwd';
 import { fetchRm } from './command-defs/rm';
@@ -38,6 +39,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqladmin', fetchMysqladmin],
   ['mysqlcheck', fetchMysqlcheck],
   ['mysqldump', fetchMysqldump],
+  ['mysqlimport', fetchMysqlimport],
   ['ps', fetchPs],
   ['pwd', fetchPwd],
   ['rm', fetchRm],
