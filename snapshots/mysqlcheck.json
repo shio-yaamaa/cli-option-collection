@@ -1,0 +1,349 @@
+[
+  {
+    "command": "mysqlcheck",
+    "shortOptionDictionary": {
+      "1": {
+        "representation": "--all-in-1, -1",
+        "description": "Execute a single statement for each database that names all the tables from that database"
+      },
+      "A": {
+        "representation": "--all-databases, -A",
+        "description": "Check all tables in all databases"
+      },
+      "a": {
+        "representation": "--analyze, -a",
+        "description": "Analyze the tables"
+      },
+      "c": {
+        "representation": "--check, -c",
+        "description": "Check the tables for errors"
+      },
+      "C": {
+        "representation": "--check-only-changed, -C",
+        "description": "Check only tables that have changed since the last check"
+      },
+      "g": {
+        "representation": "--check-upgrade, -g",
+        "description": "Invoke CHECK TABLE with the FOR UPGRADE option"
+      },
+      "B": {
+        "representation": "--databases, -B",
+        "description": "Interpret all arguments as database names"
+      },
+      "e": {
+        "representation": "--extended, -e",
+        "description": "Check and repair tables"
+      },
+      "F": {
+        "representation": "--fast, -F",
+        "description": "Check only tables that have not been closed properly"
+      },
+      "f": {
+        "representation": "--force, -f",
+        "description": "Continue even if an SQL error occurs"
+      },
+      "h": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "m": {
+        "representation": "--medium-check, -m",
+        "description": "Do a check that is faster than an --extended operation"
+      },
+      "o": {
+        "representation": "--optimize, -o",
+        "description": "Optimize the tables"
+      },
+      "p": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "W": {
+        "representation": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      "P": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "q": {
+        "representation": "--quick, -q",
+        "description": "The fastest method of checking"
+      },
+      "r": {
+        "representation": "--repair, -r",
+        "description": "Perform a repair that can fix almost anything except unique keys that are not unique"
+      },
+      "s": {
+        "representation": "--silent, -s",
+        "description": "Silent mode"
+      },
+      "S": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "u": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "v": {
+        "representation": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      "V": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      }
+    },
+    "longOptionDictionary": {
+      "all-databases": {
+        "representation": "--all-databases, -A",
+        "description": "Check all tables in all databases"
+      },
+      "all-in-1": {
+        "representation": "--all-in-1, -1",
+        "description": "Execute a single statement for each database that names all the tables from that database"
+      },
+      "analyze": {
+        "representation": "--analyze, -a",
+        "description": "Analyze the tables"
+      },
+      "auto-repair": {
+        "representation": "--auto-repair",
+        "description": "If a checked table is corrupted, automatically fix it"
+      },
+      "bind-address": {
+        "representation": "--bind-address=ip_address",
+        "description": "Use specified network interface to connect to MySQL Server"
+      },
+      "character-sets-dir": {
+        "representation": "--character-sets-dir=dir_name",
+        "description": "Directory where character sets are installed"
+      },
+      "check": {
+        "representation": "--check, -c",
+        "description": "Check the tables for errors"
+      },
+      "check-only-changed": {
+        "representation": "--check-only-changed, -C",
+        "description": "Check only tables that have changed since the last check"
+      },
+      "check-upgrade": {
+        "representation": "--check-upgrade, -g",
+        "description": "Invoke CHECK TABLE with the FOR UPGRADE option"
+      },
+      "compress": {
+        "representation": "--compress",
+        "description": "Compress all information sent between client and server"
+      },
+      "compression-algorithms": {
+        "representation": "--compression-algorithms=value",
+        "description": "Permitted compression algorithms for connections to server"
+      },
+      "databases": {
+        "representation": "--databases, -B",
+        "description": "Interpret all arguments as database names"
+      },
+      "debug": {
+        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+        "description": "Write debugging log"
+      },
+      "debug-check": {
+        "representation": "--debug-check",
+        "description": "Print debugging information when program exits"
+      },
+      "debug-info": {
+        "representation": "--debug-info",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      "default-auth": {
+        "representation": "--default-auth=plugin",
+        "description": "Authentication plugin to use"
+      },
+      "default-character-set": {
+        "representation": "--default-character-set=charset_name",
+        "description": "Specify default character set"
+      },
+      "defaults-extra-file": {
+        "representation": "--defaults-extra-file=file_name",
+        "description": "Read named option file in addition to usual option files"
+      },
+      "defaults-file": {
+        "representation": "--defaults-file=file_name",
+        "description": "Read only named option file"
+      },
+      "defaults-group-suffix": {
+        "representation": "--defaults-group-suffix=str",
+        "description": "Option group suffix value"
+      },
+      "enable-cleartext-plugin": {
+        "representation": "--enable-cleartext-plugin",
+        "description": "Enable cleartext authentication plugin"
+      },
+      "extended": {
+        "representation": "--extended, -e",
+        "description": "Check and repair tables"
+      },
+      "fast": {
+        "representation": "--fast, -F",
+        "description": "Check only tables that have not been closed properly"
+      },
+      "force": {
+        "representation": "--force, -f",
+        "description": "Continue even if an SQL error occurs"
+      },
+      "get-server-public-key": {
+        "representation": "--get-server-public-key",
+        "description": "Request RSA public key from server"
+      },
+      "help": {
+        "representation": "--help, -?",
+        "description": "Display help message and exit"
+      },
+      "host": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "login-path": {
+        "representation": "--login-path=name",
+        "description": "Read login path options from .mylogin.cnf"
+      },
+      "medium-check": {
+        "representation": "--medium-check, -m",
+        "description": "Do a check that is faster than an --extended operation"
+      },
+      "no-defaults": {
+        "representation": "--no-defaults",
+        "description": "Read no option files"
+      },
+      "optimize": {
+        "representation": "--optimize, -o",
+        "description": "Optimize the tables"
+      },
+      "password": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "pipe": {
+        "representation": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      "plugin-dir": {
+        "representation": "--plugin-dir=dir_name",
+        "description": "Directory where plugins are installed"
+      },
+      "port": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "print-defaults": {
+        "representation": "--print-defaults",
+        "description": "Print default options"
+      },
+      "protocol": {
+        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+        "description": "Transport protocol to use"
+      },
+      "quick": {
+        "representation": "--quick, -q",
+        "description": "The fastest method of checking"
+      },
+      "repair": {
+        "representation": "--repair, -r",
+        "description": "Perform a repair that can fix almost anything except unique keys that are not unique"
+      },
+      "server-public-key-path": {
+        "representation": "--server-public-key-path=file_name",
+        "description": "Path name to file containing RSA public key"
+      },
+      "shared-memory-base-name": {
+        "representation": "--shared-memory-base-name=name",
+        "description": "Shared-memory name for shared-memory connections (Windows only)"
+      },
+      "silent": {
+        "representation": "--silent, -s",
+        "description": "Silent mode"
+      },
+      "skip-database": {
+        "representation": "--skip-database=db_name",
+        "description": "Omit this database from performed operations"
+      },
+      "socket": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "ssl-ca": {
+        "representation": "--ssl-ca",
+        "description": "File that contains list of trusted SSL Certificate Authorities"
+      },
+      "ssl-capath": {
+        "representation": "--ssl-capath",
+        "description": "Directory that contains trusted SSL Certificate Authority certificate files"
+      },
+      "ssl-cert": {
+        "representation": "--ssl-cert",
+        "description": "File that contains X.509 certificate"
+      },
+      "ssl-cipher": {
+        "representation": "--ssl-cipher",
+        "description": "Permissible ciphers for connection encryption"
+      },
+      "ssl-crl": {
+        "representation": "--ssl-crl",
+        "description": "File that contains certificate revocation lists"
+      },
+      "ssl-crlpath": {
+        "representation": "--ssl-crlpath",
+        "description": "Directory that contains certificate revocation-list files"
+      },
+      "ssl-fips-mode": {
+        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+        "description": "Whether to enable FIPS mode on client side"
+      },
+      "ssl-key": {
+        "representation": "--ssl-key",
+        "description": "File that contains X.509 key"
+      },
+      "ssl-mode": {
+        "representation": "--ssl-mode",
+        "description": "Desired security state of connection to server"
+      },
+      "tables": {
+        "representation": "--tables",
+        "description": "Overrides the --databases or -B option"
+      },
+      "tls-ciphersuites": {
+        "representation": "--tls-ciphersuites=ciphersuite_list",
+        "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
+      },
+      "tls-version": {
+        "representation": "--tls-version=protocol_list",
+        "description": "Permissible TLS protocols for encrypted connections"
+      },
+      "use-frm": {
+        "representation": "--use-frm",
+        "description": "For repair operations on MyISAM tables"
+      },
+      "user": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "verbose": {
+        "representation": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      "version": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      "write-binlog": {
+        "representation": "--write-binlog",
+        "description": "Log ANALYZE, OPTIMIZE, REPAIR statements to binary log. --skip-write-binlog adds NO_WRITE_TO_BINLOG to these statements"
+      },
+      "zstd-compression-level": {
+        "representation": "--zstd-compression-level=level",
+        "description": "Compression level for connections to server that use zstd compression"
+      }
+    }
+  }
+]
