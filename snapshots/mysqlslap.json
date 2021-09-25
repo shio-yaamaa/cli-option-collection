@@ -1,0 +1,361 @@
+[
+  {
+    "command": "mysqlslap",
+    "shortOptionDictionary": {
+      "a": {
+        "representation": "--auto-generate-sql, -a",
+        "description": "Generate SQL statements automatically when they are not supplied in files or using command options"
+      },
+      "C": {
+        "representation": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      "c": {
+        "representation": "--concurrency=N, -c N",
+        "description": "Number of clients to simulate when issuing the SELECT statement"
+      },
+      "T": {
+        "representation": "--debug-info, -T",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      "F": {
+        "representation": "--delimiter=str, -F str",
+        "description": "Delimiter to use in SQL statements"
+      },
+      "e": {
+        "representation": "--engine=engine_name, -e engine_name",
+        "description": "Storage engine to use for creating the table"
+      },
+      "h": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "i": {
+        "representation": "--iterations=N, -i N",
+        "description": "Number of times to run the tests"
+      },
+      "x": {
+        "representation": "--number-char-cols=N, -x N",
+        "description": "Number of VARCHAR columns to use if --auto-generate-sql is specified"
+      },
+      "y": {
+        "representation": "--number-int-cols=N, -y N",
+        "description": "Number of INT columns to use if --auto-generate-sql is specified"
+      },
+      "p": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "W": {
+        "representation": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      "P": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "q": {
+        "representation": "--query=value, -q value",
+        "description": "File or string containing the SELECT statement to use for retrieving data"
+      },
+      "s": {
+        "representation": "--silent, -s",
+        "description": "Silent mode"
+      },
+      "S": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "u": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "v": {
+        "representation": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      "V": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      }
+    },
+    "longOptionDictionary": {
+      "auto-generate-sql": {
+        "representation": "--auto-generate-sql, -a",
+        "description": "Generate SQL statements automatically when they are not supplied in files or using command options"
+      },
+      "auto-generate-sql-add-autoincrement": {
+        "representation": "--auto-generate-sql-add-autoincrement",
+        "description": "Add AUTO_INCREMENT column to automatically generated tables"
+      },
+      "auto-generate-sql-execute-number": {
+        "representation": "--auto-generate-sql-execute-number=N",
+        "description": "Specify how many queries to generate automatically"
+      },
+      "auto-generate-sql-guid-primary": {
+        "representation": "--auto-generate-sql-guid-primary",
+        "description": "Add a GUID-based primary key to automatically generated tables"
+      },
+      "auto-generate-sql-load-type": {
+        "representation": "--auto-generate-sql-load-type=type",
+        "description": "Specify the test load type"
+      },
+      "auto-generate-sql-secondary-indexes": {
+        "representation": "--auto-generate-sql-secondary-indexes=N",
+        "description": "Specify how many secondary indexes to add to automatically generated tables"
+      },
+      "auto-generate-sql-unique-query-number": {
+        "representation": "--auto-generate-sql-unique-query-number=N",
+        "description": "How many different queries to generate for automatic tests"
+      },
+      "auto-generate-sql-unique-write-number": {
+        "representation": "--auto-generate-sql-unique-write-number=N",
+        "description": "How many different queries to generate for --auto-generate-sql-write-number"
+      },
+      "auto-generate-sql-write-number": {
+        "representation": "--auto-generate-sql-write-number=N",
+        "description": "How many row inserts to perform on each thread"
+      },
+      "commit": {
+        "representation": "--commit=N",
+        "description": "How many statements to execute before committing"
+      },
+      "compress": {
+        "representation": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      "compression-algorithms": {
+        "representation": "--compression-algorithms=value",
+        "description": "Permitted compression algorithms for connections to server"
+      },
+      "concurrency": {
+        "representation": "--concurrency=N, -c N",
+        "description": "Number of clients to simulate when issuing the SELECT statement"
+      },
+      "create": {
+        "representation": "--create=value",
+        "description": "File or string containing the statement to use for creating the table"
+      },
+      "create-schema": {
+        "representation": "--create-schema=value",
+        "description": "Schema in which to run the tests"
+      },
+      "csv": {
+        "representation": "--csv[=file_name]",
+        "description": "Generate output in comma-separated values format"
+      },
+      "debug": {
+        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+        "description": "Write debugging log"
+      },
+      "debug-check": {
+        "representation": "--debug-check",
+        "description": "Print debugging information when program exits"
+      },
+      "debug-info": {
+        "representation": "--debug-info, -T",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      "default-auth": {
+        "representation": "--default-auth=plugin",
+        "description": "Authentication plugin to use"
+      },
+      "defaults-extra-file": {
+        "representation": "--defaults-extra-file=file_name",
+        "description": "Read named option file in addition to usual option files"
+      },
+      "defaults-file": {
+        "representation": "--defaults-file=file_name",
+        "description": "Read only named option file"
+      },
+      "defaults-group-suffix": {
+        "representation": "--defaults-group-suffix=str",
+        "description": "Option group suffix value"
+      },
+      "delimiter": {
+        "representation": "--delimiter=str, -F str",
+        "description": "Delimiter to use in SQL statements"
+      },
+      "detach": {
+        "representation": "--detach=N",
+        "description": "Detach (close and reopen) each connection after each N statements"
+      },
+      "enable-cleartext-plugin": {
+        "representation": "--enable-cleartext-plugin",
+        "description": "Enable cleartext authentication plugin"
+      },
+      "engine": {
+        "representation": "--engine=engine_name, -e engine_name",
+        "description": "Storage engine to use for creating the table"
+      },
+      "get-server-public-key": {
+        "representation": "--get-server-public-key",
+        "description": "Request RSA public key from server"
+      },
+      "help": {
+        "representation": "--help, -?",
+        "description": "Display help message and exit"
+      },
+      "host": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "iterations": {
+        "representation": "--iterations=N, -i N",
+        "description": "Number of times to run the tests"
+      },
+      "login-path": {
+        "representation": "--login-path=name",
+        "description": "Read login path options from .mylogin.cnf"
+      },
+      "no-defaults": {
+        "representation": "--no-defaults",
+        "description": "Read no option files"
+      },
+      "no-drop": {
+        "representation": "--no-drop",
+        "description": "Do not drop any schema created during the test run"
+      },
+      "number-char-cols": {
+        "representation": "--number-char-cols=N, -x N",
+        "description": "Number of VARCHAR columns to use if --auto-generate-sql is specified"
+      },
+      "number-int-cols": {
+        "representation": "--number-int-cols=N, -y N",
+        "description": "Number of INT columns to use if --auto-generate-sql is specified"
+      },
+      "number-of-queries": {
+        "representation": "--number-of-queries=N",
+        "description": "Limit each client to approximately this number of queries"
+      },
+      "only-print": {
+        "representation": "--only-print",
+        "description": "Do not connect to databases. mysqlslap only prints what it would have done"
+      },
+      "password": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "pipe": {
+        "representation": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      "plugin-dir": {
+        "representation": "--plugin-dir=dir_name",
+        "description": "Directory where plugins are installed"
+      },
+      "port": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "post-query": {
+        "representation": "--post-query=value",
+        "description": "File or string containing the statement to execute after the tests have completed"
+      },
+      "post-system": {
+        "representation": "--post-system=str",
+        "description": "String to execute using system() after the tests have completed"
+      },
+      "pre-query": {
+        "representation": "--pre-query=value",
+        "description": "File or string containing the statement to execute before running the tests"
+      },
+      "pre-system": {
+        "representation": "--pre-system=str",
+        "description": "String to execute using system() before running the tests"
+      },
+      "print-defaults": {
+        "representation": "--print-defaults",
+        "description": "Print default options"
+      },
+      "protocol": {
+        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+        "description": "Transport protocol to use"
+      },
+      "query": {
+        "representation": "--query=value, -q value",
+        "description": "File or string containing the SELECT statement to use for retrieving data"
+      },
+      "server-public-key-path": {
+        "representation": "--server-public-key-path=file_name",
+        "description": "Path name to file containing RSA public key"
+      },
+      "shared-memory-base-name": {
+        "representation": "--shared-memory-base-name=name",
+        "description": "Shared-memory name for shared-memory connections (Windows only)"
+      },
+      "silent": {
+        "representation": "--silent, -s",
+        "description": "Silent mode"
+      },
+      "socket": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "sql-mode": {
+        "representation": "--sql-mode=mode",
+        "description": "Set SQL mode for client session"
+      },
+      "ssl-ca": {
+        "representation": "--ssl-ca",
+        "description": "File that contains list of trusted SSL Certificate Authorities"
+      },
+      "ssl-capath": {
+        "representation": "--ssl-capath",
+        "description": "Directory that contains trusted SSL Certificate Authority certificate files"
+      },
+      "ssl-cert": {
+        "representation": "--ssl-cert",
+        "description": "File that contains X.509 certificate"
+      },
+      "ssl-cipher": {
+        "representation": "--ssl-cipher",
+        "description": "Permissible ciphers for connection encryption"
+      },
+      "ssl-crl": {
+        "representation": "--ssl-crl",
+        "description": "File that contains certificate revocation lists"
+      },
+      "ssl-crlpath": {
+        "representation": "--ssl-crlpath",
+        "description": "Directory that contains certificate revocation-list files"
+      },
+      "ssl-fips-mode": {
+        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+        "description": "Whether to enable FIPS mode on client side"
+      },
+      "ssl-key": {
+        "representation": "--ssl-key",
+        "description": "File that contains X.509 key"
+      },
+      "ssl-mode": {
+        "representation": "--ssl-mode",
+        "description": "Desired security state of connection to server"
+      },
+      "tls-ciphersuites": {
+        "representation": "--tls-ciphersuites=ciphersuite_list",
+        "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
+      },
+      "tls-version": {
+        "representation": "--tls-version=protocol_list",
+        "description": "Permissible TLS protocols for encrypted connections"
+      },
+      "user": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "verbose": {
+        "representation": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      "version": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      "zstd-compression-level": {
+        "representation": "--zstd-compression-level=level",
+        "description": "Compression level for connections to server that use zstd compression"
+      }
+    }
+  }
+]
