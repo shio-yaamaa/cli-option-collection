@@ -1,0 +1,389 @@
+[
+  {
+    "command": "mysqlpump",
+    "shortOptionDictionary": {
+      "A": {
+        "representation": "--all-databases, -A",
+        "description": "Dump all databases"
+      },
+      "C": {
+        "representation": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      "B": {
+        "representation": "--databases, -B",
+        "description": "Interpret all name arguments as database names"
+      },
+      "T": {
+        "representation": "--debug-info, -T",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      "h": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "t": {
+        "representation": "--no-create-info, -t",
+        "description": "Do not write CREATE TABLE statements that re-create each dumped table"
+      },
+      "p": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "P": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "d": {
+        "representation": "--skip-dump-rows, -d",
+        "description": "Do not dump table rows"
+      },
+      "S": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "u": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "V": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      }
+    },
+    "longOptionDictionary": {
+      "add-drop-database": {
+        "representation": "--add-drop-database",
+        "description": "Add DROP DATABASE statement before each CREATE DATABASE statement"
+      },
+      "add-drop-table": {
+        "representation": "--add-drop-table",
+        "description": "Add DROP TABLE statement before each CREATE TABLE statement"
+      },
+      "add-drop-user": {
+        "representation": "--add-drop-user",
+        "description": "Add DROP USER statement before each CREATE USER statement"
+      },
+      "add-locks": {
+        "representation": "--add-locks",
+        "description": "Surround each table dump with LOCK TABLES and UNLOCK TABLES statements"
+      },
+      "all-databases": {
+        "representation": "--all-databases, -A",
+        "description": "Dump all databases"
+      },
+      "bind-address": {
+        "representation": "--bind-address=ip_address",
+        "description": "Use specified network interface to connect to MySQL Server"
+      },
+      "character-sets-dir": {
+        "representation": "--character-sets-dir=path",
+        "description": "Directory where character sets are installed"
+      },
+      "column-statistics": {
+        "representation": "--column-statistics",
+        "description": "Write ANALYZE TABLE statements to generate statistics histograms"
+      },
+      "complete-insert": {
+        "representation": "--complete-insert",
+        "description": "Use complete INSERT statements that include column names"
+      },
+      "compress": {
+        "representation": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      "compress-output": {
+        "representation": "--compress-output=algorithm",
+        "description": "Output compression algorithm"
+      },
+      "compression-algorithms": {
+        "representation": "--compression-algorithms=value",
+        "description": "Permitted compression algorithms for connections to server"
+      },
+      "databases": {
+        "representation": "--databases, -B",
+        "description": "Interpret all name arguments as database names"
+      },
+      "debug": {
+        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+        "description": "Write debugging log"
+      },
+      "debug-check": {
+        "representation": "--debug-check",
+        "description": "Print debugging information when program exits"
+      },
+      "debug-info": {
+        "representation": "--debug-info, -T",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      "default-auth": {
+        "representation": "--default-auth=plugin",
+        "description": "Authentication plugin to use"
+      },
+      "default-character-set": {
+        "representation": "--default-character-set=charset_name",
+        "description": "Specify default character set"
+      },
+      "default-parallelism": {
+        "representation": "--default-parallelism=N",
+        "description": "Default number of threads for parallel processing"
+      },
+      "defaults-extra-file": {
+        "representation": "--defaults-extra-file=file_name",
+        "description": "Read named option file in addition to usual option files"
+      },
+      "defaults-file": {
+        "representation": "--defaults-file=file_name",
+        "description": "Read only named option file"
+      },
+      "defaults-group-suffix": {
+        "representation": "--defaults-group-suffix=str",
+        "description": "Option group suffix value"
+      },
+      "defer-table-indexes": {
+        "representation": "--defer-table-indexes",
+        "description": "For reloading, defer index creation until after loading table rows"
+      },
+      "events": {
+        "representation": "--events",
+        "description": "Dump events from dumped databases"
+      },
+      "exclude-databases": {
+        "representation": "--exclude-databases=db_list",
+        "description": "Databases to exclude from dump"
+      },
+      "exclude-events": {
+        "representation": "--exclude-events=event_list",
+        "description": "Events to exclude from dump"
+      },
+      "exclude-routines": {
+        "representation": "--exclude-routines=routine_list",
+        "description": "Routines to exclude from dump"
+      },
+      "exclude-tables": {
+        "representation": "--exclude-tables=table_list",
+        "description": "Tables to exclude from dump"
+      },
+      "exclude-triggers": {
+        "representation": "--exclude-triggers=trigger_list",
+        "description": "Triggers to exclude from dump"
+      },
+      "exclude-users": {
+        "representation": "--exclude-users=user_list",
+        "description": "Users to exclude from dump"
+      },
+      "extended-insert": {
+        "representation": "--extended-insert=N",
+        "description": "Use multiple-row INSERT syntax"
+      },
+      "get-server-public-key": {
+        "representation": "--get-server-public-key",
+        "description": "Request RSA public key from server"
+      },
+      "help": {
+        "representation": "--help, -?",
+        "description": "Display help message and exit"
+      },
+      "hex-blob": {
+        "representation": "--hex-blob",
+        "description": "Dump binary columns using hexadecimal notation"
+      },
+      "host": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "include-databases": {
+        "representation": "--include-databases=db_list",
+        "description": "Databases to include in dump"
+      },
+      "include-events": {
+        "representation": "--include-events=event_list",
+        "description": "Events to include in dump"
+      },
+      "include-routines": {
+        "representation": "--include-routines=routine_list",
+        "description": "Routines to include in dump"
+      },
+      "include-tables": {
+        "representation": "--include-tables=table_list",
+        "description": "Tables to include in dump"
+      },
+      "include-triggers": {
+        "representation": "--include-triggers=trigger_list",
+        "description": "Triggers to include in dump"
+      },
+      "include-users": {
+        "representation": "--include-users=user_list",
+        "description": "Users to include in dump"
+      },
+      "insert-ignore": {
+        "representation": "--insert-ignore",
+        "description": "Write INSERT IGNORE rather than INSERT statements"
+      },
+      "log-error-file": {
+        "representation": "--log-error-file=file_name",
+        "description": "Append warnings and errors to named file"
+      },
+      "login-path": {
+        "representation": "--login-path=name",
+        "description": "Read login path options from .mylogin.cnf"
+      },
+      "max-allowed-packet": {
+        "representation": "--max-allowed-packet=N",
+        "description": "Maximum packet length to send to or receive from server"
+      },
+      "net-buffer-length": {
+        "representation": "--net-buffer-length=N",
+        "description": "Buffer size for TCP/IP and socket communication"
+      },
+      "no-create-db": {
+        "representation": "--no-create-db",
+        "description": "Do not write CREATE DATABASE statements"
+      },
+      "no-create-info": {
+        "representation": "--no-create-info, -t",
+        "description": "Do not write CREATE TABLE statements that re-create each dumped table"
+      },
+      "no-defaults": {
+        "representation": "--no-defaults",
+        "description": "Read no option files"
+      },
+      "parallel-schemas": {
+        "representation": "--parallel-schemas=[N:]db_list",
+        "description": "Specify schema-processing parallelism"
+      },
+      "password": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "plugin-dir": {
+        "representation": "--plugin-dir=dir_name",
+        "description": "Directory where plugins are installed"
+      },
+      "port": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "print-defaults": {
+        "representation": "--print-defaults",
+        "description": "Print default options"
+      },
+      "protocol": {
+        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+        "description": "Transport protocol to use"
+      },
+      "replace": {
+        "representation": "--replace",
+        "description": "Write REPLACE statements rather than INSERT statements"
+      },
+      "result-file": {
+        "representation": "--result-file=file_name",
+        "description": "Direct output to a given file"
+      },
+      "routines": {
+        "representation": "--routines",
+        "description": "Dump stored routines (procedures and functions) from dumped databases"
+      },
+      "server-public-key-path": {
+        "representation": "--server-public-key-path=file_name",
+        "description": "Path name to file containing RSA public key"
+      },
+      "set-charset": {
+        "representation": "--set-charset",
+        "description": "Add SET NAMES default_character_set to output"
+      },
+      "set-gtid-purged": {
+        "representation": "--set-gtid-purged=value",
+        "description": "Whether to add SET @@GLOBAL.GTID_PURGED to output"
+      },
+      "single-transaction": {
+        "representation": "--single-transaction",
+        "description": "Dump tables within single transaction"
+      },
+      "skip-definer": {
+        "representation": "--skip-definer",
+        "description": "Omit DEFINER and SQL SECURITY clauses from view and stored program CREATE statements"
+      },
+      "skip-dump-rows": {
+        "representation": "--skip-dump-rows, -d",
+        "description": "Do not dump table rows"
+      },
+      "socket": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "ssl-ca": {
+        "representation": "--ssl-ca",
+        "description": "File that contains list of trusted SSL Certificate Authorities"
+      },
+      "ssl-capath": {
+        "representation": "--ssl-capath",
+        "description": "Directory that contains trusted SSL Certificate Authority certificate files"
+      },
+      "ssl-cert": {
+        "representation": "--ssl-cert",
+        "description": "File that contains X.509 certificate"
+      },
+      "ssl-cipher": {
+        "representation": "--ssl-cipher",
+        "description": "Permissible ciphers for connection encryption"
+      },
+      "ssl-crl": {
+        "representation": "--ssl-crl",
+        "description": "File that contains certificate revocation lists"
+      },
+      "ssl-crlpath": {
+        "representation": "--ssl-crlpath",
+        "description": "Directory that contains certificate revocation-list files"
+      },
+      "ssl-fips-mode": {
+        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+        "description": "Whether to enable FIPS mode on client side"
+      },
+      "ssl-key": {
+        "representation": "--ssl-key",
+        "description": "File that contains X.509 key"
+      },
+      "ssl-mode": {
+        "representation": "--ssl-mode",
+        "description": "Desired security state of connection to server"
+      },
+      "tls-ciphersuites": {
+        "representation": "--tls-ciphersuites=ciphersuite_list",
+        "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
+      },
+      "tls-version": {
+        "representation": "--tls-version=protocol_list",
+        "description": "Permissible TLS protocols for encrypted connections"
+      },
+      "triggers": {
+        "representation": "--triggers",
+        "description": "Dump triggers for each dumped table"
+      },
+      "tz-utc": {
+        "representation": "--tz-utc",
+        "description": "Add SET TIME_ZONE='+00:00' to dump file"
+      },
+      "user": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "users": {
+        "representation": "--users",
+        "description": "Dump user accounts"
+      },
+      "version": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      "watch-progress": {
+        "representation": "--watch-progress",
+        "description": "Display progress indicator"
+      },
+      "zstd-compression-level": {
+        "representation": "--zstd-compression-level=level",
+        "description": "Compression level for connections to server that use zstd compression"
+      }
+    }
+  }
+]
