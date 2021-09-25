@@ -1,0 +1,237 @@
+[
+  {
+    "command": "mysqlshow",
+    "shortOptionDictionary": {
+      "C": {
+        "representation": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      "h": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "k": {
+        "representation": "--keys, -k",
+        "description": "Show table indexes"
+      },
+      "p": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "W": {
+        "representation": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      "P": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "t": {
+        "representation": "--show-table-type, -t",
+        "description": "Show a column indicating the table type"
+      },
+      "S": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "i": {
+        "representation": "--status, -i",
+        "description": "Display extra information about each table"
+      },
+      "u": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "v": {
+        "representation": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      "V": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      }
+    },
+    "longOptionDictionary": {
+      "bind-address": {
+        "representation": "--bind-address=ip_address",
+        "description": "Use specified network interface to connect to MySQL Server"
+      },
+      "compress": {
+        "representation": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      "compression-algorithms": {
+        "representation": "--compression-algorithms=value",
+        "description": "Permitted compression algorithms for connections to server"
+      },
+      "count": {
+        "representation": "--count",
+        "description": "Show the number of rows per table"
+      },
+      "debug": {
+        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+        "description": "Write debugging log"
+      },
+      "debug-check": {
+        "representation": "--debug-check",
+        "description": "Print debugging information when program exits"
+      },
+      "debug-info": {
+        "representation": "--debug-info",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      "default-auth": {
+        "representation": "--default-auth=plugin",
+        "description": "Authentication plugin to use"
+      },
+      "default-character-set": {
+        "representation": "--default-character-set=charset_name",
+        "description": "Specify default character set"
+      },
+      "defaults-extra-file": {
+        "representation": "--defaults-extra-file=file_name",
+        "description": "Read named option file in addition to usual option files"
+      },
+      "defaults-file": {
+        "representation": "--defaults-file=file_name",
+        "description": "Read only named option file"
+      },
+      "defaults-group-suffix": {
+        "representation": "--defaults-group-suffix=str",
+        "description": "Option group suffix value"
+      },
+      "enable-cleartext-plugin": {
+        "representation": "--enable-cleartext-plugin",
+        "description": "Enable cleartext authentication plugin"
+      },
+      "get-server-public-key": {
+        "representation": "--get-server-public-key",
+        "description": "Request RSA public key from server"
+      },
+      "help": {
+        "representation": "--help, -?",
+        "description": "Display help message and exit"
+      },
+      "host": {
+        "representation": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      "keys": {
+        "representation": "--keys, -k",
+        "description": "Show table indexes"
+      },
+      "login-path": {
+        "representation": "--login-path=name",
+        "description": "Read login path options from .mylogin.cnf"
+      },
+      "no-defaults": {
+        "representation": "--no-defaults",
+        "description": "Read no option files"
+      },
+      "password": {
+        "representation": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      "pipe": {
+        "representation": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      "plugin-dir": {
+        "representation": "--plugin-dir=dir_name",
+        "description": "Directory where plugins are installed"
+      },
+      "port": {
+        "representation": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      "print-defaults": {
+        "representation": "--print-defaults",
+        "description": "Print default options"
+      },
+      "protocol": {
+        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+        "description": "Transport protocol to use"
+      },
+      "server-public-key-path": {
+        "representation": "--server-public-key-path=file_name",
+        "description": "Path name to file containing RSA public key"
+      },
+      "shared-memory-base-name": {
+        "representation": "--shared-memory-base-name=name",
+        "description": "Shared-memory name for shared-memory connections (Windows only)"
+      },
+      "show-table-type": {
+        "representation": "--show-table-type, -t",
+        "description": "Show a column indicating the table type"
+      },
+      "socket": {
+        "representation": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      "ssl-ca": {
+        "representation": "--ssl-ca",
+        "description": "File that contains list of trusted SSL Certificate Authorities"
+      },
+      "ssl-capath": {
+        "representation": "--ssl-capath",
+        "description": "Directory that contains trusted SSL Certificate Authority certificate files"
+      },
+      "ssl-cert": {
+        "representation": "--ssl-cert",
+        "description": "File that contains X.509 certificate"
+      },
+      "ssl-cipher": {
+        "representation": "--ssl-cipher",
+        "description": "Permissible ciphers for connection encryption"
+      },
+      "ssl-crl": {
+        "representation": "--ssl-crl",
+        "description": "File that contains certificate revocation lists"
+      },
+      "ssl-crlpath": {
+        "representation": "--ssl-crlpath",
+        "description": "Directory that contains certificate revocation-list files"
+      },
+      "ssl-fips-mode": {
+        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+        "description": "Whether to enable FIPS mode on client side"
+      },
+      "ssl-key": {
+        "representation": "--ssl-key",
+        "description": "File that contains X.509 key"
+      },
+      "ssl-mode": {
+        "representation": "--ssl-mode",
+        "description": "Desired security state of connection to server"
+      },
+      "status": {
+        "representation": "--status, -i",
+        "description": "Display extra information about each table"
+      },
+      "tls-ciphersuites": {
+        "representation": "--tls-ciphersuites=ciphersuite_list",
+        "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
+      },
+      "tls-version": {
+        "representation": "--tls-version=protocol_list",
+        "description": "Permissible TLS protocols for encrypted connections"
+      },
+      "user": {
+        "representation": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      "verbose": {
+        "representation": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      "version": {
+        "representation": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      "zstd-compression-level": {
+        "representation": "--zstd-compression-level=level",
+        "description": "Compression level for connections to server that use zstd compression"
+      }
+    }
+  }
+]

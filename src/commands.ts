@@ -14,6 +14,7 @@ import { fetchMysqlcheck } from './command-defs/mysqlcheck';
 import { fetchMysqldump } from './command-defs/mysqldump';
 import { fetchMysqlimport } from './command-defs/mysqlimport';
 import { fetchMysqlpump } from './command-defs/mysqlpump';
+import { fetchMysqlshow } from './command-defs/mysqlshow';
 import { fetchPs } from './command-defs/ps';
 import { fetchPwd } from './command-defs/pwd';
 import { fetchRm } from './command-defs/rm';
@@ -42,6 +43,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqldump', fetchMysqldump],
   ['mysqlimport', fetchMysqlimport],
   ['mysqlpump', fetchMysqlpump],
+  ['mysqlshow', fetchMysqlshow],
   ['ps', fetchPs],
   ['pwd', fetchPwd],
   ['rm', fetchRm],
