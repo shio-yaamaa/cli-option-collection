@@ -5,6 +5,7 @@ import { fetchDiff } from './command-defs/diff';
 import { fetchDocker } from './command-defs/docker';
 import { fetchEcho } from './command-defs/echo';
 import { fetchFind } from './command-defs/find';
+import { fetchGo } from './command-defs/go';
 import { fetchGrep } from './command-defs/grep';
 import { fetchMkdir } from './command-defs/mkdir';
 import { fetchMv } from './command-defs/mv';
@@ -35,6 +36,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['docker', fetchDocker],
   ['echo', fetchEcho],
   ['find', fetchFind],
+  ['go', fetchGo],
   ['grep', fetchGrep],
   ['mkdir', fetchMkdir],
   ['mv', fetchMv],

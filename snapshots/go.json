@@ -1,0 +1,335 @@
+[
+  {
+    "command": "go build",
+    "shortOptionDictionary": {
+      "o": {
+        "representation": "-o",
+        "description": "The -o flag forces build to write the resulting executable or object to the named output file or directory, instead of the default behavior described in the last two paragraphs. If the named output is an existing directory or ends with a slash or backslash, then any resulting executables will be written to that directory."
+      },
+      "i": {
+        "representation": "-i",
+        "description": "The -i flag installs the packages that are dependencies of the target. The -i flag is deprecated. Compiled packages are cached automatically."
+      }
+    },
+    "longOptionDictionary": {
+      "asmflags": {
+        "representation": "-asmflags, -gccgoflags, -gcflags, and -ldflags",
+        "description": "The -asmflags, -gccgoflags, -gcflags, and -ldflags flags accept a space-separated list of arguments to pass to an underlying tool during the build. To embed spaces in an element in the list, surround it with either single or double quotes. The argument list may be preceded by a package pattern and an equal sign, which restricts the use of that argument list to the building of packages matching that pattern (see 'go help packages' for a description of package patterns). Without a pattern, the argument list applies only to the packages named on the command line. The flags may be repeated with different patterns in order to specify different arguments for different sets of packages. If a package matches patterns given in multiple flags, the latest match on the command line wins. For example, 'go build -gcflags=-S fmt' prints the disassembly only for package fmt, while 'go build -gcflags=all=-S fmt' prints the disassembly for fmt and all its dependencies."
+      },
+      "gccgoflags": {
+        "representation": "-asmflags, -gccgoflags, -gcflags, and -ldflags",
+        "description": "The -asmflags, -gccgoflags, -gcflags, and -ldflags flags accept a space-separated list of arguments to pass to an underlying tool during the build. To embed spaces in an element in the list, surround it with either single or double quotes. The argument list may be preceded by a package pattern and an equal sign, which restricts the use of that argument list to the building of packages matching that pattern (see 'go help packages' for a description of package patterns). Without a pattern, the argument list applies only to the packages named on the command line. The flags may be repeated with different patterns in order to specify different arguments for different sets of packages. If a package matches patterns given in multiple flags, the latest match on the command line wins. For example, 'go build -gcflags=-S fmt' prints the disassembly only for package fmt, while 'go build -gcflags=all=-S fmt' prints the disassembly for fmt and all its dependencies."
+      },
+      "gcflags": {
+        "representation": "-asmflags, -gccgoflags, -gcflags, and -ldflags",
+        "description": "The -asmflags, -gccgoflags, -gcflags, and -ldflags flags accept a space-separated list of arguments to pass to an underlying tool during the build. To embed spaces in an element in the list, surround it with either single or double quotes. The argument list may be preceded by a package pattern and an equal sign, which restricts the use of that argument list to the building of packages matching that pattern (see 'go help packages' for a description of package patterns). Without a pattern, the argument list applies only to the packages named on the command line. The flags may be repeated with different patterns in order to specify different arguments for different sets of packages. If a package matches patterns given in multiple flags, the latest match on the command line wins. For example, 'go build -gcflags=-S fmt' prints the disassembly only for package fmt, while 'go build -gcflags=all=-S fmt' prints the disassembly for fmt and all its dependencies."
+      },
+      "ldflags": {
+        "representation": "-asmflags, -gccgoflags, -gcflags, and -ldflags",
+        "description": "The -asmflags, -gccgoflags, -gcflags, and -ldflags flags accept a space-separated list of arguments to pass to an underlying tool during the build. To embed spaces in an element in the list, surround it with either single or double quotes. The argument list may be preceded by a package pattern and an equal sign, which restricts the use of that argument list to the building of packages matching that pattern (see 'go help packages' for a description of package patterns). Without a pattern, the argument list applies only to the packages named on the command line. The flags may be repeated with different patterns in order to specify different arguments for different sets of packages. If a package matches patterns given in multiple flags, the latest match on the command line wins. For example, 'go build -gcflags=-S fmt' prints the disassembly only for package fmt, while 'go build -gcflags=all=-S fmt' prints the disassembly for fmt and all its dependencies."
+      }
+    }
+  },
+  {
+    "command": "go clean",
+    "shortOptionDictionary": {
+      "i": {
+        "representation": "-i",
+        "description": "The -i flag causes clean to remove the corresponding installed archive or binary (what 'go install' would create)."
+      },
+      "n": {
+        "representation": "-n",
+        "description": "The -n flag causes clean to print the remove commands it would execute, but not run them."
+      },
+      "r": {
+        "representation": "-r",
+        "description": "The -r flag causes clean to be applied recursively to all the dependencies of the packages named by the import paths."
+      },
+      "x": {
+        "representation": "-x",
+        "description": "The -x flag causes clean to print remove commands as it executes them."
+      }
+    },
+    "longOptionDictionary": {
+      "cache": {
+        "representation": "-cache",
+        "description": "The -cache flag causes clean to remove the entire go build cache."
+      },
+      "testcache": {
+        "representation": "-testcache",
+        "description": "The -testcache flag causes clean to expire all test results in the go build cache."
+      },
+      "modcache": {
+        "representation": "-modcache",
+        "description": "The -modcache flag causes clean to remove the entire module download cache, including unpacked source code of versioned dependencies."
+      }
+    }
+  },
+  {
+    "command": "go env",
+    "shortOptionDictionary": {
+      "u": {
+        "representation": "-u",
+        "description": "The -u flag requires one or more arguments and unsets the default setting for the named environment variables, if one has been set with 'go env -w'."
+      },
+      "w": {
+        "representation": "-w",
+        "description": "The -w flag requires one or more arguments of the form NAME=VALUE and changes the default settings of the named environment variables to the given values."
+      }
+    },
+    "longOptionDictionary": {
+      "json": {
+        "representation": "-json",
+        "description": "The -json flag prints the environment in JSON format instead of as a shell script."
+      }
+    }
+  },
+  {
+    "command": "go fmt",
+    "shortOptionDictionary": {
+      "n": {
+        "representation": "-n",
+        "description": "The -n flag prints commands that would be executed. The -x flag prints commands as they are executed."
+      }
+    },
+    "longOptionDictionary": {}
+  },
+  {
+    "command": "go get",
+    "shortOptionDictionary": {
+      "t": {
+        "representation": "-t",
+        "description": "The -t flag instructs get to consider modules needed to build tests of packages specified on the command line."
+      },
+      "u": {
+        "representation": "-u",
+        "description": "The -u flag instructs get to update modules providing dependencies of packages named on the command line to use newer minor or patch releases when available."
+      },
+      "d": {
+        "representation": "-d",
+        "description": "The -d flag instructs get not to build or install packages. get will only update go.mod and download source code needed to build packages."
+      }
+    },
+    "longOptionDictionary": {}
+  },
+  {
+    "command": "go install",
+    "shortOptionDictionary": {
+      "i": {
+        "representation": "-i",
+        "description": "The -i flag installs the dependencies of the named packages as well. The -i flag is deprecated. Compiled packages are cached automatically."
+      }
+    },
+    "longOptionDictionary": {}
+  },
+  {
+    "command": "go list",
+    "shortOptionDictionary": {
+      "f": {
+        "representation": "-f",
+        "description": "The -f flag specifies an alternate format for the list, using the syntax of package template. The default output is equivalent to -f '{{.ImportPath}}'. The struct being passed to the template is:"
+      },
+      "e": {
+        "representation": "-e",
+        "description": "The -e flag changes the handling of erroneous packages, those that cannot be found or are malformed. By default, the list command prints an error to standard error for each erroneous package and omits the packages from consideration during the usual printing. With the -e flag, the list command never prints errors to standard error and instead processes the erroneous packages with the usual printing. Erroneous packages will have a non-empty ImportPath and a non-nil Error field; other information may or may not be missing (zeroed)."
+      },
+      "m": {
+        "representation": "-m",
+        "description": "The -m flag causes list to list modules instead of packages."
+      },
+      "u": {
+        "representation": "-u",
+        "description": "The -u flag adds information about available upgrades. When the latest version of a given module is newer than the current one, list -u sets the Module's Update field to information about the newer module. list -u will also set the module's Retracted field if the current version is retracted. The Module's String method indicates an available upgrade by formatting the newer version in brackets after the current version. If a version is retracted, the string \"(retracted)\" will follow it. For example, 'go list -m -u all' might print:"
+      }
+    },
+    "longOptionDictionary": {
+      "json": {
+        "representation": "-json",
+        "description": "The -json flag causes the package data to be printed in JSON format instead of using the template format."
+      },
+      "compiled": {
+        "representation": "-compiled",
+        "description": "The -compiled flag causes list to set CompiledGoFiles to the Go source files presented to the compiler. Typically this means that it repeats the files listed in GoFiles and then also adds the Go code generated by processing CgoFiles and SwigFiles. The Imports list contains the union of all imports from both GoFiles and CompiledGoFiles."
+      },
+      "deps": {
+        "representation": "-deps",
+        "description": "The -deps flag causes list to iterate over not just the named packages but also all their dependencies. It visits them in a depth-first post-order traversal, so that a package is listed only after all its dependencies. Packages not explicitly listed on the command line will have the DepOnly field set to true."
+      },
+      "export": {
+        "representation": "-export",
+        "description": "The -export flag causes list to set the Export field to the name of a file containing up-to-date export information for the given package."
+      },
+      "find": {
+        "representation": "-find",
+        "description": "The -find flag causes list to identify the named packages but not resolve their dependencies: the Imports and Deps lists will be empty."
+      },
+      "test": {
+        "representation": "-test",
+        "description": "The -test flag causes list to report not only the named packages but also their test binaries (for packages with tests), to convey to source code analysis tools exactly how test binaries are constructed. The reported import path for a test binary is the import path of the package followed by a \".test\" suffix, as in \"math/rand.test\". When building a test, it is sometimes necessary to rebuild certain dependencies specially for that test (most commonly the tested package itself). The reported import path of a package recompiled for a particular test binary is followed by a space and the name of the test binary in brackets, as in \"math/rand [math/rand.test]\" or \"regexp [sort.test]\". The ForTest field is also set to the name of the package being tested (\"math/rand\" or \"sort\" in the previous examples)."
+      },
+      "versions": {
+        "representation": "-versions",
+        "description": "The -versions flag causes list to set the Module's Versions field to a list of all known versions of that module, ordered according to semantic versioning, earliest to latest. The flag also changes the default output format to display the module path followed by the space-separated version list."
+      },
+      "retracted": {
+        "representation": "-retracted",
+        "description": "The -retracted flag causes list to report information about retracted module versions. When -retracted is used with -f or -json, the Retracted field will be set to a string explaining why the version was retracted. The string is taken from comments on the retract directive in the module's go.mod file. When -retracted is used with -versions, retracted versions are listed together with unretracted versions. The -retracted flag may be used with or without -m."
+      }
+    }
+  },
+  {
+    "command": "go mod download",
+    "shortOptionDictionary": {
+      "x": {
+        "representation": "-x",
+        "description": "The -x flag causes download to print the commands download executes."
+      }
+    },
+    "longOptionDictionary": {
+      "json": {
+        "representation": "-json",
+        "description": "The -json flag causes download to print a sequence of JSON objects to standard output, describing each downloaded module (or failure), corresponding to this Go struct:"
+      }
+    }
+  },
+  {
+    "command": "go mod edit",
+    "shortOptionDictionary": {},
+    "longOptionDictionary": {
+      "fmt": {
+        "representation": "-fmt",
+        "description": "The -fmt flag reformats the go.mod file without making other changes. This reformatting is also implied by any other modifications that use or rewrite the go.mod file. The only time this flag is needed is if no other flags are specified, as in 'go mod edit -fmt'."
+      },
+      "module": {
+        "representation": "-module",
+        "description": "The -module flag changes the module's path (the go.mod file's module line)."
+      },
+      "require": {
+        "representation": "-require=path@version and -droprequire=path",
+        "description": "The -require=path@version and -droprequire=path flags add and drop a requirement on the given module path and version. Note that -require overrides any existing requirements on path. These flags are mainly for tools that understand the module graph. Users should prefer 'go get path@version' or 'go get path@none', which make other go.mod adjustments as needed to satisfy constraints imposed by other modules."
+      },
+      "droprequire": {
+        "representation": "-require=path@version and -droprequire=path",
+        "description": "The -require=path@version and -droprequire=path flags add and drop a requirement on the given module path and version. Note that -require overrides any existing requirements on path. These flags are mainly for tools that understand the module graph. Users should prefer 'go get path@version' or 'go get path@none', which make other go.mod adjustments as needed to satisfy constraints imposed by other modules."
+      },
+      "exclude": {
+        "representation": "-exclude=path@version and -dropexclude=path@version",
+        "description": "The -exclude=path@version and -dropexclude=path@version flags add and drop an exclusion for the given module path and version. Note that -exclude=path@version is a no-op if that exclusion already exists."
+      },
+      "dropexclude": {
+        "representation": "-exclude=path@version and -dropexclude=path@version",
+        "description": "The -exclude=path@version and -dropexclude=path@version flags add and drop an exclusion for the given module path and version. Note that -exclude=path@version is a no-op if that exclusion already exists."
+      },
+      "replace": {
+        "representation": "-replace=old[@v]=new[@v]",
+        "description": "The -replace=old[@v]=new[@v] flag adds a replacement of the given module path and version pair. If the @v in old@v is omitted, a replacement without a version on the left side is added, which applies to all versions of the old module path. If the @v in new@v is omitted, the new path should be a local module root directory, not a module path. Note that -replace overrides any redundant replacements for old[@v], so omitting @v will drop existing replacements for specific versions."
+      },
+      "dropreplace": {
+        "representation": "-dropreplace=old[@v]",
+        "description": "The -dropreplace=old[@v] flag drops a replacement of the given module path and version pair. If the @v is omitted, a replacement without a version on the left side is dropped."
+      },
+      "retract": {
+        "representation": "-retract=version and -dropretract=version",
+        "description": "The -retract=version and -dropretract=version flags add and drop a retraction on the given version. The version may be a single version like \"v1.2.3\" or a closed interval like \"[v1.1.0,v1.1.9]\". Note that -retract=version is a no-op if that retraction already exists."
+      },
+      "dropretract": {
+        "representation": "-retract=version and -dropretract=version",
+        "description": "The -retract=version and -dropretract=version flags add and drop a retraction on the given version. The version may be a single version like \"v1.2.3\" or a closed interval like \"[v1.1.0,v1.1.9]\". Note that -retract=version is a no-op if that retraction already exists."
+      },
+      "go": {
+        "representation": "-go=version",
+        "description": "The -go=version flag sets the expected Go language version."
+      },
+      "print": {
+        "representation": "-print",
+        "description": "The -print flag prints the final go.mod in its text format instead of writing it back to go.mod."
+      },
+      "json": {
+        "representation": "-json",
+        "description": "The -json flag prints the final go.mod file in JSON format instead of writing it back to go.mod. The JSON output corresponds to these Go types:"
+      }
+    }
+  },
+  {
+    "command": "go mod graph",
+    "shortOptionDictionary": {},
+    "longOptionDictionary": {
+      "go": {
+        "representation": "-go",
+        "description": "The -go flag causes graph to report the module graph as loaded by the given Go version, instead of the version indicated by the 'go' directive in the go.mod file."
+      }
+    }
+  },
+  {
+    "command": "go mod tidy",
+    "shortOptionDictionary": {
+      "v": {
+        "representation": "-v",
+        "description": "The -v flag causes tidy to print information about removed modules to standard error."
+      },
+      "e": {
+        "representation": "-e",
+        "description": "The -e flag causes tidy to attempt to proceed despite errors encountered while loading packages."
+      }
+    },
+    "longOptionDictionary": {
+      "go": {
+        "representation": "-go",
+        "description": "The -go flag causes tidy to update the 'go' directive in the go.mod file to the given version, which may change which module dependencies are retained as explicit requirements in the go.mod file. (Go versions 1.17 and higher retain more requirements in order to support lazy module loading.)"
+      },
+      "compat": {
+        "representation": "-compat",
+        "description": "The -compat flag preserves any additional checksums needed for the 'go' command from the indicated major Go release to successfully load the module graph, and causes tidy to error out if that version of the 'go' command would load any imported package from a different module version. By default, tidy acts as if the -compat flag were set to the version prior to the one indicated by the 'go' directive in the go.mod file."
+      }
+    }
+  },
+  {
+    "command": "go mod vendor",
+    "shortOptionDictionary": {
+      "v": {
+        "representation": "-v",
+        "description": "The -v flag causes vendor to print the names of vendored modules and packages to standard error."
+      },
+      "e": {
+        "representation": "-e",
+        "description": "The -e flag causes vendor to attempt to proceed despite errors encountered while loading packages."
+      }
+    },
+    "longOptionDictionary": {}
+  },
+  {
+    "command": "go tool",
+    "shortOptionDictionary": {
+      "n": {
+        "representation": "-n",
+        "description": "The -n flag causes tool to print the command that would be executed but not execute it."
+      }
+    },
+    "longOptionDictionary": {}
+  },
+  {
+    "command": "go version",
+    "shortOptionDictionary": {
+      "m": {
+        "representation": "-m",
+        "description": "The -m flag causes go version to print each executable's embedded module version information, when available. In the output, the module information consists of multiple lines following the version line, each indented by a leading tab character."
+      }
+    },
+    "longOptionDictionary": {}
+  },
+  {
+    "command": "go vet",
+    "shortOptionDictionary": {
+      "n": {
+        "representation": "-n",
+        "description": "The -n flag prints commands that would be executed. The -x flag prints commands as they are executed."
+      }
+    },
+    "longOptionDictionary": {
+      "vettool": {
+        "representation": "-vettool=prog",
+        "description": "The -vettool=prog flag selects a different analysis tool with alternative or additional checks. For example, the 'shadow' analyzer can be built and run using these commands:"
+      }
+    }
+  }
+]
