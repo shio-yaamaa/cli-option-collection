@@ -1,525 +1,781 @@
 [
   {
-    "command": "mysql",
-    "shortOptionDictionary": {
-      "B": {
-        "representation": "--batch, -B",
-        "description": "Do not use history file"
-      },
-      "c": {
-        "representation": "--comments, -c",
-        "description": "Whether to retain or strip comments in statements sent to the server"
-      },
-      "C": {
-        "representation": "--compress, -C",
-        "description": "Compress all information sent between client and server"
-      },
-      "D": {
-        "representation": "--database=db_name, -D db_name",
-        "description": "The database to use"
-      },
-      "T": {
-        "representation": "--debug-info, -T",
-        "description": "Print debugging information, memory, and CPU statistics when program exits"
-      },
-      "e": {
-        "representation": "--execute=statement, -e statement",
-        "description": "Execute the statement and quit"
-      },
-      "f": {
-        "representation": "--force, -f",
-        "description": "Continue even if an SQL error occurs"
-      },
-      "h": {
-        "representation": "--host=host_name, -h host_name",
-        "description": "Host on which MySQL server is located"
-      },
-      "H": {
-        "representation": "--html, -H",
-        "description": "Produce HTML output"
-      },
-      "i": {
-        "representation": "--ignore-spaces, -i",
-        "description": "Ignore spaces after function names"
-      },
-      "G": {
-        "representation": "--named-commands, -G",
-        "description": "Enable named mysql commands"
-      },
-      "A": {
-        "representation": "--no-auto-rehash, -A",
-        "description": "Disable automatic rehashing"
-      },
-      "b": {
-        "representation": "--no-beep, -b",
-        "description": "Do not beep when errors occur"
-      },
-      "o": {
-        "representation": "--one-database, -o",
-        "description": "Ignore statements except those for the default database named on the command line"
-      },
-      "p": {
-        "representation": "--password[=password], -p[password]",
-        "description": "Password to use when connecting to server"
-      },
-      "W": {
-        "representation": "--pipe, -W",
-        "description": "Connect to server using named pipe (Windows only)"
-      },
-      "P": {
-        "representation": "--port=port_num, -P port_num",
-        "description": "TCP/IP port number for connection"
-      },
-      "q": {
-        "representation": "--quick, -q",
-        "description": "Do not cache each query result"
-      },
-      "r": {
-        "representation": "--raw, -r",
-        "description": "Write column values without escape conversion"
-      },
-      "U": {
-        "representation": "--safe-updates, --i-am-a-dummy, -U",
-        "description": "Allow only UPDATE and DELETE statements that specify key values"
-      },
-      "s": {
-        "representation": "--silent, -s",
-        "description": "Silent mode"
-      },
-      "N": {
-        "representation": "--skip-column-names, -N",
-        "description": "Do not write column names in results"
-      },
-      "L": {
-        "representation": "--skip-line-numbers, -L",
-        "description": "Skip line numbers for errors"
-      },
-      "S": {
-        "representation": "--socket=path, -S path",
-        "description": "Unix socket file or Windows named pipe to use"
-      },
-      "j": {
-        "representation": "--syslog, -j",
-        "description": "Log interactive statements to syslog"
-      },
-      "t": {
-        "representation": "--table, -t",
-        "description": "Display output in tabular format"
-      },
-      "n": {
-        "representation": "--unbuffered, -n",
-        "description": "Flush the buffer after each query"
-      },
-      "u": {
-        "representation": "--user=user_name, -u user_name",
-        "description": "MySQL user name to use when connecting to server"
-      },
-      "v": {
-        "representation": "--verbose, -v",
-        "description": "Verbose mode"
-      },
-      "V": {
-        "representation": "--version, -V",
-        "description": "Display version information and exit"
-      },
-      "E": {
-        "representation": "--vertical, -E",
-        "description": "Print query output rows vertically (one line per column value)"
-      },
-      "w": {
-        "representation": "--wait, -w",
-        "description": "If the connection cannot be established, wait and retry instead of aborting"
-      },
-      "X": {
-        "representation": "--xml, -X",
-        "description": "Produce XML output"
-      }
-    },
-    "longOptionDictionary": {
-      "auto-rehash": {
-        "representation": "--auto-rehash",
+    "name": "mysql",
+    "options": [
+      {
+        "type": "long",
+        "key": "auto-rehash",
+        "title": "--auto-rehash",
         "description": "Enable automatic rehashing"
       },
-      "auto-vertical-output": {
-        "representation": "--auto-vertical-output",
+      {
+        "type": "long",
+        "key": "auto-vertical-output",
+        "title": "--auto-vertical-output",
         "description": "Enable automatic vertical result set display"
       },
-      "batch": {
-        "representation": "--batch, -B",
+      {
+        "type": "long",
+        "key": "batch",
+        "title": "--batch, -B",
         "description": "Do not use history file"
       },
-      "binary-as-hex": {
-        "representation": "--binary-as-hex",
+      {
+        "type": "short",
+        "key": "B",
+        "title": "--batch, -B",
+        "description": "Do not use history file"
+      },
+      {
+        "type": "long",
+        "key": "binary-as-hex",
+        "title": "--binary-as-hex",
         "description": "Display binary values in hexadecimal notation"
       },
-      "binary-mode": {
-        "representation": "--binary-mode",
+      {
+        "type": "long",
+        "key": "binary-mode",
+        "title": "--binary-mode",
         "description": "Disable \\r\\n - to - \\n translation and treatment of \\0 as end-of-query"
       },
-      "bind-address": {
-        "representation": "--bind-address=ip_address",
+      {
+        "type": "long",
+        "key": "bind-address",
+        "title": "--bind-address=ip_address",
         "description": "Use specified network interface to connect to MySQL Server"
       },
-      "character-sets-dir": {
-        "representation": "--character-sets-dir=dir_name",
+      {
+        "type": "long",
+        "key": "character-sets-dir",
+        "title": "--character-sets-dir=dir_name",
         "description": "Directory where character sets are installed"
       },
-      "column-names": {
-        "representation": "--column-names",
+      {
+        "type": "long",
+        "key": "column-names",
+        "title": "--column-names",
         "description": "Write column names in results"
       },
-      "column-type-info": {
-        "representation": "--column-type-info",
+      {
+        "type": "long",
+        "key": "column-type-info",
+        "title": "--column-type-info",
         "description": "Display result set metadata"
       },
-      "comments": {
-        "representation": "--comments, -c",
+      {
+        "type": "long",
+        "key": "comments",
+        "title": "--comments, -c",
         "description": "Whether to retain or strip comments in statements sent to the server"
       },
-      "compress": {
-        "representation": "--compress, -C",
+      {
+        "type": "short",
+        "key": "c",
+        "title": "--comments, -c",
+        "description": "Whether to retain or strip comments in statements sent to the server"
+      },
+      {
+        "type": "long",
+        "key": "compress",
+        "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
-      "compression-algorithms": {
-        "representation": "--compression-algorithms=value",
+      {
+        "type": "short",
+        "key": "C",
+        "title": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      {
+        "type": "long",
+        "key": "compression-algorithms",
+        "title": "--compression-algorithms=value",
         "description": "Permitted compression algorithms for connections to server"
       },
-      "connect-expired-password": {
-        "representation": "--connect-expired-password",
+      {
+        "type": "long",
+        "key": "connect-expired-password",
+        "title": "--connect-expired-password",
         "description": "Indicate to server that client can handle expired-password sandbox mode"
       },
-      "connect-timeout": {
-        "representation": "--connect-timeout=value",
+      {
+        "type": "long",
+        "key": "connect-timeout",
+        "title": "--connect-timeout=value",
         "description": "Number of seconds before connection timeout"
       },
-      "database": {
-        "representation": "--database=db_name, -D db_name",
+      {
+        "type": "long",
+        "key": "database",
+        "title": "--database=db_name, -D db_name",
         "description": "The database to use"
       },
-      "debug": {
-        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+      {
+        "type": "short",
+        "key": "D",
+        "title": "--database=db_name, -D db_name",
+        "description": "The database to use"
+      },
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug[=debug_options], -#\n            [debug_options]",
         "description": "Write debugging log; supported only if MySQL was built with debugging support"
       },
-      "debug-check": {
-        "representation": "--debug-check",
+      {
+        "type": "long",
+        "key": "debug-check",
+        "title": "--debug-check",
         "description": "Print debugging information when program exits"
       },
-      "debug-info": {
-        "representation": "--debug-info, -T",
+      {
+        "type": "long",
+        "key": "debug-info",
+        "title": "--debug-info, -T",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
-      "default-auth": {
-        "representation": "--default-auth=plugin",
+      {
+        "type": "short",
+        "key": "T",
+        "title": "--debug-info, -T",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      {
+        "type": "long",
+        "key": "default-auth",
+        "title": "--default-auth=plugin",
         "description": "Authentication plugin to use"
       },
-      "default-character-set": {
-        "representation": "--default-character-set=charset_name",
+      {
+        "type": "long",
+        "key": "default-character-set",
+        "title": "--default-character-set=charset_name",
         "description": "Specify default character set"
       },
-      "defaults-extra-file": {
-        "representation": "--defaults-extra-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-extra-file",
+        "title": "--defaults-extra-file=file_name",
         "description": "Read named option file in addition to usual option files"
       },
-      "defaults-file": {
-        "representation": "--defaults-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-file",
+        "title": "--defaults-file=file_name",
         "description": "Read only named option file"
       },
-      "defaults-group-suffix": {
-        "representation": "--defaults-group-suffix=str",
+      {
+        "type": "long",
+        "key": "defaults-group-suffix",
+        "title": "--defaults-group-suffix=str",
         "description": "Option group suffix value"
       },
-      "delimiter": {
-        "representation": "--delimiter=str",
+      {
+        "type": "long",
+        "key": "delimiter",
+        "title": "--delimiter=str",
         "description": "Set the statement delimiter"
       },
-      "dns-srv-name": {
-        "representation": "--dns-srv-name=name",
+      {
+        "type": "long",
+        "key": "dns-srv-name",
+        "title": "--dns-srv-name=name",
         "description": "Use DNS SRV lookup for host information"
       },
-      "enable-cleartext-plugin": {
-        "representation": "--enable-cleartext-plugin",
+      {
+        "type": "long",
+        "key": "enable-cleartext-plugin",
+        "title": "--enable-cleartext-plugin",
         "description": "Enable cleartext authentication plugin"
       },
-      "execute": {
-        "representation": "--execute=statement, -e statement",
+      {
+        "type": "long",
+        "key": "execute",
+        "title": "--execute=statement, -e statement",
         "description": "Execute the statement and quit"
       },
-      "force": {
-        "representation": "--force, -f",
+      {
+        "type": "short",
+        "key": "e",
+        "title": "--execute=statement, -e statement",
+        "description": "Execute the statement and quit"
+      },
+      {
+        "type": "long",
+        "key": "force",
+        "title": "--force, -f",
         "description": "Continue even if an SQL error occurs"
       },
-      "get-server-public-key": {
-        "representation": "--get-server-public-key",
+      {
+        "type": "short",
+        "key": "f",
+        "title": "--force, -f",
+        "description": "Continue even if an SQL error occurs"
+      },
+      {
+        "type": "long",
+        "key": "get-server-public-key",
+        "title": "--get-server-public-key",
         "description": "Request RSA public key from server"
       },
-      "help": {
-        "representation": "--help, -?",
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help, -?",
         "description": "Display help message and exit"
       },
-      "histignore": {
-        "representation": "--histignore",
+      {
+        "type": "long",
+        "key": "histignore",
+        "title": "--histignore",
         "description": "Patterns specifying which statements to ignore for logging"
       },
-      "host": {
-        "representation": "--host=host_name, -h host_name",
+      {
+        "type": "long",
+        "key": "host",
+        "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
-      "html": {
-        "representation": "--html, -H",
+      {
+        "type": "short",
+        "key": "h",
+        "title": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      {
+        "type": "long",
+        "key": "html",
+        "title": "--html, -H",
         "description": "Produce HTML output"
       },
-      "ignore-spaces": {
-        "representation": "--ignore-spaces, -i",
+      {
+        "type": "short",
+        "key": "H",
+        "title": "--html, -H",
+        "description": "Produce HTML output"
+      },
+      {
+        "type": "long",
+        "key": "ignore-spaces",
+        "title": "--ignore-spaces, -i",
         "description": "Ignore spaces after function names"
       },
-      "init-command": {
-        "representation": "--init-command=str",
+      {
+        "type": "short",
+        "key": "i",
+        "title": "--ignore-spaces, -i",
+        "description": "Ignore spaces after function names"
+      },
+      {
+        "type": "long",
+        "key": "init-command",
+        "title": "--init-command=str",
         "description": "SQL statement to execute after connecting"
       },
-      "line-numbers": {
-        "representation": "--line-numbers",
+      {
+        "type": "long",
+        "key": "line-numbers",
+        "title": "--line-numbers",
         "description": "Write line numbers for errors"
       },
-      "load-data-local-dir": {
-        "representation": "--load-data-local-dir=dir_name",
+      {
+        "type": "long",
+        "key": "load-data-local-dir",
+        "title": "--load-data-local-dir=dir_name",
         "description": "Directory for files named in LOAD DATA LOCAL statements"
       },
-      "local-infile": {
-        "representation": "--local-infile[={0|1}]",
+      {
+        "type": "long",
+        "key": "local-infile",
+        "title": "--local-infile[={0|1}]",
         "description": "Enable or disable for LOCAL capability for LOAD DATA"
       },
-      "login-path": {
-        "representation": "--login-path=name",
+      {
+        "type": "long",
+        "key": "login-path",
+        "title": "--login-path=name",
         "description": "Read login path options from .mylogin.cnf"
       },
-      "max-allowed-packet": {
-        "representation": "--max-allowed-packet=value",
+      {
+        "type": "long",
+        "key": "max-allowed-packet",
+        "title": "--max-allowed-packet=value",
         "description": "Maximum packet length to send to or receive from server"
       },
-      "max-join-size": {
-        "representation": "--max-join-size=value",
+      {
+        "type": "long",
+        "key": "max-join-size",
+        "title": "--max-join-size=value",
         "description": "The automatic limit for rows in a join when using --safe-updates"
       },
-      "named-commands": {
-        "representation": "--named-commands, -G",
+      {
+        "type": "long",
+        "key": "named-commands",
+        "title": "--named-commands, -G",
         "description": "Enable named mysql commands"
       },
-      "net-buffer-length": {
-        "representation": "--net-buffer-length=value",
+      {
+        "type": "short",
+        "key": "G",
+        "title": "--named-commands, -G",
+        "description": "Enable named mysql commands"
+      },
+      {
+        "type": "long",
+        "key": "net-buffer-length",
+        "title": "--net-buffer-length=value",
         "description": "Buffer size for TCP/IP and socket communication"
       },
-      "network-namespace": {
-        "representation": "--network-namespace=name",
+      {
+        "type": "long",
+        "key": "network-namespace",
+        "title": "--network-namespace=name",
         "description": "Specify network namespace"
       },
-      "no-auto-rehash": {
-        "representation": "--no-auto-rehash, -A",
+      {
+        "type": "long",
+        "key": "no-auto-rehash",
+        "title": "--no-auto-rehash, -A",
         "description": "Disable automatic rehashing"
       },
-      "no-beep": {
-        "representation": "--no-beep, -b",
+      {
+        "type": "short",
+        "key": "A",
+        "title": "--no-auto-rehash, -A",
+        "description": "Disable automatic rehashing"
+      },
+      {
+        "type": "long",
+        "key": "no-beep",
+        "title": "--no-beep, -b",
         "description": "Do not beep when errors occur"
       },
-      "no-defaults": {
-        "representation": "--no-defaults",
+      {
+        "type": "short",
+        "key": "b",
+        "title": "--no-beep, -b",
+        "description": "Do not beep when errors occur"
+      },
+      {
+        "type": "long",
+        "key": "no-defaults",
+        "title": "--no-defaults",
         "description": "Read no option files"
       },
-      "one-database": {
-        "representation": "--one-database, -o",
+      {
+        "type": "long",
+        "key": "one-database",
+        "title": "--one-database, -o",
         "description": "Ignore statements except those for the default database named on the command line"
       },
-      "pager": {
-        "representation": "--pager[=command]",
+      {
+        "type": "short",
+        "key": "o",
+        "title": "--one-database, -o",
+        "description": "Ignore statements except those for the default database named on the command line"
+      },
+      {
+        "type": "long",
+        "key": "pager",
+        "title": "--pager[=command]",
         "description": "Use the given command for paging query output"
       },
-      "password": {
-        "representation": "--password[=password], -p[password]",
+      {
+        "type": "long",
+        "key": "password",
+        "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
-      "pipe": {
-        "representation": "--pipe, -W",
+      {
+        "type": "short",
+        "key": "p",
+        "title": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "pipe",
+        "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"
       },
-      "plugin-dir": {
-        "representation": "--plugin-dir=dir_name",
+      {
+        "type": "short",
+        "key": "W",
+        "title": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      {
+        "type": "long",
+        "key": "plugin-dir",
+        "title": "--plugin-dir=dir_name",
         "description": "Directory where plugins are installed"
       },
-      "port": {
-        "representation": "--port=port_num, -P port_num",
+      {
+        "type": "long",
+        "key": "port",
+        "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
-      "print-defaults": {
-        "representation": "--print-defaults",
+      {
+        "type": "short",
+        "key": "P",
+        "title": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      {
+        "type": "long",
+        "key": "print-defaults",
+        "title": "--print-defaults",
         "description": "Print default options"
       },
-      "prompt": {
-        "representation": "--prompt=format_str",
+      {
+        "type": "long",
+        "key": "prompt",
+        "title": "--prompt=format_str",
         "description": "Set the prompt to the specified format"
       },
-      "protocol": {
-        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+      {
+        "type": "long",
+        "key": "protocol",
+        "title": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
         "description": "Transport protocol to use"
       },
-      "quick": {
-        "representation": "--quick, -q",
+      {
+        "type": "long",
+        "key": "quick",
+        "title": "--quick, -q",
         "description": "Do not cache each query result"
       },
-      "raw": {
-        "representation": "--raw, -r",
+      {
+        "type": "short",
+        "key": "q",
+        "title": "--quick, -q",
+        "description": "Do not cache each query result"
+      },
+      {
+        "type": "long",
+        "key": "raw",
+        "title": "--raw, -r",
         "description": "Write column values without escape conversion"
       },
-      "reconnect": {
-        "representation": "--reconnect",
+      {
+        "type": "short",
+        "key": "r",
+        "title": "--raw, -r",
+        "description": "Write column values without escape conversion"
+      },
+      {
+        "type": "long",
+        "key": "reconnect",
+        "title": "--reconnect",
         "description": "If the connection to the server is lost, automatically try to reconnect"
       },
-      "safe-updates": {
-        "representation": "--safe-updates, --i-am-a-dummy, -U",
+      {
+        "type": "long",
+        "key": "safe-updates",
+        "title": "--safe-updates, --i-am-a-dummy, -U",
         "description": "Allow only UPDATE and DELETE statements that specify key values"
       },
-      "i-am-a-dummy": {
-        "representation": "--safe-updates, --i-am-a-dummy, -U",
+      {
+        "type": "long",
+        "key": "i-am-a-dummy",
+        "title": "--safe-updates, --i-am-a-dummy, -U",
         "description": "Allow only UPDATE and DELETE statements that specify key values"
       },
-      "select-limit": {
-        "representation": "--select-limit=value",
+      {
+        "type": "short",
+        "key": "U",
+        "title": "--safe-updates, --i-am-a-dummy, -U",
+        "description": "Allow only UPDATE and DELETE statements that specify key values"
+      },
+      {
+        "type": "long",
+        "key": "select-limit",
+        "title": "--select-limit=value",
         "description": "The automatic limit for SELECT statements when using --safe-updates"
       },
-      "server-public-key-path": {
-        "representation": "--server-public-key-path=file_name",
+      {
+        "type": "long",
+        "key": "server-public-key-path",
+        "title": "--server-public-key-path=file_name",
         "description": "Path name to file containing RSA public key"
       },
-      "shared-memory-base-name": {
-        "representation": "--shared-memory-base-name=name",
+      {
+        "type": "long",
+        "key": "shared-memory-base-name",
+        "title": "--shared-memory-base-name=name",
         "description": "Shared-memory name for shared-memory connections (Windows only)"
       },
-      "show-warnings": {
-        "representation": "--show-warnings",
+      {
+        "type": "long",
+        "key": "show-warnings",
+        "title": "--show-warnings",
         "description": "Show warnings after each statement if there are any"
       },
-      "sigint-ignore": {
-        "representation": "--sigint-ignore",
+      {
+        "type": "long",
+        "key": "sigint-ignore",
+        "title": "--sigint-ignore",
         "description": "Ignore SIGINT signals (typically the result of typing Control+C)"
       },
-      "silent": {
-        "representation": "--silent, -s",
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "--silent, -s",
         "description": "Silent mode"
       },
-      "skip-auto-rehash": {
-        "representation": "--skip-auto-rehash",
+      {
+        "type": "short",
+        "key": "s",
+        "title": "--silent, -s",
+        "description": "Silent mode"
+      },
+      {
+        "type": "long",
+        "key": "skip-auto-rehash",
+        "title": "--skip-auto-rehash",
         "description": "Disable automatic rehashing"
       },
-      "skip-column-names": {
-        "representation": "--skip-column-names, -N",
+      {
+        "type": "long",
+        "key": "skip-column-names",
+        "title": "--skip-column-names, -N",
         "description": "Do not write column names in results"
       },
-      "skip-line-numbers": {
-        "representation": "--skip-line-numbers, -L",
+      {
+        "type": "short",
+        "key": "N",
+        "title": "--skip-column-names, -N",
+        "description": "Do not write column names in results"
+      },
+      {
+        "type": "long",
+        "key": "skip-line-numbers",
+        "title": "--skip-line-numbers, -L",
         "description": "Skip line numbers for errors"
       },
-      "skip-named-commands": {
-        "representation": "--skip-named-commands",
+      {
+        "type": "short",
+        "key": "L",
+        "title": "--skip-line-numbers, -L",
+        "description": "Skip line numbers for errors"
+      },
+      {
+        "type": "long",
+        "key": "skip-named-commands",
+        "title": "--skip-named-commands",
         "description": "Disable named mysql commands"
       },
-      "skip-pager": {
-        "representation": "--skip-pager",
+      {
+        "type": "long",
+        "key": "skip-pager",
+        "title": "--skip-pager",
         "description": "Disable paging"
       },
-      "skip-reconnect": {
-        "representation": "--skip-reconnect",
+      {
+        "type": "long",
+        "key": "skip-reconnect",
+        "title": "--skip-reconnect",
         "description": "Disable reconnecting"
       },
-      "socket": {
-        "representation": "--socket=path, -S path",
+      {
+        "type": "long",
+        "key": "socket",
+        "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
-      "ssl-ca": {
-        "representation": "--ssl-ca",
+      {
+        "type": "short",
+        "key": "S",
+        "title": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      {
+        "type": "long",
+        "key": "ssl-ca",
+        "title": "--ssl-ca",
         "description": "File that contains list of trusted SSL Certificate Authorities"
       },
-      "ssl-capath": {
-        "representation": "--ssl-capath",
+      {
+        "type": "long",
+        "key": "ssl-capath",
+        "title": "--ssl-capath",
         "description": "Directory that contains trusted SSL Certificate Authority certificate files"
       },
-      "ssl-cert": {
-        "representation": "--ssl-cert",
+      {
+        "type": "long",
+        "key": "ssl-cert",
+        "title": "--ssl-cert",
         "description": "File that contains X.509 certificate"
       },
-      "ssl-cipher": {
-        "representation": "--ssl-cipher",
+      {
+        "type": "long",
+        "key": "ssl-cipher",
+        "title": "--ssl-cipher",
         "description": "Permissible ciphers for connection encryption"
       },
-      "ssl-crl": {
-        "representation": "--ssl-crl",
+      {
+        "type": "long",
+        "key": "ssl-crl",
+        "title": "--ssl-crl",
         "description": "File that contains certificate revocation lists"
       },
-      "ssl-crlpath": {
-        "representation": "--ssl-crlpath",
+      {
+        "type": "long",
+        "key": "ssl-crlpath",
+        "title": "--ssl-crlpath",
         "description": "Directory that contains certificate revocation-list files"
       },
-      "ssl-fips-mode": {
-        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+      {
+        "type": "long",
+        "key": "ssl-fips-mode",
+        "title": "--ssl-fips-mode={OFF|ON|STRICT}",
         "description": "Whether to enable FIPS mode on client side"
       },
-      "ssl-key": {
-        "representation": "--ssl-key",
+      {
+        "type": "long",
+        "key": "ssl-key",
+        "title": "--ssl-key",
         "description": "File that contains X.509 key"
       },
-      "ssl-mode": {
-        "representation": "--ssl-mode",
+      {
+        "type": "long",
+        "key": "ssl-mode",
+        "title": "--ssl-mode",
         "description": "Desired security state of connection to server"
       },
-      "syslog": {
-        "representation": "--syslog, -j",
+      {
+        "type": "long",
+        "key": "syslog",
+        "title": "--syslog, -j",
         "description": "Log interactive statements to syslog"
       },
-      "table": {
-        "representation": "--table, -t",
+      {
+        "type": "short",
+        "key": "j",
+        "title": "--syslog, -j",
+        "description": "Log interactive statements to syslog"
+      },
+      {
+        "type": "long",
+        "key": "table",
+        "title": "--table, -t",
         "description": "Display output in tabular format"
       },
-      "tee": {
-        "representation": "--tee=file_name",
+      {
+        "type": "short",
+        "key": "t",
+        "title": "--table, -t",
+        "description": "Display output in tabular format"
+      },
+      {
+        "type": "long",
+        "key": "tee",
+        "title": "--tee=file_name",
         "description": "Append a copy of output to named file"
       },
-      "tls-ciphersuites": {
-        "representation": "--tls-ciphersuites=ciphersuite_list",
+      {
+        "type": "long",
+        "key": "tls-ciphersuites",
+        "title": "--tls-ciphersuites=ciphersuite_list",
         "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
       },
-      "tls-version": {
-        "representation": "--tls-version=protocol_list",
+      {
+        "type": "long",
+        "key": "tls-version",
+        "title": "--tls-version=protocol_list",
         "description": "Permissible TLS protocols for encrypted connections"
       },
-      "unbuffered": {
-        "representation": "--unbuffered, -n",
+      {
+        "type": "long",
+        "key": "unbuffered",
+        "title": "--unbuffered, -n",
         "description": "Flush the buffer after each query"
       },
-      "user": {
-        "representation": "--user=user_name, -u user_name",
+      {
+        "type": "short",
+        "key": "n",
+        "title": "--unbuffered, -n",
+        "description": "Flush the buffer after each query"
+      },
+      {
+        "type": "long",
+        "key": "user",
+        "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
-      "verbose": {
-        "representation": "--verbose, -v",
+      {
+        "type": "short",
+        "key": "u",
+        "title": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "--verbose, -v",
         "description": "Verbose mode"
       },
-      "version": {
-        "representation": "--version, -V",
+      {
+        "type": "short",
+        "key": "v",
+        "title": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version, -V",
         "description": "Display version information and exit"
       },
-      "vertical": {
-        "representation": "--vertical, -E",
+      {
+        "type": "short",
+        "key": "V",
+        "title": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      {
+        "type": "long",
+        "key": "vertical",
+        "title": "--vertical, -E",
         "description": "Print query output rows vertically (one line per column value)"
       },
-      "wait": {
-        "representation": "--wait, -w",
+      {
+        "type": "short",
+        "key": "E",
+        "title": "--vertical, -E",
+        "description": "Print query output rows vertically (one line per column value)"
+      },
+      {
+        "type": "long",
+        "key": "wait",
+        "title": "--wait, -w",
         "description": "If the connection cannot be established, wait and retry instead of aborting"
       },
-      "xml": {
-        "representation": "--xml, -X",
+      {
+        "type": "short",
+        "key": "w",
+        "title": "--wait, -w",
+        "description": "If the connection cannot be established, wait and retry instead of aborting"
+      },
+      {
+        "type": "long",
+        "key": "xml",
+        "title": "--xml, -X",
         "description": "Produce XML output"
       },
-      "zstd-compression-level": {
-        "representation": "--zstd-compression-level=level",
+      {
+        "type": "short",
+        "key": "X",
+        "title": "--xml, -X",
+        "description": "Produce XML output"
+      },
+      {
+        "type": "long",
+        "key": "zstd-compression-level",
+        "title": "--zstd-compression-level=level",
         "description": "Compression level for connections to server that use zstd compression"
       }
-    }
+    ]
   }
 ]

@@ -1,361 +1,535 @@
 [
   {
-    "command": "mysqlslap",
-    "shortOptionDictionary": {
-      "a": {
-        "representation": "--auto-generate-sql, -a",
+    "name": "mysqlslap",
+    "options": [
+      {
+        "type": "long",
+        "key": "auto-generate-sql",
+        "title": "--auto-generate-sql, -a",
         "description": "Generate SQL statements automatically when they are not supplied in files or using command options"
       },
-      "C": {
-        "representation": "--compress, -C",
-        "description": "Compress all information sent between client and server"
-      },
-      "c": {
-        "representation": "--concurrency=N, -c N",
-        "description": "Number of clients to simulate when issuing the SELECT statement"
-      },
-      "T": {
-        "representation": "--debug-info, -T",
-        "description": "Print debugging information, memory, and CPU statistics when program exits"
-      },
-      "F": {
-        "representation": "--delimiter=str, -F str",
-        "description": "Delimiter to use in SQL statements"
-      },
-      "e": {
-        "representation": "--engine=engine_name, -e engine_name",
-        "description": "Storage engine to use for creating the table"
-      },
-      "h": {
-        "representation": "--host=host_name, -h host_name",
-        "description": "Host on which MySQL server is located"
-      },
-      "i": {
-        "representation": "--iterations=N, -i N",
-        "description": "Number of times to run the tests"
-      },
-      "x": {
-        "representation": "--number-char-cols=N, -x N",
-        "description": "Number of VARCHAR columns to use if --auto-generate-sql is specified"
-      },
-      "y": {
-        "representation": "--number-int-cols=N, -y N",
-        "description": "Number of INT columns to use if --auto-generate-sql is specified"
-      },
-      "p": {
-        "representation": "--password[=password], -p[password]",
-        "description": "Password to use when connecting to server"
-      },
-      "W": {
-        "representation": "--pipe, -W",
-        "description": "Connect to server using named pipe (Windows only)"
-      },
-      "P": {
-        "representation": "--port=port_num, -P port_num",
-        "description": "TCP/IP port number for connection"
-      },
-      "q": {
-        "representation": "--query=value, -q value",
-        "description": "File or string containing the SELECT statement to use for retrieving data"
-      },
-      "s": {
-        "representation": "--silent, -s",
-        "description": "Silent mode"
-      },
-      "S": {
-        "representation": "--socket=path, -S path",
-        "description": "Unix socket file or Windows named pipe to use"
-      },
-      "u": {
-        "representation": "--user=user_name, -u user_name",
-        "description": "MySQL user name to use when connecting to server"
-      },
-      "v": {
-        "representation": "--verbose, -v",
-        "description": "Verbose mode"
-      },
-      "V": {
-        "representation": "--version, -V",
-        "description": "Display version information and exit"
-      }
-    },
-    "longOptionDictionary": {
-      "auto-generate-sql": {
-        "representation": "--auto-generate-sql, -a",
+      {
+        "type": "short",
+        "key": "a",
+        "title": "--auto-generate-sql, -a",
         "description": "Generate SQL statements automatically when they are not supplied in files or using command options"
       },
-      "auto-generate-sql-add-autoincrement": {
-        "representation": "--auto-generate-sql-add-autoincrement",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-add-autoincrement",
+        "title": "--auto-generate-sql-add-autoincrement",
         "description": "Add AUTO_INCREMENT column to automatically generated tables"
       },
-      "auto-generate-sql-execute-number": {
-        "representation": "--auto-generate-sql-execute-number=N",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-execute-number",
+        "title": "--auto-generate-sql-execute-number=N",
         "description": "Specify how many queries to generate automatically"
       },
-      "auto-generate-sql-guid-primary": {
-        "representation": "--auto-generate-sql-guid-primary",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-guid-primary",
+        "title": "--auto-generate-sql-guid-primary",
         "description": "Add a GUID-based primary key to automatically generated tables"
       },
-      "auto-generate-sql-load-type": {
-        "representation": "--auto-generate-sql-load-type=type",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-load-type",
+        "title": "--auto-generate-sql-load-type=type",
         "description": "Specify the test load type"
       },
-      "auto-generate-sql-secondary-indexes": {
-        "representation": "--auto-generate-sql-secondary-indexes=N",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-secondary-indexes",
+        "title": "--auto-generate-sql-secondary-indexes=N",
         "description": "Specify how many secondary indexes to add to automatically generated tables"
       },
-      "auto-generate-sql-unique-query-number": {
-        "representation": "--auto-generate-sql-unique-query-number=N",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-unique-query-number",
+        "title": "--auto-generate-sql-unique-query-number=N",
         "description": "How many different queries to generate for automatic tests"
       },
-      "auto-generate-sql-unique-write-number": {
-        "representation": "--auto-generate-sql-unique-write-number=N",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-unique-write-number",
+        "title": "--auto-generate-sql-unique-write-number=N",
         "description": "How many different queries to generate for --auto-generate-sql-write-number"
       },
-      "auto-generate-sql-write-number": {
-        "representation": "--auto-generate-sql-write-number=N",
+      {
+        "type": "long",
+        "key": "auto-generate-sql-write-number",
+        "title": "--auto-generate-sql-write-number=N",
         "description": "How many row inserts to perform on each thread"
       },
-      "commit": {
-        "representation": "--commit=N",
+      {
+        "type": "long",
+        "key": "commit",
+        "title": "--commit=N",
         "description": "How many statements to execute before committing"
       },
-      "compress": {
-        "representation": "--compress, -C",
+      {
+        "type": "long",
+        "key": "compress",
+        "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
-      "compression-algorithms": {
-        "representation": "--compression-algorithms=value",
+      {
+        "type": "short",
+        "key": "C",
+        "title": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      {
+        "type": "long",
+        "key": "compression-algorithms",
+        "title": "--compression-algorithms=value",
         "description": "Permitted compression algorithms for connections to server"
       },
-      "concurrency": {
-        "representation": "--concurrency=N, -c N",
+      {
+        "type": "long",
+        "key": "concurrency",
+        "title": "--concurrency=N, -c N",
         "description": "Number of clients to simulate when issuing the SELECT statement"
       },
-      "create": {
-        "representation": "--create=value",
+      {
+        "type": "short",
+        "key": "c",
+        "title": "--concurrency=N, -c N",
+        "description": "Number of clients to simulate when issuing the SELECT statement"
+      },
+      {
+        "type": "long",
+        "key": "create",
+        "title": "--create=value",
         "description": "File or string containing the statement to use for creating the table"
       },
-      "create-schema": {
-        "representation": "--create-schema=value",
+      {
+        "type": "long",
+        "key": "create-schema",
+        "title": "--create-schema=value",
         "description": "Schema in which to run the tests"
       },
-      "csv": {
-        "representation": "--csv[=file_name]",
+      {
+        "type": "long",
+        "key": "csv",
+        "title": "--csv[=file_name]",
         "description": "Generate output in comma-separated values format"
       },
-      "debug": {
-        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug[=debug_options], -#\n            [debug_options]",
         "description": "Write debugging log"
       },
-      "debug-check": {
-        "representation": "--debug-check",
+      {
+        "type": "long",
+        "key": "debug-check",
+        "title": "--debug-check",
         "description": "Print debugging information when program exits"
       },
-      "debug-info": {
-        "representation": "--debug-info, -T",
+      {
+        "type": "long",
+        "key": "debug-info",
+        "title": "--debug-info, -T",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
-      "default-auth": {
-        "representation": "--default-auth=plugin",
+      {
+        "type": "short",
+        "key": "T",
+        "title": "--debug-info, -T",
+        "description": "Print debugging information, memory, and CPU statistics when program exits"
+      },
+      {
+        "type": "long",
+        "key": "default-auth",
+        "title": "--default-auth=plugin",
         "description": "Authentication plugin to use"
       },
-      "defaults-extra-file": {
-        "representation": "--defaults-extra-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-extra-file",
+        "title": "--defaults-extra-file=file_name",
         "description": "Read named option file in addition to usual option files"
       },
-      "defaults-file": {
-        "representation": "--defaults-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-file",
+        "title": "--defaults-file=file_name",
         "description": "Read only named option file"
       },
-      "defaults-group-suffix": {
-        "representation": "--defaults-group-suffix=str",
+      {
+        "type": "long",
+        "key": "defaults-group-suffix",
+        "title": "--defaults-group-suffix=str",
         "description": "Option group suffix value"
       },
-      "delimiter": {
-        "representation": "--delimiter=str, -F str",
+      {
+        "type": "long",
+        "key": "delimiter",
+        "title": "--delimiter=str, -F str",
         "description": "Delimiter to use in SQL statements"
       },
-      "detach": {
-        "representation": "--detach=N",
+      {
+        "type": "short",
+        "key": "F",
+        "title": "--delimiter=str, -F str",
+        "description": "Delimiter to use in SQL statements"
+      },
+      {
+        "type": "long",
+        "key": "detach",
+        "title": "--detach=N",
         "description": "Detach (close and reopen) each connection after each N statements"
       },
-      "enable-cleartext-plugin": {
-        "representation": "--enable-cleartext-plugin",
+      {
+        "type": "long",
+        "key": "enable-cleartext-plugin",
+        "title": "--enable-cleartext-plugin",
         "description": "Enable cleartext authentication plugin"
       },
-      "engine": {
-        "representation": "--engine=engine_name, -e engine_name",
+      {
+        "type": "long",
+        "key": "engine",
+        "title": "--engine=engine_name, -e engine_name",
         "description": "Storage engine to use for creating the table"
       },
-      "get-server-public-key": {
-        "representation": "--get-server-public-key",
+      {
+        "type": "short",
+        "key": "e",
+        "title": "--engine=engine_name, -e engine_name",
+        "description": "Storage engine to use for creating the table"
+      },
+      {
+        "type": "long",
+        "key": "get-server-public-key",
+        "title": "--get-server-public-key",
         "description": "Request RSA public key from server"
       },
-      "help": {
-        "representation": "--help, -?",
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help, -?",
         "description": "Display help message and exit"
       },
-      "host": {
-        "representation": "--host=host_name, -h host_name",
+      {
+        "type": "long",
+        "key": "host",
+        "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
-      "iterations": {
-        "representation": "--iterations=N, -i N",
+      {
+        "type": "short",
+        "key": "h",
+        "title": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      {
+        "type": "long",
+        "key": "iterations",
+        "title": "--iterations=N, -i N",
         "description": "Number of times to run the tests"
       },
-      "login-path": {
-        "representation": "--login-path=name",
+      {
+        "type": "short",
+        "key": "i",
+        "title": "--iterations=N, -i N",
+        "description": "Number of times to run the tests"
+      },
+      {
+        "type": "long",
+        "key": "login-path",
+        "title": "--login-path=name",
         "description": "Read login path options from .mylogin.cnf"
       },
-      "no-defaults": {
-        "representation": "--no-defaults",
+      {
+        "type": "long",
+        "key": "no-defaults",
+        "title": "--no-defaults",
         "description": "Read no option files"
       },
-      "no-drop": {
-        "representation": "--no-drop",
+      {
+        "type": "long",
+        "key": "no-drop",
+        "title": "--no-drop",
         "description": "Do not drop any schema created during the test run"
       },
-      "number-char-cols": {
-        "representation": "--number-char-cols=N, -x N",
+      {
+        "type": "long",
+        "key": "number-char-cols",
+        "title": "--number-char-cols=N, -x N",
         "description": "Number of VARCHAR columns to use if --auto-generate-sql is specified"
       },
-      "number-int-cols": {
-        "representation": "--number-int-cols=N, -y N",
+      {
+        "type": "short",
+        "key": "x",
+        "title": "--number-char-cols=N, -x N",
+        "description": "Number of VARCHAR columns to use if --auto-generate-sql is specified"
+      },
+      {
+        "type": "long",
+        "key": "number-int-cols",
+        "title": "--number-int-cols=N, -y N",
         "description": "Number of INT columns to use if --auto-generate-sql is specified"
       },
-      "number-of-queries": {
-        "representation": "--number-of-queries=N",
+      {
+        "type": "short",
+        "key": "y",
+        "title": "--number-int-cols=N, -y N",
+        "description": "Number of INT columns to use if --auto-generate-sql is specified"
+      },
+      {
+        "type": "long",
+        "key": "number-of-queries",
+        "title": "--number-of-queries=N",
         "description": "Limit each client to approximately this number of queries"
       },
-      "only-print": {
-        "representation": "--only-print",
+      {
+        "type": "long",
+        "key": "only-print",
+        "title": "--only-print",
         "description": "Do not connect to databases. mysqlslap only prints what it would have done"
       },
-      "password": {
-        "representation": "--password[=password], -p[password]",
+      {
+        "type": "long",
+        "key": "password",
+        "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
-      "pipe": {
-        "representation": "--pipe, -W",
+      {
+        "type": "short",
+        "key": "p",
+        "title": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "pipe",
+        "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"
       },
-      "plugin-dir": {
-        "representation": "--plugin-dir=dir_name",
+      {
+        "type": "short",
+        "key": "W",
+        "title": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      {
+        "type": "long",
+        "key": "plugin-dir",
+        "title": "--plugin-dir=dir_name",
         "description": "Directory where plugins are installed"
       },
-      "port": {
-        "representation": "--port=port_num, -P port_num",
+      {
+        "type": "long",
+        "key": "port",
+        "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
-      "post-query": {
-        "representation": "--post-query=value",
+      {
+        "type": "short",
+        "key": "P",
+        "title": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      {
+        "type": "long",
+        "key": "post-query",
+        "title": "--post-query=value",
         "description": "File or string containing the statement to execute after the tests have completed"
       },
-      "post-system": {
-        "representation": "--post-system=str",
+      {
+        "type": "long",
+        "key": "post-system",
+        "title": "--post-system=str",
         "description": "String to execute using system() after the tests have completed"
       },
-      "pre-query": {
-        "representation": "--pre-query=value",
+      {
+        "type": "long",
+        "key": "pre-query",
+        "title": "--pre-query=value",
         "description": "File or string containing the statement to execute before running the tests"
       },
-      "pre-system": {
-        "representation": "--pre-system=str",
+      {
+        "type": "long",
+        "key": "pre-system",
+        "title": "--pre-system=str",
         "description": "String to execute using system() before running the tests"
       },
-      "print-defaults": {
-        "representation": "--print-defaults",
+      {
+        "type": "long",
+        "key": "print-defaults",
+        "title": "--print-defaults",
         "description": "Print default options"
       },
-      "protocol": {
-        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+      {
+        "type": "long",
+        "key": "protocol",
+        "title": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
         "description": "Transport protocol to use"
       },
-      "query": {
-        "representation": "--query=value, -q value",
+      {
+        "type": "long",
+        "key": "query",
+        "title": "--query=value, -q value",
         "description": "File or string containing the SELECT statement to use for retrieving data"
       },
-      "server-public-key-path": {
-        "representation": "--server-public-key-path=file_name",
+      {
+        "type": "short",
+        "key": "q",
+        "title": "--query=value, -q value",
+        "description": "File or string containing the SELECT statement to use for retrieving data"
+      },
+      {
+        "type": "long",
+        "key": "server-public-key-path",
+        "title": "--server-public-key-path=file_name",
         "description": "Path name to file containing RSA public key"
       },
-      "shared-memory-base-name": {
-        "representation": "--shared-memory-base-name=name",
+      {
+        "type": "long",
+        "key": "shared-memory-base-name",
+        "title": "--shared-memory-base-name=name",
         "description": "Shared-memory name for shared-memory connections (Windows only)"
       },
-      "silent": {
-        "representation": "--silent, -s",
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "--silent, -s",
         "description": "Silent mode"
       },
-      "socket": {
-        "representation": "--socket=path, -S path",
+      {
+        "type": "short",
+        "key": "s",
+        "title": "--silent, -s",
+        "description": "Silent mode"
+      },
+      {
+        "type": "long",
+        "key": "socket",
+        "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
-      "sql-mode": {
-        "representation": "--sql-mode=mode",
+      {
+        "type": "short",
+        "key": "S",
+        "title": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      {
+        "type": "long",
+        "key": "sql-mode",
+        "title": "--sql-mode=mode",
         "description": "Set SQL mode for client session"
       },
-      "ssl-ca": {
-        "representation": "--ssl-ca",
+      {
+        "type": "long",
+        "key": "ssl-ca",
+        "title": "--ssl-ca",
         "description": "File that contains list of trusted SSL Certificate Authorities"
       },
-      "ssl-capath": {
-        "representation": "--ssl-capath",
+      {
+        "type": "long",
+        "key": "ssl-capath",
+        "title": "--ssl-capath",
         "description": "Directory that contains trusted SSL Certificate Authority certificate files"
       },
-      "ssl-cert": {
-        "representation": "--ssl-cert",
+      {
+        "type": "long",
+        "key": "ssl-cert",
+        "title": "--ssl-cert",
         "description": "File that contains X.509 certificate"
       },
-      "ssl-cipher": {
-        "representation": "--ssl-cipher",
+      {
+        "type": "long",
+        "key": "ssl-cipher",
+        "title": "--ssl-cipher",
         "description": "Permissible ciphers for connection encryption"
       },
-      "ssl-crl": {
-        "representation": "--ssl-crl",
+      {
+        "type": "long",
+        "key": "ssl-crl",
+        "title": "--ssl-crl",
         "description": "File that contains certificate revocation lists"
       },
-      "ssl-crlpath": {
-        "representation": "--ssl-crlpath",
+      {
+        "type": "long",
+        "key": "ssl-crlpath",
+        "title": "--ssl-crlpath",
         "description": "Directory that contains certificate revocation-list files"
       },
-      "ssl-fips-mode": {
-        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+      {
+        "type": "long",
+        "key": "ssl-fips-mode",
+        "title": "--ssl-fips-mode={OFF|ON|STRICT}",
         "description": "Whether to enable FIPS mode on client side"
       },
-      "ssl-key": {
-        "representation": "--ssl-key",
+      {
+        "type": "long",
+        "key": "ssl-key",
+        "title": "--ssl-key",
         "description": "File that contains X.509 key"
       },
-      "ssl-mode": {
-        "representation": "--ssl-mode",
+      {
+        "type": "long",
+        "key": "ssl-mode",
+        "title": "--ssl-mode",
         "description": "Desired security state of connection to server"
       },
-      "tls-ciphersuites": {
-        "representation": "--tls-ciphersuites=ciphersuite_list",
+      {
+        "type": "long",
+        "key": "tls-ciphersuites",
+        "title": "--tls-ciphersuites=ciphersuite_list",
         "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
       },
-      "tls-version": {
-        "representation": "--tls-version=protocol_list",
+      {
+        "type": "long",
+        "key": "tls-version",
+        "title": "--tls-version=protocol_list",
         "description": "Permissible TLS protocols for encrypted connections"
       },
-      "user": {
-        "representation": "--user=user_name, -u user_name",
+      {
+        "type": "long",
+        "key": "user",
+        "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
-      "verbose": {
-        "representation": "--verbose, -v",
+      {
+        "type": "short",
+        "key": "u",
+        "title": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "--verbose, -v",
         "description": "Verbose mode"
       },
-      "version": {
-        "representation": "--version, -V",
+      {
+        "type": "short",
+        "key": "v",
+        "title": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version, -V",
         "description": "Display version information and exit"
       },
-      "zstd-compression-level": {
-        "representation": "--zstd-compression-level=level",
+      {
+        "type": "short",
+        "key": "V",
+        "title": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      {
+        "type": "long",
+        "key": "zstd-compression-level",
+        "title": "--zstd-compression-level=level",
         "description": "Compression level for connections to server that use zstd compression"
       }
-    }
+    ]
   }
 ]

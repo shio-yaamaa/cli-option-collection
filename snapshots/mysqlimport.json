@@ -1,305 +1,469 @@
 [
   {
-    "command": "mysqlimport",
-    "shortOptionDictionary": {
-      "c": {
-        "representation": "--columns=column_list, -c column_list",
-        "description": "This option takes a comma-separated list of column names as its value"
-      },
-      "C": {
-        "representation": "--compress, -C",
-        "description": "Compress all information sent between client and server"
-      },
-      "D": {
-        "representation": "--delete, -D",
-        "description": "Empty the table before importing the text file"
-      },
-      "f": {
-        "representation": "--force, -f",
-        "description": "Continue even if an SQL error occurs"
-      },
-      "h": {
-        "representation": "--host=host_name, -h host_name",
-        "description": "Host on which MySQL server is located"
-      },
-      "i": {
-        "representation": "--ignore, -i",
-        "description": "See the description for the --replace option"
-      },
-      "L": {
-        "representation": "--local, -L",
-        "description": "Read input files locally from the client host"
-      },
-      "l": {
-        "representation": "--lock-tables, -l",
-        "description": "Lock all tables for writing before processing any text files"
-      },
-      "p": {
-        "representation": "--password[=password], -p[password]",
-        "description": "Password to use when connecting to server"
-      },
-      "W": {
-        "representation": "--pipe, -W",
-        "description": "Connect to server using named pipe (Windows only)"
-      },
-      "P": {
-        "representation": "--port=port_num, -P port_num",
-        "description": "TCP/IP port number for connection"
-      },
-      "r": {
-        "representation": "--replace, -r",
-        "description": "The --replace and --ignore options control handling of input rows that duplicate existing rows on unique key values"
-      },
-      "s": {
-        "representation": "--silent, -s",
-        "description": "Produce output only when errors occur"
-      },
-      "S": {
-        "representation": "--socket=path, -S path",
-        "description": "Unix socket file or Windows named pipe to use"
-      },
-      "u": {
-        "representation": "--user=user_name, -u user_name",
-        "description": "MySQL user name to use when connecting to server"
-      },
-      "v": {
-        "representation": "--verbose, -v",
-        "description": "Verbose mode"
-      },
-      "V": {
-        "representation": "--version, -V",
-        "description": "Display version information and exit"
-      }
-    },
-    "longOptionDictionary": {
-      "bind-address": {
-        "representation": "--bind-address=ip_address",
+    "name": "mysqlimport",
+    "options": [
+      {
+        "type": "long",
+        "key": "bind-address",
+        "title": "--bind-address=ip_address",
         "description": "Use specified network interface to connect to MySQL Server"
       },
-      "columns": {
-        "representation": "--columns=column_list, -c column_list",
+      {
+        "type": "long",
+        "key": "columns",
+        "title": "--columns=column_list, -c column_list",
         "description": "This option takes a comma-separated list of column names as its value"
       },
-      "compress": {
-        "representation": "--compress, -C",
+      {
+        "type": "short",
+        "key": "c",
+        "title": "--columns=column_list, -c column_list",
+        "description": "This option takes a comma-separated list of column names as its value"
+      },
+      {
+        "type": "long",
+        "key": "compress",
+        "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
-      "compression-algorithms": {
-        "representation": "--compression-algorithms=value",
+      {
+        "type": "short",
+        "key": "C",
+        "title": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      {
+        "type": "long",
+        "key": "compression-algorithms",
+        "title": "--compression-algorithms=value",
         "description": "Permitted compression algorithms for connections to server"
       },
-      "debug": {
-        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug[=debug_options], -#\n            [debug_options]",
         "description": "Write debugging log"
       },
-      "debug-check": {
-        "representation": "--debug-check",
+      {
+        "type": "long",
+        "key": "debug-check",
+        "title": "--debug-check",
         "description": "Print debugging information when program exits"
       },
-      "debug-info": {
-        "representation": "--debug-info",
+      {
+        "type": "long",
+        "key": "debug-info",
+        "title": "--debug-info",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
-      "default-auth": {
-        "representation": "--default-auth=plugin",
+      {
+        "type": "long",
+        "key": "default-auth",
+        "title": "--default-auth=plugin",
         "description": "Authentication plugin to use"
       },
-      "default-character-set": {
-        "representation": "--default-character-set=charset_name",
+      {
+        "type": "long",
+        "key": "default-character-set",
+        "title": "--default-character-set=charset_name",
         "description": "Specify default character set"
       },
-      "defaults-extra-file": {
-        "representation": "--defaults-extra-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-extra-file",
+        "title": "--defaults-extra-file=file_name",
         "description": "Read named option file in addition to usual option files"
       },
-      "defaults-file": {
-        "representation": "--defaults-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-file",
+        "title": "--defaults-file=file_name",
         "description": "Read only named option file"
       },
-      "defaults-group-suffix": {
-        "representation": "--defaults-group-suffix=str",
+      {
+        "type": "long",
+        "key": "defaults-group-suffix",
+        "title": "--defaults-group-suffix=str",
         "description": "Option group suffix value"
       },
-      "delete": {
-        "representation": "--delete, -D",
+      {
+        "type": "long",
+        "key": "delete",
+        "title": "--delete, -D",
         "description": "Empty the table before importing the text file"
       },
-      "enable-cleartext-plugin": {
-        "representation": "--enable-cleartext-plugin",
+      {
+        "type": "short",
+        "key": "D",
+        "title": "--delete, -D",
+        "description": "Empty the table before importing the text file"
+      },
+      {
+        "type": "long",
+        "key": "enable-cleartext-plugin",
+        "title": "--enable-cleartext-plugin",
         "description": "Enable cleartext authentication plugin"
       },
-      "fields-enclosed-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-enclosed-by",
+        "title": "--fields-enclosed-by",
         "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "fields-escaped-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-escaped-by",
+        "title": "--fields-escaped-by",
         "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "fields-optionally-enclosed-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-optionally-enclosed-by",
+        "title": "--fields-optionally-enclosed-by",
         "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "fields-terminated-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-terminated-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
         "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "force": {
-        "representation": "--force, -f",
+      {
+        "type": "long",
+        "key": "fields-enclosed-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+        "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
+      },
+      {
+        "type": "long",
+        "key": "fields-optionally-enclosed-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+        "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
+      },
+      {
+        "type": "long",
+        "key": "fields-escaped-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+        "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
+      },
+      {
+        "type": "long",
+        "key": "force",
+        "title": "--force, -f",
         "description": "Continue even if an SQL error occurs"
       },
-      "get-server-public-key": {
-        "representation": "--get-server-public-key",
+      {
+        "type": "short",
+        "key": "f",
+        "title": "--force, -f",
+        "description": "Continue even if an SQL error occurs"
+      },
+      {
+        "type": "long",
+        "key": "get-server-public-key",
+        "title": "--get-server-public-key",
         "description": "Request RSA public key from server"
       },
-      "help": {
-        "representation": "--help, -?",
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help, -?",
         "description": "Display help message and exit"
       },
-      "host": {
-        "representation": "--host=host_name, -h host_name",
+      {
+        "type": "long",
+        "key": "host",
+        "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
-      "ignore": {
-        "representation": "--ignore, -i",
+      {
+        "type": "short",
+        "key": "h",
+        "title": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      {
+        "type": "long",
+        "key": "ignore",
+        "title": "--ignore, -i",
         "description": "See the description for the --replace option"
       },
-      "ignore-lines": {
-        "representation": "--ignore-lines=N",
+      {
+        "type": "short",
+        "key": "i",
+        "title": "--ignore, -i",
+        "description": "See the description for the --replace option"
+      },
+      {
+        "type": "long",
+        "key": "ignore-lines",
+        "title": "--ignore-lines=N",
         "description": "Ignore the first N lines of the data file"
       },
-      "lines-terminated-by": {
-        "representation": "--lines-terminated-by=...",
+      {
+        "type": "long",
+        "key": "lines-terminated-by",
+        "title": "--lines-terminated-by=...",
         "description": "This option has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "local": {
-        "representation": "--local, -L",
+      {
+        "type": "long",
+        "key": "local",
+        "title": "--local, -L",
         "description": "Read input files locally from the client host"
       },
-      "lock-tables": {
-        "representation": "--lock-tables, -l",
+      {
+        "type": "short",
+        "key": "L",
+        "title": "--local, -L",
+        "description": "Read input files locally from the client host"
+      },
+      {
+        "type": "long",
+        "key": "lock-tables",
+        "title": "--lock-tables, -l",
         "description": "Lock all tables for writing before processing any text files"
       },
-      "login-path": {
-        "representation": "--login-path=name",
+      {
+        "type": "short",
+        "key": "l",
+        "title": "--lock-tables, -l",
+        "description": "Lock all tables for writing before processing any text files"
+      },
+      {
+        "type": "long",
+        "key": "login-path",
+        "title": "--login-path=name",
         "description": "Read login path options from .mylogin.cnf"
       },
-      "low-priority": {
-        "representation": "--low-priority",
+      {
+        "type": "long",
+        "key": "low-priority",
+        "title": "--low-priority",
         "description": "Use LOW_PRIORITY when loading the table"
       },
-      "no-defaults": {
-        "representation": "--no-defaults",
+      {
+        "type": "long",
+        "key": "no-defaults",
+        "title": "--no-defaults",
         "description": "Read no option files"
       },
-      "password": {
-        "representation": "--password[=password], -p[password]",
+      {
+        "type": "long",
+        "key": "password",
+        "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
-      "pipe": {
-        "representation": "--pipe, -W",
+      {
+        "type": "short",
+        "key": "p",
+        "title": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "pipe",
+        "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"
       },
-      "plugin-dir": {
-        "representation": "--plugin-dir=dir_name",
+      {
+        "type": "short",
+        "key": "W",
+        "title": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      {
+        "type": "long",
+        "key": "plugin-dir",
+        "title": "--plugin-dir=dir_name",
         "description": "Directory where plugins are installed"
       },
-      "port": {
-        "representation": "--port=port_num, -P port_num",
+      {
+        "type": "long",
+        "key": "port",
+        "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
-      "print-defaults": {
-        "representation": "--print-defaults",
+      {
+        "type": "short",
+        "key": "P",
+        "title": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      {
+        "type": "long",
+        "key": "print-defaults",
+        "title": "--print-defaults",
         "description": "Print default options"
       },
-      "protocol": {
-        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+      {
+        "type": "long",
+        "key": "protocol",
+        "title": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
         "description": "Transport protocol to use"
       },
-      "replace": {
-        "representation": "--replace, -r",
+      {
+        "type": "long",
+        "key": "replace",
+        "title": "--replace, -r",
         "description": "The --replace and --ignore options control handling of input rows that duplicate existing rows on unique key values"
       },
-      "server-public-key-path": {
-        "representation": "--server-public-key-path=file_name",
+      {
+        "type": "short",
+        "key": "r",
+        "title": "--replace, -r",
+        "description": "The --replace and --ignore options control handling of input rows that duplicate existing rows on unique key values"
+      },
+      {
+        "type": "long",
+        "key": "server-public-key-path",
+        "title": "--server-public-key-path=file_name",
         "description": "Path name to file containing RSA public key"
       },
-      "shared-memory-base-name": {
-        "representation": "--shared-memory-base-name=name",
+      {
+        "type": "long",
+        "key": "shared-memory-base-name",
+        "title": "--shared-memory-base-name=name",
         "description": "Shared-memory name for shared-memory connections (Windows only)"
       },
-      "silent": {
-        "representation": "--silent, -s",
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "--silent, -s",
         "description": "Produce output only when errors occur"
       },
-      "socket": {
-        "representation": "--socket=path, -S path",
+      {
+        "type": "short",
+        "key": "s",
+        "title": "--silent, -s",
+        "description": "Produce output only when errors occur"
+      },
+      {
+        "type": "long",
+        "key": "socket",
+        "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
-      "ssl-ca": {
-        "representation": "--ssl-ca",
+      {
+        "type": "short",
+        "key": "S",
+        "title": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      {
+        "type": "long",
+        "key": "ssl-ca",
+        "title": "--ssl-ca",
         "description": "File that contains list of trusted SSL Certificate Authorities"
       },
-      "ssl-capath": {
-        "representation": "--ssl-capath",
+      {
+        "type": "long",
+        "key": "ssl-capath",
+        "title": "--ssl-capath",
         "description": "Directory that contains trusted SSL Certificate Authority certificate files"
       },
-      "ssl-cert": {
-        "representation": "--ssl-cert",
+      {
+        "type": "long",
+        "key": "ssl-cert",
+        "title": "--ssl-cert",
         "description": "File that contains X.509 certificate"
       },
-      "ssl-cipher": {
-        "representation": "--ssl-cipher",
+      {
+        "type": "long",
+        "key": "ssl-cipher",
+        "title": "--ssl-cipher",
         "description": "Permissible ciphers for connection encryption"
       },
-      "ssl-crl": {
-        "representation": "--ssl-crl",
+      {
+        "type": "long",
+        "key": "ssl-crl",
+        "title": "--ssl-crl",
         "description": "File that contains certificate revocation lists"
       },
-      "ssl-crlpath": {
-        "representation": "--ssl-crlpath",
+      {
+        "type": "long",
+        "key": "ssl-crlpath",
+        "title": "--ssl-crlpath",
         "description": "Directory that contains certificate revocation-list files"
       },
-      "ssl-fips-mode": {
-        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+      {
+        "type": "long",
+        "key": "ssl-fips-mode",
+        "title": "--ssl-fips-mode={OFF|ON|STRICT}",
         "description": "Whether to enable FIPS mode on client side"
       },
-      "ssl-key": {
-        "representation": "--ssl-key",
+      {
+        "type": "long",
+        "key": "ssl-key",
+        "title": "--ssl-key",
         "description": "File that contains X.509 key"
       },
-      "ssl-mode": {
-        "representation": "--ssl-mode",
+      {
+        "type": "long",
+        "key": "ssl-mode",
+        "title": "--ssl-mode",
         "description": "Desired security state of connection to server"
       },
-      "tls-ciphersuites": {
-        "representation": "--tls-ciphersuites=ciphersuite_list",
+      {
+        "type": "long",
+        "key": "tls-ciphersuites",
+        "title": "--tls-ciphersuites=ciphersuite_list",
         "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
       },
-      "tls-version": {
-        "representation": "--tls-version=protocol_list",
+      {
+        "type": "long",
+        "key": "tls-version",
+        "title": "--tls-version=protocol_list",
         "description": "Permissible TLS protocols for encrypted connections"
       },
-      "use-threads": {
-        "representation": "--use-threads=N",
+      {
+        "type": "long",
+        "key": "use-threads",
+        "title": "--use-threads=N",
         "description": "Number of threads for parallel file-loading"
       },
-      "user": {
-        "representation": "--user=user_name, -u user_name",
+      {
+        "type": "long",
+        "key": "user",
+        "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
-      "verbose": {
-        "representation": "--verbose, -v",
+      {
+        "type": "short",
+        "key": "u",
+        "title": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "--verbose, -v",
         "description": "Verbose mode"
       },
-      "version": {
-        "representation": "--version, -V",
+      {
+        "type": "short",
+        "key": "v",
+        "title": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version, -V",
         "description": "Display version information and exit"
       },
-      "zstd-compression-level": {
-        "representation": "--zstd-compression-level=level",
+      {
+        "type": "short",
+        "key": "V",
+        "title": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      {
+        "type": "long",
+        "key": "zstd-compression-level",
+        "title": "--zstd-compression-level=level",
         "description": "Compression level for connections to server that use zstd compression"
       }
-    }
+    ]
   }
 ]

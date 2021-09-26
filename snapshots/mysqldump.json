@@ -1,629 +1,955 @@
 [
   {
-    "command": "mysqldump",
-    "shortOptionDictionary": {
-      "A": {
-        "representation": "--all-databases, -A",
-        "description": "Dump all tables in all databases"
-      },
-      "i": {
-        "representation": "--comments, -i",
-        "description": "Add comments to dump file"
-      },
-      "c": {
-        "representation": "--complete-insert, -c",
-        "description": "Use complete INSERT statements that include column names"
-      },
-      "C": {
-        "representation": "--compress, -C",
-        "description": "Compress all information sent between client and server"
-      },
-      "B": {
-        "representation": "--databases, -B",
-        "description": "Interpret all name arguments as database names"
-      },
-      "K": {
-        "representation": "--disable-keys, -K",
-        "description": "For each table, surround INSERT statements with statements to disable and enable keys"
-      },
-      "E": {
-        "representation": "--events, -E",
-        "description": "Dump events from dumped databases"
-      },
-      "e": {
-        "representation": "--extended-insert, -e",
-        "description": "Use multiple-row INSERT syntax"
-      },
-      "F": {
-        "representation": "--flush-logs, -F",
-        "description": "Flush MySQL server log files before starting dump"
-      },
-      "f": {
-        "representation": "--force, -f",
-        "description": "Continue even if an SQL error occurs during a table dump"
-      },
-      "h": {
-        "representation": "--host=host_name, -h host_name",
-        "description": "Host on which MySQL server is located"
-      },
-      "x": {
-        "representation": "--lock-all-tables, -x",
-        "description": "Lock all tables across all databases"
-      },
-      "l": {
-        "representation": "--lock-tables, -l",
-        "description": "Lock all tables before dumping them"
-      },
-      "M": {
-        "representation": "--network-timeout, -M",
-        "description": "Increase network timeouts to permit larger table dumps"
-      },
-      "n": {
-        "representation": "--no-create-db, -n",
-        "description": "Do not write CREATE DATABASE statements"
-      },
-      "t": {
-        "representation": "--no-create-info, -t",
-        "description": "Do not write CREATE TABLE statements that re-create each dumped table"
-      },
-      "d": {
-        "representation": "--no-data, -d",
-        "description": "Do not dump table contents"
-      },
-      "N": {
-        "representation": "--no-set-names, -N",
-        "description": "Same as --skip-set-charset"
-      },
-      "y": {
-        "representation": "--no-tablespaces, -y",
-        "description": "Do not write any CREATE LOGFILE GROUP or CREATE TABLESPACE statements in output"
-      },
-      "p": {
-        "representation": "--password[=password], -p[password]",
-        "description": "Password to use when connecting to server"
-      },
-      "W": {
-        "representation": "--pipe, -W",
-        "description": "Connect to server using named pipe (Windows only)"
-      },
-      "P": {
-        "representation": "--port=port_num, -P port_num",
-        "description": "TCP/IP port number for connection"
-      },
-      "q": {
-        "representation": "--quick, -q",
-        "description": "Retrieve rows for a table from the server a row at a time"
-      },
-      "Q": {
-        "representation": "--quote-names, -Q",
-        "description": "Quote identifiers within backtick characters"
-      },
-      "r": {
-        "representation": "--result-file=file_name, -r file_name",
-        "description": "Direct output to a given file"
-      },
-      "R": {
-        "representation": "--routines, -R",
-        "description": "Dump stored routines (procedures and functions) from dumped databases"
-      },
-      "S": {
-        "representation": "--socket=path, -S path",
-        "description": "Unix socket file or Windows named pipe to use"
-      },
-      "T": {
-        "representation": "--tab=dir_name, -T dir_name",
-        "description": "Produce tab-separated data files"
-      },
-      "u": {
-        "representation": "--user=user_name, -u user_name",
-        "description": "MySQL user name to use when connecting to server"
-      },
-      "v": {
-        "representation": "--verbose, -v",
-        "description": "Verbose mode"
-      },
-      "V": {
-        "representation": "--version, -V",
-        "description": "Display version information and exit"
-      },
-      "w": {
-        "representation": "--where='where_condition', -w\n            'where_condition'",
-        "description": "Dump only rows selected by given WHERE condition"
-      },
-      "X": {
-        "representation": "--xml, -X",
-        "description": "Produce XML output"
-      }
-    },
-    "longOptionDictionary": {
-      "add-drop-database": {
-        "representation": "--add-drop-database",
+    "name": "mysqldump",
+    "options": [
+      {
+        "type": "long",
+        "key": "add-drop-database",
+        "title": "--add-drop-database",
         "description": "Add DROP DATABASE statement before each CREATE DATABASE statement"
       },
-      "add-drop-table": {
-        "representation": "--add-drop-table",
+      {
+        "type": "long",
+        "key": "add-drop-table",
+        "title": "--add-drop-table",
         "description": "Add DROP TABLE statement before each CREATE TABLE statement"
       },
-      "add-drop-trigger": {
-        "representation": "--add-drop-trigger",
+      {
+        "type": "long",
+        "key": "add-drop-trigger",
+        "title": "--add-drop-trigger",
         "description": "Add DROP TRIGGER statement before each CREATE TRIGGER statement"
       },
-      "add-locks": {
-        "representation": "--add-locks",
+      {
+        "type": "long",
+        "key": "add-locks",
+        "title": "--add-locks",
         "description": "Surround each table dump with LOCK TABLES and UNLOCK TABLES statements"
       },
-      "all-databases": {
-        "representation": "--all-databases, -A",
+      {
+        "type": "long",
+        "key": "all-databases",
+        "title": "--all-databases, -A",
         "description": "Dump all tables in all databases"
       },
-      "allow-keywords": {
-        "representation": "--allow-keywords",
+      {
+        "type": "short",
+        "key": "A",
+        "title": "--all-databases, -A",
+        "description": "Dump all tables in all databases"
+      },
+      {
+        "type": "long",
+        "key": "allow-keywords",
+        "title": "--allow-keywords",
         "description": "Allow creation of column names that are keywords"
       },
-      "apply-replica-statements": {
-        "representation": "--apply-replica-statements",
+      {
+        "type": "long",
+        "key": "apply-replica-statements",
+        "title": "--apply-replica-statements",
         "description": "Include STOP REPLICA prior to CHANGE REPLICATION SOURCE TO statement and START REPLICA at end of output"
       },
-      "apply-slave-statements": {
-        "representation": "--apply-slave-statements",
+      {
+        "type": "long",
+        "key": "apply-slave-statements",
+        "title": "--apply-slave-statements",
         "description": "Include STOP SLAVE prior to CHANGE MASTER statement and START SLAVE at end of output"
       },
-      "bind-address": {
-        "representation": "--bind-address=ip_address",
+      {
+        "type": "long",
+        "key": "bind-address",
+        "title": "--bind-address=ip_address",
         "description": "Use specified network interface to connect to MySQL Server"
       },
-      "character-sets-dir": {
-        "representation": "--character-sets-dir=dir_name",
+      {
+        "type": "long",
+        "key": "character-sets-dir",
+        "title": "--character-sets-dir=dir_name",
         "description": "Directory where character sets are installed"
       },
-      "column-statistics": {
-        "representation": "--column-statistics",
+      {
+        "type": "long",
+        "key": "column-statistics",
+        "title": "--column-statistics",
         "description": "Write ANALYZE TABLE statements to generate statistics histograms"
       },
-      "comments": {
-        "representation": "--comments, -i",
+      {
+        "type": "long",
+        "key": "comments",
+        "title": "--comments, -i",
         "description": "Add comments to dump file"
       },
-      "compact": {
-        "representation": "--compact",
+      {
+        "type": "short",
+        "key": "i",
+        "title": "--comments, -i",
+        "description": "Add comments to dump file"
+      },
+      {
+        "type": "long",
+        "key": "compact",
+        "title": "--compact",
         "description": "Produce more compact output"
       },
-      "compatible": {
-        "representation": "--compatible=name",
+      {
+        "type": "long",
+        "key": "compatible",
+        "title": "--compatible=name",
         "description": "Produce output that is more compatible with other database systems or with older MySQL servers"
       },
-      "complete-insert": {
-        "representation": "--complete-insert, -c",
+      {
+        "type": "long",
+        "key": "complete-insert",
+        "title": "--complete-insert, -c",
         "description": "Use complete INSERT statements that include column names"
       },
-      "compress": {
-        "representation": "--compress, -C",
+      {
+        "type": "short",
+        "key": "c",
+        "title": "--complete-insert, -c",
+        "description": "Use complete INSERT statements that include column names"
+      },
+      {
+        "type": "long",
+        "key": "compress",
+        "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
-      "compression-algorithms": {
-        "representation": "--compression-algorithms=value",
+      {
+        "type": "short",
+        "key": "C",
+        "title": "--compress, -C",
+        "description": "Compress all information sent between client and server"
+      },
+      {
+        "type": "long",
+        "key": "compression-algorithms",
+        "title": "--compression-algorithms=value",
         "description": "Permitted compression algorithms for connections to server"
       },
-      "create-options": {
-        "representation": "--create-options",
+      {
+        "type": "long",
+        "key": "create-options",
+        "title": "--create-options",
         "description": "Include all MySQL-specific table options in CREATE TABLE statements"
       },
-      "databases": {
-        "representation": "--databases, -B",
+      {
+        "type": "long",
+        "key": "databases",
+        "title": "--databases, -B",
         "description": "Interpret all name arguments as database names"
       },
-      "debug": {
-        "representation": "--debug[=debug_options], -#\n            [debug_options]",
+      {
+        "type": "short",
+        "key": "B",
+        "title": "--databases, -B",
+        "description": "Interpret all name arguments as database names"
+      },
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug[=debug_options], -#\n            [debug_options]",
         "description": "Write debugging log"
       },
-      "debug-check": {
-        "representation": "--debug-check",
+      {
+        "type": "long",
+        "key": "debug-check",
+        "title": "--debug-check",
         "description": "Print debugging information when program exits"
       },
-      "debug-info": {
-        "representation": "--debug-info",
+      {
+        "type": "long",
+        "key": "debug-info",
+        "title": "--debug-info",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
-      "default-auth": {
-        "representation": "--default-auth=plugin",
+      {
+        "type": "long",
+        "key": "default-auth",
+        "title": "--default-auth=plugin",
         "description": "Authentication plugin to use"
       },
-      "default-character-set": {
-        "representation": "--default-character-set=charset_name",
+      {
+        "type": "long",
+        "key": "default-character-set",
+        "title": "--default-character-set=charset_name",
         "description": "Specify default character set"
       },
-      "defaults-extra-file": {
-        "representation": "--defaults-extra-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-extra-file",
+        "title": "--defaults-extra-file=file_name",
         "description": "Read named option file in addition to usual option files"
       },
-      "defaults-file": {
-        "representation": "--defaults-file=file_name",
+      {
+        "type": "long",
+        "key": "defaults-file",
+        "title": "--defaults-file=file_name",
         "description": "Read only named option file"
       },
-      "defaults-group-suffix": {
-        "representation": "--defaults-group-suffix=str",
+      {
+        "type": "long",
+        "key": "defaults-group-suffix",
+        "title": "--defaults-group-suffix=str",
         "description": "Option group suffix value"
       },
-      "delete-master-logs": {
-        "representation": "--delete-master-logs",
+      {
+        "type": "long",
+        "key": "delete-master-logs",
+        "title": "--delete-master-logs",
         "description": "On a replication source server, delete the binary logs after performing the dump operation"
       },
-      "delete-source-logs": {
-        "representation": "--delete-source-logs",
+      {
+        "type": "long",
+        "key": "delete-source-logs",
+        "title": "--delete-source-logs",
         "description": "On a replication source server, delete the binary logs after performing the dump operation"
       },
-      "disable-keys": {
-        "representation": "--disable-keys, -K",
+      {
+        "type": "long",
+        "key": "disable-keys",
+        "title": "--disable-keys, -K",
         "description": "For each table, surround INSERT statements with statements to disable and enable keys"
       },
-      "dump-date": {
-        "representation": "--dump-date",
+      {
+        "type": "short",
+        "key": "K",
+        "title": "--disable-keys, -K",
+        "description": "For each table, surround INSERT statements with statements to disable and enable keys"
+      },
+      {
+        "type": "long",
+        "key": "dump-date",
+        "title": "--dump-date",
         "description": "Include dump date as \"Dump completed on\" comment if --comments is given"
       },
-      "dump-replica": {
-        "representation": "--dump-replica[=value]",
+      {
+        "type": "long",
+        "key": "dump-replica",
+        "title": "--dump-replica[=value]",
         "description": "Include CHANGE REPLICATION SOURCE TO statement that lists binary log coordinates of replica's source"
       },
-      "dump-slave": {
-        "representation": "--dump-slave[=value]",
+      {
+        "type": "long",
+        "key": "dump-slave",
+        "title": "--dump-slave[=value]",
         "description": "Include CHANGE MASTER statement that lists binary log coordinates of replica's source"
       },
-      "enable-cleartext-plugin": {
-        "representation": "--enable-cleartext-plugin",
+      {
+        "type": "long",
+        "key": "enable-cleartext-plugin",
+        "title": "--enable-cleartext-plugin",
         "description": "Enable cleartext authentication plugin"
       },
-      "events": {
-        "representation": "--events, -E",
+      {
+        "type": "long",
+        "key": "events",
+        "title": "--events, -E",
         "description": "Dump events from dumped databases"
       },
-      "extended-insert": {
-        "representation": "--extended-insert, -e",
+      {
+        "type": "short",
+        "key": "E",
+        "title": "--events, -E",
+        "description": "Dump events from dumped databases"
+      },
+      {
+        "type": "long",
+        "key": "extended-insert",
+        "title": "--extended-insert, -e",
         "description": "Use multiple-row INSERT syntax"
       },
-      "fields-enclosed-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "short",
+        "key": "e",
+        "title": "--extended-insert, -e",
+        "description": "Use multiple-row INSERT syntax"
+      },
+      {
+        "type": "long",
+        "key": "fields-enclosed-by",
+        "title": "--fields-enclosed-by",
         "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "fields-escaped-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-escaped-by",
+        "title": "--fields-escaped-by",
         "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "fields-optionally-enclosed-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-optionally-enclosed-by",
+        "title": "--fields-optionally-enclosed-by",
         "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "fields-terminated-by": {
-        "representation": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+      {
+        "type": "long",
+        "key": "fields-terminated-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
         "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "flush-logs": {
-        "representation": "--flush-logs, -F",
+      {
+        "type": "long",
+        "key": "fields-enclosed-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+        "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
+      },
+      {
+        "type": "long",
+        "key": "fields-optionally-enclosed-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+        "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
+      },
+      {
+        "type": "long",
+        "key": "fields-escaped-by",
+        "title": "--fields-terminated-by=..., --fields-enclosed-by=..., --fields-optionally-enclosed-by=..., --fields-escaped-by=...",
+        "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
+      },
+      {
+        "type": "long",
+        "key": "flush-logs",
+        "title": "--flush-logs, -F",
         "description": "Flush MySQL server log files before starting dump"
       },
-      "flush-privileges": {
-        "representation": "--flush-privileges",
+      {
+        "type": "short",
+        "key": "F",
+        "title": "--flush-logs, -F",
+        "description": "Flush MySQL server log files before starting dump"
+      },
+      {
+        "type": "long",
+        "key": "flush-privileges",
+        "title": "--flush-privileges",
         "description": "Emit a FLUSH PRIVILEGES statement after dumping mysql database"
       },
-      "force": {
-        "representation": "--force, -f",
+      {
+        "type": "long",
+        "key": "force",
+        "title": "--force, -f",
         "description": "Continue even if an SQL error occurs during a table dump"
       },
-      "get-server-public-key": {
-        "representation": "--get-server-public-key",
+      {
+        "type": "short",
+        "key": "f",
+        "title": "--force, -f",
+        "description": "Continue even if an SQL error occurs during a table dump"
+      },
+      {
+        "type": "long",
+        "key": "get-server-public-key",
+        "title": "--get-server-public-key",
         "description": "Request RSA public key from server"
       },
-      "help": {
-        "representation": "--help, -?",
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help, -?",
         "description": "Display help message and exit"
       },
-      "hex-blob": {
-        "representation": "--hex-blob",
+      {
+        "type": "long",
+        "key": "hex-blob",
+        "title": "--hex-blob",
         "description": "Dump binary columns using hexadecimal notation"
       },
-      "host": {
-        "representation": "--host=host_name, -h host_name",
+      {
+        "type": "long",
+        "key": "host",
+        "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
-      "ignore-error": {
-        "representation": "--ignore-error=error[, error]...",
+      {
+        "type": "short",
+        "key": "h",
+        "title": "--host=host_name, -h host_name",
+        "description": "Host on which MySQL server is located"
+      },
+      {
+        "type": "long",
+        "key": "ignore-error",
+        "title": "--ignore-error=error[, error]...",
         "description": "Ignore specified errors"
       },
-      "ignore-table": {
-        "representation": "--ignore-table=db_name.tbl_name",
+      {
+        "type": "long",
+        "key": "ignore-table",
+        "title": "--ignore-table=db_name.tbl_name",
         "description": "Do not dump given table"
       },
-      "include-master-host-port": {
-        "representation": "--include-master-host-port",
+      {
+        "type": "long",
+        "key": "include-master-host-port",
+        "title": "--include-master-host-port",
         "description": "Include MASTER_HOST/MASTER_PORT options in CHANGE MASTER statement produced with --dump-slave"
       },
-      "include-source-host-port": {
-        "representation": "--include-source-host-port",
+      {
+        "type": "long",
+        "key": "include-source-host-port",
+        "title": "--include-source-host-port",
         "description": "Include SOURCE_HOST and SOURCE_PORT options in CHANGE REPLICATION SOURCE TO statement produced with --dump-replica"
       },
-      "insert-ignore": {
-        "representation": "--insert-ignore",
+      {
+        "type": "long",
+        "key": "insert-ignore",
+        "title": "--insert-ignore",
         "description": "Write INSERT IGNORE rather than INSERT statements"
       },
-      "lines-terminated-by": {
-        "representation": "--lines-terminated-by=...",
+      {
+        "type": "long",
+        "key": "lines-terminated-by",
+        "title": "--lines-terminated-by=...",
         "description": "This option is used with the --tab option and has the same meaning as the corresponding clause for LOAD DATA"
       },
-      "lock-all-tables": {
-        "representation": "--lock-all-tables, -x",
+      {
+        "type": "long",
+        "key": "lock-all-tables",
+        "title": "--lock-all-tables, -x",
         "description": "Lock all tables across all databases"
       },
-      "lock-tables": {
-        "representation": "--lock-tables, -l",
+      {
+        "type": "short",
+        "key": "x",
+        "title": "--lock-all-tables, -x",
+        "description": "Lock all tables across all databases"
+      },
+      {
+        "type": "long",
+        "key": "lock-tables",
+        "title": "--lock-tables, -l",
         "description": "Lock all tables before dumping them"
       },
-      "log-error": {
-        "representation": "--log-error=file_name",
+      {
+        "type": "short",
+        "key": "l",
+        "title": "--lock-tables, -l",
+        "description": "Lock all tables before dumping them"
+      },
+      {
+        "type": "long",
+        "key": "log-error",
+        "title": "--log-error=file_name",
         "description": "Append warnings and errors to named file"
       },
-      "login-path": {
-        "representation": "--login-path=name",
+      {
+        "type": "long",
+        "key": "login-path",
+        "title": "--login-path=name",
         "description": "Read login path options from .mylogin.cnf"
       },
-      "master-data": {
-        "representation": "--master-data[=value]",
+      {
+        "type": "long",
+        "key": "master-data",
+        "title": "--master-data[=value]",
         "description": "Write the binary log file name and position to the output"
       },
-      "max-allowed-packet": {
-        "representation": "--max-allowed-packet=value",
+      {
+        "type": "long",
+        "key": "max-allowed-packet",
+        "title": "--max-allowed-packet=value",
         "description": "Maximum packet length to send to or receive from server"
       },
-      "net-buffer-length": {
-        "representation": "--net-buffer-length=value",
+      {
+        "type": "long",
+        "key": "net-buffer-length",
+        "title": "--net-buffer-length=value",
         "description": "Buffer size for TCP/IP and socket communication"
       },
-      "network-timeout": {
-        "representation": "--network-timeout, -M",
+      {
+        "type": "long",
+        "key": "network-timeout",
+        "title": "--network-timeout, -M",
         "description": "Increase network timeouts to permit larger table dumps"
       },
-      "no-autocommit": {
-        "representation": "--no-autocommit",
+      {
+        "type": "short",
+        "key": "M",
+        "title": "--network-timeout, -M",
+        "description": "Increase network timeouts to permit larger table dumps"
+      },
+      {
+        "type": "long",
+        "key": "no-autocommit",
+        "title": "--no-autocommit",
         "description": "Enclose the INSERT statements for each dumped table within SET autocommit = 0 and COMMIT statements"
       },
-      "no-create-db": {
-        "representation": "--no-create-db, -n",
+      {
+        "type": "long",
+        "key": "no-create-db",
+        "title": "--no-create-db, -n",
         "description": "Do not write CREATE DATABASE statements"
       },
-      "no-create-info": {
-        "representation": "--no-create-info, -t",
+      {
+        "type": "short",
+        "key": "n",
+        "title": "--no-create-db, -n",
+        "description": "Do not write CREATE DATABASE statements"
+      },
+      {
+        "type": "long",
+        "key": "no-create-info",
+        "title": "--no-create-info, -t",
         "description": "Do not write CREATE TABLE statements that re-create each dumped table"
       },
-      "no-data": {
-        "representation": "--no-data, -d",
+      {
+        "type": "short",
+        "key": "t",
+        "title": "--no-create-info, -t",
+        "description": "Do not write CREATE TABLE statements that re-create each dumped table"
+      },
+      {
+        "type": "long",
+        "key": "no-data",
+        "title": "--no-data, -d",
         "description": "Do not dump table contents"
       },
-      "no-defaults": {
-        "representation": "--no-defaults",
+      {
+        "type": "short",
+        "key": "d",
+        "title": "--no-data, -d",
+        "description": "Do not dump table contents"
+      },
+      {
+        "type": "long",
+        "key": "no-defaults",
+        "title": "--no-defaults",
         "description": "Read no option files"
       },
-      "no-set-names": {
-        "representation": "--no-set-names, -N",
+      {
+        "type": "long",
+        "key": "no-set-names",
+        "title": "--no-set-names, -N",
         "description": "Same as --skip-set-charset"
       },
-      "no-tablespaces": {
-        "representation": "--no-tablespaces, -y",
+      {
+        "type": "short",
+        "key": "N",
+        "title": "--no-set-names, -N",
+        "description": "Same as --skip-set-charset"
+      },
+      {
+        "type": "long",
+        "key": "no-tablespaces",
+        "title": "--no-tablespaces, -y",
         "description": "Do not write any CREATE LOGFILE GROUP or CREATE TABLESPACE statements in output"
       },
-      "opt": {
-        "representation": "--opt",
+      {
+        "type": "short",
+        "key": "y",
+        "title": "--no-tablespaces, -y",
+        "description": "Do not write any CREATE LOGFILE GROUP or CREATE TABLESPACE statements in output"
+      },
+      {
+        "type": "long",
+        "key": "opt",
+        "title": "--opt",
         "description": "Shorthand for --add-drop-table --add-locks --create-options --disable-keys --extended-insert --lock-tables --quick --set-charset"
       },
-      "order-by-primary": {
-        "representation": "--order-by-primary",
+      {
+        "type": "long",
+        "key": "order-by-primary",
+        "title": "--order-by-primary",
         "description": "Dump each table's rows sorted by its primary key, or by its first unique index"
       },
-      "password": {
-        "representation": "--password[=password], -p[password]",
+      {
+        "type": "long",
+        "key": "password",
+        "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
-      "pipe": {
-        "representation": "--pipe, -W",
+      {
+        "type": "short",
+        "key": "p",
+        "title": "--password[=password], -p[password]",
+        "description": "Password to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "pipe",
+        "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"
       },
-      "plugin-dir": {
-        "representation": "--plugin-dir=dir_name",
+      {
+        "type": "short",
+        "key": "W",
+        "title": "--pipe, -W",
+        "description": "Connect to server using named pipe (Windows only)"
+      },
+      {
+        "type": "long",
+        "key": "plugin-dir",
+        "title": "--plugin-dir=dir_name",
         "description": "Directory where plugins are installed"
       },
-      "port": {
-        "representation": "--port=port_num, -P port_num",
+      {
+        "type": "long",
+        "key": "port",
+        "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
-      "print-defaults": {
-        "representation": "--print-defaults",
+      {
+        "type": "short",
+        "key": "P",
+        "title": "--port=port_num, -P port_num",
+        "description": "TCP/IP port number for connection"
+      },
+      {
+        "type": "long",
+        "key": "print-defaults",
+        "title": "--print-defaults",
         "description": "Print default options"
       },
-      "protocol": {
-        "representation": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
+      {
+        "type": "long",
+        "key": "protocol",
+        "title": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
         "description": "Transport protocol to use"
       },
-      "quick": {
-        "representation": "--quick, -q",
+      {
+        "type": "long",
+        "key": "quick",
+        "title": "--quick, -q",
         "description": "Retrieve rows for a table from the server a row at a time"
       },
-      "quote-names": {
-        "representation": "--quote-names, -Q",
+      {
+        "type": "short",
+        "key": "q",
+        "title": "--quick, -q",
+        "description": "Retrieve rows for a table from the server a row at a time"
+      },
+      {
+        "type": "long",
+        "key": "quote-names",
+        "title": "--quote-names, -Q",
         "description": "Quote identifiers within backtick characters"
       },
-      "replace": {
-        "representation": "--replace",
+      {
+        "type": "short",
+        "key": "Q",
+        "title": "--quote-names, -Q",
+        "description": "Quote identifiers within backtick characters"
+      },
+      {
+        "type": "long",
+        "key": "replace",
+        "title": "--replace",
         "description": "Write REPLACE statements rather than INSERT statements"
       },
-      "result-file": {
-        "representation": "--result-file=file_name, -r file_name",
+      {
+        "type": "long",
+        "key": "result-file",
+        "title": "--result-file=file_name, -r file_name",
         "description": "Direct output to a given file"
       },
-      "routines": {
-        "representation": "--routines, -R",
+      {
+        "type": "short",
+        "key": "r",
+        "title": "--result-file=file_name, -r file_name",
+        "description": "Direct output to a given file"
+      },
+      {
+        "type": "long",
+        "key": "routines",
+        "title": "--routines, -R",
         "description": "Dump stored routines (procedures and functions) from dumped databases"
       },
-      "server-public-key-path": {
-        "representation": "--server-public-key-path=file_name",
+      {
+        "type": "short",
+        "key": "R",
+        "title": "--routines, -R",
+        "description": "Dump stored routines (procedures and functions) from dumped databases"
+      },
+      {
+        "type": "long",
+        "key": "server-public-key-path",
+        "title": "--server-public-key-path=file_name",
         "description": "Path name to file containing RSA public key"
       },
-      "set-charset": {
-        "representation": "--set-charset",
+      {
+        "type": "long",
+        "key": "set-charset",
+        "title": "--set-charset",
         "description": "Add SET NAMES default_character_set to output"
       },
-      "set-gtid-purged": {
-        "representation": "--set-gtid-purged=value",
+      {
+        "type": "long",
+        "key": "set-gtid-purged",
+        "title": "--set-gtid-purged=value",
         "description": "Whether to add SET @@GLOBAL.GTID_PURGED to output"
       },
-      "shared-memory-base-name": {
-        "representation": "--shared-memory-base-name=name",
+      {
+        "type": "long",
+        "key": "shared-memory-base-name",
+        "title": "--shared-memory-base-name=name",
         "description": "Shared-memory name for shared-memory connections (Windows only)"
       },
-      "show-create-skip-secondary-engine": {
-        "representation": "--show-create-skip-secondary-engine=value",
+      {
+        "type": "long",
+        "key": "show-create-skip-secondary-engine",
+        "title": "--show-create-skip-secondary-engine=value",
         "description": "Exclude SECONDARY ENGINE clause from CREATE TABLE statements"
       },
-      "single-transaction": {
-        "representation": "--single-transaction",
+      {
+        "type": "long",
+        "key": "single-transaction",
+        "title": "--single-transaction",
         "description": "Issue a BEGIN SQL statement before dumping data from server"
       },
-      "skip-add-drop-table": {
-        "representation": "--skip-add-drop-table",
+      {
+        "type": "long",
+        "key": "skip-add-drop-table",
+        "title": "--skip-add-drop-table",
         "description": "Do not add a DROP TABLE statement before each CREATE TABLE statement"
       },
-      "skip-add-locks": {
-        "representation": "--skip-add-locks",
+      {
+        "type": "long",
+        "key": "skip-add-locks",
+        "title": "--skip-add-locks",
         "description": "Do not add locks"
       },
-      "skip-comments": {
-        "representation": "--skip-comments",
+      {
+        "type": "long",
+        "key": "skip-comments",
+        "title": "--skip-comments",
         "description": "Do not add comments to dump file"
       },
-      "skip-compact": {
-        "representation": "--skip-compact",
+      {
+        "type": "long",
+        "key": "skip-compact",
+        "title": "--skip-compact",
         "description": "Do not produce more compact output"
       },
-      "skip-disable-keys": {
-        "representation": "--skip-disable-keys",
+      {
+        "type": "long",
+        "key": "skip-disable-keys",
+        "title": "--skip-disable-keys",
         "description": "Do not disable keys"
       },
-      "skip-extended-insert": {
-        "representation": "--skip-extended-insert",
+      {
+        "type": "long",
+        "key": "skip-extended-insert",
+        "title": "--skip-extended-insert",
         "description": "Turn off extended-insert"
       },
-      "skip-opt": {
-        "representation": "--skip-opt",
+      {
+        "type": "long",
+        "key": "skip-opt",
+        "title": "--skip-opt",
         "description": "Turn off options set by --opt"
       },
-      "skip-quick": {
-        "representation": "--skip-quick",
+      {
+        "type": "long",
+        "key": "skip-quick",
+        "title": "--skip-quick",
         "description": "Do not retrieve rows for a table from the server a row at a time"
       },
-      "skip-quote-names": {
-        "representation": "--skip-quote-names",
+      {
+        "type": "long",
+        "key": "skip-quote-names",
+        "title": "--skip-quote-names",
         "description": "Do not quote identifiers"
       },
-      "skip-set-charset": {
-        "representation": "--skip-set-charset",
+      {
+        "type": "long",
+        "key": "skip-set-charset",
+        "title": "--skip-set-charset",
         "description": "Do not write SET NAMES statement"
       },
-      "skip-triggers": {
-        "representation": "--skip-triggers",
+      {
+        "type": "long",
+        "key": "skip-triggers",
+        "title": "--skip-triggers",
         "description": "Do not dump triggers"
       },
-      "skip-tz-utc": {
-        "representation": "--skip-tz-utc",
+      {
+        "type": "long",
+        "key": "skip-tz-utc",
+        "title": "--skip-tz-utc",
         "description": "Turn off tz-utc"
       },
-      "socket": {
-        "representation": "--socket=path, -S path",
+      {
+        "type": "long",
+        "key": "socket",
+        "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
-      "source-data": {
-        "representation": "--source-data[=value]",
+      {
+        "type": "short",
+        "key": "S",
+        "title": "--socket=path, -S path",
+        "description": "Unix socket file or Windows named pipe to use"
+      },
+      {
+        "type": "long",
+        "key": "source-data",
+        "title": "--source-data[=value]",
         "description": "Write the binary log file name and position to the output"
       },
-      "ssl-ca": {
-        "representation": "--ssl-ca",
+      {
+        "type": "long",
+        "key": "ssl-ca",
+        "title": "--ssl-ca",
         "description": "File that contains list of trusted SSL Certificate Authorities"
       },
-      "ssl-capath": {
-        "representation": "--ssl-capath",
+      {
+        "type": "long",
+        "key": "ssl-capath",
+        "title": "--ssl-capath",
         "description": "Directory that contains trusted SSL Certificate Authority certificate files"
       },
-      "ssl-cert": {
-        "representation": "--ssl-cert",
+      {
+        "type": "long",
+        "key": "ssl-cert",
+        "title": "--ssl-cert",
         "description": "File that contains X.509 certificate"
       },
-      "ssl-cipher": {
-        "representation": "--ssl-cipher",
+      {
+        "type": "long",
+        "key": "ssl-cipher",
+        "title": "--ssl-cipher",
         "description": "Permissible ciphers for connection encryption"
       },
-      "ssl-crl": {
-        "representation": "--ssl-crl",
+      {
+        "type": "long",
+        "key": "ssl-crl",
+        "title": "--ssl-crl",
         "description": "File that contains certificate revocation lists"
       },
-      "ssl-crlpath": {
-        "representation": "--ssl-crlpath",
+      {
+        "type": "long",
+        "key": "ssl-crlpath",
+        "title": "--ssl-crlpath",
         "description": "Directory that contains certificate revocation-list files"
       },
-      "ssl-fips-mode": {
-        "representation": "--ssl-fips-mode={OFF|ON|STRICT}",
+      {
+        "type": "long",
+        "key": "ssl-fips-mode",
+        "title": "--ssl-fips-mode={OFF|ON|STRICT}",
         "description": "Whether to enable FIPS mode on client side"
       },
-      "ssl-key": {
-        "representation": "--ssl-key",
+      {
+        "type": "long",
+        "key": "ssl-key",
+        "title": "--ssl-key",
         "description": "File that contains X.509 key"
       },
-      "ssl-mode": {
-        "representation": "--ssl-mode",
+      {
+        "type": "long",
+        "key": "ssl-mode",
+        "title": "--ssl-mode",
         "description": "Desired security state of connection to server"
       },
-      "tab": {
-        "representation": "--tab=dir_name, -T dir_name",
+      {
+        "type": "long",
+        "key": "tab",
+        "title": "--tab=dir_name, -T dir_name",
         "description": "Produce tab-separated data files"
       },
-      "tables": {
-        "representation": "--tables",
+      {
+        "type": "short",
+        "key": "T",
+        "title": "--tab=dir_name, -T dir_name",
+        "description": "Produce tab-separated data files"
+      },
+      {
+        "type": "long",
+        "key": "tables",
+        "title": "--tables",
         "description": "Override --databases or -B option"
       },
-      "tls-ciphersuites": {
-        "representation": "--tls-ciphersuites=ciphersuite_list",
+      {
+        "type": "long",
+        "key": "tls-ciphersuites",
+        "title": "--tls-ciphersuites=ciphersuite_list",
         "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
       },
-      "tls-version": {
-        "representation": "--tls-version=protocol_list",
+      {
+        "type": "long",
+        "key": "tls-version",
+        "title": "--tls-version=protocol_list",
         "description": "Permissible TLS protocols for encrypted connections"
       },
-      "triggers": {
-        "representation": "--triggers",
+      {
+        "type": "long",
+        "key": "triggers",
+        "title": "--triggers",
         "description": "Dump triggers for each dumped table"
       },
-      "tz-utc": {
-        "representation": "--tz-utc",
+      {
+        "type": "long",
+        "key": "tz-utc",
+        "title": "--tz-utc",
         "description": "Add SET TIME_ZONE='+00:00' to dump file"
       },
-      "user": {
-        "representation": "--user=user_name, -u user_name",
+      {
+        "type": "long",
+        "key": "user",
+        "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
-      "verbose": {
-        "representation": "--verbose, -v",
+      {
+        "type": "short",
+        "key": "u",
+        "title": "--user=user_name, -u user_name",
+        "description": "MySQL user name to use when connecting to server"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "--verbose, -v",
         "description": "Verbose mode"
       },
-      "version": {
-        "representation": "--version, -V",
+      {
+        "type": "short",
+        "key": "v",
+        "title": "--verbose, -v",
+        "description": "Verbose mode"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version, -V",
         "description": "Display version information and exit"
       },
-      "where": {
-        "representation": "--where='where_condition', -w\n            'where_condition'",
+      {
+        "type": "short",
+        "key": "V",
+        "title": "--version, -V",
+        "description": "Display version information and exit"
+      },
+      {
+        "type": "long",
+        "key": "where",
+        "title": "--where='where_condition', -w\n            'where_condition'",
         "description": "Dump only rows selected by given WHERE condition"
       },
-      "xml": {
-        "representation": "--xml, -X",
+      {
+        "type": "short",
+        "key": "w",
+        "title": "--where='where_condition', -w\n            'where_condition'",
+        "description": "Dump only rows selected by given WHERE condition"
+      },
+      {
+        "type": "long",
+        "key": "xml",
+        "title": "--xml, -X",
         "description": "Produce XML output"
       },
-      "zstd-compression-level": {
-        "representation": "--zstd-compression-level=level",
+      {
+        "type": "short",
+        "key": "X",
+        "title": "--xml, -X",
+        "description": "Produce XML output"
+      },
+      {
+        "type": "long",
+        "key": "zstd-compression-level",
+        "title": "--zstd-compression-level=level",
         "description": "Compression level for connections to server that use zstd compression"
       }
-    }
+    ]
   }
 ]
