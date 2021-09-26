@@ -59,3 +59,10 @@ export const trimOptionalElements: OptionStringsTransformer = (
     return parsed[0].replace(/\[___[0-9]+___\]/, '');
   });
 };
+
+// Example: ["-V:configvar"] -> ["-V"]
+export const trimAfterColons: OptionStringsTransformer = (
+  strings: string[]
+): string[] => {
+  return strings.map((string) => string.split(':')[0].trim());
+};
