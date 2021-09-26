@@ -24,13 +24,6 @@ export const readSnapshot = (baseCommandName: string): Command[] => {
 
 export const writeSnapshot = (baseCommandName: string, commands: Command[]) => {
   const filename = buildFilename(baseCommandName);
-
-  const json = commands.map((command) => ({
-    command: command.command,
-    shortOptionDictionary: Object.fromEntries(command.shortOptionDictionary),
-    longOptionDictionary: Object.fromEntries(command.longOptionDictionary),
-  }));
-
-  fs.outputJSONSync(filename, json, { spaces: 2 });
+  fs.outputJSONSync(filename, commands, { spaces: 2 });
   console.log(`Saved ${filename}`);
 };

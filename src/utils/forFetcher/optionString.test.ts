@@ -1,11 +1,23 @@
-import { partitionShortAndLongOptionLabels } from './optionString';
+import { OptionType } from '../../types';
+import { distinguishOptionKeyType } from './optionString';
 
 describe('partitionShortAndLongOptionLabels', () => {
   test('test', () => {
-    const strings = ['-a', '-b', '--long', 'invalid'];
-    const { shortOptionLabels, longOptionLabels } =
-      partitionShortAndLongOptionLabels(strings);
-    expect(shortOptionLabels).toStrictEqual(['a', 'b']);
-    expect(longOptionLabels).toStrictEqual(['long']);
+    const optionStrings = ['-a', '-b', '--long', 'invalid'];
+    const optionKeyTypes = distinguishOptionKeyType(optionStrings);
+    expect(optionKeyTypes).toStrictEqual([
+      {
+        type: OptionType.SHORT,
+        key: 'a',
+      },
+      {
+        type: OptionType.SHORT,
+        key: 'b',
+      },
+      {
+        type: OptionType.LONG,
+        key: 'long',
+      },
+    ]);
   });
 });

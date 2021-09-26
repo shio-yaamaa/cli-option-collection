@@ -1,38 +1,40 @@
+import { OptionType } from '../../types';
+
 const SHORT_OPTION_PATTERN = /^-([A-Za-z0-9])$/;
 const LONG_OPTION_PATTERN = /^--([A-Za-z0-9][A-Za-z0-9-]*)$/;
 
-// Example: ["-I", "--ignore"] -> { shortOptionLabels: ["I"], longOptionLabels: ["ignore"] }
+// Example: ["-I", "--ignore"] -> [{ key: "I", type: OptionType.SHORT }, { key: "ignore", type: OptionType.LONG }]
 // It ignores empty option names.
-// Example: ["--"] -> { shortOptionLabels: [], longOptionLabels: [] }
+// Example: ["--"] -> []
 // It cannot handle options with values. Do not pass options like "-dcharset" or "--option=value"
-export const partitionShortAndLongOptionLabels = (
-  strings: string[]
-): { shortOptionLabels: string[]; longOptionLabels: string[] } => {
-  const shortOptionLabels: string[] = [];
-  const longOptionLabels: string[] = [];
+export const distinguishOptionKeyType = (
+  optionStrings: string[]
+): { type: OptionType; key: string }[] => {
+  const optionKeyTypes: { key: string; type: OptionType }[] = [];
 
-  for (const string of strings) {
-    const shortMatch = string.match(SHORT_OPTION_PATTERN);
+  for (const optionString of optionStrings) {
+    const shortMatch = optionString.match(SHORT_OPTION_PATTERN);
     if (shortMatch) {
-      shortOptionLabels.push(shortMatch[1]);
+      optionKeyTypes.push({
+        type: OptionType.SHORT,
+        key: shortMatch[1],
+      });
       continue;
     }
-    const longMatch = string.match(LONG_OPTION_PATTERN);
+    const longMatch = optionString.match(LONG_OPTION_PATTERN);
     if (longMatch) {
-      longOptionLabels.push(longMatch[1]);
+      optionKeyTypes.push({
+        type: OptionType.LONG,
+        key: longMatch[1],
+      });
       continue;
     }
   }
 
-  return {
-    shortOptionLabels: [...new Set(shortOptionLabels)],
-    longOptionLabels: [...new Set(longOptionLabels)],
-  };
+  return optionKeyTypes;
 };
 
 // Example: ["-d", "-dt"] -> ["-d, -dt"]
-export const mergeRepresentations = (representations: string[]): string => {
-  return representations
-    .map((representation) => representation.trim())
-    .join(', ');
+export const mergeOptionTitles = (optionTitles: string[]): string => {
+  return optionTitles.map((optionTitle) => optionTitle.trim()).join(', ');
 };

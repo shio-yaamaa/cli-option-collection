@@ -1,5 +1,6 @@
-import { FetchFunction, Command, Option, OptionDictionary } from '../types';
+import { FetchFunction, Command, Option, OptionType } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
+import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   adjustSpacingAroundComma,
   splitByMultipleDelimiters,
@@ -98,62 +99,30 @@ const getSections = (document: Document): Section[] => {
 };
 
 const sectionToCommand = (section: Section): Command | null => {
-  const commandString = usageToCommand(section.usage);
-  if (!commandString) {
+  const commandName = usageToCommandName(section.usage);
+  if (!commandName) {
     return null;
   }
 
-  const shortOptionDictionary: OptionDictionary = new Map();
-  const longOptionDictionary: OptionDictionary = new Map();
-
+  const options: Option[] = [];
   for (const pre of section.pres) {
-    const options = preToOptions(pre);
-    const additionalShortOptionDictionary = options.shortOptionDictionary;
-    const additionalLongOptionDictionary = options.longOptionDictionary;
-
-    for (const [key, value] of additionalShortOptionDictionary.entries()) {
-      if (!shortOptionDictionary.has(key)) {
-        shortOptionDictionary.set(key, value);
-      }
-    }
-    for (const [key, value] of additionalLongOptionDictionary.entries()) {
-      if (!longOptionDictionary.has(key)) {
-        longOptionDictionary.set(key, value);
-      }
-    }
+    options.push(...preToOptions(pre));
   }
-
   for (const paragraph of section.paragraphs) {
-    const maybeOption = paragraphToOption(paragraph);
-    if (!maybeOption) {
-      continue;
-    }
-    const { shortOptionLabels, longOptionLabels, option } = maybeOption;
-    for (const shortOptionLabel of shortOptionLabels) {
-      if (!shortOptionDictionary.has(shortOptionLabel)) {
-        shortOptionDictionary.set(shortOptionLabel, option);
-      }
-    }
-    for (const longOptionLabel of longOptionLabels) {
-      if (!longOptionDictionary.has(longOptionLabel)) {
-        longOptionDictionary.set(longOptionLabel, option);
-      }
-    }
+    options.push(...paragraphToOptions(paragraph));
   }
-
-  if (shortOptionDictionary.size === 0 && longOptionDictionary.size === 0) {
+  if (options.length === 0) {
     return null;
   }
 
   return {
-    command: commandString,
-    shortOptionDictionary,
-    longOptionDictionary,
+    name: commandName,
+    options: uniqueOptions(options),
   };
 };
 
 // Example: "go mod why [-m] [-vendor] packages..." -> "go mod why"
-const usageToCommand = (usage: string): string | null => {
+const usageToCommandName = (usage: string): string | null => {
   const words = usage.split(' ');
   const commandWords = [];
   for (const word of words) {
@@ -171,14 +140,8 @@ const usageToCommand = (usage: string): string | null => {
 
 const FLAG_LIKE_PATTERN = /^-[A-Za-z]/;
 const DESCRIPTION_LIKE_PATTERN = /^(?:\t|(\s{4}))[^\t\s]/;
-const preToOptions = (
-  pre: string
-): {
-  shortOptionDictionary: OptionDictionary;
-  longOptionDictionary: OptionDictionary;
-} => {
-  const shortOptionDictionary: OptionDictionary = new Map();
-  const longOptionDictionary: OptionDictionary = new Map();
+const preToOptions = (pre: string): Option[] => {
+  const options: Option[] = [];
 
   const lines = pre.split('\n');
   const flagDescriptionLinesPairs: {
@@ -205,25 +168,21 @@ const preToOptions = (
   }
 
   for (const { flag, descriptionLines } of flagDescriptionLinesPairs) {
-    const label = transformOptionStrings(
+    const optionString = transformOptionStrings(
       [flag],
       [trimOptionalElements, trimOptionArguments, trimOptionValues]
-    )[0].slice(1);
+    )[0];
+    const optionKey = optionString.slice(1); // Remove the "-" prefix
     const description = descriptionLines.map((line) => line.trim()).join(' ');
-    const option: Option = {
-      representation: flag.trim(),
+    options.push({
+      type: optionKey.length === 1 ? OptionType.SHORT : OptionType.LONG,
+      key: optionKey,
+      title: flag.trim(),
       description,
-    };
-    (label.length === 1 ? shortOptionDictionary : longOptionDictionary).set(
-      label,
-      option
-    );
+    });
   }
 
-  return {
-    shortOptionDictionary,
-    longOptionDictionary,
-  };
+  return options;
 };
 
 // Examples
@@ -233,51 +192,35 @@ const preToOptions = (
 const SENTENCE_SUBJECT_FLAG_PATTERN =
   /^The\s([A-Za-z0-9-\s\[\],@=]+)\sflags?\s/;
 const FLAG_PATTERN = /^-[A-Za-z][A-Za-z0-9-]*/;
-const paragraphToOption = (
-  paragraph: string
-): {
-  shortOptionLabels: string[];
-  longOptionLabels: string[];
-  option: Option;
-} | null => {
+const paragraphToOptions = (paragraph: string): Option[] => {
   const matches = paragraph.match(SENTENCE_SUBJECT_FLAG_PATTERN);
   const sentenceSubjectFlag =
     matches && matches.length >= 2 ? matches[1].trim() : null;
   if (!sentenceSubjectFlag) {
-    return null;
+    return [];
   }
   const flags = splitByMultipleDelimiters(sentenceSubjectFlag, [',', 'and']);
   const allValidFlags = flags.every((flag) => FLAG_PATTERN.test(flag));
   if (!allValidFlags) {
-    return null;
+    return [];
   }
 
-  const optionLabels = flags.map((flag) => flagToLabel(flag));
-  const shortOptionLabels: string[] = [];
-  const longOptionLabels: string[] = [];
-  for (const optionLabel of optionLabels) {
-    if (optionLabel.length === 1) {
-      shortOptionLabels.push(optionLabel);
-    }
-    if (optionLabel.length > 1) {
-      longOptionLabels.push(optionLabel);
-    }
-  }
+  const optionTitle = adjustSpacingAroundComma(sentenceSubjectFlag);
+  const optionDescription = paragraph.trim().replace(/\n/g, ' ');
 
-  return {
-    shortOptionLabels: [...new Set(shortOptionLabels)],
-    longOptionLabels: [...new Set(longOptionLabels)],
-    option: {
-      representation: adjustSpacingAroundComma(sentenceSubjectFlag),
-      description: paragraph.trim().replace(/\n/g, ' '),
-    },
-  };
+  const optionKeys = flags.map((flag) => flagToOptionKey(flag));
+  return optionKeys.map((key) => ({
+    type: key.length === 1 ? OptionType.SHORT : OptionType.LONG,
+    key,
+    title: optionTitle,
+    description: optionDescription,
+  }));
 };
 
-const flagToLabel = (flag: string): string => {
+const flagToOptionKey = (flag: string): string => {
   const transformed = transformOptionStrings(
     [flag],
     [trimOptionalElements, trimOptionArguments, trimOptionValues]
   )[0];
-  return transformed.slice(1);
+  return transformed.slice(1); // Remove the "-" prefix
 };

@@ -1,6 +1,6 @@
-import { Fetcher, Command, OptionDictionary, Option } from '../types';
+import { Fetcher, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
-import { partitionShortAndLongOptionLabels } from '../utils/forFetcher/optionString';
+import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
 import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
@@ -17,7 +17,7 @@ export interface SourceDef {
 
 interface OptionTableItem {
   hash: string; // e.g. "option_mysql_auto-rehash"
-  representation: string;
+  title: string;
   description: string;
 }
 
@@ -27,50 +27,35 @@ export const mysql: Fetcher<SourceDef> = async (
   const document = await fetchDocumentFromURL(sourceDef.url);
   const hashDescriptionPairs = findOptionTableItems(document, sourceDef.url);
 
-  const shortOptionDictionary: OptionDictionary = new Map();
-  const longOptionDictionary: OptionDictionary = new Map();
+  const options: Option[] = [];
 
   for (const hashDescriptionPair of hashDescriptionPairs) {
-    const correspondingOption = findOptionCorrespondingToOptionTableItem(
+    const correspondingOptions = findOptionsCorrespondingToOptionTableItem(
       document,
       hashDescriptionPair
     );
-    if (correspondingOption) {
-      const { option, shortOptionLabels, longOptionLabels } =
-        correspondingOption;
-
-      for (const shortOptionLabel of shortOptionLabels) {
-        shortOptionDictionary.set(shortOptionLabel, option);
-      }
-      for (const longOptionLabel of longOptionLabels) {
-        longOptionDictionary.set(longOptionLabel, option);
-      }
+    if (correspondingOptions.length > 0) {
+      options.push(...correspondingOptions);
     } else {
       // Options that begin with "--ssl" are consolidated as "--ssl*" in the command list.
       // In such cases, use the option label specified in the option table.
-
-      const option = {
-        representation: hashDescriptionPair.representation,
-        description: hashDescriptionPair.description,
-      };
-
-      const { shortOptionLabels, longOptionLabels } =
-        partitionShortAndLongOptionLabels([hashDescriptionPair.representation]);
-
-      for (const shortOptionLabel of shortOptionLabels) {
-        shortOptionDictionary.set(shortOptionLabel, option);
-      }
-      for (const longOptionLabel of longOptionLabels) {
-        longOptionDictionary.set(longOptionLabel, option);
-      }
+      options.push(
+        ...distinguishOptionKeyType([hashDescriptionPair.title]).map(
+          ({ type, key }) => ({
+            type,
+            key,
+            title: hashDescriptionPair.title,
+            description: hashDescriptionPair.description,
+          })
+        )
+      );
     }
   }
 
   return [
     {
-      command: sourceDef.commandName,
-      shortOptionDictionary,
-      longOptionDictionary,
+      name: sourceDef.commandName,
+      options,
     },
   ];
 };
@@ -102,7 +87,7 @@ const findOptionTableItems = (
 
     items.push({
       hash,
-      representation: th?.textContent ?? '',
+      title: th?.textContent ?? '',
       description,
     });
   }
@@ -120,46 +105,30 @@ const findOptionTable = (document: Document): HTMLTableElement | null => {
   );
 };
 
-const findOptionCorrespondingToOptionTableItem = (
+const findOptionsCorrespondingToOptionTableItem = (
   document: Document,
   optionTableItem: OptionTableItem
-): {
-  option: Option;
-  shortOptionLabels: string[];
-  longOptionLabels: string[];
-} | null => {
+): Option[] => {
   const marker = document.querySelector(`a[name=${optionTableItem.hash}]`);
-  const label = marker?.parentElement?.textContent?.trim();
-  if (!label) {
-    return null;
+  const title = marker?.parentElement?.textContent?.trim();
+  if (!title) {
+    return [];
   }
 
-  const option: Option = {
-    representation: adjustSpacingAroundComma(label),
-    description: optionTableItem.description,
-  };
-
-  const labels = transformOptionStrings(
-    [label],
+  const optionStrings = transformOptionStrings(
+    [title],
     [splitByComma, trimOptionalElements, trimOptionArguments, trimOptionValues]
   );
 
   // Example: "--skip-named-commands" links to "--named-commands"
-  if (labels[0] !== optionTableItem.representation.split(',')[0]) {
-    return null;
+  if (optionStrings[0] !== optionTableItem.title.split(',')[0]) {
+    return [];
   }
 
-  const { shortOptionLabels, longOptionLabels } =
-    partitionShortAndLongOptionLabels(labels);
-
-  // Return null if the option labels are not valid (e.g. "--ssl*")
-  if (shortOptionLabels.length === 0 && longOptionLabels.length === 0) {
-    return null;
-  }
-
-  return {
-    option,
-    shortOptionLabels,
-    longOptionLabels,
-  };
+  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+    type,
+    key,
+    title: adjustSpacingAroundComma(title),
+    description: optionTableItem.description,
+  }));
 };

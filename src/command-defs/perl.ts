@@ -1,15 +1,16 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, OptionDictionary, Option } from '../types';
+import { FetchFunction, Command, Option } from '../types';
 import {
   DtDdPair,
   fetchDocumentFromURL,
   findDtDdPairs,
   previousClosest,
 } from '../utils/forFetcher/dom';
+import { uniqueOptions } from '../utils/forFetcher/options';
 import {
-  mergeRepresentations,
-  partitionShortAndLongOptionLabels,
+  mergeOptionTitles,
+  distinguishOptionKeyType,
 } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
@@ -35,29 +36,15 @@ export const fetchPerl: FetchFunction = async (): Promise<Command[]> => {
     return [];
   }
 
-  const shortOptionDictionary: OptionDictionary = new Map();
-  const longOptionDictionary: OptionDictionary = new Map();
-
   const dtDdPairs = findDtDdPairs(optionDl, true);
-  for (const dtDdPair of dtDdPairs) {
-    const maybeOption = dtDdPairToOption(dtDdPair);
-    if (!maybeOption) {
-      continue;
-    }
-    const { shortOptionLabels, longOptionLabels, option } = maybeOption;
-    for (const shortOptionLabel of shortOptionLabels) {
-      shortOptionDictionary.set(shortOptionLabel, option);
-    }
-    for (const longOptionLabel of longOptionLabels) {
-      longOptionDictionary.set(longOptionLabel, option);
-    }
-  }
+  const options = ([] as Option[]).concat(
+    ...dtDdPairs.map((dtDdPair) => dtDdPairToOptions(dtDdPair))
+  );
 
   return [
     {
-      command: 'perl',
-      shortOptionDictionary,
-      longOptionDictionary,
+      name: 'perl',
+      options: uniqueOptions(options),
     },
   ];
 };
@@ -71,24 +58,12 @@ const findOptionDl = (document: Document): HTMLDListElement | null => {
   );
 };
 
-const dtDdPairToOption = ({
-  dts,
-  dd,
-}: DtDdPair): {
-  shortOptionLabels: string[];
-  longOptionLabels: string[];
-  option: Option;
-} | null => {
-  const representations = dts.map((dt) =>
-    dt.startsWith('#') ? dt.slice(1) : dt
-  );
-  const representation = mergeRepresentations(representations);
-  const option = {
-    representation,
-    description: dd,
-  };
+const dtDdPairToOptions = ({ dts, dd }: DtDdPair): Option[] => {
+  const dtTexts = dts.map((dt) => (dt.startsWith('#') ? dt.slice(1) : dt));
+  const title = mergeOptionTitles(dtTexts);
+  const description = dd;
 
-  const labels = transformOptionStrings(representations, [
+  const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,
     trimOptionValues,
     trimNonDelimitedOptionValues,
@@ -96,16 +71,10 @@ const dtDdPairToOption = ({
     trimAfterColons,
   ]);
 
-  const { shortOptionLabels, longOptionLabels } =
-    partitionShortAndLongOptionLabels(labels);
-
-  if (shortOptionLabels.length === 0 && longOptionLabels.length === 0) {
-    return null;
-  }
-
-  return {
-    shortOptionLabels,
-    longOptionLabels,
-    option,
-  };
+  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+    type,
+    key,
+    title,
+    description,
+  }));
 };

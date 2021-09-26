@@ -1,8 +1,8 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, OptionDictionary, Option } from '../types';
+import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
-import { partitionShortAndLongOptionLabels } from '../utils/forFetcher/optionString';
+import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
 import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
 
 // Alternative sources:
@@ -75,8 +75,7 @@ const fetchSubcommand = async (
 ): Promise<Command> => {
   const document = await fetchDocumentFromURL(location.url);
 
-  const shortOptionDictionary: OptionDictionary = new Map();
-  const longOptionDictionary: OptionDictionary = new Map();
+  const options: Option[] = [];
 
   const trs = Array.from(document.querySelectorAll('tr'));
   for (const tr of trs) {
@@ -85,35 +84,29 @@ const fetchSubcommand = async (
       continue;
     }
 
-    const representation = tds[0].textContent;
+    const title = tds[0].textContent;
     const description = tds[2].textContent;
-    if (!representation || !description) {
+    if (!title || !description) {
       continue;
     }
-    const option: Option = {
-      representation: adjustSpacingAroundComma(representation),
-      description,
-    };
 
     const labelElements = Array.from(tds[0].querySelectorAll('code'));
-    const labels = labelElements
+    const optionStrings = labelElements
       .map((element) => element.textContent?.trim())
       .filter((label): label is string => typeof label === 'string');
 
-    const { shortOptionLabels, longOptionLabels } =
-      partitionShortAndLongOptionLabels(labels);
-
-    for (const shortOptionLabel of shortOptionLabels) {
-      shortOptionDictionary.set(shortOptionLabel, option);
-    }
-    for (const longOptionLabel of longOptionLabels) {
-      longOptionDictionary.set(longOptionLabel, option);
-    }
+    options.push(
+      ...distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+        type,
+        key,
+        title: adjustSpacingAroundComma(title),
+        description,
+      }))
+    );
   }
 
   return {
-    command: location.command,
-    shortOptionDictionary,
-    longOptionDictionary,
+    name: location.command,
+    options,
   };
 };

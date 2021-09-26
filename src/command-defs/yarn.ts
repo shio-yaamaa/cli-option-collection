@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, OptionDictionary, Option } from '../types';
+import { FetchFunction, Command, Option } from '../types';
 import {
   fetchDocumentFromURL,
   findAnchorsWithPattern,
@@ -11,7 +11,7 @@ import {
   transformOptionStrings,
   trimOptionArguments,
 } from '../utils/forFetcher/transformOptionString';
-import { partitionShortAndLongOptionLabels } from '../utils/forFetcher/optionString';
+import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
 
 // Yarn 2, not Yarn 1
 
@@ -20,7 +20,7 @@ import { partitionShortAndLongOptionLabels } from '../utils/forFetcher/optionStr
 // Could not find the repository that generates the Yarn 2 website.
 
 interface SubcommandLocation {
-  command: string; // e.g. "yarn install"
+  commandName: string; // e.g. "yarn install"
   url: URL; // e.g. https://yarnpkg.com/cli/install
 }
 
@@ -46,7 +46,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     SUBCOMMAND_TEXT_PATTERN
   );
   return anchors.map((anchor) => ({
-    command: anchor.textContent!,
+    commandName: anchor.textContent!,
     url: new URL(anchor.getAttribute('href')!, BASE_URL),
   }));
 };
@@ -56,8 +56,7 @@ const fetchSubcommand = async (
 ): Promise<Command> => {
   const document = await fetchDocumentFromURL(location.url);
 
-  const shortOptionDictionary: OptionDictionary = new Map();
-  const longOptionDictionary: OptionDictionary = new Map();
+  const options: Option[] = [];
 
   const trs = Array.from(document.querySelectorAll('tr'));
   for (const tr of trs) {
@@ -68,35 +67,29 @@ const fetchSubcommand = async (
     if (tds[0].querySelectorAll('code').length !== 1) {
       continue;
     }
-    const label = tds[0].textContent;
+    const optionString = tds[0].textContent;
     const description = tds[1].textContent;
-    if (!label || !description) {
+    if (!optionString || !description) {
       continue;
     }
+    const title = adjustSpacingAroundComma(optionString);
 
-    const option: Option = {
-      representation: adjustSpacingAroundComma(label),
-      description,
-    };
-
-    const labels = transformOptionStrings(
-      [label],
+    const optionStrings = transformOptionStrings(
+      [optionString],
       [splitByComma, trimOptionArguments]
     );
-    const { shortOptionLabels, longOptionLabels } =
-      partitionShortAndLongOptionLabels(labels);
-
-    for (const shortOptionLabel of shortOptionLabels) {
-      shortOptionDictionary.set(shortOptionLabel, option);
-    }
-    for (const longOptionLabel of longOptionLabels) {
-      longOptionDictionary.set(longOptionLabel, option);
-    }
+    options.push(
+      ...distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+        type,
+        key,
+        title,
+        description,
+      }))
+    );
   }
 
   return {
-    command: location.command,
-    shortOptionDictionary,
-    longOptionDictionary,
+    name: location.commandName,
+    options,
   };
 };
