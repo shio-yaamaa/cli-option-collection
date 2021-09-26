@@ -17,6 +17,7 @@ import { fetchMysqlimport } from './command-defs/mysqlimport';
 import { fetchMysqlpump } from './command-defs/mysqlpump';
 import { fetchMysqlshow } from './command-defs/mysqlshow';
 import { fetchMysqlslap } from './command-defs/mysqlslap';
+import { fetchPerl } from './command-defs/perl';
 import { fetchPs } from './command-defs/ps';
 import { fetchPwd } from './command-defs/pwd';
 import { fetchRm } from './command-defs/rm';
@@ -48,6 +49,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqlpump', fetchMysqlpump],
   ['mysqlshow', fetchMysqlshow],
   ['mysqlslap', fetchMysqlslap],
+  ['perl', fetchPerl],
   ['ps', fetchPs],
   ['pwd', fetchPwd],
   ['rm', fetchRm],
