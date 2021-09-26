@@ -25,7 +25,14 @@ export const partitionShortAndLongOptionLabels = (
   }
 
   return {
-    shortOptionLabels,
-    longOptionLabels,
+    shortOptionLabels: [...new Set(shortOptionLabels)],
+    longOptionLabels: [...new Set(longOptionLabels)],
   };
+};
+
+// Example: ["-d", "-dt"] -> ["-d, -dt"]
+export const mergeRepresentations = (representations: string[]): string => {
+  return representations
+    .map((representation) => representation.trim())
+    .join(', ');
 };
