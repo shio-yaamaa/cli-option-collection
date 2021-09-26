@@ -29,6 +29,16 @@ export const trimOptionValues: OptionStringsTransformer = (
   return strings.map((string) => string.split('=')[0].trim());
 };
 
+// Example: ["-dPattern"] -> ["-d"]
+const SHORT_OPTION_LIKE_PATTERN = /^-[A-Za-z]/;
+export const trimNonDelimitedOptionValues: OptionStringsTransformer = (
+  strings: string[]
+) => {
+  return strings.map((string) =>
+    SHORT_OPTION_LIKE_PATTERN.test(string) ? string.slice(0, 2) : string
+  );
+};
+
 // Example: ["--mode #0"] -> ["--mode"]
 export const trimOptionArguments: OptionStringsTransformer = (
   strings: string[]
