@@ -11,6 +11,7 @@ import {
   trimOptionArguments,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { findHeadingContentsPairs } from '../utils/forFetcher/utils';
 
 // Alternative sources:
 // - https://github.com/golang/go/blob/master/src/cmd/go/internal/test/test.go#L139
@@ -144,30 +145,19 @@ const preToOptions = (pre: string): Option[] => {
   const options: Option[] = [];
 
   const lines = pre.split('\n');
-  const flagDescriptionLinesPairs: {
-    flag: string;
-    descriptionLines: string[];
-  }[] = [];
-  let isInFlag = false;
-  for (const line of lines) {
-    if (FLAG_LIKE_PATTERN.test(line)) {
-      isInFlag = true;
-      flagDescriptionLinesPairs.push({
-        flag: line,
-        descriptionLines: [],
-      });
-    } else if (DESCRIPTION_LIKE_PATTERN.test(line)) {
-      if (isInFlag) {
-        flagDescriptionLinesPairs[
-          flagDescriptionLinesPairs.length - 1
-        ].descriptionLines.push(line);
-      }
-    } else {
-      isInFlag = false;
-    }
-  }
 
-  for (const { flag, descriptionLines } of flagDescriptionLinesPairs) {
+  const isFlagLine = (line: string) => FLAG_LIKE_PATTERN.test(line);
+  const isDescriptionLine = (line: string) =>
+    DESCRIPTION_LIKE_PATTERN.test(line);
+  const flagDescriptionLinesPairs = findHeadingContentsPairs(
+    lines,
+    isFlagLine,
+    isDescriptionLine
+  );
+
+  for (const { heading, contents } of flagDescriptionLinesPairs) {
+    const flag = heading;
+    const descriptionLines = contents;
     const optionString = transformOptionStrings(
       [flag],
       [trimOptionalElements, trimOptionArguments, trimOptionValues]
