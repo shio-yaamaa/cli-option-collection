@@ -1,5 +1,6 @@
 import { FetchFunction } from './types';
 
+import { fetchBrew } from './command-defs/brew';
 import { fetchCurl } from './command-defs/curl';
 import { fetchDiff } from './command-defs/diff';
 import { fetchDocker } from './command-defs/docker';
@@ -32,6 +33,7 @@ import { fetchWhoami } from './command-defs/whoami';
 import { fetchYarn } from './command-defs/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
+  ['brew', fetchBrew],
   ['curl', fetchCurl],
   ['diff', fetchDiff],
   ['docker', fetchDocker],
