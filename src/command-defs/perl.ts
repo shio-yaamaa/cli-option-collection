@@ -2,9 +2,9 @@ import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
 import {
-  DtDdPair,
+  DListEntry,
   fetchDocumentFromURL,
-  findDtDdPairs,
+  findDListEntries,
   previousClosest,
 } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -36,9 +36,9 @@ export const fetchPerl: FetchFunction = async (): Promise<Command[]> => {
     return [];
   }
 
-  const dtDdPairs = findDtDdPairs(optionDl, true);
+  const dlistEntries = findDListEntries(optionDl, true);
   const options = ([] as Option[]).concat(
-    ...dtDdPairs.map((dtDdPair) => dtDdPairToOptions(dtDdPair))
+    ...dlistEntries.map((entry) => dlistEntryToOptions(entry))
   );
 
   return [
@@ -58,7 +58,7 @@ const findOptionDl = (document: Document): HTMLDListElement | null => {
   );
 };
 
-const dtDdPairToOptions = ({ dts, dd }: DtDdPair): Option[] => {
+const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts.map((dt) => (dt.startsWith('#') ? dt.slice(1) : dt));
   const title = mergeOptionTitles(dtTexts);
   const description = dd;

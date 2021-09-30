@@ -1,6 +1,6 @@
 import { JSDOM, VirtualConsole } from 'jsdom';
 
-export interface DtDdPair {
+export interface DListEntry {
   dts: string[];
   dd: string;
 }
@@ -44,11 +44,11 @@ export const findAnchorsWithPattern = (
 };
 
 // If ignoreEmptyDd is true, a <dd> with no textContent after a <dt> is considered to be non-existent.
-export const findDtDdPairs = (
+export const findDListEntries = (
   list: HTMLDListElement,
   ignoreEmptyDd = false
-): DtDdPair[] => {
-  const pairs: DtDdPair[] = [];
+): DListEntry[] => {
+  const entries: DListEntry[] = [];
 
   const elements = Array.from(list.children);
   let currentDts: Element[] = [];
@@ -65,7 +65,7 @@ export const findDtDdPairs = (
         ) {
           // Ignore
         } else {
-          pairs.push({
+          entries.push({
             dts: currentDts.map((dt) => dt.textContent?.trim() ?? ''),
             dd: element.textContent?.trim() ?? '',
           });
@@ -77,5 +77,5 @@ export const findDtDdPairs = (
     }
   }
 
-  return pairs;
+  return entries;
 };
