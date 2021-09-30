@@ -5,6 +5,7 @@ import { fetchCurl } from './command-defs/curl';
 import { fetchDiff } from './command-defs/diff';
 import { fetchDocker } from './command-defs/docker';
 import { fetchEcho } from './command-defs/echo';
+import { fetchFfmpeg } from './command-defs/ffmpeg';
 import { fetchFind } from './command-defs/find';
 import { fetchGo } from './command-defs/go';
 import { fetchGrep } from './command-defs/grep';
@@ -38,6 +39,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['diff', fetchDiff],
   ['docker', fetchDocker],
   ['echo', fetchEcho],
+  ['ffmpeg', fetchFfmpeg],
   ['find', fetchFind],
   ['go', fetchGo],
   ['grep', fetchGrep],
