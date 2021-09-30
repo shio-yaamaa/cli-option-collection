@@ -1,4 +1,8 @@
-import { adjustSpacingAroundComma, splitByMultipleDelimiters } from './string';
+import {
+  adjustSpacingAroundComma,
+  splitByMultipleDelimiters,
+  splitAtTopLevel,
+} from './string';
 
 describe('adjustSpacingAroundComma', () => {
   test('test', () => {
@@ -15,5 +19,20 @@ describe('splitByMultipleDelimiters', () => {
     expect(
       splitByMultipleDelimiters('a, b, and c', [',', 'and'])
     ).toStrictEqual(['a', 'b', 'c']);
+  });
+});
+
+describe('splitAtTopLevel', () => {
+  test('test', () => {
+    const string = 'aaa, bbb, [ccc, [ddd, eee]], <fff, ggg>, "hhh, iii"';
+    const split = splitAtTopLevel(string, ',', ['[]', '<>']);
+    expect(split).toStrictEqual([
+      'aaa',
+      'bbb',
+      '[ccc, [ddd, eee]]',
+      '<fff, ggg>',
+      '"hhh',
+      'iii"',
+    ]);
   });
 });

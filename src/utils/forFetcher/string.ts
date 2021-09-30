@@ -1,9 +1,49 @@
+import parse from 'parenthesis';
+
 // Example: "abc , abc" -> "abc, abc"
 export const adjustSpacingAroundComma = (original: string): string => {
   return original
     .split(',')
     .map((item) => item.trim())
     .join(', ');
+};
+
+export const splitAtTopLevel = (
+  string: string,
+  delimiter: string,
+  brackets: string[]
+): string[] => {
+  const parsed: string[] = parse(string, {
+    brackets,
+    flat: true,
+    escape: '___',
+  });
+
+  // Restore the contents of nested brackets
+  const contents = [...parsed];
+  for (const [contentIndex, content] of Array.from(
+    [...contents].entries()
+  ).reverse()) {
+    let filledContent = content;
+    for (const [fillerIndex, filler] of contents.entries()) {
+      if (fillerIndex > 0) {
+        filledContent = filledContent.replace(`___${fillerIndex}___`, filler);
+      }
+    }
+    contents[contentIndex] = filledContent;
+  }
+
+  const split = parsed[0].split(delimiter);
+
+  return split.map((item) => {
+    let filled = item;
+    for (const [index, content] of contents.entries()) {
+      if (index > 0) {
+        filled = filled.replace(`___${index}___`, content);
+      }
+    }
+    return filled.trim();
+  });
 };
 
 export const splitByMultipleDelimiters = (

@@ -1,6 +1,9 @@
 import parse from 'parenthesis';
+import { splitAtTopLevel } from './string';
 
 type OptionStringsTransformer = (string: string[]) => string[];
+
+const BRACKETS = ['[]', '()', '<>', '{}', '""', "''"];
 
 export const transformOptionStrings = (
   strings: string[],
@@ -17,7 +20,7 @@ export const splitByComma: OptionStringsTransformer = (
 ): string[] => {
   const splitStrings: string[] = [];
   for (const string of strings) {
-    splitStrings.push(...string.split(',').map((split) => split.trim()));
+    splitStrings.push(...splitAtTopLevel(string, ',', BRACKETS));
   }
   return splitStrings;
 };
@@ -26,7 +29,9 @@ export const splitByComma: OptionStringsTransformer = (
 export const trimOptionValues: OptionStringsTransformer = (
   strings: string[]
 ): string[] => {
-  return strings.map((string) => string.split('=')[0].trim());
+  return strings.map((string) =>
+    splitAtTopLevel(string, '=', BRACKETS)[0].trim()
+  );
 };
 
 // Example: ["-dPattern"] -> ["-d"]
@@ -43,7 +48,9 @@ export const trimNonDelimitedOptionValues: OptionStringsTransformer = (
 export const trimOptionArguments: OptionStringsTransformer = (
   strings: string[]
 ): string[] => {
-  return strings.map((string) => string.split(' ')[0].trim());
+  return strings.map((string) =>
+    splitAtTopLevel(string, ' ', BRACKETS)[0].trim()
+  );
 };
 
 // Example: ["--color[=WHEN]"] -> ["--color"]
@@ -64,5 +71,7 @@ export const trimOptionalElements: OptionStringsTransformer = (
 export const trimAfterColons: OptionStringsTransformer = (
   strings: string[]
 ): string[] => {
-  return strings.map((string) => string.split(':')[0].trim());
+  return strings.map((string) =>
+    splitAtTopLevel(string, ':', BRACKETS)[0].trim()
+  );
 };
