@@ -30,6 +30,7 @@ import { fetchSed } from './command-defs/sed';
 import { fetchSetlock } from './command-defs/setlock';
 import { fetchSoftlimit } from './command-defs/softlimit';
 import { fetchSsh } from './command-defs/ssh';
+import { fetchSshuttle } from './command-defs/sshuttle';
 import { fetchSvc } from './command-defs/svc';
 import { fetchTail } from './command-defs/tail';
 import { fetchTar } from './command-defs/tar';
@@ -69,6 +70,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['setlock', fetchSetlock],
   ['softlimit', fetchSoftlimit],
   ['ssh', fetchSsh],
+  ['sshuttle', fetchSshuttle],
   ['svc', fetchSvc],
   ['tail', fetchTail],
   ['tar', fetchTar],
