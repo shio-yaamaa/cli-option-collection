@@ -6,6 +6,7 @@ import { fetchDiff } from './command-defs/diff';
 import { fetchDocker } from './command-defs/docker';
 import { fetchEcho } from './command-defs/echo';
 import { fetchFfmpeg } from './command-defs/ffmpeg';
+import { fetchFfplay } from './command-defs/ffplay';
 import { fetchFfprobe } from './command-defs/ffprobe';
 import { fetchFind } from './command-defs/find';
 import { fetchGo } from './command-defs/go';
@@ -41,6 +42,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['docker', fetchDocker],
   ['echo', fetchEcho],
   ['ffmpeg', fetchFfmpeg],
+  ['ffplay', fetchFfplay],
   ['ffprobe', fetchFfprobe],
   ['find', fetchFind],
   ['go', fetchGo],

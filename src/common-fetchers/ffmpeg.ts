@@ -10,6 +10,7 @@ import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
+  trimAfterColons,
   trimOptionalElements,
   trimOptionArguments,
 } from '../utils/forFetcher/transformOptionString';
@@ -54,6 +55,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimOptionalElements,
     splitByComma,
     trimOptionArguments,
+    trimAfterColons,
   ]);
   return [...new Set(optionStrings)]
     .filter((optionString) => FLAG_PATTERN.test(optionString))
