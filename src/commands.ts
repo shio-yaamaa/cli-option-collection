@@ -28,6 +28,7 @@ import { fetchRm } from './command-defs/rm';
 import { fetchRsync } from './command-defs/rsync';
 import { fetchSed } from './command-defs/sed';
 import { fetchSsh } from './command-defs/ssh';
+import { fetchSvc } from './command-defs/svc';
 import { fetchTail } from './command-defs/tail';
 import { fetchTar } from './command-defs/tar';
 import { fetchTop } from './command-defs/top';
@@ -64,6 +65,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['rsync', fetchRsync],
   ['sed', fetchSed],
   ['ssh', fetchSsh],
+  ['svc', fetchSvc],
   ['tail', fetchTail],
   ['tar', fetchTar],
   ['top', fetchTop],

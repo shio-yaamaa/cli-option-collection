@@ -1,0 +1,73 @@
+[
+  {
+    "name": "svc",
+    "options": [
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Up.\nIf the service is not running, start it.\nIf the service stops, restart it."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Down.\nIf the service is running, send it a TERM signal and then a CONT signal.\nAfter it stops, do not restart it."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o",
+        "description": "Once.\nIf the service is not running, start it.\nDo not restart it if it stops."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "Pause.\nSend the service a STOP signal."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Continue.\nSend the service a CONT signal."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Hangup.\nSend the service a HUP signal."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Alarm.\nSend the service an ALRM signal."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Interrupt.\nSend the service an INT signal."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Terminate.\nSend the service a TERM signal."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "Kill.\nSend the service a KILL signal."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Exit.\nsupervise will exit as soon as the service is down.\nIf you use this option on a stable system,\nyou're doing something wrong;\nsupervise is designed to run forever."
+      }
+    ]
+  }
+]
