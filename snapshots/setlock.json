@@ -1,0 +1,31 @@
+[
+  {
+    "name": "setlock",
+    "options": [
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "No delay.\nIf fn is locked by another process,\nsetlock gives up."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N",
+        "description": "(Default.)\nDelay.\nIf fn is locked by another process,\nsetlock waits until it can obtain a new lock."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "If fn cannot be opened (or created) or locked,\nsetlock exits zero."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "(Default.)\nIf fn cannot be opened (or created) or locked,\nsetlock prints an error message and exits nonzero."
+      }
+    ]
+  }
+]

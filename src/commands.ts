@@ -27,6 +27,7 @@ import { fetchPwd } from './command-defs/pwd';
 import { fetchRm } from './command-defs/rm';
 import { fetchRsync } from './command-defs/rsync';
 import { fetchSed } from './command-defs/sed';
+import { fetchSetlock } from './command-defs/setlock';
 import { fetchSoftlimit } from './command-defs/softlimit';
 import { fetchSsh } from './command-defs/ssh';
 import { fetchSvc } from './command-defs/svc';
@@ -65,6 +66,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['rm', fetchRm],
   ['rsync', fetchRsync],
   ['sed', fetchSed],
+  ['setlock', fetchSetlock],
   ['softlimit', fetchSoftlimit],
   ['ssh', fetchSsh],
   ['svc', fetchSvc],
