@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option, OptionType } from '../types';
+import { Fetcher, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
