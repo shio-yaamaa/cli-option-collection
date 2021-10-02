@@ -475,7 +475,7 @@
         "type": "long",
         "key": "github",
         "title": "--github",
-        "description": "Open the GitHub source page for formula in a browser. To view formula history locally: brew log -p formula"
+        "description": "Open the GitHub source page for formula and cask in a browser. To view the history locally: brew log -p formula or cask"
       },
       {
         "type": "long",
@@ -546,7 +546,7 @@
         "type": "long",
         "key": "github",
         "title": "--github",
-        "description": "Open the GitHub source page for formula in a browser. To view formula history locally: brew log -p formula"
+        "description": "Open the GitHub source page for formula and cask in a browser. To view the history locally: brew log -p formula or cask"
       },
       {
         "type": "long",
@@ -1062,6 +1062,18 @@
         "key": "max-count",
         "title": "-n, --max-count",
         "description": "Print only a specified number of commits."
+      },
+      {
+        "type": "long",
+        "key": "formula",
+        "title": "--formula",
+        "description": "Treat all named arguments as formulae."
+      },
+      {
+        "type": "long",
+        "key": "cask",
+        "title": "--cask",
+        "description": "Treat all named arguments as casks."
       }
     ]
   },
@@ -3046,12 +3058,6 @@
       },
       {
         "type": "long",
-        "key": "archive-item",
-        "title": "--archive-item",
-        "description": "Upload to the specified Internet Archive item (default: homebrew)."
-      },
-      {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Target tap repository (default: homebrew/core)."
@@ -3120,12 +3126,6 @@
         "key": "committer",
         "title": "--committer",
         "description": "Specify a committer name and email in git’s standard author format."
-      },
-      {
-        "type": "long",
-        "key": "archive-item",
-        "title": "--archive-item",
-        "description": "Upload to the specified Internet Archive item (default: homebrew)."
       },
       {
         "type": "long",
