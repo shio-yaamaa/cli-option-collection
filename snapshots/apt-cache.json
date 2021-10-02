@@ -1,0 +1,229 @@
+[
+  {
+    "name": "apt-cache",
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p, --pkg-cache",
+        "description": "Select the file to store the package cache. The package cache is the primary cache used by all operations. Configuration Item: Dir::Cache::pkgcache."
+      },
+      {
+        "type": "long",
+        "key": "pkg-cache",
+        "title": "-p, --pkg-cache",
+        "description": "Select the file to store the package cache. The package cache is the primary cache used by all operations. Configuration Item: Dir::Cache::pkgcache."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --src-cache",
+        "description": "Select the file to store the source cache. The source is used only by gencaches and it stores a parsed version of the package information from remote sources. When building the package cache the source cache is used to avoid reparsing all of the package files. Configuration Item: Dir::Cache::srcpkgcache."
+      },
+      {
+        "type": "long",
+        "key": "src-cache",
+        "title": "-s, --src-cache",
+        "description": "Select the file to store the source cache. The source is used only by gencaches and it stores a parsed version of the package information from remote sources. When building the package cache the source cache is used to avoid reparsing all of the package files. Configuration Item: Dir::Cache::srcpkgcache."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q, --quiet",
+        "description": "Quiet; produces output suitable for logging, omitting progress indicators. More q's will produce more quietness up to a maximum of 2. You can also use -q=# to set the quietness level, overriding the configuration file. Configuration Item: quiet."
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "-q, --quiet",
+        "description": "Quiet; produces output suitable for logging, omitting progress indicators. More q's will produce more quietness up to a maximum of 2. You can also use -q=# to set the quietness level, overriding the configuration file. Configuration Item: quiet."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --important",
+        "description": "Print only important dependencies; for use with unmet and depends. Causes only Depends and Pre-Depends relations to be printed. Configuration Item: APT::Cache::Important."
+      },
+      {
+        "type": "long",
+        "key": "important",
+        "title": "-i, --important",
+        "description": "Print only important dependencies; for use with unmet and depends. Causes only Depends and Pre-Depends relations to be printed. Configuration Item: APT::Cache::Important."
+      },
+      {
+        "type": "long",
+        "key": "no-pre-depends",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-depends",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-recommends",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-suggests",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-conflicts",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-breaks",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-replaces",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "no-enhances",
+        "title": "--no-pre-depends, --no-depends, --no-recommends, --no-suggests, --no-conflicts, --no-breaks, --no-replaces, --no-enhances",
+        "description": "Per default the depends and rdepends print all dependencies. This can be tweaked with these flags which will omit the specified dependency type. Configuration Item: APT::Cache::ShowDependencyType e.g.  APT::Cache::ShowRecommends."
+      },
+      {
+        "type": "long",
+        "key": "implicit",
+        "title": "--implicit",
+        "description": "Per default depends and rdepends print only dependencies explicitly expressed in the metadata. With this flag it will also show dependencies implicitly added based on the encountered data. A Conflicts: foo e.g. expresses implicitly that this package also conflicts with the package foo from any other architecture. Configuration Item: APT::Cache::ShowImplicit."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --full",
+        "description": "Print full package records when searching. Configuration Item: APT::Cache::ShowFull."
+      },
+      {
+        "type": "long",
+        "key": "full",
+        "title": "-f, --full",
+        "description": "Print full package records when searching. Configuration Item: APT::Cache::ShowFull."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a, --all-versions",
+        "description": "Print full records for all available versions. This is the default; to turn it off, use --no-all-versions. If --no-all-versions is specified, only the candidate version will be displayed (the one which would be selected for installation). This option is only applicable to the show command. Configuration Item: APT::Cache::AllVersions."
+      },
+      {
+        "type": "long",
+        "key": "all-versions",
+        "title": "-a, --all-versions",
+        "description": "Print full records for all available versions. This is the default; to turn it off, use --no-all-versions. If --no-all-versions is specified, only the candidate version will be displayed (the one which would be selected for installation). This option is only applicable to the show command. Configuration Item: APT::Cache::AllVersions."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g, --generate",
+        "description": "Perform automatic package cache regeneration, rather than use the cache as it is. This is the default; to turn it off, use --no-generate. Configuration Item: APT::Cache::Generate."
+      },
+      {
+        "type": "long",
+        "key": "generate",
+        "title": "-g, --generate",
+        "description": "Perform automatic package cache regeneration, rather than use the cache as it is. This is the default; to turn it off, use --no-generate. Configuration Item: APT::Cache::Generate."
+      },
+      {
+        "type": "long",
+        "key": "names-only",
+        "title": "--names-only, -n",
+        "description": "Only search on the package and provided package names, not the long descriptions. Configuration Item: APT::Cache::NamesOnly."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "--names-only, -n",
+        "description": "Only search on the package and provided package names, not the long descriptions. Configuration Item: APT::Cache::NamesOnly."
+      },
+      {
+        "type": "long",
+        "key": "all-names",
+        "title": "--all-names",
+        "description": "Make pkgnames print all names, including virtual packages and missing dependencies. Configuration Item: APT::Cache::AllNames."
+      },
+      {
+        "type": "long",
+        "key": "recurse",
+        "title": "--recurse",
+        "description": "Make depends and rdepends recursive so that all packages mentioned are printed once. Configuration Item: APT::Cache::RecurseDepends."
+      },
+      {
+        "type": "long",
+        "key": "installed",
+        "title": "--installed",
+        "description": "Limit the output of depends and rdepends to packages which are currently installed. Configuration Item: APT::Cache::Installed."
+      },
+      {
+        "type": "long",
+        "key": "with-source",
+        "title": "--with-source filename",
+        "description": "Adds the given file as a source for metadata. Can be repeated to add multiple files. Supported are currently *.deb, *.dsc, *.changes, Sources and Packages files as well as source package directories. Files are matched based on their name only, not their content! Sources and Packages can be compressed in any format apt supports as long as they have the correct extension. If you need to store multiple of these files in one directory you can prefix a name of your choice with the last character being an underscore (\"_\"). Example: my.example_Packages.xz Note that these sources are treated as trusted (see apt-secure(8)). Configuration Item: APT::Sources::With."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h, --help",
+        "description": "Show a short usage summary."
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "-h, --help",
+        "description": "Show a short usage summary."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v, --version",
+        "description": "Show the program version."
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "-v, --version",
+        "description": "Show the program version."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --config-file",
+        "description": "Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set before the default configuration files are parsed specify a file with the APT_CONFIG environment variable. See apt.conf(5) for syntax information."
+      },
+      {
+        "type": "long",
+        "key": "config-file",
+        "title": "-c, --config-file",
+        "description": "Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set before the default configuration files are parsed specify a file with the APT_CONFIG environment variable. See apt.conf(5) for syntax information."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o, --option",
+        "description": "Set a Configuration Option; This will set an arbitrary configuration option. The syntax is -o Foo::Bar=bar.  -o and --option can be used multiple times to set different options."
+      },
+      {
+        "type": "long",
+        "key": "option",
+        "title": "-o, --option",
+        "description": "Set a Configuration Option; This will set an arbitrary configuration option. The syntax is -o Foo::Bar=bar.  -o and --option can be used multiple times to set different options."
+      }
+    ]
+  }
+]

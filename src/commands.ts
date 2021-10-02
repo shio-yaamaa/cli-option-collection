@@ -1,5 +1,6 @@
 import { FetchFunction } from './types';
 
+import { fetchAptCache } from './command-defs/apt-cache';
 import { fetchAptGet } from './command-defs/apt-get';
 import { fetchBrew } from './command-defs/brew';
 import { fetchCurl } from './command-defs/curl';
@@ -41,6 +42,7 @@ import { fetchWhoami } from './command-defs/whoami';
 import { fetchYarn } from './command-defs/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
+  ['apt-cache', fetchAptCache],
   ['apt-get', fetchAptGet],
   ['brew', fetchBrew],
   ['curl', fetchCurl],
