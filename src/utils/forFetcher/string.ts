@@ -64,3 +64,9 @@ export const splitByMultipleDelimiters = (
   }
   return strings;
 };
+
+// Only considers spaces.
+export const countIndentWidth = (line: string) => {
+  const lineWithoutIndent = line.replace(/^\s+/, '');
+  return line.length - lineWithoutIndent.length;
+};

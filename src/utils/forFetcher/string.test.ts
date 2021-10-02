@@ -2,6 +2,7 @@ import {
   adjustSpacingAroundComma,
   splitByMultipleDelimiters,
   splitAtTopLevel,
+  countIndentWidth,
 } from './string';
 
 describe('adjustSpacingAroundComma', () => {
@@ -34,5 +35,12 @@ describe('splitAtTopLevel', () => {
       '"hhh',
       'iii"',
     ]);
+  });
+});
+
+describe('countIndentWidth', () => {
+  test('test', () => {
+    expect(countIndentWidth('abc')).toBe(0);
+    expect(countIndentWidth('  ab c')).toBe(2);
   });
 });
