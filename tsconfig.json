@@ -8,7 +8,12 @@
       "es2020.string",
       "dom"
     ],
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"]
 }
