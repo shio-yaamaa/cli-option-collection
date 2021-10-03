@@ -1,5 +1,6 @@
 import {
   normalizeSpacingAroundComma,
+  linebreakToSpace,
   splitByMultipleDelimiters,
   splitAtTopLevel,
   countIndentWidth,
@@ -9,6 +10,12 @@ describe('normalizeSpacingAroundComma', () => {
   test('test', () => {
     expect(normalizeSpacingAroundComma('abc , abc')).toBe('abc, abc');
     expect(normalizeSpacingAroundComma('abc,abc')).toBe('abc, abc');
+  });
+});
+
+describe('linebreakToSpace', () => {
+  test('test', () => {
+    expect(linebreakToSpace('abc\n\nabc\nabc')).toBe('abc abc abc');
   });
 });
 

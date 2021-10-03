@@ -13,6 +13,9 @@ export const normalizeSpacingAroundSlash = (original: string): string =>
     .map((item) => item.trim())
     .join(' / ');
 
+export const linebreakToSpace = (original: string): string =>
+  original.replace(/\n+/g, ' ');
+
 export const splitAtTopLevel = (
   string: string,
   delimiter: string,
