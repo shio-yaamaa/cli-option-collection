@@ -1,12 +1,17 @@
 import parse from 'parenthesis';
 
 // Example: "abc , abc" -> "abc, abc"
-export const adjustSpacingAroundComma = (original: string): string => {
-  return original
+export const normalizeSpacingAroundComma = (original: string): string =>
+  original
     .split(',')
     .map((item) => item.trim())
     .join(', ');
-};
+
+export const normalizeSpacingAroundSlash = (original: string): string =>
+  original
+    .split('/')
+    .map((item) => item.trim())
+    .join(' / ');
 
 export const splitAtTopLevel = (
   string: string,

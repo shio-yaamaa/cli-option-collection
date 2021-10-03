@@ -1,7 +1,7 @@
 import { Fetcher, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
-import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -128,7 +128,7 @@ const findOptionsCorrespondingToOptionTableItem = (
   return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
     type,
     key,
-    title: adjustSpacingAroundComma(title),
+    title: normalizeSpacingAroundComma(title),
     description: optionTableItem.description,
   }));
 };

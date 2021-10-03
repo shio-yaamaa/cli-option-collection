@@ -2,7 +2,7 @@ import { FetchFunction, Command, Option, OptionType } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
-  adjustSpacingAroundComma,
+  normalizeSpacingAroundComma,
   splitByMultipleDelimiters,
 } from '../utils/forFetcher/string';
 import {
@@ -195,7 +195,7 @@ const paragraphToOptions = (paragraph: string): Option[] => {
     return [];
   }
 
-  const optionTitle = adjustSpacingAroundComma(sentenceSubjectFlag);
+  const optionTitle = normalizeSpacingAroundComma(sentenceSubjectFlag);
   const optionDescription = paragraph.trim().replace(/\n/g, ' ');
 
   const optionKeys = flags.map((flag) => flagToOptionKey(flag));

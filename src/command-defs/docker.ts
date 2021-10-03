@@ -3,7 +3,7 @@ import { URL } from 'url';
 import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
-import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 
 // Alternative sources:
 // - https://github.com/docker/cli/blob/master/cli/command/container/attach.go#L60
@@ -99,7 +99,7 @@ const fetchSubcommand = async (
       ...distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
         type,
         key,
-        title: adjustSpacingAroundComma(title),
+        title: normalizeSpacingAroundComma(title),
         description,
       }))
     );

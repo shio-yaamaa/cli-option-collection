@@ -1,14 +1,14 @@
 import {
-  adjustSpacingAroundComma,
+  normalizeSpacingAroundComma,
   splitByMultipleDelimiters,
   splitAtTopLevel,
   countIndentWidth,
 } from './string';
 
-describe('adjustSpacingAroundComma', () => {
+describe('normalizeSpacingAroundComma', () => {
   test('test', () => {
-    expect(adjustSpacingAroundComma('abc , abc')).toBe('abc, abc');
-    expect(adjustSpacingAroundComma('abc,abc')).toBe('abc, abc');
+    expect(normalizeSpacingAroundComma('abc , abc')).toBe('abc, abc');
+    expect(normalizeSpacingAroundComma('abc,abc')).toBe('abc, abc');
   });
 });
 

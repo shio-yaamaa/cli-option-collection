@@ -5,7 +5,7 @@ import {
   fetchDocumentFromURL,
   findAnchorsWithPattern,
 } from '../utils/forFetcher/dom';
-import { adjustSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -72,7 +72,7 @@ const fetchSubcommand = async (
     if (!optionString || !description) {
       continue;
     }
-    const title = adjustSpacingAroundComma(optionString);
+    const title = normalizeSpacingAroundComma(optionString);
 
     const optionStrings = transformOptionStrings(
       [optionString],
