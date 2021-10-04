@@ -10,7 +10,7 @@
     ],
     "outDir": "./dist",
     "moduleResolution": "node",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true
