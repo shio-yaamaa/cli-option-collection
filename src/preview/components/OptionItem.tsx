@@ -14,7 +14,7 @@ export const OptionItem: React.VFC<Props> = (props) => {
     '<br>'
   );
   return (
-    <p>
+    <div>
       <p>
         <code className="title">{props.option.title}</code>
         <span className={`type ${props.option.type}`}>
@@ -23,6 +23,6 @@ export const OptionItem: React.VFC<Props> = (props) => {
         <code>{props.option.key}</code>
       </p>
       <p dangerouslySetInnerHTML={{ __html: descriptionHTML }}></p>
-    </p>
+    </div>
   );
 };
