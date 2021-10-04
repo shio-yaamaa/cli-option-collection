@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { CommandList } from './CommandList';
 
 import { Command } from '../../types';
 
@@ -48,9 +49,7 @@ export const App: React.VFC<Props> = (props) => {
   return (
     <div className="App">
       {dataState === DataState.LOADING && <p>Loading...</p>}
-      {dataState === DataState.READY && (
-        <code>{JSON.stringify(commands, null, 2)}</code>
-      )}
+      {dataState === DataState.READY && <CommandList commands={commands} />}
       {dataState === DataState.ERROR && <p>Error: {error}</p>}
     </div>
   );
