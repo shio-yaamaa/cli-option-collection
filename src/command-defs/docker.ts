@@ -38,7 +38,11 @@ const fetchSubcommandLocationsRecursively = async (
   parent: SubcommandLocation
 ): Promise<SubcommandLocation[]> => {
   const document = await fetchDocumentFromURL(parent.url);
-  const tds = Array.from(document.querySelectorAll('td'));
+  const table = findSubcommandTable(document);
+  if (!table) {
+    return [];
+  }
+  const tds = Array.from(table.querySelectorAll('td'));
 
   const subcommandLocations: SubcommandLocation[] = [];
   for (const td of tds) {
@@ -60,14 +64,21 @@ const fetchSubcommandLocationsRecursively = async (
     });
   }
 
+  const subcommandLocationsFromChildren: SubcommandLocation[] = [];
   for (const subcommandLocation of subcommandLocations) {
     const children = await fetchSubcommandLocationsRecursively(
       subcommandLocation
     );
-    subcommandLocations.push(...children);
+    subcommandLocationsFromChildren.push(...children);
   }
 
-  return subcommandLocations;
+  return subcommandLocations.concat(subcommandLocationsFromChildren);
+};
+
+const findSubcommandTable = (document: Document): Element | null => {
+  const commandsHeading = document.querySelector('#child-commands');
+  const nextSibling = commandsHeading?.nextElementSibling;
+  return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
 };
 
 const fetchSubcommand = async (
@@ -77,7 +88,14 @@ const fetchSubcommand = async (
 
   const options: Option[] = [];
 
-  const trs = Array.from(document.querySelectorAll('tr'));
+  const table = findOptionTable(document);
+  if (!table) {
+    return {
+      name: location.command,
+      options: [],
+    };
+  }
+  const trs = Array.from(table.querySelectorAll('tr'));
   for (const tr of trs) {
     const tds = Array.from(tr.querySelectorAll('td'));
     if (tds.length < 3) {
@@ -85,7 +103,7 @@ const fetchSubcommand = async (
     }
 
     const title = tds[0].textContent;
-    const description = tds[2].textContent;
+    const description = tdToDescription(tds[2]);
     if (!title || !description) {
       continue;
     }
@@ -109,4 +127,34 @@ const fetchSubcommand = async (
     name: location.command,
     options,
   };
+};
+
+const findOptionTable = (document: Document): Element | null => {
+  const optionHeading = document.querySelector('#options');
+  const nextSibling = optionHeading?.nextElementSibling;
+  return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
+};
+
+const tdToDescription = (td: Element): string | null => {
+  if (!td.textContent) {
+    return null;
+  }
+  const children = Array.from(td.children);
+  // Remove badges like "API 1.40+" or "Kubernetes"
+  for (const child of children) {
+    if (isBadge(child)) {
+      child.remove();
+    }
+  }
+  return td.textContent.trim();
+};
+
+const isBadge = (element: Element): boolean => {
+  if (element.classList.contains('badge')) {
+    return true;
+  }
+  if (element.querySelector('.badge')) {
+    return true;
+  }
+  return false;
 };

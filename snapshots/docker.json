@@ -155,7 +155,7 @@
         "type": "long",
         "key": "network",
         "title": "--network",
-        "description": "API 1.25+Set the networking mode for the RUN instructions during build"
+        "description": "Set the networking mode for the RUN instructions during build"
       },
       {
         "type": "long",
@@ -167,19 +167,19 @@
         "type": "long",
         "key": "output",
         "title": "--output, -o",
-        "description": "API 1.40+Output destination (format: type=local,dest=path)"
+        "description": "Output destination (format: type=local,dest=path)"
       },
       {
         "type": "short",
         "key": "o",
         "title": "--output, -o",
-        "description": "API 1.40+Output destination (format: type=local,dest=path)"
+        "description": "Output destination (format: type=local,dest=path)"
       },
       {
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.38+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -215,7 +215,7 @@
         "type": "long",
         "key": "secret",
         "title": "--secret",
-        "description": "API 1.39+Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret"
+        "description": "Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret"
       },
       {
         "type": "long",
@@ -233,13 +233,13 @@
         "type": "long",
         "key": "squash",
         "title": "--squash",
-        "description": "experimental (daemon)API 1.25+Squash newly built layers into a single new layer"
+        "description": "Squash newly built layers into a single new layer"
       },
       {
         "type": "long",
         "key": "ssh",
         "title": "--ssh",
-        "description": "API 1.39+SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|<id>[=<socket>|<key>[,<key>]])"
+        "description": "SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|<id>[=<socket>|<key>[,<key>]])"
       },
       {
         "type": "long",
@@ -430,7 +430,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "API 1.41+Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -466,13 +466,13 @@
         "type": "long",
         "key": "cpu-rt-period",
         "title": "--cpu-rt-period",
-        "description": "API 1.25+Limit CPU real-time period in microseconds"
+        "description": "Limit CPU real-time period in microseconds"
       },
       {
         "type": "long",
         "key": "cpu-rt-runtime",
         "title": "--cpu-rt-runtime",
-        "description": "API 1.25+Limit CPU real-time runtime in microseconds"
+        "description": "Limit CPU real-time runtime in microseconds"
       },
       {
         "type": "long",
@@ -490,7 +490,7 @@
         "type": "long",
         "key": "cpus",
         "title": "--cpus",
-        "description": "API 1.25+Number of CPUs"
+        "description": "Number of CPUs"
       },
       {
         "type": "long",
@@ -610,7 +610,7 @@
         "type": "long",
         "key": "gpus",
         "title": "--gpus",
-        "description": "API 1.40+GPU devices to add to the container ('all' to pass all GPUs)"
+        "description": "GPU devices to add to the container ('all' to pass all GPUs)"
       },
       {
         "type": "long",
@@ -640,7 +640,7 @@
         "type": "long",
         "key": "health-start-period",
         "title": "--health-start-period",
-        "description": "API 1.29+Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
+        "description": "Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
       },
       {
         "type": "long",
@@ -670,7 +670,7 @@
         "type": "long",
         "key": "init",
         "title": "--init",
-        "description": "API 1.25+Run an init inside the container that forwards signals and reaps processes"
+        "description": "Run an init inside the container that forwards signals and reaps processes"
       },
       {
         "type": "long",
@@ -874,7 +874,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -958,7 +958,7 @@
         "type": "long",
         "key": "stop-timeout",
         "title": "--stop-timeout",
-        "description": "API 1.25+Timeout (in seconds) to stop a container"
+        "description": "Timeout (in seconds) to stop a container"
       },
       {
         "type": "long",
@@ -1122,19 +1122,19 @@
         "type": "long",
         "key": "env",
         "title": "--env, -e",
-        "description": "API 1.25+Set environment variables"
+        "description": "Set environment variables"
       },
       {
         "type": "short",
         "key": "e",
         "title": "--env, -e",
-        "description": "API 1.25+Set environment variables"
+        "description": "Set environment variables"
       },
       {
         "type": "long",
         "key": "env-file",
         "title": "--env-file",
-        "description": "API 1.25+Read in a file of environment variables"
+        "description": "Read in a file of environment variables"
       },
       {
         "type": "long",
@@ -1182,13 +1182,13 @@
         "type": "long",
         "key": "workdir",
         "title": "--workdir, -w",
-        "description": "API 1.35+Working directory inside the container"
+        "description": "Working directory inside the container"
       },
       {
         "type": "short",
         "key": "w",
         "title": "--workdir, -w",
-        "description": "API 1.35+Working directory inside the container"
+        "description": "Working directory inside the container"
       }
     ]
   },
@@ -1344,7 +1344,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       }
     ]
   },
@@ -1540,7 +1540,7 @@
         "type": "long",
         "key": "until",
         "title": "--until",
-        "description": "API 1.35+Show logs before a timestamp (e.g. 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42 minutes)"
+        "description": "Show logs before a timestamp (e.g. 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42 minutes)"
       }
     ]
   },
@@ -1682,7 +1682,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -1873,7 +1873,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "API 1.41+Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -1909,13 +1909,13 @@
         "type": "long",
         "key": "cpu-rt-period",
         "title": "--cpu-rt-period",
-        "description": "API 1.25+Limit CPU real-time period in microseconds"
+        "description": "Limit CPU real-time period in microseconds"
       },
       {
         "type": "long",
         "key": "cpu-rt-runtime",
         "title": "--cpu-rt-runtime",
-        "description": "API 1.25+Limit CPU real-time runtime in microseconds"
+        "description": "Limit CPU real-time runtime in microseconds"
       },
       {
         "type": "long",
@@ -1933,7 +1933,7 @@
         "type": "long",
         "key": "cpus",
         "title": "--cpus",
-        "description": "API 1.25+Number of CPUs"
+        "description": "Number of CPUs"
       },
       {
         "type": "long",
@@ -2071,7 +2071,7 @@
         "type": "long",
         "key": "gpus",
         "title": "--gpus",
-        "description": "API 1.40+GPU devices to add to the container ('all' to pass all GPUs)"
+        "description": "GPU devices to add to the container ('all' to pass all GPUs)"
       },
       {
         "type": "long",
@@ -2101,7 +2101,7 @@
         "type": "long",
         "key": "health-start-period",
         "title": "--health-start-period",
-        "description": "API 1.29+Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
+        "description": "Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
       },
       {
         "type": "long",
@@ -2131,7 +2131,7 @@
         "type": "long",
         "key": "init",
         "title": "--init",
-        "description": "API 1.25+Run an init inside the container that forwards signals and reaps processes"
+        "description": "Run an init inside the container that forwards signals and reaps processes"
       },
       {
         "type": "long",
@@ -2335,7 +2335,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -2425,7 +2425,7 @@
         "type": "long",
         "key": "stop-timeout",
         "title": "--stop-timeout",
-        "description": "API 1.25+Timeout (in seconds) to stop a container"
+        "description": "Timeout (in seconds) to stop a container"
       },
       {
         "type": "long",
@@ -2592,13 +2592,13 @@
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       },
       {
         "type": "long",
         "key": "orchestrator",
         "title": "--orchestrator",
-        "description": "deprecatedOrchestrator to use (swarm|kubernetes|all)"
+        "description": "Orchestrator to use (swarm|kubernetes|all)"
       }
     ]
   },
@@ -2621,13 +2621,13 @@
         "type": "long",
         "key": "checkpoint",
         "title": "--checkpoint",
-        "description": "experimental (daemon)Restore from this checkpoint"
+        "description": "Restore from this checkpoint"
       },
       {
         "type": "long",
         "key": "checkpoint-dir",
         "title": "--checkpoint-dir",
-        "description": "experimental (daemon)Use a custom checkpoint storage directory"
+        "description": "Use a custom checkpoint storage directory"
       },
       {
         "type": "long",
@@ -2750,13 +2750,13 @@
         "type": "long",
         "key": "cpu-rt-period",
         "title": "--cpu-rt-period",
-        "description": "API 1.25+Limit the CPU real-time period in microseconds"
+        "description": "Limit the CPU real-time period in microseconds"
       },
       {
         "type": "long",
         "key": "cpu-rt-runtime",
         "title": "--cpu-rt-runtime",
-        "description": "API 1.25+Limit the CPU real-time runtime in microseconds"
+        "description": "Limit the CPU real-time runtime in microseconds"
       },
       {
         "type": "long",
@@ -2774,7 +2774,7 @@
         "type": "long",
         "key": "cpus",
         "title": "--cpus",
-        "description": "API 1.29+Number of CPUs"
+        "description": "Number of CPUs"
       },
       {
         "type": "long",
@@ -2822,7 +2822,7 @@
         "type": "long",
         "key": "pids-limit",
         "title": "--pids-limit",
-        "description": "API 1.40+Tune container pids limit (set -1 for unlimited)"
+        "description": "Tune container pids limit (set -1 for unlimited)"
       },
       {
         "type": "long",
@@ -2851,7 +2851,7 @@
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       }
     ]
   },
@@ -2996,7 +2996,7 @@
         "type": "long",
         "key": "network",
         "title": "--network",
-        "description": "API 1.25+Set the networking mode for the RUN instructions during build"
+        "description": "Set the networking mode for the RUN instructions during build"
       },
       {
         "type": "long",
@@ -3008,19 +3008,19 @@
         "type": "long",
         "key": "output",
         "title": "--output, -o",
-        "description": "API 1.40+Output destination (format: type=local,dest=path)"
+        "description": "Output destination (format: type=local,dest=path)"
       },
       {
         "type": "short",
         "key": "o",
         "title": "--output, -o",
-        "description": "API 1.40+Output destination (format: type=local,dest=path)"
+        "description": "Output destination (format: type=local,dest=path)"
       },
       {
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.38+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -3056,7 +3056,7 @@
         "type": "long",
         "key": "secret",
         "title": "--secret",
-        "description": "API 1.39+Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret"
+        "description": "Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret"
       },
       {
         "type": "long",
@@ -3074,13 +3074,13 @@
         "type": "long",
         "key": "squash",
         "title": "--squash",
-        "description": "experimental (daemon)API 1.25+Squash newly built layers into a single new layer"
+        "description": "Squash newly built layers into a single new layer"
       },
       {
         "type": "long",
         "key": "ssh",
         "title": "--ssh",
-        "description": "API 1.39+SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|<id>[=<socket>|<key>[,<key>]])"
+        "description": "SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|<id>[=<socket>|<key>[,<key>]])"
       },
       {
         "type": "long",
@@ -3213,7 +3213,7 @@
         "type": "long",
         "key": "template-driver",
         "title": "--template-driver",
-        "description": "API 1.37+Template driver"
+        "description": "Template driver"
       }
     ]
   },
@@ -3439,7 +3439,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "API 1.41+Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -3475,13 +3475,13 @@
         "type": "long",
         "key": "cpu-rt-period",
         "title": "--cpu-rt-period",
-        "description": "API 1.25+Limit CPU real-time period in microseconds"
+        "description": "Limit CPU real-time period in microseconds"
       },
       {
         "type": "long",
         "key": "cpu-rt-runtime",
         "title": "--cpu-rt-runtime",
-        "description": "API 1.25+Limit CPU real-time runtime in microseconds"
+        "description": "Limit CPU real-time runtime in microseconds"
       },
       {
         "type": "long",
@@ -3499,7 +3499,7 @@
         "type": "long",
         "key": "cpus",
         "title": "--cpus",
-        "description": "API 1.25+Number of CPUs"
+        "description": "Number of CPUs"
       },
       {
         "type": "long",
@@ -3619,7 +3619,7 @@
         "type": "long",
         "key": "gpus",
         "title": "--gpus",
-        "description": "API 1.40+GPU devices to add to the container ('all' to pass all GPUs)"
+        "description": "GPU devices to add to the container ('all' to pass all GPUs)"
       },
       {
         "type": "long",
@@ -3649,7 +3649,7 @@
         "type": "long",
         "key": "health-start-period",
         "title": "--health-start-period",
-        "description": "API 1.29+Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
+        "description": "Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
       },
       {
         "type": "long",
@@ -3679,7 +3679,7 @@
         "type": "long",
         "key": "init",
         "title": "--init",
-        "description": "API 1.25+Run an init inside the container that forwards signals and reaps processes"
+        "description": "Run an init inside the container that forwards signals and reaps processes"
       },
       {
         "type": "long",
@@ -3883,7 +3883,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -3967,7 +3967,7 @@
         "type": "long",
         "key": "stop-timeout",
         "title": "--stop-timeout",
-        "description": "API 1.25+Timeout (in seconds) to stop a container"
+        "description": "Timeout (in seconds) to stop a container"
       },
       {
         "type": "long",
@@ -4096,19 +4096,19 @@
         "type": "long",
         "key": "env",
         "title": "--env, -e",
-        "description": "API 1.25+Set environment variables"
+        "description": "Set environment variables"
       },
       {
         "type": "short",
         "key": "e",
         "title": "--env, -e",
-        "description": "API 1.25+Set environment variables"
+        "description": "Set environment variables"
       },
       {
         "type": "long",
         "key": "env-file",
         "title": "--env-file",
-        "description": "API 1.25+Read in a file of environment variables"
+        "description": "Read in a file of environment variables"
       },
       {
         "type": "long",
@@ -4156,13 +4156,13 @@
         "type": "long",
         "key": "workdir",
         "title": "--workdir, -w",
-        "description": "API 1.35+Working directory inside the container"
+        "description": "Working directory inside the container"
       },
       {
         "type": "short",
         "key": "w",
         "title": "--workdir, -w",
-        "description": "API 1.35+Working directory inside the container"
+        "description": "Working directory inside the container"
       }
     ]
   },
@@ -4284,7 +4284,7 @@
         "type": "long",
         "key": "until",
         "title": "--until",
-        "description": "API 1.35+Show logs before a timestamp (e.g. 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42 minutes)"
+        "description": "Show logs before a timestamp (e.g. 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42 minutes)"
       }
     ]
   },
@@ -4525,7 +4525,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "API 1.41+Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -4561,13 +4561,13 @@
         "type": "long",
         "key": "cpu-rt-period",
         "title": "--cpu-rt-period",
-        "description": "API 1.25+Limit CPU real-time period in microseconds"
+        "description": "Limit CPU real-time period in microseconds"
       },
       {
         "type": "long",
         "key": "cpu-rt-runtime",
         "title": "--cpu-rt-runtime",
-        "description": "API 1.25+Limit CPU real-time runtime in microseconds"
+        "description": "Limit CPU real-time runtime in microseconds"
       },
       {
         "type": "long",
@@ -4585,7 +4585,7 @@
         "type": "long",
         "key": "cpus",
         "title": "--cpus",
-        "description": "API 1.25+Number of CPUs"
+        "description": "Number of CPUs"
       },
       {
         "type": "long",
@@ -4723,7 +4723,7 @@
         "type": "long",
         "key": "gpus",
         "title": "--gpus",
-        "description": "API 1.40+GPU devices to add to the container ('all' to pass all GPUs)"
+        "description": "GPU devices to add to the container ('all' to pass all GPUs)"
       },
       {
         "type": "long",
@@ -4753,7 +4753,7 @@
         "type": "long",
         "key": "health-start-period",
         "title": "--health-start-period",
-        "description": "API 1.29+Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
+        "description": "Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)"
       },
       {
         "type": "long",
@@ -4783,7 +4783,7 @@
         "type": "long",
         "key": "init",
         "title": "--init",
-        "description": "API 1.25+Run an init inside the container that forwards signals and reaps processes"
+        "description": "Run an init inside the container that forwards signals and reaps processes"
       },
       {
         "type": "long",
@@ -4987,7 +4987,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -5077,7 +5077,7 @@
         "type": "long",
         "key": "stop-timeout",
         "title": "--stop-timeout",
-        "description": "API 1.25+Timeout (in seconds) to stop a container"
+        "description": "Timeout (in seconds) to stop a container"
       },
       {
         "type": "long",
@@ -5196,13 +5196,13 @@
         "type": "long",
         "key": "checkpoint",
         "title": "--checkpoint",
-        "description": "experimental (daemon)Restore from this checkpoint"
+        "description": "Restore from this checkpoint"
       },
       {
         "type": "long",
         "key": "checkpoint-dir",
         "title": "--checkpoint-dir",
-        "description": "experimental (daemon)Use a custom checkpoint storage directory"
+        "description": "Use a custom checkpoint storage directory"
       },
       {
         "type": "long",
@@ -5309,13 +5309,13 @@
         "type": "long",
         "key": "cpu-rt-period",
         "title": "--cpu-rt-period",
-        "description": "API 1.25+Limit the CPU real-time period in microseconds"
+        "description": "Limit the CPU real-time period in microseconds"
       },
       {
         "type": "long",
         "key": "cpu-rt-runtime",
         "title": "--cpu-rt-runtime",
-        "description": "API 1.25+Limit the CPU real-time runtime in microseconds"
+        "description": "Limit the CPU real-time runtime in microseconds"
       },
       {
         "type": "long",
@@ -5333,7 +5333,7 @@
         "type": "long",
         "key": "cpus",
         "title": "--cpus",
-        "description": "API 1.29+Number of CPUs"
+        "description": "Number of CPUs"
       },
       {
         "type": "long",
@@ -5381,7 +5381,7 @@
         "type": "long",
         "key": "pids-limit",
         "title": "--pids-limit",
-        "description": "API 1.40+Tune container pids limit (set -1 for unlimited)"
+        "description": "Tune container pids limit (set -1 for unlimited)"
       },
       {
         "type": "long",
@@ -5402,7 +5402,7 @@
         "type": "long",
         "key": "default-stack-orchestrator",
         "title": "--default-stack-orchestrator",
-        "description": "deprecatedDefault orchestrator for stack operations to use with this context (swarm|kubernetes|all)"
+        "description": "Default orchestrator for stack operations to use with this context (swarm|kubernetes|all)"
       },
       {
         "type": "long",
@@ -5426,7 +5426,7 @@
         "type": "long",
         "key": "kubernetes",
         "title": "--kubernetes",
-        "description": "deprecatedKubernetesset the kubernetes endpoint"
+        "description": "set the kubernetes endpoint"
       }
     ]
   },
@@ -5437,7 +5437,7 @@
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesExport as a kubeconfig file"
+        "description": "Export as a kubeconfig file"
       }
     ]
   },
@@ -5509,7 +5509,7 @@
         "type": "long",
         "key": "default-stack-orchestrator",
         "title": "--default-stack-orchestrator",
-        "description": "deprecatedDefault orchestrator for stack operations to use with this context (swarm|kubernetes|all)"
+        "description": "Default orchestrator for stack operations to use with this context (swarm|kubernetes|all)"
       },
       {
         "type": "long",
@@ -5527,7 +5527,7 @@
         "type": "long",
         "key": "kubernetes",
         "title": "--kubernetes",
-        "description": "deprecatedKubernetesset the kubernetes endpoint"
+        "description": "set the kubernetes endpoint"
       }
     ]
   },
@@ -5668,7 +5668,7 @@
         "type": "long",
         "key": "network",
         "title": "--network",
-        "description": "API 1.25+Set the networking mode for the RUN instructions during build"
+        "description": "Set the networking mode for the RUN instructions during build"
       },
       {
         "type": "long",
@@ -5680,19 +5680,19 @@
         "type": "long",
         "key": "output",
         "title": "--output, -o",
-        "description": "API 1.40+Output destination (format: type=local,dest=path)"
+        "description": "Output destination (format: type=local,dest=path)"
       },
       {
         "type": "short",
         "key": "o",
         "title": "--output, -o",
-        "description": "API 1.40+Output destination (format: type=local,dest=path)"
+        "description": "Output destination (format: type=local,dest=path)"
       },
       {
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.38+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -5728,7 +5728,7 @@
         "type": "long",
         "key": "secret",
         "title": "--secret",
-        "description": "API 1.39+Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret"
+        "description": "Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret"
       },
       {
         "type": "long",
@@ -5746,13 +5746,13 @@
         "type": "long",
         "key": "squash",
         "title": "--squash",
-        "description": "experimental (daemon)API 1.25+Squash newly built layers into a single new layer"
+        "description": "Squash newly built layers into a single new layer"
       },
       {
         "type": "long",
         "key": "ssh",
         "title": "--ssh",
-        "description": "API 1.39+SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|<id>[=<socket>|<key>[,<key>]])"
+        "description": "SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|<id>[=<socket>|<key>[,<key>]])"
       },
       {
         "type": "long",
@@ -5858,7 +5858,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       }
     ]
   },
@@ -6027,7 +6027,7 @@
         "type": "long",
         "key": "platform",
         "title": "--platform",
-        "description": "API 1.32+Set platform if server is multi-platform capable"
+        "description": "Set platform if server is multi-platform capable"
       },
       {
         "type": "long",
@@ -6278,7 +6278,7 @@
         "type": "long",
         "key": "attachable",
         "title": "--attachable",
-        "description": "API 1.25+Enable manual container attachment"
+        "description": "Enable manual container attachment"
       },
       {
         "type": "long",
@@ -6290,13 +6290,13 @@
         "type": "long",
         "key": "config-from",
         "title": "--config-from",
-        "description": "API 1.30+The network from which to copy the configuration"
+        "description": "The network from which to copy the configuration"
       },
       {
         "type": "long",
         "key": "config-only",
         "title": "--config-only",
-        "description": "API 1.30+Create a configuration only network"
+        "description": "Create a configuration only network"
       },
       {
         "type": "long",
@@ -6320,7 +6320,7 @@
         "type": "long",
         "key": "ingress",
         "title": "--ingress",
-        "description": "API 1.29+Create swarm routing-mesh network"
+        "description": "Create swarm routing-mesh network"
       },
       {
         "type": "long",
@@ -6374,43 +6374,13 @@
         "type": "long",
         "key": "scope",
         "title": "--scope",
-        "description": "API 1.30+Control the network's scope"
+        "description": "Control the network's scope"
       },
       {
         "type": "long",
         "key": "subnet",
         "title": "--subnet",
         "description": "Subnet in CIDR format that represents a network segment"
-      },
-      {
-        "type": "long",
-        "key": "gateway",
-        "title": "--gateway",
-        "description": "IPv4 or IPv6 Gateway for the master subnet"
-      },
-      {
-        "type": "long",
-        "key": "ip-range",
-        "title": "--ip-range",
-        "description": "Allocate IPs from a range"
-      },
-      {
-        "type": "long",
-        "key": "internal",
-        "title": "--internal",
-        "description": "Restrict external access to the network"
-      },
-      {
-        "type": "long",
-        "key": "ipv6",
-        "title": "--ipv6",
-        "description": "Enable IPv6 networking"
-      },
-      {
-        "type": "long",
-        "key": "subnet",
-        "title": "--subnet",
-        "description": "Subnet for network"
       }
     ]
   },
@@ -6875,13 +6845,13 @@
         "type": "long",
         "key": "driver",
         "title": "--driver, -d",
-        "description": "API 1.31+Secret driver"
+        "description": "Secret driver"
       },
       {
         "type": "short",
         "key": "d",
         "title": "--driver, -d",
-        "description": "API 1.31+Secret driver"
+        "description": "Secret driver"
       },
       {
         "type": "long",
@@ -6899,7 +6869,7 @@
         "type": "long",
         "key": "template-driver",
         "title": "--template-driver",
-        "description": "API 1.37+Template driver"
+        "description": "Template driver"
       }
     ]
   },
@@ -6972,19 +6942,19 @@
         "type": "long",
         "key": "cap-add",
         "title": "--cap-add",
-        "description": "API 1.41+Add Linux capabilities"
+        "description": "Add Linux capabilities"
       },
       {
         "type": "long",
         "key": "cap-drop",
         "title": "--cap-drop",
-        "description": "API 1.41+Drop Linux capabilities"
+        "description": "Drop Linux capabilities"
       },
       {
         "type": "long",
         "key": "config",
         "title": "--config",
-        "description": "API 1.30+Specify configurations to expose to the service"
+        "description": "Specify configurations to expose to the service"
       },
       {
         "type": "long",
@@ -7002,37 +6972,37 @@
         "type": "long",
         "key": "credential-spec",
         "title": "--credential-spec",
-        "description": "API 1.29+Credential spec for managed service account (Windows only)"
+        "description": "Credential spec for managed service account (Windows only)"
       },
       {
         "type": "long",
         "key": "detach",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "short",
         "key": "d",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "long",
         "key": "dns",
         "title": "--dns",
-        "description": "API 1.25+Set custom DNS servers"
+        "description": "Set custom DNS servers"
       },
       {
         "type": "long",
         "key": "dns-option",
         "title": "--dns-option",
-        "description": "API 1.25+Set DNS options"
+        "description": "Set DNS options"
       },
       {
         "type": "long",
         "key": "dns-search",
         "title": "--dns-search",
-        "description": "API 1.25+Set custom DNS search domains"
+        "description": "Set custom DNS search domains"
       },
       {
         "type": "long",
@@ -7074,61 +7044,61 @@
         "type": "long",
         "key": "group",
         "title": "--group",
-        "description": "API 1.25+Set one or more supplementary user groups for the container"
+        "description": "Set one or more supplementary user groups for the container"
       },
       {
         "type": "long",
         "key": "health-cmd",
         "title": "--health-cmd",
-        "description": "API 1.25+Command to run to check health"
+        "description": "Command to run to check health"
       },
       {
         "type": "long",
         "key": "health-interval",
         "title": "--health-interval",
-        "description": "API 1.25+Time between running the check (ms|s|m|h)"
+        "description": "Time between running the check (ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "health-retries",
         "title": "--health-retries",
-        "description": "API 1.25+Consecutive failures needed to report unhealthy"
+        "description": "Consecutive failures needed to report unhealthy"
       },
       {
         "type": "long",
         "key": "health-start-period",
         "title": "--health-start-period",
-        "description": "API 1.29+Start period for the container to initialize before counting retries towards unstable (ms|s|m|h)"
+        "description": "Start period for the container to initialize before counting retries towards unstable (ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "health-timeout",
         "title": "--health-timeout",
-        "description": "API 1.25+Maximum time to allow one check to run (ms|s|m|h)"
+        "description": "Maximum time to allow one check to run (ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "host",
         "title": "--host",
-        "description": "API 1.25+Set one or more custom host-to-IP mappings (host:ip)"
+        "description": "Set one or more custom host-to-IP mappings (host:ip)"
       },
       {
         "type": "long",
         "key": "hostname",
         "title": "--hostname",
-        "description": "API 1.25+Container hostname"
+        "description": "Container hostname"
       },
       {
         "type": "long",
         "key": "init",
         "title": "--init",
-        "description": "API 1.37+Use an init inside each service container to forward signals and reap processes"
+        "description": "Use an init inside each service container to forward signals and reap processes"
       },
       {
         "type": "long",
         "key": "isolation",
         "title": "--isolation",
-        "description": "API 1.35+Service container isolation mode"
+        "description": "Service container isolation mode"
       },
       {
         "type": "long",
@@ -7158,7 +7128,7 @@
         "type": "long",
         "key": "limit-pids",
         "title": "--limit-pids",
-        "description": "API 1.41+SwarmLimit maximum number of processes (default 0 = unlimited)"
+        "description": "Limit maximum number of processes (default 0 = unlimited)"
       },
       {
         "type": "long",
@@ -7176,7 +7146,7 @@
         "type": "long",
         "key": "max-concurrent",
         "title": "--max-concurrent",
-        "description": "API 1.41+Number of job tasks to run concurrently (default equal to --replicas)"
+        "description": "Number of job tasks to run concurrently (default equal to --replicas)"
       },
       {
         "type": "long",
@@ -7206,19 +7176,19 @@
         "type": "long",
         "key": "no-healthcheck",
         "title": "--no-healthcheck",
-        "description": "API 1.25+Disable any container-specified HEALTHCHECK"
+        "description": "Disable any container-specified HEALTHCHECK"
       },
       {
         "type": "long",
         "key": "no-resolve-image",
         "title": "--no-resolve-image",
-        "description": "API 1.30+Do not query the registry to resolve image digest and supported platforms"
+        "description": "Do not query the registry to resolve image digest and supported platforms"
       },
       {
         "type": "long",
         "key": "placement-pref",
         "title": "--placement-pref",
-        "description": "API 1.28+Add a placement preference"
+        "description": "Add a placement preference"
       },
       {
         "type": "long",
@@ -7248,7 +7218,7 @@
         "type": "long",
         "key": "read-only",
         "title": "--read-only",
-        "description": "API 1.28+Mount the container's root filesystem as read only"
+        "description": "Mount the container's root filesystem as read only"
       },
       {
         "type": "long",
@@ -7260,7 +7230,7 @@
         "type": "long",
         "key": "replicas-max-per-node",
         "title": "--replicas-max-per-node",
-        "description": "API 1.40+Maximum number of tasks per node (default 0 = unlimited)"
+        "description": "Maximum number of tasks per node (default 0 = unlimited)"
       },
       {
         "type": "long",
@@ -7302,43 +7272,43 @@
         "type": "long",
         "key": "rollback-delay",
         "title": "--rollback-delay",
-        "description": "API 1.28+Delay between task rollbacks (ns|us|ms|s|m|h) (default 0s)"
+        "description": "Delay between task rollbacks (ns|us|ms|s|m|h) (default 0s)"
       },
       {
         "type": "long",
         "key": "rollback-failure-action",
         "title": "--rollback-failure-action",
-        "description": "API 1.28+Action on rollback failure (\"pause\"|\"continue\") (default \"pause\")"
+        "description": "Action on rollback failure (\"pause\"|\"continue\") (default \"pause\")"
       },
       {
         "type": "long",
         "key": "rollback-max-failure-ratio",
         "title": "--rollback-max-failure-ratio",
-        "description": "API 1.28+Failure rate to tolerate during a rollback (default 0)"
+        "description": "Failure rate to tolerate during a rollback (default 0)"
       },
       {
         "type": "long",
         "key": "rollback-monitor",
         "title": "--rollback-monitor",
-        "description": "API 1.28+Duration after each task rollback to monitor for failure (ns|us|ms|s|m|h) (default 5s)"
+        "description": "Duration after each task rollback to monitor for failure (ns|us|ms|s|m|h) (default 5s)"
       },
       {
         "type": "long",
         "key": "rollback-order",
         "title": "--rollback-order",
-        "description": "API 1.29+Rollback order (\"start-first\"|\"stop-first\") (default \"stop-first\")"
+        "description": "Rollback order (\"start-first\"|\"stop-first\") (default \"stop-first\")"
       },
       {
         "type": "long",
         "key": "rollback-parallelism",
         "title": "--rollback-parallelism",
-        "description": "API 1.28+Maximum number of tasks rolled back simultaneously (0 to roll back all at once)"
+        "description": "Maximum number of tasks rolled back simultaneously (0 to roll back all at once)"
       },
       {
         "type": "long",
         "key": "secret",
         "title": "--secret",
-        "description": "API 1.25+Specify secrets to expose to the service"
+        "description": "Specify secrets to expose to the service"
       },
       {
         "type": "long",
@@ -7350,31 +7320,31 @@
         "type": "long",
         "key": "stop-signal",
         "title": "--stop-signal",
-        "description": "API 1.28+Signal to stop the container"
+        "description": "Signal to stop the container"
       },
       {
         "type": "long",
         "key": "sysctl",
         "title": "--sysctl",
-        "description": "API 1.40+Sysctl options"
+        "description": "Sysctl options"
       },
       {
         "type": "long",
         "key": "tty",
         "title": "--tty, -t",
-        "description": "API 1.25+Allocate a pseudo-TTY"
+        "description": "Allocate a pseudo-TTY"
       },
       {
         "type": "short",
         "key": "t",
         "title": "--tty, -t",
-        "description": "API 1.25+Allocate a pseudo-TTY"
+        "description": "Allocate a pseudo-TTY"
       },
       {
         "type": "long",
         "key": "ulimit",
         "title": "--ulimit",
-        "description": "API 1.41+Ulimit options"
+        "description": "Ulimit options"
       },
       {
         "type": "long",
@@ -7392,19 +7362,19 @@
         "type": "long",
         "key": "update-max-failure-ratio",
         "title": "--update-max-failure-ratio",
-        "description": "API 1.25+Failure rate to tolerate during an update (default 0)"
+        "description": "Failure rate to tolerate during an update (default 0)"
       },
       {
         "type": "long",
         "key": "update-monitor",
         "title": "--update-monitor",
-        "description": "API 1.25+Duration after each task update to monitor for failure (ns|us|ms|s|m|h) (default 5s)"
+        "description": "Duration after each task update to monitor for failure (ns|us|ms|s|m|h) (default 5s)"
       },
       {
         "type": "long",
         "key": "update-order",
         "title": "--update-order",
-        "description": "API 1.29+Update order (\"start-first\"|\"stop-first\") (default \"stop-first\")"
+        "description": "Update order (\"start-first\"|\"stop-first\") (default \"stop-first\")"
       },
       {
         "type": "long",
@@ -7474,7 +7444,7 @@
         "type": "long",
         "key": "details",
         "title": "--details",
-        "description": "API 1.30+Show extra details provided to logs"
+        "description": "Show extra details provided to logs"
       },
       {
         "type": "long",
@@ -7510,7 +7480,7 @@
         "type": "long",
         "key": "raw",
         "title": "--raw",
-        "description": "API 1.30+Do not neatly format logs"
+        "description": "Do not neatly format logs"
       },
       {
         "type": "long",
@@ -7637,13 +7607,13 @@
         "type": "long",
         "key": "detach",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "short",
         "key": "d",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "long",
@@ -7666,13 +7636,13 @@
         "type": "long",
         "key": "detach",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "short",
         "key": "d",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       }
     ]
   },
@@ -7689,25 +7659,25 @@
         "type": "long",
         "key": "cap-add",
         "title": "--cap-add",
-        "description": "API 1.41+Add Linux capabilities"
+        "description": "Add Linux capabilities"
       },
       {
         "type": "long",
         "key": "cap-drop",
         "title": "--cap-drop",
-        "description": "API 1.41+Drop Linux capabilities"
+        "description": "Drop Linux capabilities"
       },
       {
         "type": "long",
         "key": "config-add",
         "title": "--config-add",
-        "description": "API 1.30+Add or update a config file on a service"
+        "description": "Add or update a config file on a service"
       },
       {
         "type": "long",
         "key": "config-rm",
         "title": "--config-rm",
-        "description": "API 1.30+Remove a configuration file"
+        "description": "Remove a configuration file"
       },
       {
         "type": "long",
@@ -7737,55 +7707,55 @@
         "type": "long",
         "key": "credential-spec",
         "title": "--credential-spec",
-        "description": "API 1.29+Credential spec for managed service account (Windows only)"
+        "description": "Credential spec for managed service account (Windows only)"
       },
       {
         "type": "long",
         "key": "detach",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "short",
         "key": "d",
         "title": "--detach, -d",
-        "description": "API 1.29+Exit immediately instead of waiting for the service to converge"
+        "description": "Exit immediately instead of waiting for the service to converge"
       },
       {
         "type": "long",
         "key": "dns-add",
         "title": "--dns-add",
-        "description": "API 1.25+Add or update a custom DNS server"
+        "description": "Add or update a custom DNS server"
       },
       {
         "type": "long",
         "key": "dns-option-add",
         "title": "--dns-option-add",
-        "description": "API 1.25+Add or update a DNS option"
+        "description": "Add or update a DNS option"
       },
       {
         "type": "long",
         "key": "dns-option-rm",
         "title": "--dns-option-rm",
-        "description": "API 1.25+Remove a DNS option"
+        "description": "Remove a DNS option"
       },
       {
         "type": "long",
         "key": "dns-rm",
         "title": "--dns-rm",
-        "description": "API 1.25+Remove a custom DNS server"
+        "description": "Remove a custom DNS server"
       },
       {
         "type": "long",
         "key": "dns-search-add",
         "title": "--dns-search-add",
-        "description": "API 1.25+Add or update a custom DNS search domain"
+        "description": "Add or update a custom DNS search domain"
       },
       {
         "type": "long",
         "key": "dns-search-rm",
         "title": "--dns-search-rm",
-        "description": "API 1.25+Remove a DNS search domain"
+        "description": "Remove a DNS search domain"
       },
       {
         "type": "long",
@@ -7815,7 +7785,7 @@
         "type": "long",
         "key": "force",
         "title": "--force",
-        "description": "API 1.25+Force update even if no changes require it"
+        "description": "Force update even if no changes require it"
       },
       {
         "type": "long",
@@ -7833,61 +7803,61 @@
         "type": "long",
         "key": "group-add",
         "title": "--group-add",
-        "description": "API 1.25+Add an additional supplementary user group to the container"
+        "description": "Add an additional supplementary user group to the container"
       },
       {
         "type": "long",
         "key": "group-rm",
         "title": "--group-rm",
-        "description": "API 1.25+Remove a previously added supplementary user group from the container"
+        "description": "Remove a previously added supplementary user group from the container"
       },
       {
         "type": "long",
         "key": "health-cmd",
         "title": "--health-cmd",
-        "description": "API 1.25+Command to run to check health"
+        "description": "Command to run to check health"
       },
       {
         "type": "long",
         "key": "health-interval",
         "title": "--health-interval",
-        "description": "API 1.25+Time between running the check (ms|s|m|h)"
+        "description": "Time between running the check (ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "health-retries",
         "title": "--health-retries",
-        "description": "API 1.25+Consecutive failures needed to report unhealthy"
+        "description": "Consecutive failures needed to report unhealthy"
       },
       {
         "type": "long",
         "key": "health-start-period",
         "title": "--health-start-period",
-        "description": "API 1.29+Start period for the container to initialize before counting retries towards unstable (ms|s|m|h)"
+        "description": "Start period for the container to initialize before counting retries towards unstable (ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "health-timeout",
         "title": "--health-timeout",
-        "description": "API 1.25+Maximum time to allow one check to run (ms|s|m|h)"
+        "description": "Maximum time to allow one check to run (ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "host-add",
         "title": "--host-add",
-        "description": "API 1.32+Add a custom host-to-IP mapping (host:ip)"
+        "description": "Add a custom host-to-IP mapping (host:ip)"
       },
       {
         "type": "long",
         "key": "host-rm",
         "title": "--host-rm",
-        "description": "API 1.25+Remove a custom host-to-IP mapping (host:ip)"
+        "description": "Remove a custom host-to-IP mapping (host:ip)"
       },
       {
         "type": "long",
         "key": "hostname",
         "title": "--hostname",
-        "description": "API 1.25+Container hostname"
+        "description": "Container hostname"
       },
       {
         "type": "long",
@@ -7899,13 +7869,13 @@
         "type": "long",
         "key": "init",
         "title": "--init",
-        "description": "API 1.37+Use an init inside each service container to forward signals and reap processes"
+        "description": "Use an init inside each service container to forward signals and reap processes"
       },
       {
         "type": "long",
         "key": "isolation",
         "title": "--isolation",
-        "description": "API 1.35+Service container isolation mode"
+        "description": "Service container isolation mode"
       },
       {
         "type": "long",
@@ -7935,7 +7905,7 @@
         "type": "long",
         "key": "limit-pids",
         "title": "--limit-pids",
-        "description": "API 1.41+SwarmLimit maximum number of processes (default 0 = unlimited)"
+        "description": "Limit maximum number of processes (default 0 = unlimited)"
       },
       {
         "type": "long",
@@ -7953,7 +7923,7 @@
         "type": "long",
         "key": "max-concurrent",
         "title": "--max-concurrent",
-        "description": "API 1.41+Number of job tasks to run concurrently (default equal to --replicas)"
+        "description": "Number of job tasks to run concurrently (default equal to --replicas)"
       },
       {
         "type": "long",
@@ -7971,37 +7941,37 @@
         "type": "long",
         "key": "network-add",
         "title": "--network-add",
-        "description": "API 1.29+Add a network"
+        "description": "Add a network"
       },
       {
         "type": "long",
         "key": "network-rm",
         "title": "--network-rm",
-        "description": "API 1.29+Remove a network"
+        "description": "Remove a network"
       },
       {
         "type": "long",
         "key": "no-healthcheck",
         "title": "--no-healthcheck",
-        "description": "API 1.25+Disable any container-specified HEALTHCHECK"
+        "description": "Disable any container-specified HEALTHCHECK"
       },
       {
         "type": "long",
         "key": "no-resolve-image",
         "title": "--no-resolve-image",
-        "description": "API 1.30+Do not query the registry to resolve image digest and supported platforms"
+        "description": "Do not query the registry to resolve image digest and supported platforms"
       },
       {
         "type": "long",
         "key": "placement-pref-add",
         "title": "--placement-pref-add",
-        "description": "API 1.28+Add a placement preference"
+        "description": "Add a placement preference"
       },
       {
         "type": "long",
         "key": "placement-pref-rm",
         "title": "--placement-pref-rm",
-        "description": "API 1.28+Remove a placement preference"
+        "description": "Remove a placement preference"
       },
       {
         "type": "long",
@@ -8031,7 +8001,7 @@
         "type": "long",
         "key": "read-only",
         "title": "--read-only",
-        "description": "API 1.28+Mount the container's root filesystem as read only"
+        "description": "Mount the container's root filesystem as read only"
       },
       {
         "type": "long",
@@ -8043,7 +8013,7 @@
         "type": "long",
         "key": "replicas-max-per-node",
         "title": "--replicas-max-per-node",
-        "description": "API 1.40+Maximum number of tasks per node (default 0 = unlimited)"
+        "description": "Maximum number of tasks per node (default 0 = unlimited)"
       },
       {
         "type": "long",
@@ -8085,55 +8055,55 @@
         "type": "long",
         "key": "rollback",
         "title": "--rollback",
-        "description": "API 1.25+Rollback to previous specification"
+        "description": "Rollback to previous specification"
       },
       {
         "type": "long",
         "key": "rollback-delay",
         "title": "--rollback-delay",
-        "description": "API 1.28+Delay between task rollbacks (ns|us|ms|s|m|h)"
+        "description": "Delay between task rollbacks (ns|us|ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "rollback-failure-action",
         "title": "--rollback-failure-action",
-        "description": "API 1.28+Action on rollback failure (\"pause\"|\"continue\")"
+        "description": "Action on rollback failure (\"pause\"|\"continue\")"
       },
       {
         "type": "long",
         "key": "rollback-max-failure-ratio",
         "title": "--rollback-max-failure-ratio",
-        "description": "API 1.28+Failure rate to tolerate during a rollback"
+        "description": "Failure rate to tolerate during a rollback"
       },
       {
         "type": "long",
         "key": "rollback-monitor",
         "title": "--rollback-monitor",
-        "description": "API 1.28+Duration after each task rollback to monitor for failure (ns|us|ms|s|m|h)"
+        "description": "Duration after each task rollback to monitor for failure (ns|us|ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "rollback-order",
         "title": "--rollback-order",
-        "description": "API 1.29+Rollback order (\"start-first\"|\"stop-first\")"
+        "description": "Rollback order (\"start-first\"|\"stop-first\")"
       },
       {
         "type": "long",
         "key": "rollback-parallelism",
         "title": "--rollback-parallelism",
-        "description": "API 1.28+Maximum number of tasks rolled back simultaneously (0 to roll back all at once)"
+        "description": "Maximum number of tasks rolled back simultaneously (0 to roll back all at once)"
       },
       {
         "type": "long",
         "key": "secret-add",
         "title": "--secret-add",
-        "description": "API 1.25+Add or update a secret on a service"
+        "description": "Add or update a secret on a service"
       },
       {
         "type": "long",
         "key": "secret-rm",
         "title": "--secret-rm",
-        "description": "API 1.25+Remove a secret"
+        "description": "Remove a secret"
       },
       {
         "type": "long",
@@ -8145,43 +8115,43 @@
         "type": "long",
         "key": "stop-signal",
         "title": "--stop-signal",
-        "description": "API 1.28+Signal to stop the container"
+        "description": "Signal to stop the container"
       },
       {
         "type": "long",
         "key": "sysctl-add",
         "title": "--sysctl-add",
-        "description": "API 1.40+Add or update a Sysctl option"
+        "description": "Add or update a Sysctl option"
       },
       {
         "type": "long",
         "key": "sysctl-rm",
         "title": "--sysctl-rm",
-        "description": "API 1.40+Remove a Sysctl option"
+        "description": "Remove a Sysctl option"
       },
       {
         "type": "long",
         "key": "tty",
         "title": "--tty, -t",
-        "description": "API 1.25+Allocate a pseudo-TTY"
+        "description": "Allocate a pseudo-TTY"
       },
       {
         "type": "short",
         "key": "t",
         "title": "--tty, -t",
-        "description": "API 1.25+Allocate a pseudo-TTY"
+        "description": "Allocate a pseudo-TTY"
       },
       {
         "type": "long",
         "key": "ulimit-add",
         "title": "--ulimit-add",
-        "description": "API 1.41+Add or update a ulimit option"
+        "description": "Add or update a ulimit option"
       },
       {
         "type": "long",
         "key": "ulimit-rm",
         "title": "--ulimit-rm",
-        "description": "API 1.41+Remove a ulimit option"
+        "description": "Remove a ulimit option"
       },
       {
         "type": "long",
@@ -8199,19 +8169,19 @@
         "type": "long",
         "key": "update-max-failure-ratio",
         "title": "--update-max-failure-ratio",
-        "description": "API 1.25+Failure rate to tolerate during an update"
+        "description": "Failure rate to tolerate during an update"
       },
       {
         "type": "long",
         "key": "update-monitor",
         "title": "--update-monitor",
-        "description": "API 1.25+Duration after each task update to monitor for failure (ns|us|ms|s|m|h)"
+        "description": "Duration after each task update to monitor for failure (ns|us|ms|s|m|h)"
       },
       {
         "type": "long",
         "key": "update-order",
         "title": "--update-order",
-        "description": "API 1.29+Update order (\"start-first\"|\"stop-first\")"
+        "description": "Update order (\"start-first\"|\"stop-first\")"
       },
       {
         "type": "long",
@@ -8258,49 +8228,49 @@
         "type": "long",
         "key": "compose-file",
         "title": "--compose-file, -c",
-        "description": "API 1.25+Path to a Compose file, or \"-\" to read from stdin"
+        "description": "Path to a Compose file, or \"-\" to read from stdin"
       },
       {
         "type": "short",
         "key": "c",
         "title": "--compose-file, -c",
-        "description": "API 1.25+Path to a Compose file, or \"-\" to read from stdin"
+        "description": "Path to a Compose file, or \"-\" to read from stdin"
       },
       {
         "type": "long",
         "key": "namespace",
         "title": "--namespace",
-        "description": "deprecatedKubernetesKubernetes namespace to use"
+        "description": "Kubernetes namespace to use"
       },
       {
         "type": "long",
         "key": "prune",
         "title": "--prune",
-        "description": "API 1.27+SwarmPrune services that are no longer referenced"
+        "description": "Prune services that are no longer referenced"
       },
       {
         "type": "long",
         "key": "resolve-image",
         "title": "--resolve-image",
-        "description": "API 1.30+SwarmQuery the registry to resolve image digest and supported platforms (\"always\"|\"changed\"|\"never\")"
+        "description": "Query the registry to resolve image digest and supported platforms (\"always\"|\"changed\"|\"never\")"
       },
       {
         "type": "long",
         "key": "with-registry-auth",
         "title": "--with-registry-auth",
-        "description": "SwarmSend registry authentication details to Swarm agents"
+        "description": "Send registry authentication details to Swarm agents"
       },
       {
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       },
       {
         "type": "long",
         "key": "orchestrator",
         "title": "--orchestrator",
-        "description": "deprecatedOrchestrator to use (swarm|kubernetes|all)"
+        "description": "Orchestrator to use (swarm|kubernetes|all)"
       }
     ]
   },
@@ -8311,7 +8281,7 @@
         "type": "long",
         "key": "all-namespaces",
         "title": "--all-namespaces",
-        "description": "deprecatedKubernetesList stacks from all Kubernetes namespaces"
+        "description": "List stacks from all Kubernetes namespaces"
       },
       {
         "type": "long",
@@ -8323,19 +8293,19 @@
         "type": "long",
         "key": "namespace",
         "title": "--namespace",
-        "description": "deprecatedKubernetesKubernetes namespaces to use"
+        "description": "Kubernetes namespaces to use"
       },
       {
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       },
       {
         "type": "long",
         "key": "orchestrator",
         "title": "--orchestrator",
-        "description": "deprecatedOrchestrator to use (swarm|kubernetes|all)"
+        "description": "Orchestrator to use (swarm|kubernetes|all)"
       }
     ]
   },
@@ -8364,7 +8334,7 @@
         "type": "long",
         "key": "namespace",
         "title": "--namespace",
-        "description": "deprecatedKubernetesKubernetes namespace to use"
+        "description": "Kubernetes namespace to use"
       },
       {
         "type": "long",
@@ -8394,13 +8364,13 @@
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       },
       {
         "type": "long",
         "key": "orchestrator",
         "title": "--orchestrator",
-        "description": "deprecatedOrchestrator to use (swarm|kubernetes|all)"
+        "description": "Orchestrator to use (swarm|kubernetes|all)"
       }
     ]
   },
@@ -8411,19 +8381,19 @@
         "type": "long",
         "key": "namespace",
         "title": "--namespace",
-        "description": "deprecatedKubernetesKubernetes namespace to use"
+        "description": "Kubernetes namespace to use"
       },
       {
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       },
       {
         "type": "long",
         "key": "orchestrator",
         "title": "--orchestrator",
-        "description": "deprecatedOrchestrator to use (swarm|kubernetes|all)"
+        "description": "Orchestrator to use (swarm|kubernetes|all)"
       }
     ]
   },
@@ -8452,7 +8422,7 @@
         "type": "long",
         "key": "namespace",
         "title": "--namespace",
-        "description": "deprecatedKubernetesKubernetes namespace to use"
+        "description": "Kubernetes namespace to use"
       },
       {
         "type": "long",
@@ -8470,13 +8440,13 @@
         "type": "long",
         "key": "kubeconfig",
         "title": "--kubeconfig",
-        "description": "deprecatedKubernetesKubernetes config file"
+        "description": "Kubernetes config file"
       },
       {
         "type": "long",
         "key": "orchestrator",
         "title": "--orchestrator",
-        "description": "deprecatedOrchestrator to use (swarm|kubernetes|all)"
+        "description": "Orchestrator to use (swarm|kubernetes|all)"
       }
     ]
   },
@@ -8570,25 +8540,25 @@
         "type": "long",
         "key": "data-path-addr",
         "title": "--data-path-addr",
-        "description": "API 1.31+Address or interface to use for data path traffic (format: <ip|interface>)"
+        "description": "Address or interface to use for data path traffic (format: <ip|interface>)"
       },
       {
         "type": "long",
         "key": "data-path-port",
         "title": "--data-path-port",
-        "description": "API 1.40+Port number to use for data path traffic (1024 - 49151). If no value is set or is set to 0, the default port (4789) is used."
+        "description": "Port number to use for data path traffic (1024 - 49151). If no value is set or is set to 0, the default port (4789) is used."
       },
       {
         "type": "long",
         "key": "default-addr-pool",
         "title": "--default-addr-pool",
-        "description": "API 1.39+default address pool in CIDR format"
+        "description": "default address pool in CIDR format"
       },
       {
         "type": "long",
         "key": "default-addr-pool-mask-length",
         "title": "--default-addr-pool-mask-length",
-        "description": "API 1.39+default address pool subnet mask length"
+        "description": "default address pool subnet mask length"
       },
       {
         "type": "long",
@@ -8618,13 +8588,13 @@
         "type": "long",
         "key": "max-snapshots",
         "title": "--max-snapshots",
-        "description": "API 1.25+Number of additional Raft snapshots to retain"
+        "description": "Number of additional Raft snapshots to retain"
       },
       {
         "type": "long",
         "key": "snapshot-interval",
         "title": "--snapshot-interval",
-        "description": "API 1.25+Number of log entries between Raft snapshots"
+        "description": "Number of log entries between Raft snapshots"
       },
       {
         "type": "long",
@@ -8653,7 +8623,7 @@
         "type": "long",
         "key": "data-path-addr",
         "title": "--data-path-addr",
-        "description": "API 1.31+Address or interface to use for data path traffic (format: <ip|interface>)"
+        "description": "Address or interface to use for data path traffic (format: <ip|interface>)"
       },
       {
         "type": "long",
@@ -8767,13 +8737,13 @@
         "type": "long",
         "key": "max-snapshots",
         "title": "--max-snapshots",
-        "description": "API 1.25+Number of additional Raft snapshots to retain"
+        "description": "Number of additional Raft snapshots to retain"
       },
       {
         "type": "long",
         "key": "snapshot-interval",
         "title": "--snapshot-interval",
-        "description": "API 1.25+Number of log entries between Raft snapshots"
+        "description": "Number of log entries between Raft snapshots"
       },
       {
         "type": "long",
@@ -8877,7 +8847,7 @@
         "type": "long",
         "key": "filter",
         "title": "--filter",
-        "description": "API 1.28+Provide filter values (e.g. 'label=<key>=<value>')"
+        "description": "Provide filter values (e.g. 'label=<key>=<value>')"
       },
       {
         "type": "long",
@@ -9119,63 +9089,13 @@
         "type": "long",
         "key": "force",
         "title": "--force, -f",
-        "description": "API 1.25+Force the removal of one or more volumes"
+        "description": "Force the removal of one or more volumes"
       },
       {
         "type": "short",
         "key": "f",
         "title": "--force, -f",
-        "description": "API 1.25+Force the removal of one or more volumes"
-      }
-    ]
-  },
-  {
-    "name": "docker trust key generate",
-    "options": [
-      {
-        "type": "long",
-        "key": "dir",
-        "title": "--dir",
-        "description": "Directory to generate key in, defaults to current directory"
-      }
-    ]
-  },
-  {
-    "name": "docker trust key load",
-    "options": [
-      {
-        "type": "long",
-        "key": "name",
-        "title": "--name",
-        "description": "Name for the loaded key"
-      }
-    ]
-  },
-  {
-    "name": "docker trust signer add",
-    "options": [
-      {
-        "type": "long",
-        "key": "key",
-        "title": "--key",
-        "description": "Path to the signer's public key file"
-      }
-    ]
-  },
-  {
-    "name": "docker trust signer remove",
-    "options": [
-      {
-        "type": "long",
-        "key": "force",
-        "title": "--force, -f",
-        "description": "Do not prompt for confirmation before removing the most recent signer"
-      },
-      {
-        "type": "short",
-        "key": "f",
-        "title": "--force, -f",
-        "description": "Do not prompt for confirmation before removing the most recent signer"
+        "description": "Force the removal of one or more volumes"
       }
     ]
   }
