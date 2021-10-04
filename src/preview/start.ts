@@ -15,11 +15,12 @@ app.get('/commands.js', (_req, res) => {
   res.sendFile(path.resolve(__dirname, 'commands.js'));
 });
 
-app.get('/snapshots/docker.json', (_req, res) => {
-  res.sendFile(path.resolve(__dirname, '../snapshots/docker.json'));
+app.get('/snapshots/:baseCommandName.json', (req, res) => {
+  const baseCommandName = req.params.baseCommandName;
+  res.sendFile(path.resolve(__dirname, `../snapshots/${baseCommandName}.json`));
 });
 
-app.get('/:baseCommand', (_req, res) => {
+app.get('/*', (_req, res) => {
   res.sendFile(path.resolve(__dirname, 'commands.html'));
 });
 
