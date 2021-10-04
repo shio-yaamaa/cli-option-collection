@@ -77,7 +77,14 @@ const fetchSubcommand = async (
 
   const options: Option[] = [];
 
-  const trs = Array.from(document.querySelectorAll('tr'));
+  const table = findOptionTable(document);
+  if (!table) {
+    return {
+      name: location.command,
+      options: [],
+    };
+  }
+  const trs = Array.from(table.querySelectorAll('tr'));
   for (const tr of trs) {
     const tds = Array.from(tr.querySelectorAll('td'));
     if (tds.length < 3) {
@@ -109,4 +116,10 @@ const fetchSubcommand = async (
     name: location.command,
     options,
   };
+};
+
+const findOptionTable = (document: Document): Element | null => {
+  const optionHeading = document.querySelector('#options');
+  const nextSibling = optionHeading?.nextElementSibling;
+  return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
 };

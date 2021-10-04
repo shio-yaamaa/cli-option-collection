@@ -6381,36 +6381,6 @@
         "key": "subnet",
         "title": "--subnet",
         "description": "Subnet in CIDR format that represents a network segment"
-      },
-      {
-        "type": "long",
-        "key": "gateway",
-        "title": "--gateway",
-        "description": "IPv4 or IPv6 Gateway for the master subnet"
-      },
-      {
-        "type": "long",
-        "key": "ip-range",
-        "title": "--ip-range",
-        "description": "Allocate IPs from a range"
-      },
-      {
-        "type": "long",
-        "key": "internal",
-        "title": "--internal",
-        "description": "Restrict external access to the network"
-      },
-      {
-        "type": "long",
-        "key": "ipv6",
-        "title": "--ipv6",
-        "description": "Enable IPv6 networking"
-      },
-      {
-        "type": "long",
-        "key": "subnet",
-        "title": "--subnet",
-        "description": "Subnet for network"
       }
     ]
   },
