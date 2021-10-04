@@ -15,10 +15,6 @@ app.get('/commands.js', (_req, res) => {
   res.sendFile(path.resolve(__dirname, 'commands.js'));
 });
 
-app.get('/commands.css', (_req, res) => {
-  res.sendFile(path.resolve(__dirname, 'commands.css'));
-});
-
 app.get('/snapshots/docker.json', (_req, res) => {
   res.sendFile(path.resolve(__dirname, '../snapshots/docker.json'));
 });
