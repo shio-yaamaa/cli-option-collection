@@ -92,7 +92,7 @@ const fetchSubcommand = async (
     }
 
     const title = tds[0].textContent;
-    const description = tds[2].textContent;
+    const description = tdToDescription(tds[2]);
     if (!title || !description) {
       continue;
     }
@@ -122,4 +122,28 @@ const findOptionTable = (document: Document): Element | null => {
   const optionHeading = document.querySelector('#options');
   const nextSibling = optionHeading?.nextElementSibling;
   return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
+};
+
+const tdToDescription = (td: Element): string | null => {
+  if (!td.textContent) {
+    return null;
+  }
+  const children = Array.from(td.children);
+  // Remove badges like "API 1.40+" or "Kubernetes"
+  for (const child of children) {
+    if (isBadge(child)) {
+      child.remove();
+    }
+  }
+  return td.textContent.trim();
+};
+
+const isBadge = (element: Element): boolean => {
+  if (element.classList.contains('badge')) {
+    return true;
+  }
+  if (element.querySelector('.badge')) {
+    return true;
+  }
+  return false;
 };
