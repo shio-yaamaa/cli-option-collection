@@ -1,0 +1,23 @@
+.title {
+  margin: 0 4px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #eeeeee;
+}
+
+.type {
+  margin: 0 4px;
+  padding: 4px;
+  font-size: 0.8em;
+  border-radius: 4px;
+}
+
+.type.short {
+  color: white;
+  background-color: #d81b60; /* Pink 600 */
+}
+
+.type.long {
+  color: white;
+  background-color: #0288d1; /* Light Blue 700 */
+}
