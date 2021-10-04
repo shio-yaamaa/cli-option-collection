@@ -10,13 +10,10 @@ const baseCommandName = pathname.split('/')[1];
 const validatedBaseCommandName = BASE_COMMAND_NAME_PATTERN.test(baseCommandName)
   ? baseCommandName
   : null;
-fetch(`snapshots/${validatedBaseCommandName}.json`)
-  .then((response) => response.json())
-  .then((json) => console.log(json));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App baseCommandName={validatedBaseCommandName} />
   </React.StrictMode>,
   document.getElementById('root')
 );
