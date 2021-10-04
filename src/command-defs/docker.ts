@@ -38,7 +38,11 @@ const fetchSubcommandLocationsRecursively = async (
   parent: SubcommandLocation
 ): Promise<SubcommandLocation[]> => {
   const document = await fetchDocumentFromURL(parent.url);
-  const tds = Array.from(document.querySelectorAll('td'));
+  const table = findSubcommandTable(document);
+  if (!table) {
+    return [];
+  }
+  const tds = Array.from(table.querySelectorAll('td'));
 
   const subcommandLocations: SubcommandLocation[] = [];
   for (const td of tds) {
@@ -60,14 +64,21 @@ const fetchSubcommandLocationsRecursively = async (
     });
   }
 
+  const subcommandLocationsFromChildren: SubcommandLocation[] = [];
   for (const subcommandLocation of subcommandLocations) {
     const children = await fetchSubcommandLocationsRecursively(
       subcommandLocation
     );
-    subcommandLocations.push(...children);
+    subcommandLocationsFromChildren.push(...children);
   }
 
-  return subcommandLocations;
+  return subcommandLocations.concat(subcommandLocationsFromChildren);
+};
+
+const findSubcommandTable = (document: Document): Element | null => {
+  const commandsHeading = document.querySelector('#child-commands');
+  const nextSibling = commandsHeading?.nextElementSibling;
+  return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
 };
 
 const fetchSubcommand = async (

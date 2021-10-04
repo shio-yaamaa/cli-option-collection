@@ -9098,55 +9098,5 @@
         "description": "Force the removal of one or more volumes"
       }
     ]
-  },
-  {
-    "name": "docker trust key generate",
-    "options": [
-      {
-        "type": "long",
-        "key": "dir",
-        "title": "--dir",
-        "description": "Directory to generate key in, defaults to current directory"
-      }
-    ]
-  },
-  {
-    "name": "docker trust key load",
-    "options": [
-      {
-        "type": "long",
-        "key": "name",
-        "title": "--name",
-        "description": "Name for the loaded key"
-      }
-    ]
-  },
-  {
-    "name": "docker trust signer add",
-    "options": [
-      {
-        "type": "long",
-        "key": "key",
-        "title": "--key",
-        "description": "Path to the signer's public key file"
-      }
-    ]
-  },
-  {
-    "name": "docker trust signer remove",
-    "options": [
-      {
-        "type": "long",
-        "key": "force",
-        "title": "--force, -f",
-        "description": "Do not prompt for confirmation before removing the most recent signer"
-      },
-      {
-        "type": "short",
-        "key": "f",
-        "title": "--force, -f",
-        "description": "Do not prompt for confirmation before removing the most recent signer"
-      }
-    ]
   }
 ]
