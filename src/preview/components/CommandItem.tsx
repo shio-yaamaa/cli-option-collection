@@ -9,9 +9,9 @@ interface Props {
 
 export const CommandItem: React.VFC<Props> = (props) => (
   <>
-    <p>
+    <h2>
       <code>{props.command.name}</code>
-    </p>
+    </h2>
     <ul>
       {props.command.options.map((option) => (
         <li key={`${props.command.name}-${option.type}-${option.key}`}>

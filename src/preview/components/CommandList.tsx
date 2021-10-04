@@ -8,9 +8,9 @@ interface Props {
 }
 
 export const CommandList: React.VFC<Props> = (props) => (
-  <div>
+  <>
     {props.commands.map((command) => (
       <CommandItem key={command.name} command={command} />
     ))}
-  </div>
+  </>
 );
