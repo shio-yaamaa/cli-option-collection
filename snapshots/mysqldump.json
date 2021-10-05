@@ -736,6 +736,12 @@
       },
       {
         "type": "long",
+        "key": "skip-mysql-schema",
+        "title": "--skip-mysql-schema",
+        "description": "Do not drop the mysql schema"
+      },
+      {
+        "type": "long",
         "key": "skip-opt",
         "title": "--skip-opt",
         "description": "Turn off options set by --opt"
