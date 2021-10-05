@@ -41,7 +41,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   if (dts.length === 0) {
     return [];
   }
-  const title = dts[0].trim().replace('¶', '');
+  const title = dts[0].textContent?.trim().replace('¶', '') ?? '';
   const optionStrings = transformOptionStrings(
     [title],
     [splitByComma, trimOptionArguments, trimOptionValues]
@@ -50,6 +50,6 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     type,
     key,
     title,
-    description: dd,
+    description: dd.textContent?.trim() ?? '',
   }));
 };

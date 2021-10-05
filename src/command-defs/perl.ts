@@ -59,9 +59,13 @@ const findOptionDl = (document: Document): HTMLDListElement | null => {
 };
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const dtTexts = dts.map((dt) => (dt.startsWith('#') ? dt.slice(1) : dt));
+  const dtTexts = dts
+    .map((dt) =>
+      dt.textContent?.startsWith('#') ? dt.textContent.slice(1) : dt
+    )
+    .filter((text): text is string => typeof text === 'string');
   const title = mergeOptionTitles(dtTexts);
-  const description = dd;
+  const description = dd.textContent?.trim() ?? '';
 
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,

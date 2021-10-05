@@ -2,8 +2,8 @@ import { JSDOM, VirtualConsole } from 'jsdom';
 import axios from 'axios';
 
 export interface DListEntry {
-  dts: string[];
-  dd: string;
+  dts: Element[];
+  dd: Element;
 }
 
 export const fetchDocumentFromURL = async (url: URL): Promise<Document> => {
@@ -78,8 +78,8 @@ export const findDListEntries = (
           // Ignore
         } else {
           entries.push({
-            dts: currentDts.map((dt) => dt.textContent?.trim() ?? ''),
-            dd: element.textContent?.trim() ?? '',
+            dts: currentDts,
+            dd: element,
           });
           currentDts = [];
         }

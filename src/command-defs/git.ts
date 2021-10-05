@@ -98,8 +98,11 @@ const findOptions = (document: Document): Option[] => {
   );
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const title = normalizeSpacingAroundComma(mergeOptionTitles(dts));
-    const optionStrings = transformOptionStrings(dts, [
+    const dtTexts = dts
+      .map((dt) => dt.textContent?.trim())
+      .filter((text): text is string => typeof text === 'string');
+    const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
+    const optionStrings = transformOptionStrings(dtTexts, [
       splitByComma,
       trimOptionalElements,
       trimOptionValues,
@@ -110,7 +113,7 @@ const findOptions = (document: Document): Option[] => {
         type,
         key,
         title,
-        description: dd,
+        description: dd.textContent?.trim() ?? '',
       }))
     );
   }

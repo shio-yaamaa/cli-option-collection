@@ -50,8 +50,11 @@ const findTopLevelLists = (document: Document): HTMLDListElement[] =>
   Array.from(document.querySelectorAll('.page-content > dl'));
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const title = normalizeSpacingAroundComma(mergeOptionTitles(dts));
-  const optionStrings = transformOptionStrings(dts, [
+  const dtTexts = dts
+    .map((dt) => dt.textContent?.trim())
+    .filter((text): text is string => typeof text === 'string');
+  const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
+  const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,
     splitByComma,
     trimOptionArguments,
@@ -65,7 +68,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
         type: key.length === 1 ? OptionType.SHORT : OptionType.LONG,
         key,
         title,
-        description: dd,
+        description: dd.textContent?.trim() ?? '',
       };
     });
 };
