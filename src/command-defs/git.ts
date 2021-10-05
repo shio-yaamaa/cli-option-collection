@@ -7,6 +7,7 @@ import {
   findAnchorsWithPattern,
   findDListEntries,
 } from '../utils/forFetcher/dom';
+import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   distinguishOptionKeyType,
   mergeOptionTitles,
@@ -19,6 +20,7 @@ import {
   trimOptionalElements,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { uniqueBy } from '../utils/utils';
 
 // Alternative sources:
 // - https://github.com/git/git/blob/master/Documentation/git.txt
@@ -64,10 +66,11 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     SUBCOMMAND_LINK_PATTERN,
     SUBCOMMAND_LINK_TEXT_PATTERN
   );
-  return anchors.map((anchor) => ({
+  const locations = anchors.map((anchor) => ({
     command: subcommandLinkTextToCommandName(anchor.textContent!),
     url: new URL(anchor.href, BASE_URL),
   }));
+  return uniqueBy(locations, (location) => location.url);
 };
 
 // Example: "git-cherry-pick[1]" -> "git cherry-pick"
@@ -117,5 +120,5 @@ const findOptions = (document: Document): Option[] => {
       }))
     );
   }
-  return options;
+  return uniqueOptions(options);
 };
