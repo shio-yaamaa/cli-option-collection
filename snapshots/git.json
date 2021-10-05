@@ -239,7 +239,194 @@
   },
   {
     "name": "git config",
-    "options": []
+    "options": [
+      {
+        "type": "long",
+        "key": "replace-all",
+        "title": "--replace-all",
+        "description": "Default behavior is to replace at most one line. This replaces\nall lines matching the key (and optionally the value-pattern)."
+      },
+      {
+        "type": "long",
+        "key": "add",
+        "title": "--add",
+        "description": "Adds a new line to the option without altering any existing\nvalues.  This is the same as providing ^$ as the value-pattern\nin --replace-all."
+      },
+      {
+        "type": "long",
+        "key": "get",
+        "title": "--get",
+        "description": "Get the value for a given key (optionally filtered by a regex\nmatching the value). Returns error code 1 if the key was not\nfound and the last value if multiple key values were found."
+      },
+      {
+        "type": "long",
+        "key": "get-all",
+        "title": "--get-all",
+        "description": "Like get, but returns all values for a multi-valued key."
+      },
+      {
+        "type": "long",
+        "key": "get-regexp",
+        "title": "--get-regexp",
+        "description": "Like --get-all, but interprets the name as a regular expression and\nwrites out the key names.  Regular expression matching is currently\ncase-sensitive and done against a canonicalized version of the key\nin which section and variable names are lowercased, but subsection\nnames are not."
+      },
+      {
+        "type": "long",
+        "key": "global",
+        "title": "--global",
+        "description": "For writing options: write to global ~/.gitconfig file\nrather than the repository .git/config, write to\n$XDG_CONFIG_HOME/git/config file if this file exists and the\n~/.gitconfig file doesn’t.\n\nFor reading options: read only from global ~/.gitconfig and from\n$XDG_CONFIG_HOME/git/config rather than from all available files.\n\n\nSee also FILES."
+      },
+      {
+        "type": "long",
+        "key": "system",
+        "title": "--system",
+        "description": "For writing options: write to system-wide\n$(prefix)/etc/gitconfig rather than the repository\n.git/config.\n\nFor reading options: read only from system-wide $(prefix)/etc/gitconfig\nrather than from all available files.\n\n\nSee also FILES."
+      },
+      {
+        "type": "long",
+        "key": "local",
+        "title": "--local",
+        "description": "For writing options: write to the repository .git/config file.\nThis is the default behavior.\n\nFor reading options: read only from the repository .git/config rather than\nfrom all available files.\n\n\nSee also FILES."
+      },
+      {
+        "type": "long",
+        "key": "worktree",
+        "title": "--worktree",
+        "description": "Similar to --local except that .git/config.worktree is\nread from or written to if extensions.worktreeConfig is\npresent. If not it’s the same as --local."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f config-file, --file config-file",
+        "description": "For writing options: write to the specified file rather than the\nrepository .git/config.\n\nFor reading options: read only from the specified file rather than from all\navailable files.\n\n\nSee also FILES."
+      },
+      {
+        "type": "long",
+        "key": "remove-section",
+        "title": "--remove-section",
+        "description": "Remove the given section from the configuration file."
+      },
+      {
+        "type": "long",
+        "key": "rename-section",
+        "title": "--rename-section",
+        "description": "Rename the given section to a new name."
+      },
+      {
+        "type": "long",
+        "key": "unset",
+        "title": "--unset",
+        "description": "Remove the line matching the key from config file."
+      },
+      {
+        "type": "long",
+        "key": "unset-all",
+        "title": "--unset-all",
+        "description": "Remove all lines matching the key from config file."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l, --list",
+        "description": "List all variables set in config file, along with their values."
+      },
+      {
+        "type": "long",
+        "key": "list",
+        "title": "-l, --list",
+        "description": "List all variables set in config file, along with their values."
+      },
+      {
+        "type": "long",
+        "key": "fixed-value",
+        "title": "--fixed-value",
+        "description": "When used with the value-pattern argument, treat value-pattern as\nan exact string instead of a regular expression. This will restrict\nthe name/value pairs that are matched to only those where the value\nis exactly equal to the value-pattern."
+      },
+      {
+        "type": "long",
+        "key": "bool",
+        "title": "--bool, --int, --bool-or-int, --path, --expiry-date",
+        "description": "Historical options for selecting a type specifier. Prefer instead --type\n(see above)."
+      },
+      {
+        "type": "long",
+        "key": "int",
+        "title": "--bool, --int, --bool-or-int, --path, --expiry-date",
+        "description": "Historical options for selecting a type specifier. Prefer instead --type\n(see above)."
+      },
+      {
+        "type": "long",
+        "key": "bool-or-int",
+        "title": "--bool, --int, --bool-or-int, --path, --expiry-date",
+        "description": "Historical options for selecting a type specifier. Prefer instead --type\n(see above)."
+      },
+      {
+        "type": "long",
+        "key": "path",
+        "title": "--bool, --int, --bool-or-int, --path, --expiry-date",
+        "description": "Historical options for selecting a type specifier. Prefer instead --type\n(see above)."
+      },
+      {
+        "type": "long",
+        "key": "expiry-date",
+        "title": "--bool, --int, --bool-or-int, --path, --expiry-date",
+        "description": "Historical options for selecting a type specifier. Prefer instead --type\n(see above)."
+      },
+      {
+        "type": "long",
+        "key": "no-type",
+        "title": "--no-type",
+        "description": "Un-sets the previously set type specifier (if one was previously set). This\noption requests that git config not canonicalize the retrieved variable.\n--no-type has no effect without --type=<type> or --<type>."
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --null",
+        "description": "For all options that output values and/or keys, always\nend values with the null character (instead of a\nnewline). Use newline instead as a delimiter between\nkey and value. This allows for secure parsing of the\noutput without getting confused e.g. by values that\ncontain line breaks."
+      },
+      {
+        "type": "long",
+        "key": "null",
+        "title": "-z, --null",
+        "description": "For all options that output values and/or keys, always\nend values with the null character (instead of a\nnewline). Use newline instead as a delimiter between\nkey and value. This allows for secure parsing of the\noutput without getting confused e.g. by values that\ncontain line breaks."
+      },
+      {
+        "type": "long",
+        "key": "name-only",
+        "title": "--name-only",
+        "description": "Output only the names of config variables for --list or\n--get-regexp."
+      },
+      {
+        "type": "long",
+        "key": "show-origin",
+        "title": "--show-origin",
+        "description": "Augment the output of all queried config options with the\norigin type (file, standard input, blob, command line) and\nthe actual origin (config file path, ref, or blob id if\napplicable)."
+      },
+      {
+        "type": "long",
+        "key": "show-scope",
+        "title": "--show-scope",
+        "description": "Similar to --show-origin in that it augments the output of\nall queried config options with the scope of that value\n(local, global, system, command)."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e, --edit",
+        "description": "Opens an editor to modify the specified config file; either\n--system, --global, or repository (default)."
+      },
+      {
+        "type": "long",
+        "key": "edit",
+        "title": "-e, --edit",
+        "description": "Opens an editor to modify the specified config file; either\n--system, --global, or repository (default)."
+      },
+      {
+        "type": "long",
+        "key": "includes",
+        "title": "--[no-]includes",
+        "description": "Respect include.* directives in config files when looking up\nvalues. Defaults to off when a specific file is given (e.g.,\nusing --file, --global, etc) and on when searching all\nconfig files."
+      }
+    ]
   },
   {
     "name": "git replace",

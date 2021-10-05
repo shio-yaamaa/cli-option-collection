@@ -90,7 +90,9 @@ const fetchSubcommand = async (
 };
 
 const findOptions = (document: Document): Option[] => {
-  const optionsHeading = document.querySelector('#_options');
+  // The ID for the options heading in "git config" page is different from other pages.
+  const optionsHeading =
+    document.querySelector('#_options') ?? document.querySelector('#OPTIONS');
   const section = optionsHeading?.nextElementSibling;
   if (!section) {
     return [];
