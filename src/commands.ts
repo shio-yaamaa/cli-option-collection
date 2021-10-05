@@ -7,6 +7,7 @@ import { fetchDocker } from './command-defs/docker';
 import { fetchFfmpeg } from './command-defs/ffmpeg';
 import { fetchFfplay } from './command-defs/ffplay';
 import { fetchFfprobe } from './command-defs/ffprobe';
+import { fetchGit } from './command-defs/git';
 import { fetchGo } from './command-defs/go';
 import { fetchJq } from './command-defs/jq';
 import { fetchMysql } from './command-defs/mysql';
@@ -32,6 +33,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['ffmpeg', fetchFfmpeg],
   ['ffplay', fetchFfplay],
   ['ffprobe', fetchFfprobe],
+  ['git', fetchGit],
   ['go', fetchGo],
   ['jq', fetchJq],
   ['mysql', fetchMysql],
