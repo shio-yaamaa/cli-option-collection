@@ -23,6 +23,7 @@ import { fetchSetlock } from './command-defs/setlock';
 import { fetchSoftlimit } from './command-defs/softlimit';
 import { fetchSshuttle } from './command-defs/sshuttle';
 import { fetchSvc } from './command-defs/svc';
+import { fetchTerraform } from './command-defs/terraform';
 import { fetchYarn } from './command-defs/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
@@ -49,5 +50,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['softlimit', fetchSoftlimit],
   ['sshuttle', fetchSshuttle],
   ['svc', fetchSvc],
+  ['terraform', fetchTerraform],
   ['yarn', fetchYarn],
 ]);
