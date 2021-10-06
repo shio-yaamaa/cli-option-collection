@@ -10,7 +10,7 @@ import {
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   mergeOptionTitles,
-  distinguishOptionKeyType,
+  makeOptionList,
 } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
@@ -75,7 +75,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimAfterColons,
   ]);
 
-  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+  return makeOptionList(optionStrings).map(({ type, key }) => ({
     type,
     key,
     title,

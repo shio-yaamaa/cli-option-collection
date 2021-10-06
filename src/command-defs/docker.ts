@@ -2,7 +2,7 @@ import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
-import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 
 // Alternative sources:
@@ -114,7 +114,7 @@ const fetchSubcommand = async (
       .filter((label): label is string => typeof label === 'string');
 
     options.push(
-      ...distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+      ...makeOptionList(optionStrings).map(({ type, key }) => ({
         type,
         key,
         title: normalizeSpacingAroundComma(title),

@@ -1,7 +1,7 @@
 import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import {
-  distinguishOptionKeyType,
+  makeOptionList,
   mergeOptionTitles,
 } from '../utils/forFetcher/optionString';
 import {
@@ -143,12 +143,10 @@ const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
   const transformedOptionStrings = transformOptionStrings(optionStrings, [
     trimOptionalElements,
   ]);
-  return distinguishOptionKeyType(transformedOptionStrings).map(
-    ({ type, key }) => ({
-      type,
-      key,
-      title,
-      description,
-    })
-  );
+  return makeOptionList(transformedOptionStrings).map(({ type, key }) => ({
+    type,
+    key,
+    title,
+    description,
+  }));
 };

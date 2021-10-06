@@ -1,6 +1,6 @@
 import { Fetcher, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
-import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
@@ -40,14 +40,12 @@ export const mysql: Fetcher<SourceDef> = async (
       // Options that begin with "--ssl" are consolidated as "--ssl*" in the command list.
       // In such cases, use the option label specified in the option table.
       options.push(
-        ...distinguishOptionKeyType([hashDescriptionPair.title]).map(
-          ({ type, key }) => ({
-            type,
-            key,
-            title: hashDescriptionPair.title,
-            description: hashDescriptionPair.description,
-          })
-        )
+        ...makeOptionList([hashDescriptionPair.title]).map(({ type, key }) => ({
+          type,
+          key,
+          title: hashDescriptionPair.title,
+          description: hashDescriptionPair.description,
+        }))
       );
     }
   }
@@ -125,7 +123,7 @@ const findOptionsCorrespondingToOptionTableItem = (
     return [];
   }
 
-  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+  return makeOptionList(optionStrings).map(({ type, key }) => ({
     type,
     key,
     title: normalizeSpacingAroundComma(title),

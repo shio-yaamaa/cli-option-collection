@@ -1,10 +1,10 @@
 import { OptionType } from '../../types';
-import { distinguishOptionKeyType } from './optionString';
+import { makeOptionList } from './optionString';
 
-describe('distinguishOptionKeyType', () => {
+describe('makeOptionList', () => {
   test('test', () => {
     const optionStrings = ['-a', '-b', '--long', 'invalid'];
-    const optionKeyTypes = distinguishOptionKeyType(optionStrings);
+    const optionKeyTypes = makeOptionList(optionStrings);
     expect(optionKeyTypes).toStrictEqual([
       {
         type: OptionType.SHORT,

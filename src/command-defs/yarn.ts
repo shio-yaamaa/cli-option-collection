@@ -11,7 +11,7 @@ import {
   transformOptionStrings,
   trimOptionArguments,
 } from '../utils/forFetcher/transformOptionString';
-import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 
 // Yarn 2, not Yarn 1
 
@@ -79,7 +79,7 @@ const fetchSubcommand = async (
       [splitByComma, trimOptionArguments]
     );
     options.push(
-      ...distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+      ...makeOptionList(optionStrings).map(({ type, key }) => ({
         type,
         key,
         title,

@@ -9,7 +9,7 @@ import {
 } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
-  distinguishOptionKeyType,
+  makeOptionList,
   mergeOptionTitles,
 } from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
@@ -114,7 +114,7 @@ const findOptions = (document: Document): Option[] => {
       trimNonDelimitedOptionValues,
     ]);
     options.push(
-      ...distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+      ...makeOptionList(optionStrings).map(({ type, key }) => ({
         type,
         key,
         title,

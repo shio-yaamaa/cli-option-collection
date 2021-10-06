@@ -8,7 +8,7 @@ const SINGLE_DASH_STYLE_OPTION_PATTERN = /^-([A-Za-z0-9][A-Za-z0-9-]*)$/;
 // It ignores empty option names.
 // Example: ["--"] -> []
 // It cannot handle options with values. Do not pass options like "-dcharset" or "--option=value"
-export const distinguishOptionKeyType = (
+export const makeOptionList = (
   optionStrings: string[]
 ): Pick<Option, 'type' | 'key'>[] => {
   const optionKeyTypes: Pick<Option, 'type' | 'key'>[] = [];

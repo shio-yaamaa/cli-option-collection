@@ -1,7 +1,7 @@
 import { Fetcher, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
   trimOptionArguments,
@@ -51,7 +51,7 @@ const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
   const title = listItemText.slice(0, colonIndex).trim();
   const description = listItemText.slice(colonIndex + 1).trim();
   const optionStrings = transformOptionStrings([title], [trimOptionArguments]);
-  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+  return makeOptionList(optionStrings).map(({ type, key }) => ({
     type,
     key,
     title,

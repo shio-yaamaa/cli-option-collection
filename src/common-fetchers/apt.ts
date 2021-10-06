@@ -5,7 +5,7 @@ import {
   IndentedListItem,
 } from '../utils/forFetcher/indentedList';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import {
   splitByComma,
   transformOptionStrings,
@@ -75,7 +75,7 @@ const listItemToOptions = ({
     trimOptionArguments,
   ]);
 
-  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+  return makeOptionList(optionStrings).map(({ type, key }) => ({
     type,
     key,
     title: titles.join(' '),

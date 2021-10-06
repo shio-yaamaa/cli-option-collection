@@ -5,7 +5,7 @@ import {
   findDListEntries,
 } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { distinguishOptionKeyType } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import {
   splitByComma,
   transformOptionStrings,
@@ -46,7 +46,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     [title],
     [splitByComma, trimOptionArguments, trimOptionValues]
   );
-  return distinguishOptionKeyType(optionStrings).map(({ type, key }) => ({
+  return makeOptionList(optionStrings).map(({ type, key }) => ({
     type,
     key,
     title,
