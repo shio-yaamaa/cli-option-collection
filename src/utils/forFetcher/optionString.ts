@@ -1,6 +1,6 @@
 import { Option, OptionType } from '../../types';
 
-const SHORT_OPTION_PATTERN = /^-([A-Za-z0-9])$/;
+const SHORT_OPTION_PATTERN = /^-([A-Za-z0-9?])$/;
 const LONG_OPTION_PATTERN = /^--([A-Za-z0-9][A-Za-z0-9-_]*)$/;
 const SINGLE_DASH_STYLE_OPTION_PATTERN = /^-([A-Za-z0-9][A-Za-z0-9-_]*)$/;
 

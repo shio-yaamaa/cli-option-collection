@@ -99,6 +99,12 @@
         "description": "Display help message and exit"
       },
       {
+        "type": "short",
+        "key": "?",
+        "title": "--help, -?",
+        "description": "Display help message and exit"
+      },
+      {
         "type": "long",
         "key": "host",
         "title": "--host=host_name, -h host_name",

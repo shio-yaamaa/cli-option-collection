@@ -351,6 +351,12 @@
         "description": "Display help message and exit"
       },
       {
+        "type": "short",
+        "key": "?",
+        "title": "--help, -?",
+        "description": "Display help message and exit"
+      },
+      {
         "type": "long",
         "key": "hex-blob",
         "title": "--hex-blob",
