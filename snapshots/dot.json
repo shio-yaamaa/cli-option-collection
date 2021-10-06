@@ -1,0 +1,73 @@
+[
+  {
+    "name": "dot",
+    "options": [
+      {
+        "type": "short",
+        "key": "G",
+        "title": "-Gname=value",
+        "description": "Set a graph attribute."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-Nname=value",
+        "description": "Set a default node attribute."
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-Ename=value",
+        "description": "Set a default edge attribute."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-Tformat",
+        "description": "Set output language to one of the supported formats. By default, attributed dot is produced."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V",
+        "description": "Emit version information and exit."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-llibfile",
+        "description": "User-supplied, device-dependent library files. Multiple libraries may be given. These names are passed to the code generator at the beginning of output."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n[num]",
+        "description": "Sets no-op flag in neato. If set, neato assumes nodes have already been positioned and have a pos attribute giving this position. It then just computes the edge layouts and emits the graph in the appropriate format. If num is supplied and > 1, neato checks for previously positioned edges, with control points provided in the pos attribute. It uses these if given; otherwise, it computes the edge layout."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-ooutfile",
+        "description": "Write output to file outfile. By default, output goes to stdout."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s[scale]",
+        "description": "Set input scale to scale. If this value is omitted, 72.0 is used. This number is used to convert the point coordinate units used in the pos attribute into inches. For example, dot -Tdot produces pos values in points, with 72 per inch. Thus, to use this output as input to neato -n, one needs -s (equivalently, -s72)."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Verbose mode"
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "In neato, on input, prune isolated nodes and peninsulas. This removes uninteresting graph structure and produces a less cluttered drawing."
+      }
+    ]
+  }
+]
