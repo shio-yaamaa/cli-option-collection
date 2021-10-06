@@ -10,6 +10,7 @@ import {
   trimOptionArguments,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
 // - https://github.com/hashicorp/terraform/blob/main/website/docs/cli/commands/apply.html.md
@@ -66,9 +67,7 @@ const fetchSubcommand = async (
 ): Promise<Command | null> => {
   const document = await fetchDocumentFromURL(location.url);
   const lis = Array.from(document.querySelectorAll('#inner > ul > li'));
-  const options = ([] as Option[]).concat(
-    ...lis.map((li) => listItemToOptions(li))
-  );
+  const options = mergeLists(lis.map((li) => listItemToOptions(li)));
 
   return {
     name: location.command,

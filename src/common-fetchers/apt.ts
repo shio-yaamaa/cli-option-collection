@@ -11,6 +11,7 @@ import {
   transformOptionStrings,
   trimOptionArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 export interface SourceDef {
   commandName: string;
@@ -57,9 +58,7 @@ const listToOptions = (list: Element): Option[] => {
     return [];
   }
   const listItems = findIndentedListItems(listText, 7, 11);
-  return ([] as Option[]).concat(
-    ...listItems.map((item) => listItemToOptions(item))
-  );
+  return mergeLists(listItems.map((item) => listItemToOptions(item)));
 };
 
 const listItemToOptions = ({

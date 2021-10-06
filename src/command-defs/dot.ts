@@ -15,6 +15,7 @@ import {
   trimOptionalElements,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 // Graphviz
 
@@ -44,8 +45,8 @@ export const fetchDot: FetchFunction = async (): Promise<Command[]> => {
     0,
     5
   );
-  const options = ([] as Option[]).concat(
-    ...indentedListItems.map((listItem) => indentedListItemToOptions(listItem))
+  const options = mergeLists(
+    indentedListItems.map((listItem) => indentedListItemToOptions(listItem))
   );
 
   return [

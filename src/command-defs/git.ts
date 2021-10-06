@@ -20,7 +20,7 @@ import {
   trimOptionalElements,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
-import { uniqueBy } from '../utils/utils';
+import { mergeLists, uniqueBy } from '../utils/utils';
 
 // Alternative sources:
 // - https://github.com/git/git/blob/master/Documentation/git.txt
@@ -98,8 +98,8 @@ const findOptions = (document: Document): Option[] => {
     return [];
   }
   const lists = Array.from(section.querySelectorAll('dl'));
-  const dlistEntries = ([] as DListEntry[]).concat(
-    ...lists.map((list) => findDListEntries(list, false))
+  const dlistEntries = mergeLists(
+    lists.map((list) => findDListEntries(list, false))
   );
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {

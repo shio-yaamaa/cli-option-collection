@@ -14,6 +14,7 @@ import {
   trimOptionalElements,
   trimOptionArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 // BUG: "no" prefix is not considered.
 // NOTE: ffmpeg uses single dash for both single-letter and multiple-letter options,
@@ -29,11 +30,9 @@ export const ffmpeg: Fetcher<SourceDef> = async (
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(sourceDef.url);
   const dlists = findTopLevelLists(document);
-  const dlistEntries = ([] as DListEntry[]).concat(
-    ...dlists.map((dl) => findDListEntries(dl))
-  );
-  const options = ([] as Option[]).concat(
-    ...dlistEntries.map((entry) => dlistEntryToOptions(entry))
+  const dlistEntries = mergeLists(dlists.map((dl) => findDListEntries(dl)));
+  const options = mergeLists(
+    dlistEntries.map((entry) => dlistEntryToOptions(entry))
   );
 
   return [

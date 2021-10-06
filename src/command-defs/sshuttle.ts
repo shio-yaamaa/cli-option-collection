@@ -9,17 +9,18 @@ import {
   trimOptionArguments,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://sshuttle.readthedocs.io/en/stable/manpage.html';
 
 export const fetchSshuttle: FetchFunction = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const dlists = findDLists(document);
-  const dlistEntries = ([] as DListEntry[]).concat(
-    ...dlists.map((dlist) => findDListEntries(dlist))
+  const dlistEntries = mergeLists(
+    dlists.map((dlist) => findDListEntries(dlist))
   );
-  const options = ([] as Option[]).concat(
-    ...dlistEntries.map((dlistEntry) => dlistEntryToOptions(dlistEntry))
+  const options = mergeLists(
+    dlistEntries.map((dlistEntry) => dlistEntryToOptions(dlistEntry))
   );
 
   return [

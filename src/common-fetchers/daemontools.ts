@@ -6,6 +6,7 @@ import {
   transformOptionStrings,
   trimOptionArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 export interface SourceDef {
   commandName: string;
@@ -17,9 +18,7 @@ export const daemontools: Fetcher<SourceDef> = async (
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(sourceDef.url);
   const lists = findTopLevelLists(document);
-  const options = ([] as Option[]).concat(
-    ...lists.map((list) => listToOptions(list))
-  );
+  const options = mergeLists(lists.map((list) => listToOptions(list)));
 
   return [
     {
@@ -34,7 +33,7 @@ const findTopLevelLists = (document: Document): HTMLUListElement[] =>
 
 const listToOptions = (list: HTMLUListElement): Option[] => {
   const lis = Array.from(list.querySelectorAll('li'));
-  return ([] as Option[]).concat(...lis.map((li) => listItemToOptions(li)));
+  return mergeLists(lis.map((li) => listItemToOptions(li)));
 };
 
 const listItemToOptions = (listItem: HTMLLIElement): Option[] => {

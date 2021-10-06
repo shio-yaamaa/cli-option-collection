@@ -20,6 +20,7 @@ import {
   trimOptionValues,
   trimNonDelimitedOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
 // - https://github.com/Perl/perl5/blob/blead/pod/perlrun.pod
@@ -37,8 +38,8 @@ export const fetchPerl: FetchFunction = async (): Promise<Command[]> => {
   }
 
   const dlistEntries = findDListEntries(optionDl, true);
-  const options = ([] as Option[]).concat(
-    ...dlistEntries.map((entry) => dlistEntryToOptions(entry))
+  const options = mergeLists(
+    dlistEntries.map((entry) => dlistEntryToOptions(entry))
   );
 
   return [

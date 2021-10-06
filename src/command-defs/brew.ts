@@ -12,6 +12,7 @@ import {
   findHeadingContentsPairs,
   HeadingContentsPair,
 } from '../utils/forFetcher/utils';
+import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
 // - https://github.com/Homebrew/brew/blob/master/docs/Manpage.md
@@ -43,9 +44,7 @@ export const fetchBrew: FetchFunction = async (): Promise<Command[]> => {
     commands.push(
       ...commandNames.map((commandName) => ({
         name: commandName,
-        options: ([] as Option[]).concat(
-          ...lists.map((list) => listToOptions(list))
-        ),
+        options: mergeLists(lists.map((list) => listToOptions(list))),
       }))
     );
   }
@@ -110,7 +109,7 @@ const listToOptions = (list: HTMLUListElement): Option[] => {
   const lis = Array.from(list.children).filter(
     (child): child is HTMLLIElement => child.tagName.toLowerCase() === 'li'
   );
-  return ([] as Option[]).concat(...lis.map((li) => listItemToOptions(li)));
+  return mergeLists(lis.map((li) => listItemToOptions(li)));
 };
 
 const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
