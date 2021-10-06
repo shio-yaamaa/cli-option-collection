@@ -6,7 +6,7 @@ import {
   findAnchorsWithPattern,
 } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { distinguishOptionKeyTypeForSingleDashStyle } from '../utils/forFetcher/optionString';
+import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
   trimOptionArguments,
@@ -106,7 +106,7 @@ const listItemToOptions = (listItem: Element): Option[] => {
   );
   return [
     {
-      ...distinguishOptionKeyTypeForSingleDashStyle(optionStrings)[0],
+      ...makeOptionListForSingleDashStyle(optionStrings)[0],
       title,
       description,
     },

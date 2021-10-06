@@ -35,7 +35,8 @@ export const makeOptionList = (
   return optionKeyTypes;
 };
 
-export const distinguishOptionKeyTypeForSingleDashStyle = (
+// The same as makeOptionList, but for single-dash style commands like go.
+export const makeOptionListForSingleDashStyle = (
   optionStrings: string[]
 ): Pick<Option, 'type' | 'key'>[] => {
   const optionKeyTypes: Pick<Option, 'type' | 'key'>[] = [];
