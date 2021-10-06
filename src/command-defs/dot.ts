@@ -39,7 +39,6 @@ export const fetchDot: FetchFunction = async (): Promise<Command[]> => {
     headingLineIndex,
     optionSectionEndLineIndex
   );
-  console.log(optionSectionLines);
   const indentedListItems = findIndentedListItems(
     optionSectionLines.join('\n'),
     0,
