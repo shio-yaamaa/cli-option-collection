@@ -14,3 +14,7 @@ export const uniqueBy = <ItemType, KeyType>(
   }
   return uniqueItems;
 };
+
+export const mergeLists = <T>(lists: T[][]): T[] => {
+  return ([] as T[]).concat(...lists);
+};
