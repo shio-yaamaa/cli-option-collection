@@ -4,6 +4,7 @@ import { fetchAptCache } from './command-defs/apt-cache';
 import { fetchAptGet } from './command-defs/apt-get';
 import { fetchBrew } from './command-defs/brew';
 import { fetchDocker } from './command-defs/docker';
+import { fetchDot } from './command-defs/dot';
 import { fetchFfmpeg } from './command-defs/ffmpeg';
 import { fetchFfplay } from './command-defs/ffplay';
 import { fetchFfprobe } from './command-defs/ffprobe';
@@ -31,6 +32,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['apt-get', fetchAptGet],
   ['brew', fetchBrew],
   ['docker', fetchDocker],
+  ['dot', fetchDot],
   ['ffmpeg', fetchFfmpeg],
   ['ffplay', fetchFfplay],
   ['ffprobe', fetchFfprobe],
