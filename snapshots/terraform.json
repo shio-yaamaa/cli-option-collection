@@ -1,0 +1,746 @@
+[
+  {
+    "name": "terraform apply",
+    "options": [
+      {
+        "type": "long",
+        "key": "auto-approve",
+        "title": "-auto-approve",
+        "description": "Skips interactive approval of plan before applying. This\noption is ignored when you pass a previously-saved plan file, because\nTerraform considers you passing the plan file as the approval and so\nwill never prompt in that case."
+      },
+      {
+        "type": "long",
+        "key": "compact-warnings",
+        "title": "-compact-warnings",
+        "description": "Shows any warning messages in a compact form which\nincludes only the summary messages, unless the warnings are accompanied by\nat least one error and thus the warning text might be useful context for\nthe errors."
+      },
+      {
+        "type": "long",
+        "key": "input",
+        "title": "-input=false",
+        "description": "Disables all of Terraform's interactive prompts. Note that\nthis also prevents Terraform from prompting for interactive approval of a\nplan, so Terraform will conservatively assume that you do not wish to\napply the plan, causing the operation to fail. If you wish to run Terraform\nin a non-interactive context, see\nRunning Terraform in Automation for some\ndifferent approaches."
+      },
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "Enables the machine readable JSON UI output.\nThis implies -input=false, so the configuration must have no unassigned\nvariable values to continue. To enable this flag, you must also either enable\nthe -auto-approve flag or specify a previously-saved plan."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Unless locking is disabled with -lock=false,\ninstructs Terraform to retry acquiring a lock for a period of time before\nreturning an error. The duration syntax is a number followed by a time\nunit letter, such as \"3s\" for three seconds."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "Disables terminal formatting sequences in the output. Use this\nif you are running Terraform in a context where its output will be\nrendered by a system that cannot interpret terminal formatting."
+      },
+      {
+        "type": "long",
+        "key": "parallelism",
+        "title": "-parallelism=n",
+        "description": "Limit the number of concurrent operation as Terraform\nwalks the graph. Defaults to\n10."
+      }
+    ]
+  },
+  {
+    "name": "terraform console",
+    "options": []
+  },
+  {
+    "name": "terraform destroy",
+    "options": []
+  },
+  {
+    "name": "terraform env",
+    "options": []
+  },
+  {
+    "name": "terraform fmt",
+    "options": [
+      {
+        "type": "long",
+        "key": "list",
+        "title": "-list=false",
+        "description": "Don't list the files containing formatting inconsistencies."
+      },
+      {
+        "type": "long",
+        "key": "write",
+        "title": "-write=false",
+        "description": "Don't overwrite the input files. (This is implied by -check or when the input is STDIN.)"
+      },
+      {
+        "type": "long",
+        "key": "diff",
+        "title": "-diff",
+        "description": "Display diffs of formatting changes"
+      },
+      {
+        "type": "long",
+        "key": "check",
+        "title": "-check",
+        "description": "Check if the input is formatted. Exit status will be 0 if\nall input is properly formatted and non-zero otherwise."
+      },
+      {
+        "type": "long",
+        "key": "recursive",
+        "title": "-recursive",
+        "description": "Also process files in subdirectories. By default, only the given directory (or current directory) is processed."
+      }
+    ]
+  },
+  {
+    "name": "terraform force-unlock",
+    "options": [
+      {
+        "type": "long",
+        "key": "force",
+        "title": "-force",
+        "description": "Don't ask for input for unlock confirmation."
+      }
+    ]
+  },
+  {
+    "name": "terraform get",
+    "options": [
+      {
+        "type": "long",
+        "key": "update",
+        "title": "-update",
+        "description": "If specified, modules that are already downloaded will be\nchecked for updates and the updates will be downloaded if present."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "Disable text coloring in the output."
+      }
+    ]
+  },
+  {
+    "name": "terraform graph",
+    "options": [
+      {
+        "type": "long",
+        "key": "plan",
+        "title": "-plan=tfplan",
+        "description": "Render graph using the specified plan file instead of the\n                  configuration in the current directory."
+      },
+      {
+        "type": "long",
+        "key": "draw-cycles",
+        "title": "-draw-cycles",
+        "description": "Highlight any cycles in the graph with colored edges.\n                  This helps when diagnosing cycle errors."
+      },
+      {
+        "type": "long",
+        "key": "type",
+        "title": "-type=plan",
+        "description": "Type of graph to output. Can be: plan, plan-destroy, apply,\n                  validate, input, refresh."
+      },
+      {
+        "type": "long",
+        "key": "module-depth",
+        "title": "-module-depth=n",
+        "description": "(deprecated) In prior versions of Terraform, specified the\n                  depth of modules to show in the output."
+      }
+    ]
+  },
+  {
+    "name": "terraform import",
+    "options": [
+      {
+        "type": "long",
+        "key": "config",
+        "title": "-config=path",
+        "description": "Path to directory of Terraform configuration files that\nconfigure the provider for import. This defaults to your working directory.\nIf this directory contains no Terraform configuration files, the provider\nmust be configured via manual input or environmental variables."
+      },
+      {
+        "type": "long",
+        "key": "input",
+        "title": "-input=true",
+        "description": "Whether to ask for input for provider configuration."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=0s",
+        "description": "Duration to retry a state lock."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "If specified, output won't contain any color."
+      },
+      {
+        "type": "long",
+        "key": "parallelism",
+        "title": "-parallelism=n",
+        "description": "Limit the number of concurrent operation as Terraform\nwalks the graph. Defaults\nto 10."
+      },
+      {
+        "type": "long",
+        "key": "provider",
+        "title": "-provider=provider",
+        "description": "Deprecated Override the provider configuration to\nuse when importing the object. By default, Terraform uses the provider specified\nin the configuration for the target resource, and that is the best behavior in most cases."
+      },
+      {
+        "type": "long",
+        "key": "var",
+        "title": "-var 'foo=bar'",
+        "description": "Set a variable in the Terraform configuration. This flag\ncan be set multiple times. Variable values are interpreted as\nliteral expressions in the\nTerraform language, so list and map values can be specified via this flag.\nThis is only useful with the -config flag."
+      },
+      {
+        "type": "long",
+        "key": "var-file",
+        "title": "-var-file=foo",
+        "description": "Set variables in the Terraform configuration from\na variable file. If\na terraform.tfvars or any .auto.tfvars files are present in the current\ndirectory, they will be automatically loaded. terraform.tfvars is loaded\nfirst and the .auto.tfvars files after in alphabetical order. Any files\nspecified by -var-file override any values set automatically from files in\nthe working directory. This flag can be used multiple times. This is only\nuseful with the -config flag."
+      }
+    ]
+  },
+  {
+    "name": "terraform init",
+    "options": [
+      {
+        "type": "long",
+        "key": "input",
+        "title": "-input=true",
+        "description": "Ask for input if necessary. If false, will error if\ninput was required."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Disable locking of state files during state-related operations."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=<duration>",
+        "description": "Override the time Terraform will wait to acquire\na state lock. The default is 0s (zero seconds), which causes immediate\nfailure if the lock is already held by another process."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "Disable color codes in the command output."
+      },
+      {
+        "type": "long",
+        "key": "upgrade",
+        "title": "-upgrade",
+        "description": "Opt to upgrade modules and plugins as part of their respective\ninstallation steps. See the sections below for more details."
+      },
+      {
+        "type": "long",
+        "key": "get-plugins",
+        "title": "-get-plugins=false",
+        "description": "Skip plugin installation.\n\nNote: Since Terraform 0.13, this option has been superseded by the\nprovider_installation and\nplugin_cache_dir settings.\nIt should not be used in Terraform versions 0.13+, and this option\nwas removed in Terraform 0.15."
+      },
+      {
+        "type": "long",
+        "key": "plugin-dir",
+        "title": "-plugin-dir=PATH",
+        "description": "Force plugin installation to read plugins only from\nthe specified directory, as if it had been configured as a filesystem_mirror\nin the CLI configuration. If you intend to routinely use a particular\nfilesystem mirror then we recommend\nconfiguring Terraform's installation methods globally.\nYou can use -plugin-dir as a one-time override for exceptional situations,\nsuch as if you are testing a local build of a provider plugin you are\ncurrently developing."
+      },
+      {
+        "type": "long",
+        "key": "lockfile",
+        "title": "-lockfile=MODE",
+        "description": "Set a dependency lockfile mode."
+      }
+    ]
+  },
+  {
+    "name": "terraform login",
+    "options": []
+  },
+  {
+    "name": "terraform logout",
+    "options": []
+  },
+  {
+    "name": "terraform output",
+    "options": [
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "If specified, the outputs are formatted as a JSON object, with\na key per output. If NAME is specified, only the output specified will be\nreturned. This can be piped into tools such as jq for further processing."
+      },
+      {
+        "type": "long",
+        "key": "raw",
+        "title": "-raw",
+        "description": "If specified, Terraform will convert the specified output value to a\nstring and print that string directly to the output, without any special\nformatting. This can be convenient when working with shell scripts, but\nit only supports string, number, and boolean values. Use -json instead\nfor processing complex data types."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "If specified, output won't contain any color."
+      },
+      {
+        "type": "long",
+        "key": "state",
+        "title": "-state=path",
+        "description": "Path to the state file. Defaults to \"terraform.tfstate\".\nIgnored when remote state is used."
+      }
+    ]
+  },
+  {
+    "name": "terraform plan",
+    "options": [
+      {
+        "type": "long",
+        "key": "refresh",
+        "title": "-refresh=false",
+        "description": "Disables the default behavior of synchronizing the\nTerraform state with remote objects before checking for configuration changes.\nThis option can potentially make the planning operation faster by reducing\nthe number of remote API requests, but it comes at the expense of having\nTerraform not take into account any changes that might've happened outside\nof Terraform, and thus the resulting plan may not be complete or correct.\nThis option is not available in the \"refresh only\" planning mode, because\nit would effectively disable the entirety of the planning operation in that\ncase."
+      },
+      {
+        "type": "long",
+        "key": "replace",
+        "title": "-replace=ADDRESS",
+        "description": "Instructs Terraform to plan to replace the single\nresource instance with the given address. If the given instance would\nnormally have caused only an \"update\" action, or no action at all, then\nTerraform will choose a \"replace\" action instead.\nYou can use this option if you have learned that a particular remote object\nhas become degraded in some way. If you are using immutable infrastructure\npatterns then you may wish to respond to that by replacing the\nmalfunctioning object with a new object that has the same configuration.\nThis option is allowed only in the normal planning mode, so this option\nis incompatible with the -destroy option.\nThe -replace=... option is available only from Terraform v0.15.2 onwards.\nFor earlier versions, you can achieve a similar effect (with some caveats)\nusing terraform taint."
+      },
+      {
+        "type": "long",
+        "key": "target",
+        "title": "-target=ADDRESS",
+        "description": "Instructs Terraform to focus its planning efforts only\non resource instances which match the given address and on any objects that\nthose instances depend on.\nThis command is for exceptional use only. See\nResource Targeting\nbelow for more information."
+      },
+      {
+        "type": "long",
+        "key": "var",
+        "title": "-var 'NAME=VALUE'",
+        "description": "Sets a value for a single\ninput variable declared in the\nroot module of the configuration. Use this option multiple times to set\nmore than one variable. For more information see\nInput Variables on the Command Line,\nbelow."
+      },
+      {
+        "type": "long",
+        "key": "var-file",
+        "title": "-var-file=FILENAME",
+        "description": "Sets values for potentially many\ninput variables declared in the\nroot module of the configuration, using definitions from a\n\"tfvars\" file.\nUse this option multiple times to include values from more than one file."
+      },
+      {
+        "type": "long",
+        "key": "compact-warnings",
+        "title": "-compact-warnings",
+        "description": "Shows any warning messages in a compact form which\nincludes only the summary messages, unless the warnings are accompanied by\nat least one error and thus the warning text might be useful context for\nthe errors."
+      },
+      {
+        "type": "long",
+        "key": "detailed-exitcode",
+        "title": "-detailed-exitcode",
+        "description": "Returns a detailed exit code when the command exits.\nWhen provided, this argument changes the exit codes and their meanings to\nprovide more granular information about what the resulting plan contains:\n\n\n0 = Succeeded with empty diff (no changes)\n\n1 = Error\n\n2 = Succeeded with non-empty diff (changes present)"
+      },
+      {
+        "type": "long",
+        "key": "input",
+        "title": "-input=false",
+        "description": "Disables Terraform's default behavior of prompting for\ninput for root module input variables that have not otherwise been assigned\na value. This option is particular useful when running Terraform in\nnon-interactive automation systems."
+      },
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "Enables the machine readable JSON UI output.\nThis implies -input=false, so the configuration must have no unassigned\nvariable values to continue."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Unless locking is disabled with -lock=false,\ninstructs Terraform to retry acquiring a lock for a period of time before\nreturning an error. The duration syntax is a number followed by a time\nunit letter, such as \"3s\" for three seconds."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "Disables terminal formatting sequences in the output. Use this\nif you are running Terraform in a context where its output will be\nrendered by a system that cannot interpret terminal formatting."
+      },
+      {
+        "type": "long",
+        "key": "out",
+        "title": "-out=FILENAME",
+        "description": "Writes the generated plan to the given filename in an\nopaque file format that you can later pass to terraform apply to execute\nthe planned changes, and to some other Terraform commands that can work with\nsaved plan files.\nTerraform will allow any filename for the plan file, but a typical\nconvention is to name it tfplan. Do not name the file with a suffix\nthat Terraform recognizes as another file format; if you use a .tf suffix\nthen Terraform will try to interpret the file as a configuration source\nfile, which will then cause syntax errors for subsequent commands.\nThe generated file is not in any standard format intended for consumption\nby other software, but the file does contain your full configuration,\nall of the values associated with planned changes, and all of the plan\noptions including the input variables. If your plan includes any sort of\nsensitive data, even if obscured in Terraform's terminal output, it will\nbe saved in cleartext in the plan file. You should therefore treat any\nsaved plan files as potentially-sensitive artifacts."
+      },
+      {
+        "type": "long",
+        "key": "parallelism",
+        "title": "-parallelism=n",
+        "description": "Limit the number of concurrent operation as Terraform\nwalks the graph. Defaults\nto 10."
+      }
+    ]
+  },
+  {
+    "name": "terraform providers",
+    "options": []
+  },
+  {
+    "name": "terraform providers lock",
+    "options": [
+      {
+        "type": "long",
+        "key": "fs-mirror",
+        "title": "-fs-mirror=PATH",
+        "description": "Direct Terraform to look for provider packages in the\ngiven local filesystem mirror directory, instead of in upstream registries.\nThe given directory must use the usual filesystem mirror directory layout."
+      },
+      {
+        "type": "long",
+        "key": "net-mirror",
+        "title": "-net-mirror=URL",
+        "description": "Direct Terraform to look for provider packages in the\ngiven network mirror service, instead of in upstream registries. The\ngiven URL must implement\nthe Terraform provider network mirror protocol."
+      },
+      {
+        "type": "long",
+        "key": "platform",
+        "title": "-platform=OS_ARCH",
+        "description": "Specify a platform you intend to use to work with this\nTerraform configuration. Terraform will ensure that the providers are all\navailable for the given platform and will save enough package checksums in\nthe lock file to support at least the specified platforms.\nUse this option multiple times to include checksums for multiple target\nsystems.\nTarget platform names consist of an operating system and a CPU\narchitecture. For example, linux_amd64 selects the Linux operating system\nrunning on an AMD64 or x86_64 CPU.\nThere is more detail on this option in the following section."
+      }
+    ]
+  },
+  {
+    "name": "terraform providers mirror",
+    "options": [
+      {
+        "type": "long",
+        "key": "platform",
+        "title": "-platform=OS_ARCH",
+        "description": "Choose which target platform to build a mirror for.\nBy default Terraform will obtain plugin packages suitable for the platform\nwhere you run this command. Use this flag multiple times to include packages\nfor multiple target systems."
+      }
+    ]
+  },
+  {
+    "name": "terraform providers schema",
+    "options": [
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "Displays the schemas in a machine-readable, JSON format."
+      }
+    ]
+  },
+  {
+    "name": "terraform push",
+    "options": []
+  },
+  {
+    "name": "terraform refresh",
+    "options": []
+  },
+  {
+    "name": "terraform show",
+    "options": [
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "Disables output with coloring"
+      },
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "Displays machine-readable output from a state or plan file"
+      }
+    ]
+  },
+  {
+    "name": "terraform state list",
+    "options": [
+      {
+        "type": "long",
+        "key": "state",
+        "title": "-state=path",
+        "description": "Path to the state file. Defaults to \"terraform.tfstate\".\nIgnored when remote state is used."
+      },
+      {
+        "type": "long",
+        "key": "id",
+        "title": "-id=id",
+        "description": "ID of resources to show. Ignored when unset."
+      }
+    ]
+  },
+  {
+    "name": "terraform state mv",
+    "options": [
+      {
+        "type": "long",
+        "key": "dry-run",
+        "title": "-dry-run",
+        "description": "Report all of the resource instances that match the given\naddress without actually \"forgetting\" any of them."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Unless locking is disabled with -lock=false,\ninstructs Terraform to retry acquiring a lock for a period of time before\nreturning an error. The duration syntax is a number followed by a time\nunit letter, such as \"3s\" for three seconds."
+      }
+    ]
+  },
+  {
+    "name": "terraform state pull",
+    "options": []
+  },
+  {
+    "name": "terraform state push",
+    "options": []
+  },
+  {
+    "name": "terraform state replace-provider",
+    "options": [
+      {
+        "type": "long",
+        "key": "auto-approve",
+        "title": "-auto-approve",
+        "description": "Skip interactive approval."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=0s",
+        "description": "Duration to retry a state lock."
+      }
+    ]
+  },
+  {
+    "name": "terraform state rm",
+    "options": [
+      {
+        "type": "long",
+        "key": "dry-run",
+        "title": "-dry-run",
+        "description": "Report all of the resource instances that match the given\naddress without actually \"forgetting\" any of them."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Unless locking is disabled with -lock=false,\ninstructs Terraform to retry acquiring a lock for a period of time before\nreturning an error. The duration syntax is a number followed by a time\nunit letter, such as \"3s\" for three seconds."
+      }
+    ]
+  },
+  {
+    "name": "terraform state show",
+    "options": [
+      {
+        "type": "long",
+        "key": "state",
+        "title": "-state=path",
+        "description": "Path to the state file. Defaults to \"terraform.tfstate\".\nIgnored when remote state is used."
+      }
+    ]
+  },
+  {
+    "name": "terraform taint",
+    "options": [
+      {
+        "type": "long",
+        "key": "allow-missing",
+        "title": "-allow-missing",
+        "description": "If specified, the command will succeed (exit code 0)\neven if the resource is missing. The command might still return an error\nfor other situations, such as if there is a problem reading or writing\nthe state."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Disables Terraform's default behavior of attempting to take\na read/write lock on the state for the duration of the operation."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Unless locking is disabled with -lock=false,\ninstructs Terraform to retry acquiring a lock for a period of time before\nreturning an error. The duration syntax is a number followed by a time\nunit letter, such as \"3s\" for three seconds."
+      }
+    ]
+  },
+  {
+    "name": "terraform test",
+    "options": []
+  },
+  {
+    "name": "terraform untaint",
+    "options": [
+      {
+        "type": "long",
+        "key": "allow-missing",
+        "title": "-allow-missing",
+        "description": "If specified, the command will succeed (exit code 0)\neven if the resource is missing. The command might still return an error\nfor other situations, such as if there is a problem reading or writing\nthe state."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Unless locking is disabled with -lock=false,\ninstructs Terraform to retry acquiring a lock for a period of time before\nreturning an error. The duration syntax is a number followed by a time\nunit letter, such as \"3s\" for three seconds."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "Disables terminal formatting sequences in the output. Use this\nif you are running Terraform in a context where its output will be\nrendered by a system that cannot interpret terminal formatting."
+      }
+    ]
+  },
+  {
+    "name": "terraform validate",
+    "options": [
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "Produce output in a machine-readable JSON format, suitable for\nuse in text editor integrations and other automated systems. Always disables\ncolor."
+      },
+      {
+        "type": "long",
+        "key": "no-color",
+        "title": "-no-color",
+        "description": "If specified, output won't contain any color."
+      }
+    ]
+  },
+  {
+    "name": "terraform version",
+    "options": [
+      {
+        "type": "long",
+        "key": "json",
+        "title": "-json",
+        "description": "If specified, the version information is formatted as a JSON object,\nand no upgrade or security information is included."
+      }
+    ]
+  },
+  {
+    "name": "terraform workspace list",
+    "options": []
+  },
+  {
+    "name": "terraform workspace select",
+    "options": []
+  },
+  {
+    "name": "terraform workspace new",
+    "options": [
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Duration to retry a state lock. Default 0s."
+      },
+      {
+        "type": "long",
+        "key": "state",
+        "title": "-state=path",
+        "description": "Path to an existing state file to initialize the state of this environment."
+      }
+    ]
+  },
+  {
+    "name": "terraform workspace delete",
+    "options": [
+      {
+        "type": "long",
+        "key": "force",
+        "title": "-force",
+        "description": "Delete the workspace even if its state is not empty. Defaults to false."
+      },
+      {
+        "type": "long",
+        "key": "lock",
+        "title": "-lock=false",
+        "description": "Don't hold a state lock during the operation. This is\ndangerous if others might concurrently run commands against the same\nworkspace."
+      },
+      {
+        "type": "long",
+        "key": "lock-timeout",
+        "title": "-lock-timeout=DURATION",
+        "description": "Duration to retry a state lock. Default 0s."
+      }
+    ]
+  },
+  {
+    "name": "terraform workspace show",
+    "options": []
+  },
+  {
+    "name": "terraform 0.12upgrade",
+    "options": [
+      {
+        "type": "long",
+        "key": "yes",
+        "title": "-yes",
+        "description": "Skip the initial introduction messages and interactive confirmation.\nUse this when running the command in batch from a script."
+      },
+      {
+        "type": "long",
+        "key": "force",
+        "title": "-force",
+        "description": "Override the heuristic that attempts to detect if a configuration\nis already written for v0.12 or later. Some of the transformations made by\nthis command are not idempotent, so re-running against the same module may\nchange the meanings of some expressions in the module."
+      }
+    ]
+  },
+  {
+    "name": "terraform 0.13upgrade",
+    "options": [
+      {
+        "type": "long",
+        "key": "yes",
+        "title": "-yes",
+        "description": "Skip the initial introduction messages and interactive confirmation.\nUse this when running the command in batch from a script."
+      }
+    ]
+  }
+]

@@ -1,7 +1,7 @@
 import { OptionType } from '../../types';
 import { distinguishOptionKeyType } from './optionString';
 
-describe('partitionShortAndLongOptionLabels', () => {
+describe('distinguishOptionKeyType', () => {
   test('test', () => {
     const optionStrings = ['-a', '-b', '--long', 'invalid'];
     const optionKeyTypes = distinguishOptionKeyType(optionStrings);

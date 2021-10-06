@@ -1,7 +1,8 @@
-import { OptionType } from '../../types';
+import { Option, OptionType } from '../../types';
 
 const SHORT_OPTION_PATTERN = /^-([A-Za-z0-9])$/;
 const LONG_OPTION_PATTERN = /^--([A-Za-z0-9][A-Za-z0-9-]*)$/;
+const SINGLE_DASH_STYLE_OPTION_PATTERN = /^-([A-Za-z0-9][A-Za-z0-9-]*)$/;
 
 // Example: ["-I", "--ignore"] -> [{ key: "I", type: OptionType.SHORT }, { key: "ignore", type: OptionType.LONG }]
 // It ignores empty option names.
@@ -9,8 +10,8 @@ const LONG_OPTION_PATTERN = /^--([A-Za-z0-9][A-Za-z0-9-]*)$/;
 // It cannot handle options with values. Do not pass options like "-dcharset" or "--option=value"
 export const distinguishOptionKeyType = (
   optionStrings: string[]
-): { type: OptionType; key: string }[] => {
-  const optionKeyTypes: { key: string; type: OptionType }[] = [];
+): Pick<Option, 'type' | 'key'>[] => {
+  const optionKeyTypes: Pick<Option, 'type' | 'key'>[] = [];
 
   for (const optionString of optionStrings) {
     const shortMatch = optionString.match(SHORT_OPTION_PATTERN);
@@ -28,6 +29,24 @@ export const distinguishOptionKeyType = (
         key: longMatch[1],
       });
       continue;
+    }
+  }
+
+  return optionKeyTypes;
+};
+
+export const distinguishOptionKeyTypeForSingleDashStyle = (
+  optionStrings: string[]
+): Pick<Option, 'type' | 'key'>[] => {
+  const optionKeyTypes: Pick<Option, 'type' | 'key'>[] = [];
+
+  for (const optionString of optionStrings) {
+    const match = optionString.match(SINGLE_DASH_STYLE_OPTION_PATTERN);
+    if (match) {
+      optionKeyTypes.push({
+        type: match[1].length === 1 ? OptionType.SHORT : OptionType.LONG,
+        key: match[1],
+      });
     }
   }
 
