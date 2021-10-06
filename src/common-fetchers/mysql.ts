@@ -40,12 +40,11 @@ export const mysql: Fetcher<SourceDef> = async (
       // Options that begin with "--ssl" are consolidated as "--ssl*" in the command list.
       // In such cases, use the option label specified in the option table.
       options.push(
-        ...makeOptionList([hashDescriptionPair.title]).map(({ type, key }) => ({
-          type,
-          key,
-          title: hashDescriptionPair.title,
-          description: hashDescriptionPair.description,
-        }))
+        ...makeOptionList(
+          [hashDescriptionPair.title],
+          hashDescriptionPair.title,
+          hashDescriptionPair.description
+        )
       );
     }
   }
@@ -123,10 +122,9 @@ const findOptionsCorrespondingToOptionTableItem = (
     return [];
   }
 
-  return makeOptionList(optionStrings).map(({ type, key }) => ({
-    type,
-    key,
-    title: normalizeSpacingAroundComma(title),
-    description: optionTableItem.description,
-  }));
+  return makeOptionList(
+    optionStrings,
+    normalizeSpacingAroundComma(title),
+    optionTableItem.description
+  );
 };

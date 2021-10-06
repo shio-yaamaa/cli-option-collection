@@ -51,14 +51,7 @@ const sectionToOptions = (section: Element): Option[] => {
     const title = normalizeSpacingAroundSlash(ulText.trim().slice(0, -1));
     const description = findDescriptionForList(ul);
     const optionStrings = ulToOptionStrings(ul);
-    options.push(
-      ...makeOptionList(optionStrings).map(({ type, key }) => ({
-        type,
-        key,
-        title,
-        description,
-      }))
-    );
+    options.push(...makeOptionList(optionStrings, title, description));
   }
 
   return options;

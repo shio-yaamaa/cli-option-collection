@@ -107,20 +107,14 @@ const findOptions = (document: Document): Option[] => {
       .map((dt) => dt.textContent?.trim())
       .filter((text): text is string => typeof text === 'string');
     const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
+    const description = dd.textContent?.trim() ?? '';
     const optionStrings = transformOptionStrings(dtTexts, [
       splitByComma,
       trimOptionalElements,
       trimOptionValues,
       trimNonDelimitedOptionValues,
     ]);
-    options.push(
-      ...makeOptionList(optionStrings).map(({ type, key }) => ({
-        type,
-        key,
-        title,
-        description: dd.textContent?.trim() ?? '',
-      }))
-    );
+    options.push(...makeOptionList(optionStrings, title, description));
   }
   return uniqueOptions(options);
 };

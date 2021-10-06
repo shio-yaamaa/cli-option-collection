@@ -51,10 +51,5 @@ const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
   const title = listItemText.slice(0, colonIndex).trim();
   const description = listItemText.slice(colonIndex + 1).trim();
   const optionStrings = transformOptionStrings([title], [trimOptionArguments]);
-  return makeOptionList(optionStrings).map(({ type, key }) => ({
-    type,
-    key,
-    title,
-    description,
-  }));
+  return makeOptionList(optionStrings, title, description);
 };

@@ -75,10 +75,9 @@ const listItemToOptions = ({
     trimOptionArguments,
   ]);
 
-  return makeOptionList(optionStrings).map(({ type, key }) => ({
-    type,
-    key,
-    title: titles.join(' '),
-    description: descriptions.join(' '),
-  }));
+  return makeOptionList(
+    optionStrings,
+    titles.join(' '),
+    descriptions.join(' ')
+  );
 };

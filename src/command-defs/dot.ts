@@ -64,10 +64,5 @@ const indentedListItemToOptions = (listItem: IndentedListItem): Option[] => {
     trimOptionValues,
     trimNonDelimitedOptionValues,
   ]);
-  return makeOptionList(optionStrings).map(({ type, key }) => ({
-    type,
-    key,
-    title,
-    description,
-  }));
+  return makeOptionList(optionStrings, title, description);
 };

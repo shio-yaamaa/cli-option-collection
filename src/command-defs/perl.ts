@@ -75,10 +75,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimAfterColons,
   ]);
 
-  return makeOptionList(optionStrings).map(({ type, key }) => ({
-    type,
-    key,
-    title,
-    description,
-  }));
+  return makeOptionList(optionStrings, title, description);
 };

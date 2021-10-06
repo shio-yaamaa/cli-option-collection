@@ -59,12 +59,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimOptionArguments,
     trimAfterColons,
   ]);
-  return makeOptionListForSingleDashStyle(optionStrings).map(
-    ({ type, key }) => ({
-      type,
-      key,
-      title,
-      description,
-    })
-  );
+  return makeOptionListForSingleDashStyle(optionStrings, title, description);
 };

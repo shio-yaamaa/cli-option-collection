@@ -114,12 +114,11 @@ const fetchSubcommand = async (
       .filter((label): label is string => typeof label === 'string');
 
     options.push(
-      ...makeOptionList(optionStrings).map(({ type, key }) => ({
-        type,
-        key,
-        title: normalizeSpacingAroundComma(title),
-        description,
-      }))
+      ...makeOptionList(
+        optionStrings,
+        normalizeSpacingAroundComma(title),
+        description
+      )
     );
   }
 

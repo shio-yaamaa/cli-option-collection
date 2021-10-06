@@ -76,14 +76,7 @@ const fetchSubcommand = async (
       [optionString],
       [splitByComma, trimOptionArguments]
     );
-    options.push(
-      ...makeOptionList(optionStrings).map(({ type, key }) => ({
-        type,
-        key,
-        title,
-        description,
-      }))
-    );
+    options.push(...makeOptionList(optionStrings, title, description));
   }
 
   return {

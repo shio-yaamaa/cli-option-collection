@@ -39,14 +39,10 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     return [];
   }
   const title = dts[0].textContent?.trim().replace('¶', '') ?? '';
+  const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(
     [title],
     [splitByComma, trimOptionArguments, trimOptionValues]
   );
-  return makeOptionList(optionStrings).map(({ type, key }) => ({
-    type,
-    key,
-    title,
-    description: dd.textContent?.trim() ?? '',
-  }));
+  return makeOptionList(optionStrings, title, description);
 };

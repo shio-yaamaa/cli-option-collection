@@ -204,12 +204,9 @@ const paragraphToOptions = (paragraph: string): Option[] => {
     trimOptionArguments,
     trimOptionValues,
   ]);
-  return makeOptionListForSingleDashStyle(optionStrings).map(
-    ({ type, key }) => ({
-      type,
-      key,
-      title: optionTitle,
-      description: optionDescription,
-    })
+  return makeOptionListForSingleDashStyle(
+    optionStrings,
+    optionTitle,
+    optionDescription
   );
 };
