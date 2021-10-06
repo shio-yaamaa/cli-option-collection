@@ -104,11 +104,12 @@ const listItemToOptions = (listItem: Element): Option[] => {
     [title],
     [trimOptionArguments, trimOptionValues]
   );
-  return [
-    {
-      ...makeOptionListForSingleDashStyle(optionStrings)[0],
+  return makeOptionListForSingleDashStyle(optionStrings).map(
+    ({ type, key }) => ({
+      type,
+      key,
       title,
       description,
-    },
-  ];
+    })
+  );
 };
