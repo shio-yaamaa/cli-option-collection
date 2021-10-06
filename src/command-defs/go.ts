@@ -1,6 +1,7 @@
 import { FetchFunction, Command, Option, OptionType } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
+import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
 import {
   normalizeSpacingAroundComma,
   splitByMultipleDelimiters,
@@ -198,19 +199,17 @@ const paragraphToOptions = (paragraph: string): Option[] => {
   const optionTitle = normalizeSpacingAroundComma(sentenceSubjectFlag);
   const optionDescription = paragraph.trim().replace(/\n/g, ' ');
 
-  const optionKeys = flags.map((flag) => flagToOptionKey(flag));
-  return optionKeys.map((key) => ({
-    type: key.length === 1 ? OptionType.SHORT : OptionType.LONG,
-    key,
-    title: optionTitle,
-    description: optionDescription,
-  }));
-};
-
-const flagToOptionKey = (flag: string): string => {
-  const transformed = transformOptionStrings(
-    [flag],
-    [trimOptionalElements, trimOptionArguments, trimOptionValues]
-  )[0];
-  return transformed.slice(1); // Remove the "-" prefix
+  const optionStrings = transformOptionStrings(flags, [
+    trimOptionalElements,
+    trimOptionArguments,
+    trimOptionValues,
+  ]);
+  return makeOptionListForSingleDashStyle(optionStrings).map(
+    ({ type, key }) => ({
+      type,
+      key,
+      title: optionTitle,
+      description: optionDescription,
+    })
+  );
 };

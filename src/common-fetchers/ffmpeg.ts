@@ -5,7 +5,10 @@ import {
   findDListEntries,
 } from '../utils/forFetcher/dom';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { mergeOptionTitles } from '../utils/forFetcher/optionString';
+import {
+  makeOptionListForSingleDashStyle,
+  mergeOptionTitles,
+} from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
@@ -18,8 +21,6 @@ import {
 // BUG: "no" prefix is not considered.
 // NOTE: ffmpeg uses single dash for both single-letter and multiple-letter options,
 //       but this fetcher distinguishes these two types anyway.
-
-const FLAG_PATTERN = /^-[A-Za-z0-9][A-Za-z0-9-]*/;
 
 export interface SourceDef {
   commandName: string;
@@ -54,21 +55,19 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     .map((dt) => dt.textContent?.trim())
     .filter((text): text is string => typeof text === 'string');
   const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
+  const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,
     splitByComma,
     trimOptionArguments,
     trimAfterColons,
   ]);
-  return [...new Set(optionStrings)]
-    .filter((optionString) => FLAG_PATTERN.test(optionString))
-    .map((optionString) => {
-      const key = optionString.slice(1);
-      return {
-        type: key.length === 1 ? OptionType.SHORT : OptionType.LONG,
-        key,
-        title,
-        description: dd.textContent?.trim() ?? '',
-      };
-    });
+  return makeOptionListForSingleDashStyle(optionStrings).map(
+    ({ type, key }) => ({
+      type,
+      key,
+      title,
+      description,
+    })
+  );
 };
