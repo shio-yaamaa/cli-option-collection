@@ -12,6 +12,7 @@ import { fetchGit } from './command-defs/git';
 import { fetchGo } from './command-defs/go';
 import { fetchJq } from './command-defs/jq';
 import { fetchMagick } from './command-defs/magick';
+import { fetchMagickScript } from './command-defs/magick-script';
 import { fetchMysql } from './command-defs/mysql';
 import { fetchMysqladmin } from './command-defs/mysqladmin';
 import { fetchMysqlcheck } from './command-defs/mysqlcheck';
@@ -41,6 +42,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['go', fetchGo],
   ['jq', fetchJq],
   ['magick', fetchMagick],
+  ['magick-script', fetchMagickScript],
   ['mysql', fetchMysql],
   ['mysqladmin', fetchMysqladmin],
   ['mysqlcheck', fetchMysqlcheck],
