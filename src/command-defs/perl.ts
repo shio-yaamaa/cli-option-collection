@@ -3,10 +3,10 @@ import { URL } from 'url';
 import { FetchFunction, Command, Option } from '../types';
 import {
   DListEntry,
-  fetchDocumentFromURL,
   findDListEntries,
   previousClosest,
 } from '../utils/forFetcher/dom';
+import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   mergeOptionTitles,

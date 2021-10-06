@@ -1,10 +1,8 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
-import {
-  fetchDocumentFromURL,
-  findAnchorsWithPattern,
-} from '../utils/forFetcher/dom';
+import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
+import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,

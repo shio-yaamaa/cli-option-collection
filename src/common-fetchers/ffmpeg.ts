@@ -1,9 +1,6 @@
 import { Fetcher, Command, Option, OptionType } from '../types';
-import {
-  DListEntry,
-  fetchDocumentFromURL,
-  findDListEntries,
-} from '../utils/forFetcher/dom';
+import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
+import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   makeOptionListForSingleDashStyle,

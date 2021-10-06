@@ -1,5 +1,5 @@
 import { FetchFunction, Command, Option } from '../types';
-import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
+import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import {
   makeOptionList,
   mergeOptionTitles,

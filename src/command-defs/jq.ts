@@ -1,7 +1,7 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
-import { fetchDocumentFromURL } from '../utils/forFetcher/dom';
+import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionList } from '../utils/forFetcher/optionString';
 import {

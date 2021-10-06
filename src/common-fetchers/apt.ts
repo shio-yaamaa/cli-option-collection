@@ -1,5 +1,5 @@
 import { Fetcher, Command, Option } from '../types';
-import { fetchDocumentFromURLViaFilter } from '../utils/forFetcher/dom';
+import { fetchDocumentFromURLViaFilter } from '../utils/forFetcher/http';
 import {
   findIndentedListItems,
   IndentedListItem,
