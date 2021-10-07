@@ -404,6 +404,13 @@ export const fetchOd: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchPaste: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'paste',
+    filename: 'paste.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
