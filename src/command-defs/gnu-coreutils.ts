@@ -446,6 +446,13 @@ export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchPtx: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'ptx',
+    filename: 'ptx.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
