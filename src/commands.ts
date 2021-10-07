@@ -55,6 +55,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['cut', gnuCoreutils.fetchCut],
   ['date', gnuCoreutils.fetchDate],
   ['dd', gnuCoreutils.fetchDd],
+  ['df', gnuCoreutils.fetchDf],
   ['docker', fetchDocker],
   ['dot', fetchDot],
   ['echo', gnuCoreutils.fetchEcho],

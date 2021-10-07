@@ -142,6 +142,13 @@ export const fetchDd: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchDf: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'df',
+    filename: 'df.1',
+    optionsHeadingID: 'OPTIONS',
+  });
+
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'echo',
