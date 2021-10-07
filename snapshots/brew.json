@@ -647,7 +647,7 @@
         "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
-        "description": "An unsupported Homebrew development flag to skip installing any dependencies of any kind. If the dependencies are not already present, the formula will have issues. If you’re not developing Homebrew, consider adjusting your PATH rather than using this flag."
+        "description": "An unsupported Homebrew development flag to skip installing any dependencies of any kind. If the dependencies are not already present, the formula will have issues. If you're not developing Homebrew, consider adjusting your PATH rather than using this flag."
       },
       {
         "type": "long",
@@ -659,7 +659,7 @@
         "type": "long",
         "key": "cc",
         "title": "--cc",
-        "description": "Attempt to compile using the specified compiler, which should be the name of the compiler’s executable, e.g. gcc-7 for GCC 7. In order to use LLVM’s clang, specify llvm_clang. To use the Apple-provided clang, specify clang. This option will only accept compilers that are provided by Homebrew or bundled with macOS. Please do not file issues if you encounter errors while using this option."
+        "description": "Attempt to compile using the specified compiler, which should be the name of the compiler's executable, e.g. gcc-7 for GCC 7. In order to use LLVM's clang, specify llvm_clang. To use the Apple-provided clang, specify clang. This option will only accept compilers that are provided by Homebrew or bundled with macOS. Please do not file issues if you encounter errors while using this option."
       },
       {
         "type": "short",
@@ -695,7 +695,7 @@
         "type": "long",
         "key": "fetch-HEAD",
         "title": "--fetch-HEAD",
-        "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository’s HEAD will only be checked for updates when a new stable or development version has been released."
+        "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released."
       },
       {
         "type": "long",
@@ -1195,7 +1195,7 @@
         "type": "long",
         "key": "fetch-HEAD",
         "title": "--fetch-HEAD",
-        "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository’s HEAD will only be checked for updates when a new stable or development version has been released."
+        "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released."
       },
       {
         "type": "long",
@@ -1238,7 +1238,7 @@
         "type": "long",
         "key": "syntax",
         "title": "--syntax",
-        "description": "Syntax-check all of Homebrew’s Ruby files (if no *tap* is passed)."
+        "description": "Syntax-check all of Homebrew's Ruby files (if no <tap> is passed)."
       }
     ]
   },
@@ -1537,7 +1537,7 @@
         "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
-        "description": "Don’t fail uninstall, even if formula is a dependency of any installed formulae."
+        "description": "Don't fail uninstall, even if formula is a dependency of any installed formulae."
       },
       {
         "type": "long",
@@ -1578,7 +1578,7 @@
         "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
-        "description": "Don’t fail uninstall, even if formula is a dependency of any installed formulae."
+        "description": "Don't fail uninstall, even if formula is a dependency of any installed formulae."
       },
       {
         "type": "long",
@@ -1619,7 +1619,7 @@
         "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
-        "description": "Don’t fail uninstall, even if formula is a dependency of any installed formulae."
+        "description": "Don't fail uninstall, even if formula is a dependency of any installed formulae."
       },
       {
         "type": "long",
@@ -1797,7 +1797,7 @@
         "type": "long",
         "key": "fetch-HEAD",
         "title": "--fetch-HEAD",
-        "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository’s HEAD will only be checked for updates when a new stable or development version has been released."
+        "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released."
       },
       {
         "type": "long",
@@ -1986,7 +1986,7 @@
         "type": "long",
         "key": "fix",
         "title": "--fix",
-        "description": "Fix style violations automatically using RuboCop’s auto-correct feature."
+        "description": "Fix style violations automatically using RuboCop's auto-correct feature."
       },
       {
         "type": "long",
@@ -2123,19 +2123,19 @@
         "type": "long",
         "key": "committer",
         "title": "--committer",
-        "description": "Specify a committer name and email in git’s standard author format."
+        "description": "Specify a committer name and email in git's standard author format."
       },
       {
         "type": "long",
         "key": "root-url",
         "title": "--root-url",
-        "description": "Use the specified URL as the root of the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
         "type": "long",
         "key": "root-url-using",
         "title": "--root-url-using",
-        "description": "Use the specified download strategy class for downloading the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified download strategy class for downloading the bottle's URL instead of Homebrew's default."
       }
     ]
   },
@@ -2205,7 +2205,7 @@
         "type": "long",
         "key": "no-audit",
         "title": "--no-audit",
-        "description": "Don’t run brew audit before opening the PR."
+        "description": "Don't run brew audit before opening the PR."
       },
       {
         "type": "long",
@@ -2217,7 +2217,7 @@
         "type": "long",
         "key": "no-style",
         "title": "--no-style",
-        "description": "Don’t run brew style --fix before opening the PR."
+        "description": "Don't run brew style --fix before opening the PR."
       },
       {
         "type": "long",
@@ -2229,7 +2229,7 @@
         "type": "long",
         "key": "no-fork",
         "title": "--no-fork",
-        "description": "Don’t try to fork the repository."
+        "description": "Don't try to fork the repository."
       },
       {
         "type": "long",
@@ -2306,7 +2306,7 @@
         "type": "long",
         "key": "no-audit",
         "title": "--no-audit",
-        "description": "Don’t run brew audit before opening the PR."
+        "description": "Don't run brew audit before opening the PR."
       },
       {
         "type": "long",
@@ -2330,7 +2330,7 @@
         "type": "long",
         "key": "no-fork",
         "title": "--no-fork",
-        "description": "Don’t try to fork the repository."
+        "description": "Don't try to fork the repository."
       },
       {
         "type": "long",
@@ -2552,7 +2552,7 @@
         "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
-        "description": "Indicate that URL points to the package’s repository rather than a file."
+        "description": "Indicate that URL points to the package's repository rather than a file."
       },
       {
         "type": "long",
@@ -2782,7 +2782,7 @@
         "type": "long",
         "key": "newer-only",
         "title": "--newer-only",
-        "description": "Show the latest version only if it’s newer than the formula/cask."
+        "description": "Show the latest version only if it's newer than the formula/cask."
       },
       {
         "type": "long",
@@ -2794,13 +2794,13 @@
         "type": "short",
         "key": "q",
         "title": "-q, --quiet",
-        "description": "Suppress warnings, don’t print a progress bar for JSON output."
+        "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
         "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
-        "description": "Suppress warnings, don’t print a progress bar for JSON output."
+        "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
         "type": "long",
@@ -2847,7 +2847,7 @@
         "type": "long",
         "key": "newer-only",
         "title": "--newer-only",
-        "description": "Show the latest version only if it’s newer than the formula/cask."
+        "description": "Show the latest version only if it's newer than the formula/cask."
       },
       {
         "type": "long",
@@ -2859,13 +2859,13 @@
         "type": "short",
         "key": "q",
         "title": "-q, --quiet",
-        "description": "Suppress warnings, don’t print a progress bar for JSON output."
+        "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
         "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
-        "description": "Suppress warnings, don’t print a progress bar for JSON output."
+        "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
         "type": "long",
@@ -2982,7 +2982,7 @@
         "type": "long",
         "key": "no-upload",
         "title": "--no-upload",
-        "description": "Download the bottles but don’t upload them."
+        "description": "Download the bottles but don't upload them."
       },
       {
         "type": "long",
@@ -3042,7 +3042,7 @@
         "type": "long",
         "key": "committer",
         "title": "--committer",
-        "description": "Specify a committer name and email in git’s standard author format."
+        "description": "Specify a committer name and email in git's standard author format."
       },
       {
         "type": "long",
@@ -3066,13 +3066,13 @@
         "type": "long",
         "key": "root-url",
         "title": "--root-url",
-        "description": "Use the specified URL as the root of the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
         "type": "long",
         "key": "root-url-using",
         "title": "--root-url-using",
-        "description": "Use the specified download strategy class for downloading the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified download strategy class for downloading the bottle's URL instead of Homebrew's default."
       },
       {
         "type": "long",
@@ -3125,25 +3125,25 @@
         "type": "long",
         "key": "committer",
         "title": "--committer",
-        "description": "Specify a committer name and email in git’s standard author format."
+        "description": "Specify a committer name and email in git's standard author format."
       },
       {
         "type": "long",
         "key": "github-org",
         "title": "--github-org",
-        "description": "Upload to the specified GitHub organisation’s GitHub Packages (default: homebrew)."
+        "description": "Upload to the specified GitHub organisation's GitHub Packages (default: homebrew)."
       },
       {
         "type": "long",
         "key": "root-url",
         "title": "--root-url",
-        "description": "Use the specified URL as the root of the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
         "type": "long",
         "key": "root-url-using",
         "title": "--root-url-using",
-        "description": "Use the specified download strategy class for downloading the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified download strategy class for downloading the bottle's URL instead of Homebrew's default."
       }
     ]
   },
@@ -3203,7 +3203,7 @@
         "type": "long",
         "key": "env",
         "title": "--env",
-        "description": "Use the standard PATH instead of superenv’s when std is passed."
+        "description": "Use the standard PATH instead of superenv's when std is passed."
       },
       {
         "type": "short",
@@ -3230,7 +3230,7 @@
         "type": "long",
         "key": "fix",
         "title": "--fix",
-        "description": "Fix style violations automatically using RuboCop’s auto-correct feature."
+        "description": "Fix style violations automatically using RuboCop's auto-correct feature."
       },
       {
         "type": "long",
@@ -3277,7 +3277,7 @@
         "type": "long",
         "key": "no-git",
         "title": "--no-git",
-        "description": "Don’t initialize a Git repository for the tap."
+        "description": "Don't initialize a Git repository for the tap."
       },
       {
         "type": "long",
@@ -3564,7 +3564,7 @@
         "type": "long",
         "key": "fail-if-not-changed",
         "title": "--fail-if-not-changed",
-        "description": "Return a failing status code if current license data’s version is the same as the upstream. This can be used to notify CI when the SPDX license data is out of date."
+        "description": "Return a failing status code if current license data's version is the same as the upstream. This can be used to notify CI when the SPDX license data is out of date."
       }
     ]
   },
@@ -3603,7 +3603,7 @@
         "type": "long",
         "key": "ignore-non-pypi-packages",
         "title": "--ignore-non-pypi-packages",
-        "description": "Don’t fail if formula is not a PyPI package."
+        "description": "Don't fail if formula is not a PyPI package."
       },
       {
         "type": "long",
@@ -3615,7 +3615,7 @@
         "type": "long",
         "key": "package-name",
         "title": "--package-name",
-        "description": "Use the specified package-name when finding resources for formula. If no package name is specified, it will be inferred from the formula’s stable URL."
+        "description": "Use the specified package-name when finding resources for formula. If no package name is specified, it will be inferred from the formula's stable URL."
       },
       {
         "type": "long",
@@ -3678,7 +3678,7 @@
         "type": "long",
         "key": "edit",
         "title": "--edit",
-        "description": "Edit aliases in a text editor. Either one or all aliases may be opened at once. If the given alias doesn’t exist it’ll be pre-populated with a template."
+        "description": "Edit aliases in a text editor. Either one or all aliases may be opened at once. If the given alias doesn't exist it'll be pre-populated with a template."
       }
     ]
   },
@@ -3695,7 +3695,7 @@
         "type": "long",
         "key": "cleanup",
         "title": "--cleanup",
-        "description": "Automatically clean brew’s cache and logs. Must be passed with start."
+        "description": "Automatically clean brew's cache and logs. Must be passed with start."
       },
       {
         "type": "long",
@@ -3742,7 +3742,7 @@
         "type": "long",
         "key": "no-upgrade",
         "title": "--no-upgrade",
-        "description": "install won’t run brew upgrade on outdated dependencies. Note they may still be upgraded by brew install if needed."
+        "description": "install won't run brew upgrade on outdated dependencies. Note they may still be upgraded by brew install if needed."
       },
       {
         "type": "short",
@@ -3766,7 +3766,7 @@
         "type": "long",
         "key": "no-lock",
         "title": "--no-lock",
-        "description": "install won’t output a Brewfile.lock.json."
+        "description": "install won't output a Brewfile.lock.json."
       },
       {
         "type": "long",
@@ -3864,7 +3864,7 @@
         "type": "long",
         "key": "skip-setup",
         "title": "--skip-setup",
-        "description": "Don’t check if the local system is set up correctly."
+        "description": "Don't check if the local system is set up correctly."
       },
       {
         "type": "long",
@@ -3894,7 +3894,7 @@
         "type": "long",
         "key": "skip-relocation",
         "title": "--skip-relocation",
-        "description": "Run brew bottle --skip-relocation to build new bottles that don’t require relocation."
+        "description": "Run brew bottle --skip-relocation to build new bottles that don't require relocation."
       },
       {
         "type": "long",
@@ -3942,7 +3942,7 @@
         "type": "long",
         "key": "root-url",
         "title": "--root-url",
-        "description": "Use the specified URL as the root of the bottle’s URL instead of Homebrew’s default."
+        "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
         "type": "long",
@@ -3966,7 +3966,7 @@
         "type": "long",
         "key": "skip-dependents",
         "title": "--skip-dependents",
-        "description": "Don’t test any dependents."
+        "description": "Don't test any dependents."
       },
       {
         "type": "long",
@@ -4065,7 +4065,7 @@
         "type": "long",
         "key": "explain",
         "title": "--explain",
-        "description": "Output explanation of how to get ‘cmd’ by installing one of the providing formulae."
+        "description": "Output explanation of how to get 'cmd' by installing one of the providing formulae."
       }
     ]
   },
@@ -4094,7 +4094,7 @@
         "type": "long",
         "key": "install-missing",
         "title": "--install-missing",
-        "description": "Install and update formulae that are missing from the database and don’t have bottles."
+        "description": "Install and update formulae that are missing from the database and don't have bottles."
       },
       {
         "type": "long",
