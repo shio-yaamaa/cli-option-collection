@@ -163,6 +163,13 @@ export const fetchDircolors: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchDirname: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'dirname',
+    filename: 'dirname.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'echo',
