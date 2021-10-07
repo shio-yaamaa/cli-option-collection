@@ -361,6 +361,13 @@ export const fetchMv: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchNice: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'nice',
+    filename: 'nice.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
