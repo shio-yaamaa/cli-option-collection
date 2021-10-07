@@ -347,6 +347,13 @@ export const fetchMknod: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchMktemp: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'mktemp',
+    filename: 'mktemp.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',

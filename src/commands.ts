@@ -94,6 +94,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mkdir', gnuCoreutils.fetchMkdir],
   ['mkfifo', gnuCoreutils.fetchMkfifo],
   ['mknod', gnuCoreutils.fetchMknod],
+  ['mktemp', gnuCoreutils.fetchMktemp],
   ['mysql', fetchMysql],
   ['mysqladmin', fetchMysqladmin],
   ['mysqlcheck', fetchMysqlcheck],
