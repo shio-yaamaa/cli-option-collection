@@ -516,3 +516,10 @@ export const fetchSha224sum: FetchFunction = async (): Promise<Command[]> =>
     filename: 'sha224sum.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSha256sum: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sha256sum',
+    filename: 'sha256sum.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
