@@ -226,6 +226,13 @@ export const fetchFmt: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchFold: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'fold',
+    filename: 'fold.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
