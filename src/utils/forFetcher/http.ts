@@ -1,3 +1,4 @@
+import { exec } from 'child_process';
 import axios from 'axios';
 import { JSDOM, VirtualConsole } from 'jsdom';
 
@@ -21,4 +22,20 @@ export const fetchDocumentFromURLViaFilter = async (
   const response = await axios.get(url.toString());
   const data = filter(response.data);
   return new JSDOM(data).window.document;
+};
+
+export const fetchDocumentFromManPageURL = async (
+  url: URL
+): Promise<Document> => {
+  return new Promise((resolve, reject) => {
+    exec(`curl -s "${url}" | mandoc -T html`, (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      }
+      if (stderr) {
+        reject(stderr);
+      }
+      resolve(new JSDOM(stdout).window.document);
+    });
+  });
 };
