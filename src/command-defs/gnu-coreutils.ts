@@ -240,6 +240,13 @@ export const fetchGroups: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchHead: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'head',
+    filename: 'head.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',

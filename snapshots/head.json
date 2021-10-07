@@ -1,0 +1,85 @@
+[
+  {
+    "name": "head",
+    "options": [
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --bytes=[-]NUM",
+        "description": "print the first NUM bytes of each file; with the leading '-', print all\n      but the last NUM bytes of each file"
+      },
+      {
+        "type": "long",
+        "key": "bytes",
+        "title": "-c, --bytes=[-]NUM",
+        "description": "print the first NUM bytes of each file; with the leading '-', print all\n      but the last NUM bytes of each file"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n, --lines=[-]NUM",
+        "description": "print the first NUM lines instead of the first 10; with the leading '-',\n      print all but the last NUM lines of each file"
+      },
+      {
+        "type": "long",
+        "key": "lines",
+        "title": "-n, --lines=[-]NUM",
+        "description": "print the first NUM lines instead of the first 10; with the leading '-',\n      print all but the last NUM lines of each file"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q, --quiet, --silent",
+        "description": "never print headers giving file names"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "-q, --quiet, --silent",
+        "description": "never print headers giving file names"
+      },
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "-q, --quiet, --silent",
+        "description": "never print headers giving file names"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v, --verbose",
+        "description": "always print headers giving file names"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "-v, --verbose",
+        "description": "always print headers giving file names"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero-terminated",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

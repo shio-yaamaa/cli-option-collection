@@ -76,6 +76,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['groups', gnuCoreutils.fetchGroups],
   ['git', fetchGit],
   ['go', fetchGo],
+  ['head', gnuCoreutils.fetchHead],
   ['jq', fetchJq],
   ['magick', fetchMagick],
   ['magick-script', fetchMagickScript],
