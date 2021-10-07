@@ -191,6 +191,13 @@ export const fetchEnv: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchExpand: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'expand',
+    filename: 'expand.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
