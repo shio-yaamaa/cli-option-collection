@@ -488,3 +488,10 @@ export const fetchRmdir: FetchFunction = async (): Promise<Command[]> =>
     filename: 'rmdir.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchRuncon: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'runcon',
+    filename: 'runcon.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
