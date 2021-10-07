@@ -170,6 +170,13 @@ export const fetchDirname: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchDu: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'du',
+    filename: 'du.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'echo',

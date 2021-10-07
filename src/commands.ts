@@ -61,6 +61,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['dirname', gnuCoreutils.fetchDirname],
   ['docker', fetchDocker],
   ['dot', fetchDot],
+  ['du', gnuCoreutils.fetchDu],
   ['echo', gnuCoreutils.fetchEcho],
   ['ffmpeg', fetchFfmpeg],
   ['ffplay', fetchFfplay],
