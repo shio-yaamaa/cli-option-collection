@@ -310,6 +310,15 @@ export const fetchLogname: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: Some options has descriptions that takes multiple <dd>s,
+//      but the second and later <dd>s are ignored.
+export const fetchLs: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'ls',
+    filename: 'ls.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
