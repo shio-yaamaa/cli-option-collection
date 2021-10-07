@@ -254,6 +254,13 @@ export const fetchHostid: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchHostname: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'hostname',
+    filename: 'hostname.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
