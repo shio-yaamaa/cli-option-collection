@@ -1,0 +1,121 @@
+[
+  {
+    "name": "realpath",
+    "options": [
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e, --canonicalize-existing",
+        "description": "all components of the path must exist"
+      },
+      {
+        "type": "long",
+        "key": "canonicalize-existing",
+        "title": "-e, --canonicalize-existing",
+        "description": "all components of the path must exist"
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m, --canonicalize-missing",
+        "description": "no path components need exist or be a directory"
+      },
+      {
+        "type": "long",
+        "key": "canonicalize-missing",
+        "title": "-m, --canonicalize-missing",
+        "description": "no path components need exist or be a directory"
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L, --logical",
+        "description": "resolve '..' components before symlinks"
+      },
+      {
+        "type": "long",
+        "key": "logical",
+        "title": "-L, --logical",
+        "description": "resolve '..' components before symlinks"
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P, --physical",
+        "description": "resolve symlinks as encountered (default)"
+      },
+      {
+        "type": "long",
+        "key": "physical",
+        "title": "-P, --physical",
+        "description": "resolve symlinks as encountered (default)"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q, --quiet",
+        "description": "suppress most error messages"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "-q, --quiet",
+        "description": "suppress most error messages"
+      },
+      {
+        "type": "long",
+        "key": "relative-to",
+        "title": "--relative-to=DIR",
+        "description": "print the resolved path relative to DIR"
+      },
+      {
+        "type": "long",
+        "key": "relative-base",
+        "title": "--relative-base=DIR",
+        "description": "print absolute paths unless paths below DIR"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --strip, --no-symlinks",
+        "description": "don't expand symlinks"
+      },
+      {
+        "type": "long",
+        "key": "strip",
+        "title": "-s, --strip, --no-symlinks",
+        "description": "don't expand symlinks"
+      },
+      {
+        "type": "long",
+        "key": "no-symlinks",
+        "title": "-s, --strip, --no-symlinks",
+        "description": "don't expand symlinks"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

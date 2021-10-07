@@ -467,6 +467,13 @@ export const fetchReadlink: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchRealpath: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'realpath',
+    filename: 'realpath.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
