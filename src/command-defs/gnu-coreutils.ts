@@ -354,6 +354,13 @@ export const fetchMktemp: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchMv: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'mv',
+    filename: 'mv.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
