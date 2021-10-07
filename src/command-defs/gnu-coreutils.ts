@@ -92,6 +92,13 @@ export const fetchCksum: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchComm: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'comm',
+    filename: 'comm.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',
