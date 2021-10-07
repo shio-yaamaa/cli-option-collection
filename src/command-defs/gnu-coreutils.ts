@@ -128,6 +128,13 @@ export const fetchCut: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchDate: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'date',
+    filename: 'date.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'echo',
