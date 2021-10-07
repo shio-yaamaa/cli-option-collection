@@ -115,6 +115,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['perl', fetchPerl],
   ['pinky', gnuCoreutils.fetchPinky],
   ['pr', gnuCoreutils.fetchPr],
+  ['printenv', gnuCoreutils.fetchPrintenv],
   ['python', fetchPython],
   ['rm', gnuCoreutils.fetchRm],
   ['setlock', fetchSetlock],
