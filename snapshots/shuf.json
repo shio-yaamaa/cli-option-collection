@@ -1,0 +1,97 @@
+[
+  {
+    "name": "shuf",
+    "options": [
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e, --echo",
+        "description": "treat each ARG as an input line"
+      },
+      {
+        "type": "long",
+        "key": "echo",
+        "title": "-e, --echo",
+        "description": "treat each ARG as an input line"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --input-range=LO-HI",
+        "description": "treat each number LO through HI as an input line"
+      },
+      {
+        "type": "long",
+        "key": "input-range",
+        "title": "-i, --input-range=LO-HI",
+        "description": "treat each number LO through HI as an input line"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n, --head-count=COUNT",
+        "description": "output at most COUNT lines"
+      },
+      {
+        "type": "long",
+        "key": "head-count",
+        "title": "-n, --head-count=COUNT",
+        "description": "output at most COUNT lines"
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o, --output=FILE",
+        "description": "write result to FILE instead of standard output"
+      },
+      {
+        "type": "long",
+        "key": "output",
+        "title": "-o, --output=FILE",
+        "description": "write result to FILE instead of standard output"
+      },
+      {
+        "type": "long",
+        "key": "random-source",
+        "title": "--random-source=FILE",
+        "description": "get random bytes from FILE"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r, --repeat",
+        "description": "output lines can be repeated"
+      },
+      {
+        "type": "long",
+        "key": "repeat",
+        "title": "-r, --repeat",
+        "description": "output lines can be repeated"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero-terminated",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

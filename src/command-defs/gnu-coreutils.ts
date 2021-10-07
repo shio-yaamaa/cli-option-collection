@@ -544,3 +544,10 @@ export const fetchShred: FetchFunction = async (): Promise<Command[]> =>
     filename: 'shred.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchShuf: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'shuf',
+    filename: 'shuf.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
