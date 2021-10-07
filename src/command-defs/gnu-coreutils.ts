@@ -29,6 +29,13 @@ export const fetchBase64: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchBasename: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'basename',
+    filename: 'basename.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',

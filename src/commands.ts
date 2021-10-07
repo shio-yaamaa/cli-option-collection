@@ -38,6 +38,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['b2sum', gnuCoreutils.fetchB2sum],
   ['base32', gnuCoreutils.fetchBase32],
   ['base64', gnuCoreutils.fetchBase64],
+  ['basename', gnuCoreutils.fetchBasename],
   ['brew', fetchBrew],
   ['cat', gnuCoreutils.fetchCat],
   ['cp', gnuCoreutils.fetchCp],
