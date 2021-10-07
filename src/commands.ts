@@ -73,6 +73,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['ffprobe', fetchFfprobe],
   ['fmt', gnuCoreutils.fetchFmt],
   ['fold', gnuCoreutils.fetchFold],
+  ['groups', gnuCoreutils.fetchGroups],
   ['git', fetchGit],
   ['go', fetchGo],
   ['jq', fetchJq],
