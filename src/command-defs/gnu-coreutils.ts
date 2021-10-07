@@ -99,6 +99,13 @@ export const fetchComm: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchCoreutils: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'coreutils',
+    filename: 'coreutils.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',
