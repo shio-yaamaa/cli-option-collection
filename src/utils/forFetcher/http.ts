@@ -1,6 +1,12 @@
+import path from 'path';
+import fs from 'fs';
+import https from 'https';
 import { exec } from 'child_process';
 import axios from 'axios';
+import { ensureDirSync } from 'fs-extra';
 import { JSDOM, VirtualConsole } from 'jsdom';
+
+export const DOWNLOADS_DIRECTORY = path.resolve(process.cwd(), 'downloads');
 
 export const fetchPlainTextFromURL = async (url: URL): Promise<string> => {
   const response = await axios.get(url.toString());
@@ -37,5 +43,26 @@ export const fetchDocumentFromManPageURL = async (
       }
       resolve(new JSDOM(stdout).window.document);
     });
+  });
+};
+
+// Returns the path to the downloaded file.
+export const download = async (url: URL, filename: string): Promise<string> => {
+  ensureDirSync(DOWNLOADS_DIRECTORY);
+  const filePath = path.resolve(DOWNLOADS_DIRECTORY, filename);
+  const file = fs.createWriteStream(filePath);
+  return new Promise((resolve, reject) => {
+    https
+      .get(url, (response) => {
+        response.pipe(file);
+        file.on('finish', () => {
+          file.close();
+          resolve(filePath);
+        });
+      })
+      .on('error', (error) => {
+        fs.unlink(filePath, () => {});
+        reject(error);
+      });
   });
 };
