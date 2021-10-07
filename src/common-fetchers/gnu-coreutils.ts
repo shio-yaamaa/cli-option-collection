@@ -17,6 +17,7 @@ import {
   transformOptionStrings,
   trimOptionalElements,
   trimOptionArguments,
+  trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
 
 export interface SourceDef {
@@ -71,7 +72,12 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
     }
     const optionStrings = transformOptionStrings(
       [title],
-      [splitByComma, trimOptionalElements, trimOptionArguments]
+      [
+        splitByComma,
+        trimOptionalElements,
+        trimOptionValues,
+        trimOptionArguments,
+      ]
     );
     options.push(
       ...makeOptionList(
