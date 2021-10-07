@@ -11,6 +11,9 @@ import {
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
+// Alternative sources:
+// - https://github.com/sshuttle/sshuttle/blob/bd00a530dde4ec71aa5bc08984e33241b8b7eaa4/sshuttle/options.py#L188
+
 const DOC_URL = 'https://sshuttle.readthedocs.io/en/stable/manpage.html';
 
 export const fetchSshuttle: FetchFunction = async (): Promise<Command[]> => {
