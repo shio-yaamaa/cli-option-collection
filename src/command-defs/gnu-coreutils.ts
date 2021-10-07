@@ -1,6 +1,13 @@
 import { FetchFunction, Command } from '../types';
 import { coreutils } from '../common-fetchers/gnu-coreutils';
 
+export const fetchArch: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'arch',
+    filename: 'arch.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',

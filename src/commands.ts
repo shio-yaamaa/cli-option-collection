@@ -34,6 +34,7 @@ import { fetchYarn } from './command-defs/yarn';
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['apt-cache', fetchAptCache],
   ['apt-get', fetchAptGet],
+  ['arch', gnuCoreutils.fetchArch],
   ['brew', fetchBrew],
   ['cat', gnuCoreutils.fetchCat],
   ['cp', gnuCoreutils.fetchCp],
