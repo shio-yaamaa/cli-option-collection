@@ -425,6 +425,13 @@ export const fetchPinky: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchPr: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'pr',
+    filename: 'pr.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
