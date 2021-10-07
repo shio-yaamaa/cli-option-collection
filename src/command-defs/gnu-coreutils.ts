@@ -57,6 +57,13 @@ export const fetchChcon: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchChgrp: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'chgrp',
+    filename: 'chgrp.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',
