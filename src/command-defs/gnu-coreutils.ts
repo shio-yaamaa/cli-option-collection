@@ -502,3 +502,10 @@ export const fetchSeq: FetchFunction = async (): Promise<Command[]> =>
     filename: 'seq.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSha1sum: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sha1sum',
+    filename: 'sha1sum.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
