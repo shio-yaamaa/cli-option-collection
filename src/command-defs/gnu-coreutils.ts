@@ -389,6 +389,14 @@ export const fetchNproc: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: "-M" is not an option
+export const fetchNumfmt: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'numfmt',
+    filename: 'numfmt.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
