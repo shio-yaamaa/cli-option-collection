@@ -3,15 +3,13 @@ import { FetchFunction } from './types';
 import { fetchAptCache } from './command-defs/apt-cache';
 import { fetchAptGet } from './command-defs/apt-get';
 import { fetchBrew } from './command-defs/brew';
-import { fetchCat } from './command-defs/cat';
-import { fetchCp } from './command-defs/cp';
 import { fetchDocker } from './command-defs/docker';
 import { fetchDot } from './command-defs/dot';
-import { fetchEcho } from './command-defs/echo';
 import { fetchFfmpeg } from './command-defs/ffmpeg';
 import { fetchFfplay } from './command-defs/ffplay';
 import { fetchFfprobe } from './command-defs/ffprobe';
 import { fetchGit } from './command-defs/git';
+import * as gnuCoreutils from './command-defs/gnu-coreutils';
 import { fetchGo } from './command-defs/go';
 import { fetchJq } from './command-defs/jq';
 import { fetchMagick } from './command-defs/magick';
@@ -26,7 +24,6 @@ import { fetchMysqlshow } from './command-defs/mysqlshow';
 import { fetchMysqlslap } from './command-defs/mysqlslap';
 import { fetchPerl } from './command-defs/perl';
 import { fetchPython } from './command-defs/python';
-import { fetchRm } from './command-defs/rm';
 import { fetchSetlock } from './command-defs/setlock';
 import { fetchSoftlimit } from './command-defs/softlimit';
 import { fetchSshuttle } from './command-defs/sshuttle';
@@ -38,11 +35,11 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['apt-cache', fetchAptCache],
   ['apt-get', fetchAptGet],
   ['brew', fetchBrew],
-  ['cat', fetchCat],
-  ['cp', fetchCp],
+  ['cat', gnuCoreutils.fetchCat],
+  ['cp', gnuCoreutils.fetchCp],
   ['docker', fetchDocker],
   ['dot', fetchDot],
-  ['echo', fetchEcho],
+  ['echo', gnuCoreutils.fetchEcho],
   ['ffmpeg', fetchFfmpeg],
   ['ffplay', fetchFfplay],
   ['ffprobe', fetchFfprobe],
@@ -61,7 +58,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqlslap', fetchMysqlslap],
   ['perl', fetchPerl],
   ['python', fetchPython],
-  ['rm', fetchRm],
+  ['rm', gnuCoreutils.fetchRm],
   ['setlock', fetchSetlock],
   ['softlimit', fetchSoftlimit],
   ['sshuttle', fetchSshuttle],
