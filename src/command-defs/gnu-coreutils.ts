@@ -551,3 +551,10 @@ export const fetchShuf: FetchFunction = async (): Promise<Command[]> =>
     filename: 'shuf.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSleep: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sleep',
+    filename: 'sleep.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
