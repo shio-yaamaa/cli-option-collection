@@ -66,6 +66,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['env', gnuCoreutils.fetchEnv],
   ['expand', gnuCoreutils.fetchExpand],
   ['expr', gnuCoreutils.fetchExpr],
+  ['factor', gnuCoreutils.fetchFactor],
   ['ffmpeg', fetchFfmpeg],
   ['ffplay', fetchFfplay],
   ['ffprobe', fetchFfprobe],

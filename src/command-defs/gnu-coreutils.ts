@@ -205,6 +205,13 @@ export const fetchExpr: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchFactor: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'factor',
+    filename: 'factor.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
