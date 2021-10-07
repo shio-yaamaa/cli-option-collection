@@ -84,6 +84,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['join', gnuCoreutils.fetchJoin],
   ['jq', fetchJq],
   ['kill', gnuCoreutils.fetchKill],
+  ['link', gnuCoreutils.fetchLink],
   ['magick', fetchMagick],
   ['magick-script', fetchMagickScript],
   ['mysql', fetchMysql],

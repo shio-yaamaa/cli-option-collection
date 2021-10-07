@@ -289,6 +289,13 @@ export const fetchKill: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchLink: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'link',
+    filename: 'link.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
