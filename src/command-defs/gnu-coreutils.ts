@@ -326,6 +326,13 @@ export const fetchMd5sum: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchMkdir: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'mkdir',
+    filename: 'mkdir.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
