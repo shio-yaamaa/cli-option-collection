@@ -120,6 +120,14 @@ export const fetchCsplit: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: "-M" is not an option
+export const fetchCut: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'cut',
+    filename: 'cut.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'echo',
