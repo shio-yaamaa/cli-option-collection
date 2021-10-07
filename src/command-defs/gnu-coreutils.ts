@@ -460,6 +460,13 @@ export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchReadlink: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'readlink',
+    filename: 'readlink.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
