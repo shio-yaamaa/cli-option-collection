@@ -537,3 +537,10 @@ export const fetchSha512sum: FetchFunction = async (): Promise<Command[]> =>
     filename: 'sha512sum.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchShred: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'shred',
+    filename: 'shred.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
