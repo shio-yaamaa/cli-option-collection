@@ -64,6 +64,13 @@ export const fetchChgrp: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchChmod: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'chmod',
+    filename: 'chmod.1',
+    optionsHeadingID: 'OPTIONS',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',
