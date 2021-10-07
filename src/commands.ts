@@ -106,6 +106,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqlslap', fetchMysqlslap],
   ['nice', gnuCoreutils.fetchNice],
   ['nl', gnuCoreutils.fetchNl],
+  ['nohup', gnuCoreutils.fetchNohup],
   ['perl', fetchPerl],
   ['python', fetchPython],
   ['rm', gnuCoreutils.fetchRm],
