@@ -92,6 +92,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['magick-script', fetchMagickScript],
   ['md5sum', gnuCoreutils.fetchMd5sum],
   ['mkdir', gnuCoreutils.fetchMkdir],
+  ['mkfifo', gnuCoreutils.fetchMkfifo],
   ['mysql', fetchMysql],
   ['mysqladmin', fetchMysqladmin],
   ['mysqlcheck', fetchMysqlcheck],

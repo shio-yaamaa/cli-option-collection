@@ -333,6 +333,13 @@ export const fetchMkdir: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchMkfifo: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'mkfifo',
+    filename: 'mkfifo.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
