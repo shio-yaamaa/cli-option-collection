@@ -19,6 +19,7 @@ import {
   trimOptionArguments,
   trimOptionValues,
 } from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
 export interface SourceDef {
   commandName: string;
@@ -35,11 +36,10 @@ export const coreutils: Fetcher<SourceDef> = async (
     sourceDef.filename
   );
   const document = await fetchDocumentFromManFile(filePath);
-  const optionList = findOptionList(document, sourceDef.optionsHeadingID);
-  if (!optionList) {
-    return [];
-  }
-  const options = optionListToOptions(optionList);
+  const optionLists = findOptionLists(document, sourceDef.optionsHeadingID);
+  const options = mergeLists(
+    optionLists.map((list) => optionListToOptions(list))
+  );
   return [
     {
       name: sourceDef.commandName,
@@ -48,18 +48,16 @@ export const coreutils: Fetcher<SourceDef> = async (
   ];
 };
 
-const findOptionList = (
+const findOptionLists = (
   document: Document,
   optionsHeadingID: string
-): HTMLDListElement | null => {
+): HTMLDListElement[] => {
   const optionsHeading = document.querySelector(`#${optionsHeadingID}`);
-  if (!optionsHeading) {
-    return null;
+  const optionsSection = optionsHeading?.parentElement;
+  if (!optionsSection) {
+    return [];
   }
-  return nextClosest(
-    optionsHeading,
-    (element) => element.tagName.toLowerCase() === 'dl'
-  ) as HTMLDListElement;
+  return Array.from(optionsSection.querySelectorAll('dl'));
 };
 
 const optionListToOptions = (list: HTMLDListElement): Option[] => {

@@ -8,6 +8,13 @@ export const fetchArch: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchB2sum: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'b2sum',
+    filename: 'b2sum.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',

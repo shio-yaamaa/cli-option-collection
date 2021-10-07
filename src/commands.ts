@@ -35,6 +35,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['apt-cache', fetchAptCache],
   ['apt-get', fetchAptGet],
   ['arch', gnuCoreutils.fetchArch],
+  ['b2sum', gnuCoreutils.fetchB2sum],
   ['brew', fetchBrew],
   ['cat', gnuCoreutils.fetchCat],
   ['cp', gnuCoreutils.fetchCp],
