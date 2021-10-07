@@ -1,0 +1,37 @@
+[
+  {
+    "name": "echo",
+    "options": [
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "do not output the trailing newline"
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "enable interpretation of backslash escapes"
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E",
+        "description": "disable interpretation of backslash escapes (default)"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]
