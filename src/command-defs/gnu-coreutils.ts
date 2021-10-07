@@ -303,6 +303,13 @@ export const fetchLn: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchLogname: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'logname',
+    filename: 'logname.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
