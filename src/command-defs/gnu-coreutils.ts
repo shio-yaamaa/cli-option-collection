@@ -50,6 +50,13 @@ export const fetchCat: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchChcon: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'chcon',
+    filename: 'chcon.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',

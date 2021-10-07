@@ -42,6 +42,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['basenc', gnuCoreutils.fetchBasenc],
   ['brew', fetchBrew],
   ['cat', gnuCoreutils.fetchCat],
+  ['chcon', gnuCoreutils.fetchChcon],
   ['cp', gnuCoreutils.fetchCp],
   ['docker', fetchDocker],
   ['dot', fetchDot],
