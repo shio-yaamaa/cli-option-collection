@@ -2,10 +2,10 @@ import { FetchFunction, Command } from '../types';
 import { SourceDef, coreutils } from '../common-fetchers/gnu-coreutils';
 
 const sourceDef: SourceDef = {
-  commandName: 'rm',
-  filename: 'rm.1',
-  optionsHeadingID: 'OPTIONS',
+  commandName: 'cat',
+  filename: 'cat.1',
+  optionsHeadingID: 'DESCRIPTION',
 };
 
-export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
+export const fetchCat: FetchFunction = async (): Promise<Command[]> =>
   coreutils(sourceDef);

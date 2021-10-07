@@ -22,6 +22,7 @@ import {
 export interface SourceDef {
   commandName: string;
   filename: string;
+  optionsHeadingID: string;
 }
 
 export const coreutils: Fetcher<SourceDef> = async (
@@ -33,7 +34,7 @@ export const coreutils: Fetcher<SourceDef> = async (
     sourceDef.filename
   );
   const document = await fetchDocumentFromManFile(filePath);
-  const optionList = findOptionList(document);
+  const optionList = findOptionList(document, sourceDef.optionsHeadingID);
   if (!optionList) {
     return [];
   }
@@ -46,8 +47,11 @@ export const coreutils: Fetcher<SourceDef> = async (
   ];
 };
 
-const findOptionList = (document: Document): HTMLDListElement | null => {
-  const optionsHeading = document.querySelector('#OPTIONS');
+const findOptionList = (
+  document: Document,
+  optionsHeadingID: string
+): HTMLDListElement | null => {
+  const optionsHeading = document.querySelector(`#${optionsHeadingID}`);
   if (!optionsHeading) {
     return null;
   }
