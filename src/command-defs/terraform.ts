@@ -16,6 +16,9 @@ import { mergeLists } from '../utils/utils';
 // - https://github.com/hashicorp/terraform/blob/main/website/docs/cli/commands/apply.html.md
 // - https://github.com/hashicorp/terraform/blob/main/internal/command/apply.go#L333
 
+// BUG: Global options are listed in the page below, but these are not collected.
+//      https://github.com/hashicorp/terraform/blob/5b07bb70401093a9ddbb3f2ebc3e2598ec9642d7/website/docs/cli/commands/index.html.md
+
 interface SubcommandLocation {
   command: string; // e.g. "terraform apply"
   url: URL; // e.g. https://www.terraform.io/docs/cli/commands/apply.html
