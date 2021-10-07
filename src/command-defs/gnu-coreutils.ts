@@ -453,6 +453,13 @@ export const fetchPtx: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'pwd',
+    filename: 'pwd.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
