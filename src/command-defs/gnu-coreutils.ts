@@ -397,6 +397,13 @@ export const fetchNumfmt: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchOd: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'od',
+    filename: 'od.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
