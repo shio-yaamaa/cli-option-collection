@@ -111,6 +111,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['numfmt', gnuCoreutils.fetchNumfmt],
   ['od', gnuCoreutils.fetchOd],
   ['paste', gnuCoreutils.fetchPaste],
+  ['pathchk', gnuCoreutils.fetchPathchk],
   ['perl', fetchPerl],
   ['python', fetchPython],
   ['rm', gnuCoreutils.fetchRm],
