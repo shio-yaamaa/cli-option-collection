@@ -113,6 +113,13 @@ export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchCsplit: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'csplit',
+    filename: 'csplit.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'echo',
