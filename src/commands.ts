@@ -71,6 +71,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['ffmpeg', fetchFfmpeg],
   ['ffplay', fetchFfplay],
   ['ffprobe', fetchFfprobe],
+  ['fmt', gnuCoreutils.fetchFmt],
   ['git', fetchGit],
   ['go', fetchGo],
   ['jq', fetchJq],

@@ -219,6 +219,13 @@ export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchFmt: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'fmt',
+    filename: 'fmt.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
