@@ -382,6 +382,13 @@ export const fetchNohup: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchNproc: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'nproc',
+    filename: 'nproc.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
