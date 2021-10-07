@@ -123,6 +123,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['readlink', gnuCoreutils.fetchReadlink],
   ['realpath', gnuCoreutils.fetchRealpath],
   ['rm', gnuCoreutils.fetchRm],
+  ['rmdir', gnuCoreutils.fetchRmdir],
   ['setlock', fetchSetlock],
   ['softlimit', fetchSoftlimit],
   ['sshuttle', fetchSshuttle],

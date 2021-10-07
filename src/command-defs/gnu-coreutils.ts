@@ -480,3 +480,11 @@ export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
     filename: 'rm.1',
     optionsHeadingID: 'OPTIONS',
   });
+
+// BUG: "--ignore-fail-on-non-empty" option is not recognized as an option.
+export const fetchRmdir: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'rmdir',
+    filename: 'rmdir.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
