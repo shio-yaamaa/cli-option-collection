@@ -368,6 +368,13 @@ export const fetchNice: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchNl: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'nl',
+    filename: 'nl.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
