@@ -130,6 +130,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['sha1sum', gnuCoreutils.fetchSha1sum],
   ['sha224sum', gnuCoreutils.fetchSha224sum],
   ['sha256sum', gnuCoreutils.fetchSha256sum],
+  ['sha384sum', gnuCoreutils.fetchSha384sum],
   ['softlimit', fetchSoftlimit],
   ['sshuttle', fetchSshuttle],
   ['svc', fetchSvc],
