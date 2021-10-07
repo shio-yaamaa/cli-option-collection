@@ -46,6 +46,22 @@ export const fetchDocumentFromManPageURL = async (
   });
 };
 
+export const fetchDocumentFromManFile = async (
+  filename: string
+): Promise<Document> => {
+  return new Promise((resolve, reject) => {
+    exec(`cat ${filename} | mandoc -T html`, (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      }
+      if (stderr) {
+        reject(stderr);
+      }
+      resolve(new JSDOM(stdout).window.document);
+    });
+  });
+};
+
 // Returns the path to the downloaded file.
 export const download = async (url: URL, filename: string): Promise<string> => {
   ensureDirSync(DOWNLOADS_DIRECTORY);

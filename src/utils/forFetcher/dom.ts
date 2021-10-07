@@ -3,6 +3,20 @@ export interface DListEntry {
   dd: Element;
 }
 
+// Traverse elements until it reaches an element that satisfies the specified condition
+export const nextClosest = (
+  element: Element,
+  test: (element: Element) => boolean
+): Element | null => {
+  let currentElement: Element | null = element;
+  while ((currentElement = currentElement.nextElementSibling)) {
+    if (test(currentElement)) {
+      return currentElement;
+    }
+  }
+  return null;
+};
+
 // Traverse elements backwards until it reaches an element that satisfies the specified condition
 export const previousClosest = (
   element: Element,
