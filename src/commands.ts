@@ -79,6 +79,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['head', gnuCoreutils.fetchHead],
   ['hostid', gnuCoreutils.fetchHostid],
   ['hostname', gnuCoreutils.fetchHostname],
+  ['id', gnuCoreutils.fetchId],
   ['jq', fetchJq],
   ['magick', fetchMagick],
   ['magick-script', fetchMagickScript],
