@@ -1,146 +1,145 @@
 import { FetchFunction, Command, Option } from '../types';
-import { fetchDocumentFromURL } from '../utils/forFetcher/http';
+import { findDListEntries } from '../utils/forFetcher/dom';
+import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
+import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   makeOptionList,
   mergeOptionTitles,
 } from '../utils/forFetcher/optionString';
+import { normalizeSpacesAndLinebreaks } from '../utils/forFetcher/string';
 import {
+  splitByComma,
   transformOptionStrings,
   trimOptionalElements,
 } from '../utils/forFetcher/transformOptionString';
-import {
-  findHeadingContentsPairs,
-  HeadingContentsPair,
-} from '../utils/forFetcher/utils';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
+// - https://docs.brew.sh/Manpage
 // - https://github.com/Homebrew/brew/blob/master/docs/Manpage.md
-// - https://github.com/Homebrew/brew/blob/master/manpages/brew.1
 
 // NOTE: Sub-subcommands are ignored.
 //       For example, "brew autoupdate start" and "brew autoupdate stop"
 //       are merged into a single subcommand, "brew autoupdate".
 // BUG: Top-level options (e.g. "--env", "--version") are ignored.
 
-const DOC_URL = 'https://docs.brew.sh/Manpage';
+const DOC_URL =
+  'https://raw.githubusercontent.com/Homebrew/brew/master/manpages/brew.1';
 const SUBCOMMAND_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
 export const fetchBrew: FetchFunction = async (): Promise<Command[]> => {
   const url = new URL(DOC_URL);
-  const document = await fetchDocumentFromURL(url);
-  const h3ContentsPairs = findH3ContentsPairs(document);
+  const document = await fetchDocumentFromManPageURL(url);
+  const commandSections = findCommandSections(document);
+  return mergeLists(
+    commandSections.map((section) => commandSectionToCommands(section))
+  );
+};
 
-  const commands: Command[] = [];
-  for (const h3ContentsPair of h3ContentsPairs) {
-    const commandNames = h3ToCommandNames(h3ContentsPair.heading);
-    if (commandNames.length === 0) {
+const findCommandSections = (document: Document): Element[] => {
+  // Collect command sections under these headings.
+  const headingIds = [
+    'COMMANDS',
+    'DEVELOPER_COMMANDS',
+    'OFFICIAL_EXTERNAL_COMMANDS',
+  ];
+
+  const commandSections: Element[] = [];
+  for (const headingId of headingIds) {
+    const heading = document.querySelector(`#${headingId}`);
+    const parentSection = heading?.parentElement;
+    if (!parentSection) {
       continue;
     }
-    const lists = h3ContentsPair.contents.filter(
-      (content): content is HTMLUListElement =>
-        content.tagName.toLowerCase() === 'ul'
+    const childSections = Array.from(parentSection.children).filter(
+      (element) => element.tagName.toLowerCase() === 'section'
     );
-    commands.push(
-      ...commandNames.map((commandName) => ({
-        name: commandName,
-        options: mergeLists(lists.map((list) => listToOptions(list))),
-      }))
-    );
+    commandSections.push(...childSections);
+  }
+
+  return commandSections;
+};
+
+const commandSectionToCommands = (commandSection: Element): Command[] => {
+  const heading = commandSection.firstElementChild;
+  if (!heading) {
+    return [];
+  }
+  const headingText = heading.textContent;
+  if (!headingText) {
+    return [];
+  }
+  const commandNames = headingToCommandNames(headingText);
+  if (commandNames.length === 0) {
+    return [];
+  }
+
+  const optionLists = Array.from(commandSection.querySelectorAll('dl'));
+  const options = uniqueOptions(
+    mergeLists(optionLists.map((list) => optionListToOptions(list)))
+  );
+
+  const commands: Command[] = [];
+  for (const commandName of commandNames) {
+    commands.push({
+      name: commandName,
+      options,
+    });
   }
   return commands;
 };
 
-const findH3ContentsPairs = (
-  document: Document
-): HeadingContentsPair<Element>[] => {
-  // Collect HeadingContentsPair[] under these headings
-  const h2Ids = [
-    'commands',
-    'developer-commands',
-    'official-external-commands',
-  ];
-
-  const page = document.querySelector('#page');
-  if (!page) {
-    return [];
-  }
-  const h2ContentsPairs = findHeadingContentsPairs(
-    Array.from(page.children),
-    (element) => element.tagName.toLowerCase() === 'h2',
-    (element) => element.tagName.toLowerCase() !== 'h1'
-  ).filter((pair) => h2Ids.some((id) => id === pair.heading.id));
-
-  const h3ContentsPairs: HeadingContentsPair<Element>[] = [];
-
-  for (const h2ContentsPair of h2ContentsPairs) {
-    h3ContentsPairs.push(
-      ...findHeadingContentsPairs(
-        h2ContentsPair.contents,
-        (element) => element.tagName.toLowerCase() === 'h3'
-      )
-    );
-  }
-
-  return h3ContentsPairs;
-};
-
-const h3ToCommandNames = (h3: Element): string[] => {
-  const subcommands: string[] = [];
-  for (const element of Array.from(h3.children)) {
-    const previousNode = element.previousSibling;
-    if (element.tagName.toLowerCase() === 'code') {
-      if (previousNode === null || previousNode.textContent?.trim() === ',') {
-        const subcommand = element.textContent?.trim();
-        const matchesPattern =
-          subcommand && SUBCOMMAND_PATTERN.test(subcommand);
-        if (matchesPattern) {
-          subcommands.push(subcommand);
-        }
-        continue;
-      }
+const headingToCommandNames = (heading: string): string[] => {
+  let currentHeading = heading;
+  const firstArguments: string[] = [];
+  while (currentHeading.length > 0) {
+    const nextCommaIndex = currentHeading.indexOf(',');
+    const nextSpaceIndex = currentHeading.indexOf(' ');
+    // The next delimiter is a comma.
+    if (
+      nextCommaIndex >= 0 &&
+      (nextSpaceIndex === -1 || nextCommaIndex < nextSpaceIndex)
+    ) {
+      firstArguments.push(currentHeading.slice(0, nextCommaIndex).trim());
+      // There can be more first arguments.
+      currentHeading = currentHeading.slice(nextCommaIndex + 1).trimStart();
+      continue;
     }
+    // The next delimiter is a space.
+    if (
+      nextSpaceIndex >= 0 &&
+      (nextCommaIndex === -1 || nextSpaceIndex < nextCommaIndex)
+    ) {
+      firstArguments.push(currentHeading.slice(0, nextSpaceIndex).trim());
+      // There are no more first arguments.
+      break;
+    }
+    // There are no more delimiters.
+    firstArguments.push(currentHeading.trim());
     break;
   }
+  const subcommands = firstArguments.filter((argument) =>
+    SUBCOMMAND_PATTERN.test(argument)
+  );
   return subcommands.map((subcommand) => `brew ${subcommand}`);
 };
 
-const listToOptions = (list: HTMLUListElement): Option[] => {
-  const lis = Array.from(list.children).filter(
-    (child): child is HTMLLIElement => child.tagName.toLowerCase() === 'li'
-  );
-  return mergeLists(lis.map((li) => listItemToOptions(li)));
-};
-
-const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
-  const liTextContent = listItem.textContent;
-  if (!liTextContent) {
-    return [];
+const optionListToOptions = (dlist: HTMLDListElement): Option[] => {
+  const dlistEntries = findDListEntries(dlist);
+  const options: Option[] = [];
+  for (const { dts, dd } of dlistEntries) {
+    const dtTexts = dts
+      .map((dt) => dt.textContent)
+      .filter((text): text is string => typeof text === 'string');
+    const title = normalizeSpacesAndLinebreaks(mergeOptionTitles(dtTexts));
+    const description = dd.textContent
+      ? normalizeSpacesAndLinebreaks(dd.textContent.trim()).replace(/´/g, "'")
+      : '';
+    const optionStrings = transformOptionStrings(dtTexts, [
+      splitByComma,
+      trimOptionalElements,
+    ]);
+    options.push(...makeOptionList(optionStrings, title, description));
   }
-  const splitByColon = liTextContent.split(':');
-  if (splitByColon.length < 2) {
-    return [];
-  }
-  const description = splitByColon.slice(1).join(':').trim();
-
-  const optionStrings: string[] = [];
-  for (const element of Array.from(listItem.children)) {
-    const previousNode = element.previousSibling;
-    if (element.tagName.toLowerCase() === 'code') {
-      if (previousNode === null || previousNode.textContent?.trim() === ',') {
-        const textContent = element.textContent;
-        if (textContent) {
-          optionStrings.push(textContent);
-        }
-      } else {
-        break;
-      }
-    }
-  }
-  const title = mergeOptionTitles(optionStrings);
-
-  const transformedOptionStrings = transformOptionStrings(optionStrings, [
-    trimOptionalElements,
-  ]);
-  return makeOptionList(transformedOptionStrings, title, description);
+  return options;
 };
