@@ -1,0 +1,73 @@
+[
+  {
+    "name": "pinky",
+    "options": [
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "produce long format output for the specified USERs"
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "omit the user's home directory and shell in long format"
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "omit the user's project file in long format"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "omit the user's plan file in long format"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "do short format output, this is the default"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "omit the line of column headings in short format"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w",
+        "description": "omit the user's full name in short format"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "omit the user's full name and remote host in short format"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "omit the user's full name, remote host and idle time in short format"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]
