@@ -78,6 +78,13 @@ export const fetchChown: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'OPTIONS',
   });
 
+export const fetchChroot: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'chroot',
+    filename: 'chroot.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',
