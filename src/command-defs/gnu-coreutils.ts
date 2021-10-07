@@ -15,6 +15,13 @@ export const fetchB2sum: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchBase32: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'base32',
+    filename: 'base32.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'cp',
