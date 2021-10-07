@@ -495,3 +495,10 @@ export const fetchRuncon: FetchFunction = async (): Promise<Command[]> =>
     filename: 'runcon.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSeq: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'seq',
+    filename: 'seq.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

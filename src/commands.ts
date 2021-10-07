@@ -126,6 +126,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['rmdir', gnuCoreutils.fetchRmdir],
   ['runcon', gnuCoreutils.fetchRuncon],
   ['setlock', fetchSetlock],
+  ['seq', gnuCoreutils.fetchSeq],
   ['softlimit', fetchSoftlimit],
   ['sshuttle', fetchSshuttle],
   ['svc', fetchSvc],
