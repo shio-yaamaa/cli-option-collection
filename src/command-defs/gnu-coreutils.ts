@@ -275,6 +275,13 @@ export const fetchInstall: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchJoin: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'join',
+    filename: 'join.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
   coreutils({
     commandName: 'rm',
