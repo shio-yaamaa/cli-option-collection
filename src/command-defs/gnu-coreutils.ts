@@ -682,3 +682,10 @@ export const fetchTsort: FetchFunction = async (): Promise<Command[]> =>
     filename: 'tsort.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTty: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tty',
+    filename: 'tty.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
