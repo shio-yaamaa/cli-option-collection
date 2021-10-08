@@ -581,3 +581,10 @@ export const fetchStat: FetchFunction = async (): Promise<Command[]> =>
     filename: 'stat.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchStdbuf: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'stdbuf',
+    filename: 'stdbuf.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
