@@ -595,3 +595,10 @@ export const fetchStty: FetchFunction = async (): Promise<Command[]> =>
     filename: 'stty.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSum: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sum',
+    filename: 'sum.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
