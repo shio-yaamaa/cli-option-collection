@@ -23,6 +23,7 @@ import { fetchMysqlshow } from './command-defs/mysqlshow';
 import { fetchMysqlslap } from './command-defs/mysqlslap';
 import { fetchPerl } from './command-defs/perl';
 import { fetchPython } from './command-defs/python';
+import { fetchRsync } from './command-defs/rsync';
 import { fetchSetlock } from './command-defs/setlock';
 import { fetchSoftlimit } from './command-defs/softlimit';
 import { fetchSshuttle } from './command-defs/sshuttle';
@@ -54,6 +55,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqlslap', fetchMysqlslap],
   ['perl', fetchPerl],
   ['python', fetchPython],
+  ['rsync', fetchRsync],
   ['setlock', fetchSetlock],
   ['softlimit', fetchSoftlimit],
   ['sshuttle', fetchSshuttle],
