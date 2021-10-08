@@ -60,3 +60,8 @@ export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'mapfile',
   });
+
+export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'read',
+  });

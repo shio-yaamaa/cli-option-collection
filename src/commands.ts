@@ -120,6 +120,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['ptx', gnuCoreutils.fetchPtx],
   ['pwd', gnuCoreutils.fetchPwd],
   ['python', fetchPython],
+  ['read', bashBuiltin.fetchRead],
   ['readlink', gnuCoreutils.fetchReadlink],
   ['realpath', gnuCoreutils.fetchRealpath],
   ['rm', gnuCoreutils.fetchRm],
