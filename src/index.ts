@@ -1,4 +1,5 @@
 import { baseCommandToFetchFunction } from './commands';
+// import { prepare } from './prepare';
 import { writeSnapshot } from './snapshot';
 
 const fetchAllCommands = async () => {
@@ -30,3 +31,5 @@ const fetchOptions = async (baseCommandName: string) => {
 
 fetchAllCommands();
 // fetchSpecifiedCommands(['apt-cache']);
+
+// prepare();
