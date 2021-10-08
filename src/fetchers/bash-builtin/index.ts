@@ -48,3 +48,8 @@ export const fetchLocal: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'local',
   });
+
+export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'logout',
+  });
