@@ -90,3 +90,8 @@ export const fetchUlimit: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ulimit',
   });
+
+export const fetchUnalias: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'unalias',
+  });
