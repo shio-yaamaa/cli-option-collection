@@ -689,3 +689,10 @@ export const fetchTty: FetchFunction = async (): Promise<Command[]> =>
     filename: 'tty.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchUname: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'uname',
+    filename: 'uname.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
