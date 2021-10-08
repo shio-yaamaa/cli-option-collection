@@ -38,3 +38,8 @@ export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'help',
   });
+
+export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'let',
+  });

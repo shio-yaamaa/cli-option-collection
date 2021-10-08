@@ -80,6 +80,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['join', gnuCoreutils.fetchJoin],
   ['jq', fetchJq],
   ['kill', gnuCoreutils.fetchKill],
+  ['let', bashBuiltin.fetchLet],
   ['link', gnuCoreutils.fetchLink],
   ['ln', gnuCoreutils.fetchLn],
   ['logname', gnuCoreutils.fetchLogname],
