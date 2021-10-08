@@ -85,3 +85,8 @@ export const fetchTypeset: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'typeset',
   });
+
+export const fetchUlimit: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ulimit',
+  });

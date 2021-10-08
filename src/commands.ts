@@ -163,6 +163,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['tty', gnuCoreutils.fetchTty],
   ['type', bashBuiltin.fetchType],
   ['typeset', bashBuiltin.fetchTypeset],
+  ['ulimit', bashBuiltin.fetchUlimit],
   ['uname', gnuCoreutils.fetchUname],
   ['unexpand', gnuCoreutils.fetchUnexpand],
   ['uniq', gnuCoreutils.fetchUniq],
