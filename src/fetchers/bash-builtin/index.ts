@@ -26,6 +26,11 @@ export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'caller',
   });
 
+export const fetchCommand: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'command',
+  });
+
 export const fetchDeclare: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'declare',
