@@ -731,3 +731,10 @@ export const fetchUsers: FetchFunction = async (): Promise<Command[]> =>
     filename: 'users.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchVdir: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'vdir',
+    filename: 'vdir.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
