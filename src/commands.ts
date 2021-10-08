@@ -1,6 +1,7 @@
 import { FetchFunction } from './types';
 
 import * as apt from './fetchers/apt';
+import * as bashBuiltin from './fetchers/bash-builtin';
 import { fetchBrew } from './fetchers/brew';
 import * as daemontools from './fetchers/daemontools';
 import { fetchDocker } from './fetchers/docker';
@@ -20,6 +21,7 @@ import { fetchTerraform } from './fetchers/terraform';
 import { fetchYarn } from './fetchers/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
+  ['alias', bashBuiltin.fetchAlias],
   ['apt-cache', apt.fetchAptCache],
   ['apt-get', apt.fetchAptGet],
   ['arch', gnuCoreutils.fetchArch],
