@@ -43,3 +43,8 @@ export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'let',
   });
+
+export const fetchLocal: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'local',
+  });

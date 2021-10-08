@@ -83,6 +83,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['let', bashBuiltin.fetchLet],
   ['link', gnuCoreutils.fetchLink],
   ['ln', gnuCoreutils.fetchLn],
+  ['local', bashBuiltin.fetchLocal],
   ['logname', gnuCoreutils.fetchLogname],
   ['ls', gnuCoreutils.fetchLs],
   ['magick', imagemagick.fetchMagick],
