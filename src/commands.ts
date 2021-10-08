@@ -1,23 +1,23 @@
 import { FetchFunction } from './types';
 
-import * as apt from './command-defs/apt';
-import { fetchBrew } from './command-defs/brew';
-import * as daemontools from './command-defs/daemontools';
-import { fetchDocker } from './command-defs/docker';
-import * as ffmpeg from './command-defs/ffmpeg';
-import { fetchGit } from './command-defs/git';
-import * as gnuCoreutils from './command-defs/gnu-coreutils';
-import { fetchGo } from './command-defs/go';
-import * as graphviz from './command-defs/graphviz';
-import * as imagemagick from './command-defs/imagemagick';
-import { fetchJq } from './command-defs/jq';
-import * as mysql from './command-defs/mysql';
-import { fetchPerl } from './command-defs/perl';
-import { fetchPython } from './command-defs/python';
-import { fetchRsync } from './command-defs/rsync';
-import { fetchSshuttle } from './command-defs/sshuttle';
-import { fetchTerraform } from './command-defs/terraform';
-import { fetchYarn } from './command-defs/yarn';
+import * as apt from './fetchers/apt';
+import { fetchBrew } from './fetchers/brew';
+import * as daemontools from './fetchers/daemontools';
+import { fetchDocker } from './fetchers/docker';
+import * as ffmpeg from './fetchers/ffmpeg';
+import { fetchGit } from './fetchers/git';
+import * as gnuCoreutils from './fetchers/gnu-coreutils';
+import { fetchGo } from './fetchers/go';
+import * as graphviz from './fetchers/graphviz';
+import * as imagemagick from './fetchers/imagemagick';
+import { fetchJq } from './fetchers/jq';
+import * as mysql from './fetchers/mysql';
+import { fetchPerl } from './fetchers/perl';
+import { fetchPython } from './fetchers/python';
+import { fetchRsync } from './fetchers/rsync';
+import { fetchSshuttle } from './fetchers/sshuttle';
+import { fetchTerraform } from './fetchers/terraform';
+import { fetchYarn } from './fetchers/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['apt-cache', apt.fetchAptCache],

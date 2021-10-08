@@ -1,25 +1,25 @@
 import path from 'path';
 
-import { Fetcher, Command, Option } from '../types';
-import { findDListEntries, nextClosest } from '../utils/forFetcher/dom';
+import { Fetcher, Command, Option } from '../../types';
+import { findDListEntries } from '../../utils/forFetcher/dom';
 import {
   DOWNLOADS_DIRECTORY,
   fetchDocumentFromManFile,
-} from '../utils/forFetcher/http';
-import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionList } from '../utils/forFetcher/optionString';
+} from '../../utils/forFetcher/http';
+import { uniqueOptions } from '../../utils/forFetcher/options';
+import { makeOptionList } from '../../utils/forFetcher/optionString';
 import {
   normalizeSpacesAndLinebreaks,
   normalizeSpacingAroundComma,
-} from '../utils/forFetcher/string';
+} from '../../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
   trimOptionArguments,
   trimOptionValues,
-} from '../utils/forFetcher/transformOptionString';
-import { mergeLists } from '../utils/utils';
+} from '../../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
@@ -27,7 +27,7 @@ export interface SourceDef {
   optionsHeadingID: string;
 }
 
-export const coreutils: Fetcher<SourceDef> = async (
+export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const filePath = path.resolve(

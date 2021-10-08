@@ -1,24 +1,24 @@
-import { Fetcher, Command, Option } from '../types';
-import { fetchDocumentFromURLViaFilter } from '../utils/forFetcher/http';
+import { Fetcher, Command, Option } from '../../types';
+import { fetchDocumentFromURLViaFilter } from '../../utils/forFetcher/http';
 import {
   findIndentedListItems,
   IndentedListItem,
-} from '../utils/forFetcher/indentedList';
-import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionList } from '../utils/forFetcher/optionString';
+} from '../../utils/forFetcher/indentedList';
+import { uniqueOptions } from '../../utils/forFetcher/options';
+import { makeOptionList } from '../../utils/forFetcher/optionString';
 import {
   splitByComma,
   transformOptionStrings,
   trimOptionArguments,
-} from '../utils/forFetcher/transformOptionString';
-import { mergeLists } from '../utils/utils';
+} from '../../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
   url: URL;
 }
 
-export const apt: Fetcher<SourceDef> = async (
+export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   // Man pages on manpages.ubuntu.com have invalid HTML structure, which tries to close a <div> with a </pre>,

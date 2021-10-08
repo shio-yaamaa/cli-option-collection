@@ -1,8 +1,8 @@
-import { FetchFunction, Command } from '../types';
-import { SourceDef, imagemagick } from '../common-fetchers/imagemagick';
-import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
-import { uniqueBy } from '../utils/utils';
+import { FetchFunction, Command } from '../../types';
+import { SourceDef, fetch } from './fetcher';
+import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
+import { findAnchorsWithPattern } from '../../utils/forFetcher/dom';
+import { uniqueBy } from '../../utils/utils';
 
 const BASE_URL = 'https://imagemagick.org/';
 const COMMAND_LIST_PATH = '/script/command-line-tools.php';
@@ -11,7 +11,7 @@ export const fetchMagick: FetchFunction = async (): Promise<Command[]> => {
   const sourceDefs = await fetchSourceDefs();
   const commands: Command[] = [];
   for (const sourceDef of sourceDefs) {
-    commands.push(...(await imagemagick(sourceDef)));
+    commands.push(...(await fetch(sourceDef)));
   }
   return commands;
 };
@@ -39,7 +39,7 @@ const fetchSourceDefs = async (): Promise<SourceDef[]> => {
 };
 
 export const fetchMagickScript: FetchFunction = async (): Promise<Command[]> =>
-  imagemagick({
+  fetch({
     commandName: 'magick-script',
     url: new URL('https://imagemagick.org/script/magick-script.php'),
   });
