@@ -136,6 +136,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['shuf', gnuCoreutils.fetchShuf],
   ['sleep', gnuCoreutils.fetchSleep],
   ['softlimit', fetchSoftlimit],
+  ['sort', gnuCoreutils.fetchSort],
   ['sshuttle', fetchSshuttle],
   ['svc', fetchSvc],
   ['terraform', fetchTerraform],

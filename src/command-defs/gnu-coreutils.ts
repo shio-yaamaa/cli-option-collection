@@ -558,3 +558,10 @@ export const fetchSleep: FetchFunction = async (): Promise<Command[]> =>
     filename: 'sleep.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSort: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sort',
+    filename: 'sort.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
