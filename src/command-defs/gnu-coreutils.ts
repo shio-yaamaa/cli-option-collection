@@ -724,3 +724,10 @@ export const fetchUptime: FetchFunction = async (): Promise<Command[]> =>
     filename: 'uptime.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchUsers: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'users',
+    filename: 'users.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
