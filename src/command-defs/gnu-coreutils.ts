@@ -745,3 +745,10 @@ export const fetchWc: FetchFunction = async (): Promise<Command[]> =>
     filename: 'wc.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchWho: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'who',
+    filename: 'who.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
