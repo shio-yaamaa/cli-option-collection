@@ -57,6 +57,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['dot', graphviz.fetchDot],
   ['du', gnuCoreutils.fetchDu],
   ['echo', gnuCoreutils.fetchEcho],
+  ['enable', bashBuiltin.fetchEnable],
   ['env', gnuCoreutils.fetchEnv],
   ['expand', gnuCoreutils.fetchExpand],
   ['expr', gnuCoreutils.fetchExpr],
