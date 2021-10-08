@@ -1,0 +1,91 @@
+[
+  {
+    "name": "bind",
+    "options": [
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m keymap",
+        "description": "Use keymap as the keymap to be affected by the subsequent bindings. Acceptable keymap names are emacs, emacs-standard, emacs-meta, emacs-ctlx, vi, vi-move, vi-command, and vi-insert. vi is equivalent to vi-command (vi-move is also a synonym); emacs is equivalent to emacs-standard."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "List the names of all Readline functions."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "Display Readline function names and bindings in such a way that they can be used as input or in a Readline initialization file."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "List current Readline function names and bindings."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Display Readline variable names and values in such a way that they can be used as input or in a Readline initialization file."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V",
+        "description": "List current Readline variable names and values."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Display Readline key sequences bound to macros and the strings they output in such a way that they can be used as input or in a Readline initialization file."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "Display Readline key sequences bound to macros and the strings they output."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f filename",
+        "description": "Read key bindings from filename."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q function",
+        "description": "Query about which keys invoke the named function."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u function",
+        "description": "Unbind all keys bound to the named function."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r keyseq",
+        "description": "Remove any current binding for keyseq."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x keyseq:shell-command",
+        "description": "Cause shell-command to be executed whenever keyseq is entered. When shell-command is executed, the shell sets the READLINE_LINE variable to the contents of the Readline line buffer and the READLINE_POINT and READLINE_MARK variables to the current location of the insertion point and the saved insertion point (the mark), respectively. If the executed command changes the value of any of READLINE_LINE, READLINE_POINT, or READLINE_MARK, those new values will be reflected in the editing state."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "List all key sequences bound to shell commands and the associated commands in a format that can be reused as input."
+      }
+    ]
+  }
+]

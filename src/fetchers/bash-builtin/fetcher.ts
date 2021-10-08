@@ -3,6 +3,7 @@ import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
+import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimOptionArguments,
@@ -73,10 +74,9 @@ const dlistEntryToOptions = (dlistEntry: DListEntry): Option[] => {
   if (!title) {
     return [];
   }
-  const optionStrings = transformOptionStrings([title], [trimOptionArguments]);
-  return makeOptionList(
-    optionStrings,
-    title,
+  const description = normalizeSpacesAndLinebreaks(
     dlistEntry.dd.textContent?.trim() ?? ''
   );
+  const optionStrings = transformOptionStrings([title], [trimOptionArguments]);
+  return makeOptionList(optionStrings, title, description);
 };
