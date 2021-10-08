@@ -1,0 +1,37 @@
+[
+  {
+    "name": "tty",
+    "options": [
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --silent, --quiet",
+        "description": "print nothing, only return an exit status"
+      },
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "-s, --silent, --quiet",
+        "description": "print nothing, only return an exit status"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "-s, --silent, --quiet",
+        "description": "print nothing, only return an exit status"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

@@ -565,3 +565,204 @@ export const fetchSort: FetchFunction = async (): Promise<Command[]> =>
     filename: 'sort.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSplit: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'split',
+    filename: 'split.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+// BUG: "-c" and "--format" are not recognized as separate options
+//      because they are not delimited by "," in the man page.
+export const fetchStat: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'stat',
+    filename: 'stat.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchStdbuf: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'stdbuf',
+    filename: 'stdbuf.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchStty: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'stty',
+    filename: 'stty.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchSum: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sum',
+    filename: 'sum.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchSync: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sync',
+    filename: 'sync.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTac: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tac',
+    filename: 'tac.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTail: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tail',
+    filename: 'tail.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTee: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tee',
+    filename: 'tee.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+// NOTE: Options used in the middle of expressions are not recognized as options.
+export const fetchTest: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'test',
+    filename: 'test.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+// BUG: Some of the options of "timeout" command are not fetched
+//      because their markup structures are inconsistent.
+export const fetchTimeout: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'timeout',
+    filename: 'timeout.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTouch: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'touch',
+    filename: 'touch.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTr: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tr',
+    filename: 'tr.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'true',
+    filename: 'true.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTruncate: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'truncate',
+    filename: 'truncate.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTsort: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tsort',
+    filename: 'tsort.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTty: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tty',
+    filename: 'tty.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUname: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'uname',
+    filename: 'uname.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUnexpand: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'unexpand',
+    filename: 'unexpand.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUniq: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'uniq',
+    filename: 'uniq.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUnlink: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'unlink',
+    filename: 'unlink.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUptime: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'uptime',
+    filename: 'uptime.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUsers: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'users',
+    filename: 'users.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchVdir: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'vdir',
+    filename: 'vdir.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchWc: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'wc',
+    filename: 'wc.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchWho: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'who',
+    filename: 'who.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchWhoami: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'whoami',
+    filename: 'whoami.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchYes: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'yes',
+    filename: 'yes.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

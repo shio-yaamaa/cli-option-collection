@@ -1,0 +1,73 @@
+[
+  {
+    "name": "stat",
+    "options": [
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L, --dereference",
+        "description": "follow links"
+      },
+      {
+        "type": "long",
+        "key": "dereference",
+        "title": "-L, --dereference",
+        "description": "follow links"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --file-system",
+        "description": "display file system status instead of file status"
+      },
+      {
+        "type": "long",
+        "key": "file-system",
+        "title": "-f, --file-system",
+        "description": "display file system status instead of file status"
+      },
+      {
+        "type": "long",
+        "key": "cached",
+        "title": "--cached=MODE",
+        "description": "specify how to use cached attributes; useful on remote file systems. See\n      MODE below"
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c --format=FORMAT",
+        "description": "use the specified FORMAT instead of the default; output a newline after\n      each use of FORMAT"
+      },
+      {
+        "type": "long",
+        "key": "printf",
+        "title": "--printf=FORMAT",
+        "description": "like --format, but interpret backslash escapes, and do not output a\n      mandatory trailing newline; if you want a newline, include \\n in\n    FORMAT"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --terse",
+        "description": "print the information in terse form"
+      },
+      {
+        "type": "long",
+        "key": "terse",
+        "title": "-t, --terse",
+        "description": "print the information in terse form"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "name": "tee",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a, --append",
+        "description": "append to the given FILEs, do not overwrite"
+      },
+      {
+        "type": "long",
+        "key": "append",
+        "title": "-a, --append",
+        "description": "append to the given FILEs, do not overwrite"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --ignore-interrupts",
+        "description": "ignore interrupt signals"
+      },
+      {
+        "type": "long",
+        "key": "ignore-interrupts",
+        "title": "-i, --ignore-interrupts",
+        "description": "ignore interrupt signals"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "diagnose errors writing to non pipes"
+      },
+      {
+        "type": "long",
+        "key": "output-error",
+        "title": "--output-error[=MODE]",
+        "description": "set behavior on write error. See MODE below"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "name": "stdbuf",
+    "options": [
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --input=MODE",
+        "description": "adjust standard input stream buffering"
+      },
+      {
+        "type": "long",
+        "key": "input",
+        "title": "-i, --input=MODE",
+        "description": "adjust standard input stream buffering"
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o, --output=MODE",
+        "description": "adjust standard output stream buffering"
+      },
+      {
+        "type": "long",
+        "key": "output",
+        "title": "-o, --output=MODE",
+        "description": "adjust standard output stream buffering"
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e, --error=MODE",
+        "description": "adjust standard error stream buffering"
+      },
+      {
+        "type": "long",
+        "key": "error",
+        "title": "-e, --error=MODE",
+        "description": "adjust standard error stream buffering"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]
