@@ -565,3 +565,10 @@ export const fetchSort: FetchFunction = async (): Promise<Command[]> =>
     filename: 'sort.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSplit: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'split',
+    filename: 'split.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
