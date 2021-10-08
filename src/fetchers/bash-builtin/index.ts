@@ -75,3 +75,8 @@ export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'source',
   });
+
+export const fetchType: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'type',
+  });
