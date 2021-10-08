@@ -630,3 +630,11 @@ export const fetchTee: FetchFunction = async (): Promise<Command[]> =>
     filename: 'tee.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+// NOTE: Options used in the middle of expressions are not recognized as options.
+export const fetchTest: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'test',
+    filename: 'test.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
