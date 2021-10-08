@@ -168,5 +168,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['vdir', gnuCoreutils.fetchVdir],
   ['wc', gnuCoreutils.fetchWc],
   ['who', gnuCoreutils.fetchWho],
+  ['whoami', gnuCoreutils.fetchWhoami],
   ['yarn', fetchYarn],
 ]);

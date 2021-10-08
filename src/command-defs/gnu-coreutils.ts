@@ -752,3 +752,10 @@ export const fetchWho: FetchFunction = async (): Promise<Command[]> =>
     filename: 'who.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchWhoami: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'whoami',
+    filename: 'whoami.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
