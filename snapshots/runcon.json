@@ -1,0 +1,79 @@
+[
+  {
+    "name": "runcon",
+    "options": [
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --compute",
+        "description": "compute process transition context before modifying"
+      },
+      {
+        "type": "long",
+        "key": "compute",
+        "title": "-c, --compute",
+        "description": "compute process transition context before modifying"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --type=TYPE",
+        "description": "type (for same role as parent)"
+      },
+      {
+        "type": "long",
+        "key": "type",
+        "title": "-t, --type=TYPE",
+        "description": "type (for same role as parent)"
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u, --user=USER",
+        "description": "user identity"
+      },
+      {
+        "type": "long",
+        "key": "user",
+        "title": "-u, --user=USER",
+        "description": "user identity"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r, --role=ROLE",
+        "description": "role"
+      },
+      {
+        "type": "long",
+        "key": "role",
+        "title": "-r, --role=ROLE",
+        "description": "role"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l, --range=RANGE",
+        "description": "levelrange"
+      },
+      {
+        "type": "long",
+        "key": "range",
+        "title": "-l, --range=RANGE",
+        "description": "levelrange"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

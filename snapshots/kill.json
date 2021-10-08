@@ -1,0 +1,43 @@
+[
+  {
+    "name": "kill",
+    "options": [
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l, --list",
+        "description": "list signal names, or convert signal names to/from numbers"
+      },
+      {
+        "type": "long",
+        "key": "list",
+        "title": "-l, --list",
+        "description": "list signal names, or convert signal names to/from numbers"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --table",
+        "description": "print a table of signal information"
+      },
+      {
+        "type": "long",
+        "key": "table",
+        "title": "-t, --table",
+        "description": "print a table of signal information"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

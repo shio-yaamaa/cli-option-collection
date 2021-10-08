@@ -1,0 +1,43 @@
+[
+  {
+    "name": "rmdir",
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p, --parents",
+        "description": "remove DIRECTORY and its ancestors; e.g., 'rmdir -p a/b/c' is\n      similar to 'rmdir a/b/c a/b a'"
+      },
+      {
+        "type": "long",
+        "key": "parents",
+        "title": "-p, --parents",
+        "description": "remove DIRECTORY and its ancestors; e.g., 'rmdir -p a/b/c' is\n      similar to 'rmdir a/b/c a/b a'"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v, --verbose",
+        "description": "output a diagnostic for every directory processed"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "-v, --verbose",
+        "description": "output a diagnostic for every directory processed"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

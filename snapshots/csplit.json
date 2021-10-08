@@ -1,0 +1,103 @@
+[
+  {
+    "name": "csplit",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --suffix-format=FORMAT",
+        "description": "use sprintf FORMAT instead of %02d"
+      },
+      {
+        "type": "long",
+        "key": "suffix-format",
+        "title": "-b, --suffix-format=FORMAT",
+        "description": "use sprintf FORMAT instead of %02d"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --prefix=PREFIX",
+        "description": "use PREFIX instead of 'xx'"
+      },
+      {
+        "type": "long",
+        "key": "prefix",
+        "title": "-f, --prefix=PREFIX",
+        "description": "use PREFIX instead of 'xx'"
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k, --keep-files",
+        "description": "do not remove output files on errors"
+      },
+      {
+        "type": "long",
+        "key": "keep-files",
+        "title": "-k, --keep-files",
+        "description": "do not remove output files on errors"
+      },
+      {
+        "type": "long",
+        "key": "suppress-matched",
+        "title": "--suppress-matched",
+        "description": "suppress the lines matching PATTERN"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n, --digits=DIGITS",
+        "description": "use specified number of digits instead of 2"
+      },
+      {
+        "type": "long",
+        "key": "digits",
+        "title": "-n, --digits=DIGITS",
+        "description": "use specified number of digits instead of 2"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --quiet, --silent",
+        "description": "do not print counts of output file sizes"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "-s, --quiet, --silent",
+        "description": "do not print counts of output file sizes"
+      },
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "-s, --quiet, --silent",
+        "description": "do not print counts of output file sizes"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --elide-empty-files",
+        "description": "remove empty output files"
+      },
+      {
+        "type": "long",
+        "key": "elide-empty-files",
+        "title": "-z, --elide-empty-files",
+        "description": "remove empty output files"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

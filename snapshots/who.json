@@ -1,0 +1,193 @@
+[
+  {
+    "name": "who",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a, --all",
+        "description": "same as -b -d --login -p -r -t\n      -T -u"
+      },
+      {
+        "type": "long",
+        "key": "all",
+        "title": "-a, --all",
+        "description": "same as -b -d --login -p -r -t\n      -T -u"
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --boot",
+        "description": "time of last system boot"
+      },
+      {
+        "type": "long",
+        "key": "boot",
+        "title": "-b, --boot",
+        "description": "time of last system boot"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --dead",
+        "description": "print dead processes"
+      },
+      {
+        "type": "long",
+        "key": "dead",
+        "title": "-d, --dead",
+        "description": "print dead processes"
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H, --heading",
+        "description": "print line of column headings"
+      },
+      {
+        "type": "long",
+        "key": "heading",
+        "title": "-H, --heading",
+        "description": "print line of column headings"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l, --login",
+        "description": "print system login processes"
+      },
+      {
+        "type": "long",
+        "key": "login",
+        "title": "-l, --login",
+        "description": "print system login processes"
+      },
+      {
+        "type": "long",
+        "key": "lookup",
+        "title": "--lookup",
+        "description": "attempt to canonicalize hostnames via DNS"
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "only hostname and user associated with stdin"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p, --process",
+        "description": "print active processes spawned by init"
+      },
+      {
+        "type": "long",
+        "key": "process",
+        "title": "-p, --process",
+        "description": "print active processes spawned by init"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q, --count",
+        "description": "all login names and number of users logged on"
+      },
+      {
+        "type": "long",
+        "key": "count",
+        "title": "-q, --count",
+        "description": "all login names and number of users logged on"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r, --runlevel",
+        "description": "print current runlevel"
+      },
+      {
+        "type": "long",
+        "key": "runlevel",
+        "title": "-r, --runlevel",
+        "description": "print current runlevel"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --short",
+        "description": "print only name, line, and time (default)"
+      },
+      {
+        "type": "long",
+        "key": "short",
+        "title": "-s, --short",
+        "description": "print only name, line, and time (default)"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --time",
+        "description": "print last system clock change"
+      },
+      {
+        "type": "long",
+        "key": "time",
+        "title": "-t, --time",
+        "description": "print last system clock change"
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T, -w, --mesg",
+        "description": "add user's message status as +, - or ?"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-T, -w, --mesg",
+        "description": "add user's message status as +, - or ?"
+      },
+      {
+        "type": "long",
+        "key": "mesg",
+        "title": "-T, -w, --mesg",
+        "description": "add user's message status as +, - or ?"
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u, --users",
+        "description": "list users logged in"
+      },
+      {
+        "type": "long",
+        "key": "users",
+        "title": "-u, --users",
+        "description": "list users logged in"
+      },
+      {
+        "type": "long",
+        "key": "message",
+        "title": "--message",
+        "description": "same as -T"
+      },
+      {
+        "type": "long",
+        "key": "writable",
+        "title": "--writable",
+        "description": "same as -T"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

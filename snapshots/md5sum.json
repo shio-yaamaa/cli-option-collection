@@ -1,0 +1,109 @@
+[
+  {
+    "name": "md5sum",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --binary",
+        "description": "read in binary mode"
+      },
+      {
+        "type": "long",
+        "key": "binary",
+        "title": "-b, --binary",
+        "description": "read in binary mode"
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --check",
+        "description": "read checksums from the FILEs and check them"
+      },
+      {
+        "type": "long",
+        "key": "check",
+        "title": "-c, --check",
+        "description": "read checksums from the FILEs and check them"
+      },
+      {
+        "type": "long",
+        "key": "tag",
+        "title": "--tag",
+        "description": "create a BSD-style checksum"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --text",
+        "description": "read in text mode (default)"
+      },
+      {
+        "type": "long",
+        "key": "text",
+        "title": "-t, --text",
+        "description": "read in text mode (default)"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline, and disable file name\n    escaping"
+      },
+      {
+        "type": "long",
+        "key": "zero",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline, and disable file name\n    escaping"
+      },
+      {
+        "type": "long",
+        "key": "ignore-missing",
+        "title": "--ignore-missing",
+        "description": "don't fail or report status for missing files"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "--quiet",
+        "description": "don't print OK for each successfully verified file"
+      },
+      {
+        "type": "long",
+        "key": "status",
+        "title": "--status",
+        "description": "don't output anything, status code shows success"
+      },
+      {
+        "type": "long",
+        "key": "strict",
+        "title": "--strict",
+        "description": "exit non-zero for improperly formatted checksum lines"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w, --warn",
+        "description": "warn about improperly formatted checksum lines"
+      },
+      {
+        "type": "long",
+        "key": "warn",
+        "title": "-w, --warn",
+        "description": "warn about improperly formatted checksum lines"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

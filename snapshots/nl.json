@@ -1,0 +1,151 @@
+[
+  {
+    "name": "nl",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --body-numbering=STYLE",
+        "description": "use STYLE for numbering body lines"
+      },
+      {
+        "type": "long",
+        "key": "body-numbering",
+        "title": "-b, --body-numbering=STYLE",
+        "description": "use STYLE for numbering body lines"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --section-delimiter=CC",
+        "description": "use CC for logical page delimiters"
+      },
+      {
+        "type": "long",
+        "key": "section-delimiter",
+        "title": "-d, --section-delimiter=CC",
+        "description": "use CC for logical page delimiters"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --footer-numbering=STYLE",
+        "description": "use STYLE for numbering footer lines"
+      },
+      {
+        "type": "long",
+        "key": "footer-numbering",
+        "title": "-f, --footer-numbering=STYLE",
+        "description": "use STYLE for numbering footer lines"
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h, --header-numbering=STYLE",
+        "description": "use STYLE for numbering header lines"
+      },
+      {
+        "type": "long",
+        "key": "header-numbering",
+        "title": "-h, --header-numbering=STYLE",
+        "description": "use STYLE for numbering header lines"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --line-increment=NUMBER",
+        "description": "line number increment at each line"
+      },
+      {
+        "type": "long",
+        "key": "line-increment",
+        "title": "-i, --line-increment=NUMBER",
+        "description": "line number increment at each line"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l, --join-blank-lines=NUMBER",
+        "description": "group of NUMBER empty lines counted as one"
+      },
+      {
+        "type": "long",
+        "key": "join-blank-lines",
+        "title": "-l, --join-blank-lines=NUMBER",
+        "description": "group of NUMBER empty lines counted as one"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n, --number-format=FORMAT",
+        "description": "insert line numbers according to FORMAT"
+      },
+      {
+        "type": "long",
+        "key": "number-format",
+        "title": "-n, --number-format=FORMAT",
+        "description": "insert line numbers according to FORMAT"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p, --no-renumber",
+        "description": "do not reset line numbers for each section"
+      },
+      {
+        "type": "long",
+        "key": "no-renumber",
+        "title": "-p, --no-renumber",
+        "description": "do not reset line numbers for each section"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --number-separator=STRING",
+        "description": "add STRING after (possible) line number"
+      },
+      {
+        "type": "long",
+        "key": "number-separator",
+        "title": "-s, --number-separator=STRING",
+        "description": "add STRING after (possible) line number"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v, --starting-line-number=NUMBER",
+        "description": "first line number for each section"
+      },
+      {
+        "type": "long",
+        "key": "starting-line-number",
+        "title": "-v, --starting-line-number=NUMBER",
+        "description": "first line number for each section"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w, --number-width=NUMBER",
+        "description": "use NUMBER columns for line numbers"
+      },
+      {
+        "type": "long",
+        "key": "number-width",
+        "title": "-w, --number-width=NUMBER",
+        "description": "use NUMBER columns for line numbers"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

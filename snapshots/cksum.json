@@ -1,0 +1,121 @@
+[
+  {
+    "name": "cksum",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a, --algorithm=TYPE",
+        "description": "select the digest type to use. See DIGEST below."
+      },
+      {
+        "type": "long",
+        "key": "algorithm",
+        "title": "-a, --algorithm=TYPE",
+        "description": "select the digest type to use. See DIGEST below."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --check",
+        "description": "read checksums from the FILEs and check them"
+      },
+      {
+        "type": "long",
+        "key": "check",
+        "title": "-c, --check",
+        "description": "read checksums from the FILEs and check them"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l, --length=BITS",
+        "description": "digest length in bits; must not exceed the max for the blake2 algorithm\n      and must be a multiple of 8"
+      },
+      {
+        "type": "long",
+        "key": "length",
+        "title": "-l, --length=BITS",
+        "description": "digest length in bits; must not exceed the max for the blake2 algorithm\n      and must be a multiple of 8"
+      },
+      {
+        "type": "long",
+        "key": "tag",
+        "title": "--tag",
+        "description": "create a BSD-style checksum (the default)"
+      },
+      {
+        "type": "long",
+        "key": "untagged",
+        "title": "--untagged",
+        "description": "create a reversed style checksum, without digest type"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline, and disable file name\n    escaping"
+      },
+      {
+        "type": "long",
+        "key": "zero",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline, and disable file name\n    escaping"
+      },
+      {
+        "type": "long",
+        "key": "ignore-missing",
+        "title": "--ignore-missing",
+        "description": "don't fail or report status for missing files"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "--quiet",
+        "description": "don't print OK for each successfully verified file"
+      },
+      {
+        "type": "long",
+        "key": "status",
+        "title": "--status",
+        "description": "don't output anything, status code shows success"
+      },
+      {
+        "type": "long",
+        "key": "strict",
+        "title": "--strict",
+        "description": "exit non-zero for improperly formatted checksum lines"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w, --warn",
+        "description": "warn about improperly formatted checksum lines"
+      },
+      {
+        "type": "long",
+        "key": "warn",
+        "title": "-w, --warn",
+        "description": "warn about improperly formatted checksum lines"
+      },
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug",
+        "description": "indicate which implementation used"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

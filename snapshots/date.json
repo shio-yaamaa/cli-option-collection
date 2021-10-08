@@ -1,0 +1,121 @@
+[
+  {
+    "name": "date",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --date=STRING",
+        "description": "display time described by STRING, not 'now'"
+      },
+      {
+        "type": "long",
+        "key": "date",
+        "title": "-d, --date=STRING",
+        "description": "display time described by STRING, not 'now'"
+      },
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug",
+        "description": "annotate the parsed date, and warn about questionable usage to stderr"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --file=DATEFILE",
+        "description": "like --date; once for each line of DATEFILE"
+      },
+      {
+        "type": "long",
+        "key": "file",
+        "title": "-f, --file=DATEFILE",
+        "description": "like --date; once for each line of DATEFILE"
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I[FMT], --iso-8601[=FMT]",
+        "description": "output date/time in ISO 8601 format. FMT='date' for date only (the\n      default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the\n      indicated precision. Example: 2006-08-14T02:34:56-06:00"
+      },
+      {
+        "type": "long",
+        "key": "iso-8601",
+        "title": "-I[FMT], --iso-8601[=FMT]",
+        "description": "output date/time in ISO 8601 format. FMT='date' for date only (the\n      default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the\n      indicated precision. Example: 2006-08-14T02:34:56-06:00"
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R, --rfc-email",
+        "description": "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006\n      02:34:56 -0600"
+      },
+      {
+        "type": "long",
+        "key": "rfc-email",
+        "title": "-R, --rfc-email",
+        "description": "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006\n      02:34:56 -0600"
+      },
+      {
+        "type": "long",
+        "key": "rfc-3339",
+        "title": "--rfc-3339=FMT",
+        "description": "output date/time in RFC 3339 format. FMT='date', 'seconds', or 'ns' for\n      date and time to the indicated precision. Example: 2006-08-14\n      02:34:56-06:00"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r, --reference=FILE",
+        "description": "display the last modification time of FILE"
+      },
+      {
+        "type": "long",
+        "key": "reference",
+        "title": "-r, --reference=FILE",
+        "description": "display the last modification time of FILE"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --set=STRING",
+        "description": "set time described by STRING"
+      },
+      {
+        "type": "long",
+        "key": "set",
+        "title": "-s, --set=STRING",
+        "description": "set time described by STRING"
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u, --utc, --universal",
+        "description": "print or set Coordinated Universal Time (UTC)"
+      },
+      {
+        "type": "long",
+        "key": "utc",
+        "title": "-u, --utc, --universal",
+        "description": "print or set Coordinated Universal Time (UTC)"
+      },
+      {
+        "type": "long",
+        "key": "universal",
+        "title": "-u, --utc, --universal",
+        "description": "print or set Coordinated Universal Time (UTC)"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

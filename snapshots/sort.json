@@ -1,0 +1,319 @@
+[
+  {
+    "name": "sort",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --ignore-leading-blanks",
+        "description": "ignore leading blanks"
+      },
+      {
+        "type": "long",
+        "key": "ignore-leading-blanks",
+        "title": "-b, --ignore-leading-blanks",
+        "description": "ignore leading blanks"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --dictionary-order",
+        "description": "consider only blanks and alphanumeric characters"
+      },
+      {
+        "type": "long",
+        "key": "dictionary-order",
+        "title": "-d, --dictionary-order",
+        "description": "consider only blanks and alphanumeric characters"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --ignore-case",
+        "description": "fold lower case to upper case characters"
+      },
+      {
+        "type": "long",
+        "key": "ignore-case",
+        "title": "-f, --ignore-case",
+        "description": "fold lower case to upper case characters"
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g, --general-numeric-sort",
+        "description": "compare according to general numerical value"
+      },
+      {
+        "type": "long",
+        "key": "general-numeric-sort",
+        "title": "-g, --general-numeric-sort",
+        "description": "compare according to general numerical value"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --ignore-nonprinting",
+        "description": "consider only printable characters"
+      },
+      {
+        "type": "long",
+        "key": "ignore-nonprinting",
+        "title": "-i, --ignore-nonprinting",
+        "description": "consider only printable characters"
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M, --month-sort",
+        "description": "compare (unknown) < 'JAN' < ... < 'DEC'"
+      },
+      {
+        "type": "long",
+        "key": "month-sort",
+        "title": "-M, --month-sort",
+        "description": "compare (unknown) < 'JAN' < ... < 'DEC'"
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h, --human-numeric-sort",
+        "description": "compare human readable numbers (e.g., 2K 1G)"
+      },
+      {
+        "type": "long",
+        "key": "human-numeric-sort",
+        "title": "-h, --human-numeric-sort",
+        "description": "compare human readable numbers (e.g., 2K 1G)"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n, --numeric-sort",
+        "description": "compare according to string numerical value"
+      },
+      {
+        "type": "long",
+        "key": "numeric-sort",
+        "title": "-n, --numeric-sort",
+        "description": "compare according to string numerical value"
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R, --random-sort",
+        "description": "shuffle, but group identical keys. See shuf(1)"
+      },
+      {
+        "type": "long",
+        "key": "random-sort",
+        "title": "-R, --random-sort",
+        "description": "shuffle, but group identical keys. See shuf(1)"
+      },
+      {
+        "type": "long",
+        "key": "random-source",
+        "title": "--random-source=FILE",
+        "description": "get random bytes from FILE"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r, --reverse",
+        "description": "reverse the result of comparisons"
+      },
+      {
+        "type": "long",
+        "key": "reverse",
+        "title": "-r, --reverse",
+        "description": "reverse the result of comparisons"
+      },
+      {
+        "type": "long",
+        "key": "sort",
+        "title": "--sort=WORD",
+        "description": "sort according to WORD: general-numeric -g, human-numeric\n      -h, month -M, numeric -n, random -R, version\n      -V"
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V, --version-sort",
+        "description": "natural sort of (version) numbers within text"
+      },
+      {
+        "type": "long",
+        "key": "version-sort",
+        "title": "-V, --version-sort",
+        "description": "natural sort of (version) numbers within text"
+      },
+      {
+        "type": "long",
+        "key": "batch-size",
+        "title": "--batch-size=NMERGE",
+        "description": "merge at most NMERGE inputs at once; for more use temp files"
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --check, --check=diagnose-first",
+        "description": "check for sorted input; do not sort"
+      },
+      {
+        "type": "long",
+        "key": "check",
+        "title": "-c, --check, --check=diagnose-first",
+        "description": "check for sorted input; do not sort"
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C, --check=quiet, --check=silent",
+        "description": "like -c, but do not report first bad line"
+      },
+      {
+        "type": "long",
+        "key": "compress-program",
+        "title": "--compress-program=PROG",
+        "description": "compress temporaries with PROG; decompress them with PROG -d"
+      },
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "--debug",
+        "description": "annotate the part of the line used to sort, and warn about questionable\n      usage to stderr"
+      },
+      {
+        "type": "long",
+        "key": "files0-from",
+        "title": "--files0-from=F",
+        "description": "read input from the files specified by NUL-terminated names in file F; If\n      F is - then read names from standard input"
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k, --key=KEYDEF",
+        "description": "sort via a key; KEYDEF gives location and type"
+      },
+      {
+        "type": "long",
+        "key": "key",
+        "title": "-k, --key=KEYDEF",
+        "description": "sort via a key; KEYDEF gives location and type"
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m, --merge",
+        "description": "merge already sorted files; do not sort"
+      },
+      {
+        "type": "long",
+        "key": "merge",
+        "title": "-m, --merge",
+        "description": "merge already sorted files; do not sort"
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o, --output=FILE",
+        "description": "write result to FILE instead of standard output"
+      },
+      {
+        "type": "long",
+        "key": "output",
+        "title": "-o, --output=FILE",
+        "description": "write result to FILE instead of standard output"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --stable",
+        "description": "stabilize sort by disabling last-resort comparison"
+      },
+      {
+        "type": "long",
+        "key": "stable",
+        "title": "-s, --stable",
+        "description": "stabilize sort by disabling last-resort comparison"
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S, --buffer-size=SIZE",
+        "description": "use SIZE for main memory buffer"
+      },
+      {
+        "type": "long",
+        "key": "buffer-size",
+        "title": "-S, --buffer-size=SIZE",
+        "description": "use SIZE for main memory buffer"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --field-separator=SEP",
+        "description": "use SEP instead of non-blank to blank transition"
+      },
+      {
+        "type": "long",
+        "key": "field-separator",
+        "title": "-t, --field-separator=SEP",
+        "description": "use SEP instead of non-blank to blank transition"
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T, --temporary-directory=DIR",
+        "description": "use DIR for temporaries, not $TMPDIR or /tmp; multiple options\n      specify multiple directories"
+      },
+      {
+        "type": "long",
+        "key": "temporary-directory",
+        "title": "-T, --temporary-directory=DIR",
+        "description": "use DIR for temporaries, not $TMPDIR or /tmp; multiple options\n      specify multiple directories"
+      },
+      {
+        "type": "long",
+        "key": "parallel",
+        "title": "--parallel=N",
+        "description": "change the number of sorts run concurrently to N"
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u, --unique",
+        "description": "with -c, check for strict ordering; without -c, output only\n      the first of an equal run"
+      },
+      {
+        "type": "long",
+        "key": "unique",
+        "title": "-u, --unique",
+        "description": "with -c, check for strict ordering; without -c, output only\n      the first of an equal run"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero-terminated",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

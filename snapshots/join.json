@@ -1,0 +1,109 @@
+[
+  {
+    "name": "join",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a FILENUM",
+        "description": "also print unpairable lines from file FILENUM, where FILENUM is 1 or 2,\n      corresponding to FILE1 or FILE2"
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e EMPTY",
+        "description": "replace missing input fields with EMPTY"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --ignore-case",
+        "description": "ignore differences in case when comparing fields"
+      },
+      {
+        "type": "long",
+        "key": "ignore-case",
+        "title": "-i, --ignore-case",
+        "description": "ignore differences in case when comparing fields"
+      },
+      {
+        "type": "short",
+        "key": "j",
+        "title": "-j FIELD",
+        "description": "equivalent to '-1 FIELD -2 FIELD'"
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o FORMAT",
+        "description": "obey FORMAT while constructing output line"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t CHAR",
+        "description": "use CHAR as input and output field separator"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v FILENUM",
+        "description": "like -a FILENUM, but suppress joined output lines"
+      },
+      {
+        "type": "short",
+        "key": "1",
+        "title": "-1 FIELD",
+        "description": "join on this FIELD of file 1"
+      },
+      {
+        "type": "short",
+        "key": "2",
+        "title": "-2 FIELD",
+        "description": "join on this FIELD of file 2"
+      },
+      {
+        "type": "long",
+        "key": "check-order",
+        "title": "--check-order",
+        "description": "check that the input is correctly sorted, even if all input lines are\n      pairable"
+      },
+      {
+        "type": "long",
+        "key": "nocheck-order",
+        "title": "--nocheck-order",
+        "description": "do not check that the input is correctly sorted"
+      },
+      {
+        "type": "long",
+        "key": "header",
+        "title": "--header",
+        "description": "treat the first line in each file as field headers, print them without\n      trying to pair them"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero-terminated",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

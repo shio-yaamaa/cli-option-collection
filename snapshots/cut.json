@@ -1,0 +1,115 @@
+[
+  {
+    "name": "cut",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --bytes=LIST",
+        "description": "select only these bytes"
+      },
+      {
+        "type": "long",
+        "key": "bytes",
+        "title": "-b, --bytes=LIST",
+        "description": "select only these bytes"
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, --characters=LIST",
+        "description": "select only these characters"
+      },
+      {
+        "type": "long",
+        "key": "characters",
+        "title": "-c, --characters=LIST",
+        "description": "select only these characters"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --delimiter=DELIM",
+        "description": "use DELIM instead of TAB for field delimiter"
+      },
+      {
+        "type": "long",
+        "key": "delimiter",
+        "title": "-d, --delimiter=DELIM",
+        "description": "use DELIM instead of TAB for field delimiter"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --fields=LIST",
+        "description": "select only these fields; also print any line that contains no delimiter\n      character, unless the -s option is specified"
+      },
+      {
+        "type": "long",
+        "key": "fields",
+        "title": "-f, --fields=LIST",
+        "description": "select only these fields; also print any line that contains no delimiter\n      character, unless the -s option is specified"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "(ignored)"
+      },
+      {
+        "type": "long",
+        "key": "complement",
+        "title": "--complement",
+        "description": "complement the set of selected bytes, characters or fields"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --only-delimited",
+        "description": "do not print lines not containing delimiters"
+      },
+      {
+        "type": "long",
+        "key": "only-delimited",
+        "title": "-s, --only-delimited",
+        "description": "do not print lines not containing delimiters"
+      },
+      {
+        "type": "long",
+        "key": "output-delimiter",
+        "title": "--output-delimiter=STRING",
+        "description": "use STRING as the output delimiter the default is to use the input\n      delimiter"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero-terminated",
+        "title": "-z, --zero-terminated",
+        "description": "line delimiter is NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M",
+        "description": "from first to M'th (included) byte, character or field"
+      }
+    ]
+  }
+]

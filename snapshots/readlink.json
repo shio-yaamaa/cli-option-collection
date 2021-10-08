@@ -1,0 +1,103 @@
+[
+  {
+    "name": "readlink",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f, --canonicalize",
+        "description": "canonicalize by following every symlink in every component of the given\n      name recursively; all but the last component must exist"
+      },
+      {
+        "type": "long",
+        "key": "canonicalize",
+        "title": "-f, --canonicalize",
+        "description": "canonicalize by following every symlink in every component of the given\n      name recursively; all but the last component must exist"
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e, --canonicalize-existing",
+        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, all components must exist"
+      },
+      {
+        "type": "long",
+        "key": "canonicalize-existing",
+        "title": "-e, --canonicalize-existing",
+        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, all components must exist"
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m, --canonicalize-missing",
+        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, without requirements on components existence"
+      },
+      {
+        "type": "long",
+        "key": "canonicalize-missing",
+        "title": "-m, --canonicalize-missing",
+        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, without requirements on components existence"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n, --no-newline",
+        "description": "do not output the trailing delimiter"
+      },
+      {
+        "type": "long",
+        "key": "no-newline",
+        "title": "-n, --no-newline",
+        "description": "do not output the trailing delimiter"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --silent",
+        "description": "suppress most error messages (on by default)"
+      },
+      {
+        "type": "long",
+        "key": "silent",
+        "title": "-s, --silent",
+        "description": "suppress most error messages (on by default)"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v, --verbose",
+        "description": "report error messages"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "-v, --verbose",
+        "description": "report error messages"
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "zero",
+        "title": "-z, --zero",
+        "description": "end each output line with NUL, not newline"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

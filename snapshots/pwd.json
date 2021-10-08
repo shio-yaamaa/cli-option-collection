@@ -1,0 +1,43 @@
+[
+  {
+    "name": "pwd",
+    "options": [
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L, --logical",
+        "description": "use PWD from environment, even if it contains symlinks"
+      },
+      {
+        "type": "long",
+        "key": "logical",
+        "title": "-L, --logical",
+        "description": "use PWD from environment, even if it contains symlinks"
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P, --physical",
+        "description": "avoid all symlinks"
+      },
+      {
+        "type": "long",
+        "key": "physical",
+        "title": "-P, --physical",
+        "description": "avoid all symlinks"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

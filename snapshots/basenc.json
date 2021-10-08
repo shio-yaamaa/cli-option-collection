@@ -1,0 +1,103 @@
+[
+  {
+    "name": "basenc",
+    "options": [
+      {
+        "type": "long",
+        "key": "base64",
+        "title": "--base64",
+        "description": "same as 'base64' program (RFC4648 section 4)"
+      },
+      {
+        "type": "long",
+        "key": "base64url",
+        "title": "--base64url",
+        "description": "file- and url-safe base64 (RFC4648 section 5)"
+      },
+      {
+        "type": "long",
+        "key": "base32",
+        "title": "--base32",
+        "description": "same as 'base32' program (RFC4648 section 6)"
+      },
+      {
+        "type": "long",
+        "key": "base32hex",
+        "title": "--base32hex",
+        "description": "extended hex alphabet base32 (RFC4648 section 7)"
+      },
+      {
+        "type": "long",
+        "key": "base16",
+        "title": "--base16",
+        "description": "hex encoding (RFC4648 section 8)"
+      },
+      {
+        "type": "long",
+        "key": "base2msbf",
+        "title": "--base2msbf",
+        "description": "bit string with most significant bit (msb) first"
+      },
+      {
+        "type": "long",
+        "key": "base2lsbf",
+        "title": "--base2lsbf",
+        "description": "bit string with least significant bit (lsb) first"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --decode",
+        "description": "decode data"
+      },
+      {
+        "type": "long",
+        "key": "decode",
+        "title": "-d, --decode",
+        "description": "decode data"
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --ignore-garbage",
+        "description": "when decoding, ignore non-alphabet characters"
+      },
+      {
+        "type": "long",
+        "key": "ignore-garbage",
+        "title": "-i, --ignore-garbage",
+        "description": "when decoding, ignore non-alphabet characters"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w, --wrap=COLS",
+        "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable\n      line wrapping"
+      },
+      {
+        "type": "long",
+        "key": "wrap",
+        "title": "-w, --wrap=COLS",
+        "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable\n      line wrapping"
+      },
+      {
+        "type": "long",
+        "key": "z85",
+        "title": "--z85",
+        "description": "ascii85-like encoding (ZeroMQ spec:32/Z85); when encoding, input length\n      must be a multiple of 4; when decoding, input length must be a multiple of\n      5"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

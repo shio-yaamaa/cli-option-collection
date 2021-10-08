@@ -1,0 +1,79 @@
+[
+  {
+    "name": "mktemp",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --directory",
+        "description": "create a directory, not a file"
+      },
+      {
+        "type": "long",
+        "key": "directory",
+        "title": "-d, --directory",
+        "description": "create a directory, not a file"
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u, --dry-run",
+        "description": "do not create anything; merely print a name (unsafe)"
+      },
+      {
+        "type": "long",
+        "key": "dry-run",
+        "title": "-u, --dry-run",
+        "description": "do not create anything; merely print a name (unsafe)"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q, --quiet",
+        "description": "suppress diagnostics about file/dir-creation failure"
+      },
+      {
+        "type": "long",
+        "key": "quiet",
+        "title": "-q, --quiet",
+        "description": "suppress diagnostics about file/dir-creation failure"
+      },
+      {
+        "type": "long",
+        "key": "suffix",
+        "title": "--suffix=SUFF",
+        "description": "append SUFF to TEMPLATE; SUFF must not contain a slash. This option is\n      implied if TEMPLATE does not end in X"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p DIR, --tmpdir[=DIR]",
+        "description": "interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR\n      if set, else /tmp. With this option, TEMPLATE must not be an\n      absolute name; unlike with -t, TEMPLATE may contain slashes, but\n      mktemp creates only the final component"
+      },
+      {
+        "type": "long",
+        "key": "tmpdir",
+        "title": "-p DIR, --tmpdir[=DIR]",
+        "description": "interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR\n      if set, else /tmp. With this option, TEMPLATE must not be an\n      absolute name; unlike with -t, TEMPLATE may contain slashes, but\n      mktemp creates only the final component"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "interpret TEMPLATE as a single file name component, relative to a\n      directory: $TMPDIR, if set; else the directory specified via -p;\n      else /tmp [deprecated]"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

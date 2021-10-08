@@ -1,0 +1,199 @@
+[
+  {
+    "name": "install",
+    "options": [
+      {
+        "type": "long",
+        "key": "backup",
+        "title": "--backup[=CONTROL]",
+        "description": "make a backup of each existing destination file"
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "like --backup but does not accept an argument"
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "(ignored)"
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C, --compare",
+        "description": "compare each pair of source and destination files, and in some cases, do\n      not modify the destination at all"
+      },
+      {
+        "type": "long",
+        "key": "compare",
+        "title": "-C, --compare",
+        "description": "compare each pair of source and destination files, and in some cases, do\n      not modify the destination at all"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --directory",
+        "description": "treat all arguments as directory names; create all components of the\n      specified directories"
+      },
+      {
+        "type": "long",
+        "key": "directory",
+        "title": "-d, --directory",
+        "description": "treat all arguments as directory names; create all components of the\n      specified directories"
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D",
+        "description": "create all leading components of DEST except the last, or all components\n      of --target-directory, then copy SOURCE to DEST"
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g, --group=GROUP",
+        "description": "set group ownership, instead of process' current group"
+      },
+      {
+        "type": "long",
+        "key": "group",
+        "title": "-g, --group=GROUP",
+        "description": "set group ownership, instead of process' current group"
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m, --mode=MODE",
+        "description": "set permission mode (as in chmod), instead of rwxr-xr-x"
+      },
+      {
+        "type": "long",
+        "key": "mode",
+        "title": "-m, --mode=MODE",
+        "description": "set permission mode (as in chmod), instead of rwxr-xr-x"
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o, --owner=OWNER",
+        "description": "set ownership (super-user only)"
+      },
+      {
+        "type": "long",
+        "key": "owner",
+        "title": "-o, --owner=OWNER",
+        "description": "set ownership (super-user only)"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p, --preserve-timestamps",
+        "description": "apply access/modification times of SOURCE files to corresponding\n      destination files"
+      },
+      {
+        "type": "long",
+        "key": "preserve-timestamps",
+        "title": "-p, --preserve-timestamps",
+        "description": "apply access/modification times of SOURCE files to corresponding\n      destination files"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --strip",
+        "description": "strip symbol tables"
+      },
+      {
+        "type": "long",
+        "key": "strip",
+        "title": "-s, --strip",
+        "description": "strip symbol tables"
+      },
+      {
+        "type": "long",
+        "key": "strip-program",
+        "title": "--strip-program=PROGRAM",
+        "description": "program used to strip binaries"
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S, --suffix=SUFFIX",
+        "description": "override the usual backup suffix"
+      },
+      {
+        "type": "long",
+        "key": "suffix",
+        "title": "-S, --suffix=SUFFIX",
+        "description": "override the usual backup suffix"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --target-directory=DIRECTORY",
+        "description": "copy all SOURCE arguments into DIRECTORY"
+      },
+      {
+        "type": "long",
+        "key": "target-directory",
+        "title": "-t, --target-directory=DIRECTORY",
+        "description": "copy all SOURCE arguments into DIRECTORY"
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T, --no-target-directory",
+        "description": "treat DEST as a normal file"
+      },
+      {
+        "type": "long",
+        "key": "no-target-directory",
+        "title": "-T, --no-target-directory",
+        "description": "treat DEST as a normal file"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v, --verbose",
+        "description": "print the name of each directory as it is created"
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "-v, --verbose",
+        "description": "print the name of each directory as it is created"
+      },
+      {
+        "type": "long",
+        "key": "preserve-context",
+        "title": "--preserve-context",
+        "description": "preserve SELinux security context"
+      },
+      {
+        "type": "short",
+        "key": "Z",
+        "title": "-Z",
+        "description": "set SELinux security context of destination file and each created\n      directory to default type"
+      },
+      {
+        "type": "long",
+        "key": "context",
+        "title": "--context[=CTX]",
+        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK\n      security context to CTX"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]
