@@ -661,3 +661,10 @@ export const fetchTr: FetchFunction = async (): Promise<Command[]> =>
     filename: 'tr.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'true',
+    filename: 'true.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
