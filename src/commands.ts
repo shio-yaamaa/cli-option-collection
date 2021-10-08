@@ -121,6 +121,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['pwd', gnuCoreutils.fetchPwd],
   ['python', fetchPython],
   ['read', bashBuiltin.fetchRead],
+  ['readarray', bashBuiltin.fetchReadarray],
   ['readlink', gnuCoreutils.fetchReadlink],
   ['realpath', gnuCoreutils.fetchRealpath],
   ['rm', gnuCoreutils.fetchRm],

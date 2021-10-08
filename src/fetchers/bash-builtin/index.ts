@@ -65,3 +65,8 @@ export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'read',
   });
+
+export const fetchReadarray: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'readarray',
+  });
