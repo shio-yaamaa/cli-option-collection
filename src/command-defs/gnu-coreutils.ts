@@ -588,3 +588,10 @@ export const fetchStdbuf: FetchFunction = async (): Promise<Command[]> =>
     filename: 'stdbuf.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchStty: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'stty',
+    filename: 'stty.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
