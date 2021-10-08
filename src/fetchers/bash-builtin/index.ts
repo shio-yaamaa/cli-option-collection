@@ -53,3 +53,8 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'logout',
   });
+
+export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'mapfile',
+  });

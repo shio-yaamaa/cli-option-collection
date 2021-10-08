@@ -1,0 +1,55 @@
+[
+  {
+    "name": "mapfile",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "The first character of delim is used to terminate each input line, rather than newline. If delim is the empty string, mapfile will terminate a line when it reads a NUL character."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Copy at most count lines. If count is 0, all lines are copied."
+      },
+      {
+        "type": "short",
+        "key": "O",
+        "title": "-O",
+        "description": "Begin assigning to array at index origin. The default index is 0."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Discard the first count lines read."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Remove a trailing delim (default newline) from each line read."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Read lines from file descriptor fd instead of the standard input."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C",
+        "description": "Evaluate callback each time quantum lines are read. The -c option specifies quantum."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Specify the number of lines read between each call to callback."
+      }
+    ]
+  }
+]
