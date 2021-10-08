@@ -140,6 +140,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['sleep', gnuCoreutils.fetchSleep],
   ['softlimit', daemontools.fetchSoftlimit],
   ['sort', gnuCoreutils.fetchSort],
+  ['source', bashBuiltin.fetchSource],
   ['split', gnuCoreutils.fetchSplit],
   ['sshuttle', fetchSshuttle],
   ['stat', gnuCoreutils.fetchStat],
