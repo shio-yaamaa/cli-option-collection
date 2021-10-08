@@ -3,6 +3,8 @@ import { fetch } from './fetcher';
 
 // NOTE: Some options are not listed in the <dt>-<dd> format and just explained in the text paragraphs.
 //       Those options are not collected because they cannot be parsed in a consistent way.
+// NOTE: Some options overlap the options collected from other sources like GNU CoreUtils.
+//       Those options are not listed in this fetchXxx function list.
 
 export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
   fetch({
