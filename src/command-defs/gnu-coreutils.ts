@@ -572,3 +572,12 @@ export const fetchSplit: FetchFunction = async (): Promise<Command[]> =>
     filename: 'split.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+// BUG: "-c" and "--format" are not recognized as separate options
+//      because they are not delimited by "," in the man page.
+export const fetchStat: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'stat',
+    filename: 'stat.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
