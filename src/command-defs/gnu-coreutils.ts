@@ -738,3 +738,10 @@ export const fetchVdir: FetchFunction = async (): Promise<Command[]> =>
     filename: 'vdir.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchWc: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'wc',
+    filename: 'wc.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

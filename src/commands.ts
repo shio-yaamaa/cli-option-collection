@@ -166,5 +166,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['uptime', gnuCoreutils.fetchUptime],
   ['users', gnuCoreutils.fetchUsers],
   ['vdir', gnuCoreutils.fetchVdir],
+  ['wc', gnuCoreutils.fetchWc],
   ['yarn', fetchYarn],
 ]);
