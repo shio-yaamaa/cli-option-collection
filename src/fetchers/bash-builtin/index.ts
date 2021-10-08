@@ -10,3 +10,8 @@ export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'bind',
   });
+
+export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'builtin',
+  });
