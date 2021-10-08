@@ -1,9 +1,79 @@
-import { FetchFunction, Command } from '../types';
-import { SourceDef, rsync } from '../common-fetchers/rsync';
+import { FetchFunction, Command, Option } from '../types';
+import { fetchDocumentFromURL } from '../utils/forFetcher/http';
+import { parseTabbedTextList } from '../utils/forFetcher/listParser';
+import { uniqueOptions } from '../utils/forFetcher/options';
+import { makeOptionList } from '../utils/forFetcher/optionString';
+import {
+  splitByComma,
+  transformOptionStrings,
+  trimOptionalElements,
+  trimOptionArguments,
+  trimOptionValues,
+} from '../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../utils/utils';
 
-const sourceDef: SourceDef = {
-  url: 'https://raw.githubusercontent.com/WayneD/rsync/master/rsync.1.md',
+// Alternative sources:
+// - https://raw.githubusercontent.com/WayneD/rsync/master/rsync.1.md
+
+// NOTE: There are multiple interpretations of -h and -M.
+//       Only the first one is listed in the result.
+
+const DOC_URL = 'https://download.samba.org/pub/rsync/rsync.1';
+
+export const fetchRsync: FetchFunction = async (): Promise<Command[]> => {
+  const document = await fetchDocumentFromURL(new URL(DOC_URL));
+  const optionLists = findOptionLists(document);
+  const options = mergeLists(optionLists.map((list) => listToOptions(list)));
+
+  return [
+    {
+      name: 'rsync',
+      options: uniqueOptions(options),
+    },
+  ];
 };
 
-export const fetchRsync: FetchFunction = async (): Promise<Command[]> =>
-  rsync(sourceDef);
+const findOptionLists = (document: Document): Element[] => {
+  const h1s = Array.from(document.querySelectorAll('h1'));
+  const optionSummaryHeading = h1s.find(
+    (element) => element.textContent === 'OPTION SUMMARY'
+  );
+  if (!optionSummaryHeading) {
+    return [];
+  }
+  const lists: Element[] = [];
+  let currentElement: Element | null = optionSummaryHeading;
+  while ((currentElement = currentElement.nextElementSibling)) {
+    if (currentElement?.tagName.toLowerCase() === 'h1') {
+      break;
+    }
+    if (currentElement.tagName.toLowerCase() === 'pre') {
+      lists.push(currentElement);
+    }
+  }
+  return lists;
+};
+
+const listToOptions = (list: Element): Option[] => {
+  const text = list.textContent;
+  if (!text) {
+    return [];
+  }
+  const listItems = parseTabbedTextList(text);
+  const options: Option[] = [];
+  for (const { title, descriptionLines } of listItems) {
+    const optionStrings = transformOptionStrings(
+      [title],
+      [
+        splitByComma,
+        trimOptionalElements,
+        trimOptionArguments,
+        trimOptionValues,
+      ]
+    );
+    options.push(
+      ...makeOptionList(optionStrings, title, descriptionLines.join(' '))
+    );
+  }
+  return options;
+};
