@@ -144,6 +144,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['stty', gnuCoreutils.fetchStty],
   ['sum', gnuCoreutils.fetchSum],
   ['svc', fetchSvc],
+  ['sync', gnuCoreutils.fetchSync],
   ['terraform', fetchTerraform],
   ['yarn', fetchYarn],
 ]);

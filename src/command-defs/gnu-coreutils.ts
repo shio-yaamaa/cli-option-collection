@@ -602,3 +602,10 @@ export const fetchSum: FetchFunction = async (): Promise<Command[]> =>
     filename: 'sum.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSync: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'sync',
+    filename: 'sync.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
