@@ -80,3 +80,8 @@ export const fetchType: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'type',
   });
+
+export const fetchTypeset: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'typeset',
+  });

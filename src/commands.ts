@@ -162,6 +162,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['tsort', gnuCoreutils.fetchTsort],
   ['tty', gnuCoreutils.fetchTty],
   ['type', bashBuiltin.fetchType],
+  ['typeset', bashBuiltin.fetchTypeset],
   ['uname', gnuCoreutils.fetchUname],
   ['unexpand', gnuCoreutils.fetchUnexpand],
   ['uniq', gnuCoreutils.fetchUniq],
