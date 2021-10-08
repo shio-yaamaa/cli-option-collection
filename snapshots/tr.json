@@ -1,0 +1,73 @@
+[
+  {
+    "name": "tr",
+    "options": [
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c, -C, --complement",
+        "description": "use the complement of SET1"
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-c, -C, --complement",
+        "description": "use the complement of SET1"
+      },
+      {
+        "type": "long",
+        "key": "complement",
+        "title": "-c, -C, --complement",
+        "description": "use the complement of SET1"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --delete",
+        "description": "delete characters in SET1, do not translate"
+      },
+      {
+        "type": "long",
+        "key": "delete",
+        "title": "-d, --delete",
+        "description": "delete characters in SET1, do not translate"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s, --squeeze-repeats",
+        "description": "replace each sequence of a repeated character that is listed in the last\n      specified SET, with a single occurrence of that character"
+      },
+      {
+        "type": "long",
+        "key": "squeeze-repeats",
+        "title": "-s, --squeeze-repeats",
+        "description": "replace each sequence of a repeated character that is listed in the last\n      specified SET, with a single occurrence of that character"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t, --truncate-set1",
+        "description": "first truncate SET1 to length of SET2"
+      },
+      {
+        "type": "long",
+        "key": "truncate-set1",
+        "title": "-t, --truncate-set1",
+        "description": "first truncate SET1 to length of SET2"
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "--help",
+        "description": "display this help and exit"
+      },
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "output version information and exit"
+      }
+    ]
+  }
+]

@@ -654,3 +654,10 @@ export const fetchTouch: FetchFunction = async (): Promise<Command[]> =>
     filename: 'touch.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTr: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tr',
+    filename: 'tr.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

@@ -154,5 +154,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['test', gnuCoreutils.fetchTest],
   ['timeout', gnuCoreutils.fetchTimeout],
   ['touch', gnuCoreutils.fetchTouch],
+  ['tr', gnuCoreutils.fetchTr],
   ['yarn', fetchYarn],
 ]);
