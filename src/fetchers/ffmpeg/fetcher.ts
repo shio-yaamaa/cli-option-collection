@@ -1,20 +1,20 @@
-import { Fetcher, Command, Option, OptionType } from '../types';
-import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
-import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { uniqueOptions } from '../utils/forFetcher/options';
+import { Fetcher, Command, Option, OptionType } from '../../types';
+import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
+import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
+import { uniqueOptions } from '../../utils/forFetcher/options';
 import {
   makeOptionListForSingleDashStyle,
   mergeOptionTitles,
-} from '../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+} from '../../utils/forFetcher/optionString';
+import { normalizeSpacingAroundComma } from '../../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
   trimAfterColons,
   trimOptionalElements,
   trimOptionArguments,
-} from '../utils/forFetcher/transformOptionString';
-import { mergeLists } from '../utils/utils';
+} from '../../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../../utils/utils';
 
 // BUG: "no" prefix is not considered.
 // NOTE: ffmpeg uses single dash for both single-letter and multiple-letter options,
@@ -25,7 +25,7 @@ export interface SourceDef {
   url: URL;
 }
 
-export const ffmpeg: Fetcher<SourceDef> = async (
+export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(sourceDef.url);

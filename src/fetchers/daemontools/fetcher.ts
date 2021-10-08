@@ -1,19 +1,19 @@
-import { Fetcher, Command, Option } from '../types';
-import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionList } from '../utils/forFetcher/optionString';
+import { Fetcher, Command, Option } from '../../types';
+import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
+import { uniqueOptions } from '../../utils/forFetcher/options';
+import { makeOptionList } from '../../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
   trimOptionArguments,
-} from '../utils/forFetcher/transformOptionString';
-import { mergeLists } from '../utils/utils';
+} from '../../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
   url: URL;
 }
 
-export const daemontools: Fetcher<SourceDef> = async (
+export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(sourceDef.url);

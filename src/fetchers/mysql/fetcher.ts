@@ -1,14 +1,14 @@
-import { Fetcher, Command, Option } from '../types';
-import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { makeOptionList } from '../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { Fetcher, Command, Option } from '../../types';
+import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
+import { makeOptionList } from '../../utils/forFetcher/optionString';
+import { normalizeSpacingAroundComma } from '../../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
   trimOptionArguments,
   trimOptionValues,
-} from '../utils/forFetcher/transformOptionString';
+} from '../../utils/forFetcher/transformOptionString';
 
 export interface SourceDef {
   commandName: string;
@@ -21,7 +21,7 @@ interface OptionTableItem {
   description: string;
 }
 
-export const mysql: Fetcher<SourceDef> = async (
+export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(sourceDef.url);

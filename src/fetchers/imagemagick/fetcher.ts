@@ -1,19 +1,19 @@
-import { Fetcher, Command, Option } from '../types';
-import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
-import { normalizeSpacesAndLinebreaks } from '../utils/forFetcher/string';
+import { Fetcher, Command, Option } from '../../types';
+import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
+import { uniqueOptions } from '../../utils/forFetcher/options';
+import { makeOptionListForSingleDashStyle } from '../../utils/forFetcher/optionString';
+import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimOptionArguments,
-} from '../utils/forFetcher/transformOptionString';
+} from '../../utils/forFetcher/transformOptionString';
 
 export interface SourceDef {
   commandName: string;
   url: URL;
 }
 
-export const imagemagick: Fetcher<SourceDef> = async (
+export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(sourceDef.url);

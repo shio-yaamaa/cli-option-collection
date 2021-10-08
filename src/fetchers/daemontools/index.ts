@@ -1,20 +1,20 @@
-import { FetchFunction, Command } from '../types';
-import { daemontools } from '../common-fetchers/daemontools';
+import { FetchFunction, Command } from '../../types';
+import { fetch } from './fetcher';
 
 export const fetchSetlock: FetchFunction = async (): Promise<Command[]> =>
-  daemontools({
+  fetch({
     commandName: 'setlock',
     url: new URL('https://cr.yp.to/daemontools/setlock.html'),
   });
 
 export const fetchSoftlimit: FetchFunction = async (): Promise<Command[]> =>
-  daemontools({
+  fetch({
     commandName: 'softlimit',
     url: new URL('https://cr.yp.to/daemontools/softlimit.html'),
   });
 
 export const fetchSvc: FetchFunction = async (): Promise<Command[]> =>
-  daemontools({
+  fetch({
     commandName: 'svc',
     url: new URL('https://cr.yp.to/daemontools/svc.html'),
   });
