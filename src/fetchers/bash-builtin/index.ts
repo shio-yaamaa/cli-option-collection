@@ -23,3 +23,8 @@ export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'caller',
   });
+
+export const fetchDeclare: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'declare',
+  });

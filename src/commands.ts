@@ -48,6 +48,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['cut', gnuCoreutils.fetchCut],
   ['date', gnuCoreutils.fetchDate],
   ['dd', gnuCoreutils.fetchDd],
+  ['declare', bashBuiltin.fetchDeclare],
   ['df', gnuCoreutils.fetchDf],
   ['dir', gnuCoreutils.fetchDir],
   ['dircolors', gnuCoreutils.fetchDircolors],

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "declare",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Each name is an indexed array variable (see Arrays)."
+      },
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "Each name is an associative array variable (see Arrays)."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Use function names only."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "The variable is to be treated as an integer; arithmetic evaluation (see Shell Arithmetic) is performed when the variable is assigned a value."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "When the variable is assigned a value, all upper-case characters are converted to lower-case. The upper-case attribute is disabled."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Give each name the nameref attribute, making it a name reference to another variable. That other variable is defined by the value of name. All references, assignments, and attribute modifications to name, except for those using or changing the -n attribute itself, are performed on the variable referenced by name’s value. The nameref attribute cannot be applied to array variables."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Make names readonly. These names cannot then be assigned values by subsequent assignment statements or unset."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Give each name the trace attribute. Traced functions inherit the DEBUG and RETURN traps from the calling shell. The trace attribute has no special meaning for variables."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "When the variable is assigned a value, all lower-case characters are converted to upper-case. The lower-case attribute is disabled."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Mark each name for export to subsequent commands via the environment."
+      }
+    ]
+  }
+]
