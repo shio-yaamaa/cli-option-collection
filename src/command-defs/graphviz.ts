@@ -17,8 +17,6 @@ import {
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
-// Graphviz
-
 // Alternative sources:
 // - https://graphviz.org/doc/info/command.html
 
