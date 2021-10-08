@@ -710,3 +710,10 @@ export const fetchUniq: FetchFunction = async (): Promise<Command[]> =>
     filename: 'uniq.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchUnlink: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'unlink',
+    filename: 'unlink.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
