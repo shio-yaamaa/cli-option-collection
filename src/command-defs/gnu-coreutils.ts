@@ -616,3 +616,10 @@ export const fetchTac: FetchFunction = async (): Promise<Command[]> =>
     filename: 'tac.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTail: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tail',
+    filename: 'tail.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
