@@ -37,3 +37,9 @@ const fetchSourceDefs = async (): Promise<SourceDef[]> => {
   }
   return uniqueBy(sourceDefs, (sourceDef) => sourceDef.url.toString());
 };
+
+export const fetchMagickScript: FetchFunction = async (): Promise<Command[]> =>
+  imagemagick({
+    commandName: 'magick-script',
+    url: new URL('https://imagemagick.org/script/magick-script.php'),
+  });

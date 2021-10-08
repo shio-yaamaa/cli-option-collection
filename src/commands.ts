@@ -1,40 +1,27 @@
 import { FetchFunction } from './types';
 
-import { fetchAptCache } from './command-defs/apt-cache';
-import { fetchAptGet } from './command-defs/apt-get';
+import * as apt from './command-defs/apt';
 import { fetchBrew } from './command-defs/brew';
+import * as daemontools from './command-defs/daemontools';
 import { fetchDocker } from './command-defs/docker';
-import { fetchDot } from './command-defs/dot';
-import { fetchFfmpeg } from './command-defs/ffmpeg';
-import { fetchFfplay } from './command-defs/ffplay';
-import { fetchFfprobe } from './command-defs/ffprobe';
+import * as ffmpeg from './command-defs/ffmpeg';
 import { fetchGit } from './command-defs/git';
 import * as gnuCoreutils from './command-defs/gnu-coreutils';
 import { fetchGo } from './command-defs/go';
+import * as graphviz from './command-defs/graphviz';
+import * as imagemagick from './command-defs/imagemagick';
 import { fetchJq } from './command-defs/jq';
-import { fetchMagick } from './command-defs/magick';
-import { fetchMagickScript } from './command-defs/magick-script';
-import { fetchMysql } from './command-defs/mysql';
-import { fetchMysqladmin } from './command-defs/mysqladmin';
-import { fetchMysqlcheck } from './command-defs/mysqlcheck';
-import { fetchMysqldump } from './command-defs/mysqldump';
-import { fetchMysqlimport } from './command-defs/mysqlimport';
-import { fetchMysqlpump } from './command-defs/mysqlpump';
-import { fetchMysqlshow } from './command-defs/mysqlshow';
-import { fetchMysqlslap } from './command-defs/mysqlslap';
+import * as mysql from './command-defs/mysql';
 import { fetchPerl } from './command-defs/perl';
 import { fetchPython } from './command-defs/python';
 import { fetchRsync } from './command-defs/rsync';
-import { fetchSetlock } from './command-defs/setlock';
-import { fetchSoftlimit } from './command-defs/softlimit';
 import { fetchSshuttle } from './command-defs/sshuttle';
-import { fetchSvc } from './command-defs/svc';
 import { fetchTerraform } from './command-defs/terraform';
 import { fetchYarn } from './command-defs/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
-  ['apt-cache', fetchAptCache],
-  ['apt-get', fetchAptGet],
+  ['apt-cache', apt.fetchAptCache],
+  ['apt-get', apt.fetchAptGet],
   ['arch', gnuCoreutils.fetchArch],
   ['b2sum', gnuCoreutils.fetchB2sum],
   ['base32', gnuCoreutils.fetchBase32],
@@ -61,7 +48,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['dircolors', gnuCoreutils.fetchDircolors],
   ['dirname', gnuCoreutils.fetchDirname],
   ['docker', fetchDocker],
-  ['dot', fetchDot],
+  ['dot', graphviz.fetchDot],
   ['du', gnuCoreutils.fetchDu],
   ['echo', gnuCoreutils.fetchEcho],
   ['env', gnuCoreutils.fetchEnv],
@@ -69,9 +56,9 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['expr', gnuCoreutils.fetchExpr],
   ['factor', gnuCoreutils.fetchFactor],
   ['false', gnuCoreutils.fetchFalse],
-  ['ffmpeg', fetchFfmpeg],
-  ['ffplay', fetchFfplay],
-  ['ffprobe', fetchFfprobe],
+  ['ffmpeg', ffmpeg.fetchFfmpeg],
+  ['ffplay', ffmpeg.fetchFfplay],
+  ['ffprobe', ffmpeg.fetchFfprobe],
   ['fmt', gnuCoreutils.fetchFmt],
   ['fold', gnuCoreutils.fetchFold],
   ['git', fetchGit],
@@ -89,22 +76,22 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['ln', gnuCoreutils.fetchLn],
   ['logname', gnuCoreutils.fetchLogname],
   ['ls', gnuCoreutils.fetchLs],
-  ['magick', fetchMagick],
-  ['magick-script', fetchMagickScript],
+  ['magick', imagemagick.fetchMagick],
+  ['magick-script', imagemagick.fetchMagickScript],
   ['md5sum', gnuCoreutils.fetchMd5sum],
   ['mkdir', gnuCoreutils.fetchMkdir],
   ['mkfifo', gnuCoreutils.fetchMkfifo],
   ['mknod', gnuCoreutils.fetchMknod],
   ['mktemp', gnuCoreutils.fetchMktemp],
   ['mv', gnuCoreutils.fetchMv],
-  ['mysql', fetchMysql],
-  ['mysqladmin', fetchMysqladmin],
-  ['mysqlcheck', fetchMysqlcheck],
-  ['mysqldump', fetchMysqldump],
-  ['mysqlimport', fetchMysqlimport],
-  ['mysqlpump', fetchMysqlpump],
-  ['mysqlshow', fetchMysqlshow],
-  ['mysqlslap', fetchMysqlslap],
+  ['mysql', mysql.fetchMysql],
+  ['mysqladmin', mysql.fetchMysqladmin],
+  ['mysqlcheck', mysql.fetchMysqlcheck],
+  ['mysqldump', mysql.fetchMysqldump],
+  ['mysqlimport', mysql.fetchMysqlimport],
+  ['mysqlpump', mysql.fetchMysqlpump],
+  ['mysqlshow', mysql.fetchMysqlshow],
+  ['mysqlslap', mysql.fetchMysqlslap],
   ['nice', gnuCoreutils.fetchNice],
   ['nl', gnuCoreutils.fetchNl],
   ['nohup', gnuCoreutils.fetchNohup],
@@ -128,7 +115,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['rsync', fetchRsync],
   ['runcon', gnuCoreutils.fetchRuncon],
   ['seq', gnuCoreutils.fetchSeq],
-  ['setlock', fetchSetlock],
+  ['setlock', daemontools.fetchSetlock],
   ['sha1sum', gnuCoreutils.fetchSha1sum],
   ['sha224sum', gnuCoreutils.fetchSha224sum],
   ['sha256sum', gnuCoreutils.fetchSha256sum],
@@ -137,7 +124,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['shred', gnuCoreutils.fetchShred],
   ['shuf', gnuCoreutils.fetchShuf],
   ['sleep', gnuCoreutils.fetchSleep],
-  ['softlimit', fetchSoftlimit],
+  ['softlimit', daemontools.fetchSoftlimit],
   ['sort', gnuCoreutils.fetchSort],
   ['split', gnuCoreutils.fetchSplit],
   ['sshuttle', fetchSshuttle],
@@ -145,7 +132,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['stdbuf', gnuCoreutils.fetchStdbuf],
   ['stty', gnuCoreutils.fetchStty],
   ['sum', gnuCoreutils.fetchSum],
-  ['svc', fetchSvc],
+  ['svc', daemontools.fetchSvc],
   ['sync', gnuCoreutils.fetchSync],
   ['tac', gnuCoreutils.fetchTac],
   ['tail', gnuCoreutils.fetchTail],
