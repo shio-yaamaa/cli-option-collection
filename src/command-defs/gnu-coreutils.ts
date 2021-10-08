@@ -696,3 +696,10 @@ export const fetchUname: FetchFunction = async (): Promise<Command[]> =>
     filename: 'uname.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchUnexpand: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'unexpand',
+    filename: 'unexpand.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
