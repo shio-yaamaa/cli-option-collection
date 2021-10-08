@@ -33,3 +33,8 @@ export const fetchEnable: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'enable',
   });
+
+export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'help',
+  });

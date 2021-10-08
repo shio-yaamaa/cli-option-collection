@@ -72,6 +72,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['go', fetchGo],
   ['groups', gnuCoreutils.fetchGroups],
   ['head', gnuCoreutils.fetchHead],
+  ['help', bashBuiltin.fetchHelp],
   ['hostid', gnuCoreutils.fetchHostid],
   ['hostname', gnuCoreutils.fetchHostname],
   ['id', gnuCoreutils.fetchId],
