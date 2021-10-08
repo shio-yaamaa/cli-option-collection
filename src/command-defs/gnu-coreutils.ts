@@ -638,3 +638,12 @@ export const fetchTest: FetchFunction = async (): Promise<Command[]> =>
     filename: 'test.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+// BUG: Some of the options of "timeout" command are not fetched
+//      because their markup structures are inconsistent.
+export const fetchTimeout: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'timeout',
+    filename: 'timeout.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

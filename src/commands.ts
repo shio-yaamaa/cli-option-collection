@@ -152,5 +152,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['tee', gnuCoreutils.fetchTee],
   ['terraform', fetchTerraform],
   ['test', gnuCoreutils.fetchTest],
+  ['timeout', gnuCoreutils.fetchTimeout],
   ['yarn', fetchYarn],
 ]);
