@@ -668,3 +668,10 @@ export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
     filename: 'true.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTruncate: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'truncate',
+    filename: 'truncate.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
