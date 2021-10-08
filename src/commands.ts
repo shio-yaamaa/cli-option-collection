@@ -170,4 +170,5 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['who', gnuCoreutils.fetchWho],
   ['whoami', gnuCoreutils.fetchWhoami],
   ['yarn', fetchYarn],
+  ['yes', gnuCoreutils.fetchYes],
 ]);
