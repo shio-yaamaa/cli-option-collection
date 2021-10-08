@@ -703,3 +703,10 @@ export const fetchUnexpand: FetchFunction = async (): Promise<Command[]> =>
     filename: 'unexpand.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchUniq: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'uniq',
+    filename: 'uniq.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
