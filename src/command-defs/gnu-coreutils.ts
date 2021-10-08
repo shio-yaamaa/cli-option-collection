@@ -675,3 +675,10 @@ export const fetchTruncate: FetchFunction = async (): Promise<Command[]> =>
     filename: 'truncate.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTsort: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'tsort',
+    filename: 'tsort.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

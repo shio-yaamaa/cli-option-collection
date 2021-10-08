@@ -157,5 +157,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['tr', gnuCoreutils.fetchTr],
   ['true', gnuCoreutils.fetchTrue],
   ['truncate', gnuCoreutils.fetchTruncate],
+  ['tsort', gnuCoreutils.fetchTsort],
   ['yarn', fetchYarn],
 ]);
