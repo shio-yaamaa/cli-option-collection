@@ -15,3 +15,8 @@ export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'builtin',
   });
+
+export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'caller',
+  });
