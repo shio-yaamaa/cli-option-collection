@@ -647,3 +647,10 @@ export const fetchTimeout: FetchFunction = async (): Promise<Command[]> =>
     filename: 'timeout.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTouch: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'touch',
+    filename: 'touch.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

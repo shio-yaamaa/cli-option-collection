@@ -153,5 +153,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['terraform', fetchTerraform],
   ['test', gnuCoreutils.fetchTest],
   ['timeout', gnuCoreutils.fetchTimeout],
+  ['touch', gnuCoreutils.fetchTouch],
   ['yarn', fetchYarn],
 ]);
