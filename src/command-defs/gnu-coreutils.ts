@@ -717,3 +717,10 @@ export const fetchUnlink: FetchFunction = async (): Promise<Command[]> =>
     filename: 'unlink.1',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchUptime: FetchFunction = async (): Promise<Command[]> =>
+  coreutils({
+    commandName: 'uptime',
+    filename: 'uptime.1',
+    optionsHeadingID: 'DESCRIPTION',
+  });

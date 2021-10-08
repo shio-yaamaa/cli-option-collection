@@ -163,5 +163,6 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['unexpand', gnuCoreutils.fetchUnexpand],
   ['uniq', gnuCoreutils.fetchUniq],
   ['unlink', gnuCoreutils.fetchUnlink],
+  ['uptime', gnuCoreutils.fetchUptime],
   ['yarn', fetchYarn],
 ]);
