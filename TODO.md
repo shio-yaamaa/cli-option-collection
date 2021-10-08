@@ -1,1 +1,1 @@
-- Characters to add to short option labels: `#`, `?`
+- Characters to add to short option labels: `#`, `?`, `@`
