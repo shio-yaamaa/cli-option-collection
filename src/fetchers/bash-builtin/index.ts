@@ -138,6 +138,12 @@ export const fetchGetopts: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'getopts',
   });
 
+export const fetchHash: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'hash',
+    defFileBasename: 'hash',
+  });
+
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'help',

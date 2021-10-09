@@ -1,0 +1,37 @@
+[
+  {
+    "name": "hash",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "forget the remembered location of each NAME"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "display in a format that may be reused as input"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p pathname",
+        "description": "use PATHNAME as the full pathname of NAME"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "forget all remembered locations"
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "print the remembered location of each NAME, preceding each location with the corresponding NAME if multiple NAMEs are given"
+      }
+    ]
+  }
+]
