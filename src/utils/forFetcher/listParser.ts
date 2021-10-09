@@ -1,6 +1,6 @@
 import { countIndentWidth } from './string';
 
-interface ListItem {
+export interface ListItem {
   title: string;
   descriptionLines: string[];
 }
@@ -10,23 +10,18 @@ interface ListItem {
 //   item2      Description of item2
 //              Description can be multi-line
 //   long item  Description of long item
-// Title and description need to have at least 2 spaces between them.
+// Rules:
+// - Title must not contain more than 2 spaces in sequence, but description can.
+// - Title and description need to have at least 2 spaces between them.
+// - All the descriptions must start at the same column.
 // Empty lines between description lines of the same item are not preserved.
 export const parseTabbedTextList = (list: string) => {
   const lines = list.split('\n');
   const isEmpty = lines.map((line) => line.trim().length === 0);
-  const titleIndentWidth = lines.reduce<number | null>(
-    (previous, current, index) => {
-      if (isEmpty[index]) {
-        return previous;
-      }
-      const indentWidth = countIndentWidth(current);
-      if (!previous || indentWidth < previous) {
-        return indentWidth;
-      }
-      return previous;
-    },
-    null
+  const titleIndentWidth = Math.min(
+    ...lines
+      .filter((_line, index) => !isEmpty[index])
+      .map((line) => countIndentWidth(line))
   );
   if (titleIndentWidth === null) {
     throw new Error('Could not determine titleIndentWidth');
@@ -60,14 +55,9 @@ export const parseTabbedTextList = (list: string) => {
   if (titleIndentWidth >= descriptionIndentWidth) {
     throw new Error('Invalid indent width');
   }
-  const isDescriptionOnly = lines.map((line) => {
-    if (line.length < descriptionIndentWidth) {
-      return false;
-    }
-    const beforeDescription = line.slice(0, descriptionIndentWidth);
-    return /^\s*$/.test(beforeDescription);
-  });
-
+  const isDescriptionOnly = lines.map(
+    (line) => countIndentWidth(line) >= descriptionIndentWidth
+  );
   const listItems: ListItem[] = [];
   for (const [index, line] of lines.entries()) {
     if (hasTitle[index]) {
