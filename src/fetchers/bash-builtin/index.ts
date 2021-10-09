@@ -120,6 +120,7 @@ export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
   });
 
 // BUG: Not parsed correctly because the option list contains double spaces in descriptions.
+//      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
 export const fetchFc: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'fc',
