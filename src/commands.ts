@@ -69,6 +69,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['env', gnuCoreutils.fetchEnv],
   ['eval', bashBuiltin.fetchEval],
   ['exec', bashBuiltin.fetchExec],
+  ['exit', bashBuiltin.fetchExit],
   ['expand', gnuCoreutils.fetchExpand],
   ['expr', gnuCoreutils.fetchExpr],
   ['factor', gnuCoreutils.fetchFactor],
