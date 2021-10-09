@@ -36,6 +36,9 @@ describe('parseTabbedTextList2', () => {
       item1  Description of item1
       item2  Description of item2
              Description can be multi-line
+      item3  Description of item 3
+        Something in between
+             This is not description
 
       item with two  spaces  Description of the item with two spaces
     `;
@@ -51,6 +54,10 @@ describe('parseTabbedTextList2', () => {
           'Description of item2',
           'Description can be multi-line',
         ],
+      },
+      {
+        title: 'item3',
+        descriptionLines: ['Description of item 3'],
       },
       {
         title: 'item with two  spaces',

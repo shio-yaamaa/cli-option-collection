@@ -99,14 +99,14 @@ export const parseTabbedTextList2 = (list: string): ListItem[] => {
       .filter((_line, index) => !isEmpty[index])
       .map((line) => countIndentWidth(line))
   );
-  const hasTitle = lines.map(
-    (line) => countIndentWidth(line) === titleIndentWidth
-  );
 
   const listItems: ListItem[] = [];
   let currentDescriptionIndentWidth: number | null = null;
+  let inItem = false; // If the current line is directly connected to the line that has a title
   for (const [index, line] of lines.entries()) {
-    if (hasTitle[index]) {
+    const indentWidth = countIndentWidth(line);
+    // The line contains title and description.
+    if (indentWidth === titleIndentWidth) {
       currentDescriptionIndentWidth = line.lastIndexOf('  ') + 2;
       const title = line.slice(0, currentDescriptionIndentWidth).trim();
       const description = line.slice(currentDescriptionIndentWidth);
@@ -114,16 +114,22 @@ export const parseTabbedTextList2 = (list: string): ListItem[] => {
         title,
         descriptionLines: [description],
       });
+      inItem = true;
       continue;
     }
+    // The line contains only description.
     if (
-      listItems.length > 0 &&
+      inItem &&
       currentDescriptionIndentWidth != null &&
-      countIndentWidth(line) >= currentDescriptionIndentWidth
+      indentWidth >= currentDescriptionIndentWidth
     ) {
       const description = line.slice(currentDescriptionIndentWidth);
       listItems[listItems.length - 1].descriptionLines.push(description);
       continue;
+    }
+    // The line separates items.
+    if (!isEmpty[index]) {
+      inItem = false;
     }
   }
   return listItems;
