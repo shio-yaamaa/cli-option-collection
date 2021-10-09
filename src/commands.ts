@@ -74,6 +74,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['exec', bashBuiltin.fetchExec],
   ['exit', bashBuiltin.fetchExit],
   ['expand', gnuCoreutils.fetchExpand],
+  ['export', bashBuiltin.fetchExport],
   ['expr', gnuCoreutils.fetchExpr],
   ['factor', gnuCoreutils.fetchFactor],
   ['false', join(gnuCoreutils.fetchFalse, bashBuiltin.fetchFalse)],

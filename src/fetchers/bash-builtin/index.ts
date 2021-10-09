@@ -127,6 +127,12 @@ export const fetchExit: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'exit',
   });
 
+export const fetchExport: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'export',
+    defFileBasename: 'setattr',
+  });
+
 export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'false',
