@@ -1,6 +1,5 @@
 import { FetchFunction, Command } from '../../types';
 import { fetch } from './fetcher';
-import { fetch as fetch2 } from './fetcher2';
 
 // NOTE: Some options are not listed in a tabular format and just explained in the text paragraphs.
 //       Those options are not collected because they cannot be parsed in a consistent way.
@@ -8,133 +7,133 @@ import { fetch as fetch2 } from './fetcher2';
 //       http://git.savannah.gnu.org/cgit/bash.git/tree/builtins/reserved.def
 
 export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'alias',
     defFileBasename: 'alias',
   });
 
 export const fetchBg: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'bg',
     defFileBasename: 'fg_bg',
   });
 
 export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'bind',
     defFileBasename: 'bind',
   });
 
 export const fetchBreak: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'break',
     defFileBasename: 'break',
   });
 
 export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'builtin',
     defFileBasename: 'builtin',
   });
 
 export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'caller',
     defFileBasename: 'caller',
   });
 
 export const fetchCd: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'cd',
     defFileBasename: 'cd',
   });
 
 export const fetchCommand: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'command',
     defFileBasename: 'command',
   });
 
 export const fetchCompgen: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'compgen',
     defFileBasename: 'complete',
   });
 
 export const fetchComplete: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'complete',
     defFileBasename: 'complete',
   });
 
 export const fetchCompopt: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'compopt',
     defFileBasename: 'complete',
   });
 
 export const fetchContinue: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'continue',
     defFileBasename: 'break',
   });
 
 export const fetchDeclare: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'declare',
     defFileBasename: 'declare',
   });
 
 export const fetchDirs: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'dirs',
     defFileBasename: 'pushd',
   });
 
 export const fetchDisown: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'disown',
     defFileBasename: 'jobs',
   });
 
 export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'echo',
     defFileBasename: 'echo',
   });
 
 export const fetchEnable: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'enable',
     defFileBasename: 'enable',
   });
 
 export const fetchEval: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'eval',
     defFileBasename: 'eval',
   });
 
 export const fetchExec: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'exec',
     defFileBasename: 'exec',
   });
 
 export const fetchExit: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'exit',
     defFileBasename: 'exit',
   });
 
 export const fetchExport: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'export',
     defFileBasename: 'setattr',
   });
 
 export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'false',
     defFileBasename: 'colon',
   });
@@ -142,73 +141,73 @@ export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
 // BUG: Not parsed correctly because the option list contains double spaces in descriptions.
 //      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
 export const fetchFc: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'fc',
     defFileBasename: 'fc',
   });
 
 export const fetchFg: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'fg',
     defFileBasename: 'fg_bg',
   });
 
 export const fetchGetopts: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'getopts',
     defFileBasename: 'getopts',
   });
 
 export const fetchHash: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'hash',
     defFileBasename: 'hash',
   });
 
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'help',
     defFileBasename: 'help',
   });
 
 export const fetchHistory: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'history',
     defFileBasename: 'history',
   });
 
 export const fetchInlib: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'inlib',
     defFileBasename: 'inlib',
   });
 
 export const fetchJobs: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'jobs',
     defFileBasename: 'jobs',
   });
 
 export const fetchKill: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'kill',
     defFileBasename: 'kill',
   });
 
 export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'let',
     defFileBasename: 'let',
   });
 
 export const fetchLocal: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'local',
     defFileBasename: 'declare',
   });
 
 export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'logout',
     defFileBasename: 'exit',
   });
@@ -217,56 +216,56 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
 //      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
 // BUG: "-u" option is not recognized.
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'mapfile',
     defFileBasename: 'mapfile',
   });
 
 export const fetchPopd: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'popd',
     defFileBasename: 'pushd',
   });
 
 export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'printf',
     defFileBasename: 'printf',
   });
 
 export const fetchPushd: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'pushd',
     defFileBasename: 'pushd',
   });
 
 export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'pwd',
     defFileBasename: 'cd',
   });
 
 // BUG: "-u" option is not recognized.
 export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'read',
     defFileBasename: 'read',
   });
 
 export const fetchReadarray: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'readarray',
     defFileBasename: 'mapfile',
   });
 
 export const fetchReadonly: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'readonly',
     defFileBasename: 'setattr',
   });
 
 export const fetchReturn: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'return',
     defFileBasename: 'return',
   });
@@ -275,103 +274,103 @@ export const fetchReturn: FetchFunction = async (): Promise<Command[]> =>
 //      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
 // BUG: "-o" option is not recognized.
 export const fetchSet: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'set',
     defFileBasename: 'set',
   });
 
 export const fetchShift: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'shift',
     defFileBasename: 'shift',
   });
 
 export const fetchShopt: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'shopt',
     defFileBasename: 'shopt',
   });
 
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'source',
     defFileBasename: 'source',
   });
 
 export const fetchSuspend: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'suspend',
     defFileBasename: 'suspend',
   });
 
 export const fetchTest: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'test',
     defFileBasename: 'test',
   });
 
 export const fetchTime: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'time',
     defFileBasename: 'reserved',
   });
 
 export const fetchTimes: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'times',
     defFileBasename: 'times',
   });
 
 export const fetchTrap: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'trap',
     defFileBasename: 'trap',
   });
 
 export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'true',
     defFileBasename: 'colon',
   });
 
 export const fetchType: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'type',
     defFileBasename: 'type',
   });
 
 export const fetchTypeset: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'typeset',
     defFileBasename: 'declare',
   });
 
 export const fetchUlimit: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'ulimit',
     defFileBasename: 'ulimit',
   });
 
 export const fetchUmask: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'umask',
     defFileBasename: 'umask',
   });
 
 export const fetchUnalias: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'unalias',
     defFileBasename: 'alias',
   });
 
 export const fetchUnset: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'unset',
     defFileBasename: 'set',
   });
 
 export const fetchWait: FetchFunction = async (): Promise<Command[]> =>
-  fetch2({
+  fetch({
     commandName: 'wait',
     defFileBasename: 'wait',
   });
