@@ -17,6 +17,12 @@ export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'bind',
   });
 
+export const fetchBreak: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'break',
+    defFileBasename: 'break',
+  });
+
 export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'builtin',
