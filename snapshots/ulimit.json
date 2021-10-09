@@ -1,0 +1,151 @@
+[
+  {
+    "name": "ulimit",
+    "options": [
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "Change and report the soft limit associated with a resource."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H",
+        "description": "Change and report the hard limit associated with a resource."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "All current limits are reported; no limits are set."
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "The maximum socket buffer size."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "The maximum size of core files created."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "The maximum size of a process’s data segment."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "The maximum scheduling priority (\"nice\")."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "The maximum size of files written by the shell and its children."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "The maximum number of pending signals."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "The maximum number of kqueues that may be allocated."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "The maximum size that may be locked into memory."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "The maximum resident set size (many systems do not honor this limit)."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "The maximum number of open file descriptors (most systems do not allow this value to be set)."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "The pipe buffer size."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "The maximum number of bytes in POSIX message queues."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "The maximum real-time scheduling priority."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "The maximum stack size."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "The maximum amount of cpu time in seconds."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "The maximum number of processes available to a single user."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "The maximum amount of virtual memory available to the shell, and, on some systems, to its children."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "The maximum number of file locks."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "The maximum number of pseudoterminals."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R",
+        "description": "The maximum time a real-time process can run before blocking, in microseconds."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T",
+        "description": "The maximum number of threads."
+      }
+    ]
+  }
+]

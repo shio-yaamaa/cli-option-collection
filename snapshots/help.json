@@ -1,0 +1,25 @@
+[
+  {
+    "name": "help",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Display a short description of each pattern"
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "Display the description of each pattern in a manpage-like format"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Display only a short usage synopsis for each pattern"
+      }
+    ]
+  }
+]
