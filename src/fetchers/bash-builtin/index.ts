@@ -107,6 +107,7 @@ export const fetchUlimit: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchUnalias: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'unalias',
+    defFileBasename: 'alias',
   });
