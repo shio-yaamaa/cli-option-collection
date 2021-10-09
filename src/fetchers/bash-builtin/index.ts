@@ -157,6 +157,12 @@ export const fetchHistory: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'history',
   });
 
+export const fetchInlib: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'inlib',
+    defFileBasename: 'inlib',
+  });
+
 export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'let',
