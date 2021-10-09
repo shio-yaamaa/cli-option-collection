@@ -30,8 +30,9 @@ export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'caller',
+    defFileBasename: 'caller',
   });
 
 export const fetchCommand: FetchFunction = async (): Promise<Command[]> =>
