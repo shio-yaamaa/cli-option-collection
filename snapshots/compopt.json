@@ -1,0 +1,31 @@
+[
+  {
+    "name": "compopt",
+    "options": [
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o option",
+        "description": "Set completion option OPTION for each NAME"
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D",
+        "description": "Change options for the \"default\" command completion"
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E",
+        "description": "Change options for the \"empty\" command completion"
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "Change options for completion on the initial word"
+      }
+    ]
+  }
+]

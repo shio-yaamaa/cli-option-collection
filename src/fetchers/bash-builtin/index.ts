@@ -47,6 +47,24 @@ export const fetchCommand: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'command',
   });
 
+export const fetchCompgen: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'compgen',
+    defFileBasename: 'complete',
+  });
+
+export const fetchComplete: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'complete',
+    defFileBasename: 'complete',
+  });
+
+export const fetchCompopt: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'compopt',
+    defFileBasename: 'complete',
+  });
+
 export const fetchContinue: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'continue',
