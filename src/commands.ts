@@ -147,6 +147,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['read', bashBuiltin.fetchRead],
   ['readarray', bashBuiltin.fetchReadarray],
   ['readlink', gnuCoreutils.fetchReadlink],
+  ['readonly', bashBuiltin.fetchReadonly],
   ['realpath', gnuCoreutils.fetchRealpath],
   ['return', bashBuiltin.fetchReturn],
   ['rm', gnuCoreutils.fetchRm],
