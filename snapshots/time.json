@@ -1,12 +1,12 @@
 [
   {
-    "name": "alias",
+    "name": "time",
     "options": [
       {
         "type": "short",
         "key": "p",
         "title": "-p",
-        "description": "print all defined aliases in a reusable format"
+        "description": "print the timing summary in the portable Posix format"
       }
     ]
   }

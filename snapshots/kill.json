@@ -37,6 +37,24 @@
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s sig",
+        "description": "SIG is a signal name"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n sig",
+        "description": "SIG is a signal number"
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L",
+        "description": "synonym for -l"
       }
     ]
   }

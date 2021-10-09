@@ -81,3 +81,24 @@ export const countIndentWidth = (line: string) => {
   const lineWithoutIndent = line.replace(/^\s+/, '');
   return line.length - lineWithoutIndent.length;
 };
+
+// Extract string lines from the input.
+// The extracted part starts with a line that matches isStart
+// and ends with the closest line that matches isEnd.
+// If the ending line is not found, all the lines until the end are returned.
+export const extractLines = (
+  lines: string[],
+  isStart: (line: string) => boolean,
+  isEnd: (line: string) => boolean
+): string[] => {
+  const startIndex = lines.findIndex((line) => isStart(line));
+  if (startIndex < 0) {
+    return [];
+  }
+  const remainingLines = lines.slice(startIndex);
+  const endIndex = remainingLines.findIndex((line) => isEnd(line));
+  if (endIndex < 0) {
+    return remainingLines;
+  }
+  return remainingLines.slice(0, endIndex + 1);
+};

@@ -5,6 +5,7 @@ import {
   splitByMultipleDelimiters,
   splitAtTopLevel,
   countIndentWidth,
+  extractLines,
 } from './string';
 
 describe('normalizeSpacingAroundComma', () => {
@@ -58,5 +59,21 @@ describe('countIndentWidth', () => {
   test('test', () => {
     expect(countIndentWidth('abc')).toBe(0);
     expect(countIndentWidth('  ab c')).toBe(2);
+  });
+});
+
+describe('extractLines', () => {
+  test('test', () => {
+    const extractedLines = extractLines(
+      ['before', 'start', 'content', 'content', 'end', 'end'],
+      (line) => line === 'start',
+      (line) => line === 'end'
+    );
+    expect(extractedLines).toStrictEqual([
+      'start',
+      'content',
+      'content',
+      'end',
+    ]);
   });
 });

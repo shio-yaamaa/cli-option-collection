@@ -1,6 +1,25 @@
 [
   {
     "name": "command",
-    "options": []
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "use a default value for PATH that is guaranteed to find all of the standard utilities"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "print a description of COMMAND similar to the `type' builtin"
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V",
+        "description": "print a more verbose description of each COMMAND"
+      }
+    ]
   }
 ]

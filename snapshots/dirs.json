@@ -1,0 +1,37 @@
+[
+  {
+    "name": "dirs",
+    "options": [
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "clear the directory stack by deleting all of the elements"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "do not print tilde-prefixed versions of directories relative to your home directory"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "print the directory stack with one entry per line"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "print the directory stack with one entry per line prefixed with its position in the stack"
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N",
+        "description": "Displays the Nth entry counting from the right of the list shown by dirs when invoked without options, starting with zero."
+      }
+    ]
+  }
+]

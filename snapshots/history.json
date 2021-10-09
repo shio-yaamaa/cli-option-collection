@@ -1,0 +1,55 @@
+[
+  {
+    "name": "history",
+    "options": [
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "clear the history list by deleting all of the entries"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d offset",
+        "description": "delete the history entry at position OFFSET. Negative offsets count back from the end of the history list"
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "append history lines from this session to the history file"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "read all history lines not already read from the history file and append them to the history list"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "read the history file and append the contents to the history list"
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w",
+        "description": "write the current history to the history file"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "perform history expansion on each ARG and display the result without storing it in the history list"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "append the ARGs to the history list as a single entry"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "popd",
+    "options": [
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Suppresses the normal change of directory when removing directories from the stack, so only the stack is manipulated."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N",
+        "description": "Removes the Nth entry counting from the right of the list shown by `dirs', starting with zero. For example: `popd -0' removes the last directory, `popd -1' the next to last."
+      }
+    ]
+  }
+]

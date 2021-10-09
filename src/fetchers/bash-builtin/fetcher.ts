@@ -1,57 +1,44 @@
+import tabToSpace from 'tab-to-space';
+
 import { Fetcher, Command, Option } from '../../types';
-import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
-import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
+import { fetchPlainTextFromURL } from '../../utils/forFetcher/http';
+import {
+  ListItem,
+  parseTabbedTextList2,
+} from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
+import {
+  countIndentWidth,
+  extractLines,
+  normalizeSpaces,
+} from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimOptionArguments,
 } from '../../utils/forFetcher/transformOptionString';
+import { findHeadingContentsPairs } from '../../utils/forFetcher/utils';
 import { mergeLists } from '../../utils/utils';
-
-const DOC_URL =
-  'https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html';
 
 export interface SourceDef {
   commandName: string;
+  defFileBasename: string;
 }
-
-let promise: Promise<Map<string, Element>> | null = null;
-
-const getCommandNameToCommandBody = async (): Promise<Map<string, Element>> => {
-  promise ||= fetchDocumentFromURL(new URL(DOC_URL)).then((document) => {
-    const map = new Map<string, Element>();
-    const commandList = document.querySelector<HTMLDListElement>('body > dl');
-    if (!commandList) {
-      return map;
-    }
-    const dlistEntries = findDListEntries(commandList);
-    for (const { dts, dd } of dlistEntries) {
-      const commandName = dts[0].textContent?.trim();
-      if (commandName) {
-        map.set(commandName, dd);
-      }
-    }
-    return map;
-  });
-  return promise;
-};
-
-const commandNameToCommandBody = async (
-  commandName: string
-): Promise<Element | null> => {
-  return (await getCommandNameToCommandBody()).get(commandName) ?? null;
-};
 
 export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
-  const commandBody = await commandNameToCommandBody(sourceDef.commandName);
-  if (!commandBody) {
-    return [];
-  }
-  const options = commandBodyToOptions(commandBody);
+  const text = await fetchPlainTextFromURL(
+    buildDefFileURL(sourceDef.defFileBasename)
+  );
+  // Some .def files use tab indents and some use space indents. Normalize them by replacing tabs with spaces.
+  const lines = text.split('\n').map((line) => tabToSpace(line, 8));
+  const helpSection = findHelpSection(lines, sourceDef.commandName);
+  const optionLists = findOptionLists(helpSection);
+  const listItems = mergeLists(
+    optionLists.map((list) => parseTabbedTextList2(list.join('\n')))
+  );
+  const options = mergeLists(listItems.map((item) => listItemToOptions(item)));
 
   return [
     {
@@ -61,22 +48,34 @@ export const fetch: Fetcher<SourceDef> = async (
   ];
 };
 
-const commandBodyToOptions = (body: Element): Option[] => {
-  const dls = Array.from(body.children).filter(
-    (child): child is HTMLDListElement => child.tagName.toLowerCase() === 'dl'
+const buildDefFileURL = (basename: string) =>
+  new URL(
+    `http://git.savannah.gnu.org/cgit/bash.git/plain/builtins/${basename}.def`
   );
-  const dlistEntries = mergeLists(dls.map((dl) => findDListEntries(dl)));
-  return mergeLists(dlistEntries.map((entry) => dlistEntryToOptions(entry)));
+
+// The help section for a command starts with a line "$BUILTIN ..." and ends with "$END"
+const findHelpSection = (lines: string[], commandName: string): string[] => {
+  return extractLines(
+    lines,
+    (line) => line === `$BUILTIN ${commandName}`,
+    (line) => line === '$END'
+  ).filter((line) => !line.startsWith('#')); // Ignore comment lines
 };
 
-const dlistEntryToOptions = (dlistEntry: DListEntry): Option[] => {
-  const title = dlistEntry.dts[0].textContent?.trim();
-  if (!title) {
-    return [];
-  }
-  const description = normalizeSpacesAndLinebreaks(
-    dlistEntry.dd.textContent?.trim() ?? ''
+const findOptionLists = (lines: string[]): string[][] => {
+  const headingContentPairs = findHeadingContentsPairs(
+    lines,
+    (line) => countIndentWidth(line) === 0,
+    (line) => line.trim().length > 0 && countIndentWidth(line) > 0
   );
-  const optionStrings = transformOptionStrings([title], [trimOptionArguments]);
-  return makeOptionList(optionStrings, title, description);
+  return headingContentPairs
+    .filter(({ contents }) => contents.length > 0)
+    .map(({ contents }) => contents);
+};
+
+const listItemToOptions = (listItem: ListItem): Option[] => {
+  const title = normalizeSpaces(listItem.title);
+  const optionString = transformOptionStrings([title], [trimOptionArguments]);
+  const description = normalizeSpaces(listItem.descriptionLines.join(' '));
+  return makeOptionList(optionString, title, description);
 };

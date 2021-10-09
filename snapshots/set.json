@@ -1,0 +1,121 @@
+[
+  {
+    "name": "set",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Mark variables which are modified or created for export."
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "Notify of job termination immediately."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "Exit immediately if a command exits with a non-zero status."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Disable file name generation (globbing)."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Remember the location of commands as they are looked up."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "All assignment arguments are placed in the environment for a command, not just those that precede the command name."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "Job control is enabled."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Read commands but do not execute them."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "Turned on whenever the real and effective user ids do not match. Disables processing of the $ENV file and importing of shell functions. Turning this option off causes the effective uid and gid to be set to the real uid and gid."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Exit after reading and executing one command."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Treat unset variables as an error when substituting."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Print shell input lines as they are read."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Print commands and their arguments as they are executed."
+      },
+      {
+        "type": "short",
+        "key": "B",
+        "title": "-B",
+        "description": "the shell will perform brace expansion"
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C",
+        "description": "If set, disallow existing regular files to be overwritten by redirection of output."
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E",
+        "description": "If set, the ERR trap is inherited by shell functions."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H Enable ! style history substitution.",
+        "description": "This flag is on"
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "If set, do not resolve symbolic links when executing commands such as cd which change the current directory."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T",
+        "description": "If set, the DEBUG and RETURN traps are inherited by shell functions."
+      }
+    ]
+  }
+]

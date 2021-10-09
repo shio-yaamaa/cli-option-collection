@@ -1,8 +1,8 @@
 # Overview
 
-- Number of base commands: 157
-- Number of commands (including subcommands): 707
-- Number of options: 9757
+- Number of base commands: 191
+- Number of commands (including subcommands): 741
+- Number of options: 9872
 
 # Command Rankings
 
@@ -33,5 +33,5 @@
 |6|`mysqldump`|34|
 |7|`perl`|30|
 |8|`git grep`|27|
-|9|`git diff-tree`|25|
-|10|`mysqlcheck`|24|
+|9|`test`|26|
+|10|`git diff-tree`|25|

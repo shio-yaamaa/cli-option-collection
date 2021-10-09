@@ -1,0 +1,13 @@
+[
+  {
+    "name": "suspend",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "force the suspend, even if the shell is a login shell"
+      }
+    ]
+  }
+]

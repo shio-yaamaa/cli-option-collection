@@ -1,0 +1,31 @@
+[
+  {
+    "name": "readonly",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "refer to indexed array variables"
+      },
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "refer to associative array variables"
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "refer to shell functions"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "display a list of all readonly variables or functions, depending on whether or not the -f option is given"
+      }
+    ]
+  }
+]

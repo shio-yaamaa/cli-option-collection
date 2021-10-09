@@ -4,63 +4,87 @@
     "options": [
       {
         "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "restrict action or display to function names and definitions"
+      },
+      {
+        "type": "short",
+        "key": "F",
+        "title": "-F",
+        "description": "restrict display to function names only (plus line number and source file when debugging)"
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g",
+        "description": "create global variables when used in a shell function; otherwise ignored"
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "if creating a local variable, inherit the attributes and value of a variable with the same name at a previous scope"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "display the attributes and value of each NAME"
+      },
+      {
+        "type": "short",
         "key": "a",
         "title": "-a",
-        "description": "Each name is an indexed array variable (see Arrays)."
+        "description": "to make NAMEs indexed arrays (if supported)"
       },
       {
         "type": "short",
         "key": "A",
         "title": "-A",
-        "description": "Each name is an associative array variable (see Arrays)."
-      },
-      {
-        "type": "short",
-        "key": "f",
-        "title": "-f",
-        "description": "Use function names only."
+        "description": "to make NAMEs associative arrays (if supported)"
       },
       {
         "type": "short",
         "key": "i",
         "title": "-i",
-        "description": "The variable is to be treated as an integer; arithmetic evaluation (see Shell Arithmetic) is performed when the variable is assigned a value."
+        "description": "to make NAMEs have the `integer' attribute"
       },
       {
         "type": "short",
         "key": "l",
         "title": "-l",
-        "description": "When the variable is assigned a value, all upper-case characters are converted to lower-case. The upper-case attribute is disabled."
+        "description": "to convert the value of each NAME to lower case on assignment"
       },
       {
         "type": "short",
         "key": "n",
         "title": "-n",
-        "description": "Give each name the nameref attribute, making it a name reference to another variable. That other variable is defined by the value of name. All references, assignments, and attribute modifications to name, except for those using or changing the -n attribute itself, are performed on the variable referenced by name’s value. The nameref attribute cannot be applied to array variables."
+        "description": "make NAME a reference to the variable named by its value"
       },
       {
         "type": "short",
         "key": "r",
         "title": "-r",
-        "description": "Make names readonly. These names cannot then be assigned values by subsequent assignment statements or unset."
+        "description": "to make NAMEs readonly"
       },
       {
         "type": "short",
         "key": "t",
         "title": "-t",
-        "description": "Give each name the trace attribute. Traced functions inherit the DEBUG and RETURN traps from the calling shell. The trace attribute has no special meaning for variables."
+        "description": "to make NAMEs have the `trace' attribute"
       },
       {
         "type": "short",
         "key": "u",
         "title": "-u",
-        "description": "When the variable is assigned a value, all lower-case characters are converted to upper-case. The lower-case attribute is disabled."
+        "description": "to convert the value of each NAME to upper case on assignment"
       },
       {
         "type": "short",
         "key": "x",
         "title": "-x",
-        "description": "Mark each name for export to subsequent commands via the environment."
+        "description": "to make NAMEs export"
       }
     ]
   }

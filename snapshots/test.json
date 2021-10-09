@@ -145,6 +145,30 @@
         "key": "x",
         "title": "-x FILE",
         "description": "FILE exists and execute (or search) permission is granted"
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a FILE",
+        "description": "True if file exists."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o OPTION",
+        "description": "True if the shell option OPTION is enabled."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v VAR",
+        "description": "True if the shell variable VAR is set."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R VAR",
+        "description": "True if the shell variable VAR is set and is a name reference."
       }
     ]
   }
