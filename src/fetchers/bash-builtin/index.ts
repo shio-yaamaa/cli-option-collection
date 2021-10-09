@@ -24,8 +24,9 @@ export const fetchBreak: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'builtin',
+    defFileBasename: 'builtin',
   });
 
 export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
