@@ -6,7 +6,11 @@ import {
 } from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import { extractLines, normalizeSpaces } from '../../utils/forFetcher/string';
+import {
+  countIndentWidth,
+  extractLines,
+  normalizeSpaces,
+} from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimOptionArguments,
@@ -24,7 +28,7 @@ export const fetch: Fetcher<SourceDef> = async (
   const text = await fetchPlainTextFromURL(
     buildDefFileURL(sourceDef.defFileBasename)
   );
-  const lines = text.split('\n').map((line) => line.replace(/\t/g, '  '));
+  const lines = text.split('\n').map((line) => line.replace(/\t/g, '    '));
   const helpSection = findHelpSection(lines, sourceDef.commandName);
   const optionList = findOptionList(helpSection);
   const listItems = parseTabbedTextList2(optionList.join('\n'));
@@ -49,7 +53,7 @@ const findHelpSection = (lines: string[], commandName: string): string[] => {
     lines,
     (line) => line === `$BUILTIN ${commandName}`,
     (line) => line === '$END'
-  );
+  ).filter((line) => !line.startsWith('#')); // Ignore comment lines
 };
 
 const findOptionList = (lines: string[]): string[] => {

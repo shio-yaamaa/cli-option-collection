@@ -1,0 +1,25 @@
+[
+  {
+    "name": "cd",
+    "options": [
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L",
+        "description": "force symbolic links to be followed: resolve symbolic links in DIR after processing instances of `..'"
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "use the physical directory structure without following symbolic links: resolve symbolic links in DIR before processing instances of `..'"
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "if the -P option is supplied, and the current working directory cannot be determined successfully, exit with a non-zero status"
+      }
+    ]
+  }
+]

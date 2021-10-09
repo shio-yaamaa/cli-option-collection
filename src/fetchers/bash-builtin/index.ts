@@ -35,6 +35,12 @@ export const fetchCaller: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'caller',
   });
 
+export const fetchCd: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'cd',
+    defFileBasename: 'cd',
+  });
+
 export const fetchCommand: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'command',

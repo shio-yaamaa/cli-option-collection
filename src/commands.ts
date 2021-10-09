@@ -37,6 +37,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['builtin', bashBuiltin.fetchBuiltin],
   ['caller', bashBuiltin.fetchCaller],
   ['cat', gnuCoreutils.fetchCat],
+  ['cd', bashBuiltin.fetchCd],
   ['chcon', gnuCoreutils.fetchChcon],
   ['chgrp', gnuCoreutils.fetchChgrp],
   ['chmod', gnuCoreutils.fetchChmod],
