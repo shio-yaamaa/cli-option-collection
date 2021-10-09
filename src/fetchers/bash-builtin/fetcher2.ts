@@ -6,11 +6,7 @@ import {
 } from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import {
-  countIndentWidth,
-  extractLines,
-  normalizeSpaces,
-} from '../../utils/forFetcher/string';
+import { extractLines, normalizeSpaces } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimOptionArguments,
