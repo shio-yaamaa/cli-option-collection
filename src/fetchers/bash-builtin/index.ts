@@ -209,8 +209,9 @@ export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'printf',
+    defFileBasename: 'printf',
   });
 
 export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
