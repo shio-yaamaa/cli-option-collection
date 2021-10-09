@@ -369,3 +369,9 @@ export const fetchUnset: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'unset',
     defFileBasename: 'set',
   });
+
+export const fetchWait: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'wait',
+    defFileBasename: 'wait',
+  });

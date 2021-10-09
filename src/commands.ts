@@ -207,6 +207,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['uptime', gnuCoreutils.fetchUptime],
   ['users', gnuCoreutils.fetchUsers],
   ['vdir', gnuCoreutils.fetchVdir],
+  ['wait', bashBuiltin.fetchWait],
   ['wc', gnuCoreutils.fetchWc],
   ['who', gnuCoreutils.fetchWho],
   ['whoami', gnuCoreutils.fetchWhoami],
