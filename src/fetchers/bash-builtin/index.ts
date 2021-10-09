@@ -130,8 +130,9 @@ export const fetchLocal: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'logout',
+    defFileBasename: 'exit',
   });
 
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
