@@ -162,6 +162,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['sha256sum', gnuCoreutils.fetchSha256sum],
   ['sha384sum', gnuCoreutils.fetchSha384sum],
   ['sha512sum', gnuCoreutils.fetchSha512sum],
+  ['shift', bashBuiltin.fetchShift],
   ['shred', gnuCoreutils.fetchShred],
   ['shuf', gnuCoreutils.fetchShuf],
   ['sleep', gnuCoreutils.fetchSleep],

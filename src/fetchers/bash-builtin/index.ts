@@ -280,6 +280,12 @@ export const fetchSet: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'set',
   });
 
+export const fetchShift: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'shift',
+    defFileBasename: 'shift',
+  });
+
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'source',
