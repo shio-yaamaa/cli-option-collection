@@ -293,8 +293,9 @@ export const fetchShopt: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'source',
+    defFileBasename: 'source',
   });
 
 export const fetchTime: FetchFunction = async (): Promise<Command[]> =>
