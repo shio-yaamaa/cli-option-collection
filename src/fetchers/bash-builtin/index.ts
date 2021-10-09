@@ -132,6 +132,12 @@ export const fetchFg: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'fg_bg',
   });
 
+export const fetchGetopts: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'getopts',
+    defFileBasename: 'getopts',
+  });
+
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'help',

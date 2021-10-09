@@ -82,6 +82,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['fg', bashBuiltin.fetchFg],
   ['fmt', gnuCoreutils.fetchFmt],
   ['fold', gnuCoreutils.fetchFold],
+  ['getopts', bashBuiltin.fetchGetopts],
   ['git', fetchGit],
   ['go', fetchGo],
   ['groups', gnuCoreutils.fetchGroups],
