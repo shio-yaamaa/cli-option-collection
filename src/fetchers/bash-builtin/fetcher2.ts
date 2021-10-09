@@ -6,8 +6,11 @@ import {
 } from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import { extractLines } from '../../utils/forFetcher/string';
-import { transformOptionStrings } from '../../utils/forFetcher/transformOptionString';
+import { extractLines, normalizeSpaces } from '../../utils/forFetcher/string';
+import {
+  transformOptionStrings,
+  trimOptionArguments,
+} from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
@@ -59,7 +62,8 @@ const findOptionList = (lines: string[]): string[] => {
 };
 
 const listItemToOptions = (listItem: ListItem): Option[] => {
-  const optionString = transformOptionStrings([listItem.title], []);
-  const description = listItem.descriptionLines.join(' ');
+  const title = normalizeSpaces(listItem.title);
+  const optionString = transformOptionStrings([title], [trimOptionArguments]);
+  const description = normalizeSpaces(listItem.descriptionLines.join(' '));
   return makeOptionList(optionString, listItem.title, description);
 };

@@ -12,8 +12,9 @@ export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'bind',
+    defFileBasename: 'bind',
   });
 
 export const fetchBuiltin: FetchFunction = async (): Promise<Command[]> =>
