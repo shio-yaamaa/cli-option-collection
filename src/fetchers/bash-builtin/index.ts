@@ -214,6 +214,12 @@ export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'printf',
   });
 
+export const fetchPushd: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'pushd',
+    defFileBasename: 'pushd',
+  });
+
 export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'pwd',

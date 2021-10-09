@@ -1,0 +1,19 @@
+[
+  {
+    "name": "pushd",
+    "options": [
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Suppresses the normal change of directory when adding directories to the stack, so only the stack is manipulated."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N",
+        "description": "Rotates the stack so that the Nth directory (counting from the right of the list shown by `dirs', starting with zero) is at the top."
+      }
+    ]
+  }
+]
