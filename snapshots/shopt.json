@@ -1,0 +1,37 @@
+[
+  {
+    "name": "shopt",
+    "options": [
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o",
+        "description": "restrict OPTNAMEs to those defined for use with `set -o'"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "print each shell option with an indication of its status"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "suppress output"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "enable (set) each OPTNAME"
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "disable (unset) each OPTNAME"
+      }
+    ]
+  }
+]

@@ -286,6 +286,12 @@ export const fetchShift: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'shift',
   });
 
+export const fetchShopt: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'shopt',
+    defFileBasename: 'shopt',
+  });
+
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'source',
