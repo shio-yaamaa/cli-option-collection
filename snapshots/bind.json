@@ -78,7 +78,7 @@
         "type": "short",
         "key": "x",
         "title": "-x  keyseq:shell-command",
-        "description": "Cause SHELL-COMMAND to be executed when"
+        "description": "Cause SHELL-COMMAND to be executed when KEYSEQ is entered."
       },
       {
         "type": "short",

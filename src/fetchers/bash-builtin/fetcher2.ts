@@ -1,3 +1,5 @@
+import tabToSpace from 'tab-to-space';
+
 import { Fetcher, Command, Option } from '../../types';
 import { fetchPlainTextFromURL } from '../../utils/forFetcher/http';
 import {
@@ -30,7 +32,7 @@ export const fetch: Fetcher<SourceDef> = async (
     buildDefFileURL(sourceDef.defFileBasename)
   );
   // Some .def files use tab indents and some use space indents. Normalize them by replacing tabs with spaces.
-  const lines = text.split('\n').map((line) => line.replace(/\t/g, '    '));
+  const lines = text.split('\n').map((line) => tabToSpace(line, 8));
   const helpSection = findHelpSection(lines, sourceDef.commandName);
   const optionLists = findOptionLists(helpSection);
   const listItems = mergeLists(

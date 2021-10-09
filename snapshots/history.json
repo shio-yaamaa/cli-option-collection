@@ -12,7 +12,7 @@
         "type": "short",
         "key": "d",
         "title": "-d offset",
-        "description": "delete the history entry at position OFFSET. Negative"
+        "description": "delete the history entry at position OFFSET. Negative offsets count back from the end of the history list"
       },
       {
         "type": "short",
