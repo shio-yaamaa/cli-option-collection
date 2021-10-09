@@ -253,6 +253,12 @@ export const fetchReadarray: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'mapfile',
   });
 
+export const fetchReturn: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'return',
+    defFileBasename: 'return',
+  });
+
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'source',
