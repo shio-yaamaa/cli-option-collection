@@ -1,0 +1,13 @@
+[
+  {
+    "name": "time",
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "print the timing summary in the portable Posix format"
+      }
+    ]
+  }
+]

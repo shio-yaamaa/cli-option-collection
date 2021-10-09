@@ -4,6 +4,8 @@ import { fetch as fetch2 } from './fetcher2';
 
 // NOTE: Some options are not listed in the <dt>-<dd> format and just explained in the text paragraphs.
 //       Those options are not collected because they cannot be parsed in a consistent way.
+// NOTE: Shell reserved names (e.g. if, for) are not collected except "time".
+//       http://git.savannah.gnu.org/cgit/bash.git/tree/builtins/reserved.def
 
 export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
@@ -254,6 +256,12 @@ export const fetchReadarray: FetchFunction = async (): Promise<Command[]> =>
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'source',
+  });
+
+export const fetchTime: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'time',
+    defFileBasename: 'reserved',
   });
 
 export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
