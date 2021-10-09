@@ -83,6 +83,12 @@ export const fetchDeclare: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'declare',
   });
 
+export const fetchDirs: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'dirs',
+    defFileBasename: 'pushd',
+  });
+
 export const fetchDisown: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'disown',

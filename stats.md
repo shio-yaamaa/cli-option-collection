@@ -1,8 +1,8 @@
 # Overview
 
-- Number of base commands: 177
-- Number of commands (including subcommands): 727
-- Number of options: 9819
+- Number of base commands: 178
+- Number of commands (including subcommands): 728
+- Number of options: 9824
 
 # Command Rankings
 
