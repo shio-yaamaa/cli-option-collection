@@ -6,11 +6,16 @@ import {
 } from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import { extractLines, normalizeSpaces } from '../../utils/forFetcher/string';
+import {
+  countIndentWidth,
+  extractLines,
+  normalizeSpaces,
+} from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimOptionArguments,
 } from '../../utils/forFetcher/transformOptionString';
+import { findHeadingContentsPairs } from '../../utils/forFetcher/utils';
 import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
@@ -27,8 +32,10 @@ export const fetch: Fetcher<SourceDef> = async (
   // Some .def files use tab indents and some use space indents. Normalize them by replacing tabs with spaces.
   const lines = text.split('\n').map((line) => line.replace(/\t/g, '    '));
   const helpSection = findHelpSection(lines, sourceDef.commandName);
-  const optionList = findOptionList(helpSection);
-  const listItems = parseTabbedTextList2(optionList.join('\n'));
+  const optionLists = findOptionLists(helpSection);
+  const listItems = mergeLists(
+    optionLists.map((list) => parseTabbedTextList2(list.join('\n')))
+  );
   const options = mergeLists(listItems.map((item) => listItemToOptions(item)));
 
   return [
@@ -53,13 +60,15 @@ const findHelpSection = (lines: string[], commandName: string): string[] => {
   ).filter((line) => !line.startsWith('#')); // Ignore comment lines
 };
 
-const findOptionList = (lines: string[]): string[] => {
-  const extractedLines = extractLines(
+const findOptionLists = (lines: string[]): string[][] => {
+  const headingContentPairs = findHeadingContentsPairs(
     lines,
-    (line) => line === `Options:`,
-    (line) => line.trim().length === 0
+    (line) => countIndentWidth(line) === 0,
+    (line) => line.trim().length > 0 && countIndentWidth(line) > 0
   );
-  return extractedLines.slice(1);
+  return headingContentPairs
+    .filter(({ contents }) => contents.length > 0)
+    .map(({ contents }) => contents);
 };
 
 const listItemToOptions = (listItem: ListItem): Option[] => {
