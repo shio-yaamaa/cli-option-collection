@@ -1,12 +1,14 @@
 import { FetchFunction, Command } from '../../types';
 import { fetch } from './fetcher';
+import { fetch as fetch2 } from './fetcher2';
 
 // NOTE: Some options are not listed in the <dt>-<dd> format and just explained in the text paragraphs.
 //       Those options are not collected because they cannot be parsed in a consistent way.
 
 export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'alias',
+    defFileBasename: 'alias',
   });
 
 export const fetchBind: FetchFunction = async (): Promise<Command[]> =>

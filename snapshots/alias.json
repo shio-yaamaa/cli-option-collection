@@ -1,6 +1,13 @@
 [
   {
     "name": "alias",
-    "options": []
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "print all defined aliases in a reusable format"
+      }
+    ]
   }
 ]
