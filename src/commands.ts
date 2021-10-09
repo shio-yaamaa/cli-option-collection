@@ -197,6 +197,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['type', bashBuiltin.fetchType],
   ['typeset', bashBuiltin.fetchTypeset],
   ['ulimit', bashBuiltin.fetchUlimit],
+  ['umask', bashBuiltin.fetchUmask],
   ['unalias', bashBuiltin.fetchUnalias],
   ['uname', gnuCoreutils.fetchUname],
   ['unexpand', gnuCoreutils.fetchUnexpand],

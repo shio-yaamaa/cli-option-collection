@@ -1,0 +1,19 @@
+[
+  {
+    "name": "umask",
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "if MODE is omitted, output in a form that may be reused as input"
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "makes the output symbolic; otherwise an octal number is output"
+      }
+    ]
+  }
+]
