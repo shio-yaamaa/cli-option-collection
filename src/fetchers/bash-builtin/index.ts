@@ -38,6 +38,12 @@ export const fetchCommand: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'command',
   });
 
+export const fetchContinue: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'continue',
+    defFileBasename: 'break',
+  });
+
 export const fetchDeclare: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'declare',
