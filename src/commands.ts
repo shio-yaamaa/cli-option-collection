@@ -189,6 +189,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['times', bashBuiltin.fetchTimes],
   ['touch', gnuCoreutils.fetchTouch],
   ['tr', gnuCoreutils.fetchTr],
+  ['trap', bashBuiltin.fetchTrap],
   ['true', join(gnuCoreutils.fetchTrue, bashBuiltin.fetchTrue)],
   ['truncate', gnuCoreutils.fetchTruncate],
   ['tsort', gnuCoreutils.fetchTsort],

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "trap",
+    "options": [
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "print a list of signal names and their corresponding numbers"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "display the trap commands associated with each SIGNAL_SPEC"
+      }
+    ]
+  }
+]

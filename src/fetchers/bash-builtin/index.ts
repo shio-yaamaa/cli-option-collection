@@ -322,6 +322,12 @@ export const fetchTimes: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'times',
   });
 
+export const fetchTrap: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'trap',
+    defFileBasename: 'trap',
+  });
+
 export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'true',
