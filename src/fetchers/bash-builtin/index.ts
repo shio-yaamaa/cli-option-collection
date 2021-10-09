@@ -67,6 +67,12 @@ export const fetchEnable: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'enable',
   });
 
+export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'false',
+    defFileBasename: 'colon',
+  });
+
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'help',
