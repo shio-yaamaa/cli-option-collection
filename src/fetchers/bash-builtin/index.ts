@@ -335,8 +335,9 @@ export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchType: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'type',
+    defFileBasename: 'type',
   });
 
 export const fetchTypeset: FetchFunction = async (): Promise<Command[]> =>
