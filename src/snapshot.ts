@@ -9,17 +9,7 @@ const buildFilename = (baseCommandName: string): string =>
 
 export const readSnapshot = (baseCommandName: string): Command[] => {
   const filename = buildFilename(baseCommandName);
-  const json = fs.readJSONSync(filename);
-
-  const commands = json.map((command: any) => ({
-    command: command.command,
-    shortOptionDictionary: new Map(
-      Object.entries(command.shortOptionDictionary)
-    ),
-    longOptionDictionary: new Map(Object.entries(command.longOptionDictionary)),
-  }));
-
-  return commands;
+  return fs.readJSONSync(filename);
 };
 
 export const writeSnapshot = (baseCommandName: string, commands: Command[]) => {
