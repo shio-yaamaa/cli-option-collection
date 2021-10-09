@@ -298,6 +298,12 @@ export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'source',
   });
 
+export const fetchSuspend: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'suspend',
+    defFileBasename: 'suspend',
+  });
+
 export const fetchTime: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'time',

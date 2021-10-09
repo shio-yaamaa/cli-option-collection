@@ -176,6 +176,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['stdbuf', gnuCoreutils.fetchStdbuf],
   ['stty', gnuCoreutils.fetchStty],
   ['sum', gnuCoreutils.fetchSum],
+  ['suspend', bashBuiltin.fetchSuspend],
   ['svc', daemontools.fetchSvc],
   ['sync', gnuCoreutils.fetchSync],
   ['tac', gnuCoreutils.fetchTac],
