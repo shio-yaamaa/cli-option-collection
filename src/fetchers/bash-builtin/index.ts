@@ -113,6 +113,13 @@ export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'colon',
   });
 
+// BUG: Not parsed correctly because the option list contains double spaces in descriptions.
+export const fetchFc: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'fc',
+    defFileBasename: 'fc',
+  });
+
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'help',
