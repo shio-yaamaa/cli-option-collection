@@ -186,6 +186,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['test', join(gnuCoreutils.fetchTest, bashBuiltin.fetchTest)],
   ['time', bashBuiltin.fetchTime],
   ['timeout', gnuCoreutils.fetchTimeout],
+  ['times', bashBuiltin.fetchTimes],
   ['touch', gnuCoreutils.fetchTouch],
   ['tr', gnuCoreutils.fetchTr],
   ['true', join(gnuCoreutils.fetchTrue, bashBuiltin.fetchTrue)],
