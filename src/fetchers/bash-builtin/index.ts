@@ -11,6 +11,12 @@ export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'alias',
   });
 
+export const fetchBg: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'bg',
+    defFileBasename: 'fg_bg',
+  });
+
 export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'bind',
@@ -118,6 +124,12 @@ export const fetchFc: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'fc',
     defFileBasename: 'fc',
+  });
+
+export const fetchFg: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'fg',
+    defFileBasename: 'fg_bg',
   });
 
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
