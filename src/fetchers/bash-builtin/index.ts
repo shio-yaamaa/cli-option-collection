@@ -347,8 +347,9 @@ export const fetchTypeset: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchUlimit: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'ulimit',
+    defFileBasename: 'ulimit',
   });
 
 export const fetchUnalias: FetchFunction = async (): Promise<Command[]> =>
