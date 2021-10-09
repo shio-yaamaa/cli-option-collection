@@ -124,7 +124,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['pinky', gnuCoreutils.fetchPinky],
   ['pr', gnuCoreutils.fetchPr],
   ['printenv', gnuCoreutils.fetchPrintenv],
-  ['printf', join(bashBuiltin.fetchPrintf, gnuCoreutils.fetchPrintf)],
+  ['printf', join(gnuCoreutils.fetchPrintf, bashBuiltin.fetchPrintf)],
   ['ptx', gnuCoreutils.fetchPtx],
   ['pwd', join(gnuCoreutils.fetchPwd, bashBuiltin.fetchPwd)],
   ['python', fetchPython],
