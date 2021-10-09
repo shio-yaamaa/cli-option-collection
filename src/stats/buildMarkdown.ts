@@ -15,7 +15,10 @@ export const buildMarkdown = (stats: Stats): string =>
 ||Command Name|Count|
 |:--|:--|:--|
 ${stats.optionCountRanking
-  .map((item, index) => `|${index + 1}|${item.commandName}|${item.count}|`)
+  .map(
+    (item, index) =>
+      `|${index + 1}|${backtick(item.commandName)}|${item.count}|`
+  )
   .join('\n')}
 
 ## Ranking by Number of Short (Single-Letter) Options
@@ -23,6 +26,11 @@ ${stats.optionCountRanking
 ||Command Name|Count|
 |:--|:--|:--|
 ${stats.shortOptionCountRanking
-  .map((item, index) => `|${index + 1}|${item.commandName}|${item.count}|`)
+  .map(
+    (item, index) =>
+      `|${index + 1}|${backtick(item.commandName)}|${item.count}|`
+  )
   .join('\n')}
 `.trim();
+
+const backtick = (string: string) => '`' + string + '`';
