@@ -6,19 +6,19 @@
         "type": "short",
         "key": "d",
         "title": "-d",
-        "description": "Display a short description of each pattern"
+        "description": "output short description for each topic"
       },
       {
         "type": "short",
         "key": "m",
         "title": "-m",
-        "description": "Display the description of each pattern in a manpage-like format"
+        "description": "display usage in pseudo-manpage format"
       },
       {
         "type": "short",
         "key": "s",
         "title": "-s",
-        "description": "Display only a short usage synopsis for each pattern"
+        "description": "output only a short usage synopsis for each topic matching PATTERN"
       }
     ]
   }

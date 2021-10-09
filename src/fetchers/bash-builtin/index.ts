@@ -145,8 +145,9 @@ export const fetchHash: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchHelp: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'help',
+    defFileBasename: 'help',
   });
 
 export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
