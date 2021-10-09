@@ -95,6 +95,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['id', gnuCoreutils.fetchId],
   ['inlib', bashBuiltin.fetchInlib],
   ['install', gnuCoreutils.fetchInstall],
+  ['jobs', bashBuiltin.fetchJobs],
   ['join', gnuCoreutils.fetchJoin],
   ['jq', fetchJq],
   ['kill', gnuCoreutils.fetchKill],

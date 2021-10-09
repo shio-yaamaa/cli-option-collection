@@ -163,6 +163,12 @@ export const fetchInlib: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'inlib',
   });
 
+export const fetchJobs: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'jobs',
+    defFileBasename: 'jobs',
+  });
+
 export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'let',

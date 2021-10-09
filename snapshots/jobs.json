@@ -1,0 +1,37 @@
+[
+  {
+    "name": "jobs",
+    "options": [
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "lists process IDs in addition to the normal information"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "lists only processes that have changed status since the last notification"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "lists process IDs only"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "restrict output to running jobs"
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "restrict output to stopped jobs"
+      }
+    ]
+  }
+]
