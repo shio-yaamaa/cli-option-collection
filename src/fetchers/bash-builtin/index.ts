@@ -238,9 +238,11 @@ export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'cd',
   });
 
+// BUG: "-u" option is not recognized.
 export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'read',
+    defFileBasename: 'read',
   });
 
 export const fetchReadarray: FetchFunction = async (): Promise<Command[]> =>
