@@ -95,6 +95,12 @@ export const fetchEval: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'eval',
   });
 
+export const fetchExec: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'exec',
+    defFileBasename: 'exec',
+  });
+
 export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'false',
