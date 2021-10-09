@@ -89,6 +89,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['hash', bashBuiltin.fetchHash],
   ['head', gnuCoreutils.fetchHead],
   ['help', bashBuiltin.fetchHelp],
+  ['history', bashBuiltin.fetchHistory],
   ['hostid', gnuCoreutils.fetchHostid],
   ['hostname', gnuCoreutils.fetchHostname],
   ['id', gnuCoreutils.fetchId],
