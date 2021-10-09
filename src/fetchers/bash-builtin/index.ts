@@ -199,9 +199,13 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'exit',
   });
 
+// BUG: Not parsed correctly because the option list contains double spaces in descriptions.
+//      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
+// BUG: "-u" option is not recognized.
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'mapfile',
+    defFileBasename: 'mapfile',
   });
 
 export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
@@ -221,8 +225,9 @@ export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchReadarray: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'readarray',
+    defFileBasename: 'mapfile',
   });
 
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
