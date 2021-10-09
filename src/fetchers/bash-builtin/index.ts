@@ -182,8 +182,9 @@ export const fetchKill: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'let',
+    defFileBasename: 'let',
   });
 
 export const fetchLocal: FetchFunction = async (): Promise<Command[]> =>
