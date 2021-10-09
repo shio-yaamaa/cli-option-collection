@@ -15,17 +15,17 @@ export interface ListItem {
 // - Title and description need to have at least 2 spaces between them.
 // - All the descriptions must start at the same column.
 // Empty lines between description lines of the same item are not preserved.
-export const parseTabbedTextList = (list: string) => {
+export const parseTabbedTextList = (list: string): ListItem[] => {
   const lines = list.split('\n');
   const isEmpty = lines.map((line) => line.trim().length === 0);
+  if (isEmpty.every((empty) => empty)) {
+    return [];
+  }
   const titleIndentWidth = Math.min(
     ...lines
       .filter((_line, index) => !isEmpty[index])
       .map((line) => countIndentWidth(line))
   );
-  if (titleIndentWidth === null) {
-    throw new Error('Could not determine titleIndentWidth');
-  }
   const hasTitle = lines.map(
     (line) => countIndentWidth(line) === titleIndentWidth
   );
@@ -88,17 +88,17 @@ export const parseTabbedTextList = (list: string) => {
 // - Title and description need to have at least 2 spaces between them.
 // - The start column of the description can vary between items.
 // Empty lines between description lines of the same item are not preserved.
-export const parseTabbedTextList2 = (list: string) => {
+export const parseTabbedTextList2 = (list: string): ListItem[] => {
   const lines = list.split('\n');
   const isEmpty = lines.map((line) => line.trim().length === 0);
+  if (isEmpty.every((empty) => empty)) {
+    return [];
+  }
   const titleIndentWidth = Math.min(
     ...lines
       .filter((_line, index) => !isEmpty[index])
       .map((line) => countIndentWidth(line))
   );
-  if (titleIndentWidth === null) {
-    throw new Error('Could not determine titleIndentWidth');
-  }
   const hasTitle = lines.map(
     (line) => countIndentWidth(line) === titleIndentWidth
   );
