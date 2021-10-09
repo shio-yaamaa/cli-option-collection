@@ -77,3 +77,54 @@ export const parseTabbedTextList = (list: string) => {
   }
   return listItems;
 };
+
+// Example:
+//   item1  Description of item1
+//   item2  Description of item2
+//          Description can be multi-line
+//   item with two  spaces  Description of the item with two spaces
+// Rules:
+// - Title may contain more than 2 spaces in sequence, but description must not.
+// - Title and description need to have at least 2 spaces between them.
+// - The start column of the description can vary between items.
+// Empty lines between description lines of the same item are not preserved.
+export const parseTabbedTextList2 = (list: string) => {
+  const lines = list.split('\n');
+  const isEmpty = lines.map((line) => line.trim().length === 0);
+  const titleIndentWidth = Math.min(
+    ...lines
+      .filter((_line, index) => !isEmpty[index])
+      .map((line) => countIndentWidth(line))
+  );
+  if (titleIndentWidth === null) {
+    throw new Error('Could not determine titleIndentWidth');
+  }
+  const hasTitle = lines.map(
+    (line) => countIndentWidth(line) === titleIndentWidth
+  );
+
+  const listItems: ListItem[] = [];
+  let currentDescriptionIndentWidth: number | null = null;
+  for (const [index, line] of lines.entries()) {
+    if (hasTitle[index]) {
+      currentDescriptionIndentWidth = line.lastIndexOf('  ') + 2;
+      const title = line.slice(0, currentDescriptionIndentWidth).trim();
+      const description = line.slice(currentDescriptionIndentWidth);
+      listItems.push({
+        title,
+        descriptionLines: [description],
+      });
+      continue;
+    }
+    if (
+      listItems.length > 0 &&
+      currentDescriptionIndentWidth != null &&
+      countIndentWidth(line) >= currentDescriptionIndentWidth
+    ) {
+      const description = line.slice(currentDescriptionIndentWidth);
+      listItems[listItems.length - 1].descriptionLines.push(description);
+      continue;
+    }
+  }
+  return listItems;
+};
