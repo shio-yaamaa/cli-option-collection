@@ -3,8 +3,6 @@ import { fetch } from './fetcher';
 
 // NOTE: Some options are not listed in the <dt>-<dd> format and just explained in the text paragraphs.
 //       Those options are not collected because they cannot be parsed in a consistent way.
-// NOTE: Some options overlap the options collected from other sources like GNU CoreUtils.
-//       Those options are not listed in this fetchXxx function list.
 
 export const fetchAlias: FetchFunction = async (): Promise<Command[]> =>
   fetch({
@@ -36,6 +34,11 @@ export const fetchDeclare: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'declare',
   });
 
+export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'echo',
+  });
+
 export const fetchEnable: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'enable',
@@ -64,6 +67,11 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'mapfile',
+  });
+
+export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'printf',
   });
 
 export const fetchRead: FetchFunction = async (): Promise<Command[]> =>

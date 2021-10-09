@@ -1,4 +1,5 @@
 import { FetchFunction } from './types';
+import { joinFetchFunctions as join } from './utils/fetchFunction';
 
 import * as apt from './fetchers/apt';
 import * as bashBuiltin from './fetchers/bash-builtin';
@@ -57,7 +58,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['docker', fetchDocker],
   ['dot', graphviz.fetchDot],
   ['du', gnuCoreutils.fetchDu],
-  ['echo', gnuCoreutils.fetchEcho],
+  ['echo', join(bashBuiltin.fetchEcho, gnuCoreutils.fetchEcho)],
   ['enable', bashBuiltin.fetchEnable],
   ['env', gnuCoreutils.fetchEnv],
   ['expand', gnuCoreutils.fetchExpand],
@@ -117,7 +118,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['pinky', gnuCoreutils.fetchPinky],
   ['pr', gnuCoreutils.fetchPr],
   ['printenv', gnuCoreutils.fetchPrintenv],
-  ['printf', gnuCoreutils.fetchPrintf],
+  ['printf', join(bashBuiltin.fetchPrintf, gnuCoreutils.fetchPrintf)],
   ['ptx', gnuCoreutils.fetchPtx],
   ['pwd', gnuCoreutils.fetchPwd],
   ['python', fetchPython],
