@@ -118,6 +118,12 @@ export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'source',
   });
 
+export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'true',
+    defFileBasename: 'colon',
+  });
+
 export const fetchType: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'type',

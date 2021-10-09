@@ -162,7 +162,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['timeout', gnuCoreutils.fetchTimeout],
   ['touch', gnuCoreutils.fetchTouch],
   ['tr', gnuCoreutils.fetchTr],
-  ['true', gnuCoreutils.fetchTrue],
+  ['true', join(gnuCoreutils.fetchTrue, bashBuiltin.fetchTrue)],
   ['truncate', gnuCoreutils.fetchTruncate],
   ['tsort', gnuCoreutils.fetchTsort],
   ['tty', gnuCoreutils.fetchTty],
