@@ -11,6 +11,7 @@ module.exports = [
     entry: {
       index: './src/index.ts',
       preview: './src/preview/start.ts',
+      stats: './src/stats/index.ts',
     },
     output: {
       filename: '[name].js',
