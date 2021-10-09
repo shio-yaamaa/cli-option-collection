@@ -1,0 +1,25 @@
+[
+  {
+    "name": "unset",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "treat each NAME as a shell function"
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "treat each NAME as a shell variable"
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "treat each NAME as a name reference and unset the variable itself rather than the variable it references"
+      }
+    ]
+  }
+]

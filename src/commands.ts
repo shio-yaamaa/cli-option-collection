@@ -195,6 +195,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['unexpand', gnuCoreutils.fetchUnexpand],
   ['uniq', gnuCoreutils.fetchUniq],
   ['unlink', gnuCoreutils.fetchUnlink],
+  ['unset', bashBuiltin.fetchUnset],
   ['uptime', gnuCoreutils.fetchUptime],
   ['users', gnuCoreutils.fetchUsers],
   ['vdir', gnuCoreutils.fetchVdir],

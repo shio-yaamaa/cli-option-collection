@@ -306,3 +306,9 @@ export const fetchUnalias: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'unalias',
     defFileBasename: 'alias',
   });
+
+export const fetchUnset: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'unset',
+    defFileBasename: 'set',
+  });
