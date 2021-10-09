@@ -304,6 +304,12 @@ export const fetchSuspend: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'suspend',
   });
 
+export const fetchTest: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'test',
+    defFileBasename: 'test',
+  });
+
 export const fetchTime: FetchFunction = async (): Promise<Command[]> =>
   fetch2({
     commandName: 'time',

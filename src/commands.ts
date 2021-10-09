@@ -183,7 +183,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['tail', gnuCoreutils.fetchTail],
   ['tee', gnuCoreutils.fetchTee],
   ['terraform', fetchTerraform],
-  ['test', gnuCoreutils.fetchTest],
+  ['test', join(gnuCoreutils.fetchTest, bashBuiltin.fetchTest)],
   ['time', bashBuiltin.fetchTime],
   ['timeout', gnuCoreutils.fetchTimeout],
   ['touch', gnuCoreutils.fetchTouch],
