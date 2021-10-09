@@ -7,8 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "run": "node dist/index.js",
+    "run": "node dist/index.js && yarn stats",
     "preview": "node dist/preview.js",
+    "stats": "node dist/stats.js",
     "build": "rm -rf ./dist && webpack",
     "watch": "webpack -w",
     "prepare": "yarn build",
