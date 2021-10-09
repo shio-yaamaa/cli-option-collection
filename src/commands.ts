@@ -153,6 +153,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['rsync', fetchRsync],
   ['runcon', gnuCoreutils.fetchRuncon],
   ['seq', gnuCoreutils.fetchSeq],
+  ['set', bashBuiltin.fetchSet],
   ['setlock', daemontools.fetchSetlock],
   ['sha1sum', gnuCoreutils.fetchSha1sum],
   ['sha224sum', gnuCoreutils.fetchSha224sum],

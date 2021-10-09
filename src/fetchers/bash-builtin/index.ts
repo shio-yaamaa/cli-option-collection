@@ -259,6 +259,15 @@ export const fetchReturn: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'return',
   });
 
+// BUG: Not parsed correctly because the option list contains double spaces in descriptions.
+//      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
+// BUG: "-o" option is not recognized.
+export const fetchSet: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'set',
+    defFileBasename: 'set',
+  });
+
 export const fetchSource: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'source',
