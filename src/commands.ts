@@ -99,7 +99,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['jobs', bashBuiltin.fetchJobs],
   ['join', gnuCoreutils.fetchJoin],
   ['jq', fetchJq],
-  ['kill', gnuCoreutils.fetchKill],
+  ['kill', join(gnuCoreutils.fetchKill, bashBuiltin.fetchKill)],
   ['let', bashBuiltin.fetchLet],
   ['link', gnuCoreutils.fetchLink],
   ['ln', gnuCoreutils.fetchLn],

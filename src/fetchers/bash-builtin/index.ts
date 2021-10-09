@@ -175,6 +175,12 @@ export const fetchJobs: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'jobs',
   });
 
+export const fetchKill: FetchFunction = async (): Promise<Command[]> =>
+  fetch2({
+    commandName: 'kill',
+    defFileBasename: 'kill',
+  });
+
 export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'let',
