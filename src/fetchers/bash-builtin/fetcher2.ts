@@ -24,6 +24,7 @@ export const fetch: Fetcher<SourceDef> = async (
   const text = await fetchPlainTextFromURL(
     buildDefFileURL(sourceDef.defFileBasename)
   );
+  // Some .def files use tab indents and some use space indents. Normalize them by replacing tabs with spaces.
   const lines = text.split('\n').map((line) => line.replace(/\t/g, '    '));
   const helpSection = findHelpSection(lines, sourceDef.commandName);
   const optionList = findOptionList(helpSection);
