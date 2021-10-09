@@ -84,8 +84,9 @@ export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchEnable: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'enable',
+    defFileBasename: 'enable',
   });
 
 export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
