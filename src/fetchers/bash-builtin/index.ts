@@ -104,8 +104,9 @@ export const fetchLet: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchLocal: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'local',
+    defFileBasename: 'declare',
   });
 
 export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
@@ -156,8 +157,9 @@ export const fetchType: FetchFunction = async (): Promise<Command[]> =>
   });
 
 export const fetchTypeset: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
+  fetch2({
     commandName: 'typeset',
+    defFileBasename: 'declare',
   });
 
 export const fetchUlimit: FetchFunction = async (): Promise<Command[]> =>
