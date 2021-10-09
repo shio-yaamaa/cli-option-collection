@@ -77,5 +77,5 @@ const listItemToOptions = (listItem: ListItem): Option[] => {
   const title = normalizeSpaces(listItem.title);
   const optionString = transformOptionStrings([title], [trimOptionArguments]);
   const description = normalizeSpaces(listItem.descriptionLines.join(' '));
-  return makeOptionList(optionString, listItem.title, description);
+  return makeOptionList(optionString, title, description);
 };
