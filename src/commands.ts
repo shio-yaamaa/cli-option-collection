@@ -62,6 +62,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['dir', gnuCoreutils.fetchDir],
   ['dircolors', gnuCoreutils.fetchDircolors],
   ['dirname', gnuCoreutils.fetchDirname],
+  ['disown', bashBuiltin.fetchDisown],
   ['docker', fetchDocker],
   ['dot', graphviz.fetchDot],
   ['du', gnuCoreutils.fetchDu],
