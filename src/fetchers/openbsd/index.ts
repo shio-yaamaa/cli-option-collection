@@ -39,6 +39,15 @@ export const fetchEd: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: This command is listed in the same page as "mt" command,
+//      so "mt" command's options are also recognized as this command's options
+//      though they should not be.
+export const fetchEject: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'eject',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ksh',
@@ -48,6 +57,15 @@ export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
 export const fetchMd5: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'md5',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+// BUG: This command is listed in the same page as "eject" command,
+//      so "eject" command's options are also recognized as this command's options
+//      though they should not be.
+export const fetchMt: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'mt',
     optionsHeadingID: 'DESCRIPTION',
   });
 
