@@ -58,6 +58,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['continue', bashBuiltin.fetchContinue],
   ['coreutils', gnuCoreutils.fetchCoreutils],
   ['cp', gnuCoreutils.fetchCp],
+  ['csh', openbsd.fetchCsh],
   ['csplit', gnuCoreutils.fetchCsplit],
   ['cut', gnuCoreutils.fetchCut],
   ['date', gnuCoreutils.fetchDate],

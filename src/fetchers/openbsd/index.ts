@@ -17,3 +17,9 @@ export const fetchChflags: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'chflags',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchCsh: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'csh',
+    optionsHeadingID: 'Argument_list_processing',
+  });

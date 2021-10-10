@@ -1,0 +1,91 @@
+[
+  {
+    "name": "csh",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "This flag forces a “break” from option processing, causing\n      any further shell arguments to be treated as non-option arguments. The\n      remaining arguments will not be interpreted as shell options. This may be\n      used to pass options to a shell script without confusion or possible\n      subterfuge. The shell will not run a set-user-ID script without this\n      option."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Commands are read from the (single) following argument which must be\n      present. Any remaining arguments are placed in\n    argv."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "The shell exits if any invoked command terminates abnormally or yields a\n      non-zero exit status."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "The shell will start faster, because it will not execute user or system\n      startup files, load saved history or perform command hashing. Note: if the\n      environment variable HOME is not set, fast startup\n      is the default."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "The shell is interactive and prompts for its top-level input, even if it\n      appears not to be a terminal. Shells are interactive without this option\n      if their inputs and outputs are terminals."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "The shell is a login shell (only applicable if -l\n      is the only flag specified)."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "Read .cshrc, regardless of its owner and group.\n      This option is dangerous and should only be used by\n      su(1)."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Commands are parsed, but not executed. This aids in syntactic checking of\n      shell scripts. When used interactively, the shell can be terminated by\n      pressing control-D (end-of-file character), since\n      exit will not work."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Command input is taken from the standard input."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "A single line of input is read and executed. A backslash\n      (‘\\’) may be used to escape the\n      newline at the end of this line and continue onto another line."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V",
+        "description": "Causes the verbose variable to be set even before\n      .cshrc is executed."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Causes the verbose variable to be set, with the\n      effect that command input is echoed after history substitution."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "Causes the echo variable to be set even before\n      .cshrc is executed."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Causes the echo variable to be set, so that commands\n      are echoed immediately before execution."
+      }
+    ]
+  }
+]
