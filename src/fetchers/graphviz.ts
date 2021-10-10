@@ -1,9 +1,6 @@
 import { FetchFunction, Command, Option } from '../types';
 import { fetchPlainTextFromURL } from '../utils/forFetcher/http';
-import {
-  findIndentedListItems,
-  IndentedListItem,
-} from '../utils/forFetcher/indentedList';
+import { ListItem, parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   makeOptionList,
@@ -37,11 +34,7 @@ export const fetchDot: FetchFunction = async (): Promise<Command[]> => {
     headingLineIndex,
     optionSectionEndLineIndex
   );
-  const indentedListItems = findIndentedListItems(
-    optionSectionLines.join('\n'),
-    0,
-    5
-  );
+  const indentedListItems = parseTextList(optionSectionLines);
   const options = mergeLists(
     indentedListItems.map((listItem) => indentedListItemToOptions(listItem))
   );
@@ -54,9 +47,9 @@ export const fetchDot: FetchFunction = async (): Promise<Command[]> => {
   ];
 };
 
-const indentedListItemToOptions = (listItem: IndentedListItem): Option[] => {
+const indentedListItemToOptions = (listItem: ListItem): Option[] => {
   const title = mergeOptionTitles(listItem.titles);
-  const description = listItem.descriptions.join(' ');
+  const description = listItem.descriptionLines.join(' ');
   const optionStrings = transformOptionStrings(listItem.titles, [
     trimOptionalElements,
     trimOptionValues,
