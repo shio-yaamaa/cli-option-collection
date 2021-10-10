@@ -7,4 +7,5 @@ export const fetchFzf: FetchFunction = async (): Promise<Command[]> =>
     url: new URL(
       'https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1'
     ),
+    optionsHeaderID: 'OPTIONS',
   });

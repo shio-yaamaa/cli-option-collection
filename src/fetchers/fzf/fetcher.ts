@@ -20,13 +20,14 @@ import { mergeLists } from '../../utils/utils';
 export interface SourceDef {
   commandName: string;
   url: URL;
+  optionsHeaderID: string;
 }
 
 export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromManPageURL(sourceDef.url);
-  const section = findOptionsSection(document);
+  const section = findOptionsSection(document, sourceDef.optionsHeaderID);
   if (!section) {
     return [];
   }
@@ -40,8 +41,11 @@ export const fetch: Fetcher<SourceDef> = async (
   ];
 };
 
-const findOptionsSection = (document: Document): Element | null => {
-  const optionsHeading = document.querySelector('#OPTIONS');
+const findOptionsSection = (
+  document: Document,
+  optionsHeaderID: string
+): Element | null => {
+  const optionsHeading = document.querySelector(`#${optionsHeaderID}`);
   return optionsHeading?.closest('section') ?? null;
 };
 
