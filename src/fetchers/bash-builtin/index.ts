@@ -211,7 +211,7 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'exit',
   });
 
-// BUG: "-u" option is not parsed correctly.
+// BUG: "-u" option is not recognized.
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'mapfile',
@@ -242,7 +242,7 @@ export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'cd',
   });
 
-// BUG: "-u" option is not parsed correctly.
+// BUG: "-u" option is not recognized.
 export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'read',

@@ -34,12 +34,6 @@
       },
       {
         "type": "short",
-        "key": "u",
-        "title": "-u fd Read lines from file descriptor FD instead of the standard input",
-        "description": ""
-      },
-      {
-        "type": "short",
         "key": "C",
         "title": "-C callback",
         "description": "Evaluate CALLBACK each time QUANTUM lines are read"
