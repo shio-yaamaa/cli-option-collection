@@ -69,6 +69,13 @@ export const fetchMt: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: Option description for "-rw" is ignored.
+export const fetchPax: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'pax',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchSh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'sh',

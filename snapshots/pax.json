@@ -1,0 +1,211 @@
+[
+  {
+    "name": "pax",
+    "options": [
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Read.\n      pax extracts the members of the archive file read\n      from the standard input, with pathnames matching the specified\n      pattern arguments. The archive format and blocking\n      is automatically determined on input. When an extracted file is a\n      directory, the entire file hierarchy rooted at that directory is\n      extracted. All extracted files are created relative to the current file\n      hierarchy. The setting of ownership, access and modification times, and\n      file mode of the extracted files are discussed in more detail under the\n      -p option."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w",
+        "description": "Write.\n      pax writes an archive containing the\n      file operands to standard output using the specified\n      archive format. When no file operands are specified,\n      a list of files to copy with one per line is read from standard input.\n      When a file operand is also a directory, the entire\n      file hierarchy rooted at that directory will be included."
+      },
+      {
+        "type": "short",
+        "key": "0",
+        "title": "-0",
+        "description": "Use the NUL (‘\\0’) character as a\n      pathname terminator, instead of newline\n      (‘\\n’). This applies only to the\n      pathnames read from standard input in the write and copy modes, and to the\n      pathnames written to standard output in list mode. This option is expected\n      to be used in concert with the -print0 function in\n      find(1) or the -0\n      flag in xargs(1)."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Append the given file operands to the end of an\n      archive that was previously written. If an archive format is not specified\n      with a -x option, the format currently being used\n      in the archive will be selected. Any attempt to append to an archive in a\n      format different from the format already used in the archive will cause\n      pax to exit immediately with a non-zero exit\n      status. The blocking size used in the archive volume where writing starts\n      will continue to be used for the remainder of that archive volume.\n    Warning: Many storage devices are not able\n        to support the operations necessary to perform an append operation. Any\n        attempt to append to an archive stored on such a device may damage the\n        archive or have other unpredictable results. Tape drives in particular\n        are more likely to not support an append operation. An archive stored in\n        a regular file system file or on a disk device will usually support an\n        append operation."
+      },
+      {
+        "type": "short",
+        "key": "B",
+        "title": "-B\n    bytes",
+        "description": "Limit the number of bytes written to a single archive volume to\n      bytes. The bytes limit can end\n      with ‘m’,\n      ‘k’, or\n      ‘b’ to specify multiplication by\n      1048576 (1M), 1024 (1K) or 512, respectively. A pair of\n      bytes limits can be separated by\n      ‘x’ to indicate a product.\n    Warning: Only use this option when writing\n        an archive to a device which supports an end of file read condition\n        based on last (or largest) write offset (such as a regular file or a\n        tape drive). The use of this option with a floppy or hard disk is not\n        recommended."
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b\n    blocksize",
+        "description": "When writing an archive, block the output at a positive decimal integer\n      number of bytes per write to the archive file. The\n      blocksize must be a multiple of 512 bytes with a\n      maximum of 64512 bytes. Archive block sizes larger than 32256 bytes\n      violate the POSIX standard and will not be portable to all systems. A\n      blocksize can end with\n      ‘k’ or\n      ‘b’ to specify multiplication by\n      1024 (1K) or 512, respectively. A pair of blocksizes can be separated by\n      ‘x’ to indicate a product. A\n      specific archive device may impose additional restrictions on the size of\n      blocking it will support. When blocking is not specified, the default\n      blocksize is dependent on the specific archive\n      format being used (see the -x option)."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Match all file or archive members\n      except\n      those specified by the pattern and\n      file operands."
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D",
+        "description": "This option is the same as the -u option, except\n      that the file inode change time is checked instead of the file\n      modification time. The file inode change time can be used to select files\n      whose inode information (e.g., UID, GID, etc.) is newer than a copy of the\n      file in the destination directory."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Cause files of type directory being copied or archived, or archive members\n      of type directory being extracted, to match only the directory file or\n      archive member and not the file hierarchy rooted at the directory."
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E\n    limit",
+        "description": "Limit the number of consecutive read faults while trying to read a flawed\n      archive to limit. With a positive\n      limit, pax will attempt to\n      recover from an archive read error and will continue processing starting\n      with the next file stored in the archive. A limit of\n      0 will cause pax to stop operation after the first\n      read error is detected on an archive volume. The default\n      limit is a small positive number of retries."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f\n    archive",
+        "description": "Specify archive as the pathname of the input or\n      output archive, overriding the default standard input (for list and read)\n      or standard output (for write). A single archive may span multiple files\n      and different archive devices. When required, pax\n      will prompt for the pathname of the file or device of the next volume in\n      the archive."
+      },
+      {
+        "type": "short",
+        "key": "G",
+        "title": "-G\n    group",
+        "description": "Select a file based on its group name, or when\n      starting with a #, a numeric GID. A\n      ‘\\’ can be used to escape the\n      #. Multiple -G options may\n      be supplied and checking stops with the first match."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H",
+        "description": "Follow only command-line symbolic links while performing a physical file\n      system traversal."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Interactively rename files or archive members. For each archive member\n      matching a pattern operand or each file matching a\n      file operand, pax will\n      prompt to /dev/tty giving the name of the file,\n      its file mode, and its modification time. pax will\n      then read a line from /dev/tty. If this line is\n      blank, the file or archive member is skipped. If this line consists of a\n      single period, the file or archive member is processed with no\n      modification to its name. Otherwise, its name is replaced with the\n      contents of the line. pax will immediately exit\n      with a non-zero exit status if EOF is encountered\n      when reading a response or if /dev/tty cannot be\n      opened for reading and writing."
+      },
+      {
+        "type": "short",
+        "key": "j",
+        "title": "-j",
+        "description": "Use bzip2 to compress (decompress) the archive while writing (reading).\n      The bzip2 utility must be installed separately. Incompatible with\n      -a."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "Do not overwrite existing files."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L",
+        "description": "Follow all symbolic links to perform a logical file system traversal."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "(The lowercase letter “ell”.) Link files. In copy mode\n      (-r -w), hard links are\n      made between the source and destination file hierarchies whenever\n      possible."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Select the first archive member that matches each\n      pattern operand. No more than one archive member is\n      matched for each pattern. When members of type\n      directory are matched, the file hierarchy rooted at that directory is also\n      matched (unless -d is also specified)."
+      },
+      {
+        "type": "short",
+        "key": "O",
+        "title": "-O",
+        "description": "Force the archive to be one volume. If a volume ends prematurely,\n      pax will not prompt for a new volume. This option\n      can be useful for automated tasks where error recovery cannot be performed\n      by a human."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o\n    options",
+        "description": "Information to modify the algorithm for extracting or writing archive\n      files which is specific to the archive format specified by\n      -x. In general, options take\n      the form: name=value.\n    The following options are available for the\n        ustar and old BSD\n        tar formats:\n    \n    \n      write_opt=nodir\n      When writing archives, omit the storage of directories."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "Do not follow symbolic links, perform a physical file system traversal.\n      This is the default mode."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p\n    string",
+        "description": "Specify one or more file characteristic options (privileges). The\n      string option-argument is a string specifying file\n      characteristics to be retained or discarded on extraction. The string\n      consists of the specification characters a,\n      e, m,\n      o, and p. Multiple\n      characteristics can be concatenated within the same string and multiple\n      -p options can be specified. The meanings of the\n      specification characters are as follows:\n    \n      a\n      Do not preserve file access times. By default, file access times are\n          preserved whenever possible.\n      e\n      “Preserve everything”, the user ID, group ID, file mode\n          bits, file access time, and file modification time. This is intended\n          to be used by root, someone with all the appropriate privileges, in\n          order to preserve all aspects of the files as they are recorded in the\n          archive. The e flag is the sum of the\n          o and p flags.\n      m\n      Do not preserve file modification times. By default, file modification\n          times are preserved whenever possible.\n      o\n      Preserve the user ID and group ID.\n      p\n      “Preserve” the file mode bits. This is intended to be\n          used by a user with regular privileges who wants to preserve all\n          aspects of the file other than the ownership. The file times are\n          preserved by default, but two other flags are offered to disable this\n          and use the time of extraction instead.\n    \n    In the preceding list, ‘preserve’ indicates that\n        an attribute stored in the archive is given to the extracted file,\n        subject to the permissions of the invoking process. Otherwise the\n        attribute of the extracted file is determined as part of the normal file\n        creation action. If neither the e nor the\n        o specification character is specified, or the\n        user ID and group ID are not preserved for any reason,\n        pax will not set the\n        S_ISUID (setuid) and\n        S_ISGID (setgid) bits of the file mode. If the\n        preservation of any of these items fails for any reason,\n        pax will write a diagnostic message to standard\n        error. Failure to preserve these items will affect the final exit\n        status, but will not cause the extracted file to be deleted. If the file\n        characteristic letters in any of the string option-arguments are\n        duplicated or conflict with each other, the one(s) given last will take\n        precedence. For example, if -p\n        eme is specified, file modification times are\n        still preserved."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s\n    replstr",
+        "description": "Modify the archive member names according to the substitution expression\n      replstr, using the syntax of the\n      ed(1) utility regular expressions.\n      file or pattern arguments may\n      be given to restrict the list of archive members to those specified.\n    The format of these regular expressions is:\n    \n    /old/new/[gp]\n    As in ed(1),\n        old is a basic regular expression (see\n        re_format(7)) and\n        new can contain an ampersand\n        (‘&’),\n        ‘\\n’ (where\n        n is a digit) back-references, or subexpression\n        matching. The old string may also contain newline\n        characters. Any non-null character can be used as a delimiter\n        (‘/’ is shown here). Multiple\n        -s expressions can be specified. The expressions\n        are applied in the order they are specified on the command line,\n        terminating with the first successful substitution.\n    The optional trailing g continues to\n        apply the substitution expression to the pathname substring, which\n        starts with the first character following the end of the last successful\n        substitution. The first unsuccessful substitution stops the operation of\n        the g option. The optional trailing\n        p will cause the final result of a successful\n        substitution to be written to standard error in the following\n      format:\n    \n    original-pathname\n      >>\n      new-pathname\n    File or archive member names that substitute to the empty\n        string are not selected and will be skipped."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T\n    range",
+        "description": "Allow files to be selected based on a file modification or inode change\n      time falling within the specified time range. The range has the format:\n    [from_date][,to_date][/[c][m]]\n    The dates specified by from_date to\n        to_date are inclusive. If only a\n        from_date is supplied, all files with a\n        modification or inode change time equal to or younger are selected. If\n        only a to_date is supplied, all files with a\n        modification or inode change time equal to or older will be selected.\n        When the from_date is equal to the\n        to_date, only files with a modification or inode\n        change time of exactly that time will be selected.\n    When pax is in write or copy mode, the\n        optional trailing field\n        [c][m] can be used to\n        determine which file time (inode change, file modification or both) are\n        used in the comparison. If neither is specified, the default is to use\n        file modification time only. The m specifies the\n        comparison of file modification time (the time when the file was last\n        written). The c specifies the comparison of\n        inode change time (the time when the file inode was last changed; e.g.,\n        a change of owner, group, mode, etc). When c and\n        m are both specified, then the modification and\n        inode change times are both compared.\n    The inode change time comparison is useful in selecting files\n        whose attributes were recently changed or selecting files which were\n        recently created and had their modification time reset to an older time\n        (as what happens when a file is extracted from an archive and the\n        modification time is preserved). Time comparisons using both file times\n        is useful when pax is used to create a time\n        based incremental archive (only files that were changed during a\n        specified time range will be archived).\n    A time range is made up of six different fields and each field\n        must contain two digits. The format is:\n    \n    [[[[[cc]yy]mm]dd]HH]MM[.SS]\n    Where cc is the first two digits of the\n        year (the century), yy is the last two digits of\n        the year, the first mm is the month (from 01 to\n        12), dd is the day of the month (from 01 to 31),\n        HH is the hour of the day (from 00 to 23),\n        MM is the minute (from 00 to 59), and\n        SS is the seconds (from 00 to 59). The minute\n        field MM is required, while the other fields are\n        optional and must be added in the following order:\n        HH, dd,\n        mm, yy,\n        cc.\n    The SS field may be added independently\n        of the other fields. Time ranges are relative to the current time, so\n        -T 1234/cm would select all files with a\n        modification or inode change time of 12:34 PM today or later. Multiple\n        -T time range can be supplied and checking stops\n        with the first match."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Reset the access times of any file or directory read or accessed by\n      pax to be the same as they were before being read\n      or accessed by pax."
+      },
+      {
+        "type": "short",
+        "key": "U",
+        "title": "-U\n    user",
+        "description": "Select a file based on its user name, or when\n      starting with a #, a numeric UID. A\n      ‘\\’ can be used to escape the\n      #. Multiple -U options may\n      be supplied and checking stops with the first match."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Ignore files that are older (having a less recent file modification time)\n      than a pre-existing file or archive member with the same name. During\n      read, an archive member with the same name as a file in the file system\n      will be extracted if the archive member is newer than the file. During\n      write, a file system member with the same name as an archive member will\n      be written to the archive if it is newer than the archive member. During\n      copy, the file in the destination hierarchy is replaced by the file in the\n      source hierarchy or by a link to the file in the source hierarchy if the\n      file in the source hierarchy is newer."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "During a list operation, produce a verbose table of contents using the\n      format of the ls(1) utility with the\n      -l option. For pathnames representing a hard link\n      to a previous member of the archive, the output has the format:\n    \n    ls -l listing\n      == link-name\n    For pathnames representing a symbolic link, the output has the\n        format:\n    \n    ls -l listing\n      -> link-name\n    Where ls -l listing is the output format\n        specified by the ls(1) utility when used\n        with the -l option. Otherwise for all the other\n        operational modes (read, write, and copy), pathnames are written and\n        flushed to standard error without a trailing newline as soon as\n        processing begins on that file or archive member. The trailing newline\n        is not buffered and is written only after the file has been read or\n        written."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "When traversing the file hierarchy specified by a pathname, do not descend\n      into directories that have a different device ID. See the\n      st_dev field as described in\n      stat(2) for more information about device\n      IDs."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x\n    format",
+        "description": "Specify the output archive format, with the default format being\n      ustar. pax currently\n      supports the following formats:\n    \n      bcpio\n      The old binary cpio format. The default blocksize for this format is\n          5120 bytes. This format is not very portable and should not be used\n          when other formats are available. Inode and device information about a\n          file (used for detecting file hard links by this format), which may be\n          truncated by this format, is detected by pax\n          and is repaired.\n      cpio\n      The extended cpio interchange format specified in the\n          IEEE Std 1003.2 (“POSIX.2”)\n          standard. The default blocksize for this format is 5120 bytes. Inode\n          and device information about a file (used for detecting file hard\n          links by this format), which may be truncated by this format, is\n          detected by pax and is repaired.\n      sv4cpio\n      The System V release 4 cpio. The default blocksize for this format is\n          5120 bytes. Inode and device information about a file (used for\n          detecting file hard links by this format), which may be truncated by\n          this format, is detected by pax and is\n          repaired.\n      sv4crc\n      The System V release 4 cpio with file CRC checksums. The default\n          blocksize for this format is 5120 bytes. Inode and device information\n          about a file (used for detecting file hard links by this format),\n          which may be truncated by this format, is detected by\n          pax and is repaired.\n      tar\n      The old BSD tar format as found in\n          4.3BSD. The default blocksize for this format\n          is 10240 bytes. Pathnames stored by this format must be 100 characters\n          or less in length. Only regular files, hard links, soft links, and\n          directories will be archived (other file system types are not\n          supported). For backwards compatibility with even older tar formats, a\n          -o option can be used when writing an archive\n          to omit the storage of directories. This option takes the form:\n        \n        -o\n          write_opt=nodir\n      \n      ustar\n      The extended tar interchange format specified in the\n          IEEE Std 1003.2 (“POSIX.2”)\n          standard. The default blocksize for this format is 10240 bytes.\n          Filenames stored by this format must be 100 characters or less in\n          length; the total pathname must be 256 characters or less.\n    \n    pax will detect and report any file\n        that it is unable to store or extract as the result of any specific\n        archive format restrictions. The individual archive formats may impose\n        additional restrictions on use. Typical archive format restrictions\n        include (but are not limited to): file pathname length, file size, link\n        pathname length, and the type of the file."
+      },
+      {
+        "type": "short",
+        "key": "Y",
+        "title": "-Y",
+        "description": "This option is the same as the -D option, except\n      that the inode change time is checked using the pathname created after all\n      the file name modifications have completed."
+      },
+      {
+        "type": "short",
+        "key": "Z",
+        "title": "-Z",
+        "description": "This option is the same as the -u option, except\n      that the modification time is checked using the pathname created after all\n      the file name modifications have completed."
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z",
+        "description": "Use gzip(1) to compress (decompress) the\n      archive while writing (reading). Incompatible with\n      -a."
+      }
+    ]
+  }
+]
