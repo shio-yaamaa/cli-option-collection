@@ -11,6 +11,7 @@ import { fetchGit } from './fetchers/git';
 import * as gnuCoreutils from './fetchers/gnu-coreutils';
 import { fetchGo } from './fetchers/go';
 import * as graphviz from './fetchers/graphviz';
+import { fetchHtop } from './fetchers/htop';
 import * as imagemagick from './fetchers/imagemagick';
 import { fetchJq } from './fetchers/jq';
 import * as mysql from './fetchers/mysql';
@@ -95,6 +96,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['history', bashBuiltin.fetchHistory],
   ['hostid', gnuCoreutils.fetchHostid],
   ['hostname', gnuCoreutils.fetchHostname],
+  ['htop', fetchHtop],
   ['id', gnuCoreutils.fetchId],
   ['inlib', bashBuiltin.fetchInlib],
   ['install', gnuCoreutils.fetchInstall],

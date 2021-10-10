@@ -25,6 +25,26 @@ export const splitByComma: OptionStringsTransformer = (
   return splitStrings;
 };
 
+// Split items by spaces. Only items that start with "-" are split.
+// Example: ["-s --sort-key COLUMN"] -> ["-s", "--sort-key COLUMN"]
+export const splitBySpace: OptionStringsTransformer = (
+  strings: string[]
+): string[] => {
+  const allItems: string[] = [];
+  for (const string of strings) {
+    const splitOptions: string[] = [];
+    for (const item of splitAtTopLevel(string, ' ', BRACKETS)) {
+      if (!item.trimLeft().startsWith('-') && splitOptions.length > 0) {
+        splitOptions[splitOptions.length - 1] += ` ${item}`;
+      } else {
+        splitOptions.push(item);
+      }
+    }
+    allItems.push(...splitOptions);
+  }
+  return allItems;
+};
+
 // Example: ["--ignore=PATTERN"] -> ["--ignore"]
 export const trimOptionValues: OptionStringsTransformer = (
   strings: string[]
