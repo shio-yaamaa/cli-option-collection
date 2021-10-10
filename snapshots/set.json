@@ -101,8 +101,8 @@
       {
         "type": "short",
         "key": "H",
-        "title": "-H Enable ! style history substitution.",
-        "description": "This flag is on"
+        "title": "-H",
+        "description": "Enable ! style history substitution. This flag is on by default when the shell is interactive."
       },
       {
         "type": "short",

@@ -4,7 +4,7 @@ import { Fetcher, Command, Option } from '../../types';
 import { fetchPlainTextFromURL } from '../../utils/forFetcher/http';
 import {
   ListItem,
-  parseTabbedTextList2,
+  parseTabbedTextList,
 } from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
@@ -36,7 +36,7 @@ export const fetch: Fetcher<SourceDef> = async (
   const helpSection = findHelpSection(lines, sourceDef.commandName);
   const optionLists = findOptionLists(helpSection);
   const listItems = mergeLists(
-    optionLists.map((list) => parseTabbedTextList2(list.join('\n')))
+    optionLists.map((list) => parseTabbedTextList(list.join('\n')))
   );
   const options = mergeLists(listItems.map((item) => listItemToOptions(item)));
 

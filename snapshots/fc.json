@@ -5,8 +5,8 @@
       {
         "type": "short",
         "key": "e",
-        "title": "-e ENAME select which editor to use.",
-        "description": "Default is FCEDIT, then EDITOR,"
+        "title": "-e ENAME",
+        "description": "select which editor to use. Default is FCEDIT, then EDITOR, then vi"
       },
       {
         "type": "short",

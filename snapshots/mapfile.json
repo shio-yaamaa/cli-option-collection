@@ -11,14 +11,14 @@
       {
         "type": "short",
         "key": "n",
-        "title": "-n count Copy at most COUNT lines.",
-        "description": "If COUNT is 0, all lines are copied"
+        "title": "-n count",
+        "description": "Copy at most COUNT lines. If COUNT is 0, all lines are copied"
       },
       {
         "type": "short",
         "key": "O",
-        "title": "-O origin Begin assigning to ARRAY at index ORIGIN.",
-        "description": "The default index is 0"
+        "title": "-O origin",
+        "description": "Begin assigning to ARRAY at index ORIGIN. The default index is 0"
       },
       {
         "type": "short",
