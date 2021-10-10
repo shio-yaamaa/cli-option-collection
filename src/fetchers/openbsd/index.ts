@@ -6,3 +6,9 @@ export const fetchChio: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'chio',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchChflags: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'chflags',
+    optionsHeadingID: 'DESCRIPTION',
+  });

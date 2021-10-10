@@ -43,6 +43,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['cat', gnuCoreutils.fetchCat],
   ['cd', bashBuiltin.fetchCd],
   ['chcon', gnuCoreutils.fetchChcon],
+  ['chflags', openbsd.fetchChflags],
   ['chgrp', gnuCoreutils.fetchChgrp],
   ['chio', openbsd.fetchChio],
   ['chmod', gnuCoreutils.fetchChmod],
