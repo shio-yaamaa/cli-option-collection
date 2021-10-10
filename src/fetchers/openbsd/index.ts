@@ -29,3 +29,10 @@ export const fetchDomainname: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'domainname',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+// BUG: Not only options but also some of address symbols are recognized as options.
+export const fetchEd: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ed',
+    optionsHeadingID: 'DESCRIPTION',
+  });
