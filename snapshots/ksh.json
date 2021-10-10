@@ -5,7 +5,7 @@
       {
         "type": "short",
         "key": "c",
-        "title": "-c\n    string",
+        "title": "-c string",
         "description": "ksh will execute the command(s) contained in\n      string."
       },
       {

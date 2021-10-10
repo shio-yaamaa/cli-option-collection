@@ -6,6 +6,7 @@ import {
   makeOptionList,
   mergeOptionTitles,
 } from '../../utils/forFetcher/optionString';
+import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimSpaceDelimitedArguments,
@@ -60,7 +61,7 @@ const findOptionLists = (section: Element): HTMLDListElement[] =>
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts.map((dt) => dt.textContent).filter(isString);
-  const title = mergeOptionTitles(dtTexts);
+  const title = normalizeSpacesAndLinebreaks(mergeOptionTitles(dtTexts));
   const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(dtTexts, [
     trimSpaceDelimitedArguments,

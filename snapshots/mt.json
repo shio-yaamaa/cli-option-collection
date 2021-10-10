@@ -5,7 +5,7 @@
       {
         "type": "short",
         "key": "f",
-        "title": "-f\n    device",
+        "title": "-f device",
         "description": "Operate on the device specified."
       },
       {

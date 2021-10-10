@@ -65,7 +65,7 @@
       {
         "type": "short",
         "key": "M",
-        "title": "-M\n    core",
+        "title": "-M core",
         "description": "Extract values associated with the name list from the specified core\n      instead of the running kernel."
       },
       {
@@ -77,25 +77,25 @@
       {
         "type": "short",
         "key": "N",
-        "title": "-N\n    system",
+        "title": "-N system",
         "description": "Extract the name list from the specified system instead of the running\n      kernel."
       },
       {
         "type": "short",
         "key": "O",
-        "title": "-O\n    fmt",
+        "title": "-O fmt",
         "description": "Add the information associated with the space or comma separated list of\n      keywords specified, after the process ID, in the default information\n      display. Keywords may be appended with an equals sign (‘=’)\n      and a string. This causes the printed header to use the specified string\n      instead of the standard header."
       },
       {
         "type": "short",
         "key": "o",
-        "title": "-o\n    fmt",
+        "title": "-o fmt",
         "description": "Display information associated with the space or comma separated list of\n      keywords specified. Keywords may be appended with an equals sign\n      (‘=’) and a string. This causes the printed header to use\n      the specified string instead of the standard header."
       },
       {
         "type": "short",
         "key": "p",
-        "title": "-p\n    pid",
+        "title": "-p pid",
         "description": "Display information associated with the specified process ID."
       },
       {
@@ -119,13 +119,13 @@
       {
         "type": "short",
         "key": "t",
-        "title": "-t\n    tty",
+        "title": "-t tty",
         "description": "Display information about processes attached to the specified terminal\n      device."
       },
       {
         "type": "short",
         "key": "U",
-        "title": "-U\n    username",
+        "title": "-U username",
         "description": "Display the processes belonging to the specified\n      username."
       },
       {
@@ -143,7 +143,7 @@
       {
         "type": "short",
         "key": "W",
-        "title": "-W\n    swap",
+        "title": "-W swap",
         "description": "When not using the running kernel, extract swap information from the\n      specified file."
       },
       {

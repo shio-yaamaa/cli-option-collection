@@ -35,13 +35,13 @@
       {
         "type": "short",
         "key": "b",
-        "title": "-b\n    blocking-factor",
+        "title": "-b blocking-factor",
         "description": "Set blocking factor to use for the archive. tar\n      uses 512-byte blocks. The default is 20, the maximum is 126. Archives with\n      a blocking factor larger than 63 violate the POSIX standard and will not\n      be portable to all systems."
       },
       {
         "type": "short",
         "key": "C",
-        "title": "-C\n    directory",
+        "title": "-C directory",
         "description": "This is a positional argument which sets the working directory for the\n      following files. When extracting, files will be extracted into the\n      specified directory; when creating, the specified files will be matched\n      from the directory."
       },
       {
@@ -53,7 +53,7 @@
       {
         "type": "short",
         "key": "f",
-        "title": "-f\n    archive",
+        "title": "-f archive",
         "description": "Read from or write to archive. A hyphen (-) can be\n      used to represent standard input or output. The default is\n      /dev/rst0. See also the\n      TAPE environment variable."
       },
       {
@@ -71,7 +71,7 @@
       {
         "type": "short",
         "key": "I",
-        "title": "-I\n    file",
+        "title": "-I file",
         "description": "This is a positional argument which reads the names of files to archive or\n      extract from the given file, one per line."
       },
       {
@@ -131,7 +131,7 @@
       {
         "type": "short",
         "key": "s",
-        "title": "-s\n    replstr",
+        "title": "-s replstr",
         "description": "Modify the archive member names according to the substitution expression\n      replstr, using the syntax of the\n      ed(1) utility regular expressions.\n      file arguments may be given to restrict the list of\n      archive members to those specified.\n    The format of these regular expressions is\n    \n    /old/new/[gp]\n    As in ed(1),\n        old is a basic regular expression (see\n        re_format(7)) and\n        new can contain an ampersand\n        (‘&’),\n        ‘\\n’ (where\n        n is a digit) back-references, or subexpression\n        matching. The old string may also contain newline\n        characters. Any non-null character can be used as a delimiter\n        (‘/’ is shown here). Multiple\n        -s expressions can be specified. The expressions\n        are applied in the order they are specified on the command line,\n        terminating with the first successful substitution.\n    The optional trailing g continues to\n        apply the substitution expression to the pathname substring, which\n        starts with the first character following the end of the last successful\n        substitution. The first unsuccessful substitution stops the operation of\n        the g option. The optional trailing\n        p will cause the final result of a successful\n        substitution to be written to standard error in the following\n      format:\n    \n    original-pathname\n      >>\n      new-pathname\n    File or archive member names that substitute to the empty\n        string are not selected and will be skipped."
       },
       {

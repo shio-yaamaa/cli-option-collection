@@ -59,7 +59,7 @@
       {
         "type": "short",
         "key": "o",
-        "title": "-o\n    option",
+        "title": "-o option",
         "description": "Specify an option by its long name. Those described below have no\n      equivalent option letter:\n    \n    \n    \n      ignoreeof\n      Ignore an end-of-file (‘^D’). EOF normally logs a user\n          out, so setting this can prevent accidental logouts (the user will\n          need to explicitly use the exit command).\n      nolog\n      Do not enter function definitions into command history.\n      posix\n      Enable POSIX mode (see\n        STANDARDS).\n      vi\n      Enable vi(1) command line editing."
       },
       {

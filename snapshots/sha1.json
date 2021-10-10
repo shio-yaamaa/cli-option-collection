@@ -11,7 +11,7 @@
       {
         "type": "short",
         "key": "C",
-        "title": "-C\n    checklist",
+        "title": "-C checklist",
         "description": "Compare the checksum of each file against the\n      checksums in the checklist. Any specified\n      file that is not listed in the\n      checklist will generate an error."
       },
       {
@@ -23,7 +23,7 @@
       {
         "type": "short",
         "key": "h",
-        "title": "-h\n    hashfile",
+        "title": "-h hashfile",
         "description": "Place the checksum into hashfile instead of\n    stdout."
       },
       {
@@ -47,7 +47,7 @@
       {
         "type": "short",
         "key": "s",
-        "title": "-s\n    string",
+        "title": "-s string",
         "description": "Prints a checksum of the given string."
       },
       {
