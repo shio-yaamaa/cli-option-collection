@@ -90,6 +90,16 @@ export const parseTabbedTextList = (list: string): ListItem[] => {
 // Empty lines between description lines of the same item are not preserved.
 export const parseTabbedTextList2 = (list: string): ListItem[] => {
   const lines = list.split('\n');
+  return abstractParseTabbedTextList(
+    lines,
+    (line) => line.lastIndexOf('  ') + 2
+  );
+};
+
+const abstractParseTabbedTextList = (
+  lines: string[],
+  countDescriptionIndentWidth: (line: string) => number
+): ListItem[] => {
   const isEmpty = lines.map((line) => line.trim().length === 0);
   if (isEmpty.every((empty) => empty)) {
     return [];
@@ -107,7 +117,7 @@ export const parseTabbedTextList2 = (list: string): ListItem[] => {
     const indentWidth = countIndentWidth(line);
     // The line contains title and description.
     if (indentWidth === titleIndentWidth) {
-      currentDescriptionIndentWidth = line.lastIndexOf('  ') + 2;
+      currentDescriptionIndentWidth = countDescriptionIndentWidth(line);
       const title = line.slice(0, currentDescriptionIndentWidth).trim();
       const description = line.slice(currentDescriptionIndentWidth);
       listItems.push({
