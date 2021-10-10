@@ -12,6 +12,7 @@ import {
   transformOptionStrings,
   trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://docs.python.org/3/using/cmdline.html
@@ -41,10 +42,7 @@ const findOptionList = (document: Document): HTMLDListElement | null => {
     return null;
   }
   const nextElement = optionsHeading.nextElementSibling;
-  if (nextElement?.tagName.toLowerCase() !== 'dl') {
-    return null;
-  }
-  return nextElement as HTMLDListElement;
+  return nextElement && isElement(nextElement, 'dl') ? nextElement : null;
 };
 
 const optionListToOptions = (list: HTMLDListElement): Option[] => {

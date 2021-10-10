@@ -12,7 +12,7 @@ import {
   transformOptionStrings,
   trimOptionalElements,
 } from '../utils/forFetcher/transformOptionString';
-import { isString } from '../utils/typeGuards';
+import { isElement, isString } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -52,8 +52,8 @@ const findCommandSections = (document: Document): Element[] => {
     if (!parentSection) {
       continue;
     }
-    const childSections = Array.from(parentSection.children).filter(
-      (element) => element.tagName.toLowerCase() === 'section'
+    const childSections = Array.from(parentSection.children).filter((child) =>
+      isElement(child, 'section')
     );
     commandSections.push(...childSections);
   }

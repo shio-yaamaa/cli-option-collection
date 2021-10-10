@@ -14,6 +14,7 @@ import {
   trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
+import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://raw.githubusercontent.com/WayneD/rsync/master/rsync.1.md
@@ -47,10 +48,10 @@ const findOptionLists = (document: Document): Element[] => {
   const lists: Element[] = [];
   let currentElement: Element | null = optionSummaryHeading;
   while ((currentElement = currentElement.nextElementSibling)) {
-    if (currentElement?.tagName.toLowerCase() === 'h1') {
+    if (isElement(currentElement, 'h1')) {
       break;
     }
-    if (currentElement.tagName.toLowerCase() === 'pre') {
+    if (isElement(currentElement, 'pre')) {
       lists.push(currentElement);
     }
   }

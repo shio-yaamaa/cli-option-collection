@@ -13,6 +13,7 @@ import {
   trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { findHeadingContentsPairs } from '../utils/forFetcher/utils';
+import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/golang/go/blob/master/src/cmd/go/internal/test/test.go#L139
@@ -86,7 +87,7 @@ const getSections = (document: Document): Section[] => {
           break;
       }
       currentElement = currentElement.nextElementSibling;
-    } while (currentElement && currentElement.tagName.toLowerCase() !== 'h4');
+    } while (currentElement && !isElement(currentElement, 'h4'));
 
     if (usage) {
       sections.push({

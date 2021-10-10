@@ -10,6 +10,7 @@ import {
   trimSpaceDelimitedArguments,
   trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isElement } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -49,7 +50,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     return [];
   }
   const commandList = commandsHeading.nextElementSibling;
-  if (commandList?.tagName.toLowerCase() !== 'ul') {
+  if (!(commandList && isElement(commandList, 'ul'))) {
     return [];
   }
   const anchors = findAnchorsWithPattern(

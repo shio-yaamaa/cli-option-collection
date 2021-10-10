@@ -13,7 +13,7 @@ import {
   trimNonDelimitedArguments,
   trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
-import { isString } from '../utils/typeGuards';
+import { isElement, isString } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/stedolan/jq/blob/master/src/main.c#L73
@@ -71,7 +71,7 @@ const findDescriptionForList = (list: Element): string => {
   const descriptionElements: Element[] = [];
   let element: Element | null = list;
   while ((element = element.nextElementSibling)) {
-    if (element.tagName.toLowerCase() === 'p') {
+    if (isElement(element, 'p')) {
       descriptionElements.push(element);
     } else {
       break;

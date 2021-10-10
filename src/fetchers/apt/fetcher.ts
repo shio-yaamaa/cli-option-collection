@@ -9,6 +9,7 @@ import {
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
+import { isElement } from '../../utils/typeGuards';
 
 export interface SourceDef {
   commandName: string;
@@ -46,7 +47,7 @@ const findOptionList = (document: Document): Element | null => {
     return null;
   }
   const nextSibling = optionHeading.nextElementSibling;
-  return nextSibling?.tagName.toLowerCase() === 'pre' ? nextSibling : null;
+  return nextSibling && isElement(nextSibling, 'pre') ? nextSibling : null;
 };
 
 const listToOptions = (list: Element): Option[] => {
