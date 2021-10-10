@@ -1,8 +1,8 @@
 # Overview
 
-- Number of base commands: 210
-- Number of commands (including subcommands): 760
-- Number of options: 10148
+- Number of base commands: 211
+- Number of commands (including subcommands): 761
+- Number of options: 10192
 
 # Command Rankings
 
@@ -26,12 +26,12 @@
 ||Command Name|Count|
 |:--|:--|:--|
 |1|`rsync`|50|
-|2|`dir`|40|
-|3|`ls`|40|
-|4|`vdir`|40|
-|5|`mysql`|34|
-|6|`mysqldump`|34|
-|7|`pax`|34|
-|8|`perl`|30|
-|9|`git grep`|27|
-|10|`tar`|27|
+|2|`ssh`|44|
+|3|`dir`|40|
+|4|`ls`|40|
+|5|`vdir`|40|
+|6|`mysql`|34|
+|7|`mysqldump`|34|
+|8|`pax`|34|
+|9|`perl`|30|
+|10|`git grep`|27|

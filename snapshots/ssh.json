@@ -1,0 +1,271 @@
+[
+  {
+    "name": "ssh",
+    "options": [
+      {
+        "type": "short",
+        "key": "4",
+        "title": "-4",
+        "description": "Forces ssh to use IPv4 addresses only."
+      },
+      {
+        "type": "short",
+        "key": "6",
+        "title": "-6",
+        "description": "Forces ssh to use IPv6 addresses only."
+      },
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "Enables forwarding of connections from an authentication agent such as\n      ssh-agent(1). This can also be\n      specified on a per-host basis in a configuration file.\n    Agent forwarding should be enabled with caution. Users with\n        the ability to bypass file permissions on the remote host (for the\n        agent's UNIX-domain socket) can access the local\n        agent through the forwarded connection. An attacker cannot obtain key\n        material from the agent, however they can perform operations on the keys\n        that enable them to authenticate using the identities loaded into the\n        agent. A safer alternative may be to use a jump host (see\n        -J)."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Disables forwarding of the authentication agent connection."
+      },
+      {
+        "type": "short",
+        "key": "B",
+        "title": "-B\n    bind_interface",
+        "description": "Bind to the address of bind_interface before\n      attempting to connect to the destination host. This is only useful on\n      systems with more than one address."
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b\n    bind_address",
+        "description": "Use bind_address on the local machine as the source\n      address of the connection. Only useful on systems with more than one\n      address."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C",
+        "description": "Requests compression of all data (including stdin, stdout, stderr, and\n      data for forwarded X11, TCP and UNIX-domain\n      connections). The compression algorithm is the same used by\n      gzip(1). Compression is desirable on\n      modem lines and other slow connections, but will only slow down things on\n      fast networks. The default value can be set on a host-by-host basis in the\n      configuration files; see the Compression option."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c\n    cipher_spec",
+        "description": "Selects the cipher specification for encrypting the session.\n      cipher_spec is a comma-separated list of ciphers\n      listed in order of preference. See the Ciphers\n      keyword in ssh_config(5) for more\n      information."
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D\n    [bind_address:]port",
+        "description": "Specifies a local “dynamic” application-level port\n      forwarding. This works by allocating a socket to listen to\n      port on the local side, optionally bound to the\n      specified bind_address. Whenever a connection is\n      made to this port, the connection is forwarded over the secure channel,\n      and the application protocol is then used to determine where to connect to\n      from the remote machine. Currently the SOCKS4 and SOCKS5 protocols are\n      supported, and ssh will act as a SOCKS server.\n      Only root can forward privileged ports. Dynamic port forwardings can also\n      be specified in the configuration file.\n    IPv6 addresses can be specified by enclosing the address in\n        square brackets. Only the superuser can forward privileged ports. By\n        default, the local port is bound in accordance with the\n        GatewayPorts setting. However, an explicit\n        bind_address may be used to bind the connection to\n        a specific address. The bind_address of\n        “localhost” indicates that the listening port be bound for\n        local use only, while an empty address or ‘*’ indicates\n        that the port should be available from all interfaces."
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E\n    log_file",
+        "description": "Append debug logs to log_file instead of standard\n      error."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e\n    escape_char",
+        "description": "Sets the escape character for sessions with a pty (default:\n      ‘~’). The escape character is only\n      recognized at the beginning of a line. The escape character followed by a\n      dot (‘.’) closes the connection;\n      followed by control-Z suspends the connection; and followed by itself\n      sends the escape character once. Setting the character to\n      “none” disables any escapes and makes the session fully\n      transparent."
+      },
+      {
+        "type": "short",
+        "key": "F",
+        "title": "-F\n    configfile",
+        "description": "Specifies an alternative per-user configuration file. If a configuration\n      file is given on the command line, the system-wide configuration file\n      (/etc/ssh/ssh_config) will be ignored. The default\n      for the per-user configuration file is\n      ~/.ssh/config. If set to “none”, no\n      configuration files will be read."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Requests ssh to go to background just before\n      command execution. This is useful if ssh is going\n      to ask for passwords or passphrases, but the user wants it in the\n      background. This implies -n. The recommended way\n      to start X11 programs at a remote site is with something like\n      ssh -f host xterm.\n    If the ExitOnForwardFailure\n        configuration option is set to “yes”, then a client\n        started with -f will wait for all remote port\n        forwards to be successfully established before placing itself in the\n        background. Refer to the description of\n        ForkAfterAuthentication in\n        ssh_config(5) for details."
+      },
+      {
+        "type": "short",
+        "key": "G",
+        "title": "-G",
+        "description": "Causes ssh to print its configuration after\n      evaluating Host and Match\n      blocks and exit."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g",
+        "description": "Allows remote hosts to connect to local forwarded ports. If used on a\n      multiplexed connection, then this option must be specified on the master\n      process."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I\n    pkcs11",
+        "description": "Specify the PKCS#11 shared library ssh should use\n      to communicate with a PKCS#11 token providing keys for user\n      authentication."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i\n    identity_file",
+        "description": "Selects a file from which the identity (private key) for public key\n      authentication is read. You can also specify a public key file to use the\n      corresponding private key that is loaded in\n      ssh-agent(1) when the private key\n      file is not present locally. The default is\n      ~/.ssh/id_dsa,\n      ~/.ssh/id_ecdsa,\n      ~/.ssh/id_ecdsa_sk,\n      ~/.ssh/id_ed25519,\n      ~/.ssh/id_ed25519_sk and\n      ~/.ssh/id_rsa. Identity files may also be\n      specified on a per-host basis in the configuration file. It is possible to\n      have multiple -i options (and multiple identities\n      specified in configuration files). If no certificates have been explicitly\n      specified by the CertificateFile directive,\n      ssh will also try to load certificate information\n      from the filename obtained by appending -cert.pub\n      to identity filenames."
+      },
+      {
+        "type": "short",
+        "key": "J",
+        "title": "-J\n    destination",
+        "description": "Connect to the target host by first making a ssh\n      connection to the jump host described by destination\n      and then establishing a TCP forwarding to the ultimate destination from\n      there. Multiple jump hops may be specified separated by comma characters.\n      This is a shortcut to specify a ProxyJump\n      configuration directive. Note that configuration directives supplied on\n      the command-line generally apply to the destination host and not any\n      specified jump hosts. Use ~/.ssh/config to specify\n      configuration for jump hosts."
+      },
+      {
+        "type": "short",
+        "key": "K",
+        "title": "-K",
+        "description": "Enables GSSAPI-based authentication and forwarding (delegation) of GSSAPI\n      credentials to the server."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "Disables forwarding (delegation) of GSSAPI credentials to the server."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L\n    [bind_address:]port:host:hostport, -L\n    [bind_address:]port:remote_socket, -L\n    local_socket:host:hostport, -L\n    local_socket:remote_socket",
+        "description": "Specifies that connections to the given TCP port or Unix socket on the\n      local (client) host are to be forwarded to the given host and port, or\n      Unix socket, on the remote side. This works by allocating a socket to\n      listen to either a TCP port on the local side,\n      optionally bound to the specified bind_address, or\n      to a Unix socket. Whenever a connection is made to the local port or\n      socket, the connection is forwarded over the secure channel, and a\n      connection is made to either host port\n      hostport, or the Unix socket\n      remote_socket, from the remote machine.\n    Port forwardings can also be specified in the configuration\n        file. Only the superuser can forward privileged ports. IPv6 addresses\n        can be specified by enclosing the address in square brackets.\n    By default, the local port is bound in accordance with the\n        GatewayPorts setting. However, an explicit\n        bind_address may be used to bind the connection to\n        a specific address. The bind_address of\n        “localhost” indicates that the listening port be bound for\n        local use only, while an empty address or ‘*’ indicates\n        that the port should be available from all interfaces."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l\n    login_name",
+        "description": "Specifies the user to log in as on the remote machine. This also may be\n      specified on a per-host basis in the configuration file."
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M",
+        "description": "Places the ssh client into “master”\n      mode for connection sharing. Multiple -M options\n      places ssh into “master” mode but\n      with confirmation required using\n      ssh-askpass(1) before each\n      operation that changes the multiplexing state (e.g. opening a new\n      session). Refer to the description of\n      ControlMaster in\n      ssh_config(5) for details."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m\n    mac_spec",
+        "description": "A comma-separated list of MAC (message authentication code) algorithms,\n      specified in order of preference. See the MACs\n      keyword for more information."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N",
+        "description": "Do not execute a remote command. This is useful for just forwarding ports.\n      Refer to the description of SessionType in\n      ssh_config(5) for details."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Redirects stdin from /dev/null (actually, prevents\n      reading from stdin). This must be used when ssh is\n      run in the background. A common trick is to use this to run X11 programs\n      on a remote machine. For example, ssh -n\n      shadows.cs.hut.fi emacs & will start an emacs on\n      shadows.cs.hut.fi, and the X11 connection will be automatically forwarded\n      over an encrypted channel. The ssh program will be\n      put in the background. (This does not work if ssh\n      needs to ask for a password or passphrase; see also the\n      -f option.) Refer to the description of\n      StdinNull in\n      ssh_config(5) for details."
+      },
+      {
+        "type": "short",
+        "key": "O",
+        "title": "-O\n    ctl_cmd",
+        "description": "Control an active connection multiplexing master process. When the\n      -O option is specified, the\n      ctl_cmd argument is interpreted and passed to the\n      master process. Valid commands are: “check” (check that the\n      master process is running), “forward” (request forwardings\n      without command execution), “cancel” (cancel forwardings),\n      “exit” (request the master to exit), and\n      “stop” (request the master to stop accepting further\n      multiplexing requests)."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o\n    option",
+        "description": "Can be used to give options in the format used in the configuration file.\n      This is useful for specifying options for which there is no separate\n      command-line flag. For full details of the options listed below, and their\n      possible values, see ssh_config(5).\n    \n    \n    \n      AddKeysToAgent\n       \n      AddressFamily\n       \n      BatchMode\n       \n      BindAddress\n       \n      CanonicalDomains\n       \n      CanonicalizeFallbackLocal\n       \n      CanonicalizeHostname\n       \n      CanonicalizeMaxDots\n       \n      CanonicalizePermittedCNAMEs\n       \n      CASignatureAlgorithms\n       \n      CertificateFile\n       \n      CheckHostIP\n       \n      Ciphers\n       \n      ClearAllForwardings\n       \n      Compression\n       \n      ConnectionAttempts\n       \n      ConnectTimeout\n       \n      ControlMaster\n       \n      ControlPath\n       \n      ControlPersist\n       \n      DynamicForward\n       \n      EscapeChar\n       \n      ExitOnForwardFailure\n       \n      FingerprintHash\n       \n      ForkAfterAuthentication\n       \n      ForwardAgent\n       \n      ForwardX11\n       \n      ForwardX11Timeout\n       \n      ForwardX11Trusted\n       \n      GatewayPorts\n       \n      GlobalKnownHostsFile\n       \n      GSSAPIAuthentication\n       \n      GSSAPIDelegateCredentials\n       \n      HashKnownHosts\n       \n      Host\n       \n      HostbasedAcceptedAlgorithms\n       \n      HostbasedAuthentication\n       \n      HostKeyAlgorithms\n       \n      HostKeyAlias\n       \n      Hostname\n       \n      IdentitiesOnly\n       \n      IdentityAgent\n       \n      IdentityFile\n       \n      IPQoS\n       \n      KbdInteractiveAuthentication\n       \n      KbdInteractiveDevices\n       \n      KexAlgorithms\n       \n      KnownHostsCommand\n       \n      LocalCommand\n       \n      LocalForward\n       \n      LogLevel\n       \n      MACs\n       \n      Match\n       \n      NoHostAuthenticationForLocalhost\n       \n      NumberOfPasswordPrompts\n       \n      PasswordAuthentication\n       \n      PermitLocalCommand\n       \n      PermitRemoteOpen\n       \n      PKCS11Provider\n       \n      Port\n       \n      PreferredAuthentications\n       \n      ProxyCommand\n       \n      ProxyJump\n       \n      ProxyUseFdpass\n       \n      PubkeyAcceptedAlgorithms\n       \n      PubkeyAuthentication\n       \n      RekeyLimit\n       \n      RemoteCommand\n       \n      RemoteForward\n       \n      RequestTTY\n       \n      SendEnv\n       \n      ServerAliveInterval\n       \n      ServerAliveCountMax\n       \n      SessionType\n       \n      SetEnv\n       \n      StdinNull\n       \n      StreamLocalBindMask\n       \n      StreamLocalBindUnlink\n       \n      StrictHostKeyChecking\n       \n      TCPKeepAlive\n       \n      Tunnel\n       \n      TunnelDevice\n       \n      UpdateHostKeys\n       \n      User\n       \n      UserKnownHostsFile\n       \n      VerifyHostKeyDNS\n       \n      VisualHostKey\n       \n      XAuthLocation"
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p\n    port",
+        "description": "Port to connect to on the remote host. This can be specified on a per-host\n      basis in the configuration file."
+      },
+      {
+        "type": "short",
+        "key": "Q",
+        "title": "-Q\n    query_option",
+        "description": "Queries for the algorithms supported by one of the following features:\n      cipher (supported symmetric ciphers),\n      cipher-auth (supported symmetric ciphers that\n      support authenticated encryption), help (supported\n      query terms for use with the -Q flag),\n      mac (supported message integrity codes),\n      kex (key exchange algorithms),\n      key (key types), key-cert\n      (certificate key types), key-plain (non-certificate\n      key types), key-sig (all key types and signature\n      algorithms), protocol-version (supported SSH\n      protocol versions), and sig (supported signature\n      algorithms). Alternatively, any keyword from\n      ssh_config(5) or\n      sshd_config(5) that takes an\n      algorithm list may be used as an alias for the corresponding query_option."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Quiet mode. Causes most warning and diagnostic messages to be suppressed."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R\n    [bind_address:]port:host:hostport, -R\n    [bind_address:]port:local_socket, -R\n    remote_socket:host:hostport, -R\n    remote_socket:local_socket, -R\n    [bind_address:]port",
+        "description": "Specifies that connections to the given TCP port or Unix socket on the\n      remote (server) host are to be forwarded to the local side.\n    This works by allocating a socket to listen to either a TCP\n        port or to a Unix socket on the remote side.\n        Whenever a connection is made to this port or Unix socket, the\n        connection is forwarded over the secure channel, and a connection is\n        made from the local machine to either an explicit destination specified\n        by host port hostport, or\n        local_socket, or, if no explicit destination was\n        specified, ssh will act as a SOCKS 4/5 proxy and\n        forward connections to the destinations requested by the remote SOCKS\n        client.\n    Port forwardings can also be specified in the configuration\n        file. Privileged ports can be forwarded only when logging in as root on\n        the remote machine. IPv6 addresses can be specified by enclosing the\n        address in square brackets.\n    By default, TCP listening sockets on the server will be bound\n        to the loopback interface only. This may be overridden by specifying a\n        bind_address. An empty\n        bind_address, or the address\n        ‘*’, indicates that the remote\n        socket should listen on all interfaces. Specifying a remote\n        bind_address will only succeed if the server's\n        GatewayPorts option is enabled (see\n        sshd_config(5)).\n    If the port argument is\n        ‘0’, the listen port will be\n        dynamically allocated on the server and reported to the client at run\n        time. When used together with -O forward the\n        allocated port will be printed to the standard output."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S\n    ctl_path",
+        "description": "Specifies the location of a control socket for connection sharing, or the\n      string “none” to disable connection sharing. Refer to the\n      description of ControlPath and\n      ControlMaster in\n      ssh_config(5) for details."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "May be used to request invocation of a subsystem on the remote system.\n      Subsystems facilitate the use of SSH as a secure transport for other\n      applications (e.g. sftp(1)). The\n      subsystem is specified as the remote command. Refer to the description of\n      SessionType in\n      ssh_config(5) for details."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T",
+        "description": "Disable pseudo-terminal allocation."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Force pseudo-terminal allocation. This can be used to execute arbitrary\n      screen-based programs on a remote machine, which can be very useful, e.g.\n      when implementing menu services. Multiple -t\n      options force tty allocation, even if ssh has no\n      local tty."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V",
+        "description": "Display the version number and exit."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Verbose mode. Causes ssh to print debugging\n      messages about its progress. This is helpful in debugging connection,\n      authentication, and configuration problems. Multiple\n      -v options increase the verbosity. The maximum is\n      3."
+      },
+      {
+        "type": "short",
+        "key": "W",
+        "title": "-W\n    host:port",
+        "description": "Requests that standard input and output on the client be forwarded to\n      host on port over the secure\n      channel. Implies -N, -T,\n      ExitOnForwardFailure and\n      ClearAllForwardings, though these can be\n      overridden in the configuration file or using -o\n      command line options."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w\n    local_tun[:remote_tun]",
+        "description": "Requests tunnel device forwarding with the specified\n      tun(4) devices between the client\n      (local_tun) and the server\n      (remote_tun).\n    The devices may be specified by numerical ID or the keyword\n        “any”, which uses the next available tunnel device. If\n        remote_tun is not specified, it defaults to\n        “any”. See also the Tunnel and\n        TunnelDevice directives in\n        ssh_config(5).\n    If the Tunnel directive is unset, it\n        will be set to the default tunnel mode, which is\n        “point-to-point”. If a different\n        Tunnel forwarding mode it desired, then it\n        should be specified before -w."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "Enables X11 forwarding. This can also be specified on a per-host basis in\n      a configuration file.\n    X11 forwarding should be enabled with caution. Users with the\n        ability to bypass file permissions on the remote host (for the user's X\n        authorization database) can access the local X11 display through the\n        forwarded connection. An attacker may then be able to perform activities\n        such as keystroke monitoring.\n    For this reason, X11 forwarding is subjected to X11 SECURITY\n        extension restrictions by default. Please refer to the\n        ssh -Y option and the\n        ForwardX11Trusted directive in\n        ssh_config(5) for more\n        information."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Disables X11 forwarding."
+      },
+      {
+        "type": "short",
+        "key": "Y",
+        "title": "-Y",
+        "description": "Enables trusted X11 forwarding. Trusted X11 forwardings are not subjected\n      to the X11 SECURITY extension controls."
+      },
+      {
+        "type": "short",
+        "key": "y",
+        "title": "-y",
+        "description": "Send log information using the\n      syslog(3) system module. By default\n      this information is sent to stderr."
+      }
+    ]
+  }
+]

@@ -106,6 +106,12 @@ export const fetchSha512: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchSsh: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ssh',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchTar: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'tar',

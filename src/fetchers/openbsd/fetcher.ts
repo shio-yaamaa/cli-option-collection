@@ -33,7 +33,7 @@ export const fetch: Fetcher<SourceDef> = async (
   }
   const optionLists = findOptionLists(optionSection);
   const dlistEntries = mergeLists(
-    optionLists.map((dlist) => findDListEntries(dlist))
+    optionLists.map((dlist) => findDListEntries(dlist, true))
   );
   const options = mergeLists(
     dlistEntries.map((entry) => dlistEntryToOptions(entry))

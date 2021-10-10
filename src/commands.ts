@@ -192,6 +192,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['sort', gnuCoreutils.fetchSort],
   ['source', bashBuiltin.fetchSource],
   ['split', gnuCoreutils.fetchSplit],
+  ['ssh', openbsd.fetchSsh],
   ['sshuttle', fetchSshuttle],
   ['stat', gnuCoreutils.fetchStat],
   ['stdbuf', gnuCoreutils.fetchStdbuf],
