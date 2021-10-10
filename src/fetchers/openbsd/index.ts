@@ -8,6 +8,14 @@ import { fetch } from './fetcher';
 //       References:
 //       - https://github.com/openbsd/src/tree/master/bin
 
+// BUG: "-safe" flag is not recognized as an option
+//      because it uses single dash with long option name.
+export const fetchAwk: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'awk',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchChio: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'chio',

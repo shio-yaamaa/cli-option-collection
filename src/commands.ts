@@ -29,6 +29,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['apt-cache', apt.fetchAptCache],
   ['apt-get', apt.fetchAptGet],
   ['arch', gnuCoreutils.fetchArch],
+  ['awk', openbsd.fetchAwk],
   ['b2sum', gnuCoreutils.fetchB2sum],
   ['base32', gnuCoreutils.fetchBase32],
   ['base64', gnuCoreutils.fetchBase64],

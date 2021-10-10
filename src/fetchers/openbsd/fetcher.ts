@@ -9,6 +9,7 @@ import {
 import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
+  trimOptionalElements,
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { isString } from '../../utils/typeGuards';
@@ -65,6 +66,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(dtTexts, [
     trimSpaceDelimitedArguments,
+    trimOptionalElements,
   ]);
   return makeOptionList(optionStrings, title, description);
 };
