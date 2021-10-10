@@ -5,6 +5,8 @@ import { fetch } from './fetcher';
 //       This file lists some well-known commands, but there are more documentations
 //       in the man page server.
 //       Commands collected from other sources are not listed here.
+//       References:
+//       - https://github.com/openbsd/src/tree/master/bin
 
 export const fetchChio: FetchFunction = async (): Promise<Command[]> =>
   fetch({
