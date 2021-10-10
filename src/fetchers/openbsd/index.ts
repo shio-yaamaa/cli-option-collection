@@ -44,3 +44,9 @@ export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'ksh',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSh: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'sh',
+    optionsHeadingID: 'DESCRIPTION',
+  });

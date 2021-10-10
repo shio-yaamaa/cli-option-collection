@@ -169,6 +169,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['seq', gnuCoreutils.fetchSeq],
   ['set', bashBuiltin.fetchSet],
   ['setlock', daemontools.fetchSetlock],
+  ['sh', openbsd.fetchSh],
   ['sha1sum', gnuCoreutils.fetchSha1sum],
   ['sha224sum', gnuCoreutils.fetchSha224sum],
   ['sha256sum', gnuCoreutils.fetchSha256sum],
