@@ -1,0 +1,13 @@
+[
+  {
+    "name": "chio",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f\n    changer",
+        "description": "Use the device changer rather than the default\n      device /dev/ch0."
+      }
+    ]
+  }
+]

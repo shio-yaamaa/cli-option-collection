@@ -16,6 +16,7 @@ import { fetchHtop } from './fetchers/htop';
 import * as imagemagick from './fetchers/imagemagick';
 import { fetchJq } from './fetchers/jq';
 import * as mysql from './fetchers/mysql';
+import * as openbsd from './fetchers/openbsd';
 import { fetchPerl } from './fetchers/perl';
 import { fetchPython } from './fetchers/python';
 import { fetchRsync } from './fetchers/rsync';
@@ -43,6 +44,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['cd', bashBuiltin.fetchCd],
   ['chcon', gnuCoreutils.fetchChcon],
   ['chgrp', gnuCoreutils.fetchChgrp],
+  ['chio', openbsd.fetchChio],
   ['chmod', gnuCoreutils.fetchChmod],
   ['chown', gnuCoreutils.fetchChown],
   ['chroot', gnuCoreutils.fetchChroot],
