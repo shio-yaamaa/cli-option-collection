@@ -18,7 +18,7 @@ export const fetchBg: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'fg_bg',
   });
 
-// Not parsed correctly because option titles contain double spaces.
+// BUG: Not parsed correctly because option titles contain double spaces.
 export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'bind',
@@ -211,7 +211,7 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'exit',
   });
 
-// BUG: "-u" option is not recognized.
+// BUG: "-u" option is not parsed correctly.
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'mapfile',
@@ -242,7 +242,7 @@ export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'cd',
   });
 
-// BUG: "-u" option is not recognized.
+// BUG: "-u" option is not parsed correctly.
 export const fetchRead: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'read',
@@ -267,7 +267,7 @@ export const fetchReturn: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'return',
   });
 
-// BUG: "-o" option is not recognized.
+// BUG: "-o" option's description should contain line breaks but it doesn't.
 export const fetchSet: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'set',

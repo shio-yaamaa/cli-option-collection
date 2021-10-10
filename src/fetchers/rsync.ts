@@ -1,6 +1,6 @@
 import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { parseTabbedTextList } from '../utils/forFetcher/listParser';
+import { parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import {
   makeOptionList,
@@ -62,7 +62,7 @@ const listToOptions = (list: Element): Option[] => {
   if (!text) {
     return [];
   }
-  const listItems = parseTabbedTextList(text);
+  const listItems = parseTextList(text.split('\n'));
   const options: Option[] = [];
   for (const { titles, descriptionLines } of listItems) {
     const optionStrings = transformOptionStrings(titles, [

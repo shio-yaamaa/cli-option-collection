@@ -2,10 +2,7 @@ import tabToSpace from 'tab-to-space';
 
 import { Fetcher, Command, Option } from '../../types';
 import { fetchPlainTextFromURL } from '../../utils/forFetcher/http';
-import {
-  ListItem,
-  parseTabbedTextList,
-} from '../../utils/forFetcher/listParser';
+import { ListItem, parseTextList } from '../../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import {
   makeOptionList,
@@ -38,9 +35,7 @@ export const fetch: Fetcher<SourceDef> = async (
   const lines = text.split('\n').map((line) => tabToSpace(line, 8));
   const helpSection = findHelpSection(lines, sourceDef.commandName);
   const optionLists = findOptionLists(helpSection);
-  const listItems = mergeLists(
-    optionLists.map((list) => parseTabbedTextList(list.join('\n')))
-  );
+  const listItems = mergeLists(optionLists.map((list) => parseTextList(list)));
   const options = mergeLists(listItems.map((item) => listItemToOptions(item)));
 
   return [
