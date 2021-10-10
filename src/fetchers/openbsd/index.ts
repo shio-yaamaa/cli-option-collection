@@ -114,6 +114,12 @@ export const fetchSed: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchSftp: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'sftp',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchSh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'sh',
