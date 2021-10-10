@@ -1,0 +1,67 @@
+[
+  {
+    "name": "md5",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "Output checksums in base64 notation, not hexadecimal."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C\n    checklist",
+        "description": "Compare the checksum of each file against the\n      checksums in the checklist. Any specified\n      file that is not listed in the\n      checklist will generate an error."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "If this option is specified, the file options become\n      checklists. Each checklist should contain hash results in the normal\n      format, which will be verified against the specified paths. Output\n      consists of the digest used, the file name, and an OK, FAILED, or MISSING\n      for the result of the comparison. This will validate any of the supported\n      checksums (see cksum(1)). If no file is\n      given, stdin is used."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h\n    hashfile",
+        "description": "Place the checksum into hashfile instead of\n    stdout."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "Echoes stdin to stdout and appends the checksum to stdout."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Only print the checksum (quiet mode) or if used in conjunction with the\n      -c flag, only print the failed cases."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Reverse the format of the hash algorithm output, making it match the\n      output format used by cksum(1)."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s\n    string",
+        "description": "Prints a checksum of the given string."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Runs a built-in time trial. Specifying -t multiple\n      times results in the number of rounds being multiplied by 10 for each\n      additional flag."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Runs a built-in test script."
+      }
+    ]
+  }
+]
