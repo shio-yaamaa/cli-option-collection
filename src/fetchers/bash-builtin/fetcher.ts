@@ -7,7 +7,10 @@ import {
   parseTabbedTextList,
 } from '../../utils/forFetcher/listParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
-import { makeOptionList } from '../../utils/forFetcher/optionString';
+import {
+  makeOptionList,
+  mergeOptionTitles,
+} from '../../utils/forFetcher/optionString';
 import {
   countIndentWidth,
   extractLines,
@@ -74,7 +77,7 @@ const findOptionLists = (lines: string[]): string[][] => {
 };
 
 const listItemToOptions = (listItem: ListItem): Option[] => {
-  const title = normalizeSpaces(listItem.title);
+  const title = normalizeSpaces(mergeOptionTitles(listItem.titles));
   const optionString = transformOptionStrings([title], [trimOptionArguments]);
   const description = normalizeSpaces(listItem.descriptionLines.join(' '));
   return makeOptionList(optionString, title, description);

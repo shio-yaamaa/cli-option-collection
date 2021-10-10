@@ -16,22 +16,22 @@ describe('parseTabbedTextList', () => {
     const listItems = parseTabbedTextList(text);
     expect(listItems).toStrictEqual([
       {
-        title: 'item1',
+        titles: ['item1'],
         descriptionLines: ['Description of item1'],
       },
       {
-        title: 'item2',
+        titles: ['item2'],
         descriptionLines: [
           'Description of item2',
           'Description can be multi-line and can contain  double  spaces.',
         ],
       },
       {
-        title: 'long item',
+        titles: ['long item'],
         descriptionLines: ['Description of long item'],
       },
       {
-        title: 'long long item',
+        titles: ['long long item'],
         descriptionLines: [
           'Description of long long item',
           'which has more indentation.',

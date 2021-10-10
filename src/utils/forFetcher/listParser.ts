@@ -1,7 +1,7 @@
 import { countIndentWidth } from './string';
 
 export interface ListItem {
-  title: string;
+  titles: string[];
   descriptionLines: string[];
 }
 
@@ -56,7 +56,7 @@ const abstractParseTabbedTextList = (
       const title = line.slice(0, currentDescriptionIndentWidth).trim();
       const description = line.slice(currentDescriptionIndentWidth);
       listItems.push({
-        title,
+        titles: [title],
         descriptionLines: [description],
       });
       inItem = true;
