@@ -12,6 +12,7 @@ import {
   transformOptionStrings,
   trimOptionalElements,
 } from '../utils/forFetcher/transformOptionString';
+import { isString } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -128,9 +129,7 @@ const optionListToOptions = (dlist: HTMLDListElement): Option[] => {
   const dlistEntries = findDListEntries(dlist);
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const dtTexts = dts
-      .map((dt) => dt.textContent)
-      .filter((text): text is string => typeof text === 'string');
+    const dtTexts = dts.map((dt) => dt.textContent).filter(isString);
     const title = normalizeSpacesAndLinebreaks(mergeOptionTitles(dtTexts));
     const description = dd.textContent
       ? normalizeSpacesAndLinebreaks(dd.textContent.trim()).replace(/´/g, "'")

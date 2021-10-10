@@ -16,6 +16,7 @@ import {
   trimSpaceDelimitedArguments,
   trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isString } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 const DOC_URL =
@@ -58,7 +59,7 @@ const sectionToOptions = (section: Element): Option[] => {
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts
     .map((dt) => dt.textContent)
-    .filter((text): text is string => typeof text === 'string')
+    .filter(isString)
     .map((text) => normalizeSpacesAndLinebreaks(text));
   const title = mergeOptionTitles(dtTexts);
   const description = dd.textContent?.trim() ?? '';

@@ -20,6 +20,7 @@ import {
   trimEqualDelimitedArguments,
   trimNonDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isString } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -64,7 +65,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     .map((dt) =>
       dt.textContent?.startsWith('#') ? dt.textContent.slice(1) : dt
     )
-    .filter((text): text is string => typeof text === 'string');
+    .filter(isString);
   const title = mergeOptionTitles(dtTexts);
   const description = dd.textContent?.trim() ?? '';
 

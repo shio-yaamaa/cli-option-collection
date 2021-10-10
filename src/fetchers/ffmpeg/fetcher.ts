@@ -14,6 +14,7 @@ import {
   trimOptionalElements,
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
+import { isString } from '../../utils/typeGuards';
 import { mergeLists } from '../../utils/utils';
 
 // BUG: "no" prefix is not considered.
@@ -47,9 +48,7 @@ const findTopLevelLists = (document: Document): HTMLDListElement[] =>
   Array.from(document.querySelectorAll('.page-content > dl'));
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const dtTexts = dts
-    .map((dt) => dt.textContent?.trim())
-    .filter((text): text is string => typeof text === 'string');
+  const dtTexts = dts.map((dt) => dt.textContent?.trim()).filter(isString);
   const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
   const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(dtTexts, [

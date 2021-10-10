@@ -13,6 +13,7 @@ import {
   trimNonDelimitedArguments,
   trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isString } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/stedolan/jq/blob/master/src/main.c#L73
@@ -59,9 +60,7 @@ const sectionToOptions = (section: Element): Option[] => {
 
 const ulToOptionStrings = (ul: Element): string[] => {
   const codes = Array.from(ul.querySelectorAll('code'));
-  const texts = codes
-    .map((code) => code.textContent)
-    .filter((text): text is string => typeof text === 'string');
+  const texts = codes.map((code) => code.textContent).filter(isString);
   return transformOptionStrings(texts, [
     trimSpaceDelimitedArguments,
     trimNonDelimitedArguments,
@@ -80,7 +79,7 @@ const findDescriptionForList = (list: Element): string => {
   }
   return descriptionElements
     .map((element) => element.textContent)
-    .filter((text): text is string => typeof text === 'string')
+    .filter(isString)
     .map((text) => normalizeSpacesAndLinebreaks(text.trim()))
     .join('\n');
 };

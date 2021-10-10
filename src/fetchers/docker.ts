@@ -4,6 +4,7 @@ import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { makeOptionList } from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { isString } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/docker/cli/blob/master/cli/command/container/attach.go#L60
@@ -111,7 +112,7 @@ const fetchSubcommand = async (
     const labelElements = Array.from(tds[0].querySelectorAll('code'));
     const optionStrings = labelElements
       .map((element) => element.textContent?.trim())
-      .filter((label): label is string => typeof label === 'string');
+      .filter(isString);
 
     options.push(
       ...makeOptionList(
