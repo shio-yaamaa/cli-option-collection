@@ -96,6 +96,24 @@ export const fetchPax: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: Since "ping" and "ping6" commands share the same man page,
+//      they have the same option list though some of them are
+//      IPv4- or IPv6-only.
+export const fetchPing: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ping',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+// BUG: Since "ping" and "ping6" commands share the same man page,
+//      they have the same option list though some of them are
+//      IPv4- or IPv6-only.
+export const fetchPing6: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ping6',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchPs: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ps',

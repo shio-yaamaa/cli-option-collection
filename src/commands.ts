@@ -154,6 +154,8 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['pathchk', gnuCoreutils.fetchPathchk],
   ['pax', openbsd.fetchPax],
   ['perl', fetchPerl],
+  ['ping', openbsd.fetchPing],
+  ['ping6', openbsd.fetchPing6],
   ['pinky', gnuCoreutils.fetchPinky],
   ['popd', bashBuiltin.fetchPopd],
   ['pr', gnuCoreutils.fetchPr],
