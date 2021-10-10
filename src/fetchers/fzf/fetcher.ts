@@ -1,21 +1,21 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, Option } from '../types';
-import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
-import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
-import { uniqueOptions } from '../utils/forFetcher/options';
+import { FetchFunction, Command, Option } from '../../types';
+import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
+import { fetchDocumentFromManPageURL } from '../../utils/forFetcher/http';
+import { uniqueOptions } from '../../utils/forFetcher/options';
 import {
   makeOptionList,
   mergeOptionTitles,
-} from '../utils/forFetcher/optionString';
+} from '../../utils/forFetcher/optionString';
 import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
   trimOptionArguments,
   trimOptionValues,
-} from '../utils/forFetcher/transformOptionString';
-import { mergeLists } from '../utils/utils';
+} from '../../utils/forFetcher/transformOptionString';
+import { mergeLists } from '../../utils/utils';
 
 // BUG: Options starting with "+" are not collected.
 
