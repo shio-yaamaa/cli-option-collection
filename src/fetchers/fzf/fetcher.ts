@@ -10,9 +10,10 @@ import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
+import { isString } from '../../utils/typeGuards';
 import { mergeLists } from '../../utils/utils';
 
 // BUG: Options starting with "+" are not collected.
@@ -63,16 +64,14 @@ const sectionToOptions = (section: Element): Option[] => {
 };
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const dtTexts = dts
-    .map((dt) => dt.textContent)
-    .filter((text): text is string => typeof text === 'string');
+  const dtTexts = dts.map((dt) => dt.textContent).filter(isString);
   const title = mergeOptionTitles(dtTexts);
   const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(dtTexts, [
     splitByComma,
-    trimOptionValues,
+    trimEqualDelimitedArguments,
     trimOptionalElements,
-    trimOptionArguments,
+    trimSpaceDelimitedArguments,
   ]);
   return makeOptionList(optionStrings, title, description);
 };

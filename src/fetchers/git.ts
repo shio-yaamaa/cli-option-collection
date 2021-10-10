@@ -16,10 +16,11 @@ import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
-  trimNonDelimitedOptionValues,
+  trimNonDelimitedArguments,
   trimOptionalElements,
-  trimOptionValues,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isString } from '../utils/typeGuards';
 import { mergeLists, uniqueBy } from '../utils/utils';
 
 // Alternative sources:
@@ -103,16 +104,14 @@ const findOptions = (document: Document): Option[] => {
   );
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const dtTexts = dts
-      .map((dt) => dt.textContent?.trim())
-      .filter((text): text is string => typeof text === 'string');
+    const dtTexts = dts.map((dt) => dt.textContent?.trim()).filter(isString);
     const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
     const description = dd.textContent?.trim() ?? '';
     const optionStrings = transformOptionStrings(dtTexts, [
       splitByComma,
       trimOptionalElements,
-      trimOptionValues,
-      trimNonDelimitedOptionValues,
+      trimEqualDelimitedArguments,
+      trimNonDelimitedArguments,
     ]);
     options.push(...makeOptionList(optionStrings, title, description));
   }

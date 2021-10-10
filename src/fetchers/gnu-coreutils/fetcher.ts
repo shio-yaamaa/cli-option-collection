@@ -16,8 +16,8 @@ import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
@@ -73,8 +73,8 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
       [
         splitByComma,
         trimOptionalElements,
-        trimOptionValues,
-        trimOptionArguments,
+        trimEqualDelimitedArguments,
+        trimSpaceDelimitedArguments,
       ]
     );
     options.push(

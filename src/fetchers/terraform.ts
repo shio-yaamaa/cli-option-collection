@@ -7,9 +7,10 @@ import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
+import { isElement } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -49,7 +50,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     return [];
   }
   const commandList = commandsHeading.nextElementSibling;
-  if (commandList?.tagName.toLowerCase() !== 'ul') {
+  if (!(commandList && isElement(commandList, 'ul'))) {
     return [];
   }
   const anchors = findAnchorsWithPattern(
@@ -102,7 +103,7 @@ const listItemToOptions = (listItem: Element): Option[] => {
   const description = descriptionMatch[1].trim();
   const optionStrings = transformOptionStrings(
     [title],
-    [trimOptionArguments, trimOptionValues]
+    [trimSpaceDelimitedArguments, trimEqualDelimitedArguments]
   );
   return makeOptionListForSingleDashStyle(optionStrings, title, description);
 };

@@ -9,10 +9,11 @@ import {
 import {
   transformOptionStrings,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { findHeadingContentsPairs } from '../utils/forFetcher/utils';
+import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/golang/go/blob/master/src/cmd/go/internal/test/test.go#L139
@@ -86,7 +87,7 @@ const getSections = (document: Document): Section[] => {
           break;
       }
       currentElement = currentElement.nextElementSibling;
-    } while (currentElement && currentElement.tagName.toLowerCase() !== 'h4');
+    } while (currentElement && !isElement(currentElement, 'h4'));
 
     if (usage) {
       sections.push({
@@ -161,7 +162,11 @@ const preToOptions = (pre: string): Option[] => {
     const descriptionLines = contents;
     const optionString = transformOptionStrings(
       [flag],
-      [trimOptionalElements, trimOptionArguments, trimOptionValues]
+      [
+        trimOptionalElements,
+        trimSpaceDelimitedArguments,
+        trimEqualDelimitedArguments,
+      ]
     )[0];
     const optionKey = optionString.slice(1); // Remove the "-" prefix
     const description = descriptionLines.map((line) => line.trim()).join(' ');
@@ -201,8 +206,8 @@ const paragraphToOptions = (paragraph: string): Option[] => {
 
   const optionStrings = transformOptionStrings(flags, [
     trimOptionalElements,
-    trimOptionArguments,
-    trimOptionValues,
+    trimSpaceDelimitedArguments,
+    trimEqualDelimitedArguments,
   ]);
   return makeOptionListForSingleDashStyle(
     optionStrings,

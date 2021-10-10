@@ -6,8 +6,8 @@ import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 
 export interface SourceDef {
@@ -114,7 +114,12 @@ const findOptionsCorrespondingToOptionTableItem = (
 
   const optionStrings = transformOptionStrings(
     [title],
-    [splitByComma, trimOptionalElements, trimOptionArguments, trimOptionValues]
+    [
+      splitByComma,
+      trimOptionalElements,
+      trimSpaceDelimitedArguments,
+      trimEqualDelimitedArguments,
+    ]
   );
 
   // Example: "--skip-named-commands" links to "--named-commands"

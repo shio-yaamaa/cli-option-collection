@@ -5,7 +5,7 @@ import { makeOptionListForSingleDashStyle } from '../../utils/forFetcher/optionS
 import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
-  trimOptionArguments,
+  trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 
 export interface SourceDef {
@@ -46,7 +46,7 @@ const optionTableToOptions = (table: Element): Option[] => {
     }
     const optionStrings = transformOptionStrings(
       [title],
-      [trimOptionArguments]
+      [trimSpaceDelimitedArguments]
     );
     options.push(
       ...makeOptionListForSingleDashStyle(

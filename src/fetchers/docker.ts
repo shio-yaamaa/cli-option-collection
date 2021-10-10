@@ -4,6 +4,7 @@ import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { makeOptionList } from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { isElement, isString } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/docker/cli/blob/master/cli/command/container/attach.go#L60
@@ -78,7 +79,7 @@ const fetchSubcommandLocationsRecursively = async (
 const findSubcommandTable = (document: Document): Element | null => {
   const commandsHeading = document.querySelector('#child-commands');
   const nextSibling = commandsHeading?.nextElementSibling;
-  return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
+  return nextSibling && isElement(nextSibling, 'table') ? nextSibling : null;
 };
 
 const fetchSubcommand = async (
@@ -111,7 +112,7 @@ const fetchSubcommand = async (
     const labelElements = Array.from(tds[0].querySelectorAll('code'));
     const optionStrings = labelElements
       .map((element) => element.textContent?.trim())
-      .filter((label): label is string => typeof label === 'string');
+      .filter(isString);
 
     options.push(
       ...makeOptionList(
@@ -131,7 +132,7 @@ const fetchSubcommand = async (
 const findOptionTable = (document: Document): Element | null => {
   const optionHeading = document.querySelector('#options');
   const nextSibling = optionHeading?.nextElementSibling;
-  return nextSibling?.tagName.toLowerCase() === 'table' ? nextSibling : null;
+  return nextSibling && isElement(nextSibling, 'table') ? nextSibling : null;
 };
 
 const tdToDescription = (td: Element): string | null => {
