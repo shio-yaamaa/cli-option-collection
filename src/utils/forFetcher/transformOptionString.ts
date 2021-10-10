@@ -1,21 +1,21 @@
 import parse from 'parenthesis';
 import { splitAtTopLevel } from './string';
 
-type OptionStringsTransformer = (string: string[]) => string[];
+type OptionStringsFilter = (string: string[]) => string[];
 
 const BRACKETS = ['[]', '()', '<>', '{}', '""', "''"];
 
 export const transformOptionStrings = (
   strings: string[],
-  transformers: OptionStringsTransformer[]
+  filters: OptionStringsFilter[]
 ): string[] => {
-  return transformers.reduce((previousValue, currentValue) => {
+  return filters.reduce((previousValue, currentValue) => {
     return currentValue(previousValue);
   }, strings);
 };
 
 // Example: ["-p,--private", "-w,--workspace"] -> ["-p", "--private", "-w", "--workspace"]
-export const splitByComma: OptionStringsTransformer = (
+export const splitByComma: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   const splitStrings: string[] = [];
@@ -27,7 +27,7 @@ export const splitByComma: OptionStringsTransformer = (
 
 // Split items by spaces. Only items that start with "-" are split.
 // Example: ["-s --sort-key COLUMN"] -> ["-s", "--sort-key COLUMN"]
-export const splitBySpace: OptionStringsTransformer = (
+export const splitBySpace: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   const allItems: string[] = [];
@@ -46,7 +46,7 @@ export const splitBySpace: OptionStringsTransformer = (
 };
 
 // Example: ["--ignore=PATTERN"] -> ["--ignore"]
-export const trimOptionValues: OptionStringsTransformer = (
+export const trimOptionValues: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   return strings.map((string) =>
@@ -56,7 +56,7 @@ export const trimOptionValues: OptionStringsTransformer = (
 
 // Example: ["-dPattern"] -> ["-d"]
 const SHORT_OPTION_LIKE_PATTERN = /^-[A-Za-z]/;
-export const trimNonDelimitedOptionValues: OptionStringsTransformer = (
+export const trimNonDelimitedOptionValues: OptionStringsFilter = (
   strings: string[]
 ) => {
   return strings.map((string) =>
@@ -65,7 +65,7 @@ export const trimNonDelimitedOptionValues: OptionStringsTransformer = (
 };
 
 // Example: ["--mode #0"] -> ["--mode"]
-export const trimOptionArguments: OptionStringsTransformer = (
+export const trimOptionArguments: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   return strings.map((string) =>
@@ -74,7 +74,7 @@ export const trimOptionArguments: OptionStringsTransformer = (
 };
 
 // Example: ["--color[=WHEN]"] -> ["--color"]
-export const trimOptionalElements: OptionStringsTransformer = (
+export const trimOptionalElements: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   return strings.map((string) => {
@@ -88,7 +88,7 @@ export const trimOptionalElements: OptionStringsTransformer = (
 };
 
 // Example: ["-V:configvar"] -> ["-V"]
-export const trimAfterColons: OptionStringsTransformer = (
+export const trimAfterColons: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   return strings.map((string) =>
