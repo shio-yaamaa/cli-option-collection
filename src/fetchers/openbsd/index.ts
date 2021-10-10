@@ -56,3 +56,9 @@ export const fetchSh: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'sh',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSha1: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'sha1',
+    optionsHeadingID: 'DESCRIPTION',
+  });
