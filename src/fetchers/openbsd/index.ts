@@ -38,3 +38,9 @@ export const fetchEd: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'ed',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ksh',
+    optionsHeadingID: 'DESCRIPTION',
+  });
