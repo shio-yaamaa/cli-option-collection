@@ -1,0 +1,49 @@
+[
+  {
+    "name": "find",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Causes find to visit directories in post-order\n      i.e. all entries in a directory will be acted on before the directory\n      itself. By default, find visits directories in\n      pre-order i.e. before their contents."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f path",
+        "description": "Specifies a file hierarchy for find to traverse.\n      File hierarchies may be specified without the -f\n      option if they are given immediately after any other options."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H",
+        "description": "Causes the file information and file type (see\n      stat(2)) returned for each symbolic link\n      encountered on the command line to be those of the file referenced by the\n      link, not the link itself. If the referenced file does not exist, the file\n      information and type will be for the link itself. File information of all\n      symbolic links not on the command line is that of the link itself."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "An alias for the -L option. This option exists for\n      backwards compatibility."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L",
+        "description": "Causes the file information and file type (see\n      stat(2)) returned for each symbolic link\n      to be those of the file referenced by the link, not the link itself. If\n      the referenced file does not exist, the file information and type will be\n      for the link itself."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "Permit find to be safely used in conjunction with\n      xargs(1). If a file name contains any of\n      the delimiting characters used by xargs, a diagnostic message is displayed\n      on standard error, and the file is skipped. The delimiting characters\n      include single (‘'’) and double\n      (‘\"’) quotes, backslash\n      (‘\\’), space, tab, and newline\n      (‘\\n’) characters. Consider using\n      -print0 instead."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Prevents find from descending into directories\n      that have a device number different than that of the file from which the\n      descent began."
+      }
+    ]
+  }
+]

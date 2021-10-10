@@ -48,6 +48,12 @@ export const fetchEject: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchFind: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'find',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ksh',
