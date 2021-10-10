@@ -18,6 +18,7 @@ describe('parseTextList', () => {
       long long item2
                  Description does not have to start
                  on the same line as its title.
+                   And it can have additional indentation.
       title1
       title2
           Item can have multiple title lines.
@@ -52,6 +53,7 @@ describe('parseTextList', () => {
         descriptionLines: [
           'Description does not have to start',
           'on the same line as its title.',
+          '  And it can have additional indentation.',
         ],
       },
       {

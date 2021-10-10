@@ -137,7 +137,10 @@ const getLineType = (line: string, lineState: LineState) => {
       return LineType.PRIMARY_TITLE;
     }
   }
-  if (indentWidth === lineState.descriptionIndentWidth) {
+  if (
+    lineState.descriptionIndentWidth !== null &&
+    indentWidth >= lineState.descriptionIndentWidth
+  ) {
     return lineState.isPartOfItem
       ? LineType.DESCRIPTION
       : LineType.NOT_PART_OF_ITEM;
