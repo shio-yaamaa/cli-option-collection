@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option, OptionType } from '../types';
+import { FetchFunction, Command, Option } from '../types';
 import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
