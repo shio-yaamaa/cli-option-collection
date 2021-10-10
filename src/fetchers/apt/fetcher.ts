@@ -1,9 +1,6 @@
 import { Fetcher, Command, Option } from '../../types';
 import { fetchDocumentFromURLViaFilter } from '../../utils/forFetcher/http';
-import {
-  findIndentedListItems,
-  IndentedListItem,
-} from '../../utils/forFetcher/indentedList';
+import { ListItem, parseTextList } from '../../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
 import {
@@ -57,15 +54,15 @@ const listToOptions = (list: Element): Option[] => {
   if (!listText) {
     return [];
   }
-  const listItems = findIndentedListItems(listText, 7, 11);
+  const listItems = parseTextList(listText.split('\n'));
   return mergeLists(listItems.map((item) => listItemToOptions(item)));
 };
 
 const listItemToOptions = ({
   titles,
-  descriptions,
-}: IndentedListItem): Option[] => {
-  if (titles.length === 0 || descriptions.length === 0) {
+  descriptionLines,
+}: ListItem): Option[] => {
+  if (titles.length === 0 || descriptionLines.length === 0) {
     return [];
   }
 
@@ -77,6 +74,6 @@ const listItemToOptions = ({
   return makeOptionList(
     optionStrings,
     titles.join(' '),
-    descriptions.join(' ')
+    descriptionLines.join(' ')
   );
 };

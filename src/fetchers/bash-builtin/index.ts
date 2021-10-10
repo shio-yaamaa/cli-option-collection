@@ -18,6 +18,7 @@ export const fetchBg: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'fg_bg',
   });
 
+// BUG: Not parsed correctly because option titles contain double spaces.
 export const fetchBind: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'bind',
@@ -138,8 +139,6 @@ export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'colon',
   });
 
-// BUG: Not parsed correctly because the option list contains double spaces in descriptions.
-//      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
 export const fetchFc: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'fc',
@@ -212,8 +211,6 @@ export const fetchLogout: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'exit',
   });
 
-// BUG: Not parsed correctly because the option list contains double spaces in descriptions.
-//      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
 // BUG: "-u" option is not recognized.
 export const fetchMapfile: FetchFunction = async (): Promise<Command[]> =>
   fetch({
@@ -270,9 +267,7 @@ export const fetchReturn: FetchFunction = async (): Promise<Command[]> =>
     defFileBasename: 'return',
   });
 
-// BUG: Not parsed correctly because the option list contains double spaces in descriptions.
-//      If I allow double spaces in descriptions, then the option list of the "bind" command will break.
-// BUG: "-o" option is not recognized.
+// BUG: "-o" option's description should contain line breaks but it doesn't.
 export const fetchSet: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'set',

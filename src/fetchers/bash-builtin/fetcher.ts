@@ -2,12 +2,12 @@ import tabToSpace from 'tab-to-space';
 
 import { Fetcher, Command, Option } from '../../types';
 import { fetchPlainTextFromURL } from '../../utils/forFetcher/http';
-import {
-  ListItem,
-  parseTabbedTextList2,
-} from '../../utils/forFetcher/listParser';
+import { ListItem, parseTextList } from '../../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
-import { makeOptionList } from '../../utils/forFetcher/optionString';
+import {
+  makeOptionList,
+  mergeOptionTitles,
+} from '../../utils/forFetcher/optionString';
 import {
   countIndentWidth,
   extractLines,
@@ -35,9 +35,7 @@ export const fetch: Fetcher<SourceDef> = async (
   const lines = text.split('\n').map((line) => tabToSpace(line, 8));
   const helpSection = findHelpSection(lines, sourceDef.commandName);
   const optionLists = findOptionLists(helpSection);
-  const listItems = mergeLists(
-    optionLists.map((list) => parseTabbedTextList2(list.join('\n')))
-  );
+  const listItems = mergeLists(optionLists.map((list) => parseTextList(list)));
   const options = mergeLists(listItems.map((item) => listItemToOptions(item)));
 
   return [
@@ -74,7 +72,7 @@ const findOptionLists = (lines: string[]): string[][] => {
 };
 
 const listItemToOptions = (listItem: ListItem): Option[] => {
-  const title = normalizeSpaces(listItem.title);
+  const title = normalizeSpaces(mergeOptionTitles(listItem.titles));
   const optionString = transformOptionStrings([title], [trimOptionArguments]);
   const description = normalizeSpaces(listItem.descriptionLines.join(' '));
   return makeOptionList(optionString, title, description);

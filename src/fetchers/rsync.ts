@@ -1,8 +1,11 @@
 import { FetchFunction, Command, Option } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { parseTabbedTextList } from '../utils/forFetcher/listParser';
+import { parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionList } from '../utils/forFetcher/optionString';
+import {
+  makeOptionList,
+  mergeOptionTitles,
+} from '../utils/forFetcher/optionString';
 import {
   splitByComma,
   transformOptionStrings,
@@ -59,20 +62,21 @@ const listToOptions = (list: Element): Option[] => {
   if (!text) {
     return [];
   }
-  const listItems = parseTabbedTextList(text);
+  const listItems = parseTextList(text.split('\n'));
   const options: Option[] = [];
-  for (const { title, descriptionLines } of listItems) {
-    const optionStrings = transformOptionStrings(
-      [title],
-      [
-        splitByComma,
-        trimOptionalElements,
-        trimOptionArguments,
-        trimOptionValues,
-      ]
-    );
+  for (const { titles, descriptionLines } of listItems) {
+    const optionStrings = transformOptionStrings(titles, [
+      splitByComma,
+      trimOptionalElements,
+      trimOptionArguments,
+      trimOptionValues,
+    ]);
     options.push(
-      ...makeOptionList(optionStrings, title, descriptionLines.join(' '))
+      ...makeOptionList(
+        optionStrings,
+        mergeOptionTitles(titles),
+        descriptionLines.join(' ')
+      )
     );
   }
   return options;

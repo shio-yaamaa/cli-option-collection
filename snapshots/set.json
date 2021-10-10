@@ -52,6 +52,12 @@
       },
       {
         "type": "short",
+        "key": "o",
+        "title": "-o option-name",
+        "description": "Set the variable corresponding to option-name: allexport same as -a braceexpand same as -B emacs use an emacs-style line editing interface errexit same as -e errtrace same as -E functrace same as -T hashall same as -h histexpand same as -H history enable command history ignoreeof the shell will not exit upon reading EOF interactive-comments allow comments to appear in interactive commands keyword same as -k monitor same as -m noclobber same as -C noexec same as -n noglob same as -f nolog currently accepted but ignored notify same as -b nounset same as -u onecmd same as -t physical same as -P pipefail the return value of a pipeline is the status of the last command to exit with a non-zero status, or zero if no command exited with a non-zero status posix change the behavior of bash where the default operation differs from the Posix standard to match the standard privileged same as -p verbose same as -v vi use a vi-style line editing interface xtrace same as -x"
+      },
+      {
+        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "Turned on whenever the real and effective user ids do not match. Disables processing of the $ENV file and importing of shell functions. Turning this option off causes the effective uid and gid to be set to the real uid and gid."
@@ -101,8 +107,8 @@
       {
         "type": "short",
         "key": "H",
-        "title": "-H Enable ! style history substitution.",
-        "description": "This flag is on"
+        "title": "-H",
+        "description": "Enable ! style history substitution. This flag is on by default when the shell is interactive."
       },
       {
         "type": "short",
