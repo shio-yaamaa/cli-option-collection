@@ -17,65 +17,18 @@ export interface ListItem {
 // Empty lines between description lines of the same item are not preserved.
 export const parseTabbedTextList = (list: string): ListItem[] => {
   const lines = list.split('\n');
-  const isEmpty = lines.map((line) => line.trim().length === 0);
-  if (isEmpty.every((empty) => empty)) {
-    return [];
-  }
-  const titleIndentWidth = Math.min(
-    ...lines
-      .filter((_line, index) => !isEmpty[index])
-      .map((line) => countIndentWidth(line))
-  );
-  const hasTitle = lines.map(
-    (line) => countIndentWidth(line) === titleIndentWidth
-  );
-  const descriptionIndentWidth = lines.reduce<number | null>(
-    (previous, current, index) => {
-      if (isEmpty[index] || !hasTitle[index]) {
-        return previous;
-      }
-      const currentWithoutIndent = current.slice(titleIndentWidth);
-      const firstMultiSpaceIndex =
-        currentWithoutIndent.indexOf('  ') + titleIndentWidth;
-      if (firstMultiSpaceIndex < 0) {
-        return previous;
-      }
-      const description = current.slice(firstMultiSpaceIndex).trimLeft();
-      const indentWidth = current.length - description.length;
-      if (!previous || indentWidth < previous) {
-        return indentWidth;
-      }
-      return previous;
-    },
-    null
-  );
-  if (descriptionIndentWidth === null) {
-    throw new Error('Could not determine descriptionIndentWidth');
-  }
-  if (titleIndentWidth >= descriptionIndentWidth) {
-    throw new Error('Invalid indent width');
-  }
-  const isDescriptionOnly = lines.map(
-    (line) => countIndentWidth(line) >= descriptionIndentWidth
-  );
-  const listItems: ListItem[] = [];
-  for (const [index, line] of lines.entries()) {
-    if (hasTitle[index]) {
-      const title = line.slice(0, descriptionIndentWidth).trim();
-      const description = line.slice(descriptionIndentWidth);
-      listItems.push({
-        title,
-        descriptionLines: [description],
-      });
-      continue;
+  return abstractParseTabbedTextList(lines, (line) => {
+    const indentWidth = countIndentWidth(line);
+    const withoutIndent = line.slice(indentWidth);
+    const firstMultiSpaceIndex = withoutIndent.indexOf('  ') + indentWidth;
+    // If multi space is not found, the line doesn't have a description.
+    if (firstMultiSpaceIndex < 0) {
+      return line.length;
     }
-    if (listItems.length > 0 && isDescriptionOnly[index]) {
-      const description = line.slice(descriptionIndentWidth);
-      listItems[listItems.length - 1].descriptionLines.push(description);
-      continue;
-    }
-  }
-  return listItems;
+    const description = line.slice(firstMultiSpaceIndex).trimLeft();
+    const descriptionIndentWidth = line.length - description.length;
+    return descriptionIndentWidth;
+  });
 };
 
 // Example:
@@ -98,6 +51,7 @@ export const parseTabbedTextList2 = (list: string): ListItem[] => {
 
 const abstractParseTabbedTextList = (
   lines: string[],
+  // A function to count the indent width of description when the line has a title.
   countDescriptionIndentWidth: (line: string) => number
 ): ListItem[] => {
   const isEmpty = lines.map((line) => line.trim().length === 0);
