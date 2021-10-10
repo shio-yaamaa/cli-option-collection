@@ -1,0 +1,61 @@
+[
+  {
+    "name": "fzf-tmux",
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p\n    [WIDTH[%][,HEIGHT[%]]]",
+        "description": ""
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w WIDTH[%]",
+        "description": ""
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h WIDTH[%]",
+        "description": ""
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x COL",
+        "description": ""
+      },
+      {
+        "type": "short",
+        "key": "y",
+        "title": "-y ROW",
+        "description": ""
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u [height[%]]",
+        "description": "Split above (up)"
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d [height[%]]",
+        "description": "Split below (down)"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l [width[%]]",
+        "description": "Split left"
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r [width[%]]",
+        "description": "Split right"
+      }
+    ]
+  }
+]

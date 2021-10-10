@@ -7,6 +7,7 @@ import { fetchBrew } from './fetchers/brew';
 import * as daemontools from './fetchers/daemontools';
 import { fetchDocker } from './fetchers/docker';
 import * as ffmpeg from './fetchers/ffmpeg';
+import * as fzf from './fetchers/fzf';
 import { fetchGit } from './fetchers/git';
 import * as gnuCoreutils from './fetchers/gnu-coreutils';
 import { fetchGo } from './fetchers/go';
@@ -86,6 +87,8 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['fg', bashBuiltin.fetchFg],
   ['fmt', gnuCoreutils.fetchFmt],
   ['fold', gnuCoreutils.fetchFold],
+  ['fzf', fzf.fetchFzf],
+  ['fzf-tmux', fzf.fetchFzfTmux],
   ['getopts', bashBuiltin.fetchGetopts],
   ['git', fetchGit],
   ['go', fetchGo],
