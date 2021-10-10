@@ -23,3 +23,9 @@ export const fetchCsh: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'csh',
     optionsHeadingID: 'Argument_list_processing',
   });
+
+export const fetchDomainname: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'domainname',
+    optionsHeadingID: 'DESCRIPTION',
+  });

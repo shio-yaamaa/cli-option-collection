@@ -71,6 +71,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['dirname', gnuCoreutils.fetchDirname],
   ['disown', bashBuiltin.fetchDisown],
   ['docker', fetchDocker],
+  ['domainname', openbsd.fetchDomainname],
   ['dot', graphviz.fetchDot],
   ['du', gnuCoreutils.fetchDu],
   ['echo', join(gnuCoreutils.fetchEcho, bashBuiltin.fetchEcho)],
