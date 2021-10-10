@@ -68,3 +68,9 @@ export const fetchSha256: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'sha256',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchSha512: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'sha512',
+    optionsHeadingID: 'DESCRIPTION',
+  });
