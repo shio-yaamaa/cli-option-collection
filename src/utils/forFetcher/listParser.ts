@@ -31,24 +31,6 @@ export const parseTabbedTextList = (list: string): ListItem[] => {
   });
 };
 
-// Example:
-//   item1  Description of item1
-//   item2  Description of item2
-//          Description can be multi-line
-//   item with two  spaces  Description of the item with two spaces
-// Rules:
-// - Title may contain more than 2 spaces in sequence, but description must not.
-// - Title and description need to have at least 2 spaces between them.
-// - The start column of the description can vary between items.
-// Empty lines between description lines of the same item are not preserved.
-export const parseTabbedTextList2 = (list: string): ListItem[] => {
-  const lines = list.split('\n');
-  return abstractParseTabbedTextList(
-    lines,
-    (line) => line.lastIndexOf('  ') + 2
-  );
-};
-
 const abstractParseTabbedTextList = (
   lines: string[],
   // A function to count the indent width of description when the line has a title.
