@@ -1,6 +1,4 @@
-import { URL } from 'url';
-
-import { FetchFunction, Command, Option } from '../../types';
+import { Command, Option, Fetcher } from '../../types';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -19,11 +17,15 @@ import { mergeLists } from '../../utils/utils';
 
 // BUG: Options starting with "+" are not collected.
 
-const DOC_URL =
-  'https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1';
+export interface SourceDef {
+  commandName: string;
+  url: URL;
+}
 
-export const fetchFzf: FetchFunction = async (): Promise<Command[]> => {
-  const document = await fetchDocumentFromManPageURL(new URL(DOC_URL));
+export const fetch: Fetcher<SourceDef> = async (
+  sourceDef: SourceDef
+): Promise<Command[]> => {
+  const document = await fetchDocumentFromManPageURL(sourceDef.url);
   const section = findOptionsSection(document);
   if (!section) {
     return [];
@@ -32,7 +34,7 @@ export const fetchFzf: FetchFunction = async (): Promise<Command[]> => {
 
   return [
     {
-      name: 'fzf',
+      name: sourceDef.commandName,
       options: uniqueOptions(options),
     },
   ];
