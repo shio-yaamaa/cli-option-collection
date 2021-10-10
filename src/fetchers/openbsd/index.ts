@@ -102,6 +102,12 @@ export const fetchPs: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchSed: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'sed',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchSh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'sh',

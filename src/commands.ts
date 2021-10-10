@@ -174,6 +174,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['rmdir', gnuCoreutils.fetchRmdir],
   ['rsync', fetchRsync],
   ['runcon', gnuCoreutils.fetchRuncon],
+  ['sed', openbsd.fetchSed],
   ['seq', gnuCoreutils.fetchSeq],
   ['set', bashBuiltin.fetchSet],
   ['setlock', daemontools.fetchSetlock],
