@@ -23,6 +23,7 @@ enum LineType {
 }
 
 interface LineState {
+  previousLineType: LineType | null;
   isPartOfItem: boolean;
   titleIndentWidth: number;
   descriptionIndentWidth: number | null;
@@ -35,6 +36,7 @@ export const parseTextList = (lines: string[]): ListItem[] => {
   }
 
   let lineState: LineState = {
+    previousLineType: null,
     isPartOfItem: false,
     titleIndentWidth: getTitleIndentWidth(lines),
     descriptionIndentWidth: null,
@@ -105,9 +107,13 @@ export const parseTextList = (lines: string[]): ListItem[] => {
         break;
       }
     }
+    lineState.previousLineType = lineType;
   }
 
-  return listItems;
+  return listItems.filter(
+    ({ titles, descriptionLines }) =>
+      titles.length > 0 && descriptionLines.length > 0
+  );
 };
 
 const isEmpty = (lines: string[]): boolean => {
@@ -131,7 +137,10 @@ const getLineType = (line: string, lineState: LineState) => {
     if (line.slice(lineState.titleIndentWidth).includes('  ')) {
       return LineType.TITLE_AND_DESCRIPTION;
     }
-    if (lineState.previousItemLacksDescription && lineState.isPartOfItem) {
+    if (
+      lineState.previousLineType === LineType.PRIMARY_TITLE ||
+      lineState.previousLineType === LineType.SECONDARY_TITLE
+    ) {
       return LineType.SECONDARY_TITLE;
     } else {
       return LineType.PRIMARY_TITLE;

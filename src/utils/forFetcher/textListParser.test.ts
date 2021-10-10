@@ -19,6 +19,9 @@ describe('parseTextList', () => {
                  Description does not have to start
                  on the same line as its title.
                    And it can have additional indentation.
+
+      Heading
+
       title1
       title2
           Item can have multiple title lines.
