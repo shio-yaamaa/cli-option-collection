@@ -156,6 +156,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['pr', gnuCoreutils.fetchPr],
   ['printenv', gnuCoreutils.fetchPrintenv],
   ['printf', join(gnuCoreutils.fetchPrintf, bashBuiltin.fetchPrintf)],
+  ['ps', openbsd.fetchPs],
   ['ptx', gnuCoreutils.fetchPtx],
   ['pushd', bashBuiltin.fetchPushd],
   ['pwd', join(gnuCoreutils.fetchPwd, bashBuiltin.fetchPwd)],

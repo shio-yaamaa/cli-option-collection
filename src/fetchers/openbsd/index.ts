@@ -76,6 +76,12 @@ export const fetchPax: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchPs: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'ps',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchSh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'sh',
