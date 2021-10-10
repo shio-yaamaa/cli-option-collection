@@ -201,6 +201,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['sync', gnuCoreutils.fetchSync],
   ['tac', gnuCoreutils.fetchTac],
   ['tail', gnuCoreutils.fetchTail],
+  ['tar', openbsd.fetchTar],
   ['tee', gnuCoreutils.fetchTee],
   ['terraform', fetchTerraform],
   ['test', join(gnuCoreutils.fetchTest, bashBuiltin.fetchTest)],

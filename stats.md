@@ -1,8 +1,8 @@
 # Overview
 
-- Number of base commands: 208
-- Number of commands (including subcommands): 758
-- Number of options: 10095
+- Number of base commands: 209
+- Number of commands (including subcommands): 759
+- Number of options: 10122
 
 # Command Rankings
 
@@ -34,4 +34,4 @@
 |7|`pax`|34|
 |8|`perl`|30|
 |9|`git grep`|27|
-|10|`test`|26|
+|10|`tar`|27|

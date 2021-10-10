@@ -99,3 +99,9 @@ export const fetchSha512: FetchFunction = async (): Promise<Command[]> =>
     commandName: 'sha512',
     optionsHeadingID: 'DESCRIPTION',
   });
+
+export const fetchTar: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'tar',
+    optionsHeadingID: 'DESCRIPTION',
+  });
