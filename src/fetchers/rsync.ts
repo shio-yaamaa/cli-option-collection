@@ -10,8 +10,8 @@ import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
@@ -68,8 +68,8 @@ const listToOptions = (list: Element): Option[] => {
     const optionStrings = transformOptionStrings(titles, [
       splitByComma,
       trimOptionalElements,
-      trimOptionArguments,
-      trimOptionValues,
+      trimSpaceDelimitedArguments,
+      trimEqualDelimitedArguments,
     ]);
     options.push(
       ...makeOptionList(

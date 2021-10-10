@@ -8,9 +8,9 @@ import {
 } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
-  trimNonDelimitedOptionValues,
+  trimNonDelimitedArguments,
   trimOptionalElements,
-  trimOptionValues,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
@@ -52,8 +52,8 @@ const indentedListItemToOptions = (listItem: ListItem): Option[] => {
   const description = listItem.descriptionLines.join(' ');
   const optionStrings = transformOptionStrings(listItem.titles, [
     trimOptionalElements,
-    trimOptionValues,
-    trimNonDelimitedOptionValues,
+    trimEqualDelimitedArguments,
+    trimNonDelimitedArguments,
   ]);
   return makeOptionList(optionStrings, title, description);
 };

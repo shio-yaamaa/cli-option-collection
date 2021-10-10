@@ -7,8 +7,8 @@ import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
@@ -102,7 +102,7 @@ const listItemToOptions = (listItem: Element): Option[] => {
   const description = descriptionMatch[1].trim();
   const optionStrings = transformOptionStrings(
     [title],
-    [trimOptionArguments, trimOptionValues]
+    [trimSpaceDelimitedArguments, trimEqualDelimitedArguments]
   );
   return makeOptionListForSingleDashStyle(optionStrings, title, description);
 };

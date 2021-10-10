@@ -7,7 +7,7 @@ import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
-  trimOptionArguments,
+  trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { makeOptionList } from '../utils/forFetcher/optionString';
 
@@ -74,7 +74,7 @@ const fetchSubcommand = async (
 
     const optionStrings = transformOptionStrings(
       [optionString],
-      [splitByComma, trimOptionArguments]
+      [splitByComma, trimSpaceDelimitedArguments]
     );
     options.push(...makeOptionList(optionStrings, title, description));
   }

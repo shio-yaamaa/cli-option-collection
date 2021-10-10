@@ -46,7 +46,7 @@ export const splitBySpace: OptionStringsFilter = (
 };
 
 // Example: ["--ignore=PATTERN"] -> ["--ignore"]
-export const trimOptionValues: OptionStringsFilter = (
+export const trimEqualDelimitedArguments: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   return strings.map((string) =>
@@ -56,7 +56,7 @@ export const trimOptionValues: OptionStringsFilter = (
 
 // Example: ["-dPattern"] -> ["-d"]
 const SHORT_OPTION_LIKE_PATTERN = /^-[A-Za-z]/;
-export const trimNonDelimitedOptionValues: OptionStringsFilter = (
+export const trimNonDelimitedArguments: OptionStringsFilter = (
   strings: string[]
 ) => {
   return strings.map((string) =>
@@ -65,7 +65,7 @@ export const trimNonDelimitedOptionValues: OptionStringsFilter = (
 };
 
 // Example: ["--mode #0"] -> ["--mode"]
-export const trimOptionArguments: OptionStringsFilter = (
+export const trimSpaceDelimitedArguments: OptionStringsFilter = (
   strings: string[]
 ): string[] => {
   return strings.map((string) =>

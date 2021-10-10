@@ -16,9 +16,9 @@ import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
-  trimNonDelimitedOptionValues,
+  trimNonDelimitedArguments,
   trimOptionalElements,
-  trimOptionValues,
+  trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists, uniqueBy } from '../utils/utils';
 
@@ -111,8 +111,8 @@ const findOptions = (document: Document): Option[] => {
     const optionStrings = transformOptionStrings(dtTexts, [
       splitByComma,
       trimOptionalElements,
-      trimOptionValues,
-      trimNonDelimitedOptionValues,
+      trimEqualDelimitedArguments,
+      trimNonDelimitedArguments,
     ]);
     options.push(...makeOptionList(optionStrings, title, description));
   }

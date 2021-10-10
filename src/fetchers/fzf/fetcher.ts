@@ -10,8 +10,8 @@ import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
@@ -70,9 +70,9 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const description = dd.textContent?.trim() ?? '';
   const optionStrings = transformOptionStrings(dtTexts, [
     splitByComma,
-    trimOptionValues,
+    trimEqualDelimitedArguments,
     trimOptionalElements,
-    trimOptionArguments,
+    trimSpaceDelimitedArguments,
   ]);
   return makeOptionList(optionStrings, title, description);
 };

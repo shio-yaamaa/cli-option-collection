@@ -12,7 +12,7 @@ import {
   transformOptionStrings,
   trimAfterColons,
   trimOptionalElements,
-  trimOptionArguments,
+  trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
@@ -55,7 +55,7 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,
     splitByComma,
-    trimOptionArguments,
+    trimSpaceDelimitedArguments,
     trimAfterColons,
   ]);
   return makeOptionListForSingleDashStyle(optionStrings, title, description);

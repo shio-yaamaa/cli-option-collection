@@ -15,7 +15,7 @@ import {
 } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
-  trimOptionArguments,
+  trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { findHeadingContentsPairs } from '../../utils/forFetcher/utils';
 import { mergeLists } from '../../utils/utils';
@@ -73,7 +73,10 @@ const findOptionLists = (lines: string[]): string[][] => {
 
 const listItemToOptions = (listItem: ListItem): Option[] => {
   const title = normalizeSpaces(mergeOptionTitles(listItem.titles));
-  const optionString = transformOptionStrings([title], [trimOptionArguments]);
+  const optionString = transformOptionStrings(
+    [title],
+    [trimSpaceDelimitedArguments]
+  );
   const description = normalizeSpaces(listItem.descriptionLines.join(' '));
   return makeOptionList(optionString, title, description);
 };

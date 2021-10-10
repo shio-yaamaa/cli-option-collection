@@ -10,8 +10,8 @@ import {
 } from '../utils/forFetcher/string';
 import {
   transformOptionStrings,
-  trimNonDelimitedOptionValues,
-  trimOptionArguments,
+  trimNonDelimitedArguments,
+  trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 
 // Alternative sources:
@@ -63,8 +63,8 @@ const ulToOptionStrings = (ul: Element): string[] => {
     .map((code) => code.textContent)
     .filter((text): text is string => typeof text === 'string');
   return transformOptionStrings(texts, [
-    trimOptionArguments,
-    trimNonDelimitedOptionValues,
+    trimSpaceDelimitedArguments,
+    trimNonDelimitedArguments,
   ]);
 };
 

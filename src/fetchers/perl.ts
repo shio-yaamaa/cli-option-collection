@@ -16,9 +16,9 @@ import {
   transformOptionStrings,
   trimAfterColons,
   trimOptionalElements,
-  trimOptionArguments,
-  trimOptionValues,
-  trimNonDelimitedOptionValues,
+  trimSpaceDelimitedArguments,
+  trimEqualDelimitedArguments,
+  trimNonDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
@@ -70,9 +70,9 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
 
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,
-    trimOptionValues,
-    trimNonDelimitedOptionValues,
-    trimOptionArguments,
+    trimEqualDelimitedArguments,
+    trimNonDelimitedArguments,
+    trimSpaceDelimitedArguments,
     trimAfterColons,
   ]);
 

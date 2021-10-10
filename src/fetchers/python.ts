@@ -10,7 +10,7 @@ import {
 import {
   splitByComma,
   transformOptionStrings,
-  trimOptionArguments,
+  trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 
 // Alternative sources:
@@ -57,7 +57,7 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
     }
     const optionStrings = transformOptionStrings(
       [title],
-      [splitByComma, trimOptionArguments]
+      [splitByComma, trimSpaceDelimitedArguments]
     );
     options.push(
       ...makeOptionList(

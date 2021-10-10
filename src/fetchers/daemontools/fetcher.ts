@@ -4,7 +4,7 @@ import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
-  trimOptionArguments,
+  trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
@@ -49,6 +49,9 @@ const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
 
   const title = listItemText.slice(0, colonIndex).trim();
   const description = listItemText.slice(colonIndex + 1).trim();
-  const optionStrings = transformOptionStrings([title], [trimOptionArguments]);
+  const optionStrings = transformOptionStrings(
+    [title],
+    [trimSpaceDelimitedArguments]
+  );
   return makeOptionList(optionStrings, title, description);
 };
