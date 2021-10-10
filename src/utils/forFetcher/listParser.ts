@@ -13,7 +13,6 @@ export interface ListItem {
 // Rules:
 // - Title must not contain more than 2 spaces in sequence, but description can.
 // - Title and description need to have at least 2 spaces between them.
-// - All the descriptions must start at the same column.
 // Empty lines between description lines of the same item are not preserved.
 export const parseTabbedTextList = (list: string): ListItem[] => {
   const lines = list.split('\n');
