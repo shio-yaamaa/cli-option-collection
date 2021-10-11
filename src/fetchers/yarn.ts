@@ -10,6 +10,7 @@ import {
   trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { makeOptionList } from '../utils/forFetcher/optionString';
+import { getInnerText } from '../utils/dom';
 
 // Yarn 2, not Yarn 1
 
@@ -44,7 +45,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     SUBCOMMAND_TEXT_PATTERN
   );
   return anchors.map((anchor) => ({
-    commandName: anchor.textContent!,
+    commandName: getInnerText(anchor),
     url: new URL(anchor.getAttribute('href')!, BASE_URL),
   }));
 };
@@ -65,11 +66,8 @@ const fetchSubcommand = async (
     if (tds[0].querySelectorAll('code').length !== 1) {
       continue;
     }
-    const optionString = tds[0].textContent;
-    const description = tds[1].textContent;
-    if (!optionString || !description) {
-      continue;
-    }
+    const optionString = getInnerText(tds[0]);
+    const description = getInnerText(tds[1]);
     const title = normalizeSpacingAroundComma(optionString);
 
     const optionStrings = transformOptionStrings(
