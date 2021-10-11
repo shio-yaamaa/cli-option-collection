@@ -77,6 +77,12 @@ export const fetchFind: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchHalt: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'halt',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ksh',
@@ -139,6 +145,12 @@ export const fetchPing6: FetchFunction = async (): Promise<Command[]> =>
 export const fetchPs: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ps',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchReboot: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'reboot',
     optionsHeadingID: 'DESCRIPTION',
   });
 
