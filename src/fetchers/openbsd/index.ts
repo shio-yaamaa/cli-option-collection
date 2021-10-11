@@ -85,6 +85,24 @@ export const fetchFind: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchGunzip: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'gunzip',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchGzcat: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'gzcat',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchGzip: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'gzip',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchHalt: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'halt',
