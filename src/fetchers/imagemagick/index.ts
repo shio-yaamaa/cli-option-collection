@@ -3,6 +3,7 @@ import { SourceDef, fetch } from './fetcher';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { findAnchorsWithPattern } from '../../utils/forFetcher/dom';
 import { uniqueBy } from '../../utils/utils';
+import { getInnerText } from '../../utils/dom';
 
 const BASE_URL = 'https://imagemagick.org/';
 const COMMAND_LIST_PATH = '/script/command-line-tools.php';
@@ -30,7 +31,7 @@ const fetchSourceDefs = async (): Promise<SourceDef[]> => {
     );
     sourceDefs.push(
       ...anchors.map((anchor) => ({
-        commandName: anchor.textContent!.trim(),
+        commandName: getInnerText(anchor).trim(),
         url: new URL(anchor.href, BASE_URL),
       }))
     );

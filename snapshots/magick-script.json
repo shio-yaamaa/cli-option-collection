@@ -413,7 +413,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
