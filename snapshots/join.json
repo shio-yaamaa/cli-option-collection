@@ -6,7 +6,7 @@
         "type": "short",
         "key": "a",
         "title": "-a FILENUM",
-        "description": "also print unpairable lines from file FILENUM, where FILENUM is 1 or 2,\n      corresponding to FILE1 or FILE2"
+        "description": "also print unpairable lines from file FILENUM, where FILENUM is 1 or 2, corresponding to FILE1 or FILE2"
       },
       {
         "type": "short",
@@ -66,7 +66,7 @@
         "type": "long",
         "key": "check-order",
         "title": "--check-order",
-        "description": "check that the input is correctly sorted, even if all input lines are\n      pairable"
+        "description": "check that the input is correctly sorted, even if all input lines are pairable"
       },
       {
         "type": "long",
@@ -78,7 +78,7 @@
         "type": "long",
         "key": "header",
         "title": "--header",
-        "description": "treat the first line in each file as field headers, print them without\n      trying to pair them"
+        "description": "treat the first line in each file as field headers, print them without trying to pair them"
       },
       {
         "type": "short",

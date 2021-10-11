@@ -6,37 +6,37 @@
         "type": "short",
         "key": "f",
         "title": "-f, --canonicalize",
-        "description": "canonicalize by following every symlink in every component of the given\n      name recursively; all but the last component must exist"
+        "description": "canonicalize by following every symlink in every component of the given name recursively; all but the last component must exist"
       },
       {
         "type": "long",
         "key": "canonicalize",
         "title": "-f, --canonicalize",
-        "description": "canonicalize by following every symlink in every component of the given\n      name recursively; all but the last component must exist"
+        "description": "canonicalize by following every symlink in every component of the given name recursively; all but the last component must exist"
       },
       {
         "type": "short",
         "key": "e",
         "title": "-e, --canonicalize-existing",
-        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, all components must exist"
+        "description": "canonicalize by following every symlink in every component of the given name recursively, all components must exist"
       },
       {
         "type": "long",
         "key": "canonicalize-existing",
         "title": "-e, --canonicalize-existing",
-        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, all components must exist"
+        "description": "canonicalize by following every symlink in every component of the given name recursively, all components must exist"
       },
       {
         "type": "short",
         "key": "m",
         "title": "-m, --canonicalize-missing",
-        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, without requirements on components existence"
+        "description": "canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence"
       },
       {
         "type": "long",
         "key": "canonicalize-missing",
         "title": "-m, --canonicalize-missing",
-        "description": "canonicalize by following every symlink in every component of the given\n      name recursively, without requirements on components existence"
+        "description": "canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence"
       },
       {
         "type": "short",

@@ -36,7 +36,7 @@
         "type": "long",
         "key": "all-repeated",
         "title": "--all-repeated[=METHOD]",
-        "description": "like -D, but allow separating groups with an empty line;\n      METHOD={none(default),prepend,separate}"
+        "description": "like -D, but allow separating groups with an empty line; METHOD={none(default),prepend,separate}"
       },
       {
         "type": "short",
@@ -54,7 +54,7 @@
         "type": "long",
         "key": "group",
         "title": "--group[=METHOD]",
-        "description": "show all items, separating groups with an empty line;\n      METHOD={separate(default),prepend,append,both}"
+        "description": "show all items, separating groups with an empty line; METHOD={separate(default),prepend,append,both}"
       },
       {
         "type": "short",

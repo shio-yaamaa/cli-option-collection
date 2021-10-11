@@ -6,13 +6,13 @@
         "type": "short",
         "key": "a",
         "title": "-a, --all",
-        "description": "print all information, in the following order, except omit -p and\n      -i if unknown:"
+        "description": "print all information, in the following order, except omit -p and -i if unknown:"
       },
       {
         "type": "long",
         "key": "all",
         "title": "-a, --all",
-        "description": "print all information, in the following order, except omit -p and\n      -i if unknown:"
+        "description": "print all information, in the following order, except omit -p and -i if unknown:"
       },
       {
         "type": "short",

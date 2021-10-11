@@ -24,31 +24,31 @@
         "type": "short",
         "key": "C",
         "title": "-C, --compare",
-        "description": "compare each pair of source and destination files, and in some cases, do\n      not modify the destination at all"
+        "description": "compare each pair of source and destination files, and in some cases, do not modify the destination at all"
       },
       {
         "type": "long",
         "key": "compare",
         "title": "-C, --compare",
-        "description": "compare each pair of source and destination files, and in some cases, do\n      not modify the destination at all"
+        "description": "compare each pair of source and destination files, and in some cases, do not modify the destination at all"
       },
       {
         "type": "short",
         "key": "d",
         "title": "-d, --directory",
-        "description": "treat all arguments as directory names; create all components of the\n      specified directories"
+        "description": "treat all arguments as directory names; create all components of the specified directories"
       },
       {
         "type": "long",
         "key": "directory",
         "title": "-d, --directory",
-        "description": "treat all arguments as directory names; create all components of the\n      specified directories"
+        "description": "treat all arguments as directory names; create all components of the specified directories"
       },
       {
         "type": "short",
         "key": "D",
         "title": "-D",
-        "description": "create all leading components of DEST except the last, or all components\n      of --target-directory, then copy SOURCE to DEST"
+        "description": "create all leading components of DEST except the last, or all components of --target-directory, then copy SOURCE to DEST"
       },
       {
         "type": "short",
@@ -90,13 +90,13 @@
         "type": "short",
         "key": "p",
         "title": "-p, --preserve-timestamps",
-        "description": "apply access/modification times of SOURCE files to corresponding\n      destination files"
+        "description": "apply access/modification times of SOURCE files to corresponding destination files"
       },
       {
         "type": "long",
         "key": "preserve-timestamps",
         "title": "-p, --preserve-timestamps",
-        "description": "apply access/modification times of SOURCE files to corresponding\n      destination files"
+        "description": "apply access/modification times of SOURCE files to corresponding destination files"
       },
       {
         "type": "short",
@@ -174,13 +174,13 @@
         "type": "short",
         "key": "Z",
         "title": "-Z",
-        "description": "set SELinux security context of destination file and each created\n      directory to default type"
+        "description": "set SELinux security context of destination file and each created directory to default type"
       },
       {
         "type": "long",
         "key": "context",
         "title": "--context[=CTX]",
-        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK\n      security context to CTX"
+        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX"
       },
       {
         "type": "long",

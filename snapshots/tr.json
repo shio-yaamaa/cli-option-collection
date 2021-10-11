@@ -36,13 +36,13 @@
         "type": "short",
         "key": "s",
         "title": "-s, --squeeze-repeats",
-        "description": "replace each sequence of a repeated character that is listed in the last\n      specified SET, with a single occurrence of that character"
+        "description": "replace each sequence of a repeated character that is listed in the last specified SET, with a single occurrence of that character"
       },
       {
         "type": "long",
         "key": "squeeze-repeats",
         "title": "-s, --squeeze-repeats",
-        "description": "replace each sequence of a repeated character that is listed in the last\n      specified SET, with a single occurrence of that character"
+        "description": "replace each sequence of a repeated character that is listed in the last specified SET, with a single occurrence of that character"
       },
       {
         "type": "short",

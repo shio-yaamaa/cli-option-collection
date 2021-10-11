@@ -18,13 +18,13 @@
         "type": "short",
         "key": "p",
         "title": "-p, --prefix=STRING",
-        "description": "reformat only lines beginning with STRING, reattaching the prefix to\n      reformatted lines"
+        "description": "reformat only lines beginning with STRING, reattaching the prefix to reformatted lines"
       },
       {
         "type": "long",
         "key": "prefix",
         "title": "-p, --prefix=STRING",
-        "description": "reformat only lines beginning with STRING, reattaching the prefix to\n      reformatted lines"
+        "description": "reformat only lines beginning with STRING, reattaching the prefix to reformatted lines"
       },
       {
         "type": "short",

@@ -18,13 +18,13 @@
         "type": "short",
         "key": "B",
         "title": "-B, --block-size=SIZE",
-        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in\n      units of 1,048,576 bytes; see SIZE format below"
+        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
         "type": "long",
         "key": "block-size",
         "title": "-B, --block-size=SIZE",
-        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in\n      units of 1,048,576 bytes; see SIZE format below"
+        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
         "type": "short",
@@ -90,7 +90,7 @@
         "type": "long",
         "key": "output",
         "title": "--output[=FIELD_LIST]",
-        "description": "use the output format defined by FIELD_LIST, or print all fields if\n      FIELD_LIST is omitted."
+        "description": "use the output format defined by FIELD_LIST, or print all fields if FIELD_LIST is omitted."
       },
       {
         "type": "short",
@@ -114,7 +114,7 @@
         "type": "long",
         "key": "total",
         "title": "--total",
-        "description": "elide all entries insignificant to available space, and produce a grand\n      total"
+        "description": "elide all entries insignificant to available space, and produce a grand total"
       },
       {
         "type": "short",

@@ -42,25 +42,25 @@
         "type": "long",
         "key": "suffix",
         "title": "--suffix=SUFF",
-        "description": "append SUFF to TEMPLATE; SUFF must not contain a slash. This option is\n      implied if TEMPLATE does not end in X"
+        "description": "append SUFF to TEMPLATE; SUFF must not contain a slash. This option is implied if TEMPLATE does not end in X"
       },
       {
         "type": "short",
         "key": "p",
         "title": "-p DIR, --tmpdir[=DIR]",
-        "description": "interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR\n      if set, else /tmp. With this option, TEMPLATE must not be an\n      absolute name; unlike with -t, TEMPLATE may contain slashes, but\n      mktemp creates only the final component"
+        "description": "interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR if set, else /tmp. With this option, TEMPLATE must not be an absolute name; unlike with -t, TEMPLATE may contain slashes, but mktemp creates only the final component"
       },
       {
         "type": "long",
         "key": "tmpdir",
         "title": "-p DIR, --tmpdir[=DIR]",
-        "description": "interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR\n      if set, else /tmp. With this option, TEMPLATE must not be an\n      absolute name; unlike with -t, TEMPLATE may contain slashes, but\n      mktemp creates only the final component"
+        "description": "interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR if set, else /tmp. With this option, TEMPLATE must not be an absolute name; unlike with -t, TEMPLATE may contain slashes, but mktemp creates only the final component"
       },
       {
         "type": "short",
         "key": "t",
         "title": "-t",
-        "description": "interpret TEMPLATE as a single file name component, relative to a\n      directory: $TMPDIR, if set; else the directory specified via -p;\n      else /tmp [deprecated]"
+        "description": "interpret TEMPLATE as a single file name component, relative to a directory: $TMPDIR, if set; else the directory specified via -p; else /tmp [deprecated]"
       },
       {
         "type": "long",
