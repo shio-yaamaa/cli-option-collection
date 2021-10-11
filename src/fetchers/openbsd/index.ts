@@ -7,6 +7,9 @@ import { fetch } from './fetcher';
 //       Commands collected from other sources are not listed here.
 //       References:
 //       - https://github.com/openbsd/src/tree/master/bin
+// NOTE: Currently "openssl" command is not fetched because, unlike other commands,
+//       it has subcommands and single-dash option style, which means it needs
+//       a completely different fetcher implementation.
 
 // BUG: "-safe" flag is not recognized as an option
 //      because it uses single dash with long option name.
