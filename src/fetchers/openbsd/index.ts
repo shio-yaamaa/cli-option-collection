@@ -31,6 +31,14 @@ export const fetchChflags: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: Some of the options listed in the documentation is not available for "clear" command
+//      because the page is shared with "tput" command.
+export const fetchClear: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'clear',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchCsh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'csh',
@@ -211,5 +219,11 @@ export const fetchSsh: FetchFunction = async (): Promise<Command[]> =>
 export const fetchTar: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'tar',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchTput: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'tput',
     optionsHeadingID: 'DESCRIPTION',
   });
