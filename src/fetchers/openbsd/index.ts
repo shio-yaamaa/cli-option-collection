@@ -95,6 +95,13 @@ export const fetchMt: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: The table in "-f" option's description is not stringified in a human-readable way.
+export const fetchNetstat: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'netstat',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 // BUG: Option description for "-rw" is ignored.
 export const fetchPax: FetchFunction = async (): Promise<Command[]> =>
   fetch({
