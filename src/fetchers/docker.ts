@@ -11,6 +11,8 @@ import { isElement, isString } from '../utils/typeGuards';
 // - https://github.com/docker/cli/blob/master/docs/reference/commandline/attach.md
 // Markdown files in https://github.com/docker/cli/tree/master/man do not cover all the commands.
 
+// BUG: Top-level options are not collected.
+
 interface SubcommandLocation {
   command: string; // e.g. "docker attach"
   url: URL; // e.g. https://docs.docker.com/engine/reference/commandline/attach/
