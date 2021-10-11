@@ -144,6 +144,12 @@ export const fetchMd5: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchMore: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'more',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchMt: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'mt',

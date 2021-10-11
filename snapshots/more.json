@@ -1,0 +1,55 @@
+[
+  {
+    "name": "more",
+    "options": [
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "When changing the display, paint from the top line down. The default is to scroll from the bottom of the screen."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "Exit immediately after showing the last line of the last file, without prompting the user for a command first."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Ignore case. Upper case and lower case are considered identical."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n number",
+        "description": "Page number of lines per screenful. By default, more uses the terminal window size."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p command",
+        "description": "Execute the specified more commands when a file is first examined (or re-examined, such as with the :e or :p commands). Multiple commands have to be concatenated into one single argument. Search patterns may contain blank characters and can be terminated by newline characters embedded in the command argument. Any other blank and newline characters contained in the argument are interpreted as SPACE and RETURN commands, respectively."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Squeeze consecutive blank lines into a single blank line."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t tag",
+        "description": "Examine the file containing tag. For more information, see ctags(1)."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Display backspaces as control characters (‘^H’) and leave CR-LF sequences alone. By default, more treats backspaces and CR-LF sequences specially: backspaces which appear adjacent to an underscore character are displayed as underlined text; backspaces which appear between two identical characters are displayed as emboldened text; and CR-LF sequences are compressed to a single linefeed character."
+      }
+    ]
+  }
+]
