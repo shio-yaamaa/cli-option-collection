@@ -40,6 +40,12 @@ export const fetchDiff: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchDig: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'dig',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchDomainname: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'domainname',
