@@ -8,7 +8,9 @@ import {
   mergeOptionTitles,
 } from '../../utils/forFetcher/optionString';
 import {
+  splitByPipe,
   transformOptionStrings,
+  trimEqualDelimitedArguments,
   trimOptionalElements,
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
@@ -64,6 +66,8 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const title = mergeOptionTitles(dtTexts);
   const description = getInnerText(dd).trim();
   const optionStrings = transformOptionStrings(dtTexts, [
+    splitByPipe,
+    trimEqualDelimitedArguments,
     trimSpaceDelimitedArguments,
     trimOptionalElements,
   ]);

@@ -117,6 +117,14 @@ export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: "less" has some special characters in options (e.g. -", -~),
+//      but the fetcher doesn't recognize them.
+export const fetchLess: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'less',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchMan: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'man',

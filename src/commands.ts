@@ -124,6 +124,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['jq', fetchJq],
   ['kill', join(gnuCoreutils.fetchKill, bashBuiltin.fetchKill)],
   ['ksh', openbsd.fetchKsh],
+  ['less', openbsd.fetchLess],
   ['let', bashBuiltin.fetchLet],
   ['link', gnuCoreutils.fetchLink],
   ['ln', gnuCoreutils.fetchLn],
