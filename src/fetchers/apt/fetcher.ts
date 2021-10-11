@@ -10,6 +10,7 @@ import {
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 import { isElement } from '../../utils/typeGuards';
+import { getInnerText } from '../../utils/dom';
 
 export interface SourceDef {
   commandName: string;
@@ -41,7 +42,7 @@ export const fetch: Fetcher<SourceDef> = async (
 const findOptionList = (document: Document): Element | null => {
   const headings = Array.from(document.querySelectorAll('h4'));
   const optionHeading = headings.find(
-    (heading) => heading.textContent?.trim() === 'OPTIONS'
+    (heading) => getInnerText(heading).trim() === 'OPTIONS'
   );
   if (!optionHeading) {
     return null;
@@ -51,11 +52,7 @@ const findOptionList = (document: Document): Element | null => {
 };
 
 const listToOptions = (list: Element): Option[] => {
-  const listText = list.textContent;
-  if (!listText) {
-    return [];
-  }
-  const listItems = parseTextList(listText.split('\n'));
+  const listItems = parseTextList(getInnerText(list).split('\n'));
   return mergeLists(listItems.map((item) => listItemToOptions(item)));
 };
 
