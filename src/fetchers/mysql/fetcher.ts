@@ -1,4 +1,5 @@
 import { Fetcher, Command, Option } from '../../types';
+import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../../utils/forFetcher/string';
@@ -71,20 +72,24 @@ const findOptionTableItems = (
 
   for (const tr of trs) {
     const th = tr.querySelector('th');
-    const link = th?.querySelector('a')?.getAttribute('href');
+    if (!th) {
+      continue;
+    }
+    const link = th.querySelector('a')?.getAttribute('href');
     if (!link) {
       continue;
     }
 
     const hash = new URL(link, url).hash.slice(1);
-    const description = tr.querySelector('td')?.textContent;
-    if (hash.length === 0 || !description) {
+    const descriptionElement = tr.querySelector('td');
+    if (hash.length === 0 || !descriptionElement) {
       continue;
     }
+    const description = getInnerText(descriptionElement);
 
     items.push({
       hash,
-      title: th?.textContent ?? '',
+      title: getInnerText(th),
       description,
     });
   }
@@ -95,10 +100,10 @@ const findOptionTableItems = (
 const findOptionTable = (document: Document): HTMLTableElement | null => {
   const tables = Array.from(document.querySelectorAll('table'));
   return (
-    tables.find(
-      (table) =>
-        table.querySelector('th')?.textContent?.trim() === 'Option Name'
-    ) ?? null
+    tables.find((table) => {
+      const th = table.querySelector('th');
+      return th && getInnerText(th).trim() === 'Option Name';
+    }) ?? null
   );
 };
 
@@ -107,10 +112,11 @@ const findOptionsCorrespondingToOptionTableItem = (
   optionTableItem: OptionTableItem
 ): Option[] => {
   const marker = document.querySelector(`a[name=${optionTableItem.hash}]`);
-  const title = marker?.parentElement?.textContent?.trim();
-  if (!title) {
+  const titleElement = marker?.parentElement;
+  if (!titleElement) {
     return [];
   }
+  const title = getInnerText(titleElement).trim();
 
   const optionStrings = transformOptionStrings(
     [title],

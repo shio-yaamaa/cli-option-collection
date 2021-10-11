@@ -149,7 +149,7 @@
       {
         "type": "long",
         "key": "debug",
-        "title": "--debug[=debug_options], -#\n            [debug_options]",
+        "title": "--debug[=debug_options], -# [debug_options]",
         "description": "Write debugging log"
       },
       {
@@ -935,13 +935,13 @@
       {
         "type": "long",
         "key": "where",
-        "title": "--where='where_condition', -w\n            'where_condition'",
+        "title": "--where='where_condition', -w 'where_condition'",
         "description": "Dump only rows selected by given WHERE condition"
       },
       {
         "type": "short",
         "key": "w",
-        "title": "--where='where_condition', -w\n            'where_condition'",
+        "title": "--where='where_condition', -w 'where_condition'",
         "description": "Dump only rows selected by given WHERE condition"
       },
       {
