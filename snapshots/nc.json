@@ -1,0 +1,241 @@
+[
+  {
+    "name": "nc",
+    "options": [
+      {
+        "type": "short",
+        "key": "4",
+        "title": "-4",
+        "description": "Use IPv4 addresses only."
+      },
+      {
+        "type": "short",
+        "key": "6",
+        "title": "-6",
+        "description": "Use IPv6 addresses only."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C certfile",
+        "description": "Load the public key part of the TLS peer certificate from certfile, in PEM format. Requires -c."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Use TLS to connect or listen. Cannot be used together with any of the options -FuU."
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D",
+        "description": "Enable debugging on the socket."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Do not attempt to read from stdin."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e name",
+        "description": "Only accept the TLS peer certificate if it contains the name. Requires -c. If not specified, destination is used."
+      },
+      {
+        "type": "short",
+        "key": "F",
+        "title": "-F",
+        "description": "Pass the first connected socket using sendmsg(2) to stdout and exit. This is useful in conjunction with -X to have nc perform connection setup with a proxy but then leave the rest of the connection to another program (e.g. ssh(1) using the ssh_config(5) ProxyUseFdpass option). Cannot be used with -c or -U."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H hash",
+        "description": "Only accept the TLS peer certificate if its hash returned from tls_peer_cert_hash(3) matches hash. Requires -c and cannot be used with -T noverify."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Print out the nc help text and exit."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I length",
+        "description": "Specify the size of the TCP receive buffer."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i interval",
+        "description": "Sleep for interval seconds between lines of text sent and received. Also causes a delay time between connections to multiple ports."
+      },
+      {
+        "type": "short",
+        "key": "K",
+        "title": "-K keyfile",
+        "description": "Load the TLS private key from keyfile, in PEM format. Requires -c."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "When a connection is completed, listen for another one. Requires -l. When used together with the -u option, the server socket is not connected and it can receive UDP datagrams from multiple hosts."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "Listen for an incoming connection rather than initiating a connection to a remote host. Cannot be used together with any of the options -psxz. Additionally, any timeouts specified with the -w option are ignored."
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M ttl",
+        "description": "Set the TTL / hop limit of outgoing packets."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m minttl",
+        "description": "Ask the kernel to drop incoming packets whose TTL / hop limit is under minttl."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N",
+        "description": "shutdown(2) the network socket after EOF on the input. Some servers require this to finish their work."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Do not perform domain name resolution. If a name cannot be resolved without DNS, an error will be reported."
+      },
+      {
+        "type": "short",
+        "key": "O",
+        "title": "-O length",
+        "description": "Specify the size of the TCP send buffer."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o staplefile",
+        "description": "During the TLS handshake, load data to be stapled from staplefile, which is expected to contain an OCSP response from an OCSP server in DER format. Requires -c and -C."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P proxy_username",
+        "description": "Specifies a username to present to a proxy server that requires authentication. If no username is specified then authentication will not be attempted. Proxy authentication is only supported for HTTP CONNECT proxies at present."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p source_port",
+        "description": "Specify the source port nc should use, subject to privilege restrictions and availability. Cannot be used together with -l."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R CAfile",
+        "description": "Load the root CA bundle for TLS certificate verification from CAfile, in PEM format, instead of /etc/ssl/cert.pem. Requires -c."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Choose source and/or destination ports randomly instead of sequentially within a range or in the order that the system assigns them."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "Enable the RFC 2385 TCP MD5 signature option."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s sourceaddr",
+        "description": "Set the source address to send packets from, which is useful on machines with multiple interfaces. For UNIX-domain datagram sockets, specifies the local temporary socket file to create and use so that datagrams can be received. Cannot be used together with -l or -x."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T keyword",
+        "description": "Change the IPv4 TOS/IPv6 traffic class value or the TLS options.\n\nFor TLS options, keyword may be one of: noverify, which disables certificate verification; noname, which disables certificate name checking; clientcert, which requires a client certificate on incoming connections; or muststaple, which requires the peer to provide a valid stapled OCSP response with the handshake. The following TLS options specify a value in the form of a key=value pair: ciphers, which allows the supported TLS ciphers to be specified (see tls_config_set_ciphers(3) for further details); protocols, which allows the supported TLS protocols to be specified (see tls_config_parse_protocols(3) for further details). Specifying TLS options requires -c.\n\nFor the IPv4 TOS/IPv6 traffic class value, keyword may be one of critical, inetcontrol, lowdelay, netcontrol, throughput, reliability, or one of the DiffServ Code Points: ef, af11 ... af43, cs0 ... cs7; or a number in either hex or decimal."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Send RFC 854 DON'T and WON'T responses to RFC 854 DO and WILL requests. This makes it possible to use nc to script telnet sessions."
+      },
+      {
+        "type": "short",
+        "key": "U",
+        "title": "-U",
+        "description": "Use UNIX-domain sockets. Cannot be used together with any of the options -cFx."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Use UDP instead of TCP. Cannot be used together with -c or -x. For UNIX-domain sockets, use a datagram socket instead of a stream socket. If a UNIX-domain socket is used, a temporary receiving socket is created in /tmp unless the -s flag is given."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V rtable",
+        "description": "Set the routing table to be used."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Produce more verbose output."
+      },
+      {
+        "type": "short",
+        "key": "W",
+        "title": "-W recvlimit",
+        "description": "Terminate after receiving recvlimit packets from the network."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w timeout",
+        "description": "Connections which cannot be established or are idle timeout after timeout seconds. The -w flag has no effect on the -l option, i.e. nc will listen forever for a connection, with or without the -w flag. The default is no timeout."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X proxy_protocol",
+        "description": "Use proxy_protocol when talking to the proxy server. Supported protocols are 4 (SOCKS v.4), 5 (SOCKS v.5) and connect (HTTPS proxy). If the protocol is not specified, SOCKS version 5 is used."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x proxy_address[:port]",
+        "description": "Connect to destination using a proxy at proxy_address and port. If port is not specified, the well-known port for the proxy protocol is used (1080 for SOCKS, 3128 for HTTPS). An IPv6 address can be specified unambiguously by enclosing proxy_address in square brackets. A proxy cannot be used with any of the options -lsuU."
+      },
+      {
+        "type": "short",
+        "key": "Z",
+        "title": "-Z peercertfile",
+        "description": "Save the peer certificates to peercertfile, in PEM format. Requires -c."
+      },
+      {
+        "type": "short",
+        "key": "z",
+        "title": "-z",
+        "description": "Only scan for listening daemons, without sending any data to them. Cannot be used together with -l."
+      }
+    ]
+  }
+]

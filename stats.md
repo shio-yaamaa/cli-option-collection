@@ -1,8 +1,8 @@
 # Overview
 
-- Number of base commands: 221
-- Number of commands (including subcommands): 771
-- Number of options: 10378
+- Number of base commands: 222
+- Number of commands (including subcommands): 772
+- Number of options: 10417
 
 # Command Rankings
 
@@ -30,8 +30,8 @@
 |3|`dir`|40|
 |4|`ls`|40|
 |5|`vdir`|40|
-|6|`mysql`|34|
-|7|`mysqldump`|34|
-|8|`pax`|34|
-|9|`netstat`|30|
-|10|`perl`|30|
+|6|`nc`|39|
+|7|`mysql`|34|
+|8|`mysqldump`|34|
+|9|`pax`|34|
+|10|`netstat`|30|

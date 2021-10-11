@@ -145,6 +145,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['mysqlpump', mysql.fetchMysqlpump],
   ['mysqlshow', mysql.fetchMysqlshow],
   ['mysqlslap', mysql.fetchMysqlslap],
+  ['nc', openbsd.fetchNc],
   ['netstat', openbsd.fetchNetstat],
   ['nice', gnuCoreutils.fetchNice],
   ['nl', gnuCoreutils.fetchNl],
