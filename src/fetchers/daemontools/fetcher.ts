@@ -1,4 +1,5 @@
 import { Fetcher, Command, Option } from '../../types';
+import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
@@ -37,10 +38,7 @@ const listToOptions = (list: HTMLUListElement): Option[] => {
 };
 
 const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
-  const listItemText = listItem.textContent;
-  if (!listItemText) {
-    return [];
-  }
+  const listItemText = getInnerText(listItem);
 
   const colonIndex = listItemText.indexOf(':');
   if (colonIndex === -1) {

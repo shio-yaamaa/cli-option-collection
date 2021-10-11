@@ -18,19 +18,19 @@
         "type": "short",
         "key": "d",
         "title": "-d, -F, --directory",
-        "description": "allow the superuser to attempt to hard link directories (note: will\n      probably fail due to system restrictions, even for the superuser)"
+        "description": "allow the superuser to attempt to hard link directories (note: will probably fail due to system restrictions, even for the superuser)"
       },
       {
         "type": "short",
         "key": "F",
         "title": "-d, -F, --directory",
-        "description": "allow the superuser to attempt to hard link directories (note: will\n      probably fail due to system restrictions, even for the superuser)"
+        "description": "allow the superuser to attempt to hard link directories (note: will probably fail due to system restrictions, even for the superuser)"
       },
       {
         "type": "long",
         "key": "directory",
         "title": "-d, -F, --directory",
-        "description": "allow the superuser to attempt to hard link directories (note: will\n      probably fail due to system restrictions, even for the superuser)"
+        "description": "allow the superuser to attempt to hard link directories (note: will probably fail due to system restrictions, even for the superuser)"
       },
       {
         "type": "short",
@@ -72,13 +72,13 @@
         "type": "short",
         "key": "n",
         "title": "-n, --no-dereference",
-        "description": "treat LINK_NAME as a normal file if it is a symbolic link to a\n    directory"
+        "description": "treat LINK_NAME as a normal file if it is a symbolic link to a directory"
       },
       {
         "type": "long",
         "key": "no-dereference",
         "title": "-n, --no-dereference",
-        "description": "treat LINK_NAME as a normal file if it is a symbolic link to a\n    directory"
+        "description": "treat LINK_NAME as a normal file if it is a symbolic link to a directory"
       },
       {
         "type": "short",

@@ -6,13 +6,13 @@
         "type": "short",
         "key": "A",
         "title": "-A, --address-radix=RADIX",
-        "description": "output format for file offsets; RADIX is one of [doxn], for Decimal,\n      Octal, Hex or None"
+        "description": "output format for file offsets; RADIX is one of [doxn], for Decimal, Octal, Hex or None"
       },
       {
         "type": "long",
         "key": "address-radix",
         "title": "-A, --address-radix=RADIX",
-        "description": "output format for file offsets; RADIX is one of [doxn], for Decimal,\n      Octal, Hex or None"
+        "description": "output format for file offsets; RADIX is one of [doxn], for Decimal, Octal, Hex or None"
       },
       {
         "type": "long",
@@ -48,13 +48,13 @@
         "type": "short",
         "key": "S",
         "title": "-S BYTES, --strings[=BYTES]",
-        "description": "output strings of at least BYTES graphic chars; 3 is implied when BYTES is\n      not specified"
+        "description": "output strings of at least BYTES graphic chars; 3 is implied when BYTES is not specified"
       },
       {
         "type": "long",
         "key": "strings",
         "title": "-S BYTES, --strings[=BYTES]",
-        "description": "output strings of at least BYTES graphic chars; 3 is implied when BYTES is\n      not specified"
+        "description": "output strings of at least BYTES graphic chars; 3 is implied when BYTES is not specified"
       },
       {
         "type": "short",
@@ -84,13 +84,13 @@
         "type": "short",
         "key": "w",
         "title": "-w[BYTES], --width[=BYTES]",
-        "description": "output BYTES bytes per output line; 32 is implied when BYTES is not\n      specified"
+        "description": "output BYTES bytes per output line; 32 is implied when BYTES is not specified"
       },
       {
         "type": "long",
         "key": "width",
         "title": "-w[BYTES], --width[=BYTES]",
-        "description": "output BYTES bytes per output line; 32 is implied when BYTES is not\n      specified"
+        "description": "output BYTES bytes per output line; 32 is implied when BYTES is not specified"
       },
       {
         "type": "long",

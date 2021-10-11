@@ -1,4 +1,5 @@
 import { FetchFunction, Command, Option, OptionType } from '../types';
+import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
@@ -62,28 +63,28 @@ const getSections = (document: Document): Section[] => {
   for (const h4 of h4s) {
     let usage: string | null = null;
     const paragraphs: string[] = [];
-    const preTextContents: string[] = [];
+    const preTexts: string[] = [];
 
     let currentElement: Element | null = h4;
     do {
-      const textContent = currentElement.textContent;
-      if (!textContent) {
-        continue;
-      }
+      const text = getInnerText(currentElement);
       switch (currentElement.tagName.toLowerCase()) {
         case 'p':
-          paragraphs.push(textContent);
+          paragraphs.push(text);
           break;
         case 'pre':
           if (!usage) {
             const previousElement = currentElement.previousElementSibling;
-            if (previousElement?.textContent?.trim() === 'Usage:') {
-              usage = textContent;
+            if (
+              previousElement &&
+              getInnerText(previousElement).trim() === 'Usage:'
+            ) {
+              usage = text;
             } else {
-              preTextContents.push(textContent);
+              preTexts.push(text);
             }
           }
-          preTextContents.push(textContent);
+          preTexts.push(text);
           break;
       }
       currentElement = currentElement.nextElementSibling;
@@ -93,7 +94,7 @@ const getSections = (document: Document): Section[] => {
       sections.push({
         usage,
         paragraphs,
-        pres: preTextContents,
+        pres: preTexts,
       });
     }
   }

@@ -5,7 +5,7 @@
       {
         "type": "short",
         "key": "p",
-        "title": "-p\n    [WIDTH[%][,HEIGHT[%]]]",
+        "title": "-p [WIDTH[%][,HEIGHT[%]]]",
         "description": ""
       },
       {

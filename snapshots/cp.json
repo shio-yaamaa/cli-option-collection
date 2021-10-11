@@ -48,13 +48,13 @@
         "type": "short",
         "key": "f",
         "title": "-f, --force",
-        "description": "if an existing destination file cannot be opened, remove it and try again\n      (this option is ignored when the -n option is also used)"
+        "description": "if an existing destination file cannot be opened, remove it and try again (this option is ignored when the -n option is also used)"
       },
       {
         "type": "long",
         "key": "force",
         "title": "-f, --force",
-        "description": "if an existing destination file cannot be opened, remove it and try again\n      (this option is ignored when the -n option is also used)"
+        "description": "if an existing destination file cannot be opened, remove it and try again (this option is ignored when the -n option is also used)"
       },
       {
         "type": "short",
@@ -102,13 +102,13 @@
         "type": "short",
         "key": "n",
         "title": "-n, --no-clobber",
-        "description": "do not overwrite an existing file (overrides a previous -i\n    option)"
+        "description": "do not overwrite an existing file (overrides a previous -i option)"
       },
       {
         "type": "long",
         "key": "no-clobber",
         "title": "-n, --no-clobber",
-        "description": "do not overwrite an existing file (overrides a previous -i\n    option)"
+        "description": "do not overwrite an existing file (overrides a previous -i option)"
       },
       {
         "type": "short",
@@ -132,7 +132,7 @@
         "type": "long",
         "key": "preserve",
         "title": "--preserve[=ATTR_LIST]",
-        "description": "preserve the specified attributes (default: mode,ownership,timestamps), if\n      possible additional attributes: context, links, xattr, all"
+        "description": "preserve the specified attributes (default: mode,ownership,timestamps), if possible additional attributes: context, links, xattr, all"
       },
       {
         "type": "long",
@@ -174,7 +174,7 @@
         "type": "long",
         "key": "remove-destination",
         "title": "--remove-destination",
-        "description": "remove each existing destination file before attempting to open it\n      (contrast with --force)"
+        "description": "remove each existing destination file before attempting to open it (contrast with --force)"
       },
       {
         "type": "long",
@@ -240,13 +240,13 @@
         "type": "short",
         "key": "u",
         "title": "-u, --update",
-        "description": "copy only when the SOURCE file is newer than the destination file or when\n      the destination file is missing"
+        "description": "copy only when the SOURCE file is newer than the destination file or when the destination file is missing"
       },
       {
         "type": "long",
         "key": "update",
         "title": "-u, --update",
-        "description": "copy only when the SOURCE file is newer than the destination file or when\n      the destination file is missing"
+        "description": "copy only when the SOURCE file is newer than the destination file or when the destination file is missing"
       },
       {
         "type": "short",
@@ -282,7 +282,7 @@
         "type": "long",
         "key": "context",
         "title": "--context[=CTX]",
-        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK\n      security context to CTX"
+        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX"
       },
       {
         "type": "long",

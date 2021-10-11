@@ -1,4 +1,5 @@
 import { Fetcher, Command, Option, OptionType } from '../../types';
+import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -14,7 +15,6 @@ import {
   trimOptionalElements,
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
-import { isString } from '../../utils/typeGuards';
 import { mergeLists } from '../../utils/utils';
 
 // BUG: "no" prefix is not considered.
@@ -48,9 +48,9 @@ const findTopLevelLists = (document: Document): HTMLDListElement[] =>
   Array.from(document.querySelectorAll('.page-content > dl'));
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const dtTexts = dts.map((dt) => dt.textContent?.trim()).filter(isString);
+  const dtTexts = dts.map((dt) => getInnerText(dt).trim());
   const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
-  const description = dd.textContent?.trim() ?? '';
+  const description = getInnerText(dd).trim();
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,
     splitByComma,

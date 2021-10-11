@@ -1,3 +1,5 @@
+import { getInnerText } from '../dom';
+
 export interface DListEntry {
   dts: Element[];
   dd: Element;
@@ -39,11 +41,10 @@ export const findAnchorsWithPattern = (
   const anchors = Array.from(parent.querySelectorAll('a'));
   return anchors.filter((anchor) => {
     const href = anchor.getAttribute('href');
-    const text = anchor.textContent;
-    if (!href || !text) {
-      return false;
-    }
-    const matchesHref = !hrefPattern || hrefPattern.test(href);
+    const text = getInnerText(anchor);
+
+    // When the pattern is not specified, it is considered to be always matching
+    const matchesHref = !hrefPattern || (href && hrefPattern.test(href));
     const matchesText = !textPattern || textPattern.test(text);
     return matchesHref && matchesText;
   });
@@ -64,11 +65,7 @@ export const findDListEntries = (
         currentDts.push(element);
         break;
       case 'dd':
-        if (
-          ignoreEmptyDd &&
-          (element.textContent === null ||
-            element.textContent.trim().length === 0)
-        ) {
+        if (ignoreEmptyDd && getInnerText(element).trim().length === 0) {
           // Ignore
         } else {
           entries.push({

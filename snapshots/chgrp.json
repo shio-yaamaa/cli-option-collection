@@ -48,19 +48,19 @@
         "type": "long",
         "key": "dereference",
         "title": "--dereference",
-        "description": "affect the referent of each symbolic link (this is the default), rather\n      than the symbolic link itself"
+        "description": "affect the referent of each symbolic link (this is the default), rather than the symbolic link itself"
       },
       {
         "type": "short",
         "key": "h",
         "title": "-h, --no-dereference",
-        "description": "affect symbolic links instead of any referenced file (useful only on\n      systems that can change the ownership of a symlink)"
+        "description": "affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)"
       },
       {
         "type": "long",
         "key": "no-dereference",
         "title": "-h, --no-dereference",
-        "description": "affect symbolic links instead of any referenced file (useful only on\n      systems that can change the ownership of a symlink)"
+        "description": "affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)"
       },
       {
         "type": "long",
@@ -96,7 +96,7 @@
         "type": "short",
         "key": "H",
         "title": "-H",
-        "description": "if a command line argument is a symbolic link to a directory, traverse\n    it"
+        "description": "if a command line argument is a symbolic link to a directory, traverse it"
       },
       {
         "type": "short",

@@ -6,25 +6,25 @@
         "type": "short",
         "key": "c",
         "title": "-c, --bytes=[-]NUM",
-        "description": "print the first NUM bytes of each file; with the leading '-', print all\n      but the last NUM bytes of each file"
+        "description": "print the first NUM bytes of each file; with the leading '-', print all but the last NUM bytes of each file"
       },
       {
         "type": "long",
         "key": "bytes",
         "title": "-c, --bytes=[-]NUM",
-        "description": "print the first NUM bytes of each file; with the leading '-', print all\n      but the last NUM bytes of each file"
+        "description": "print the first NUM bytes of each file; with the leading '-', print all but the last NUM bytes of each file"
       },
       {
         "type": "short",
         "key": "n",
         "title": "-n, --lines=[-]NUM",
-        "description": "print the first NUM lines instead of the first 10; with the leading '-',\n      print all but the last NUM lines of each file"
+        "description": "print the first NUM lines instead of the first 10; with the leading '-', print all but the last NUM lines of each file"
       },
       {
         "type": "long",
         "key": "lines",
         "title": "-n, --lines=[-]NUM",
-        "description": "print the first NUM lines instead of the first 10; with the leading '-',\n      print all but the last NUM lines of each file"
+        "description": "print the first NUM lines instead of the first 10; with the leading '-', print all but the last NUM lines of each file"
       },
       {
         "type": "short",

@@ -6,13 +6,13 @@
         "type": "short",
         "key": "d",
         "title": "-d --delay=DELAY",
-        "description": "Delay between updates, in tenths of a second. If the delay value is less\n      than 1, it is increased to 1, i.e. 1/10 second. If the delay value is\n      greater than 100, it is decreased to 100, i.e. 10 seconds."
+        "description": "Delay between updates, in tenths of a second. If the delay value is less than 1, it is increased to 1, i.e. 1/10 second. If the delay value is greater than 100, it is decreased to 100, i.e. 10 seconds."
       },
       {
         "type": "long",
         "key": "delay",
         "title": "-d --delay=DELAY",
-        "description": "Delay between updates, in tenths of a second. If the delay value is less\n      than 1, it is increased to 1, i.e. 1/10 second. If the delay value is\n      greater than 100, it is decreased to 100, i.e. 10 seconds."
+        "description": "Delay between updates, in tenths of a second. If the delay value is less than 1, it is increased to 1, i.e. 1/10 second. If the delay value is greater than 100, it is decreased to 100, i.e. 10 seconds."
       },
       {
         "type": "short",
@@ -72,13 +72,13 @@
         "type": "short",
         "key": "s",
         "title": "-s --sort-key COLUMN",
-        "description": "Sort by this column (use --sort-key help for a column list). This will\n      force a list view unless you specify -t at the same time."
+        "description": "Sort by this column (use --sort-key help for a column list). This will force a list view unless you specify -t at the same time."
       },
       {
         "type": "long",
         "key": "sort-key",
         "title": "-s --sort-key COLUMN",
-        "description": "Sort by this column (use --sort-key help for a column list). This will\n      force a list view unless you specify -t at the same time."
+        "description": "Sort by this column (use --sort-key help for a column list). This will force a list view unless you specify -t at the same time."
       },
       {
         "type": "short",
@@ -138,13 +138,13 @@
         "type": "short",
         "key": "t",
         "title": "-t --tree",
-        "description": "Show processes in tree view. This can be used to force a tree view when\n      requesting a sort order with -s."
+        "description": "Show processes in tree view. This can be used to force a tree view when requesting a sort order with -s."
       },
       {
         "type": "long",
         "key": "tree",
         "title": "-t --tree",
-        "description": "Show processes in tree view. This can be used to force a tree view when\n      requesting a sort order with -s."
+        "description": "Show processes in tree view. This can be used to force a tree view when requesting a sort order with -s."
       },
       {
         "type": "short",
@@ -162,7 +162,7 @@
         "type": "long",
         "key": "drop-capabilities",
         "title": "--drop-capabilities[=off|basic|strict]",
-        "description": "Linux only; requires libcap support.\n    \n    Drop unneeded Linux capabilities. In strict mode features like killing,\n      changing process priorities, and reading process delay accounting\n      information will not work, due to less capabilities held."
+        "description": "Linux only; requires libcap support.\nDrop unneeded Linux capabilities. In strict mode features like killing, changing process priorities, and reading process delay accounting information will not work, due to less capabilities held."
       }
     ]
   }

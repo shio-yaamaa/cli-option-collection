@@ -24,7 +24,7 @@
         "type": "long",
         "key": "field",
         "title": "--field=FIELDS",
-        "description": "replace the numbers in these input fields (default=1); see FIELDS\n    below"
+        "description": "replace the numbers in these input fields (default=1); see FIELDS below"
       },
       {
         "type": "long",
@@ -48,37 +48,37 @@
         "type": "long",
         "key": "grouping",
         "title": "--grouping",
-        "description": "use locale-defined grouping of digits, e.g. 1,000,000 (which means it has\n      no effect in the C/POSIX locale)"
+        "description": "use locale-defined grouping of digits, e.g. 1,000,000 (which means it has no effect in the C/POSIX locale)"
       },
       {
         "type": "long",
         "key": "header",
         "title": "--header[=N]",
-        "description": "print (without converting) the first N header lines; N defaults to 1 if\n      not specified"
+        "description": "print (without converting) the first N header lines; N defaults to 1 if not specified"
       },
       {
         "type": "long",
         "key": "invalid",
         "title": "--invalid=MODE",
-        "description": "failure mode for invalid numbers: MODE can be: abort (default), fail,\n      warn, ignore"
+        "description": "failure mode for invalid numbers: MODE can be: abort (default), fail, warn, ignore"
       },
       {
         "type": "long",
         "key": "padding",
         "title": "--padding=N",
-        "description": "pad the output to N characters; positive N will right-align; negative N\n      will left-align; padding is ignored if the output is wider than N; the\n      default is to automatically pad if a whitespace is found"
+        "description": "pad the output to N characters; positive N will right-align; negative N will left-align; padding is ignored if the output is wider than N; the default is to automatically pad if a whitespace is found"
       },
       {
         "type": "long",
         "key": "round",
         "title": "--round=METHOD",
-        "description": "use METHOD for rounding when scaling; METHOD can be: up, down, from-zero\n      (default), towards-zero, nearest"
+        "description": "use METHOD for rounding when scaling; METHOD can be: up, down, from-zero (default), towards-zero, nearest"
       },
       {
         "type": "long",
         "key": "suffix",
         "title": "--suffix=SUFFIX",
-        "description": "add SUFFIX to output numbers, and accept optional SUFFIX in input\n    numbers"
+        "description": "add SUFFIX to output numbers, and accept optional SUFFIX in input numbers"
       },
       {
         "type": "long",

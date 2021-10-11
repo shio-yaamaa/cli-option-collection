@@ -114,13 +114,13 @@
         "type": "short",
         "key": "t",
         "title": "-t, --separator=SEP",
-        "description": "use SEP instead of newline as the record separator; '\\0' (zero) specifies\n      the NUL character"
+        "description": "use SEP instead of newline as the record separator; '\\0' (zero) specifies the NUL character"
       },
       {
         "type": "long",
         "key": "separator",
         "title": "-t, --separator=SEP",
-        "description": "use SEP instead of newline as the record separator; '\\0' (zero) specifies\n      the NUL character"
+        "description": "use SEP instead of newline as the record separator; '\\0' (zero) specifies the NUL character"
       },
       {
         "type": "short",

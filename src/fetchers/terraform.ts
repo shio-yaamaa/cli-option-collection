@@ -1,6 +1,7 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -44,7 +45,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     new URL('/docs/cli/index.html', BASE_URL)
   );
   const commandsHeading = Array.from(document.querySelectorAll('a')).find(
-    (a) => a.textContent === 'Alphabetical List of Commands'
+    (a) => getInnerText(a) === 'Alphabetical List of Commands'
   );
   if (!commandsHeading) {
     return [];
@@ -58,12 +59,10 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     /^\/docs\/cli\/commands\/[^\s]+\.html/,
     null
   );
-  return anchors
-    .filter((anchor) => anchor.textContent)
-    .map((anchor) => ({
-      command: `terraform ${anchor.textContent!.trim()}`,
-      url: new URL(anchor.href, BASE_URL),
-    }));
+  return anchors.map((anchor) => ({
+    command: `terraform ${getInnerText(anchor).trim()}`,
+    url: new URL(anchor.href, BASE_URL),
+  }));
 };
 
 const fetchSubcommand = async (
@@ -82,14 +81,12 @@ const fetchSubcommand = async (
 const DESCRIPTION_WITH_DELIMITER_PATTERN = /^\s+[-—]\s+([^]+)$/;
 const DESCRIPTION_WITHOUT_DELIMITER_PATTERN = /^\s+([^]+)$/;
 const listItemToOptions = (listItem: Element): Option[] => {
-  const liText = listItem.textContent?.trim();
-  if (!liText) {
+  const liText = getInnerText(listItem).trim();
+  const titleElement = listItem.querySelector('code');
+  if (!titleElement) {
     return [];
   }
-  const title = listItem.querySelector('code')?.textContent?.trim();
-  if (!title) {
-    return [];
-  }
+  const title = getInnerText(titleElement);
   if (!liText.startsWith(title)) {
     return [];
   }

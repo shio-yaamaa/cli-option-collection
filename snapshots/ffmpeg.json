@@ -12,13 +12,13 @@
         "type": "short",
         "key": "h",
         "title": "-h, -?, -help, --help [arg]",
-        "description": "Show help. An optional parameter may be specified to print help about a specific\nitem. If no argument is specified, only basic (non advanced) tool\noptions are shown.\n\nPossible values of arg are:\n\nlong\nPrint advanced tool options in addition to the basic tool options.\n\n\nfull\nPrint complete list of options, including shared and private options\nfor encoders, decoders, demuxers, muxers, filters, etc.\n\n\ndecoder=decoder_name\nPrint detailed information about the decoder named decoder_name. Use the\n-decoders option to get a list of all decoders.\n\n\nencoder=encoder_name\nPrint detailed information about the encoder named encoder_name. Use the\n-encoders option to get a list of all encoders.\n\n\ndemuxer=demuxer_name\nPrint detailed information about the demuxer named demuxer_name. Use the\n-formats option to get a list of all demuxers and muxers.\n\n\nmuxer=muxer_name\nPrint detailed information about the muxer named muxer_name. Use the\n-formats option to get a list of all muxers and demuxers.\n\n\nfilter=filter_name\nPrint detailed information about the filter named filter_name. Use the\n-filters option to get a list of all filters.\n\n\nbsf=bitstream_filter_name\nPrint detailed information about the bitstream filter named bitstream_filter_name.\nUse the -bsfs option to get a list of all bitstream filters.\n\n\nprotocol=protocol_name\nPrint detailed information about the protocol named protocol_name.\nUse the -protocols option to get a list of all protocols."
+        "description": "Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown.\n\nPossible values of arg are:\n\nlong\n\nPrint advanced tool options in addition to the basic tool options.\n\nfull\n\nPrint complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.\n\ndecoder=decoder_name\n\nPrint detailed information about the decoder named decoder_name. Use the -decoders option to get a list of all decoders.\n\nencoder=encoder_name\n\nPrint detailed information about the encoder named encoder_name. Use the -encoders option to get a list of all encoders.\n\ndemuxer=demuxer_name\n\nPrint detailed information about the demuxer named demuxer_name. Use the -formats option to get a list of all demuxers and muxers.\n\nmuxer=muxer_name\n\nPrint detailed information about the muxer named muxer_name. Use the -formats option to get a list of all muxers and demuxers.\n\nfilter=filter_name\n\nPrint detailed information about the filter named filter_name. Use the -filters option to get a list of all filters.\n\nbsf=bitstream_filter_name\n\nPrint detailed information about the bitstream filter named bitstream_filter_name. Use the -bsfs option to get a list of all bitstream filters.\n\nprotocol=protocol_name\n\nPrint detailed information about the protocol named protocol_name. Use the -protocols option to get a list of all protocols."
       },
       {
         "type": "long",
         "key": "help",
         "title": "-h, -?, -help, --help [arg]",
-        "description": "Show help. An optional parameter may be specified to print help about a specific\nitem. If no argument is specified, only basic (non advanced) tool\noptions are shown.\n\nPossible values of arg are:\n\nlong\nPrint advanced tool options in addition to the basic tool options.\n\n\nfull\nPrint complete list of options, including shared and private options\nfor encoders, decoders, demuxers, muxers, filters, etc.\n\n\ndecoder=decoder_name\nPrint detailed information about the decoder named decoder_name. Use the\n-decoders option to get a list of all decoders.\n\n\nencoder=encoder_name\nPrint detailed information about the encoder named encoder_name. Use the\n-encoders option to get a list of all encoders.\n\n\ndemuxer=demuxer_name\nPrint detailed information about the demuxer named demuxer_name. Use the\n-formats option to get a list of all demuxers and muxers.\n\n\nmuxer=muxer_name\nPrint detailed information about the muxer named muxer_name. Use the\n-formats option to get a list of all muxers and demuxers.\n\n\nfilter=filter_name\nPrint detailed information about the filter named filter_name. Use the\n-filters option to get a list of all filters.\n\n\nbsf=bitstream_filter_name\nPrint detailed information about the bitstream filter named bitstream_filter_name.\nUse the -bsfs option to get a list of all bitstream filters.\n\n\nprotocol=protocol_name\nPrint detailed information about the protocol named protocol_name.\nUse the -protocols option to get a list of all protocols."
+        "description": "Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown.\n\nPossible values of arg are:\n\nlong\n\nPrint advanced tool options in addition to the basic tool options.\n\nfull\n\nPrint complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.\n\ndecoder=decoder_name\n\nPrint detailed information about the decoder named decoder_name. Use the -decoders option to get a list of all decoders.\n\nencoder=encoder_name\n\nPrint detailed information about the encoder named encoder_name. Use the -encoders option to get a list of all encoders.\n\ndemuxer=demuxer_name\n\nPrint detailed information about the demuxer named demuxer_name. Use the -formats option to get a list of all demuxers and muxers.\n\nmuxer=muxer_name\n\nPrint detailed information about the muxer named muxer_name. Use the -formats option to get a list of all muxers and demuxers.\n\nfilter=filter_name\n\nPrint detailed information about the filter named filter_name. Use the -filters option to get a list of all filters.\n\nbsf=bitstream_filter_name\n\nPrint detailed information about the bitstream filter named bitstream_filter_name. Use the -bsfs option to get a list of all bitstream filters.\n\nprotocol=protocol_name\n\nPrint detailed information about the protocol named protocol_name. Use the -protocols option to get a list of all protocols."
       },
       {
         "type": "long",
@@ -60,7 +60,7 @@
         "type": "long",
         "key": "codecs",
         "title": "-codecs",
-        "description": "Show all codecs known to libavcodec.\n\nNote that the term ’codec’ is used throughout this documentation as a shortcut\nfor what is more correctly called a media bitstream format."
+        "description": "Show all codecs known to libavcodec.\n\nNote that the term ’codec’ is used throughout this documentation as a shortcut for what is more correctly called a media bitstream format."
       },
       {
         "type": "long",
@@ -120,55 +120,55 @@
         "type": "long",
         "key": "sources",
         "title": "-sources device[, opt1=val1[, opt2=val2]...]",
-        "description": "Show autodetected sources of the input device.\nSome devices may provide system-dependent source names that cannot be autodetected.\nThe returned list cannot be assumed to be always complete.\n\nffmpeg -sources pulse,server=192.168.0.4"
+        "description": "Show autodetected sources of the input device. Some devices may provide system-dependent source names that cannot be autodetected. The returned list cannot be assumed to be always complete.\n\nffmpeg -sources pulse,server=192.168.0.4"
       },
       {
         "type": "long",
         "key": "sinks",
         "title": "-sinks device[, opt1=val1[, opt2=val2]...]",
-        "description": "Show autodetected sinks of the output device.\nSome devices may provide system-dependent sink names that cannot be autodetected.\nThe returned list cannot be assumed to be always complete.\n\nffmpeg -sinks pulse,server=192.168.0.4"
+        "description": "Show autodetected sinks of the output device. Some devices may provide system-dependent sink names that cannot be autodetected. The returned list cannot be assumed to be always complete.\n\nffmpeg -sinks pulse,server=192.168.0.4"
       },
       {
         "type": "long",
         "key": "loglevel",
         "title": "-loglevel [flags+]loglevel | -v [flags+]loglevel",
-        "description": "Set logging level and flags used by the library.\n\nThe optional flags prefix can consist of the following values:\n\n‘repeat’\nIndicates that repeated log output should not be compressed to the first line\nand the \"Last message repeated n times\" line will be omitted.\n\n‘level’\nIndicates that log output should add a [level] prefix to each message\nline. This can be used as an alternative to log coloring, e.g. when dumping the\nlog to file.\n\n\nFlags can also be used alone by adding a ’+’/’-’ prefix to set/reset a single\nflag without affecting other flags or changing loglevel. When\nsetting both flags and loglevel, a ’+’ separator is expected\nbetween the last flags value and before loglevel.\n\nloglevel is a string or a number containing one of the following values:\n\n‘quiet, -8’\nShow nothing at all; be silent.\n\n‘panic, 0’\nOnly show fatal errors which could lead the process to crash, such as\nan assertion failure. This is not currently used for anything.\n\n‘fatal, 8’\nOnly show fatal errors. These are errors after which the process absolutely\ncannot continue.\n\n‘error, 16’\nShow all errors, including ones which can be recovered from.\n\n‘warning, 24’\nShow all warnings and errors. Any message related to possibly\nincorrect or unexpected events will be shown.\n\n‘info, 32’\nShow informative messages during processing. This is in addition to\nwarnings and errors. This is the default value.\n\n‘verbose, 40’\nSame as info, except more verbose.\n\n‘debug, 48’\nShow everything, including debugging information.\n\n‘trace, 56’\n\n\nFor example to enable repeated log output, add the level prefix, and set\nloglevel to verbose:\n\nffmpeg -loglevel repeat+level+verbose -i input output\n\nAnother example that enables repeated log output without affecting current\nstate of level prefix flag or loglevel:\n\nffmpeg [...] -loglevel +repeat\n\n\nBy default the program logs to stderr. If coloring is supported by the\nterminal, colors are used to mark errors and warnings. Log coloring\ncan be disabled setting the environment variable\nAV_LOG_FORCE_NOCOLOR, or can be forced setting\nthe environment variable AV_LOG_FORCE_COLOR."
+        "description": "Set logging level and flags used by the library.\n\nThe optional flags prefix can consist of the following values:\n\n‘repeat’\n\nIndicates that repeated log output should not be compressed to the first line and the \"Last message repeated n times\" line will be omitted.\n\n‘level’\n\nIndicates that log output should add a [level] prefix to each message line. This can be used as an alternative to log coloring, e.g. when dumping the log to file.\n\nFlags can also be used alone by adding a ’+’/’-’ prefix to set/reset a single flag without affecting other flags or changing loglevel. When setting both flags and loglevel, a ’+’ separator is expected between the last flags value and before loglevel.\n\nloglevel is a string or a number containing one of the following values:\n\n‘quiet, -8’\n\nShow nothing at all; be silent.\n\n‘panic, 0’\n\nOnly show fatal errors which could lead the process to crash, such as an assertion failure. This is not currently used for anything.\n\n‘fatal, 8’\n\nOnly show fatal errors. These are errors after which the process absolutely cannot continue.\n\n‘error, 16’\n\nShow all errors, including ones which can be recovered from.\n\n‘warning, 24’\n\nShow all warnings and errors. Any message related to possibly incorrect or unexpected events will be shown.\n\n‘info, 32’\n\nShow informative messages during processing. This is in addition to warnings and errors. This is the default value.\n\n‘verbose, 40’\n\nSame as info, except more verbose.\n\n‘debug, 48’\n\nShow everything, including debugging information.\n\n‘trace, 56’\n\nFor example to enable repeated log output, add the level prefix, and set loglevel to verbose:\n\nffmpeg -loglevel repeat+level+verbose -i input output\n\n\nAnother example that enables repeated log output without affecting current state of level prefix flag or loglevel:\n\nffmpeg [...] -loglevel +repeat\n\n\nBy default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable AV_LOG_FORCE_NOCOLOR, or can be forced setting the environment variable AV_LOG_FORCE_COLOR."
       },
       {
         "type": "long",
         "key": "report",
         "title": "-report",
-        "description": "Dump full command line and log output to a file named\nprogram-YYYYMMDD-HHMMSS.log in the current\ndirectory.\nThis file can be useful for bug reports.\nIt also implies -loglevel debug.\n\nSetting the environment variable FFREPORT to any value has the\nsame effect. If the value is a ’:’-separated key=value sequence, these\noptions will affect the report; option values must be escaped if they\ncontain special characters or the options delimiter ’:’ (see the\n“Quoting and escaping” section in the ffmpeg-utils manual).\n\nThe following options are recognized:\n\nfile\nset the file name to use for the report; %p is expanded to the name\nof the program, %t is expanded to a timestamp, %% is expanded\nto a plain %\n\nlevel\nset the log verbosity level using a numerical value (see -loglevel).\n\n\n\nFor example, to output a report to a file named ffreport.log\nusing a log level of 32 (alias for log level info):\n\n\nFFREPORT=file=ffreport.log:level=32 ffmpeg -i input output\n\n\nErrors in parsing the environment variable are not fatal, and will not\nappear in the report."
+        "description": "Dump full command line and log output to a file named program-YYYYMMDD-HHMMSS.log in the current directory. This file can be useful for bug reports. It also implies -loglevel debug.\n\nSetting the environment variable FFREPORT to any value has the same effect. If the value is a ’:’-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter ’:’ (see the “Quoting and escaping” section in the ffmpeg-utils manual).\n\nThe following options are recognized:\n\nfile\n\nset the file name to use for the report; %p is expanded to the name of the program, %t is expanded to a timestamp, %% is expanded to a plain %\n\nlevel\n\nset the log verbosity level using a numerical value (see -loglevel).\n\nFor example, to output a report to a file named ffreport.log using a log level of 32 (alias for log level info):\n\nFFREPORT=file=ffreport.log:level=32 ffmpeg -i input output\n\n\nErrors in parsing the environment variable are not fatal, and will not appear in the report."
       },
       {
         "type": "long",
         "key": "hide_banner",
         "title": "-hide_banner",
-        "description": "Suppress printing banner.\n\nAll FFmpeg tools will normally show a copyright notice, build options\nand library versions. This option can be used to suppress printing\nthis information."
+        "description": "Suppress printing banner.\n\nAll FFmpeg tools will normally show a copyright notice, build options and library versions. This option can be used to suppress printing this information."
       },
       {
         "type": "long",
         "key": "cpuflags",
         "title": "-cpuflags flags (global)",
-        "description": "Allows setting and clearing cpu flags. This option is intended\nfor testing. Do not use it unless you know what you’re doing.\n\nffmpeg -cpuflags -sse+mmx ...\nffmpeg -cpuflags mmx ...\nffmpeg -cpuflags 0 ...\n\nPossible flags for this option are:\n\n‘x86’\n\n‘mmx’\n‘mmxext’\n‘sse’\n‘sse2’\n‘sse2slow’\n‘sse3’\n‘sse3slow’\n‘ssse3’\n‘atom’\n‘sse4.1’\n‘sse4.2’\n‘avx’\n‘avx2’\n‘xop’\n‘fma3’\n‘fma4’\n‘3dnow’\n‘3dnowext’\n‘bmi1’\n‘bmi2’\n‘cmov’\n\n\n‘ARM’\n\n‘armv5te’\n‘armv6’\n‘armv6t2’\n‘vfp’\n‘vfpv3’\n‘neon’\n‘setend’\n\n\n‘AArch64’\n\n‘armv8’\n‘vfp’\n‘neon’\n\n\n‘PowerPC’\n\n‘altivec’\n\n\n‘Specific Processors’\n\n‘pentium2’\n‘pentium3’\n‘pentium4’\n‘k6’\n‘k62’\n‘athlon’\n‘athlonxp’\n‘k8’"
+        "description": "Allows setting and clearing cpu flags. This option is intended for testing. Do not use it unless you know what you’re doing.\n\nffmpeg -cpuflags -sse+mmx ...\nffmpeg -cpuflags mmx ...\nffmpeg -cpuflags 0 ...\n\n\nPossible flags for this option are:\n\n‘x86’ ‘mmx’ ‘mmxext’ ‘sse’ ‘sse2’ ‘sse2slow’ ‘sse3’ ‘sse3slow’ ‘ssse3’ ‘atom’ ‘sse4.1’ ‘sse4.2’ ‘avx’ ‘avx2’ ‘xop’ ‘fma3’ ‘fma4’ ‘3dnow’ ‘3dnowext’ ‘bmi1’ ‘bmi2’ ‘cmov’ ‘ARM’ ‘armv5te’ ‘armv6’ ‘armv6t2’ ‘vfp’ ‘vfpv3’ ‘neon’ ‘setend’ ‘AArch64’ ‘armv8’ ‘vfp’ ‘neon’ ‘PowerPC’ ‘altivec’ ‘Specific Processors’ ‘pentium2’ ‘pentium3’ ‘pentium4’ ‘k6’ ‘k62’ ‘athlon’ ‘athlonxp’ ‘k8’"
       },
       {
         "type": "long",
         "key": "cpucount",
         "title": "-cpucount count (global)",
-        "description": "Override detection of CPU count. This option is intended\nfor testing. Do not use it unless you know what you’re doing.\n\nffmpeg -cpucount 2"
+        "description": "Override detection of CPU count. This option is intended for testing. Do not use it unless you know what you’re doing.\n\nffmpeg -cpucount 2"
       },
       {
         "type": "long",
         "key": "max_alloc",
         "title": "-max_alloc bytes",
-        "description": "Set the maximum size limit for allocating a block on the heap by ffmpeg’s\nfamily of malloc functions. Exercise extreme caution when using\nthis option. Don’t use if you do not understand the full consequence of doing so.\nDefault is INT_MAX."
+        "description": "Set the maximum size limit for allocating a block on the heap by ffmpeg’s family of malloc functions. Exercise extreme caution when using this option. Don’t use if you do not understand the full consequence of doing so. Default is INT_MAX."
       },
       {
         "type": "short",
         "key": "f",
         "title": "-f fmt (input/output)",
-        "description": "Force input or output file format. The format is normally auto detected for input\nfiles and guessed from the file extension for output files, so this option is not\nneeded in most cases."
+        "description": "Force input or output file format. The format is normally auto detected for input files and guessed from the file extension for output files, so this option is not needed in most cases."
       },
       {
         "type": "short",
@@ -186,67 +186,67 @@
         "type": "short",
         "key": "n",
         "title": "-n (global)",
-        "description": "Do not overwrite output files, and exit immediately if a specified\noutput file already exists."
+        "description": "Do not overwrite output files, and exit immediately if a specified output file already exists."
       },
       {
         "type": "long",
         "key": "stream_loop",
         "title": "-stream_loop number (input)",
-        "description": "Set number of times input stream shall be looped. Loop 0 means no loop,\nloop -1 means infinite loop."
+        "description": "Set number of times input stream shall be looped. Loop 0 means no loop, loop -1 means infinite loop."
       },
       {
         "type": "long",
         "key": "recast_media",
         "title": "-recast_media (global)",
-        "description": "Allow forcing a decoder of a different media type than the one\ndetected or designated by the demuxer. Useful for decoding media\ndata muxed as data streams."
+        "description": "Allow forcing a decoder of a different media type than the one detected or designated by the demuxer. Useful for decoding media data muxed as data streams."
       },
       {
         "type": "short",
         "key": "c",
         "title": "-c[:stream_specifier] codec (input/output, per-stream), -codec[:stream_specifier] codec (input/output, per-stream)",
-        "description": "Select an encoder (when used before an output file) or a decoder (when used\nbefore an input file) for one or more streams. codec is the name of a\ndecoder/encoder or a special value copy (output only) to indicate that\nthe stream is not to be re-encoded.\n\nFor example\n\nffmpeg -i INPUT -map 0 -c:v libx264 -c:a copy OUTPUT\n\nencodes all video streams with libx264 and copies all audio streams.\n\nFor each stream, the last matching c option is applied, so\n\nffmpeg -i INPUT -map 0 -c copy -c:v:1 libx264 -c:a:137 libvorbis OUTPUT\n\nwill copy all the streams except the second video, which will be encoded with\nlibx264, and the 138th audio, which will be encoded with libvorbis."
+        "description": "Select an encoder (when used before an output file) or a decoder (when used before an input file) for one or more streams. codec is the name of a decoder/encoder or a special value copy (output only) to indicate that the stream is not to be re-encoded.\n\nFor example\n\nffmpeg -i INPUT -map 0 -c:v libx264 -c:a copy OUTPUT\n\n\nencodes all video streams with libx264 and copies all audio streams.\n\nFor each stream, the last matching c option is applied, so\n\nffmpeg -i INPUT -map 0 -c copy -c:v:1 libx264 -c:a:137 libvorbis OUTPUT\n\n\nwill copy all the streams except the second video, which will be encoded with libx264, and the 138th audio, which will be encoded with libvorbis."
       },
       {
         "type": "long",
         "key": "codec",
         "title": "-c[:stream_specifier] codec (input/output, per-stream), -codec[:stream_specifier] codec (input/output, per-stream)",
-        "description": "Select an encoder (when used before an output file) or a decoder (when used\nbefore an input file) for one or more streams. codec is the name of a\ndecoder/encoder or a special value copy (output only) to indicate that\nthe stream is not to be re-encoded.\n\nFor example\n\nffmpeg -i INPUT -map 0 -c:v libx264 -c:a copy OUTPUT\n\nencodes all video streams with libx264 and copies all audio streams.\n\nFor each stream, the last matching c option is applied, so\n\nffmpeg -i INPUT -map 0 -c copy -c:v:1 libx264 -c:a:137 libvorbis OUTPUT\n\nwill copy all the streams except the second video, which will be encoded with\nlibx264, and the 138th audio, which will be encoded with libvorbis."
+        "description": "Select an encoder (when used before an output file) or a decoder (when used before an input file) for one or more streams. codec is the name of a decoder/encoder or a special value copy (output only) to indicate that the stream is not to be re-encoded.\n\nFor example\n\nffmpeg -i INPUT -map 0 -c:v libx264 -c:a copy OUTPUT\n\n\nencodes all video streams with libx264 and copies all audio streams.\n\nFor each stream, the last matching c option is applied, so\n\nffmpeg -i INPUT -map 0 -c copy -c:v:1 libx264 -c:a:137 libvorbis OUTPUT\n\n\nwill copy all the streams except the second video, which will be encoded with libx264, and the 138th audio, which will be encoded with libvorbis."
       },
       {
         "type": "short",
         "key": "t",
         "title": "-t duration (input/output)",
-        "description": "When used as an input option (before -i), limit the duration of\ndata read from the input file.\n\nWhen used as an output option (before an output url), stop writing the\noutput after its duration reaches duration.\n\nduration must be a time duration specification,\nsee (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.\n\n-to and -t are mutually exclusive and -t has priority."
+        "description": "When used as an input option (before -i), limit the duration of data read from the input file.\n\nWhen used as an output option (before an output url), stop writing the output after its duration reaches duration.\n\nduration must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.\n\n-to and -t are mutually exclusive and -t has priority."
       },
       {
         "type": "long",
         "key": "to",
         "title": "-to position (input/output)",
-        "description": "Stop writing the output or reading the input at position.\nposition must be a time duration specification,\nsee (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.\n\n-to and -t are mutually exclusive and -t has priority."
+        "description": "Stop writing the output or reading the input at position. position must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.\n\n-to and -t are mutually exclusive and -t has priority."
       },
       {
         "type": "long",
         "key": "fs",
         "title": "-fs limit_size (output)",
-        "description": "Set the file size limit, expressed in bytes. No further chunk of bytes is written\nafter the limit is exceeded. The size of the output file is slightly more than the\nrequested file size."
+        "description": "Set the file size limit, expressed in bytes. No further chunk of bytes is written after the limit is exceeded. The size of the output file is slightly more than the requested file size."
       },
       {
         "type": "long",
         "key": "ss",
         "title": "-ss position (input/output)",
-        "description": "When used as an input option (before -i), seeks in this input file to\nposition. Note that in most formats it is not possible to seek exactly,\nso ffmpeg will seek to the closest seek point before position.\nWhen transcoding and -accurate_seek is enabled (the default), this\nextra segment between the seek point and position will be decoded and\ndiscarded. When doing stream copy or when -noaccurate_seek is used, it\nwill be preserved.\n\nWhen used as an output option (before an output url), decodes but discards\ninput until the timestamps reach position.\n\nposition must be a time duration specification,\nsee (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual."
+        "description": "When used as an input option (before -i), seeks in this input file to position. Note that in most formats it is not possible to seek exactly, so ffmpeg will seek to the closest seek point before position. When transcoding and -accurate_seek is enabled (the default), this extra segment between the seek point and position will be decoded and discarded. When doing stream copy or when -noaccurate_seek is used, it will be preserved.\n\nWhen used as an output option (before an output url), decodes but discards input until the timestamps reach position.\n\nposition must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual."
       },
       {
         "type": "long",
         "key": "sseof",
         "title": "-sseof position (input)",
-        "description": "Like the -ss option but relative to the \"end of file\". That is negative\nvalues are earlier in the file, 0 is at EOF."
+        "description": "Like the -ss option but relative to the \"end of file\". That is negative values are earlier in the file, 0 is at EOF."
       },
       {
         "type": "long",
         "key": "itsoffset",
         "title": "-itsoffset offset (input)",
-        "description": "Set the input time offset.\n\noffset must be a time duration specification,\nsee (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.\n\nThe offset is added to the timestamps of the input files. Specifying\na positive offset means that the corresponding streams are delayed by\nthe time duration specified in offset."
+        "description": "Set the input time offset.\n\noffset must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.\n\nThe offset is added to the timestamps of the input files. Specifying a positive offset means that the corresponding streams are delayed by the time duration specified in offset."
       },
       {
         "type": "long",
@@ -258,43 +258,43 @@
         "type": "long",
         "key": "timestamp",
         "title": "-timestamp date (output)",
-        "description": "Set the recording timestamp in the container.\n\ndate must be a date specification,\nsee (ffmpeg-utils)the Date section in the ffmpeg-utils(1) manual."
+        "description": "Set the recording timestamp in the container.\n\ndate must be a date specification, see (ffmpeg-utils)the Date section in the ffmpeg-utils(1) manual."
       },
       {
         "type": "long",
         "key": "metadata",
         "title": "-metadata[:metadata_specifier] key=value (output, per-metadata)",
-        "description": "Set a metadata key/value pair.\n\nAn optional metadata_specifier may be given to set metadata\non streams, chapters or programs. See -map_metadata\ndocumentation for details.\n\nThis option overrides metadata set with -map_metadata. It is\nalso possible to delete metadata by using an empty value.\n\nFor example, for setting the title in the output file:\n\nffmpeg -i in.avi -metadata title=\"my title\" out.flv\n\n\nTo set the language of the first audio stream:\n\nffmpeg -i INPUT -metadata:s:a:0 language=eng OUTPUT"
+        "description": "Set a metadata key/value pair.\n\nAn optional metadata_specifier may be given to set metadata on streams, chapters or programs. See -map_metadata documentation for details.\n\nThis option overrides metadata set with -map_metadata. It is also possible to delete metadata by using an empty value.\n\nFor example, for setting the title in the output file:\n\nffmpeg -i in.avi -metadata title=\"my title\" out.flv\n\n\nTo set the language of the first audio stream:\n\nffmpeg -i INPUT -metadata:s:a:0 language=eng OUTPUT"
       },
       {
         "type": "long",
         "key": "disposition",
         "title": "-disposition[:stream_specifier] value (output, per-stream)",
-        "description": "Sets the disposition for a stream.\n\nThis option overrides the disposition copied from the input stream. It is also\npossible to delete the disposition by setting it to 0.\n\nThe following dispositions are recognized:\n\ndefault\ndub\noriginal\ncomment\nlyrics\nkaraoke\nforced\nhearing_impaired\nvisual_impaired\nclean_effects\nattached_pic\ncaptions\ndescriptions\ndependent\nmetadata\n\n\nFor example, to make the second audio stream the default stream:\n\nffmpeg -i in.mkv -c copy -disposition:a:1 default out.mkv\n\n\nTo make the second subtitle stream the default stream and remove the default\ndisposition from the first subtitle stream:\n\nffmpeg -i in.mkv -c copy -disposition:s:0 0 -disposition:s:1 default out.mkv\n\n\nTo add an embedded cover/thumbnail:\n\nffmpeg -i in.mp4 -i IMAGE -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic out.mp4\n\n\nNot all muxers support embedded thumbnails, and those who do, only support a few formats, like JPEG or PNG."
+        "description": "Sets the disposition for a stream.\n\nThis option overrides the disposition copied from the input stream. It is also possible to delete the disposition by setting it to 0.\n\nThe following dispositions are recognized:\n\ndefault dub original comment lyrics karaoke forced hearing_impaired visual_impaired clean_effects attached_pic captions descriptions dependent metadata\n\nFor example, to make the second audio stream the default stream:\n\nffmpeg -i in.mkv -c copy -disposition:a:1 default out.mkv\n\n\nTo make the second subtitle stream the default stream and remove the default disposition from the first subtitle stream:\n\nffmpeg -i in.mkv -c copy -disposition:s:0 0 -disposition:s:1 default out.mkv\n\n\nTo add an embedded cover/thumbnail:\n\nffmpeg -i in.mp4 -i IMAGE -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic out.mp4\n\n\nNot all muxers support embedded thumbnails, and those who do, only support a few formats, like JPEG or PNG."
       },
       {
         "type": "long",
         "key": "program",
         "title": "-program [title=title:][program_num=program_num:]st=stream[:st=stream...] (output)",
-        "description": "Creates a program with the specified title, program_num and adds the specified\nstream(s) to it."
+        "description": "Creates a program with the specified title, program_num and adds the specified stream(s) to it."
       },
       {
         "type": "long",
         "key": "target",
         "title": "-target type (output)",
-        "description": "Specify target file type (vcd, svcd, dvd, dv,\ndv50). type may be prefixed with pal-, ntsc- or\nfilm- to use the corresponding standard. All the format options\n(bitrate, codecs, buffer sizes) are then set automatically. You can just type:\n\n\nffmpeg -i myfile.avi -target vcd /tmp/vcd.mpg\n\n\nNevertheless you can specify additional options as long as you know\nthey do not conflict with the standard, as in:\n\n\nffmpeg -i myfile.avi -target vcd -bf 2 /tmp/vcd.mpg\n\n\nThe parameters set for each target are as follows.\n\nVCD\n\npal:\n-f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324\n-s 352x288 -r 25\n-codec:v mpeg1video -g 15 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680\n-ar 44100 -ac 2\n-codec:a mp2 -b:a 224k\n\nntsc:\n-f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324\n-s 352x240 -r 30000/1001\n-codec:v mpeg1video -g 18 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680\n-ar 44100 -ac 2\n-codec:a mp2 -b:a 224k\n\nfilm:\n-f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324\n-s 352x240 -r 24000/1001\n-codec:v mpeg1video -g 18 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680\n-ar 44100 -ac 2\n-codec:a mp2 -b:a 224k\n\n\nSVCD\n\npal:\n-f svcd -packetsize 2324\n-s 480x576 -pix_fmt yuv420p -r 25\n-codec:v mpeg2video -g 15 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1\n-ar 44100\n-codec:a mp2 -b:a 224k\n\nntsc:\n-f svcd -packetsize 2324\n-s 480x480 -pix_fmt yuv420p -r 30000/1001\n-codec:v mpeg2video -g 18 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1\n-ar 44100\n-codec:a mp2 -b:a 224k\n\nfilm:\n-f svcd -packetsize 2324\n-s 480x480 -pix_fmt yuv420p -r 24000/1001\n-codec:v mpeg2video -g 18 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1\n-ar 44100\n-codec:a mp2 -b:a 224k\n\n\nDVD\n\npal:\n-f dvd -muxrate 10080k -packetsize 2048\n-s 720x576 -pix_fmt yuv420p -r 25\n-codec:v mpeg2video -g 15 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008\n-ar 48000\n-codec:a ac3 -b:a 448k\n\nntsc:\n-f dvd -muxrate 10080k -packetsize 2048\n-s 720x480 -pix_fmt yuv420p -r 30000/1001\n-codec:v mpeg2video -g 18 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008\n-ar 48000\n-codec:a ac3 -b:a 448k\n\nfilm:\n-f dvd -muxrate 10080k -packetsize 2048\n-s 720x480 -pix_fmt yuv420p -r 24000/1001\n-codec:v mpeg2video -g 18 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008\n-ar 48000\n-codec:a ac3 -b:a 448k\n\n\nDV\n\npal:\n-f dv\n-s 720x576 -pix_fmt yuv420p -r 25\n-ar 48000 -ac 2\n\nntsc:\n-f dv\n-s 720x480 -pix_fmt yuv411p -r 30000/1001\n-ar 48000 -ac 2\n\nfilm:\n-f dv\n-s 720x480 -pix_fmt yuv411p -r 24000/1001\n-ar 48000 -ac 2\n\nThe dv50 target is identical to the dv target except that the pixel format set is yuv422p for all three standards.\n\nAny user-set value for a parameter above will override the target preset value. In that case, the output may\nnot comply with the target standard."
+        "description": "Specify target file type (vcd, svcd, dvd, dv, dv50). type may be prefixed with pal-, ntsc- or film- to use the corresponding standard. All the format options (bitrate, codecs, buffer sizes) are then set automatically. You can just type:\n\nffmpeg -i myfile.avi -target vcd /tmp/vcd.mpg\n\n\nNevertheless you can specify additional options as long as you know they do not conflict with the standard, as in:\n\nffmpeg -i myfile.avi -target vcd -bf 2 /tmp/vcd.mpg\n\n\nThe parameters set for each target are as follows.\n\nVCD\n\npal:\n-f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324\n-s 352x288 -r 25\n-codec:v mpeg1video -g 15 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680\n-ar 44100 -ac 2\n-codec:a mp2 -b:a 224k\n\nntsc:\n-f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324\n-s 352x240 -r 30000/1001\n-codec:v mpeg1video -g 18 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680\n-ar 44100 -ac 2\n-codec:a mp2 -b:a 224k\n\nfilm:\n-f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324\n-s 352x240 -r 24000/1001\n-codec:v mpeg1video -g 18 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680\n-ar 44100 -ac 2\n-codec:a mp2 -b:a 224k\n\n\nSVCD\n\npal:\n-f svcd -packetsize 2324\n-s 480x576 -pix_fmt yuv420p -r 25\n-codec:v mpeg2video -g 15 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1\n-ar 44100\n-codec:a mp2 -b:a 224k\n\nntsc:\n-f svcd -packetsize 2324\n-s 480x480 -pix_fmt yuv420p -r 30000/1001\n-codec:v mpeg2video -g 18 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1\n-ar 44100\n-codec:a mp2 -b:a 224k\n\nfilm:\n-f svcd -packetsize 2324\n-s 480x480 -pix_fmt yuv420p -r 24000/1001\n-codec:v mpeg2video -g 18 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1\n-ar 44100\n-codec:a mp2 -b:a 224k\n\n\nDVD\n\npal:\n-f dvd -muxrate 10080k -packetsize 2048\n-s 720x576 -pix_fmt yuv420p -r 25\n-codec:v mpeg2video -g 15 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008\n-ar 48000\n-codec:a ac3 -b:a 448k\n\nntsc:\n-f dvd -muxrate 10080k -packetsize 2048\n-s 720x480 -pix_fmt yuv420p -r 30000/1001\n-codec:v mpeg2video -g 18 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008\n-ar 48000\n-codec:a ac3 -b:a 448k\n\nfilm:\n-f dvd -muxrate 10080k -packetsize 2048\n-s 720x480 -pix_fmt yuv420p -r 24000/1001\n-codec:v mpeg2video -g 18 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008\n-ar 48000\n-codec:a ac3 -b:a 448k\n\n\nDV\n\npal:\n-f dv\n-s 720x576 -pix_fmt yuv420p -r 25\n-ar 48000 -ac 2\n\nntsc:\n-f dv\n-s 720x480 -pix_fmt yuv411p -r 30000/1001\n-ar 48000 -ac 2\n\nfilm:\n-f dv\n-s 720x480 -pix_fmt yuv411p -r 24000/1001\n-ar 48000 -ac 2\n\n\nThe dv50 target is identical to the dv target except that the pixel format set is yuv422p for all three standards.\n\nAny user-set value for a parameter above will override the target preset value. In that case, the output may not comply with the target standard."
       },
       {
         "type": "long",
         "key": "dn",
         "title": "-dn (input/output)",
-        "description": "As an input option, blocks all data streams of a file from being filtered or\nbeing automatically selected or mapped for any output. See -discard\noption to disable streams individually.\n\nAs an output option, disables data recording i.e. automatic selection or\nmapping of any data stream. For full manual control see the -map\noption."
+        "description": "As an input option, blocks all data streams of a file from being filtered or being automatically selected or mapped for any output. See -discard option to disable streams individually.\n\nAs an output option, disables data recording i.e. automatic selection or mapping of any data stream. For full manual control see the -map option."
       },
       {
         "type": "long",
         "key": "dframes",
         "title": "-dframes number (output)",
-        "description": "Set the number of data frames to output. This is an obsolete alias for\n-frames:d, which you should use instead."
+        "description": "Set the number of data frames to output. This is an obsolete alias for -frames:d, which you should use instead."
       },
       {
         "type": "long",
@@ -306,37 +306,37 @@
         "type": "short",
         "key": "q",
         "title": "-q[:stream_specifier] q (output, per-stream), -qscale[:stream_specifier] q (output, per-stream)",
-        "description": "Use fixed quality scale (VBR). The meaning of q/qscale is\ncodec-dependent.\nIf qscale is used without a stream_specifier then it applies only\nto the video stream, this is to maintain compatibility with previous behavior\nand as specifying the same codec specific value to 2 different codecs that is\naudio and video generally is not what is intended when no stream_specifier is\nused."
+        "description": "Use fixed quality scale (VBR). The meaning of q/qscale is codec-dependent. If qscale is used without a stream_specifier then it applies only to the video stream, this is to maintain compatibility with previous behavior and as specifying the same codec specific value to 2 different codecs that is audio and video generally is not what is intended when no stream_specifier is used."
       },
       {
         "type": "long",
         "key": "qscale",
         "title": "-q[:stream_specifier] q (output, per-stream), -qscale[:stream_specifier] q (output, per-stream)",
-        "description": "Use fixed quality scale (VBR). The meaning of q/qscale is\ncodec-dependent.\nIf qscale is used without a stream_specifier then it applies only\nto the video stream, this is to maintain compatibility with previous behavior\nand as specifying the same codec specific value to 2 different codecs that is\naudio and video generally is not what is intended when no stream_specifier is\nused."
+        "description": "Use fixed quality scale (VBR). The meaning of q/qscale is codec-dependent. If qscale is used without a stream_specifier then it applies only to the video stream, this is to maintain compatibility with previous behavior and as specifying the same codec specific value to 2 different codecs that is audio and video generally is not what is intended when no stream_specifier is used."
       },
       {
         "type": "long",
         "key": "filter",
         "title": "-filter[:stream_specifier] filtergraph (output, per-stream)",
-        "description": "Create the filtergraph specified by filtergraph and use it to\nfilter the stream.\n\nfiltergraph is a description of the filtergraph to apply to\nthe stream, and must have a single input and a single output of the\nsame type of the stream. In the filtergraph, the input is associated\nto the label in, and the output to the label out. See\nthe ffmpeg-filters manual for more information about the filtergraph\nsyntax.\n\nSee the -filter_complex option if you\nwant to create filtergraphs with multiple inputs and/or outputs."
+        "description": "Create the filtergraph specified by filtergraph and use it to filter the stream.\n\nfiltergraph is a description of the filtergraph to apply to the stream, and must have a single input and a single output of the same type of the stream. In the filtergraph, the input is associated to the label in, and the output to the label out. See the ffmpeg-filters manual for more information about the filtergraph syntax.\n\nSee the -filter_complex option if you want to create filtergraphs with multiple inputs and/or outputs."
       },
       {
         "type": "long",
         "key": "filter_script",
         "title": "-filter_script[:stream_specifier] filename (output, per-stream)",
-        "description": "This option is similar to -filter, the only difference is that its\nargument is the name of the file from which a filtergraph description is to be\nread."
+        "description": "This option is similar to -filter, the only difference is that its argument is the name of the file from which a filtergraph description is to be read."
       },
       {
         "type": "long",
         "key": "reinit_filter",
         "title": "-reinit_filter[:stream_specifier] integer (input, per-stream)",
-        "description": "This boolean option determines if the filtergraph(s) to which this stream is fed gets\nreinitialized when input frame parameters change mid-stream. This option is enabled by\ndefault as most video and all audio filters cannot handle deviation in input frame properties.\nUpon reinitialization, existing filter state is lost, like e.g. the frame count n\nreference available in some filters. Any frames buffered at time of reinitialization are lost.\nThe properties where a change triggers reinitialization are,\nfor video, frame resolution or pixel format;\nfor audio, sample format, sample rate, channel count or channel layout."
+        "description": "This boolean option determines if the filtergraph(s) to which this stream is fed gets reinitialized when input frame parameters change mid-stream. This option is enabled by default as most video and all audio filters cannot handle deviation in input frame properties. Upon reinitialization, existing filter state is lost, like e.g. the frame count n reference available in some filters. Any frames buffered at time of reinitialization are lost. The properties where a change triggers reinitialization are, for video, frame resolution or pixel format; for audio, sample format, sample rate, channel count or channel layout."
       },
       {
         "type": "long",
         "key": "filter_threads",
         "title": "-filter_threads nb_threads (global)",
-        "description": "Defines how many threads are used to process a filter pipeline. Each pipeline\nwill produce a thread pool with this many threads available for parallel processing.\nThe default is the number of available CPUs."
+        "description": "Defines how many threads are used to process a filter pipeline. Each pipeline will produce a thread pool with this many threads available for parallel processing. The default is the number of available CPUs."
       },
       {
         "type": "long",
@@ -348,7 +348,7 @@
         "type": "long",
         "key": "stats",
         "title": "-stats (global)",
-        "description": "Print encoding progress/statistics. It is on by default, to explicitly\ndisable it you need to specify -nostats."
+        "description": "Print encoding progress/statistics. It is on by default, to explicitly disable it you need to specify -nostats."
       },
       {
         "type": "long",
@@ -360,67 +360,67 @@
         "type": "long",
         "key": "progress",
         "title": "-progress url (global)",
-        "description": "Send program-friendly progress information to url.\n\nProgress information is written periodically and at the end of\nthe encoding process. It is made of \"key=value\" lines. key\nconsists of only alphanumeric characters. The last key of a sequence of\nprogress information is always \"progress\".\n\nThe update period is set using -stats_period."
+        "description": "Send program-friendly progress information to url.\n\nProgress information is written periodically and at the end of the encoding process. It is made of \"key=value\" lines. key consists of only alphanumeric characters. The last key of a sequence of progress information is always \"progress\".\n\nThe update period is set using -stats_period."
       },
       {
         "type": "long",
         "key": "stdin",
         "title": "-stdin",
-        "description": "Enable interaction on standard input. On by default unless standard input is\nused as an input. To explicitly disable interaction you need to specify\n-nostdin.\n\nDisabling interaction on standard input is useful, for example, if\nffmpeg is in the background process group. Roughly the same result can\nbe achieved with ffmpeg ... < /dev/null but it requires a\nshell."
+        "description": "Enable interaction on standard input. On by default unless standard input is used as an input. To explicitly disable interaction you need to specify -nostdin.\n\nDisabling interaction on standard input is useful, for example, if ffmpeg is in the background process group. Roughly the same result can be achieved with ffmpeg ... < /dev/null but it requires a shell."
       },
       {
         "type": "long",
         "key": "debug_ts",
         "title": "-debug_ts (global)",
-        "description": "Print timestamp information. It is off by default. This option is\nmostly useful for testing and debugging purposes, and the output\nformat may change from one version to another, so it should not be\nemployed by portable scripts.\n\nSee also the option -fdebug ts."
+        "description": "Print timestamp information. It is off by default. This option is mostly useful for testing and debugging purposes, and the output format may change from one version to another, so it should not be employed by portable scripts.\n\nSee also the option -fdebug ts."
       },
       {
         "type": "long",
         "key": "attach",
         "title": "-attach filename (output)",
-        "description": "Add an attachment to the output file. This is supported by a few formats\nlike Matroska for e.g. fonts used in rendering subtitles. Attachments\nare implemented as a specific type of stream, so this option will add\na new stream to the file. It is then possible to use per-stream options\non this stream in the usual way. Attachment streams created with this\noption will be created after all the other streams (i.e. those created\nwith -map or automatic mappings).\n\nNote that for Matroska you also have to set the mimetype metadata tag:\n\nffmpeg -i INPUT -attach DejaVuSans.ttf -metadata:s:2 mimetype=application/x-truetype-font out.mkv\n\n(assuming that the attachment stream will be third in the output file)."
+        "description": "Add an attachment to the output file. This is supported by a few formats like Matroska for e.g. fonts used in rendering subtitles. Attachments are implemented as a specific type of stream, so this option will add a new stream to the file. It is then possible to use per-stream options on this stream in the usual way. Attachment streams created with this option will be created after all the other streams (i.e. those created with -map or automatic mappings).\n\nNote that for Matroska you also have to set the mimetype metadata tag:\n\nffmpeg -i INPUT -attach DejaVuSans.ttf -metadata:s:2 mimetype=application/x-truetype-font out.mkv\n\n\n(assuming that the attachment stream will be third in the output file)."
       },
       {
         "type": "long",
         "key": "dump_attachment",
         "title": "-dump_attachment[:stream_specifier] filename (input, per-stream)",
-        "description": "Extract the matching attachment stream into a file named filename. If\nfilename is empty, then the value of the filename metadata tag\nwill be used.\n\nE.g. to extract the first attachment to a file named ’out.ttf’:\n\nffmpeg -dump_attachment:t:0 out.ttf -i INPUT\n\nTo extract all attachments to files determined by the filename tag:\n\nffmpeg -dump_attachment:t \"\" -i INPUT\n\n\nTechnical note – attachments are implemented as codec extradata, so this\noption can actually be used to extract extradata from any stream, not just\nattachments."
+        "description": "Extract the matching attachment stream into a file named filename. If filename is empty, then the value of the filename metadata tag will be used.\n\nE.g. to extract the first attachment to a file named ’out.ttf’:\n\nffmpeg -dump_attachment:t:0 out.ttf -i INPUT\n\n\nTo extract all attachments to files determined by the filename tag:\n\nffmpeg -dump_attachment:t \"\" -i INPUT\n\n\nTechnical note – attachments are implemented as codec extradata, so this option can actually be used to extract extradata from any stream, not just attachments."
       },
       {
         "type": "long",
         "key": "vframes",
         "title": "-vframes number (output)",
-        "description": "Set the number of video frames to output. This is an obsolete alias for\n-frames:v, which you should use instead."
+        "description": "Set the number of video frames to output. This is an obsolete alias for -frames:v, which you should use instead."
       },
       {
         "type": "short",
         "key": "r",
         "title": "-r[:stream_specifier] fps (input/output, per-stream)",
-        "description": "Set frame rate (Hz value, fraction or abbreviation).\n\nAs an input option, ignore any timestamps stored in the file and instead\ngenerate timestamps assuming constant frame rate fps.\nThis is not the same as the -framerate option used for some input formats\nlike image2 or v4l2 (it used to be the same in older versions of FFmpeg).\nIf in doubt use -framerate instead of the input option -r.\n\nAs an output option, duplicate or drop input frames to achieve constant output\nframe rate fps."
+        "description": "Set frame rate (Hz value, fraction or abbreviation).\n\nAs an input option, ignore any timestamps stored in the file and instead generate timestamps assuming constant frame rate fps. This is not the same as the -framerate option used for some input formats like image2 or v4l2 (it used to be the same in older versions of FFmpeg). If in doubt use -framerate instead of the input option -r.\n\nAs an output option, duplicate or drop input frames to achieve constant output frame rate fps."
       },
       {
         "type": "long",
         "key": "fpsmax",
         "title": "-fpsmax[:stream_specifier] fps (output, per-stream)",
-        "description": "Set maximum frame rate (Hz value, fraction or abbreviation).\n\nClamps output frame rate when output framerate is auto-set and is higher than this value.\nUseful in batch processing or when input framerate is wrongly detected as very high.\nIt cannot be set together with -r. It is ignored during streamcopy."
+        "description": "Set maximum frame rate (Hz value, fraction or abbreviation).\n\nClamps output frame rate when output framerate is auto-set and is higher than this value. Useful in batch processing or when input framerate is wrongly detected as very high. It cannot be set together with -r. It is ignored during streamcopy."
       },
       {
         "type": "short",
         "key": "s",
         "title": "-s[:stream_specifier] size (input/output, per-stream)",
-        "description": "Set frame size.\n\nAs an input option, this is a shortcut for the video_size private\noption, recognized by some demuxers for which the frame size is either not\nstored in the file or is configurable – e.g. raw video or video grabbers.\n\nAs an output option, this inserts the scale video filter to the\nend of the corresponding filtergraph. Please use the scale filter\ndirectly to insert it at the beginning or some other place.\n\nThe format is ‘wxh’ (default - same as source)."
+        "description": "Set frame size.\n\nAs an input option, this is a shortcut for the video_size private option, recognized by some demuxers for which the frame size is either not stored in the file or is configurable – e.g. raw video or video grabbers.\n\nAs an output option, this inserts the scale video filter to the end of the corresponding filtergraph. Please use the scale filter directly to insert it at the beginning or some other place.\n\nThe format is ‘wxh’ (default - same as source)."
       },
       {
         "type": "long",
         "key": "aspect",
         "title": "-aspect[:stream_specifier] aspect (output, per-stream)",
-        "description": "Set the video display aspect ratio specified by aspect.\n\naspect can be a floating point number string, or a string of the\nform num:den, where num and den are the\nnumerator and denominator of the aspect ratio. For example \"4:3\",\n\"16:9\", \"1.3333\", and \"1.7777\" are valid argument values.\n\nIf used together with -vcodec copy, it will affect the aspect ratio\nstored at container level, but not the aspect ratio stored in encoded\nframes, if it exists."
+        "description": "Set the video display aspect ratio specified by aspect.\n\naspect can be a floating point number string, or a string of the form num:den, where num and den are the numerator and denominator of the aspect ratio. For example \"4:3\", \"16:9\", \"1.3333\", and \"1.7777\" are valid argument values.\n\nIf used together with -vcodec copy, it will affect the aspect ratio stored at container level, but not the aspect ratio stored in encoded frames, if it exists."
       },
       {
         "type": "long",
         "key": "vn",
         "title": "-vn (input/output)",
-        "description": "As an input option, blocks all video streams of a file from being filtered or\nbeing automatically selected or mapped for any output. See -discard\noption to disable streams individually.\n\nAs an output option, disables video recording i.e. automatic selection or\nmapping of any video stream. For full manual control see the -map\noption."
+        "description": "As an input option, blocks all video streams of a file from being filtered or being automatically selected or mapped for any output. See -discard option to disable streams individually.\n\nAs an output option, disables video recording i.e. automatic selection or mapping of any video stream. For full manual control see the -map option."
       },
       {
         "type": "long",
@@ -432,37 +432,37 @@
         "type": "long",
         "key": "pass",
         "title": "-pass[:stream_specifier] n (output, per-stream)",
-        "description": "Select the pass number (1 or 2). It is used to do two-pass\nvideo encoding. The statistics of the video are recorded in the first\npass into a log file (see also the option -passlogfile),\nand in the second pass that log file is used to generate the video\nat the exact requested bitrate.\nOn pass 1, you may just deactivate audio and set output to null,\nexamples for Windows and Unix:\n\nffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y NUL\nffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y /dev/null"
+        "description": "Select the pass number (1 or 2). It is used to do two-pass video encoding. The statistics of the video are recorded in the first pass into a log file (see also the option -passlogfile), and in the second pass that log file is used to generate the video at the exact requested bitrate. On pass 1, you may just deactivate audio and set output to null, examples for Windows and Unix:\n\nffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y NUL\nffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y /dev/null"
       },
       {
         "type": "long",
         "key": "passlogfile",
         "title": "-passlogfile[:stream_specifier] prefix (output, per-stream)",
-        "description": "Set two-pass log file name prefix to prefix, the default file name\nprefix is “ffmpeg2pass”. The complete file name will be\nPREFIX-N.log, where N is a number specific to the output\nstream"
+        "description": "Set two-pass log file name prefix to prefix, the default file name prefix is “ffmpeg2pass”. The complete file name will be PREFIX-N.log, where N is a number specific to the output stream"
       },
       {
         "type": "long",
         "key": "vf",
         "title": "-vf filtergraph (output)",
-        "description": "Create the filtergraph specified by filtergraph and use it to\nfilter the stream.\n\nThis is an alias for -filter:v, see the -filter option."
+        "description": "Create the filtergraph specified by filtergraph and use it to filter the stream.\n\nThis is an alias for -filter:v, see the -filter option."
       },
       {
         "type": "long",
         "key": "autorotate",
         "title": "-autorotate",
-        "description": "Automatically rotate the video according to file metadata. Enabled by\ndefault, use -noautorotate to disable it."
+        "description": "Automatically rotate the video according to file metadata. Enabled by default, use -noautorotate to disable it."
       },
       {
         "type": "long",
         "key": "autoscale",
         "title": "-autoscale",
-        "description": "Automatically scale the video according to the resolution of first frame.\nEnabled by default, use -noautoscale to disable it. When autoscale is\ndisabled, all output frames of filter graph might not be in the same resolution\nand may be inadequate for some encoder/muxer. Therefore, it is not recommended\nto disable it unless you really know what you are doing.\nDisable autoscale at your own risk."
+        "description": "Automatically scale the video according to the resolution of first frame. Enabled by default, use -noautoscale to disable it. When autoscale is disabled, all output frames of filter graph might not be in the same resolution and may be inadequate for some encoder/muxer. Therefore, it is not recommended to disable it unless you really know what you are doing. Disable autoscale at your own risk."
       },
       {
         "type": "long",
         "key": "pix_fmt",
         "title": "-pix_fmt[:stream_specifier] format (input/output, per-stream)",
-        "description": "Set pixel format. Use -pix_fmts to show all the supported\npixel formats.\nIf the selected pixel format can not be selected, ffmpeg will print a\nwarning and select the best pixel format supported by the encoder.\nIf pix_fmt is prefixed by a +, ffmpeg will exit with an error\nif the requested pixel format can not be selected, and automatic conversions\ninside filtergraphs are disabled.\nIf pix_fmt is a single +, ffmpeg selects the same pixel format\nas the input (or graph output) and automatic conversions are disabled."
+        "description": "Set pixel format. Use -pix_fmts to show all the supported pixel formats. If the selected pixel format can not be selected, ffmpeg will print a warning and select the best pixel format supported by the encoder. If pix_fmt is prefixed by a +, ffmpeg will exit with an error if the requested pixel format can not be selected, and automatic conversions inside filtergraphs are disabled. If pix_fmt is a single +, ffmpeg selects the same pixel format as the input (or graph output) and automatic conversions are disabled."
       },
       {
         "type": "long",
@@ -474,13 +474,13 @@
         "type": "long",
         "key": "rc_override",
         "title": "-rc_override[:stream_specifier] override (output, per-stream)",
-        "description": "Rate control override for specific intervals, formatted as \"int,int,int\"\nlist separated with slashes. Two first values are the beginning and\nend frame numbers, last one is quantizer to use if positive, or quality\nfactor if negative."
+        "description": "Rate control override for specific intervals, formatted as \"int,int,int\" list separated with slashes. Two first values are the beginning and end frame numbers, last one is quantizer to use if positive, or quality factor if negative."
       },
       {
         "type": "long",
         "key": "ilme",
         "title": "-ilme",
-        "description": "Force interlacing support in encoder (MPEG-2 and MPEG-4 only).\nUse this option if your input file is interlaced and you want\nto keep the interlaced format for minimum losses.\nThe alternative is to deinterlace the input stream by use of a filter\nsuch as yadif or bwdif, but deinterlacing introduces losses."
+        "description": "Force interlacing support in encoder (MPEG-2 and MPEG-4 only). Use this option if your input file is interlaced and you want to keep the interlaced format for minimum losses. The alternative is to deinterlace the input stream by use of a filter such as yadif or bwdif, but deinterlacing introduces losses."
       },
       {
         "type": "long",
@@ -540,55 +540,55 @@
         "type": "long",
         "key": "force_key_frames",
         "title": "-force_key_frames[:stream_specifier] time[, time...] (output, per-stream), -force_key_frames[:stream_specifier] expr:expr (output, per-stream), -force_key_frames[:stream_specifier] source (output, per-stream), -force_key_frames[:stream_specifier] source_no_drop (output, per-stream)",
-        "description": "force_key_frames can take arguments of the following form:\n\n\ntime[,time...]\nIf the argument consists of timestamps, ffmpeg will round the specified times to the nearest\noutput timestamp as per the encoder time base and force a keyframe at the first frame having\ntimestamp equal or greater than the computed timestamp. Note that if the encoder time base is too\ncoarse, then the keyframes may be forced on frames with timestamps lower than the specified time.\nThe default encoder time base is the inverse of the output framerate but may be set otherwise\nvia -enc_time_base.\n\nIf one of the times is \"chapters[delta]\", it is expanded into\nthe time of the beginning of all chapters in the file, shifted by\ndelta, expressed as a time in seconds.\nThis option can be useful to ensure that a seek point is present at a\nchapter mark or any other designated place in the output file.\n\nFor example, to insert a key frame at 5 minutes, plus key frames 0.1 second\nbefore the beginning of every chapter:\n\n-force_key_frames 0:05:00,chapters-0.1\n\n\n\nexpr:expr\nIf the argument is prefixed with expr:, the string expr\nis interpreted like an expression and is evaluated for each frame. A\nkey frame is forced in case the evaluation is non-zero.\n\nThe expression in expr can contain the following constants:\n\nn\nthe number of current processed frame, starting from 0\n\nn_forced\nthe number of forced frames\n\nprev_forced_n\nthe number of the previous forced frame, it is NAN when no\nkeyframe was forced yet\n\nprev_forced_t\nthe time of the previous forced frame, it is NAN when no\nkeyframe was forced yet\n\nt\nthe time of the current processed frame\n\n\n\nFor example to force a key frame every 5 seconds, you can specify:\n\n-force_key_frames expr:gte(t,n_forced*5)\n\n\nTo force a key frame 5 seconds after the time of the last forced one,\nstarting from second 13:\n\n-force_key_frames expr:if(isnan(prev_forced_t),gte(t,13),gte(t,prev_forced_t+5))\n\n\n\nsource\nIf the argument is source, ffmpeg will force a key frame if\nthe current frame being encoded is marked as a key frame in its source.\n\n\nsource_no_drop\nIf the argument is source_no_drop, ffmpeg will force a key frame if\nthe current frame being encoded is marked as a key frame in its source.\nIn cases where this particular source frame has to be dropped,\nenforce the next available frame to become a key frame instead.\n\n\n\n\nNote that forcing too many keyframes is very harmful for the lookahead\nalgorithms of certain encoders: using fixed-GOP options or similar\nwould be more efficient."
+        "description": "force_key_frames can take arguments of the following form:\n\ntime[,time...]\n\nIf the argument consists of timestamps, ffmpeg will round the specified times to the nearest output timestamp as per the encoder time base and force a keyframe at the first frame having timestamp equal or greater than the computed timestamp. Note that if the encoder time base is too coarse, then the keyframes may be forced on frames with timestamps lower than the specified time. The default encoder time base is the inverse of the output framerate but may be set otherwise via -enc_time_base.\n\nIf one of the times is \"chapters[delta]\", it is expanded into the time of the beginning of all chapters in the file, shifted by delta, expressed as a time in seconds. This option can be useful to ensure that a seek point is present at a chapter mark or any other designated place in the output file.\n\nFor example, to insert a key frame at 5 minutes, plus key frames 0.1 second before the beginning of every chapter:\n\n-force_key_frames 0:05:00,chapters-0.1\n\n\nexpr:expr\n\nIf the argument is prefixed with expr:, the string expr is interpreted like an expression and is evaluated for each frame. A key frame is forced in case the evaluation is non-zero.\n\nThe expression in expr can contain the following constants:\n\nn\n\nthe number of current processed frame, starting from 0\n\nn_forced\n\nthe number of forced frames\n\nprev_forced_n\n\nthe number of the previous forced frame, it is NAN when no keyframe was forced yet\n\nprev_forced_t\n\nthe time of the previous forced frame, it is NAN when no keyframe was forced yet\n\nt\n\nthe time of the current processed frame\n\nFor example to force a key frame every 5 seconds, you can specify:\n\n-force_key_frames expr:gte(t,n_forced*5)\n\n\nTo force a key frame 5 seconds after the time of the last forced one, starting from second 13:\n\n-force_key_frames expr:if(isnan(prev_forced_t),gte(t,13),gte(t,prev_forced_t+5))\n\n\nsource\n\nIf the argument is source, ffmpeg will force a key frame if the current frame being encoded is marked as a key frame in its source.\n\nsource_no_drop\n\nIf the argument is source_no_drop, ffmpeg will force a key frame if the current frame being encoded is marked as a key frame in its source. In cases where this particular source frame has to be dropped, enforce the next available frame to become a key frame instead.\n\nNote that forcing too many keyframes is very harmful for the lookahead algorithms of certain encoders: using fixed-GOP options or similar would be more efficient."
       },
       {
         "type": "long",
         "key": "copyinkf",
         "title": "-copyinkf[:stream_specifier] (output, per-stream)",
-        "description": "When doing stream copy, copy also non-key frames found at the\nbeginning."
+        "description": "When doing stream copy, copy also non-key frames found at the beginning."
       },
       {
         "type": "long",
         "key": "init_hw_device",
         "title": "-init_hw_device type[=name][:device[, key=value...]]",
-        "description": "Initialise a new hardware device of type type called name, using the\ngiven device parameters.\nIf no name is specified it will receive a default name of the form \"type%d\".\n\nThe meaning of device and the following arguments depends on the\ndevice type:\n\ncuda\ndevice is the number of the CUDA device.\n\n\ndxva2\ndevice is the number of the Direct3D 9 display adapter.\n\n\nd3d11va\ndevice is the number of the Direct3D 11 display adapter.\n\n\nvaapi\ndevice is either an X11 display name or a DRM render node.\nIf not specified, it will attempt to open the default X11 display ($DISPLAY)\nand then the first DRM render node (/dev/dri/renderD128).\n\n\nvdpau\ndevice is an X11 display name.\nIf not specified, it will attempt to open the default X11 display ($DISPLAY).\n\n\nqsv\ndevice selects a value in ‘MFX_IMPL_*’. Allowed values are:\n\nauto\nsw\nhw\nauto_any\nhw_any\nhw2\nhw3\nhw4\n\nIf not specified, ‘auto_any’ is used.\n(Note that it may be easier to achieve the desired result for QSV by creating the\nplatform-appropriate subdevice (‘dxva2’ or ‘d3d11va’ or ‘vaapi’) and then deriving a\nQSV device from that.)\n\nAlternatively, ‘child_device_type’ helps to choose platform-appropriate subdevice type.\nOn Windows ‘d3d11va’ is used as default subdevice type.\n\nExamples:\n\n-init_hw_device qsv:hw,child_device_type=d3d11va\nChoose the GPU subdevice with type ‘d3d11va’ and create QSV device with ‘MFX_IMPL_HARDWARE’.\n\n\n-init_hw_device qsv:hw,child_device_type=dxva2\nChoose the GPU subdevice with type ‘dxva2’ and create QSV device with ‘MFX_IMPL_HARDWARE’.\n\n\n\n\nopencl\ndevice selects the platform and device as platform_index.device_index.\n\nThe set of devices can also be filtered using the key-value pairs to find only\ndevices matching particular platform or device strings.\n\nThe strings usable as filters are:\n\nplatform_profile\nplatform_version\nplatform_name\nplatform_vendor\nplatform_extensions\ndevice_name\ndevice_vendor\ndriver_version\ndevice_version\ndevice_profile\ndevice_extensions\ndevice_type\n\n\nThe indices and filters must together uniquely select a device.\n\nExamples:\n\n-init_hw_device opencl:0.1\nChoose the second device on the first platform.\n\n\n-init_hw_device opencl:,device_name=Foo9000\nChoose the device with a name containing the string Foo9000.\n\n\n-init_hw_device opencl:1,device_type=gpu,device_extensions=cl_khr_fp16\nChoose the GPU device on the second platform supporting the cl_khr_fp16\nextension.\n\n\n\n\nvulkan\nIf device is an integer, it selects the device by its index in a\nsystem-dependent list of devices.  If device is any other string, it\nselects the first device with a name containing that string as a substring.\n\nThe following options are recognized:\n\ndebug\nIf set to 1, enables the validation layer, if installed.\n\nlinear_images\nIf set to 1, images allocated by the hwcontext will be linear and locally mappable.\n\ninstance_extensions\nA plus separated list of additional instance extensions to enable.\n\ndevice_extensions\nA plus separated list of additional device extensions to enable.\n\n\n\nExamples:\n\n-init_hw_device vulkan:1\nChoose the second device on the system.\n\n\n-init_hw_device vulkan:RADV\nChoose the first device with a name containing the string RADV.\n\n\n-init_hw_device vulkan:0,instance_extensions=VK_KHR_wayland_surface+VK_KHR_xcb_surface\nChoose the first device and enable the Wayland and XCB instance extensions."
+        "description": "Initialise a new hardware device of type type called name, using the given device parameters. If no name is specified it will receive a default name of the form \"type%d\".\n\nThe meaning of device and the following arguments depends on the device type:\n\ncuda\n\ndevice is the number of the CUDA device.\n\ndxva2\n\ndevice is the number of the Direct3D 9 display adapter.\n\nd3d11va\n\ndevice is the number of the Direct3D 11 display adapter.\n\nvaapi\n\ndevice is either an X11 display name or a DRM render node. If not specified, it will attempt to open the default X11 display ($DISPLAY) and then the first DRM render node (/dev/dri/renderD128).\n\nvdpau\n\ndevice is an X11 display name. If not specified, it will attempt to open the default X11 display ($DISPLAY).\n\nqsv\n\ndevice selects a value in ‘MFX_IMPL_*’. Allowed values are:\n\nauto sw hw auto_any hw_any hw2 hw3 hw4\n\nIf not specified, ‘auto_any’ is used. (Note that it may be easier to achieve the desired result for QSV by creating the platform-appropriate subdevice (‘dxva2’ or ‘d3d11va’ or ‘vaapi’) and then deriving a QSV device from that.)\n\nAlternatively, ‘child_device_type’ helps to choose platform-appropriate subdevice type. On Windows ‘d3d11va’ is used as default subdevice type.\n\nExamples:\n\n-init_hw_device qsv:hw,child_device_type=d3d11va\n\nChoose the GPU subdevice with type ‘d3d11va’ and create QSV device with ‘MFX_IMPL_HARDWARE’.\n\n-init_hw_device qsv:hw,child_device_type=dxva2\n\nChoose the GPU subdevice with type ‘dxva2’ and create QSV device with ‘MFX_IMPL_HARDWARE’.\n\nopencl\n\ndevice selects the platform and device as platform_index.device_index.\n\nThe set of devices can also be filtered using the key-value pairs to find only devices matching particular platform or device strings.\n\nThe strings usable as filters are:\n\nplatform_profile platform_version platform_name platform_vendor platform_extensions device_name device_vendor driver_version device_version device_profile device_extensions device_type\n\nThe indices and filters must together uniquely select a device.\n\nExamples:\n\n-init_hw_device opencl:0.1\n\nChoose the second device on the first platform.\n\n-init_hw_device opencl:,device_name=Foo9000\n\nChoose the device with a name containing the string Foo9000.\n\n-init_hw_device opencl:1,device_type=gpu,device_extensions=cl_khr_fp16\n\nChoose the GPU device on the second platform supporting the cl_khr_fp16 extension.\n\nvulkan\n\nIf device is an integer, it selects the device by its index in a system-dependent list of devices. If device is any other string, it selects the first device with a name containing that string as a substring.\n\nThe following options are recognized:\n\ndebug\n\nIf set to 1, enables the validation layer, if installed.\n\nlinear_images\n\nIf set to 1, images allocated by the hwcontext will be linear and locally mappable.\n\ninstance_extensions\n\nA plus separated list of additional instance extensions to enable.\n\ndevice_extensions\n\nA plus separated list of additional device extensions to enable.\n\nExamples:\n\n-init_hw_device vulkan:1\n\nChoose the second device on the system.\n\n-init_hw_device vulkan:RADV\n\nChoose the first device with a name containing the string RADV.\n\n-init_hw_device vulkan:0,instance_extensions=VK_KHR_wayland_surface+VK_KHR_xcb_surface\n\nChoose the first device and enable the Wayland and XCB instance extensions."
       },
       {
         "type": "long",
         "key": "filter_hw_device",
         "title": "-filter_hw_device name",
-        "description": "Pass the hardware device called name to all filters in any filter graph.\nThis can be used to set the device to upload to with the hwupload filter,\nor the device to map to with the hwmap filter.  Other filters may also\nmake use of this parameter when they require a hardware device.  Note that this\nis typically only required when the input is not already in hardware frames -\nwhen it is, filters will derive the device they require from the context of the\nframes they receive as input.\n\nThis is a global setting, so all filters will receive the same device."
+        "description": "Pass the hardware device called name to all filters in any filter graph. This can be used to set the device to upload to with the hwupload filter, or the device to map to with the hwmap filter. Other filters may also make use of this parameter when they require a hardware device. Note that this is typically only required when the input is not already in hardware frames - when it is, filters will derive the device they require from the context of the frames they receive as input.\n\nThis is a global setting, so all filters will receive the same device."
       },
       {
         "type": "long",
         "key": "hwaccel",
         "title": "-hwaccel[:stream_specifier] hwaccel (input, per-stream)",
-        "description": "Use hardware acceleration to decode the matching stream(s). The allowed values\nof hwaccel are:\n\nnone\nDo not use any hardware acceleration (the default).\n\n\nauto\nAutomatically select the hardware acceleration method.\n\n\nvdpau\nUse VDPAU (Video Decode and Presentation API for Unix) hardware acceleration.\n\n\ndxva2\nUse DXVA2 (DirectX Video Acceleration) hardware acceleration.\n\n\nd3d11va\nUse D3D11VA (DirectX Video Acceleration) hardware acceleration.\n\n\nvaapi\nUse VAAPI (Video Acceleration API) hardware acceleration.\n\n\nqsv\nUse the Intel QuickSync Video acceleration for video transcoding.\n\nUnlike most other values, this option does not enable accelerated decoding (that\nis used automatically whenever a qsv decoder is selected), but accelerated\ntranscoding, without copying the frames into the system memory.\n\nFor it to work, both the decoder and the encoder must support QSV acceleration\nand no filters must be used.\n\n\n\nThis option has no effect if the selected hwaccel is not available or not\nsupported by the chosen decoder.\n\nNote that most acceleration methods are intended for playback and will not be\nfaster than software decoding on modern CPUs. Additionally, ffmpeg\nwill usually need to copy the decoded frames from the GPU memory into the system\nmemory, resulting in further performance loss. This option is thus mainly\nuseful for testing."
+        "description": "Use hardware acceleration to decode the matching stream(s). The allowed values of hwaccel are:\n\nnone\n\nDo not use any hardware acceleration (the default).\n\nauto\n\nAutomatically select the hardware acceleration method.\n\nvdpau\n\nUse VDPAU (Video Decode and Presentation API for Unix) hardware acceleration.\n\ndxva2\n\nUse DXVA2 (DirectX Video Acceleration) hardware acceleration.\n\nd3d11va\n\nUse D3D11VA (DirectX Video Acceleration) hardware acceleration.\n\nvaapi\n\nUse VAAPI (Video Acceleration API) hardware acceleration.\n\nqsv\n\nUse the Intel QuickSync Video acceleration for video transcoding.\n\nUnlike most other values, this option does not enable accelerated decoding (that is used automatically whenever a qsv decoder is selected), but accelerated transcoding, without copying the frames into the system memory.\n\nFor it to work, both the decoder and the encoder must support QSV acceleration and no filters must be used.\n\nThis option has no effect if the selected hwaccel is not available or not supported by the chosen decoder.\n\nNote that most acceleration methods are intended for playback and will not be faster than software decoding on modern CPUs. Additionally, ffmpeg will usually need to copy the decoded frames from the GPU memory into the system memory, resulting in further performance loss. This option is thus mainly useful for testing."
       },
       {
         "type": "long",
         "key": "hwaccel_device",
         "title": "-hwaccel_device[:stream_specifier] hwaccel_device (input, per-stream)",
-        "description": "Select a device to use for hardware acceleration.\n\nThis option only makes sense when the -hwaccel option is also specified.\nIt can either refer to an existing device created with -init_hw_device\nby name, or it can create a new device as if\n‘-init_hw_device’ type:hwaccel_device\nwere called immediately before."
+        "description": "Select a device to use for hardware acceleration.\n\nThis option only makes sense when the -hwaccel option is also specified. It can either refer to an existing device created with -init_hw_device by name, or it can create a new device as if ‘-init_hw_device’ type:hwaccel_device were called immediately before."
       },
       {
         "type": "long",
         "key": "hwaccels",
         "title": "-hwaccels",
-        "description": "List all hardware acceleration components enabled in this build of ffmpeg.\nActual runtime availability depends on the hardware and its suitable driver\nbeing installed."
+        "description": "List all hardware acceleration components enabled in this build of ffmpeg. Actual runtime availability depends on the hardware and its suitable driver being installed."
       },
       {
         "type": "long",
         "key": "aframes",
         "title": "-aframes number (output)",
-        "description": "Set the number of audio frames to output. This is an obsolete alias for\n-frames:a, which you should use instead."
+        "description": "Set the number of audio frames to output. This is an obsolete alias for -frames:a, which you should use instead."
       },
       {
         "type": "long",
         "key": "ar",
         "title": "-ar[:stream_specifier] freq (input/output, per-stream)",
-        "description": "Set the audio sampling frequency. For output streams it is set by\ndefault to the frequency of the corresponding input stream. For input\nstreams this option only makes sense for audio grabbing devices and raw\ndemuxers and is mapped to the corresponding demuxer options."
+        "description": "Set the audio sampling frequency. For output streams it is set by default to the frequency of the corresponding input stream. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options."
       },
       {
         "type": "long",
@@ -600,13 +600,13 @@
         "type": "long",
         "key": "ac",
         "title": "-ac[:stream_specifier] channels (input/output, per-stream)",
-        "description": "Set the number of audio channels. For output streams it is set by\ndefault to the number of input audio channels. For input streams\nthis option only makes sense for audio grabbing devices and raw demuxers\nand is mapped to the corresponding demuxer options."
+        "description": "Set the number of audio channels. For output streams it is set by default to the number of input audio channels. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options."
       },
       {
         "type": "long",
         "key": "an",
         "title": "-an (input/output)",
-        "description": "As an input option, blocks all audio streams of a file from being filtered or\nbeing automatically selected or mapped for any output. See -discard\noption to disable streams individually.\n\nAs an output option, disables audio recording i.e. automatic selection or\nmapping of any audio stream. For full manual control see the -map\noption."
+        "description": "As an input option, blocks all audio streams of a file from being filtered or being automatically selected or mapped for any output. See -discard option to disable streams individually.\n\nAs an output option, disables audio recording i.e. automatic selection or mapping of any audio stream. For full manual control see the -map option."
       },
       {
         "type": "long",
@@ -618,13 +618,13 @@
         "type": "long",
         "key": "sample_fmt",
         "title": "-sample_fmt[:stream_specifier] sample_fmt (output, per-stream)",
-        "description": "Set the audio sample format. Use -sample_fmts to get a list\nof supported sample formats."
+        "description": "Set the audio sample format. Use -sample_fmts to get a list of supported sample formats."
       },
       {
         "type": "long",
         "key": "af",
         "title": "-af filtergraph (output)",
-        "description": "Create the filtergraph specified by filtergraph and use it to\nfilter the stream.\n\nThis is an alias for -filter:a, see the -filter option."
+        "description": "Create the filtergraph specified by filtergraph and use it to filter the stream.\n\nThis is an alias for -filter:a, see the -filter option."
       },
       {
         "type": "long",
@@ -642,7 +642,7 @@
         "type": "long",
         "key": "guess_layout_max",
         "title": "-guess_layout_max channels (input, per-stream)",
-        "description": "If some input channel layout is not known, try to guess only if it\ncorresponds to at most the specified number of channels. For example, 2\ntells to ffmpeg to recognize 1 channel as mono and 2 channels as\nstereo but not 6 channels as 5.1. The default is to always try to guess. Use\n0 to disable all guessing."
+        "description": "If some input channel layout is not known, try to guess only if it corresponds to at most the specified number of channels. For example, 2 tells to ffmpeg to recognize 1 channel as mono and 2 channels as stereo but not 6 channels as 5.1. The default is to always try to guess. Use 0 to disable all guessing."
       },
       {
         "type": "long",
@@ -654,7 +654,7 @@
         "type": "long",
         "key": "sn",
         "title": "-sn (input/output)",
-        "description": "As an input option, blocks all subtitle streams of a file from being filtered or\nbeing automatically selected or mapped for any output. See -discard\noption to disable streams individually.\n\nAs an output option, disables subtitle recording i.e. automatic selection or\nmapping of any subtitle stream. For full manual control see the -map\noption."
+        "description": "As an input option, blocks all subtitle streams of a file from being filtered or being automatically selected or mapped for any output. See -discard option to disable streams individually.\n\nAs an output option, disables subtitle recording i.e. automatic selection or mapping of any subtitle stream. For full manual control see the -map option."
       },
       {
         "type": "long",
@@ -666,7 +666,7 @@
         "type": "long",
         "key": "fix_sub_duration",
         "title": "-fix_sub_duration",
-        "description": "Fix subtitles durations. For each subtitle, wait for the next packet in the\nsame stream and adjust the duration of the first to avoid overlap. This is\nnecessary with some subtitles codecs, especially DVB subtitles, because the\nduration in the original packet is only a rough estimate and the end is\nactually marked by an empty subtitle frame. Failing to use this option when\nnecessary can result in exaggerated durations or muxing failures due to\nnon-monotonic timestamps.\n\nNote that this option will delay the output of all data until the next\nsubtitle packet is decoded: it may increase memory consumption and latency a\nlot."
+        "description": "Fix subtitles durations. For each subtitle, wait for the next packet in the same stream and adjust the duration of the first to avoid overlap. This is necessary with some subtitles codecs, especially DVB subtitles, because the duration in the original packet is only a rough estimate and the end is actually marked by an empty subtitle frame. Failing to use this option when necessary can result in exaggerated durations or muxing failures due to non-monotonic timestamps.\n\nNote that this option will delay the output of all data until the next subtitle packet is decoded: it may increase memory consumption and latency a lot."
       },
       {
         "type": "long",
@@ -678,49 +678,49 @@
         "type": "long",
         "key": "map",
         "title": "-map [-]input_file_id[:stream_specifier][?][, sync_file_id[:stream_specifier]] | [linklabel] (output)",
-        "description": "Designate one or more input streams as a source for the output file. Each input\nstream is identified by the input file index input_file_id and\nthe input stream index input_stream_id within the input\nfile. Both indices start at 0. If specified,\nsync_file_id:stream_specifier sets which input stream\nis used as a presentation sync reference.\n\nThe first -map option on the command line specifies the\nsource for output stream 0, the second -map option specifies\nthe source for output stream 1, etc.\n\nA - character before the stream identifier creates a \"negative\" mapping.\nIt disables matching streams from already created mappings.\n\nA trailing ? after the stream index will allow the map to be\noptional: if the map matches no streams the map will be ignored instead\nof failing. Note the map will still fail if an invalid input file index\nis used; such as if the map refers to a non-existent input.\n\nAn alternative [linklabel] form will map outputs from complex filter\ngraphs (see the -filter_complex option) to the output file.\nlinklabel must correspond to a defined output link label in the graph.\n\nFor example, to map ALL streams from the first input file to output\n\nffmpeg -i INPUT -map 0 output\n\n\nFor example, if you have two audio streams in the first input file,\nthese streams are identified by \"0:0\" and \"0:1\". You can use\n-map to select which streams to place in an output file. For\nexample:\n\nffmpeg -i INPUT -map 0:1 out.wav\n\nwill map the input stream in INPUT identified by \"0:1\" to\nthe (single) output stream in out.wav.\n\nFor example, to select the stream with index 2 from input file\na.mov (specified by the identifier \"0:2\"), and stream with\nindex 6 from input b.mov (specified by the identifier \"1:6\"),\nand copy them to the output file out.mov:\n\nffmpeg -i a.mov -i b.mov -c copy -map 0:2 -map 1:6 out.mov\n\n\nTo select all video and the third audio stream from an input file:\n\nffmpeg -i INPUT -map 0:v -map 0:a:2 OUTPUT\n\n\nTo map all the streams except the second audio, use negative mappings\n\nffmpeg -i INPUT -map 0 -map -0:a:1 OUTPUT\n\n\nTo map the video and audio streams from the first input, and using the\ntrailing ?, ignore the audio mapping if no audio streams exist in\nthe first input:\n\nffmpeg -i INPUT -map 0:v -map 0:a? OUTPUT\n\n\nTo pick the English audio stream:\n\nffmpeg -i INPUT -map 0:m:language:eng OUTPUT\n\n\nNote that using this option disables the default mappings for this output file."
+        "description": "Designate one or more input streams as a source for the output file. Each input stream is identified by the input file index input_file_id and the input stream index input_stream_id within the input file. Both indices start at 0. If specified, sync_file_id:stream_specifier sets which input stream is used as a presentation sync reference.\n\nThe first -map option on the command line specifies the source for output stream 0, the second -map option specifies the source for output stream 1, etc.\n\nA - character before the stream identifier creates a \"negative\" mapping. It disables matching streams from already created mappings.\n\nA trailing ? after the stream index will allow the map to be optional: if the map matches no streams the map will be ignored instead of failing. Note the map will still fail if an invalid input file index is used; such as if the map refers to a non-existent input.\n\nAn alternative [linklabel] form will map outputs from complex filter graphs (see the -filter_complex option) to the output file. linklabel must correspond to a defined output link label in the graph.\n\nFor example, to map ALL streams from the first input file to output\n\nffmpeg -i INPUT -map 0 output\n\n\nFor example, if you have two audio streams in the first input file, these streams are identified by \"0:0\" and \"0:1\". You can use -map to select which streams to place in an output file. For example:\n\nffmpeg -i INPUT -map 0:1 out.wav\n\n\nwill map the input stream in INPUT identified by \"0:1\" to the (single) output stream in out.wav.\n\nFor example, to select the stream with index 2 from input file a.mov (specified by the identifier \"0:2\"), and stream with index 6 from input b.mov (specified by the identifier \"1:6\"), and copy them to the output file out.mov:\n\nffmpeg -i a.mov -i b.mov -c copy -map 0:2 -map 1:6 out.mov\n\n\nTo select all video and the third audio stream from an input file:\n\nffmpeg -i INPUT -map 0:v -map 0:a:2 OUTPUT\n\n\nTo map all the streams except the second audio, use negative mappings\n\nffmpeg -i INPUT -map 0 -map -0:a:1 OUTPUT\n\n\nTo map the video and audio streams from the first input, and using the trailing ?, ignore the audio mapping if no audio streams exist in the first input:\n\nffmpeg -i INPUT -map 0:v -map 0:a? OUTPUT\n\n\nTo pick the English audio stream:\n\nffmpeg -i INPUT -map 0:m:language:eng OUTPUT\n\n\nNote that using this option disables the default mappings for this output file."
       },
       {
         "type": "long",
         "key": "ignore_unknown",
         "title": "-ignore_unknown",
-        "description": "Ignore input streams with unknown type instead of failing if copying\nsuch streams is attempted."
+        "description": "Ignore input streams with unknown type instead of failing if copying such streams is attempted."
       },
       {
         "type": "long",
         "key": "copy_unknown",
         "title": "-copy_unknown",
-        "description": "Allow input streams with unknown type to be copied instead of failing if copying\nsuch streams is attempted."
+        "description": "Allow input streams with unknown type to be copied instead of failing if copying such streams is attempted."
       },
       {
         "type": "long",
         "key": "map_channel",
         "title": "-map_channel [input_file_id.stream_specifier.channel_id|-1][?][:output_file_id.stream_specifier]",
-        "description": "Map an audio channel from a given input to an output. If\noutput_file_id.stream_specifier is not set, the audio channel will\nbe mapped on all the audio streams.\n\nUsing \"-1\" instead of\ninput_file_id.stream_specifier.channel_id will map a muted\nchannel.\n\nA trailing ? will allow the map_channel to be\noptional: if the map_channel matches no channel the map_channel will be ignored instead\nof failing.\n\nFor example, assuming INPUT is a stereo audio file, you can switch the\ntwo audio channels with the following command:\n\nffmpeg -i INPUT -map_channel 0.0.1 -map_channel 0.0.0 OUTPUT\n\n\nIf you want to mute the first channel and keep the second:\n\nffmpeg -i INPUT -map_channel -1 -map_channel 0.0.1 OUTPUT\n\n\nThe order of the \"-map_channel\" option specifies the order of the channels in\nthe output stream. The output channel layout is guessed from the number of\nchannels mapped (mono if one \"-map_channel\", stereo if two, etc.). Using \"-ac\"\nin combination of \"-map_channel\" makes the channel gain levels to be updated if\ninput and output channel layouts don’t match (for instance two \"-map_channel\"\noptions and \"-ac 6\").\n\nYou can also extract each channel of an input to specific outputs; the following\ncommand extracts two channels of the INPUT audio stream (file 0, stream 0)\nto the respective OUTPUT_CH0 and OUTPUT_CH1 outputs:\n\nffmpeg -i INPUT -map_channel 0.0.0 OUTPUT_CH0 -map_channel 0.0.1 OUTPUT_CH1\n\n\nThe following example splits the channels of a stereo input into two separate\nstreams, which are put into the same output file:\n\nffmpeg -i stereo.wav -map 0:0 -map 0:0 -map_channel 0.0.0:0.0 -map_channel 0.0.1:0.1 -y out.ogg\n\n\nNote that currently each output stream can only contain channels from a single\ninput stream; you can’t for example use \"-map_channel\" to pick multiple input\naudio channels contained in different streams (from the same or different files)\nand merge them into a single output stream. It is therefore not currently\npossible, for example, to turn two separate mono streams into a single stereo\nstream. However splitting a stereo stream into two single channel mono streams\nis possible.\n\nIf you need this feature, a possible workaround is to use the amerge\nfilter. For example, if you need to merge a media (here input.mkv) with 2\nmono audio streams into one single stereo channel audio stream (and keep the\nvideo stream), you can use the following command:\n\nffmpeg -i input.mkv -filter_complex \"[0:1] [0:2] amerge\" -c:a pcm_s16le -c:v copy output.mkv\n\n\nTo map the first two audio channels from the first input, and using the\ntrailing ?, ignore the audio channel mapping if the first input is\nmono instead of stereo:\n\nffmpeg -i INPUT -map_channel 0.0.0 -map_channel 0.0.1? OUTPUT"
+        "description": "Map an audio channel from a given input to an output. If output_file_id.stream_specifier is not set, the audio channel will be mapped on all the audio streams.\n\nUsing \"-1\" instead of input_file_id.stream_specifier.channel_id will map a muted channel.\n\nA trailing ? will allow the map_channel to be optional: if the map_channel matches no channel the map_channel will be ignored instead of failing.\n\nFor example, assuming INPUT is a stereo audio file, you can switch the two audio channels with the following command:\n\nffmpeg -i INPUT -map_channel 0.0.1 -map_channel 0.0.0 OUTPUT\n\n\nIf you want to mute the first channel and keep the second:\n\nffmpeg -i INPUT -map_channel -1 -map_channel 0.0.1 OUTPUT\n\n\nThe order of the \"-map_channel\" option specifies the order of the channels in the output stream. The output channel layout is guessed from the number of channels mapped (mono if one \"-map_channel\", stereo if two, etc.). Using \"-ac\" in combination of \"-map_channel\" makes the channel gain levels to be updated if input and output channel layouts don’t match (for instance two \"-map_channel\" options and \"-ac 6\").\n\nYou can also extract each channel of an input to specific outputs; the following command extracts two channels of the INPUT audio stream (file 0, stream 0) to the respective OUTPUT_CH0 and OUTPUT_CH1 outputs:\n\nffmpeg -i INPUT -map_channel 0.0.0 OUTPUT_CH0 -map_channel 0.0.1 OUTPUT_CH1\n\n\nThe following example splits the channels of a stereo input into two separate streams, which are put into the same output file:\n\nffmpeg -i stereo.wav -map 0:0 -map 0:0 -map_channel 0.0.0:0.0 -map_channel 0.0.1:0.1 -y out.ogg\n\n\nNote that currently each output stream can only contain channels from a single input stream; you can’t for example use \"-map_channel\" to pick multiple input audio channels contained in different streams (from the same or different files) and merge them into a single output stream. It is therefore not currently possible, for example, to turn two separate mono streams into a single stereo stream. However splitting a stereo stream into two single channel mono streams is possible.\n\nIf you need this feature, a possible workaround is to use the amerge filter. For example, if you need to merge a media (here input.mkv) with 2 mono audio streams into one single stereo channel audio stream (and keep the video stream), you can use the following command:\n\nffmpeg -i input.mkv -filter_complex \"[0:1] [0:2] amerge\" -c:a pcm_s16le -c:v copy output.mkv\n\n\nTo map the first two audio channels from the first input, and using the trailing ?, ignore the audio channel mapping if the first input is mono instead of stereo:\n\nffmpeg -i INPUT -map_channel 0.0.0 -map_channel 0.0.1? OUTPUT"
       },
       {
         "type": "long",
         "key": "map_metadata",
         "title": "-map_metadata[:metadata_spec_out] infile[:metadata_spec_in] (output, per-metadata)",
-        "description": "Set metadata information of the next output file from infile. Note that\nthose are file indices (zero-based), not filenames.\nOptional metadata_spec_in/out parameters specify, which metadata to copy.\nA metadata specifier can have the following forms:\n\ng\nglobal metadata, i.e. metadata that applies to the whole file\n\n\ns[:stream_spec]\nper-stream metadata. stream_spec is a stream specifier as described\nin the Stream specifiers chapter. In an input metadata specifier, the first\nmatching stream is copied from. In an output metadata specifier, all matching\nstreams are copied to.\n\n\nc:chapter_index\nper-chapter metadata. chapter_index is the zero-based chapter index.\n\n\np:program_index\nper-program metadata. program_index is the zero-based program index.\n\n\nIf metadata specifier is omitted, it defaults to global.\n\nBy default, global metadata is copied from the first input file,\nper-stream and per-chapter metadata is copied along with streams/chapters. These\ndefault mappings are disabled by creating any mapping of the relevant type. A negative\nfile index can be used to create a dummy mapping that just disables automatic copying.\n\nFor example to copy metadata from the first stream of the input file to global metadata\nof the output file:\n\nffmpeg -i in.ogg -map_metadata 0:s:0 out.mp3\n\n\nTo do the reverse, i.e. copy global metadata to all audio streams:\n\nffmpeg -i in.mkv -map_metadata:s:a 0:g out.mkv\n\nNote that simple 0 would work as well in this example, since global\nmetadata is assumed by default."
+        "description": "Set metadata information of the next output file from infile. Note that those are file indices (zero-based), not filenames. Optional metadata_spec_in/out parameters specify, which metadata to copy. A metadata specifier can have the following forms:\n\ng\n\nglobal metadata, i.e. metadata that applies to the whole file\n\ns[:stream_spec]\n\nper-stream metadata. stream_spec is a stream specifier as described in the Stream specifiers chapter. In an input metadata specifier, the first matching stream is copied from. In an output metadata specifier, all matching streams are copied to.\n\nc:chapter_index\n\nper-chapter metadata. chapter_index is the zero-based chapter index.\n\np:program_index\n\nper-program metadata. program_index is the zero-based program index.\n\nIf metadata specifier is omitted, it defaults to global.\n\nBy default, global metadata is copied from the first input file, per-stream and per-chapter metadata is copied along with streams/chapters. These default mappings are disabled by creating any mapping of the relevant type. A negative file index can be used to create a dummy mapping that just disables automatic copying.\n\nFor example to copy metadata from the first stream of the input file to global metadata of the output file:\n\nffmpeg -i in.ogg -map_metadata 0:s:0 out.mp3\n\n\nTo do the reverse, i.e. copy global metadata to all audio streams:\n\nffmpeg -i in.mkv -map_metadata:s:a 0:g out.mkv\n\n\nNote that simple 0 would work as well in this example, since global metadata is assumed by default."
       },
       {
         "type": "long",
         "key": "map_chapters",
         "title": "-map_chapters input_file_index (output)",
-        "description": "Copy chapters from input file with index input_file_index to the next\noutput file. If no chapter mapping is specified, then chapters are copied from\nthe first input file with at least one chapter. Use a negative file index to\ndisable any chapter copying."
+        "description": "Copy chapters from input file with index input_file_index to the next output file. If no chapter mapping is specified, then chapters are copied from the first input file with at least one chapter. Use a negative file index to disable any chapter copying."
       },
       {
         "type": "long",
         "key": "benchmark",
         "title": "-benchmark (global)",
-        "description": "Show benchmarking information at the end of an encode.\nShows real, system and user time used and maximum memory consumption.\nMaximum memory consumption is not supported on all systems,\nit will usually display as 0 if not supported."
+        "description": "Show benchmarking information at the end of an encode. Shows real, system and user time used and maximum memory consumption. Maximum memory consumption is not supported on all systems, it will usually display as 0 if not supported."
       },
       {
         "type": "long",
         "key": "benchmark_all",
         "title": "-benchmark_all (global)",
-        "description": "Show benchmarking information during the encode.\nShows real, system and user time used in various steps (audio/video encode/decode)."
+        "description": "Show benchmarking information during the encode. Shows real, system and user time used in various steps (audio/video encode/decode)."
       },
       {
         "type": "long",
@@ -744,7 +744,7 @@
         "type": "long",
         "key": "readrate",
         "title": "-readrate speed (input)",
-        "description": "Limit input read speed.\n\nIts value is a floating-point positive number which represents the maximum duration of\nmedia, in seconds, that should be ingested in one second of wallclock time.\nDefault value is zero and represents no imposed limitation on speed of ingestion.\nValue 1 represents real-time speed and is equivalent to -re.\n\nMainly used to simulate a capture device or live input stream (e.g. when reading from a file).\nShould not be used with a low value when input is an actual capture device or live stream as\nit may cause packet loss.\n\nIt is useful for when flow speed of output packets is important, such as live streaming."
+        "description": "Limit input read speed.\n\nIts value is a floating-point positive number which represents the maximum duration of media, in seconds, that should be ingested in one second of wallclock time. Default value is zero and represents no imposed limitation on speed of ingestion. Value 1 represents real-time speed and is equivalent to -re.\n\nMainly used to simulate a capture device or live input stream (e.g. when reading from a file). Should not be used with a low value when input is an actual capture device or live stream as it may cause packet loss.\n\nIt is useful for when flow speed of output packets is important, such as live streaming."
       },
       {
         "type": "long",
@@ -756,55 +756,55 @@
         "type": "long",
         "key": "vsync",
         "title": "-vsync parameter",
-        "description": "Video sync method.\nFor compatibility reasons old values can be specified as numbers.\nNewly added values will have to be specified as strings always.\n\n\n0, passthrough\nEach frame is passed with its timestamp from the demuxer to the muxer.\n\n1, cfr\nFrames will be duplicated and dropped to achieve exactly the requested\nconstant frame rate.\n\n2, vfr\nFrames are passed through with their timestamp or dropped so as to\nprevent 2 frames from having the same timestamp.\n\ndrop\nAs passthrough but destroys all timestamps, making the muxer generate\nfresh timestamps based on frame-rate.\n\n-1, auto\nChooses between 1 and 2 depending on muxer capabilities. This is the\ndefault method.\n\n\n\nNote that the timestamps may be further modified by the muxer, after this.\nFor example, in the case that the format option avoid_negative_ts\nis enabled.\n\nWith -map you can select from which stream the timestamps should be\ntaken. You can leave either video or audio unchanged and sync the\nremaining stream(s) to the unchanged one."
+        "description": "Video sync method. For compatibility reasons old values can be specified as numbers. Newly added values will have to be specified as strings always.\n\n0, passthrough\n\nEach frame is passed with its timestamp from the demuxer to the muxer.\n\n1, cfr\n\nFrames will be duplicated and dropped to achieve exactly the requested constant frame rate.\n\n2, vfr\n\nFrames are passed through with their timestamp or dropped so as to prevent 2 frames from having the same timestamp.\n\ndrop\n\nAs passthrough but destroys all timestamps, making the muxer generate fresh timestamps based on frame-rate.\n\n-1, auto\n\nChooses between 1 and 2 depending on muxer capabilities. This is the default method.\n\nNote that the timestamps may be further modified by the muxer, after this. For example, in the case that the format option avoid_negative_ts is enabled.\n\nWith -map you can select from which stream the timestamps should be taken. You can leave either video or audio unchanged and sync the remaining stream(s) to the unchanged one."
       },
       {
         "type": "long",
         "key": "frame_drop_threshold",
         "title": "-frame_drop_threshold parameter",
-        "description": "Frame drop threshold, which specifies how much behind video frames can\nbe before they are dropped. In frame rate units, so 1.0 is one frame.\nThe default is -1.1. One possible usecase is to avoid framedrops in case\nof noisy timestamps or to increase frame drop precision in case of exact\ntimestamps."
+        "description": "Frame drop threshold, which specifies how much behind video frames can be before they are dropped. In frame rate units, so 1.0 is one frame. The default is -1.1. One possible usecase is to avoid framedrops in case of noisy timestamps or to increase frame drop precision in case of exact timestamps."
       },
       {
         "type": "long",
         "key": "async",
         "title": "-async samples_per_second",
-        "description": "Audio sync method. \"Stretches/squeezes\" the audio stream to match the timestamps,\nthe parameter is the maximum samples per second by which the audio is changed.\n-async 1 is a special case where only the start of the audio stream is corrected\nwithout any later correction.\n\nNote that the timestamps may be further modified by the muxer, after this.\nFor example, in the case that the format option avoid_negative_ts\nis enabled.\n\nThis option has been deprecated. Use the aresample audio filter instead."
+        "description": "Audio sync method. \"Stretches/squeezes\" the audio stream to match the timestamps, the parameter is the maximum samples per second by which the audio is changed. -async 1 is a special case where only the start of the audio stream is corrected without any later correction.\n\nNote that the timestamps may be further modified by the muxer, after this. For example, in the case that the format option avoid_negative_ts is enabled.\n\nThis option has been deprecated. Use the aresample audio filter instead."
       },
       {
         "type": "long",
         "key": "adrift_threshold",
         "title": "-adrift_threshold time",
-        "description": "Set the minimum difference between timestamps and audio data (in seconds) to trigger\nadding/dropping samples to make it match the timestamps. This option effectively is\na threshold to select between hard (add/drop) and soft (squeeze/stretch) compensation.\n-async must be set to a positive value."
+        "description": "Set the minimum difference between timestamps and audio data (in seconds) to trigger adding/dropping samples to make it match the timestamps. This option effectively is a threshold to select between hard (add/drop) and soft (squeeze/stretch) compensation. -async must be set to a positive value."
       },
       {
         "type": "long",
         "key": "apad",
         "title": "-apad parameters (output, per-stream)",
-        "description": "Pad the output audio stream(s). This is the same as applying -af apad.\nArgument is a string of filter parameters composed the same as with the apad filter.\n-shortest must be set for this output for the option to take effect."
+        "description": "Pad the output audio stream(s). This is the same as applying -af apad. Argument is a string of filter parameters composed the same as with the apad filter. -shortest must be set for this output for the option to take effect."
       },
       {
         "type": "long",
         "key": "copyts",
         "title": "-copyts",
-        "description": "Do not process input timestamps, but keep their values without trying\nto sanitize them. In particular, do not remove the initial start time\noffset value.\n\nNote that, depending on the vsync option or on specific muxer\nprocessing (e.g. in case the format option avoid_negative_ts\nis enabled) the output timestamps may mismatch with the input\ntimestamps even when this option is selected."
+        "description": "Do not process input timestamps, but keep their values without trying to sanitize them. In particular, do not remove the initial start time offset value.\n\nNote that, depending on the vsync option or on specific muxer processing (e.g. in case the format option avoid_negative_ts is enabled) the output timestamps may mismatch with the input timestamps even when this option is selected."
       },
       {
         "type": "long",
         "key": "start_at_zero",
         "title": "-start_at_zero",
-        "description": "When used with copyts, shift input timestamps so they start at zero.\n\nThis means that using e.g. -ss 50 will make output timestamps start at\n50 seconds, regardless of what timestamp the input file started at."
+        "description": "When used with copyts, shift input timestamps so they start at zero.\n\nThis means that using e.g. -ss 50 will make output timestamps start at 50 seconds, regardless of what timestamp the input file started at."
       },
       {
         "type": "long",
         "key": "copytb",
         "title": "-copytb mode",
-        "description": "Specify how to set the encoder timebase when stream copying.  mode is an\ninteger numeric value, and can assume one of the following values:\n\n\n1\nUse the demuxer timebase.\n\nThe time base is copied to the output encoder from the corresponding input\ndemuxer. This is sometimes required to avoid non monotonically increasing\ntimestamps when copying video streams with variable frame rate.\n\n\n0\nUse the decoder timebase.\n\nThe time base is copied to the output encoder from the corresponding input\ndecoder.\n\n\n-1\nTry to make the choice automatically, in order to generate a sane output.\n\n\n\nDefault value is -1."
+        "description": "Specify how to set the encoder timebase when stream copying. mode is an integer numeric value, and can assume one of the following values:\n\n1\n\nUse the demuxer timebase.\n\nThe time base is copied to the output encoder from the corresponding input demuxer. This is sometimes required to avoid non monotonically increasing timestamps when copying video streams with variable frame rate.\n\n0\n\nUse the decoder timebase.\n\nThe time base is copied to the output encoder from the corresponding input decoder.\n\n-1\n\nTry to make the choice automatically, in order to generate a sane output.\n\nDefault value is -1."
       },
       {
         "type": "long",
         "key": "enc_time_base",
         "title": "-enc_time_base[:stream_specifier] timebase (output, per-stream)",
-        "description": "Set the encoder timebase. timebase is a floating point number,\nand can assume one of the following values:\n\n\n0\nAssign a default value according to the media type.\n\nFor video - use 1/framerate, for audio - use 1/samplerate.\n\n\n-1\nUse the input stream timebase when possible.\n\nIf an input stream is not available, the default timebase will be used.\n\n\n>0\nUse the provided number as the timebase.\n\nThis field can be provided as a ratio of two integers (e.g. 1:24, 1:48000)\nor as a floating point number (e.g. 0.04166, 2.0833e-5)\n\n\n\nDefault value is 0."
+        "description": "Set the encoder timebase. timebase is a floating point number, and can assume one of the following values:\n\n0\n\nAssign a default value according to the media type.\n\nFor video - use 1/framerate, for audio - use 1/samplerate.\n\n-1\n\nUse the input stream timebase when possible.\n\nIf an input stream is not available, the default timebase will be used.\n\n>0\n\nUse the provided number as the timebase.\n\nThis field can be provided as a ratio of two integers (e.g. 1:24, 1:48000) or as a floating point number (e.g. 0.04166, 2.0833e-5)\n\nDefault value is 0."
       },
       {
         "type": "long",
@@ -828,7 +828,7 @@
         "type": "long",
         "key": "dts_error_threshold",
         "title": "-dts_error_threshold seconds",
-        "description": "Timestamp error delta threshold. This threshold use to discard crazy/damaged\ntimestamps and the default is 30 hours which is arbitrarily picked and quite\nconservative."
+        "description": "Timestamp error delta threshold. This threshold use to discard crazy/damaged timestamps and the default is 30 hours which is arbitrarily picked and quite conservative."
       },
       {
         "type": "long",
@@ -846,13 +846,13 @@
         "type": "long",
         "key": "streamid",
         "title": "-streamid output-stream-index:new-value (output)",
-        "description": "Assign a new stream-id value to an output stream. This option should be\nspecified prior to the output filename to which it applies.\nFor the situation where multiple output files exist, a streamid\nmay be reassigned to a different value.\n\nFor example, to set the stream 0 PID to 33 and the stream 1 PID to 36 for\nan output mpegts file:\n\nffmpeg -i inurl -streamid 0:33 -streamid 1:36 out.ts"
+        "description": "Assign a new stream-id value to an output stream. This option should be specified prior to the output filename to which it applies. For the situation where multiple output files exist, a streamid may be reassigned to a different value.\n\nFor example, to set the stream 0 PID to 33 and the stream 1 PID to 36 for an output mpegts file:\n\nffmpeg -i inurl -streamid 0:33 -streamid 1:36 out.ts"
       },
       {
         "type": "long",
         "key": "bsf",
         "title": "-bsf[:stream_specifier] bitstream_filters (output, per-stream)",
-        "description": "Set bitstream filters for matching streams. bitstream_filters is\na comma-separated list of bitstream filters. Use the -bsfs option\nto get the list of bitstream filters.\n\nffmpeg -i h264.mp4 -c:v copy -bsf:v h264_mp4toannexb -an out.h264\n\n\nffmpeg -i file.mov -an -vn -bsf:s mov2textsub -c:s copy -f rawvideo sub.txt"
+        "description": "Set bitstream filters for matching streams. bitstream_filters is a comma-separated list of bitstream filters. Use the -bsfs option to get the list of bitstream filters.\n\nffmpeg -i h264.mp4 -c:v copy -bsf:v h264_mp4toannexb -an out.h264\n\n\nffmpeg -i file.mov -an -vn -bsf:s mov2textsub -c:s copy -f rawvideo sub.txt"
       },
       {
         "type": "long",
@@ -864,73 +864,73 @@
         "type": "long",
         "key": "timecode",
         "title": "-timecode hh:mm:ssSEPff",
-        "description": "Specify Timecode for writing. SEP is ’:’ for non drop timecode and ’;’\n(or ’.’) for drop.\n\nffmpeg -i input.mpg -timecode 01:02:03.04 -r 30000/1001 -s ntsc output.mpg"
+        "description": "Specify Timecode for writing. SEP is ’:’ for non drop timecode and ’;’ (or ’.’) for drop.\n\nffmpeg -i input.mpg -timecode 01:02:03.04 -r 30000/1001 -s ntsc output.mpg"
       },
       {
         "type": "long",
         "key": "filter_complex",
         "title": "-filter_complex filtergraph (global)",
-        "description": "Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or\noutputs. For simple graphs – those with one input and one output of the same\ntype – see the -filter options. filtergraph is a description of\nthe filtergraph, as described in the “Filtergraph syntax” section of the\nffmpeg-filters manual.\n\nInput link labels must refer to input streams using the\n[file_index:stream_specifier] syntax (i.e. the same as -map\nuses). If stream_specifier matches multiple streams, the first one will be\nused. An unlabeled input will be connected to the first unused input stream of\nthe matching type.\n\nOutput link labels are referred to with -map. Unlabeled outputs are\nadded to the first output file.\n\nNote that with this option it is possible to use only lavfi sources without\nnormal input files.\n\nFor example, to overlay an image over video\n\nffmpeg -i video.mkv -i image.png -filter_complex '[0:v][1:v]overlay[out]' -map\n'[out]' out.mkv\n\nHere [0:v] refers to the first video stream in the first input file,\nwhich is linked to the first (main) input of the overlay filter. Similarly the\nfirst video stream in the second input is linked to the second (overlay) input\nof overlay.\n\nAssuming there is only one video stream in each input file, we can omit input\nlabels, so the above is equivalent to\n\nffmpeg -i video.mkv -i image.png -filter_complex 'overlay[out]' -map\n'[out]' out.mkv\n\n\nFurthermore we can omit the output label and the single output from the filter\ngraph will be added to the output file automatically, so we can simply write\n\nffmpeg -i video.mkv -i image.png -filter_complex 'overlay' out.mkv\n\n\nAs a special exception, you can use a bitmap subtitle stream as input: it\nwill be converted into a video with the same size as the largest video in\nthe file, or 720x576 if no video is present. Note that this is an\nexperimental and temporary solution. It will be removed once libavfilter has\nproper support for subtitles.\n\nFor example, to hardcode subtitles on top of a DVB-T recording stored in\nMPEG-TS format, delaying the subtitles by 1 second:\n\nffmpeg -i input.ts -filter_complex \\\n  '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] [sub] overlay' \\\n  -sn -map '#0x2dc' output.mkv\n\n(0x2d0, 0x2dc and 0x2ef are the MPEG-TS PIDs of respectively the video,\naudio and subtitles streams; 0:0, 0:3 and 0:7 would have worked too)\n\nTo generate 5 seconds of pure red video using lavfi color source:\n\nffmpeg -filter_complex 'color=c=red' -t 5 out.mkv"
+        "description": "Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or outputs. For simple graphs – those with one input and one output of the same type – see the -filter options. filtergraph is a description of the filtergraph, as described in the “Filtergraph syntax” section of the ffmpeg-filters manual.\n\nInput link labels must refer to input streams using the [file_index:stream_specifier] syntax (i.e. the same as -map uses). If stream_specifier matches multiple streams, the first one will be used. An unlabeled input will be connected to the first unused input stream of the matching type.\n\nOutput link labels are referred to with -map. Unlabeled outputs are added to the first output file.\n\nNote that with this option it is possible to use only lavfi sources without normal input files.\n\nFor example, to overlay an image over video\n\nffmpeg -i video.mkv -i image.png -filter_complex '[0:v][1:v]overlay[out]' -map\n'[out]' out.mkv\n\n\nHere [0:v] refers to the first video stream in the first input file, which is linked to the first (main) input of the overlay filter. Similarly the first video stream in the second input is linked to the second (overlay) input of overlay.\n\nAssuming there is only one video stream in each input file, we can omit input labels, so the above is equivalent to\n\nffmpeg -i video.mkv -i image.png -filter_complex 'overlay[out]' -map\n'[out]' out.mkv\n\n\nFurthermore we can omit the output label and the single output from the filter graph will be added to the output file automatically, so we can simply write\n\nffmpeg -i video.mkv -i image.png -filter_complex 'overlay' out.mkv\n\n\nAs a special exception, you can use a bitmap subtitle stream as input: it will be converted into a video with the same size as the largest video in the file, or 720x576 if no video is present. Note that this is an experimental and temporary solution. It will be removed once libavfilter has proper support for subtitles.\n\nFor example, to hardcode subtitles on top of a DVB-T recording stored in MPEG-TS format, delaying the subtitles by 1 second:\n\nffmpeg -i input.ts -filter_complex \\\n  '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] [sub] overlay' \\\n  -sn -map '#0x2dc' output.mkv\n\n\n(0x2d0, 0x2dc and 0x2ef are the MPEG-TS PIDs of respectively the video, audio and subtitles streams; 0:0, 0:3 and 0:7 would have worked too)\n\nTo generate 5 seconds of pure red video using lavfi color source:\n\nffmpeg -filter_complex 'color=c=red' -t 5 out.mkv"
       },
       {
         "type": "long",
         "key": "filter_complex_threads",
         "title": "-filter_complex_threads nb_threads (global)",
-        "description": "Defines how many threads are used to process a filter_complex graph.\nSimilar to filter_threads but used for -filter_complex graphs only.\nThe default is the number of available CPUs."
+        "description": "Defines how many threads are used to process a filter_complex graph. Similar to filter_threads but used for -filter_complex graphs only. The default is the number of available CPUs."
       },
       {
         "type": "long",
         "key": "lavfi",
         "title": "-lavfi filtergraph (global)",
-        "description": "Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or\noutputs. Equivalent to -filter_complex."
+        "description": "Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or outputs. Equivalent to -filter_complex."
       },
       {
         "type": "long",
         "key": "filter_complex_script",
         "title": "-filter_complex_script filename (global)",
-        "description": "This option is similar to -filter_complex, the only difference is that\nits argument is the name of the file from which a complex filtergraph\ndescription is to be read."
+        "description": "This option is similar to -filter_complex, the only difference is that its argument is the name of the file from which a complex filtergraph description is to be read."
       },
       {
         "type": "long",
         "key": "accurate_seek",
         "title": "-accurate_seek (input)",
-        "description": "This option enables or disables accurate seeking in input files with the\n-ss option. It is enabled by default, so seeking is accurate when\ntranscoding. Use -noaccurate_seek to disable it, which may be useful\ne.g. when copying some streams and transcoding the others."
+        "description": "This option enables or disables accurate seeking in input files with the -ss option. It is enabled by default, so seeking is accurate when transcoding. Use -noaccurate_seek to disable it, which may be useful e.g. when copying some streams and transcoding the others."
       },
       {
         "type": "long",
         "key": "seek_timestamp",
         "title": "-seek_timestamp (input)",
-        "description": "This option enables or disables seeking by timestamp in input files with the\n-ss option. It is disabled by default. If enabled, the argument\nto the -ss option is considered an actual timestamp, and is not\noffset by the start time of the file. This matters only for files which do\nnot start from timestamp 0, such as transport streams."
+        "description": "This option enables or disables seeking by timestamp in input files with the -ss option. It is disabled by default. If enabled, the argument to the -ss option is considered an actual timestamp, and is not offset by the start time of the file. This matters only for files which do not start from timestamp 0, such as transport streams."
       },
       {
         "type": "long",
         "key": "thread_queue_size",
         "title": "-thread_queue_size size (input)",
-        "description": "This option sets the maximum number of queued packets when reading from the\nfile or device. With low latency / high rate live streams, packets may be\ndiscarded if they are not read in a timely manner; setting this value can\nforce ffmpeg to use a separate input thread and read packets as soon as they\narrive. By default ffmpeg only do this if multiple inputs are specified."
+        "description": "This option sets the maximum number of queued packets when reading from the file or device. With low latency / high rate live streams, packets may be discarded if they are not read in a timely manner; setting this value can force ffmpeg to use a separate input thread and read packets as soon as they arrive. By default ffmpeg only do this if multiple inputs are specified."
       },
       {
         "type": "long",
         "key": "sdp_file",
         "title": "-sdp_file file (global)",
-        "description": "Print sdp information for an output stream to file.\nThis allows dumping sdp information when at least one output isn’t an\nrtp stream. (Requires at least one of the output formats to be rtp)."
+        "description": "Print sdp information for an output stream to file. This allows dumping sdp information when at least one output isn’t an rtp stream. (Requires at least one of the output formats to be rtp)."
       },
       {
         "type": "long",
         "key": "discard",
         "title": "-discard (input)",
-        "description": "Allows discarding specific streams or frames from streams.\nAny input stream can be fully discarded, using value all whereas\nselective discarding of frames from a stream occurs at the demuxer\nand is not supported by all demuxers.\n\n\nnone\nDiscard no frame.\n\n\ndefault\nDefault, which discards no frames.\n\n\nnoref\nDiscard all non-reference frames.\n\n\nbidir\nDiscard all bidirectional frames.\n\n\nnokey\nDiscard all frames excepts keyframes.\n\n\nall\nDiscard all frames."
+        "description": "Allows discarding specific streams or frames from streams. Any input stream can be fully discarded, using value all whereas selective discarding of frames from a stream occurs at the demuxer and is not supported by all demuxers.\n\nnone\n\nDiscard no frame.\n\ndefault\n\nDefault, which discards no frames.\n\nnoref\n\nDiscard all non-reference frames.\n\nbidir\n\nDiscard all bidirectional frames.\n\nnokey\n\nDiscard all frames excepts keyframes.\n\nall\n\nDiscard all frames."
       },
       {
         "type": "long",
         "key": "abort_on",
         "title": "-abort_on flags (global)",
-        "description": "Stop and abort on various conditions. The following flags are available:\n\n\nempty_output\nNo packets were passed to the muxer, the output is empty.\n\nempty_output_stream\nNo packets were passed to the muxer in some of the output streams."
+        "description": "Stop and abort on various conditions. The following flags are available:\n\nempty_output\n\nNo packets were passed to the muxer, the output is empty.\n\nempty_output_stream\n\nNo packets were passed to the muxer in some of the output streams."
       },
       {
         "type": "long",
         "key": "max_error_rate",
         "title": "-max_error_rate (global)",
-        "description": "Set fraction of decoding frame failures across all inputs which when crossed\nffmpeg will return exit code 69. Crossing this threshold does not terminate\nprocessing. Range is a floating-point number between 0 to 1. Default is 2/3."
+        "description": "Set fraction of decoding frame failures across all inputs which when crossed ffmpeg will return exit code 69. Crossing this threshold does not terminate processing. Range is a floating-point number between 0 to 1. Default is 2/3."
       },
       {
         "type": "long",
@@ -942,19 +942,19 @@
         "type": "long",
         "key": "max_muxing_queue_size",
         "title": "-max_muxing_queue_size packets (output, per-stream)",
-        "description": "When transcoding audio and/or video streams, ffmpeg will not begin writing into\nthe output until it has one packet for each such stream. While waiting for that\nto happen, packets for other streams are buffered. This option sets the size of\nthis buffer, in packets, for the matching output stream.\n\nThe default value of this option should be high enough for most uses, so only\ntouch this option if you are sure that you need it."
+        "description": "When transcoding audio and/or video streams, ffmpeg will not begin writing into the output until it has one packet for each such stream. While waiting for that to happen, packets for other streams are buffered. This option sets the size of this buffer, in packets, for the matching output stream.\n\nThe default value of this option should be high enough for most uses, so only touch this option if you are sure that you need it."
       },
       {
         "type": "long",
         "key": "muxing_queue_data_threshold",
         "title": "-muxing_queue_data_threshold bytes (output, per-stream)",
-        "description": "This is a minimum threshold until which the muxing queue size is not taken into\naccount. Defaults to 50 megabytes per stream, and is based on the overall size\nof packets passed to the muxer."
+        "description": "This is a minimum threshold until which the muxing queue size is not taken into account. Defaults to 50 megabytes per stream, and is based on the overall size of packets passed to the muxer."
       },
       {
         "type": "long",
         "key": "auto_conversion_filters",
         "title": "-auto_conversion_filters (global)",
-        "description": "Enable automatically inserting format conversion filters in all filter\ngraphs, including those defined by -vf, -af,\n-filter_complex and -lavfi. If filter format negotiation\nrequires a conversion, the initialization of the filters will fail.\nConversions can still be performed by inserting the relevant conversion\nfilter (scale, aresample) in the graph.\nOn by default, to explicitly disable it you need to specify\n-noauto_conversion_filters."
+        "description": "Enable automatically inserting format conversion filters in all filter graphs, including those defined by -vf, -af, -filter_complex and -lavfi. If filter format negotiation requires a conversion, the initialization of the filters will fail. Conversions can still be performed by inserting the relevant conversion filter (scale, aresample) in the graph. On by default, to explicitly disable it you need to specify -noauto_conversion_filters."
       }
     ]
   }

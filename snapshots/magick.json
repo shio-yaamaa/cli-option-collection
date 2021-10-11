@@ -425,7 +425,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -1618,7 +1618,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -2414,7 +2414,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -3264,7 +3264,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -4475,7 +4475,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -5229,7 +5229,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -5618,7 +5618,7 @@
       {
         "type": "long",
         "key": "blue-shift",
-        "title": "-blue-shift  factor",
+        "title": "-blue-shift factor",
         "description": "simulate a scene at nighttime in the moonlight"
       },
       {
@@ -5918,7 +5918,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {
@@ -7141,7 +7141,7 @@
       {
         "type": "long",
         "key": "dither",
-        "title": "-dither  method",
+        "title": "-dither method",
         "description": "apply error diffusion to image"
       },
       {

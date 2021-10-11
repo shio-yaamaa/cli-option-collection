@@ -1,15 +1,18 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { makeOptionList } from '../utils/forFetcher/optionString';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
-import { isElement, isString } from '../utils/typeGuards';
+import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/docker/cli/blob/master/cli/command/container/attach.go#L60
 // - https://github.com/docker/cli/blob/master/docs/reference/commandline/attach.md
 // Markdown files in https://github.com/docker/cli/tree/master/man do not cover all the commands.
+
+// BUG: Top-level options are not collected.
 
 interface SubcommandLocation {
   command: string; // e.g. "docker attach"
@@ -47,10 +50,7 @@ const fetchSubcommandLocationsRecursively = async (
 
   const subcommandLocations: SubcommandLocation[] = [];
   for (const td of tds) {
-    const command = td.textContent?.trim();
-    if (!command) {
-      continue;
-    }
+    const command = getInnerText(td).trim();
     if (!command.startsWith(`${parent.command} `)) {
       continue;
     }
@@ -103,16 +103,13 @@ const fetchSubcommand = async (
       continue;
     }
 
-    const title = tds[0].textContent;
+    const title = getInnerText(tds[0]);
     const description = tdToDescription(tds[2]);
-    if (!title || !description) {
-      continue;
-    }
 
     const labelElements = Array.from(tds[0].querySelectorAll('code'));
-    const optionStrings = labelElements
-      .map((element) => element.textContent?.trim())
-      .filter(isString);
+    const optionStrings = labelElements.map((element) =>
+      getInnerText(element).trim()
+    );
 
     options.push(
       ...makeOptionList(
@@ -135,10 +132,7 @@ const findOptionTable = (document: Document): Element | null => {
   return nextSibling && isElement(nextSibling, 'table') ? nextSibling : null;
 };
 
-const tdToDescription = (td: Element): string | null => {
-  if (!td.textContent) {
-    return null;
-  }
+const tdToDescription = (td: Element): string => {
   const children = Array.from(td.children);
   // Remove badges like "API 1.40+" or "Kubernetes"
   for (const child of children) {
@@ -146,7 +140,7 @@ const tdToDescription = (td: Element): string | null => {
       child.remove();
     }
   }
-  return td.textContent.trim();
+  return getInnerText(td).trim();
 };
 
 const isBadge = (element: Element): boolean => {
