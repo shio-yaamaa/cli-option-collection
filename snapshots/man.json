@@ -1,0 +1,73 @@
+[
+  {
+    "name": "man",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Display all matching manual pages."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C file",
+        "description": "Use the specified file instead of the default configuration file. This permits users to configure their own manual environment. See man.conf(5) for a description of the contents of this file."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Copy the manual page to the standard output instead of using less(1) to paginate it. This is done by default if the standard output is not a terminal device.\n\nWhen using -c, most terminal devices are unable to show the markup. To print the output of man to the terminal with markup but without using a pager, pipe it to ul(1). To remove the markup, pipe the output to col(1) -b instead."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "A synonym for whatis(1). It searches for name in manual page names and displays the header lines from all matching pages. The search is case insensitive and matches whole words only."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Display only the SYNOPSIS lines of the requested manual pages. Implies -a and -c."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "A synonym for apropos(1). Instead of name, an expression can be provided using the syntax described in the apropos(1) manual. By default, it displays the header lines of all matching pages."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "A synonym for mandoc(1). The name arguments are interpreted as filenames. No search is done and file, path, section, subsection, and -w are ignored. This option implies -a."
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M path",
+        "description": "Override the list of directories to search for manual pages. The supplied path must be a colon (‘:’) separated list of directories. This option also overrides the environment variable MANPATH and any directories specified in the man.conf(5) file."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m path",
+        "description": "Augment the list of directories to search for manual pages. The supplied path must be a colon (‘:’) separated list of directories. These directories will be searched before those specified using the -M option, the MANPATH environment variable, the man.conf(5) file, or the default directories."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S subsection",
+        "description": "Only show pages for the specified machine(1) architecture. subsection is case insensitive.\n\nBy default manual pages for all architectures are installed. Therefore this option can be used to view pages for one architecture whilst using another.\n\nThis option overrides the MACHINE environment variable."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w",
+        "description": "List the pathnames of all matching manual pages instead of displaying any of them. If no name is given, list the directories that would be searched."
+      }
+    ]
+  }
+]
