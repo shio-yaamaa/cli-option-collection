@@ -1,4 +1,5 @@
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -42,8 +43,8 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   if (dts.length === 0) {
     return [];
   }
-  const title = dts[0].textContent?.trim().replace('¶', '') ?? '';
-  const description = dd.textContent?.trim() ?? '';
+  const title = getInnerText(dts[0]).trim().replace('¶', '');
+  const description = getInnerText(dd).trim();
   const optionStrings = transformOptionStrings(
     [title],
     [splitByComma, trimSpaceDelimitedArguments, trimEqualDelimitedArguments]

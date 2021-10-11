@@ -6,25 +6,25 @@
         "type": "short",
         "key": "n",
         "title": "-n",
-        "description": "No delay.\nIf fn is locked by another process,\nsetlock gives up."
+        "description": "No delay. If fn is locked by another process, setlock gives up."
       },
       {
         "type": "short",
         "key": "N",
         "title": "-N",
-        "description": "(Default.)\nDelay.\nIf fn is locked by another process,\nsetlock waits until it can obtain a new lock."
+        "description": "(Default.) Delay. If fn is locked by another process, setlock waits until it can obtain a new lock."
       },
       {
         "type": "short",
         "key": "x",
         "title": "-x",
-        "description": "If fn cannot be opened (or created) or locked,\nsetlock exits zero."
+        "description": "If fn cannot be opened (or created) or locked, setlock exits zero."
       },
       {
         "type": "short",
         "key": "X",
         "title": "-X",
-        "description": "(Default.)\nIf fn cannot be opened (or created) or locked,\nsetlock prints an error message and exits nonzero."
+        "description": "(Default.) If fn cannot be opened (or created) or locked, setlock prints an error message and exits nonzero."
       }
     ]
   }

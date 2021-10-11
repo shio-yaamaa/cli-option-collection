@@ -12,19 +12,19 @@
         "type": "long",
         "key": "columns",
         "title": "-COLUMN, --columns=COLUMN",
-        "description": "output COLUMN columns and print columns down, unless -a is used.\n      Balance number of lines in the columns on each page"
+        "description": "output COLUMN columns and print columns down, unless -a is used. Balance number of lines in the columns on each page"
       },
       {
         "type": "short",
         "key": "a",
         "title": "-a, --across",
-        "description": "print columns across rather than down, used together with\n    -COLUMN"
+        "description": "print columns across rather than down, used together with -COLUMN"
       },
       {
         "type": "long",
         "key": "across",
         "title": "-a, --across",
-        "description": "print columns across rather than down, used together with\n    -COLUMN"
+        "description": "print columns across rather than down, used together with -COLUMN"
       },
       {
         "type": "short",
@@ -78,31 +78,31 @@
         "type": "short",
         "key": "F",
         "title": "-F, -f, --form-feed",
-        "description": "use form feeds instead of newlines to separate pages (by a 3-line page\n      header with -F or a 5-line header and trailer without\n    -F)"
+        "description": "use form feeds instead of newlines to separate pages (by a 3-line page header with -F or a 5-line header and trailer without -F)"
       },
       {
         "type": "short",
         "key": "f",
         "title": "-F, -f, --form-feed",
-        "description": "use form feeds instead of newlines to separate pages (by a 3-line page\n      header with -F or a 5-line header and trailer without\n    -F)"
+        "description": "use form feeds instead of newlines to separate pages (by a 3-line page header with -F or a 5-line header and trailer without -F)"
       },
       {
         "type": "long",
         "key": "form-feed",
         "title": "-F, -f, --form-feed",
-        "description": "use form feeds instead of newlines to separate pages (by a 3-line page\n      header with -F or a 5-line header and trailer without\n    -F)"
+        "description": "use form feeds instead of newlines to separate pages (by a 3-line page header with -F or a 5-line header and trailer without -F)"
       },
       {
         "type": "short",
         "key": "h",
         "title": "-h, --header=HEADER",
-        "description": "use a centered HEADER instead of filename in page header, -h\n      \"\" prints a blank line, don't use -h\"\""
+        "description": "use a centered HEADER instead of filename in page header, -h \"\" prints a blank line, don't use -h\"\""
       },
       {
         "type": "long",
         "key": "header",
         "title": "-h, --header=HEADER",
-        "description": "use a centered HEADER instead of filename in page header, -h\n      \"\" prints a blank line, don't use -h\"\""
+        "description": "use a centered HEADER instead of filename in page header, -h \"\" prints a blank line, don't use -h\"\""
       },
       {
         "type": "short",
@@ -120,73 +120,73 @@
         "type": "short",
         "key": "J",
         "title": "-J, --join-lines",
-        "description": "merge full lines, turns off -W line truncation, no column\n      alignment, --sep-string[=STRING] sets separators"
+        "description": "merge full lines, turns off -W line truncation, no column alignment, --sep-string[=STRING] sets separators"
       },
       {
         "type": "long",
         "key": "join-lines",
         "title": "-J, --join-lines",
-        "description": "merge full lines, turns off -W line truncation, no column\n      alignment, --sep-string[=STRING] sets separators"
+        "description": "merge full lines, turns off -W line truncation, no column alignment, --sep-string[=STRING] sets separators"
       },
       {
         "type": "short",
         "key": "l",
         "title": "-l, --length=PAGE_LENGTH",
-        "description": "set the page length to PAGE_LENGTH (66) lines (default number of lines of\n      text 56, and with -F 63). implies -t if PAGE_LENGTH <=\n    10"
+        "description": "set the page length to PAGE_LENGTH (66) lines (default number of lines of text 56, and with -F 63). implies -t if PAGE_LENGTH <= 10"
       },
       {
         "type": "long",
         "key": "length",
         "title": "-l, --length=PAGE_LENGTH",
-        "description": "set the page length to PAGE_LENGTH (66) lines (default number of lines of\n      text 56, and with -F 63). implies -t if PAGE_LENGTH <=\n    10"
+        "description": "set the page length to PAGE_LENGTH (66) lines (default number of lines of text 56, and with -F 63). implies -t if PAGE_LENGTH <= 10"
       },
       {
         "type": "short",
         "key": "m",
         "title": "-m, --merge",
-        "description": "print all files in parallel, one in each column, truncate lines, but join\n      lines of full length with -J"
+        "description": "print all files in parallel, one in each column, truncate lines, but join lines of full length with -J"
       },
       {
         "type": "long",
         "key": "merge",
         "title": "-m, --merge",
-        "description": "print all files in parallel, one in each column, truncate lines, but join\n      lines of full length with -J"
+        "description": "print all files in parallel, one in each column, truncate lines, but join lines of full length with -J"
       },
       {
         "type": "short",
         "key": "n",
         "title": "-n[SEP[DIGITS]], --number-lines[=SEP[DIGITS]]",
-        "description": "number lines, use DIGITS (5) digits, then SEP (TAB), default counting\n      starts with 1st line of input file"
+        "description": "number lines, use DIGITS (5) digits, then SEP (TAB), default counting starts with 1st line of input file"
       },
       {
         "type": "long",
         "key": "number-lines",
         "title": "-n[SEP[DIGITS]], --number-lines[=SEP[DIGITS]]",
-        "description": "number lines, use DIGITS (5) digits, then SEP (TAB), default counting\n      starts with 1st line of input file"
+        "description": "number lines, use DIGITS (5) digits, then SEP (TAB), default counting starts with 1st line of input file"
       },
       {
         "type": "short",
         "key": "N",
         "title": "-N, --first-line-number=NUMBER",
-        "description": "start counting with NUMBER at 1st line of first page printed (see\n      +FIRST_PAGE)"
+        "description": "start counting with NUMBER at 1st line of first page printed (see +FIRST_PAGE)"
       },
       {
         "type": "long",
         "key": "first-line-number",
         "title": "-N, --first-line-number=NUMBER",
-        "description": "start counting with NUMBER at 1st line of first page printed (see\n      +FIRST_PAGE)"
+        "description": "start counting with NUMBER at 1st line of first page printed (see +FIRST_PAGE)"
       },
       {
         "type": "short",
         "key": "o",
         "title": "-o, --indent=MARGIN",
-        "description": "offset each line with MARGIN (zero) spaces, do not affect -w or\n      -W, MARGIN will be added to PAGE_WIDTH"
+        "description": "offset each line with MARGIN (zero) spaces, do not affect -w or -W, MARGIN will be added to PAGE_WIDTH"
       },
       {
         "type": "long",
         "key": "indent",
         "title": "-o, --indent=MARGIN",
-        "description": "offset each line with MARGIN (zero) spaces, do not affect -w or\n      -W, MARGIN will be added to PAGE_WIDTH"
+        "description": "offset each line with MARGIN (zero) spaces, do not affect -w or -W, MARGIN will be added to PAGE_WIDTH"
       },
       {
         "type": "short",
@@ -204,25 +204,25 @@
         "type": "short",
         "key": "s",
         "title": "-s[CHAR], --separator[=CHAR]",
-        "description": "separate columns by a single character, default for CHAR is the\n      <TAB> character without -w and 'no char' with -w.\n      -s[CHAR] turns off line truncation of all 3 column options\n      (-COLUMN|-a -COLUMN|-m) except -w is set"
+        "description": "separate columns by a single character, default for CHAR is the <TAB> character without -w and 'no char' with -w. -s[CHAR] turns off line truncation of all 3 column options (-COLUMN|-a -COLUMN|-m) except -w is set"
       },
       {
         "type": "long",
         "key": "separator",
         "title": "-s[CHAR], --separator[=CHAR]",
-        "description": "separate columns by a single character, default for CHAR is the\n      <TAB> character without -w and 'no char' with -w.\n      -s[CHAR] turns off line truncation of all 3 column options\n      (-COLUMN|-a -COLUMN|-m) except -w is set"
+        "description": "separate columns by a single character, default for CHAR is the <TAB> character without -w and 'no char' with -w. -s[CHAR] turns off line truncation of all 3 column options (-COLUMN|-a -COLUMN|-m) except -w is set"
       },
       {
         "type": "short",
         "key": "S",
         "title": "-S[STRING], --sep-string[=STRING]",
-        "description": "separate columns by STRING, without -S: Default separator\n      <TAB> with -J and <space> otherwise (same as\n      -S\" \"), no effect on column options"
+        "description": "separate columns by STRING, without -S: Default separator <TAB> with -J and <space> otherwise (same as -S\" \"), no effect on column options"
       },
       {
         "type": "long",
         "key": "sep-string",
         "title": "-S[STRING], --sep-string[=STRING]",
-        "description": "separate columns by STRING, without -S: Default separator\n      <TAB> with -J and <space> otherwise (same as\n      -S\" \"), no effect on column options"
+        "description": "separate columns by STRING, without -S: Default separator <TAB> with -J and <space> otherwise (same as -S\" \"), no effect on column options"
       },
       {
         "type": "short",
@@ -240,13 +240,13 @@
         "type": "short",
         "key": "T",
         "title": "-T, --omit-pagination",
-        "description": "omit page headers and trailers, eliminate any pagination by form feeds set\n      in input files"
+        "description": "omit page headers and trailers, eliminate any pagination by form feeds set in input files"
       },
       {
         "type": "long",
         "key": "omit-pagination",
         "title": "-T, --omit-pagination",
-        "description": "omit page headers and trailers, eliminate any pagination by form feeds set\n      in input files"
+        "description": "omit page headers and trailers, eliminate any pagination by form feeds set in input files"
       },
       {
         "type": "short",
@@ -264,25 +264,25 @@
         "type": "short",
         "key": "w",
         "title": "-w, --width=PAGE_WIDTH",
-        "description": "set page width to PAGE_WIDTH (72) characters for multiple text-column\n      output only, -s[char] turns off (72)"
+        "description": "set page width to PAGE_WIDTH (72) characters for multiple text-column output only, -s[char] turns off (72)"
       },
       {
         "type": "long",
         "key": "width",
         "title": "-w, --width=PAGE_WIDTH",
-        "description": "set page width to PAGE_WIDTH (72) characters for multiple text-column\n      output only, -s[char] turns off (72)"
+        "description": "set page width to PAGE_WIDTH (72) characters for multiple text-column output only, -s[char] turns off (72)"
       },
       {
         "type": "short",
         "key": "W",
         "title": "-W, --page-width=PAGE_WIDTH",
-        "description": "set page width to PAGE_WIDTH (72) characters always, truncate lines,\n      except -J option is set, no interference with -S or\n      -s"
+        "description": "set page width to PAGE_WIDTH (72) characters always, truncate lines, except -J option is set, no interference with -S or -s"
       },
       {
         "type": "long",
         "key": "page-width",
         "title": "-W, --page-width=PAGE_WIDTH",
-        "description": "set page width to PAGE_WIDTH (72) characters always, truncate lines,\n      except -J option is set, no interference with -S or\n      -s"
+        "description": "set page width to PAGE_WIDTH (72) characters always, truncate lines, except -J option is set, no interference with -S or -s"
       },
       {
         "type": "long",

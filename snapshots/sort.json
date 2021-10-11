@@ -132,7 +132,7 @@
         "type": "long",
         "key": "sort",
         "title": "--sort=WORD",
-        "description": "sort according to WORD: general-numeric -g, human-numeric\n      -h, month -M, numeric -n, random -R, version\n      -V"
+        "description": "sort according to WORD: general-numeric -g, human-numeric -h, month -M, numeric -n, random -R, version -V"
       },
       {
         "type": "short",
@@ -180,13 +180,13 @@
         "type": "long",
         "key": "debug",
         "title": "--debug",
-        "description": "annotate the part of the line used to sort, and warn about questionable\n      usage to stderr"
+        "description": "annotate the part of the line used to sort, and warn about questionable usage to stderr"
       },
       {
         "type": "long",
         "key": "files0-from",
         "title": "--files0-from=F",
-        "description": "read input from the files specified by NUL-terminated names in file F; If\n      F is - then read names from standard input"
+        "description": "read input from the files specified by NUL-terminated names in file F; If F is - then read names from standard input"
       },
       {
         "type": "short",
@@ -264,13 +264,13 @@
         "type": "short",
         "key": "T",
         "title": "-T, --temporary-directory=DIR",
-        "description": "use DIR for temporaries, not $TMPDIR or /tmp; multiple options\n      specify multiple directories"
+        "description": "use DIR for temporaries, not $TMPDIR or /tmp; multiple options specify multiple directories"
       },
       {
         "type": "long",
         "key": "temporary-directory",
         "title": "-T, --temporary-directory=DIR",
-        "description": "use DIR for temporaries, not $TMPDIR or /tmp; multiple options\n      specify multiple directories"
+        "description": "use DIR for temporaries, not $TMPDIR or /tmp; multiple options specify multiple directories"
       },
       {
         "type": "long",
@@ -282,13 +282,13 @@
         "type": "short",
         "key": "u",
         "title": "-u, --unique",
-        "description": "with -c, check for strict ordering; without -c, output only\n      the first of an equal run"
+        "description": "with -c, check for strict ordering; without -c, output only the first of an equal run"
       },
       {
         "type": "long",
         "key": "unique",
         "title": "-u, --unique",
-        "description": "with -c, check for strict ordering; without -c, output only\n      the first of an equal run"
+        "description": "with -c, check for strict ordering; without -c, output only the first of an equal run"
       },
       {
         "type": "short",

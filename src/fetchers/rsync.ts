@@ -15,6 +15,7 @@ import {
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 import { isElement } from '../utils/typeGuards';
+import { getInnerText } from '../utils/dom';
 
 // Alternative sources:
 // - https://raw.githubusercontent.com/WayneD/rsync/master/rsync.1.md
@@ -40,7 +41,7 @@ export const fetchRsync: FetchFunction = async (): Promise<Command[]> => {
 const findOptionLists = (document: Document): Element[] => {
   const h1s = Array.from(document.querySelectorAll('h1'));
   const optionSummaryHeading = h1s.find(
-    (element) => element.textContent === 'OPTION SUMMARY'
+    (element) => getInnerText(element) === 'OPTION SUMMARY'
   );
   if (!optionSummaryHeading) {
     return [];
@@ -59,11 +60,7 @@ const findOptionLists = (document: Document): Element[] => {
 };
 
 const listToOptions = (list: Element): Option[] => {
-  const text = list.textContent;
-  if (!text) {
-    return [];
-  }
-  const listItems = parseTextList(text.split('\n'));
+  const listItems = parseTextList(getInnerText(list).split('\n'));
   const options: Option[] = [];
   for (const { titles, descriptionLines } of listItems) {
     const optionStrings = transformOptionStrings(titles, [

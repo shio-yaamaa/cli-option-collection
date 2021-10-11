@@ -72,19 +72,19 @@
         "type": "short",
         "key": "w",
         "title": "-w, --wrap=COLS",
-        "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable\n      line wrapping"
+        "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable line wrapping"
       },
       {
         "type": "long",
         "key": "wrap",
         "title": "-w, --wrap=COLS",
-        "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable\n      line wrapping"
+        "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable line wrapping"
       },
       {
         "type": "long",
         "key": "z85",
         "title": "--z85",
-        "description": "ascii85-like encoding (ZeroMQ spec:32/Z85); when encoding, input length\n      must be a multiple of 4; when decoding, input length must be a multiple of\n      5"
+        "description": "ascii85-like encoding (ZeroMQ spec:32/Z85); when encoding, input length must be a multiple of 4; when decoding, input length must be a multiple of 5"
       },
       {
         "type": "long",

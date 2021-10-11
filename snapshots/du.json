@@ -30,19 +30,19 @@
         "type": "long",
         "key": "apparent-size",
         "title": "--apparent-size",
-        "description": "print apparent sizes rather than device usage; although the apparent size\n      is usually smaller, it may be larger due to holes in ('sparse') files,\n      internal fragmentation, indirect blocks, and the like"
+        "description": "print apparent sizes rather than device usage; although the apparent size is usually smaller, it may be larger due to holes in ('sparse') files, internal fragmentation, indirect blocks, and the like"
       },
       {
         "type": "short",
         "key": "B",
         "title": "-B, --block-size=SIZE",
-        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in\n      units of 1,048,576 bytes; see SIZE format below"
+        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
         "type": "long",
         "key": "block-size",
         "title": "-B, --block-size=SIZE",
-        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in\n      units of 1,048,576 bytes; see SIZE format below"
+        "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
         "type": "short",
@@ -84,19 +84,19 @@
         "type": "short",
         "key": "d",
         "title": "-d, --max-depth=N",
-        "description": "print the total for a directory (or file, with --all) only if it is\n      N or fewer levels below the command line argument;\n      --max-depth=0 is the same as --summarize"
+        "description": "print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument; --max-depth=0 is the same as --summarize"
       },
       {
         "type": "long",
         "key": "max-depth",
         "title": "-d, --max-depth=N",
-        "description": "print the total for a directory (or file, with --all) only if it is\n      N or fewer levels below the command line argument;\n      --max-depth=0 is the same as --summarize"
+        "description": "print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument; --max-depth=0 is the same as --summarize"
       },
       {
         "type": "long",
         "key": "files0-from",
         "title": "--files0-from=F",
-        "description": "summarize device usage of the NUL-terminated file names specified in file\n      F; if F is -, then read names from standard input"
+        "description": "summarize device usage of the NUL-terminated file names specified in file F; if F is -, then read names from standard input"
       },
       {
         "type": "short",
@@ -204,25 +204,25 @@
         "type": "short",
         "key": "t",
         "title": "-t, --threshold=SIZE",
-        "description": "exclude entries smaller than SIZE if positive, or entries greater than\n      SIZE if negative"
+        "description": "exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative"
       },
       {
         "type": "long",
         "key": "threshold",
         "title": "-t, --threshold=SIZE",
-        "description": "exclude entries smaller than SIZE if positive, or entries greater than\n      SIZE if negative"
+        "description": "exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative"
       },
       {
         "type": "long",
         "key": "time",
         "title": "--time",
-        "description": "show time of the last modification of any file in the directory, or any of\n      its subdirectories"
+        "description": "show time of the last modification of any file in the directory, or any of its subdirectories"
       },
       {
         "type": "long",
         "key": "time-style",
         "title": "--time-style=STYLE",
-        "description": "show times using STYLE, which can be: full-iso, long-iso, iso, or +FORMAT;\n      FORMAT is interpreted like in 'date'"
+        "description": "show times using STYLE, which can be: full-iso, long-iso, iso, or +FORMAT; FORMAT is interpreted like in 'date'"
       },
       {
         "type": "short",

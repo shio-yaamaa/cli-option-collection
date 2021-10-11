@@ -1,4 +1,5 @@
 import { Fetcher, Command, Option } from '../../types';
+import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionListForSingleDashStyle } from '../../utils/forFetcher/optionString';
@@ -39,21 +40,14 @@ const optionTableToOptions = (table: Element): Option[] => {
     if (tds.length !== 2) {
       continue;
     }
-    const title = tds[0].textContent?.trim();
-    const description = tds[1].textContent?.trim();
-    if (!title || !description) {
-      continue;
-    }
+    const title = getInnerText(tds[0]).trim();
+    const description = getInnerText(tds[1]).trim();
     const optionStrings = transformOptionStrings(
       [title],
       [trimSpaceDelimitedArguments]
     );
     options.push(
-      ...makeOptionListForSingleDashStyle(
-        optionStrings,
-        title,
-        normalizeSpacesAndLinebreaks(description)
-      )
+      ...makeOptionListForSingleDashStyle(optionStrings, title, description)
     );
   }
   return options;

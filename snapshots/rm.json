@@ -24,19 +24,19 @@
         "type": "short",
         "key": "I",
         "title": "-I",
-        "description": "prompt once before removing more than three files, or when removing\n      recursively; less intrusive than -i, while still giving protection\n      against most mistakes"
+        "description": "prompt once before removing more than three files, or when removing recursively; less intrusive than -i, while still giving protection against most mistakes"
       },
       {
         "type": "long",
         "key": "interactive",
         "title": "--interactive[=WHEN]",
-        "description": "prompt according to WHEN: never, once (-I), or always (-i);\n      without WHEN, prompt always"
+        "description": "prompt according to WHEN: never, once (-I), or always (-i); without WHEN, prompt always"
       },
       {
         "type": "long",
         "key": "one-file-system",
         "title": "--one-file-system",
-        "description": "when removing a hierarchy recursively, skip any directory that is on a\n      file system different from that of the corresponding command line\n    argument"
+        "description": "when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument"
       },
       {
         "type": "long",
@@ -48,7 +48,7 @@
         "type": "long",
         "key": "preserve-root",
         "title": "--preserve-root[=all]",
-        "description": "do not remove '/' (default); with 'all', reject any command line argument\n      on a separate device from its parent"
+        "description": "do not remove '/' (default); with 'all', reject any command line argument on a separate device from its parent"
       },
       {
         "type": "short",

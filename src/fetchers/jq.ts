@@ -1,19 +1,17 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionList } from '../utils/forFetcher/optionString';
-import {
-  normalizeSpacesAndLinebreaks,
-  normalizeSpacingAroundSlash,
-} from '../utils/forFetcher/string';
+import { normalizeSpacingAroundSlash } from '../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimNonDelimitedArguments,
   trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
-import { isElement, isString } from '../utils/typeGuards';
+import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
 // - https://github.com/stedolan/jq/blob/master/src/main.c#L73
@@ -45,11 +43,12 @@ const sectionToOptions = (section: Element): Option[] => {
 
   const uls = Array.from(section.querySelectorAll('ul'));
   for (const ul of uls) {
-    const ulText = ul.textContent;
-    if (!ulText) {
+    const li = ul.querySelector('li');
+    if (!li) {
       continue;
     }
-    const title = normalizeSpacingAroundSlash(ulText.trim().slice(0, -1));
+    const liText = getInnerText(li);
+    const title = normalizeSpacingAroundSlash(liText.trim().slice(0, -1));
     const description = findDescriptionForList(ul);
     const optionStrings = ulToOptionStrings(ul);
     options.push(...makeOptionList(optionStrings, title, description));
@@ -60,7 +59,7 @@ const sectionToOptions = (section: Element): Option[] => {
 
 const ulToOptionStrings = (ul: Element): string[] => {
   const codes = Array.from(ul.querySelectorAll('code'));
-  const texts = codes.map((code) => code.textContent).filter(isString);
+  const texts = codes.map((code) => getInnerText(code));
   return transformOptionStrings(texts, [
     trimSpaceDelimitedArguments,
     trimNonDelimitedArguments,
@@ -78,8 +77,6 @@ const findDescriptionForList = (list: Element): string => {
     }
   }
   return descriptionElements
-    .map((element) => element.textContent)
-    .filter(isString)
-    .map((text) => normalizeSpacesAndLinebreaks(text.trim()))
+    .map((element) => getInnerText(element).trim())
     .join('\n');
 };

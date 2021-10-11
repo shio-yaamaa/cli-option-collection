@@ -24,7 +24,7 @@
         "type": "long",
         "key": "check-order",
         "title": "--check-order",
-        "description": "check that the input is correctly sorted, even if all input lines are\n      pairable"
+        "description": "check that the input is correctly sorted, even if all input lines are pairable"
       },
       {
         "type": "long",

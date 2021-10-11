@@ -48,13 +48,13 @@
         "type": "short",
         "key": "z",
         "title": "-z, --zero",
-        "description": "end each output line with NUL, not newline, and disable file name\n    escaping"
+        "description": "end each output line with NUL, not newline, and disable file name escaping"
       },
       {
         "type": "long",
         "key": "zero",
         "title": "-z, --zero",
-        "description": "end each output line with NUL, not newline, and disable file name\n    escaping"
+        "description": "end each output line with NUL, not newline, and disable file name escaping"
       },
       {
         "type": "long",

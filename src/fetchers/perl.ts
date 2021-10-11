@@ -1,6 +1,7 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import {
   DListEntry,
   findDListEntries,
@@ -20,7 +21,6 @@ import {
   trimEqualDelimitedArguments,
   trimNonDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
-import { isString } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -61,13 +61,9 @@ const findOptionDl = (document: Document): HTMLDListElement | null => {
 };
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const dtTexts = dts
-    .map((dt) =>
-      dt.textContent?.startsWith('#') ? dt.textContent.slice(1) : dt
-    )
-    .filter(isString);
+  const dtTexts = dts.map((dt) => getInnerText(dt).trim().replace(/^#/, ''));
   const title = mergeOptionTitles(dtTexts);
-  const description = dd.textContent?.trim() ?? '';
+  const description = getInnerText(dd);
 
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,

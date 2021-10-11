@@ -1,4 +1,5 @@
 import { Command, Option, Fetcher } from '../../types';
+import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -13,7 +14,6 @@ import {
   trimSpaceDelimitedArguments,
   trimEqualDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
-import { isString } from '../../utils/typeGuards';
 import { mergeLists } from '../../utils/utils';
 
 // BUG: Options starting with "+" are not collected.
@@ -64,9 +64,9 @@ const sectionToOptions = (section: Element): Option[] => {
 };
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
-  const dtTexts = dts.map((dt) => dt.textContent).filter(isString);
+  const dtTexts = dts.map((dt) => getInnerText(dt));
   const title = mergeOptionTitles(dtTexts);
-  const description = dd.textContent?.trim() ?? '';
+  const description = getInnerText(dd);
   const optionStrings = transformOptionStrings(dtTexts, [
     splitByComma,
     trimEqualDelimitedArguments,

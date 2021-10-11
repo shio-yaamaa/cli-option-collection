@@ -36,31 +36,31 @@
         "type": "short",
         "key": "I",
         "title": "-I[FMT], --iso-8601[=FMT]",
-        "description": "output date/time in ISO 8601 format. FMT='date' for date only (the\n      default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the\n      indicated precision. Example: 2006-08-14T02:34:56-06:00"
+        "description": "output date/time in ISO 8601 format. FMT='date' for date only (the default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the indicated precision. Example: 2006-08-14T02:34:56-06:00"
       },
       {
         "type": "long",
         "key": "iso-8601",
         "title": "-I[FMT], --iso-8601[=FMT]",
-        "description": "output date/time in ISO 8601 format. FMT='date' for date only (the\n      default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the\n      indicated precision. Example: 2006-08-14T02:34:56-06:00"
+        "description": "output date/time in ISO 8601 format. FMT='date' for date only (the default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the indicated precision. Example: 2006-08-14T02:34:56-06:00"
       },
       {
         "type": "short",
         "key": "R",
         "title": "-R, --rfc-email",
-        "description": "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006\n      02:34:56 -0600"
+        "description": "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006 02:34:56 -0600"
       },
       {
         "type": "long",
         "key": "rfc-email",
         "title": "-R, --rfc-email",
-        "description": "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006\n      02:34:56 -0600"
+        "description": "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006 02:34:56 -0600"
       },
       {
         "type": "long",
         "key": "rfc-3339",
         "title": "--rfc-3339=FMT",
-        "description": "output date/time in RFC 3339 format. FMT='date', 'seconds', or 'ns' for\n      date and time to the indicated precision. Example: 2006-08-14\n      02:34:56-06:00"
+        "description": "output date/time in RFC 3339 format. FMT='date', 'seconds', or 'ns' for date and time to the indicated precision. Example: 2006-08-14 02:34:56-06:00"
       },
       {
         "type": "short",

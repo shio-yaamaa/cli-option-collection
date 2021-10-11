@@ -24,7 +24,7 @@
         "type": "long",
         "key": "context",
         "title": "--context[=CTX]",
-        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK\n      security context to CTX"
+        "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX"
       },
       {
         "type": "long",

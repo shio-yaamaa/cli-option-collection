@@ -30,19 +30,19 @@
         "type": "long",
         "key": "cached",
         "title": "--cached=MODE",
-        "description": "specify how to use cached attributes; useful on remote file systems. See\n      MODE below"
+        "description": "specify how to use cached attributes; useful on remote file systems. See MODE below"
       },
       {
         "type": "short",
         "key": "c",
         "title": "-c --format=FORMAT",
-        "description": "use the specified FORMAT instead of the default; output a newline after\n      each use of FORMAT"
+        "description": "use the specified FORMAT instead of the default; output a newline after each use of FORMAT"
       },
       {
         "type": "long",
         "key": "printf",
         "title": "--printf=FORMAT",
-        "description": "like --format, but interpret backslash escapes, and do not output a\n      mandatory trailing newline; if you want a newline, include \\n in\n    FORMAT"
+        "description": "like --format, but interpret backslash escapes, and do not output a mandatory trailing newline; if you want a newline, include \\n in FORMAT"
       },
       {
         "type": "short",

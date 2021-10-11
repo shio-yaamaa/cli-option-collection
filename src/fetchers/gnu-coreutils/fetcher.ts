@@ -1,6 +1,7 @@
 import path from 'path';
 
 import { Fetcher, Command, Option } from '../../types';
+import { getInnerText } from '../../utils/dom';
 import { findDListEntries } from '../../utils/forFetcher/dom';
 import {
   DOWNLOADS_DIRECTORY,
@@ -8,10 +9,7 @@ import {
 } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import {
-  normalizeSpacesAndLinebreaks,
-  normalizeSpacingAroundComma,
-} from '../../utils/forFetcher/string';
+import { normalizeSpacingAroundComma } from '../../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -64,10 +62,8 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
   const dlistEntries = findDListEntries(list);
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const title = dts[0].textContent;
-    if (!title) {
-      continue;
-    }
+    const title = normalizeSpacingAroundComma(getInnerText(dts[0]));
+    const description = getInnerText(dd).trim();
     const optionStrings = transformOptionStrings(
       [title],
       [
@@ -77,13 +73,7 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
         trimSpaceDelimitedArguments,
       ]
     );
-    options.push(
-      ...makeOptionList(
-        optionStrings,
-        normalizeSpacesAndLinebreaks(normalizeSpacingAroundComma(title)),
-        dd.textContent?.trim() ?? ''
-      )
-    );
+    options.push(...makeOptionList(optionStrings, title, description));
   }
   return options;
 };

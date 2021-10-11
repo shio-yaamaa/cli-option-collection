@@ -6,13 +6,13 @@
         "type": "short",
         "key": "a",
         "title": "-a, --all",
-        "description": "same as -b -d --login -p -r -t\n      -T -u"
+        "description": "same as -b -d --login -p -r -t -T -u"
       },
       {
         "type": "long",
         "key": "all",
         "title": "-a, --all",
-        "description": "same as -b -d --login -p -r -t\n      -T -u"
+        "description": "same as -b -d --login -p -r -t -T -u"
       },
       {
         "type": "short",

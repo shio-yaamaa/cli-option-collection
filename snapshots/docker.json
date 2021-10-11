@@ -430,7 +430,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private) 'host': Run the container in the Docker host's cgroup namespace 'private': Run the container in its own private cgroup namespace '': Use the cgroup namespace as configured by the default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -1873,7 +1873,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private) 'host': Run the container in the Docker host's cgroup namespace 'private': Run the container in its own private cgroup namespace '': Use the cgroup namespace as configured by the default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -3439,7 +3439,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private) 'host': Run the container in the Docker host's cgroup namespace 'private': Run the container in its own private cgroup namespace '': Use the cgroup namespace as configured by the default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",
@@ -4525,7 +4525,7 @@
         "type": "long",
         "key": "cgroupns",
         "title": "--cgroupns",
-        "description": "Cgroup namespace to use (host|private)\n'host':    Run the container in the Docker host's cgroup namespace\n'private': Run the container in its own private cgroup namespace\n'':        Use the cgroup namespace as configured by the\n           default-cgroupns-mode option on the daemon (default)"
+        "description": "Cgroup namespace to use (host|private) 'host': Run the container in the Docker host's cgroup namespace 'private': Run the container in its own private cgroup namespace '': Use the cgroup namespace as configured by the default-cgroupns-mode option on the daemon (default)"
       },
       {
         "type": "long",

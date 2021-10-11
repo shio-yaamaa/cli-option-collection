@@ -48,25 +48,25 @@
         "type": "long",
         "key": "dereference",
         "title": "--dereference",
-        "description": "affect the referent of each symbolic link (this is the default), rather\n      than the symbolic link itself"
+        "description": "affect the referent of each symbolic link (this is the default), rather than the symbolic link itself"
       },
       {
         "type": "short",
         "key": "h",
         "title": "-h, --no-dereference",
-        "description": "affect symbolic links instead of any referenced file (useful only on\n      systems that can change the ownership of a symlink)"
+        "description": "affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)"
       },
       {
         "type": "long",
         "key": "no-dereference",
         "title": "-h, --no-dereference",
-        "description": "affect symbolic links instead of any referenced file (useful only on\n      systems that can change the ownership of a symlink)"
+        "description": "affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)"
       },
       {
         "type": "long",
         "key": "from",
         "title": "--from=CURRENT_OWNER:CURRENT_GROUP",
-        "description": "change the owner and/or group of each file only if its current owner\n      and/or group match those specified here. Either may be omitted, in which\n      case a match is not required for the omitted attribute"
+        "description": "change the owner and/or group of each file only if its current owner and/or group match those specified here. Either may be omitted, in which case a match is not required for the omitted attribute"
       },
       {
         "type": "long",
@@ -102,7 +102,7 @@
         "type": "short",
         "key": "H",
         "title": "-H",
-        "description": "if a command line argument is a symbolic link to a directory, traverse\n    it"
+        "description": "if a command line argument is a symbolic link to a directory, traverse it"
       },
       {
         "type": "short",

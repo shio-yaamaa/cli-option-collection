@@ -48,7 +48,7 @@
         "type": "long",
         "key": "block-size",
         "title": "--block-size=SIZE",
-        "description": "with -l, scale sizes by SIZE when printing them; e.g.,\n      '--block-size=M'; see SIZE format below"
+        "description": "with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below"
       },
       {
         "type": "short",
@@ -66,7 +66,7 @@
         "type": "short",
         "key": "c",
         "title": "-c",
-        "description": "with -lt: sort by, and show, ctime (time of last modification of\n      file status information); with -l: show ctime and sort by name;\n      otherwise: sort by ctime, newest first"
+        "description": "with -lt: sort by, and show, ctime (time of last modification of file status information); with -l: show ctime and sort by name; otherwise: sort by ctime, newest first"
       },
       {
         "type": "short",
@@ -78,7 +78,7 @@
         "type": "long",
         "key": "color",
         "title": "--color[=WHEN]",
-        "description": "colorize the output; WHEN can be 'always' (default if omitted), 'auto', or\n      'never'; more info below"
+        "description": "colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below"
       },
       {
         "type": "short",
@@ -114,13 +114,13 @@
         "type": "short",
         "key": "F",
         "title": "-F, --classify[=WHEN]",
-        "description": "append indicator (one of */=>@|) to entries; WHEN can be 'always'\n      (default if omitted), 'auto', or 'never'"
+        "description": "append indicator (one of */=>@|) to entries; WHEN can be 'always' (default if omitted), 'auto', or 'never'"
       },
       {
         "type": "long",
         "key": "classify",
         "title": "-F, --classify[=WHEN]",
-        "description": "append indicator (one of */=>@|) to entries; WHEN can be 'always'\n      (default if omitted), 'auto', or 'never'"
+        "description": "append indicator (one of */=>@|) to entries; WHEN can be 'always' (default if omitted), 'auto', or 'never'"
       },
       {
         "type": "long",
@@ -132,7 +132,7 @@
         "type": "long",
         "key": "format",
         "title": "--format=WORD",
-        "description": "across -x, commas -m, horizontal -x, long -l,\n      single-column -1, verbose -l, vertical -C"
+        "description": "across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C"
       },
       {
         "type": "long",
@@ -204,19 +204,19 @@
         "type": "long",
         "key": "hide",
         "title": "--hide=PATTERN",
-        "description": "do not list implied entries matching shell PATTERN (overridden by\n      -a or -A)"
+        "description": "do not list implied entries matching shell PATTERN (overridden by -a or -A)"
       },
       {
         "type": "long",
         "key": "hyperlink",
         "title": "--hyperlink[=WHEN]",
-        "description": "hyperlink file names; WHEN can be 'always' (default if omitted), 'auto',\n      or 'never'"
+        "description": "hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'"
       },
       {
         "type": "long",
         "key": "indicator-style",
         "title": "--indicator-style=WORD",
-        "description": "append indicator with style WORD to entry names: none (default), slash\n      (-p), file-type (--file-type), classify (-F)"
+        "description": "append indicator with style WORD to entry names: none (default), slash (-p), file-type (--file-type), classify (-F)"
       },
       {
         "type": "short",
@@ -246,13 +246,13 @@
         "type": "short",
         "key": "k",
         "title": "-k, --kibibytes",
-        "description": "default to 1024-byte blocks for file system usage; used only with\n      -s and per directory totals"
+        "description": "default to 1024-byte blocks for file system usage; used only with -s and per directory totals"
       },
       {
         "type": "long",
         "key": "kibibytes",
         "title": "-k, --kibibytes",
-        "description": "default to 1024-byte blocks for file system usage; used only with\n      -s and per directory totals"
+        "description": "default to 1024-byte blocks for file system usage; used only with -s and per directory totals"
       },
       {
         "type": "short",
@@ -264,13 +264,13 @@
         "type": "short",
         "key": "L",
         "title": "-L, --dereference",
-        "description": "when showing file information for a symbolic link, show information for\n      the file the link references rather than for the link itself"
+        "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
       },
       {
         "type": "long",
         "key": "dereference",
         "title": "-L, --dereference",
-        "description": "when showing file information for a symbolic link, show information for\n      the file the link references rather than for the link itself"
+        "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
       },
       {
         "type": "short",
@@ -330,7 +330,7 @@
         "type": "long",
         "key": "show-control-chars",
         "title": "--show-control-chars",
-        "description": "show nongraphic characters as-is (the default, unless program is 'ls' and\n      output is a terminal)"
+        "description": "show nongraphic characters as-is (the default, unless program is 'ls' and output is a terminal)"
       },
       {
         "type": "short",
@@ -348,7 +348,7 @@
         "type": "long",
         "key": "quoting-style",
         "title": "--quoting-style=WORD",
-        "description": "use quoting style WORD for entry names: literal, locale, shell,\n      shell-always, shell-escape, shell-escape-always, c, escape (overrides\n      QUOTING_STYLE environment variable)"
+        "description": "use quoting style WORD for entry names: literal, locale, shell, shell-always, shell-escape, shell-escape-always, c, escape (overrides QUOTING_STYLE environment variable)"
       },
       {
         "type": "short",
@@ -396,13 +396,13 @@
         "type": "long",
         "key": "sort",
         "title": "--sort=WORD",
-        "description": "sort by WORD instead of name: none (-U), size (-S), time\n      (-t), version (-v), extension (-X), width"
+        "description": "sort by WORD instead of name: none (-U), size (-S), time (-t), version (-v), extension (-X), width"
       },
       {
         "type": "long",
         "key": "time",
         "title": "--time=WORD",
-        "description": "change the default of using modification times; access time (-u):\n      atime, access, use; change time (-c): ctime, status; birth time:\n      birth, creation;"
+        "description": "change the default of using modification times; access time (-u): atime, access, use; change time (-c): ctime, status; birth time: birth, creation;"
       },
       {
         "type": "long",
@@ -432,7 +432,7 @@
         "type": "short",
         "key": "u",
         "title": "-u",
-        "description": "with -lt: sort by, and show, access time; with -l: show\n      access time and sort by name; otherwise: sort by access time, newest\n    first"
+        "description": "with -lt: sort by, and show, access time; with -l: show access time and sort by name; otherwise: sort by access time, newest first"
       },
       {
         "type": "short",

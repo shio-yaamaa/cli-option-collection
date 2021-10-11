@@ -96,13 +96,13 @@
         "type": "short",
         "key": "u",
         "title": "-u, --update",
-        "description": "move only when the SOURCE file is newer than the destination file or when\n      the destination file is missing"
+        "description": "move only when the SOURCE file is newer than the destination file or when the destination file is missing"
       },
       {
         "type": "long",
         "key": "update",
         "title": "-u, --update",
-        "description": "move only when the SOURCE file is newer than the destination file or when\n      the destination file is missing"
+        "description": "move only when the SOURCE file is newer than the destination file or when the destination file is missing"
       },
       {
         "type": "short",

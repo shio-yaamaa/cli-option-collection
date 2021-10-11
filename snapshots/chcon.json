@@ -6,7 +6,7 @@
         "type": "long",
         "key": "dereference",
         "title": "--dereference",
-        "description": "affect the referent of each symbolic link (this is the default), rather\n      than the symbolic link itself"
+        "description": "affect the referent of each symbolic link (this is the default), rather than the symbolic link itself"
       },
       {
         "type": "short",
@@ -114,7 +114,7 @@
         "type": "short",
         "key": "H",
         "title": "-H",
-        "description": "if a command line argument is a symbolic link to a directory, traverse\n    it"
+        "description": "if a command line argument is a symbolic link to a directory, traverse it"
       },
       {
         "type": "short",

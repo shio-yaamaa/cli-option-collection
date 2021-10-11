@@ -42,13 +42,13 @@
         "type": "short",
         "key": "f",
         "title": "-f, --fields=LIST",
-        "description": "select only these fields; also print any line that contains no delimiter\n      character, unless the -s option is specified"
+        "description": "select only these fields; also print any line that contains no delimiter character, unless the -s option is specified"
       },
       {
         "type": "long",
         "key": "fields",
         "title": "-f, --fields=LIST",
-        "description": "select only these fields; also print any line that contains no delimiter\n      character, unless the -s option is specified"
+        "description": "select only these fields; also print any line that contains no delimiter character, unless the -s option is specified"
       },
       {
         "type": "short",
@@ -78,7 +78,7 @@
         "type": "long",
         "key": "output-delimiter",
         "title": "--output-delimiter=STRING",
-        "description": "use STRING as the output delimiter the default is to use the input\n      delimiter"
+        "description": "use STRING as the output delimiter the default is to use the input delimiter"
       },
       {
         "type": "short",
