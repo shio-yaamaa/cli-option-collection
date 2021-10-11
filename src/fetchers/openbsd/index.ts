@@ -10,6 +10,13 @@ import { fetch } from './fetcher';
 // NOTE: Currently "openssl" command is not fetched because, unlike other commands,
 //       it has subcommands and single-dash option style, which means it needs
 //       a completely different fetcher implementation.
+// BUG: Some commands share the same documentation page
+//      despite having different option sets.
+//      This fetcher cannot tell which option is available to which command
+//      and assigns all of the options to the commands on the page.
+//      (e.g. [tput, clear], [gzip, gunzip, gzcat], [mt, eject], [ping, ping6])
+// BUG: Tables and definition lists are not stringified in a human-readable way.
+//      (e.g. netstat -f, gzip -l)
 
 // BUG: "-safe" flag is not recognized as an option
 //      because it uses single dash with long option name.
@@ -31,8 +38,6 @@ export const fetchChflags: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
-// BUG: Some of the options listed in the documentation is not available for "clear" command
-//      because the page is shared with "tput" command.
 export const fetchClear: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'clear',
@@ -70,9 +75,6 @@ export const fetchEd: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
-// BUG: This command is listed in the same page as "mt" command,
-//      so "mt" command's options are also recognized as this command's options
-//      though they should not be.
 export const fetchEject: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'eject',
@@ -134,9 +136,6 @@ export const fetchMd5: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
-// BUG: This command is listed in the same page as "eject" command,
-//      so "eject" command's options are also recognized as this command's options
-//      though they should not be.
 export const fetchMt: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'mt',
@@ -149,7 +148,6 @@ export const fetchNc: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
-// BUG: The table in "-f" option's description is not stringified in a human-readable way.
 export const fetchNetstat: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'netstat',
@@ -163,18 +161,12 @@ export const fetchPax: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
-// BUG: Since "ping" and "ping6" commands share the same man page,
-//      they have the same option list though some of them are
-//      IPv4- or IPv6-only.
 export const fetchPing: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ping',
     optionsHeadingID: 'DESCRIPTION',
   });
 
-// BUG: Since "ping" and "ping6" commands share the same man page,
-//      they have the same option list though some of them are
-//      IPv4- or IPv6-only.
 export const fetchPing6: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ping6',
