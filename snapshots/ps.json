@@ -6,19 +6,19 @@
         "type": "short",
         "key": "A",
         "title": "-A",
-        "description": "Display information about processes for all users, including those without\n      controlling terminals."
+        "description": "Display information about processes for all users, including those without controlling terminals."
       },
       {
         "type": "short",
         "key": "a",
         "title": "-a",
-        "description": "Display information about processes for all users with controlling\n      terminals."
+        "description": "Display information about processes for all users with controlling terminals."
       },
       {
         "type": "short",
         "key": "c",
         "title": "-c",
-        "description": "Do not display full command with arguments, but only the executable name.\n      This may be somewhat confusing; for example, all\n      sh(1) scripts will show as\n      “sh”."
+        "description": "Do not display full command with arguments, but only the executable name. This may be somewhat confusing; for example, all sh(1) scripts will show as “sh”."
       },
       {
         "type": "short",
@@ -36,13 +36,13 @@
         "type": "short",
         "key": "h",
         "title": "-h",
-        "description": "Repeat the information header as often as necessary to guarantee one\n      header per page of information."
+        "description": "Repeat the information header as often as necessary to guarantee one header per page of information."
       },
       {
         "type": "short",
         "key": "j",
         "title": "-j",
-        "description": "Print information associated with the following keywords: user, pid, ppid,\n      pgid, sess, jobc, state, tt, time, and command."
+        "description": "Print information associated with the following keywords: user, pid, ppid, pgid, sess, jobc, state, tt, time, and command."
       },
       {
         "type": "short",
@@ -54,19 +54,19 @@
         "type": "short",
         "key": "L",
         "title": "-L",
-        "description": "List the set of available keywords. This option should not be specified\n      with other options."
+        "description": "List the set of available keywords. This option should not be specified with other options."
       },
       {
         "type": "short",
         "key": "l",
         "title": "-l",
-        "description": "Display information associated with the following keywords: uid, pid,\n      ppid, cpu, pri, nice, vsz, rss, wchan, state, tt, time, and command."
+        "description": "Display information associated with the following keywords: uid, pid, ppid, cpu, pri, nice, vsz, rss, wchan, state, tt, time, and command."
       },
       {
         "type": "short",
         "key": "M",
         "title": "-M core",
-        "description": "Extract values associated with the name list from the specified core\n      instead of the running kernel."
+        "description": "Extract values associated with the name list from the specified core instead of the running kernel."
       },
       {
         "type": "short",
@@ -78,19 +78,19 @@
         "type": "short",
         "key": "N",
         "title": "-N system",
-        "description": "Extract the name list from the specified system instead of the running\n      kernel."
+        "description": "Extract the name list from the specified system instead of the running kernel."
       },
       {
         "type": "short",
         "key": "O",
         "title": "-O fmt",
-        "description": "Add the information associated with the space or comma separated list of\n      keywords specified, after the process ID, in the default information\n      display. Keywords may be appended with an equals sign (‘=’)\n      and a string. This causes the printed header to use the specified string\n      instead of the standard header."
+        "description": "Add the information associated with the space or comma separated list of keywords specified, after the process ID, in the default information display. Keywords may be appended with an equals sign (‘=’) and a string. This causes the printed header to use the specified string instead of the standard header."
       },
       {
         "type": "short",
         "key": "o",
         "title": "-o fmt",
-        "description": "Display information associated with the space or comma separated list of\n      keywords specified. Keywords may be appended with an equals sign\n      (‘=’) and a string. This causes the printed header to use\n      the specified string instead of the standard header."
+        "description": "Display information associated with the space or comma separated list of keywords specified. Keywords may be appended with an equals sign (‘=’) and a string. This causes the printed header to use the specified string instead of the standard header."
       },
       {
         "type": "short",
@@ -108,49 +108,49 @@
         "type": "short",
         "key": "S",
         "title": "-S",
-        "description": "Change the way the process time is calculated by summing all exited\n      children to their parent process."
+        "description": "Change the way the process time is calculated by summing all exited children to their parent process."
       },
       {
         "type": "short",
         "key": "T",
         "title": "-T",
-        "description": "Display information about processes attached to the device associated with\n      the standard input."
+        "description": "Display information about processes attached to the device associated with the standard input."
       },
       {
         "type": "short",
         "key": "t",
         "title": "-t tty",
-        "description": "Display information about processes attached to the specified terminal\n      device."
+        "description": "Display information about processes attached to the specified terminal device."
       },
       {
         "type": "short",
         "key": "U",
         "title": "-U username",
-        "description": "Display the processes belonging to the specified\n      username."
+        "description": "Display the processes belonging to the specified username."
       },
       {
         "type": "short",
         "key": "u",
         "title": "-u",
-        "description": "Display information associated with the following keywords: user, pid,\n      %cpu, %mem, vsz, rss, tt, state, start, time, and command. The\n      -u option implies the -r\n      option."
+        "description": "Display information associated with the following keywords: user, pid, %cpu, %mem, vsz, rss, tt, state, start, time, and command. The -u option implies the -r option."
       },
       {
         "type": "short",
         "key": "v",
         "title": "-v",
-        "description": "Display information associated with the following keywords: pid, state,\n      time, sl, re, pagein, vsz, rss, lim, tsiz, %cpu, %mem, and command. The\n      -v option implies the -m\n      option."
+        "description": "Display information associated with the following keywords: pid, state, time, sl, re, pagein, vsz, rss, lim, tsiz, %cpu, %mem, and command. The -v option implies the -m option."
       },
       {
         "type": "short",
         "key": "W",
         "title": "-W swap",
-        "description": "When not using the running kernel, extract swap information from the\n      specified file."
+        "description": "When not using the running kernel, extract swap information from the specified file."
       },
       {
         "type": "short",
         "key": "w",
         "title": "-w",
-        "description": "Use 132 columns to display information, instead of the default, which is\n      the window size. If the -w option is specified\n      more than once, ps will use as many columns as\n      necessary without regard for window size."
+        "description": "Use 132 columns to display information, instead of the default, which is the window size. If the -w option is specified more than once, ps will use as many columns as necessary without regard for window size."
       },
       {
         "type": "short",

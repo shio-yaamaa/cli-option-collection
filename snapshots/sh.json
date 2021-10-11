@@ -6,25 +6,25 @@
         "type": "short",
         "key": "a",
         "title": "-a",
-        "description": "Allexport. Variable assignments are exported to all child processes of the\n      running shell. If the assignment precedes a command it does not persist\n      after that command has finished running, unless the command is a special\n      builtin or one of the builtins getopts or\n      read makes the assignment."
+        "description": "Allexport. Variable assignments are exported to all child processes of the running shell. If the assignment precedes a command it does not persist after that command has finished running, unless the command is a special builtin or one of the builtins getopts or read makes the assignment."
       },
       {
         "type": "short",
         "key": "b",
         "title": "-b",
-        "description": "Notify. The user is given notice asynchronously when background jobs\n      complete."
+        "description": "Notify. The user is given notice asynchronously when background jobs complete."
       },
       {
         "type": "short",
         "key": "C",
         "title": "-C",
-        "description": "Noclobber. Do not permit the redirection operator (‘>’)\n      to clobber (overwrite) existing files."
+        "description": "Noclobber. Do not permit the redirection operator (‘>’) to clobber (overwrite) existing files."
       },
       {
         "type": "short",
         "key": "e",
         "title": "-e",
-        "description": "Errexit. Exit the shell immediately should an error occur or a command\n      fail. For pipelines and && and\n      || constructs, only exit if the last component\n      fails. Errexit is ignored for while,\n      until, if, and\n      elif lists and pipelines beginning\n      ‘!’."
+        "description": "Errexit. Exit the shell immediately should an error occur or a command fail. For pipelines and && and || constructs, only exit if the last component fails. Errexit is ignored for while, until, if, and elif lists and pipelines beginning ‘!’."
       },
       {
         "type": "short",
@@ -36,37 +36,37 @@
         "type": "short",
         "key": "h",
         "title": "-h",
-        "description": "When a utility is first executed, hash (record) its location so that\n      future invocations do not need to search for it."
+        "description": "When a utility is first executed, hash (record) its location so that future invocations do not need to search for it."
       },
       {
         "type": "short",
         "key": "i",
         "title": "-i",
-        "description": "Enable behaviour convenient for an interactive shell. This option is set\n      by default if the session is attached to a terminal."
+        "description": "Enable behaviour convenient for an interactive shell. This option is set by default if the session is attached to a terminal."
       },
       {
         "type": "short",
         "key": "m",
         "title": "-m",
-        "description": "Monitor. Fully enable job control: enable the bg\n      and fg builtins; report completion status when\n      jobs finish; report when a foreground process stops; and report when a job\n      changes status. The processes of a job share their own process group. This\n      option is set by default for interactive shells."
+        "description": "Monitor. Fully enable job control: enable the bg and fg builtins; report completion status when jobs finish; report when a foreground process stops; and report when a job changes status. The processes of a job share their own process group. This option is set by default for interactive shells."
       },
       {
         "type": "short",
         "key": "n",
         "title": "-n",
-        "description": "Noexec. Read commands but do not execute them – useful for checking\n      syntax errors in scripts. This option is ignored for interactive\n    shells."
+        "description": "Noexec. Read commands but do not execute them – useful for checking syntax errors in scripts. This option is ignored for interactive shells."
       },
       {
         "type": "short",
         "key": "o",
         "title": "-o option",
-        "description": "Specify an option by its long name. Those described below have no\n      equivalent option letter:\n    \n    \n    \n      ignoreeof\n      Ignore an end-of-file (‘^D’). EOF normally logs a user\n          out, so setting this can prevent accidental logouts (the user will\n          need to explicitly use the exit command).\n      nolog\n      Do not enter function definitions into command history.\n      posix\n      Enable POSIX mode (see\n        STANDARDS).\n      vi\n      Enable vi(1) command line editing."
+        "description": "Specify an option by its long name. Those described below have no equivalent option letter:\n\n\n\nignoreeof Ignore an end-of-file (‘^D’). EOF normally logs a user out, so setting this can prevent accidental logouts (the user will need to explicitly use the exit command). nolog Do not enter function definitions into command history. posix Enable POSIX mode (see STANDARDS). vi Enable vi(1) command line editing."
       },
       {
         "type": "short",
         "key": "u",
         "title": "-u",
-        "description": "Nounset. If a command references an unset parameter, write an error to\n      standard output instead of executing the command. This option is ignored\n      for the special parameters ‘*’ and ‘@’. If the\n      shell is not interactive, immediately exit."
+        "description": "Nounset. If a command references an unset parameter, write an error to standard output instead of executing the command. This option is ignored for the special parameters ‘*’ and ‘@’. If the shell is not interactive, immediately exit."
       },
       {
         "type": "short",
@@ -78,7 +78,7 @@
         "type": "short",
         "key": "x",
         "title": "-x",
-        "description": "Xtrace. Write a trace for each command to standard error after expanding\n      it, and before executing it."
+        "description": "Xtrace. Write a trace for each command to standard error after expanding it, and before executing it."
       }
     ]
   }

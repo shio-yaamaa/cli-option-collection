@@ -6,157 +6,157 @@
         "type": "short",
         "key": "C",
         "title": "-C number",
-        "description": "Like -c but produces a diff with\n      number lines of context."
+        "description": "Like -c but produces a diff with number lines of context."
       },
       {
         "type": "short",
         "key": "c",
         "title": "-c",
-        "description": "Produces a diff with 3 lines of context. With -c\n      the output format is modified slightly: the output begins with\n      identification of the files involved and their creation dates and then\n      each change is separated by a line with fifteen\n      *'s. The lines removed from\n      file1 are marked with ‘- ’;\n      those added to file2 are marked\n      ‘+ ’. Lines which are changed from one file to the\n      other are marked in both files with ‘! ’. Changes\n      which lie within 3 lines of each other are grouped together on\n    output."
+        "description": "Produces a diff with 3 lines of context. With -c the output format is modified slightly: the output begins with identification of the files involved and their creation dates and then each change is separated by a line with fifteen *'s. The lines removed from file1 are marked with ‘- ’; those added to file2 are marked ‘+ ’. Lines which are changed from one file to the other are marked in both files with ‘! ’. Changes which lie within 3 lines of each other are grouped together on output."
       },
       {
         "type": "short",
         "key": "D",
         "title": "-D string",
-        "description": "Creates a merged version of file1 and\n      file2 on the standard output, with C preprocessor\n      controls included so that a compilation of the result without defining\n      string is equivalent to compiling\n      file1, while defining string\n      will yield file2."
+        "description": "Creates a merged version of file1 and file2 on the standard output, with C preprocessor controls included so that a compilation of the result without defining string is equivalent to compiling file1, while defining string will yield file2."
       },
       {
         "type": "short",
         "key": "e",
         "title": "-e",
-        "description": "Produces output in a form suitable as input for the editor utility,\n      ed(1), which can then be used to convert\n      file1 into file2.\n    Extra commands are added to the output when comparing\n        directories with -e, so that the result is a\n        sh(1) script for converting text files\n        which are common to the two directories from their state in\n        dir1 to their state in\n      dir2."
+        "description": "Produces output in a form suitable as input for the editor utility, ed(1), which can then be used to convert file1 into file2.\n\nExtra commands are added to the output when comparing directories with -e, so that the result is a sh(1) script for converting text files which are common to the two directories from their state in dir1 to their state in dir2."
       },
       {
         "type": "short",
         "key": "f",
         "title": "-f",
-        "description": "Identical output to that of the -e flag, but in\n      reverse order. It cannot be digested by\n      ed(1)."
+        "description": "Identical output to that of the -e flag, but in reverse order. It cannot be digested by ed(1)."
       },
       {
         "type": "short",
         "key": "n",
         "title": "-n",
-        "description": "Produces a script similar to that of -e, but in\n      the opposite order and with a count of changed lines on each insert or\n      delete command. This is the form used by\n      rcsdiff(1)."
+        "description": "Produces a script similar to that of -e, but in the opposite order and with a count of changed lines on each insert or delete command. This is the form used by rcsdiff(1)."
       },
       {
         "type": "short",
         "key": "q",
         "title": "-q",
-        "description": "Just print a line when the files differ. Does not output a list of\n      changes."
+        "description": "Just print a line when the files differ. Does not output a list of changes."
       },
       {
         "type": "short",
         "key": "U",
         "title": "-U number",
-        "description": "Like -u but produces a diff with\n      number lines of context."
+        "description": "Like -u but produces a diff with number lines of context."
       },
       {
         "type": "short",
         "key": "u",
         "title": "-u",
-        "description": "Produces a\n      unified\n      diff with 3 lines of context. A unified diff is similar to the context\n      diff produced by the -c option. However, unlike\n      with -c, all lines to be changed (added and/or\n      removed) are present in a single section."
+        "description": "Produces a unified diff with 3 lines of context. A unified diff is similar to the context diff produced by the -c option. However, unlike with -c, all lines to be changed (added and/or removed) are present in a single section."
       },
       {
         "type": "short",
         "key": "a",
         "title": "-a",
-        "description": "Treat all files as ASCII text. Normally diff will\n      simply print “Binary files ... differ” if files contain\n      binary characters. Use of this option forces diff\n      to produce a diff."
+        "description": "Treat all files as ASCII text. Normally diff will simply print “Binary files ... differ” if files contain binary characters. Use of this option forces diff to produce a diff."
       },
       {
         "type": "short",
         "key": "b",
         "title": "-b",
-        "description": "Causes trailing blanks (spaces and tabs) to be ignored, and other strings\n      of blanks to compare equal."
+        "description": "Causes trailing blanks (spaces and tabs) to be ignored, and other strings of blanks to compare equal."
       },
       {
         "type": "short",
         "key": "d",
         "title": "-d",
-        "description": "Try very hard to produce a diff as small as possible. This may consume a\n      lot of processing power and memory when processing large files with many\n      changes."
+        "description": "Try very hard to produce a diff as small as possible. This may consume a lot of processing power and memory when processing large files with many changes."
       },
       {
         "type": "short",
         "key": "I",
         "title": "-I pattern",
-        "description": "Ignores changes, insertions, and deletions whose lines match the extended\n      regular expression pattern. Multiple\n      -I patterns may be specified. All lines in the\n      change must match some pattern for the change to be ignored. See\n      re_format(7) for more information on\n      regular expression patterns."
+        "description": "Ignores changes, insertions, and deletions whose lines match the extended regular expression pattern. Multiple -I patterns may be specified. All lines in the change must match some pattern for the change to be ignored. See re_format(7) for more information on regular expression patterns."
       },
       {
         "type": "short",
         "key": "i",
         "title": "-i",
-        "description": "Ignores the case of letters. E.g., “A” will compare equal to\n      “a”."
+        "description": "Ignores the case of letters. E.g., “A” will compare equal to “a”."
       },
       {
         "type": "short",
         "key": "L",
         "title": "-L label",
-        "description": "Print label instead of the first (and second, if\n      this option is specified twice) file name and time in the context or\n      unified diff header."
+        "description": "Print label instead of the first (and second, if this option is specified twice) file name and time in the context or unified diff header."
       },
       {
         "type": "short",
         "key": "p",
         "title": "-p",
-        "description": "With unified and context diffs, show with each change the first 40\n      characters of the last line before the context beginning with a letter, an\n      underscore or a dollar sign. For C source code following standard layout\n      conventions, this will show the prototype of the function the change\n      applies to."
+        "description": "With unified and context diffs, show with each change the first 40 characters of the last line before the context beginning with a letter, an underscore or a dollar sign. For C source code following standard layout conventions, this will show the prototype of the function the change applies to."
       },
       {
         "type": "short",
         "key": "T",
         "title": "-T",
-        "description": "Print a tab rather than a space before the rest of the line for the\n      normal, context or unified output formats. This makes the alignment of\n      tabs in the line consistent."
+        "description": "Print a tab rather than a space before the rest of the line for the normal, context or unified output formats. This makes the alignment of tabs in the line consistent."
       },
       {
         "type": "short",
         "key": "t",
         "title": "-t",
-        "description": "Will expand tabs in output lines. Normal or -c\n      output adds character(s) to the front of each line which may screw up the\n      indentation of the original source lines and make the output listing\n      difficult to interpret. This option will preserve the original source's\n      indentation."
+        "description": "Will expand tabs in output lines. Normal or -c output adds character(s) to the front of each line which may screw up the indentation of the original source lines and make the output listing difficult to interpret. This option will preserve the original source's indentation."
       },
       {
         "type": "short",
         "key": "w",
         "title": "-w",
-        "description": "Is similar to -b but causes whitespace (blanks and\n      tabs) to be totally ignored. E.g., “if ( a == b )”\n      will compare equal to “if(a==b)”."
+        "description": "Is similar to -b but causes whitespace (blanks and tabs) to be totally ignored. E.g., “if ( a == b )” will compare equal to “if(a==b)”."
       },
       {
         "type": "short",
         "key": "N",
         "title": "-N",
-        "description": "If a file is found in only one directory, act as if it was found in the\n      other directory too but was of zero size."
+        "description": "If a file is found in only one directory, act as if it was found in the other directory too but was of zero size."
       },
       {
         "type": "short",
         "key": "P",
         "title": "-P",
-        "description": "If a file is found only in dir2, act as if it was\n      found in dir1 too but was of zero size."
+        "description": "If a file is found only in dir2, act as if it was found in dir1 too but was of zero size."
       },
       {
         "type": "short",
         "key": "r",
         "title": "-r",
-        "description": "Causes application of diff recursively to common\n      subdirectories encountered."
+        "description": "Causes application of diff recursively to common subdirectories encountered."
       },
       {
         "type": "short",
         "key": "S",
         "title": "-S name",
-        "description": "Re-starts a directory diff in the middle,\n      beginning with file name."
+        "description": "Re-starts a directory diff in the middle, beginning with file name."
       },
       {
         "type": "short",
         "key": "s",
         "title": "-s",
-        "description": "Causes diff to report files which are the same,\n      which are otherwise not mentioned."
+        "description": "Causes diff to report files which are the same, which are otherwise not mentioned."
       },
       {
         "type": "short",
         "key": "X",
         "title": "-X file",
-        "description": "Exclude files and subdirectories from comparison whose basenames match\n      lines in file. Multiple -X\n      options may be specified."
+        "description": "Exclude files and subdirectories from comparison whose basenames match lines in file. Multiple -X options may be specified."
       },
       {
         "type": "short",
         "key": "x",
         "title": "-x pattern",
-        "description": "Exclude files and subdirectories from comparison whose basenames match\n      pattern. Patterns are matched using shell-style\n      globbing via fnmatch(3). Multiple\n      -x options may be specified."
+        "description": "Exclude files and subdirectories from comparison whose basenames match pattern. Patterns are matched using shell-style globbing via fnmatch(3). Multiple -x options may be specified."
       }
     ]
   }
