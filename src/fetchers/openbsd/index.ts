@@ -103,6 +103,13 @@ export const fetchMan: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+// BUG: "-m" option ("-mdoc | -man") is not recognized.
+export const fetchMandoc: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'mandoc',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchMd5: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'md5',

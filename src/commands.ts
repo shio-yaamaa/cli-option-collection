@@ -131,6 +131,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['magick', imagemagick.fetchMagick],
   ['magick-script', imagemagick.fetchMagickScript],
   ['man', openbsd.fetchMan],
+  ['mandoc', openbsd.fetchMandoc],
   ['mapfile', bashBuiltin.fetchMapfile],
   ['md5', openbsd.fetchMd5],
   ['md5sum', gnuCoreutils.fetchMd5sum],
