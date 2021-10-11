@@ -1,4 +1,5 @@
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import { findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -6,13 +7,12 @@ import {
   makeOptionList,
   mergeOptionTitles,
 } from '../utils/forFetcher/optionString';
-import { normalizeSpacesAndLinebreaks } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
   trimOptionalElements,
 } from '../utils/forFetcher/transformOptionString';
-import { isElement, isString } from '../utils/typeGuards';
+import { isElement } from '../utils/typeGuards';
 import { mergeLists } from '../utils/utils';
 
 // Alternative sources:
@@ -66,7 +66,7 @@ const commandSectionToCommands = (commandSection: Element): Command[] => {
   if (!heading) {
     return [];
   }
-  const headingText = heading.textContent;
+  const headingText = getInnerText(heading);
   if (!headingText) {
     return [];
   }
@@ -129,11 +129,9 @@ const optionListToOptions = (dlist: HTMLDListElement): Option[] => {
   const dlistEntries = findDListEntries(dlist);
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const dtTexts = dts.map((dt) => dt.textContent).filter(isString);
-    const title = normalizeSpacesAndLinebreaks(mergeOptionTitles(dtTexts));
-    const description = dd.textContent
-      ? normalizeSpacesAndLinebreaks(dd.textContent.trim()).replace(/´/g, "'")
-      : '';
+    const dtTexts = dts.map((dt) => getInnerText(dt));
+    const title = mergeOptionTitles(dtTexts);
+    const description = getInnerText(dd).trim().replace(/´/g, "'");
     const optionStrings = transformOptionStrings(dtTexts, [
       splitByComma,
       trimOptionalElements,
