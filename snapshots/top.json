@@ -1,0 +1,115 @@
+[
+  {
+    "name": "top",
+    "options": [
+      {
+        "type": "short",
+        "key": "1",
+        "title": "-1",
+        "description": "Display combined CPU statistics for all processors on a single line instead of one line per CPU. If there are more than 8 CPUs detected in the system this option is automatically enabled."
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "Use batch mode. In this mode, all input from the terminal is ignored. Interrupt characters (such as ‘^C’ and ‘^\\’) still have an effect. This is the default on a dumb terminal, or when the output is not a terminal."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C",
+        "description": "Show command line arguments as well as the process itself."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d count",
+        "description": "Show only count displays, then exit. A display is considered to be one update of the screen. This option allows the user to select the number of displays to be shown before top automatically exits. For intelligent terminals, no upper limit is set. The default is 1 for dumb terminals."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g string",
+        "description": "Display only processes that contain string in their command name. If displaying of arguments is enabled, the arguments are searched too."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H",
+        "description": "Show process threads in the display. Normally, only the main process is shown. This option makes all threads visible."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "Do not display idle processes. By default, top displays both active and idle processes."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Use interactive mode. In this mode, any input is immediately read for processing. See the section on INTERACTIVE MODE for an explanation of which keys perform what functions. After the command is processed, the screen will immediately be updated, even if the command was not understood. This mode is the default when standard output is an intelligent terminal."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Use non-interactive mode. This is identical to batch mode."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o [-]field",
+        "description": "Sort the process display area using the specified field as the primary key. The field name is the name of the column as seen in the output, but in lower case. The ‘-’ prefix reverses the order. The OpenBSD version of top supports cpu, size, res, time, pri, pid, and command."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p pid",
+        "description": "Show only the process pid."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Renice top to -20 so that it will run faster. This can be used when the system is being very sluggish to improve the possibility of discovering the problem. This option can only be used by root."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "Show system processes in the display. Normally, system processes such as the pager and the swapper are not shown. This option makes them visible."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s time",
+        "description": "Set the delay between screen updates to time seconds. The value may be fractional, to permit delays of less than 1 second. The default delay between updates is 5 seconds."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T [-]rtable",
+        "description": "Display only processes associated with the specified routing table rtable. ‘T+’ shows processes associated with all routing tables. The ‘-’ prefix hides processes associated with a single routing table."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Display routing tables. By default, routing tables are not shown."
+      },
+      {
+        "type": "short",
+        "key": "U",
+        "title": "-U [-]user",
+        "description": "Show only those processes owned by username or UID user. The prefix ‘-’ hides processes owned by that user."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Do not take the time to map UID numbers to usernames. Normally, top will read as much of the password database as is necessary to map all the user ID numbers it encounters into login names. This option disables all that, while possibly decreasing execution time. The UID numbers are displayed instead of the names."
+      }
+    ]
+  }
+]

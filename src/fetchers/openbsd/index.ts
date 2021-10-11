@@ -259,6 +259,12 @@ export const fetchTar: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchTop: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'top',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchTput: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'tput',

@@ -232,6 +232,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['time', bashBuiltin.fetchTime],
   ['timeout', gnuCoreutils.fetchTimeout],
   ['times', bashBuiltin.fetchTimes],
+  ['top', openbsd.fetchTop],
   ['touch', gnuCoreutils.fetchTouch],
   ['tput', openbsd.fetchTput],
   ['tr', gnuCoreutils.fetchTr],
