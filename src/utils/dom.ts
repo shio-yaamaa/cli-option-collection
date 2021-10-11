@@ -9,15 +9,11 @@ export const getInnerText = (element: Element) =>
     selectors: [
       ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map((selector) => ({
         selector,
-        options: {
-          uppercase: false,
-        },
+        format: 'block',
       })),
       {
         selector: 'a',
-        options: {
-          ignoreHref: true,
-        },
+        format: 'inline',
       },
     ],
   });
