@@ -200,6 +200,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['shopt', bashBuiltin.fetchShopt],
   ['shred', gnuCoreutils.fetchShred],
   ['shuf', gnuCoreutils.fetchShuf],
+  ['shutdown', openbsd.fetchShutdown],
   ['sleep', gnuCoreutils.fetchSleep],
   ['softlimit', daemontools.fetchSoftlimit],
   ['sort', gnuCoreutils.fetchSort],
