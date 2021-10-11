@@ -1,8 +1,8 @@
 import { URL } from 'url';
 
 import { FetchFunction, Command, Option } from '../types';
+import { getInnerText } from '../utils/dom';
 import {
-  DListEntry,
   findAnchorsWithPattern,
   findDListEntries,
 } from '../utils/forFetcher/dom';
@@ -20,7 +20,6 @@ import {
   trimOptionalElements,
   trimEqualDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
-import { isString } from '../utils/typeGuards';
 import { mergeLists, uniqueBy } from '../utils/utils';
 
 // Alternative sources:
@@ -68,7 +67,7 @@ const fetchSubcommandLocations = async (): Promise<SubcommandLocation[]> => {
     SUBCOMMAND_LINK_TEXT_PATTERN
   );
   const locations = anchors.map((anchor) => ({
-    command: subcommandLinkTextToCommandName(anchor.textContent!),
+    command: subcommandLinkTextToCommandName(getInnerText(anchor)),
     url: new URL(anchor.href, BASE_URL),
   }));
   return uniqueBy(locations, (location) => location.url);
@@ -104,9 +103,9 @@ const findOptions = (document: Document): Option[] => {
   );
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const dtTexts = dts.map((dt) => dt.textContent?.trim()).filter(isString);
+    const dtTexts = dts.map((dt) => getInnerText(dt).trim());
     const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
-    const description = dd.textContent?.trim() ?? '';
+    const description = getInnerText(dd).trim();
     const optionStrings = transformOptionStrings(dtTexts, [
       splitByComma,
       trimOptionalElements,
