@@ -141,6 +141,12 @@ export const fetchLess: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchLogin: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'login',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchMan: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'man',

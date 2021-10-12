@@ -131,6 +131,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['link', gnuCoreutils.fetchLink],
   ['ln', gnuCoreutils.fetchLn],
   ['local', bashBuiltin.fetchLocal],
+  ['login', openbsd.fetchLogin],
   ['logname', gnuCoreutils.fetchLogname],
   ['logout', bashBuiltin.fetchLogout],
   ['ls', gnuCoreutils.fetchLs],

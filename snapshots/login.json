@@ -1,0 +1,43 @@
+[
+  {
+    "name": "login",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "The -f option is used when a user name is specified to indicate that proper authentication has already been done and that no password need be requested. This option may only be used by the superuser."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h hostname",
+        "description": "Specifies the host from which the connection was received. This option may only be used by the superuser."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L local-addr",
+        "description": "The -L option specifies the local address of a socket. This information is passed on to any classify script (see login.conf(5))."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "By default, login discards any previous environment. The -p option disables this behavior."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R remote-addr",
+        "description": "The -R option specifies the remote address of a socket. This information is passed on to any classify script (see login.conf(5))."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u username",
+        "description": "Specifies the remote user that initiated the connection. This option may only be used by the superuser."
+      }
+    ]
+  }
+]
