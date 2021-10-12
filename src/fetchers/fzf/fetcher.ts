@@ -20,14 +20,17 @@ import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
-  url: URL;
   optionsHeaderID: string;
 }
 
 export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
-  const document = await fetchDocumentFromManPageURL(sourceDef.url);
+  const document = await fetchDocumentFromManPageURL(
+    new URL(
+      `https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/${sourceDef.commandName}.1`
+    )
+  );
   const section = findOptionsSection(document, sourceDef.optionsHeaderID);
   if (!section) {
     return [];

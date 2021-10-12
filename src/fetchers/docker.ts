@@ -21,7 +21,7 @@ interface SubcommandLocation {
 
 const BASE_URL = 'https://docs.docker.com';
 
-export const fetchDocker: FetchFunction = async (): Promise<Command[]> => {
+export const docker: FetchFunction = async (): Promise<Command[]> => {
   const subcommandLocations = await fetchSubcommandLocations();
   const commands: Command[] = [];
   for (const subcommandLocation of subcommandLocations) {

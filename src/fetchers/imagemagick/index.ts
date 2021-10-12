@@ -8,7 +8,16 @@ import { getInnerText } from '../../utils/dom';
 const BASE_URL = 'https://imagemagick.org/';
 const COMMAND_LIST_PATH = '/script/command-line-tools.php';
 
-export const fetchMagick: FetchFunction = async (): Promise<Command[]> => {
+export const imagemagick = {
+  magick: () => fetchMagick(),
+  magickScript: () =>
+    fetch({
+      commandName: 'magick-script',
+      url: new URL('https://imagemagick.org/script/magick-script.php'),
+    }),
+};
+
+const fetchMagick: FetchFunction = async (): Promise<Command[]> => {
   const sourceDefs = await fetchSourceDefs();
   const commands: Command[] = [];
   for (const sourceDef of sourceDefs) {
@@ -38,9 +47,3 @@ const fetchSourceDefs = async (): Promise<SourceDef[]> => {
   }
   return uniqueBy(sourceDefs, (sourceDef) => sourceDef.url.toString());
 };
-
-export const fetchMagickScript: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'magick-script',
-    url: new URL('https://imagemagick.org/script/magick-script.php'),
-  });

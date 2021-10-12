@@ -11,13 +11,14 @@ import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
-  url: URL;
 }
 
 export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
-  const document = await fetchDocumentFromURL(sourceDef.url);
+  const document = await fetchDocumentFromURL(
+    new URL(`https://cr.yp.to/daemontools/${sourceDef.commandName}.html`)
+  );
   const lists = findTopLevelLists(document);
   const options = mergeLists(lists.map((list) => listToOptions(list)));
 

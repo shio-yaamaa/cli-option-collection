@@ -22,14 +22,14 @@ import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
-  defFileBasename: string;
+  defFileBasename?: string; // Defaults to commandName
 }
 
 export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
   const text = await fetchPlainTextFromURL(
-    buildDefFileURL(sourceDef.defFileBasename)
+    buildDefFileURL(sourceDef.defFileBasename ?? sourceDef.commandName)
   );
   // Some .def files use tab indents and some use space indents. Normalize them by replacing tabs with spaces.
   const lines = text.split('\n').map((line) => tabToSpace(line, 8));

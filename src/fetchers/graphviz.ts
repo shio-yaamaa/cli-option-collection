@@ -19,7 +19,11 @@ import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://gitlab.com/graphviz/graphviz/-/raw/main/doc/Dot.ref';
 
-export const fetchDot: FetchFunction = async (): Promise<Command[]> => {
+export const graphviz = {
+  dot: () => fetchDot(),
+};
+
+const fetchDot: FetchFunction = async (): Promise<Command[]> => {
   const url = new URL(DOC_URL);
   const text = await fetchPlainTextFromURL(url);
   const lines = text.split('\n');

@@ -43,7 +43,7 @@ interface Section {
 const DOC_URL = 'https://pkg.go.dev/cmd/go';
 const COMMAND_WORD_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
-export const fetchGo: FetchFunction = async (): Promise<Command[]> => {
+export const go: FetchFunction = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const sections = getSections(document);
   const commands: Command[] = [];

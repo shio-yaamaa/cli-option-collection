@@ -28,7 +28,7 @@ interface SubcommandLocation {
 
 const BASE_URL = 'https://www.terraform.io/';
 
-export const fetchTerraform: FetchFunction = async (): Promise<Command[]> => {
+export const terraform: FetchFunction = async (): Promise<Command[]> => {
   const subcommandLocations = await fetchSubcommandLocations();
   const commands: Command[] = [];
   for (const subcommandLocation of subcommandLocations) {

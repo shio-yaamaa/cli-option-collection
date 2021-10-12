@@ -28,7 +28,7 @@ const DOC_URL =
   'https://raw.githubusercontent.com/Homebrew/brew/master/manpages/brew.1';
 const SUBCOMMAND_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
-export const fetchBrew: FetchFunction = async (): Promise<Command[]> => {
+export const brew: FetchFunction = async (): Promise<Command[]> => {
   const url = new URL(DOC_URL);
   const document = await fetchDocumentFromManPageURL(url);
   const commandSections = findCommandSections(document);

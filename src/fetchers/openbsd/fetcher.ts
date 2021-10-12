@@ -19,7 +19,7 @@ import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
-  optionsHeadingID: string;
+  optionsHeadingID?: string; // Defaults to "DESCRIPTION"
 }
 
 const documentURL = (commandName: string) =>
@@ -31,7 +31,10 @@ export const fetch: Fetcher<SourceDef> = async (
   const document = await fetchDocumentFromURL(
     documentURL(sourceDef.commandName)
   );
-  const optionSection = findOptionSection(document, sourceDef.optionsHeadingID);
+  const optionSection = findOptionSection(
+    document,
+    sourceDef.optionsHeadingID ?? 'DESCRIPTION'
+  );
   if (!optionSection) {
     return [];
   }

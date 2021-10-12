@@ -43,7 +43,7 @@ const BASE_URL = 'https://git-scm.com';
 const SUBCOMMAND_LINK_PATTERN = /^\/docs\/git-.*/;
 const SUBCOMMAND_LINK_TEXT_PATTERN = /^git-.*\[1\]$/;
 
-export const fetchGit: FetchFunction = async (): Promise<Command[]> => {
+export const git: FetchFunction = async (): Promise<Command[]> => {
   const commands: Command[] = [
     await fetchSubcommand({
       command: 'git',

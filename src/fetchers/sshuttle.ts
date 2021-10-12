@@ -17,7 +17,7 @@ import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://sshuttle.readthedocs.io/en/stable/manpage.html';
 
-export const fetchSshuttle: FetchFunction = async (): Promise<Command[]> => {
+export const sshuttle: FetchFunction = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const dlists = findDLists(document);
   const dlistEntries = mergeLists(

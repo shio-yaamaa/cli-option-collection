@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option, OptionType } from '../../types';
+import { Fetcher, Command, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
@@ -23,13 +23,14 @@ import { mergeLists } from '../../utils/utils';
 
 export interface SourceDef {
   commandName: string;
-  url: URL;
 }
 
 export const fetch: Fetcher<SourceDef> = async (
   sourceDef: SourceDef
 ): Promise<Command[]> => {
-  const document = await fetchDocumentFromURL(sourceDef.url);
+  const document = await fetchDocumentFromURL(
+    new URL(`https://www.ffmpeg.org/${sourceDef.commandName}.html`)
+  );
   const dlists = findTopLevelLists(document);
   const dlistEntries = mergeLists(dlists.map((dl) => findDListEntries(dl)));
   const options = mergeLists(

@@ -25,7 +25,7 @@ import { getInnerText } from '../utils/dom';
 
 const DOC_URL = 'https://download.samba.org/pub/rsync/rsync.1';
 
-export const fetchRsync: FetchFunction = async (): Promise<Command[]> => {
+export const rsync: FetchFunction = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const optionLists = findOptionLists(document);
   const options = mergeLists(optionLists.map((list) => listToOptions(list)));

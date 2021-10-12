@@ -19,7 +19,7 @@ import { isElement } from '../utils/typeGuards';
 
 const DOC_URL = 'https://stedolan.github.io/jq/manual/';
 
-export const fetchJq: FetchFunction = async (): Promise<Command[]> => {
+export const jq: FetchFunction = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const section = findOptionsSection(document);
   if (!section) {

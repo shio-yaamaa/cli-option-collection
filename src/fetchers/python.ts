@@ -18,7 +18,7 @@ import { isElement } from '../utils/typeGuards';
 const DOC_URL =
   'https://raw.githubusercontent.com/python/cpython/main/Misc/python.man';
 
-export const fetchPython: FetchFunction = async (): Promise<Command[]> => {
+export const python: FetchFunction = async (): Promise<Command[]> => {
   const url = new URL(DOC_URL);
   const document = await fetchDocumentFromManPageURL(url);
   const optionList = findOptionList(document);

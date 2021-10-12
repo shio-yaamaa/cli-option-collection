@@ -31,7 +31,7 @@ import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://perldoc.perl.org/perlrun';
 
-export const fetchPerl: FetchFunction = async (): Promise<Command[]> => {
+export const perl: FetchFunction = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const optionDl = findOptionDl(document);
   if (!optionDl) {

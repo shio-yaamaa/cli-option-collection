@@ -27,7 +27,7 @@ const BASE_URL = 'https://yarnpkg.com';
 const SUBCOMMAND_LINK_PATTERN = /^\/cli\//;
 const SUBCOMMAND_TEXT_PATTERN = /^yarn\s/;
 
-export const fetchYarn: FetchFunction = async (): Promise<Command[]> => {
+export const yarn: FetchFunction = async (): Promise<Command[]> => {
   const subcommandLocations = await fetchSubcommandLocations();
   const commands: Command[] = [];
   for (const subcommandLocation of subcommandLocations) {

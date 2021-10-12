@@ -22,7 +22,7 @@ import { mergeLists } from '../../utils/utils';
 export interface SourceDef {
   commandName: string;
   filename: string;
-  optionsHeadingID: string;
+  optionsHeadingID?: string; // Defaults to "DESCRIPTION"
 }
 
 export const fetch: Fetcher<SourceDef> = async (
@@ -34,7 +34,10 @@ export const fetch: Fetcher<SourceDef> = async (
     sourceDef.filename
   );
   const document = await fetchDocumentFromManFile(filePath);
-  const optionLists = findOptionLists(document, sourceDef.optionsHeadingID);
+  const optionLists = findOptionLists(
+    document,
+    sourceDef.optionsHeadingID ?? 'DESCRIPTION'
+  );
   const options = mergeLists(
     optionLists.map((list) => optionListToOptions(list))
   );
