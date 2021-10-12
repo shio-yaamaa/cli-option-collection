@@ -46,6 +46,7 @@ export const openbsd = {
   file: build('file'),
   find: build('find'),
   finger: build('finger'),
+  fstat: build('fstat'),
   gunzip: build('gunzip'),
   gzcat: build('gzcat'),
   gzip: build('gzip'),

@@ -106,6 +106,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['finger', openbsd.finger],
   ['fmt', gnuCoreutils.fmt],
   ['fold', gnuCoreutils.fold],
+  ['fstat', openbsd.fstat],
   ['fzf', fzf.fzf],
   ['fzf-tmux', fzf.fzfTmux],
   ['getopts', bashBuiltin.getopts],
