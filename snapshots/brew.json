@@ -1483,6 +1483,12 @@
       },
       {
         "type": "long",
+        "key": "custom-remote",
+        "title": "--custom-remote",
+        "description": "Install or change a tap with a custom remote. Useful for mirrors."
+      },
+      {
+        "type": "long",
         "key": "repair",
         "title": "--repair",
         "description": "Migrate tapped formulae from symlink-based to directory-based structure."
