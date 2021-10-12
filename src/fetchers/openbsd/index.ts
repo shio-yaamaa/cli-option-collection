@@ -104,6 +104,12 @@ export const fetchFind: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchFinger: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'finger',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchGunzip: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'gunzip',
