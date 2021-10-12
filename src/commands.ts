@@ -259,6 +259,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['users', gnuCoreutils.fetchUsers],
   ['vdir', gnuCoreutils.fetchVdir],
   ['wait', bashBuiltin.fetchWait],
+  ['wall', openbsd.fetchWall],
   ['wc', gnuCoreutils.fetchWc],
   ['who', gnuCoreutils.fetchWho],
   ['whoami', gnuCoreutils.fetchWhoami],

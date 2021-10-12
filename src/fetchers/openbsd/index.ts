@@ -299,6 +299,12 @@ export const fetchUncompress: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchWall: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'wall',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchZcat: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'zcat',
