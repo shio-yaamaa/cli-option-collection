@@ -282,6 +282,12 @@ export const fetchSsh: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchStrings: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'strings',
+    optionsHeadingID: 'OPTIONS',
+  });
+
 export const fetchTar: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'tar',

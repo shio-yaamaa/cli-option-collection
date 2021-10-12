@@ -222,6 +222,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['sshuttle', fetchSshuttle],
   ['stat', gnuCoreutils.fetchStat],
   ['stdbuf', gnuCoreutils.fetchStdbuf],
+  ['strings', openbsd.fetchStrings],
   ['stty', gnuCoreutils.fetchStty],
   ['sum', gnuCoreutils.fetchSum],
   ['suspend', bashBuiltin.fetchSuspend],
