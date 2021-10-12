@@ -20,27 +20,29 @@ import {
 import { findHeadingContentsPairs } from '../../utils/forFetcher/utils';
 import { mergeLists } from '../../utils/utils';
 
-export interface SourceDef {
-  commandName: string;
-  defFileBasename: string;
+interface Config {
+  defFileBasename?: string; // Defaults to commandName
 }
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
+export const build = (commandName: string, config?: Config): Fetcher => ({
+  fetch: () => fetch(commandName, config?.defFileBasename ?? commandName),
+});
+
+export const fetch = async (
+  commandName: string,
+  defFileBasename: string
 ): Promise<Command[]> => {
-  const text = await fetchPlainTextFromURL(
-    buildDefFileURL(sourceDef.defFileBasename)
-  );
+  const text = await fetchPlainTextFromURL(buildDefFileURL(defFileBasename));
   // Some .def files use tab indents and some use space indents. Normalize them by replacing tabs with spaces.
   const lines = text.split('\n').map((line) => tabToSpace(line, 8));
-  const helpSection = findHelpSection(lines, sourceDef.commandName);
+  const helpSection = findHelpSection(lines, commandName);
   const optionLists = findOptionLists(helpSection);
   const listItems = mergeLists(optionLists.map((list) => parseTextList(list)));
   const options = mergeLists(listItems.map((item) => listItemToOptions(item)));
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Option } from '../types';
 import { fetchPlainTextFromURL } from '../utils/forFetcher/http';
 import { ListItem, parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -19,7 +19,13 @@ import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://gitlab.com/graphviz/graphviz/-/raw/main/doc/Dot.ref';
 
-export const fetchDot: FetchFunction = async (): Promise<Command[]> => {
+export const graphviz = {
+  dot: {
+    fetch: () => fetchDot(),
+  },
+};
+
+const fetchDot = async (): Promise<Command[]> => {
   const url = new URL(DOC_URL);
   const text = await fetchPlainTextFromURL(url);
   const lines = text.split('\n');

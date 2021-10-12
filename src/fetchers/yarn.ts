@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Fetcher, Option } from '../types';
 import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
@@ -18,6 +18,10 @@ import { getInnerText } from '../utils/dom';
 // - https://github.com/yarnpkg/berry/blob/master/packages/plugin-essentials/sources/commands/add.ts
 // Could not find the repository that generates the Yarn 2 website.
 
+export const yarn: Fetcher = {
+  fetch: () => fetch(),
+};
+
 interface SubcommandLocation {
   commandName: string; // e.g. "yarn install"
   url: URL; // e.g. https://yarnpkg.com/cli/install
@@ -27,7 +31,7 @@ const BASE_URL = 'https://yarnpkg.com';
 const SUBCOMMAND_LINK_PATTERN = /^\/cli\//;
 const SUBCOMMAND_TEXT_PATTERN = /^yarn\s/;
 
-export const fetchYarn: FetchFunction = async (): Promise<Command[]> => {
+const fetch = async (): Promise<Command[]> => {
   const subcommandLocations = await fetchSubcommandLocations();
   const commands: Command[] = [];
   for (const subcommandLocation of subcommandLocations) {

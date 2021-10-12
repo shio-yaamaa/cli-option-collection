@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Option, Fetcher } from '../types';
 import { getInnerText } from '../utils/dom';
 import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
@@ -21,6 +21,10 @@ import { mergeLists } from '../utils/utils';
 // BUG: Global options are listed in the page below, but these are not collected.
 //      https://github.com/hashicorp/terraform/blob/5b07bb70401093a9ddbb3f2ebc3e2598ec9642d7/website/docs/cli/commands/index.html.md
 
+export const terraform: Fetcher = {
+  fetch: () => fetch(),
+};
+
 interface SubcommandLocation {
   command: string; // e.g. "terraform apply"
   url: URL; // e.g. https://www.terraform.io/docs/cli/commands/apply.html
@@ -28,7 +32,7 @@ interface SubcommandLocation {
 
 const BASE_URL = 'https://www.terraform.io/';
 
-export const fetchTerraform: FetchFunction = async (): Promise<Command[]> => {
+const fetch = async (): Promise<Command[]> => {
   const subcommandLocations = await fetchSubcommandLocations();
   const commands: Command[] = [];
   for (const subcommandLocation of subcommandLocations) {

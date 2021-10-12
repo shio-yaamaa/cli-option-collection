@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option, OptionType } from '../types';
+import { Command, Fetcher, Option, OptionType } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -43,7 +43,11 @@ interface Section {
 const DOC_URL = 'https://pkg.go.dev/cmd/go';
 const COMMAND_WORD_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
-export const fetchGo: FetchFunction = async (): Promise<Command[]> => {
+export const go: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const sections = getSections(document);
   const commands: Command[] = [];

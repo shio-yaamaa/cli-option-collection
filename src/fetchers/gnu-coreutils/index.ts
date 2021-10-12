@@ -1,768 +1,342 @@
-import { FetchFunction, Command } from '../../types';
-import { fetch } from './fetcher';
+import { build } from './builder';
 
-export const fetchArch: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'arch',
+export const gnuCoreutils = {
+  arch: build('arch', {
     filename: 'arch.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchB2sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'b2sum',
+  }),
+  b2sum: build('b2sum', {
     filename: 'b2sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchBase32: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'base32',
+  }),
+  base32: build('base32', {
     filename: 'base32.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchBase64: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'base64',
+  }),
+  base64: build('base64', {
     filename: 'base64.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchBasename: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'basename',
+  }),
+  basename: build('basename', {
     filename: 'basename.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchBasenc: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'basenc',
+  }),
+  basenc: build('basenc', {
     filename: 'basenc.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchCat: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'cat',
+  }),
+  cat: build('cat', {
     filename: 'cat.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchChcon: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'chcon',
+  }),
+  chcon: build('chcon', {
     filename: 'chcon.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchChgrp: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'chgrp',
+  }),
+  chgrp: build('chgrp', {
     filename: 'chgrp.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchChmod: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'chmod',
+  }),
+  chmod: build('chmod', {
     filename: 'chmod.1',
     optionsHeadingID: 'OPTIONS',
-  });
-
-export const fetchChown: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'chown',
+  }),
+  chown: build('chown', {
     filename: 'chown.1',
     optionsHeadingID: 'OPTIONS',
-  });
-
-export const fetchChroot: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'chroot',
+  }),
+  chroot: build('chroot', {
     filename: 'chroot.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchCksum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'cksum',
+  }),
+  cksum: build('cksum', {
     filename: 'cksum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchComm: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'comm',
+  }),
+  comm: build('comm', {
     filename: 'comm.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchCoreutils: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'coreutils',
+  }),
+  coreutils: build('coreutils', {
     filename: 'coreutils.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchCp: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'cp',
+  }),
+  cp: build('cp', {
     filename: 'cp.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchCsplit: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'csplit',
+  }),
+  csplit: build('csplit', {
     filename: 'csplit.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-// BUG: "-M" is not an option
-export const fetchCut: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'cut',
+  }),
+  // BUG: "-M" is not an option
+  cut: build('cut', {
     filename: 'cut.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchDate: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'date',
+  }),
+  date: build('date', {
     filename: 'date.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchDd: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'dd',
+  }),
+  dd: build('dd', {
     filename: 'dd.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchDf: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'df',
+  }),
+  df: build('df', {
     filename: 'df.1',
     optionsHeadingID: 'OPTIONS',
-  });
-
-export const fetchDir: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'dir',
+  }),
+  dir: build('dir', {
     filename: 'dir.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchDircolors: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'dircolors',
+  }),
+  dircolors: build('dircolors', {
     filename: 'dircolors.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchDirname: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'dirname',
+  }),
+  dirname: build('dirname', {
     filename: 'dirname.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchDu: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'du',
+  }),
+  du: build('du', {
     filename: 'du.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchEcho: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'echo',
+  }),
+  echo: build('echo', {
     filename: 'echo.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchEnv: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'env',
+  }),
+  env: build('env', {
     filename: 'env.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchExpand: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'expand',
+  }),
+  expand: build('expand', {
     filename: 'expand.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchExpr: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'expr',
+  }),
+  expr: build('expr', {
     filename: 'expr.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchFactor: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'factor',
+  }),
+  factor: build('factor', {
     filename: 'factor.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchFalse: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'false',
+  }),
+  false: build('false', {
     filename: 'false.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchFmt: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'fmt',
+  }),
+  fmt: build('fmt', {
     filename: 'fmt.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchFold: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'fold',
+  }),
+  fold: build('fold', {
     filename: 'fold.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchGroups: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'groups',
+  }),
+  groups: build('groups', {
     filename: 'groups.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchHead: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'head',
+  }),
+  head: build('head', {
     filename: 'head.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchHostid: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'hostid',
+  }),
+  hostid: build('hostid', {
     filename: 'hostid.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchHostname: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'hostname',
+  }),
+  hostname: build('hostname', {
     filename: 'hostname.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchId: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'id',
+  }),
+  id: build('id', {
     filename: 'id.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchInstall: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'install',
+  }),
+  install: build('install', {
     filename: 'install.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchJoin: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'join',
+  }),
+  join: build('join', {
     filename: 'join.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchKill: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'kill',
+  }),
+  kill: build('kill', {
     filename: 'kill.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchLink: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'link',
+  }),
+  link: build('link', {
     filename: 'link.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchLn: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'ln',
+  }),
+  ln: build('ln', {
     filename: 'ln.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchLogname: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'logname',
+  }),
+  logname: build('logname', {
     filename: 'logname.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-// BUG: Some options has descriptions that takes multiple <dd>s,
-//      but the second and later <dd>s are ignored.
-export const fetchLs: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'ls',
+  }),
+  // BUG: Some options has descriptions that takes multiple <dd>s,
+  //      but the second and later <dd>s are ignored.
+  ls: build('ls', {
     filename: 'ls.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchMd5sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'md5sum',
+  }),
+  md5sum: build('md5sum', {
     filename: 'md5sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchMkdir: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'mkdir',
+  }),
+  mkdir: build('mkdir', {
     filename: 'mkdir.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchMkfifo: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'mkfifo',
+  }),
+  mkfifo: build('mkfifo', {
     filename: 'mkfifo.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchMknod: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'mknod',
+  }),
+  mknod: build('mknod', {
     filename: 'mknod.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchMktemp: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'mktemp',
+  }),
+  mktemp: build('mktemp', {
     filename: 'mktemp.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchMv: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'mv',
+  }),
+  mv: build('mv', {
     filename: 'mv.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchNice: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'nice',
+  }),
+  nice: build('nice', {
     filename: 'nice.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchNl: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'nl',
+  }),
+  nl: build('nl', {
     filename: 'nl.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchNohup: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'nohup',
+  }),
+  nohup: build('nohup', {
     filename: 'nohup.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchNproc: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'nproc',
+  }),
+  nproc: build('nproc', {
     filename: 'nproc.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-// BUG: "-M" is not an option
-export const fetchNumfmt: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'numfmt',
+  }),
+  // BUG: "-M" is not an option
+  numfmt: build('numfmt', {
     filename: 'numfmt.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchOd: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'od',
+  }),
+  od: build('od', {
     filename: 'od.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPaste: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'paste',
+  }),
+  paste: build('paste', {
     filename: 'paste.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPathchk: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'pathchk',
+  }),
+  pathchk: build('pathchk', {
     filename: 'pathchk.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPinky: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'pinky',
+  }),
+  pinky: build('pinky', {
     filename: 'pinky.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPr: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'pr',
+  }),
+  pr: build('pr', {
     filename: 'pr.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPrintenv: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'printenv',
+  }),
+  printenv: build('printenv', {
     filename: 'printenv.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPrintf: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'printf',
+  }),
+  printf: build('printf', {
     filename: 'printf.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPtx: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'ptx',
+  }),
+  ptx: build('ptx', {
     filename: 'ptx.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchPwd: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'pwd',
+  }),
+  pwd: build('pwd', {
     filename: 'pwd.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchReadlink: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'readlink',
+  }),
+  readlink: build('readlink', {
     filename: 'readlink.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchRealpath: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'realpath',
+  }),
+  realpath: build('realpath', {
     filename: 'realpath.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchRm: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'rm',
+  }),
+  rm: build('rm', {
     filename: 'rm.1',
     optionsHeadingID: 'OPTIONS',
-  });
-
-// BUG: "--ignore-fail-on-non-empty" option is not recognized as an option.
-export const fetchRmdir: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'rmdir',
+  }),
+  // BUG: "--ignore-fail-on-non-empty" option is not recognized as an option.
+  rmdir: build('rmdir', {
     filename: 'rmdir.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchRuncon: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'runcon',
+  }),
+  runcon: build('runcon', {
     filename: 'runcon.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSeq: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'seq',
+  }),
+  seq: build('seq', {
     filename: 'seq.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSha1sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sha1sum',
+  }),
+  sha1sum: build('sha1sum', {
     filename: 'sha1sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSha224sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sha224sum',
+  }),
+  sha224sum: build('sha224sum', {
     filename: 'sha224sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSha256sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sha256sum',
+  }),
+  sha256sum: build('sha256sum', {
     filename: 'sha256sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSha384sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sha384sum',
+  }),
+  sha384sum: build('sha384sum', {
     filename: 'sha384sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSha512sum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sha512sum',
+  }),
+  sha512sum: build('sha512sum', {
     filename: 'sha512sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchShred: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'shred',
+  }),
+  shred: build('shred', {
     filename: 'shred.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchShuf: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'shuf',
+  }),
+  shuf: build('shuf', {
     filename: 'shuf.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSleep: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sleep',
+  }),
+  sleep: build('sleep', {
     filename: 'sleep.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSort: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sort',
+  }),
+  sort: build('sort', {
     filename: 'sort.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSplit: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'split',
+  }),
+  split: build('split', {
     filename: 'split.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-// BUG: "-c" and "--format" are not recognized as separate options
-//      because they are not delimited by "," in the man page.
-export const fetchStat: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'stat',
+  }),
+  // BUG: "-c" and "--format" are not recognized as separate options
+  //      because they are not delimited by "," in the man page.
+  stat: build('stat', {
     filename: 'stat.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchStdbuf: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'stdbuf',
+  }),
+  stdbuf: build('stdbuf', {
     filename: 'stdbuf.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchStty: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'stty',
+  }),
+  stty: build('stty', {
     filename: 'stty.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSum: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sum',
+  }),
+  sum: build('sum', {
     filename: 'sum.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchSync: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'sync',
+  }),
+  sync: build('sync', {
     filename: 'sync.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTac: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'tac',
+  }),
+  tac: build('tac', {
     filename: 'tac.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTail: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'tail',
+  }),
+  tail: build('tail', {
     filename: 'tail.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTee: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'tee',
+  }),
+  tee: build('tee', {
     filename: 'tee.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-// NOTE: Options used in the middle of expressions are not recognized as options.
-export const fetchTest: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'test',
+  }),
+  // NOTE: Options used in the middle of expressions are not recognized as options.
+  test: build('test', {
     filename: 'test.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-// BUG: Some of the options of "timeout" command are not fetched
-//      because their markup structures are inconsistent.
-export const fetchTimeout: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'timeout',
+  }),
+  // BUG: Some of the options of "timeout" command are not fetched
+  //      because their markup structures are inconsistent.
+  timeout: build('timeout', {
     filename: 'timeout.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTouch: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'touch',
+  }),
+  touch: build('touch', {
     filename: 'touch.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTr: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'tr',
+  }),
+  tr: build('tr', {
     filename: 'tr.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTrue: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'true',
+  }),
+  true: build('true', {
     filename: 'true.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTruncate: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'truncate',
+  }),
+  truncate: build('truncate', {
     filename: 'truncate.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTsort: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'tsort',
+  }),
+  tsort: build('tsort', {
     filename: 'tsort.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchTty: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'tty',
+  }),
+  tty: build('tty', {
     filename: 'tty.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchUname: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'uname',
+  }),
+  uname: build('uname', {
     filename: 'uname.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchUnexpand: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'unexpand',
+  }),
+  unexpand: build('unexpand', {
     filename: 'unexpand.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchUniq: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'uniq',
+  }),
+  uniq: build('uniq', {
     filename: 'uniq.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchUnlink: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'unlink',
+  }),
+  unlink: build('unlink', {
     filename: 'unlink.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchUptime: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'uptime',
+  }),
+  uptime: build('uptime', {
     filename: 'uptime.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchUsers: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'users',
+  }),
+  users: build('users', {
     filename: 'users.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchVdir: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'vdir',
+  }),
+  vdir: build('vdir', {
     filename: 'vdir.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchWc: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'wc',
+  }),
+  wc: build('wc', {
     filename: 'wc.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchWho: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'who',
+  }),
+  who: build('who', {
     filename: 'who.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchWhoami: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'whoami',
+  }),
+  whoami: build('whoami', {
     filename: 'whoami.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
-
-export const fetchYes: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'yes',
+  }),
+  yes: build('yes', {
     filename: 'yes.1',
-    optionsHeadingID: 'DESCRIPTION',
-  });
+  }),
+};

@@ -11,10 +11,15 @@ import {
   trimEqualDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 
-export interface SourceDef {
-  commandName: string;
+interface Config {
   url: URL;
 }
+
+export const build = (commandName: string, config: Config): Fetcher => {
+  return {
+    fetch: () => fetch(commandName, config.url),
+  };
+};
 
 interface OptionTableItem {
   hash: string; // e.g. "option_mysql_auto-rehash"
@@ -22,11 +27,12 @@ interface OptionTableItem {
   description: string;
 }
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
+export const fetch = async (
+  commandName: string,
+  url: URL
 ): Promise<Command[]> => {
-  const document = await fetchDocumentFromURL(sourceDef.url);
-  const hashDescriptionPairs = findOptionTableItems(document, sourceDef.url);
+  const document = await fetchDocumentFromURL(url);
+  const hashDescriptionPairs = findOptionTableItems(document, url);
 
   const options: Option[] = [];
 
@@ -52,7 +58,7 @@ export const fetch: Fetcher<SourceDef> = async (
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options,
     },
   ];

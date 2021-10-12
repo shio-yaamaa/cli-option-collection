@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Option, Fetcher } from '../types';
 import { getInnerText } from '../utils/dom';
 import { findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
@@ -18,7 +18,11 @@ import { isElement } from '../utils/typeGuards';
 const DOC_URL =
   'https://raw.githubusercontent.com/python/cpython/main/Misc/python.man';
 
-export const fetchPython: FetchFunction = async (): Promise<Command[]> => {
+export const python: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const url = new URL(DOC_URL);
   const document = await fetchDocumentFromManPageURL(url);
   const optionList = findOptionList(document);

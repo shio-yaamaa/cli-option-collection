@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -19,7 +19,11 @@ import { isElement } from '../utils/typeGuards';
 
 const DOC_URL = 'https://stedolan.github.io/jq/manual/';
 
-export const fetchJq: FetchFunction = async (): Promise<Command[]> => {
+export const jq: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const section = findOptionsSection(document);
   if (!section) {

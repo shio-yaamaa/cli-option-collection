@@ -1,20 +1,10 @@
-import { FetchFunction, Command } from '../../types';
-import { fetch } from './fetcher';
+import { build } from './builder';
 
-export const fetchFzf: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'fzf',
-    url: new URL(
-      'https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1'
-    ),
+export const fzf = {
+  fzf: build('fzf', {
     optionsHeaderID: 'OPTIONS',
-  });
-
-export const fetchFzfTmux: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'fzf-tmux',
-    url: new URL(
-      'https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1'
-    ),
+  }),
+  fzfTmux: build('fzf-tmux', {
     optionsHeaderID: 'LAYOUT_OPTIONS',
-  });
+  }),
+};

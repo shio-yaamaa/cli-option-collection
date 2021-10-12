@@ -1,23 +1,23 @@
-import { Fetcher, Command, Option } from '../../types';
+import { Command, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionListForSingleDashStyle } from '../../utils/forFetcher/optionString';
-import { normalizeSpacesAndLinebreaks } from '../../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 
-export interface SourceDef {
-  commandName: string;
+export interface Config {
   url: URL;
 }
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
-): Promise<Command[]> => {
-  const document = await fetchDocumentFromURL(sourceDef.url);
+export const build = (commandName: string, config: Config) => ({
+  fetch: () => fetch(commandName, config.url),
+});
+
+const fetch = async (commandName: string, url: URL): Promise<Command[]> => {
+  const document = await fetchDocumentFromURL(url);
   const optionTable = document.querySelector('table');
   if (!optionTable) {
     return [];
@@ -26,7 +26,7 @@ export const fetch: Fetcher<SourceDef> = async (
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

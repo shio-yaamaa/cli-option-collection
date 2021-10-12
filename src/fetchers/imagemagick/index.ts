@@ -1,5 +1,5 @@
-import { FetchFunction, Command } from '../../types';
-import { SourceDef, fetch } from './fetcher';
+import { Command } from '../../types';
+import { build, Config } from './builder';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { findAnchorsWithPattern } from '../../utils/forFetcher/dom';
 import { uniqueBy } from '../../utils/utils';
@@ -8,20 +8,37 @@ import { getInnerText } from '../../utils/dom';
 const BASE_URL = 'https://imagemagick.org/';
 const COMMAND_LIST_PATH = '/script/command-line-tools.php';
 
-export const fetchMagick: FetchFunction = async (): Promise<Command[]> => {
-  const sourceDefs = await fetchSourceDefs();
+export const imagemagick = {
+  magick: {
+    fetch: () => fetchMagick(),
+  },
+  magickScript: build('magick-script', {
+    url: new URL('https://imagemagick.org/script/magick-script.php'),
+  }),
+};
+
+const fetchMagick = async (): Promise<Command[]> => {
+  const sources = await fetchSources();
+  const fetchers = sources.map((source) =>
+    build(source.commandName, source.config)
+  );
   const commands: Command[] = [];
-  for (const sourceDef of sourceDefs) {
-    commands.push(...(await fetch(sourceDef)));
+  for (const fetcher of fetchers) {
+    commands.push(...(await fetcher.fetch()));
   }
   return commands;
 };
 
-const fetchSourceDefs = async (): Promise<SourceDef[]> => {
+const fetchSources = async (): Promise<
+  {
+    commandName: string;
+    config: Config;
+  }[]
+> => {
   const document = await fetchDocumentFromURL(
     new URL(COMMAND_LIST_PATH, BASE_URL)
   );
-  const sourceDefs: SourceDef[] = [];
+  const sources: { commandName: string; config: Config }[] = [];
   const dlists = Array.from(document.querySelectorAll('dl'));
   for (const dlist of dlists) {
     const anchors = findAnchorsWithPattern(
@@ -29,18 +46,14 @@ const fetchSourceDefs = async (): Promise<SourceDef[]> => {
       /^\/script\/\.\.\/script\/[A-Za-z0-9-]+\.php$/,
       /^magick(\s[A-Za-z0-9-]+)?$/
     );
-    sourceDefs.push(
+    sources.push(
       ...anchors.map((anchor) => ({
         commandName: getInnerText(anchor).trim(),
-        url: new URL(anchor.href, BASE_URL),
+        config: {
+          url: new URL(anchor.href, BASE_URL),
+        },
       }))
     );
   }
-  return uniqueBy(sourceDefs, (sourceDef) => sourceDef.url.toString());
+  return uniqueBy(sources, (source) => source.config.url.toString());
 };
-
-export const fetchMagickScript: FetchFunction = async (): Promise<Command[]> =>
-  fetch({
-    commandName: 'magick-script',
-    url: new URL('https://imagemagick.org/script/magick-script.php'),
-  });

@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
@@ -21,7 +21,11 @@ import { mergeLists } from '../utils/utils';
 const DOC_URL =
   'https://raw.githubusercontent.com/htop-dev/htop/main/htop.1.in';
 
-export const fetchHtop: FetchFunction = async (): Promise<Command[]> => {
+export const htop: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromManPageURL(new URL(DOC_URL));
   const section = findOptionsSection(document);
   if (!section) {

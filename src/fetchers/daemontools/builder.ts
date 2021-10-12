@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option } from '../../types';
+import { Command, Fetcher, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -9,21 +9,20 @@ import {
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
-export interface SourceDef {
-  commandName: string;
-  url: URL;
-}
+export const build = (commandName: string): Fetcher => ({
+  fetch: () => fetch(commandName),
+});
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
-): Promise<Command[]> => {
-  const document = await fetchDocumentFromURL(sourceDef.url);
+const fetch = async (commandName: string): Promise<Command[]> => {
+  const document = await fetchDocumentFromURL(
+    new URL(`https://cr.yp.to/daemontools/${commandName}.html`)
+  );
   const lists = findTopLevelLists(document);
   const options = mergeLists(lists.map((list) => listToOptions(list)));
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

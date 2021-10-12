@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { Fetcher, Command, Option } from '../../types';
+import { Command, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { findDListEntries } from '../../utils/forFetcher/dom';
 import {
@@ -19,28 +19,38 @@ import {
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
-export interface SourceDef {
-  commandName: string;
+interface Config {
   filename: string;
-  optionsHeadingID: string;
+  optionsHeadingID?: string; // Defaults to "DESCRIPTION"
 }
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
+export const build = (commandName: string, config: Config) => ({
+  fetch: () =>
+    fetch(
+      commandName,
+      config.filename,
+      config.optionsHeadingID ?? 'DESCRIPTION'
+    ),
+});
+
+export const fetch = async (
+  commandName: string,
+  filename: string,
+  optionsHeadingID: string
 ): Promise<Command[]> => {
   const filePath = path.resolve(
     DOWNLOADS_DIRECTORY,
     'gnu-coreutils/man',
-    sourceDef.filename
+    filename
   );
   const document = await fetchDocumentFromManFile(filePath);
-  const optionLists = findOptionLists(document, sourceDef.optionsHeadingID);
+  const optionLists = findOptionLists(document, optionsHeadingID);
   const options = mergeLists(
     optionLists.map((list) => optionListToOptions(list))
   );
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

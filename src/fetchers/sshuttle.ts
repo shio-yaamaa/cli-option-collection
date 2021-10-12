@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
@@ -17,7 +17,11 @@ import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://sshuttle.readthedocs.io/en/stable/manpage.html';
 
-export const fetchSshuttle: FetchFunction = async (): Promise<Command[]> => {
+export const sshuttle: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const dlists = findDLists(document);
   const dlistEntries = mergeLists(
