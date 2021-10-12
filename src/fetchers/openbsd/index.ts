@@ -36,6 +36,7 @@ export const openbsd = {
   csh: build('csh', {
     optionsHeadingID: 'Argument_list_processing',
   }),
+  dc: build('dc'),
   diff: build('diff'),
   dig: build('dig'),
   domainname: build('domainname'),

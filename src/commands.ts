@@ -68,6 +68,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['csplit', gnuCoreutils.csplit],
   ['cut', gnuCoreutils.cut],
   ['date', gnuCoreutils.date],
+  ['dc', openbsd.dc],
   ['dd', gnuCoreutils.dd],
   ['declare', bashBuiltin.declare],
   ['df', gnuCoreutils.df],
