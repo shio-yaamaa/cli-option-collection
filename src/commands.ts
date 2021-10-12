@@ -118,6 +118,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['hostname', gnuCoreutils.fetchHostname],
   ['htop', fetchHtop],
   ['id', gnuCoreutils.fetchId],
+  ['init', openbsd.fetchInit],
   ['inlib', bashBuiltin.fetchInlib],
   ['install', gnuCoreutils.fetchInstall],
   ['jobs', bashBuiltin.fetchJobs],

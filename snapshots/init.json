@@ -1,0 +1,19 @@
+[
+  {
+    "name": "init",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Activate fastboot mode. This is not currently supported by the OpenBSD kernel. Instead, use the /fastboot file as explained in the rc(8) manual."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Boot directly into single-user mode."
+      }
+    ]
+  }
+]

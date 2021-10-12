@@ -121,6 +121,12 @@ export const fetchHalt: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchInit: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'init',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchKsh: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'ksh',
