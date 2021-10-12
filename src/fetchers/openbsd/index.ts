@@ -27,6 +27,7 @@ export const openbsd = {
   // BUG: "-safe" flag is not recognized as an option
   //      because it uses single dash with long option name.
   awk: build('awk'),
+  bc: build('bc'),
   chflags: build('chflags'),
   chio: build('chio'),
   clear: build('clear'),

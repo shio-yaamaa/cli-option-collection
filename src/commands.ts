@@ -36,6 +36,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['base64', gnuCoreutils.base64],
   ['basename', gnuCoreutils.basename],
   ['basenc', gnuCoreutils.basenc],
+  ['bc', openbsd.bc],
   ['bg', bashBuiltin.bg],
   ['bind', bashBuiltin.bind],
   ['break', bashBuiltin.break],
