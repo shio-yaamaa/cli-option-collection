@@ -14,7 +14,11 @@ import { fetch } from './fetcher';
 //      despite having different option sets.
 //      This fetcher cannot tell which option is available to which command
 //      and assigns all of the options to the commands on the page.
-//      (e.g. [tput, clear], [gzip, gunzip, gzcat], [mt, eject], [ping, ping6])
+//      - tput, clear
+//      - gzip, gunzip, gzcat
+//      - compress, uncompress, zcat
+//      - mt, eject
+//      - ping, ping6
 // BUG: Tables and definition lists are not stringified in a human-readable way.
 //      (e.g. netstat -f, gzip -l)
 
@@ -41,6 +45,12 @@ export const fetchChflags: FetchFunction = async (): Promise<Command[]> =>
 export const fetchClear: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'clear',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchCompress: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'compress',
     optionsHeadingID: 'DESCRIPTION',
   });
 
@@ -268,5 +278,17 @@ export const fetchTop: FetchFunction = async (): Promise<Command[]> =>
 export const fetchTput: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'tput',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchUncompress: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'uncompress',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchZcat: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'zcat',
     optionsHeadingID: 'DESCRIPTION',
   });

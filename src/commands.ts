@@ -57,6 +57,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['compgen', bashBuiltin.fetchCompgen],
   ['complete', bashBuiltin.fetchComplete],
   ['compopt', bashBuiltin.fetchCompopt],
+  ['compress', openbsd.fetchCompress],
   ['continue', bashBuiltin.fetchContinue],
   ['coreutils', gnuCoreutils.fetchCoreutils],
   ['cp', gnuCoreutils.fetchCp],
@@ -247,6 +248,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['umask', bashBuiltin.fetchUmask],
   ['unalias', bashBuiltin.fetchUnalias],
   ['uname', gnuCoreutils.fetchUname],
+  ['uncompress', openbsd.fetchUncompress],
   ['unexpand', gnuCoreutils.fetchUnexpand],
   ['uniq', gnuCoreutils.fetchUniq],
   ['unlink', gnuCoreutils.fetchUnlink],
@@ -260,4 +262,5 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['whoami', gnuCoreutils.fetchWhoami],
   ['yarn', fetchYarn],
   ['yes', gnuCoreutils.fetchYes],
+  ['zcat', openbsd.fetchZcat],
 ]);
