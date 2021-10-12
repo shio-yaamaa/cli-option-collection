@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Option, Fetcher } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -25,7 +25,11 @@ import { getInnerText } from '../utils/dom';
 
 const DOC_URL = 'https://download.samba.org/pub/rsync/rsync.1';
 
-export const rsync: FetchFunction = async (): Promise<Command[]> => {
+export const rsync: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const optionLists = findOptionLists(document);
   const options = mergeLists(optionLists.map((list) => listToOptions(list)));

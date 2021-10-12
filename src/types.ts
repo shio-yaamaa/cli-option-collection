@@ -1,5 +1,6 @@
-export type Fetcher<T> = (sourceDef: T) => Promise<Command[]>;
-export type FetchFunction = () => Promise<Command[]>;
+export interface Fetcher {
+  fetch: () => Promise<Command[]>;
+}
 
 export enum OptionType {
   SHORT = 'short',

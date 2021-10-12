@@ -1,4 +1,4 @@
-import { baseCommandToFetchFunction } from '../commands';
+import { baseCommandNames } from '../commands';
 import { readSnapshot } from '../snapshot';
 import { OptionType } from '../types';
 import { Stats } from './types';
@@ -6,8 +6,6 @@ import { Stats } from './types';
 const RANKING_LIMIT = 10; // Show top 10
 
 export const buildStats = (): Stats => {
-  const baseCommandNames = Array.from(baseCommandToFetchFunction.keys());
-
   let commandCount = 0;
   let optionCount = 0;
   const optionCounts: { commandName: string; count: number }[] = [];

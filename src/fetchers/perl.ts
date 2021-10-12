@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import {
   DListEntry,
@@ -31,7 +31,11 @@ import { mergeLists } from '../utils/utils';
 
 const DOC_URL = 'https://perldoc.perl.org/perlrun';
 
-export const perl: FetchFunction = async (): Promise<Command[]> => {
+export const perl: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async (): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(new URL(DOC_URL));
   const optionDl = findOptionDl(document);
   if (!optionDl) {

@@ -1,5 +1,5 @@
-import { FetchFunction } from './types';
-import { joinFetchFunctions as join } from './utils/fetchFunction';
+import { Fetcher } from './types';
+import { joinFetchers as join } from './utils/fetcher';
 
 import { apt } from './fetchers/apt';
 import { bashBuiltin } from './fetchers/bash-builtin';
@@ -24,7 +24,7 @@ import { sshuttle } from './fetchers/sshuttle';
 import { terraform } from './fetchers/terraform';
 import { yarn } from './fetchers/yarn';
 
-export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
+export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['alias', bashBuiltin.alias],
   ['apropos', openbsd.apropos],
   ['apt-cache', apt.aptCache],
@@ -272,3 +272,5 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['yes', gnuCoreutils.yes],
   ['zcat', openbsd.zcat],
 ]);
+
+export const baseCommandNames = Array.from(baseCommandToFetcher.keys());

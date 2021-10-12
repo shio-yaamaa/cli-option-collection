@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option } from '../../types';
+import { Command, Fetcher, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
@@ -21,15 +21,13 @@ import { mergeLists } from '../../utils/utils';
 // NOTE: ffmpeg uses single dash for both single-letter and multiple-letter options,
 //       but this fetcher distinguishes these two types anyway.
 
-export interface SourceDef {
-  commandName: string;
-}
+export const build = (commandName: string): Fetcher => ({
+  fetch: () => fetch(commandName),
+});
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
-): Promise<Command[]> => {
+const fetch = async (commandName: string): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(
-    new URL(`https://www.ffmpeg.org/${sourceDef.commandName}.html`)
+    new URL(`https://www.ffmpeg.org/${commandName}.html`)
   );
   const dlists = findTopLevelLists(document);
   const dlistEntries = mergeLists(dlists.map((dl) => findDListEntries(dl)));
@@ -39,7 +37,7 @@ export const fetch: Fetcher<SourceDef> = async (
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

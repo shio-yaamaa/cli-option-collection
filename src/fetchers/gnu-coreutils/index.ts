@@ -1,558 +1,342 @@
-import { fetch } from './fetcher';
+import { build } from './builder';
 
 export const gnuCoreutils = {
-  arch: () =>
-    fetch({
-      commandName: 'arch',
-      filename: 'arch.1',
-    }),
-  b2sum: () =>
-    fetch({
-      commandName: 'b2sum',
-      filename: 'b2sum.1',
-    }),
-  base32: () =>
-    fetch({
-      commandName: 'base32',
-      filename: 'base32.1',
-    }),
-  base64: () =>
-    fetch({
-      commandName: 'base64',
-      filename: 'base64.1',
-    }),
-  basename: () =>
-    fetch({
-      commandName: 'basename',
-      filename: 'basename.1',
-    }),
-  basenc: () =>
-    fetch({
-      commandName: 'basenc',
-      filename: 'basenc.1',
-    }),
-  cat: () =>
-    fetch({
-      commandName: 'cat',
-      filename: 'cat.1',
-    }),
-  chcon: () =>
-    fetch({
-      commandName: 'chcon',
-      filename: 'chcon.1',
-    }),
-  chgrp: () =>
-    fetch({
-      commandName: 'chgrp',
-      filename: 'chgrp.1',
-    }),
-  chmod: () =>
-    fetch({
-      commandName: 'chmod',
-      filename: 'chmod.1',
-      optionsHeadingID: 'OPTIONS',
-    }),
-  chown: () =>
-    fetch({
-      commandName: 'chown',
-      filename: 'chown.1',
-      optionsHeadingID: 'OPTIONS',
-    }),
-  chroot: () =>
-    fetch({
-      commandName: 'chroot',
-      filename: 'chroot.1',
-    }),
-  cksum: () =>
-    fetch({
-      commandName: 'cksum',
-      filename: 'cksum.1',
-    }),
-  comm: () =>
-    fetch({
-      commandName: 'comm',
-      filename: 'comm.1',
-    }),
-  coreutils: () =>
-    fetch({
-      commandName: 'coreutils',
-      filename: 'coreutils.1',
-    }),
-  cp: () =>
-    fetch({
-      commandName: 'cp',
-      filename: 'cp.1',
-    }),
-  csplit: () =>
-    fetch({
-      commandName: 'csplit',
-      filename: 'csplit.1',
-    }),
+  arch: build('arch', {
+    filename: 'arch.1',
+  }),
+  b2sum: build('b2sum', {
+    filename: 'b2sum.1',
+  }),
+  base32: build('base32', {
+    filename: 'base32.1',
+  }),
+  base64: build('base64', {
+    filename: 'base64.1',
+  }),
+  basename: build('basename', {
+    filename: 'basename.1',
+  }),
+  basenc: build('basenc', {
+    filename: 'basenc.1',
+  }),
+  cat: build('cat', {
+    filename: 'cat.1',
+  }),
+  chcon: build('chcon', {
+    filename: 'chcon.1',
+  }),
+  chgrp: build('chgrp', {
+    filename: 'chgrp.1',
+  }),
+  chmod: build('chmod', {
+    filename: 'chmod.1',
+    optionsHeadingID: 'OPTIONS',
+  }),
+  chown: build('chown', {
+    filename: 'chown.1',
+    optionsHeadingID: 'OPTIONS',
+  }),
+  chroot: build('chroot', {
+    filename: 'chroot.1',
+  }),
+  cksum: build('cksum', {
+    filename: 'cksum.1',
+  }),
+  comm: build('comm', {
+    filename: 'comm.1',
+  }),
+  coreutils: build('coreutils', {
+    filename: 'coreutils.1',
+  }),
+  cp: build('cp', {
+    filename: 'cp.1',
+  }),
+  csplit: build('csplit', {
+    filename: 'csplit.1',
+  }),
   // BUG: "-M" is not an option
-  cut: () =>
-    fetch({
-      commandName: 'cut',
-      filename: 'cut.1',
-    }),
-  date: () =>
-    fetch({
-      commandName: 'date',
-      filename: 'date.1',
-    }),
-  dd: () =>
-    fetch({
-      commandName: 'dd',
-      filename: 'dd.1',
-    }),
-  df: () =>
-    fetch({
-      commandName: 'df',
-      filename: 'df.1',
-      optionsHeadingID: 'OPTIONS',
-    }),
-  dir: () =>
-    fetch({
-      commandName: 'dir',
-      filename: 'dir.1',
-    }),
-  dircolors: () =>
-    fetch({
-      commandName: 'dircolors',
-      filename: 'dircolors.1',
-    }),
-  dirname: () =>
-    fetch({
-      commandName: 'dirname',
-      filename: 'dirname.1',
-    }),
-  du: () =>
-    fetch({
-      commandName: 'du',
-      filename: 'du.1',
-    }),
-  echo: () =>
-    fetch({
-      commandName: 'echo',
-      filename: 'echo.1',
-    }),
-  env: () =>
-    fetch({
-      commandName: 'env',
-      filename: 'env.1',
-    }),
-  expand: () =>
-    fetch({
-      commandName: 'expand',
-      filename: 'expand.1',
-    }),
-  expr: () =>
-    fetch({
-      commandName: 'expr',
-      filename: 'expr.1',
-    }),
-  factor: () =>
-    fetch({
-      commandName: 'factor',
-      filename: 'factor.1',
-    }),
-  false: () =>
-    fetch({
-      commandName: 'false',
-      filename: 'false.1',
-    }),
-  fmt: () =>
-    fetch({
-      commandName: 'fmt',
-      filename: 'fmt.1',
-    }),
-  fold: () =>
-    fetch({
-      commandName: 'fold',
-      filename: 'fold.1',
-    }),
-  groups: () =>
-    fetch({
-      commandName: 'groups',
-      filename: 'groups.1',
-    }),
-  head: () =>
-    fetch({
-      commandName: 'head',
-      filename: 'head.1',
-    }),
-  hostid: () =>
-    fetch({
-      commandName: 'hostid',
-      filename: 'hostid.1',
-    }),
-  hostname: () =>
-    fetch({
-      commandName: 'hostname',
-      filename: 'hostname.1',
-    }),
-  id: () =>
-    fetch({
-      commandName: 'id',
-      filename: 'id.1',
-    }),
-  install: () =>
-    fetch({
-      commandName: 'install',
-      filename: 'install.1',
-    }),
-  join: () =>
-    fetch({
-      commandName: 'join',
-      filename: 'join.1',
-    }),
-  kill: () =>
-    fetch({
-      commandName: 'kill',
-      filename: 'kill.1',
-    }),
-  link: () =>
-    fetch({
-      commandName: 'link',
-      filename: 'link.1',
-    }),
-  ln: () =>
-    fetch({
-      commandName: 'ln',
-      filename: 'ln.1',
-    }),
-  logname: () =>
-    fetch({
-      commandName: 'logname',
-      filename: 'logname.1',
-    }),
+  cut: build('cut', {
+    filename: 'cut.1',
+  }),
+  date: build('date', {
+    filename: 'date.1',
+  }),
+  dd: build('dd', {
+    filename: 'dd.1',
+  }),
+  df: build('df', {
+    filename: 'df.1',
+    optionsHeadingID: 'OPTIONS',
+  }),
+  dir: build('dir', {
+    filename: 'dir.1',
+  }),
+  dircolors: build('dircolors', {
+    filename: 'dircolors.1',
+  }),
+  dirname: build('dirname', {
+    filename: 'dirname.1',
+  }),
+  du: build('du', {
+    filename: 'du.1',
+  }),
+  echo: build('echo', {
+    filename: 'echo.1',
+  }),
+  env: build('env', {
+    filename: 'env.1',
+  }),
+  expand: build('expand', {
+    filename: 'expand.1',
+  }),
+  expr: build('expr', {
+    filename: 'expr.1',
+  }),
+  factor: build('factor', {
+    filename: 'factor.1',
+  }),
+  false: build('false', {
+    filename: 'false.1',
+  }),
+  fmt: build('fmt', {
+    filename: 'fmt.1',
+  }),
+  fold: build('fold', {
+    filename: 'fold.1',
+  }),
+  groups: build('groups', {
+    filename: 'groups.1',
+  }),
+  head: build('head', {
+    filename: 'head.1',
+  }),
+  hostid: build('hostid', {
+    filename: 'hostid.1',
+  }),
+  hostname: build('hostname', {
+    filename: 'hostname.1',
+  }),
+  id: build('id', {
+    filename: 'id.1',
+  }),
+  install: build('install', {
+    filename: 'install.1',
+  }),
+  join: build('join', {
+    filename: 'join.1',
+  }),
+  kill: build('kill', {
+    filename: 'kill.1',
+  }),
+  link: build('link', {
+    filename: 'link.1',
+  }),
+  ln: build('ln', {
+    filename: 'ln.1',
+  }),
+  logname: build('logname', {
+    filename: 'logname.1',
+  }),
   // BUG: Some options has descriptions that takes multiple <dd>s,
   //      but the second and later <dd>s are ignored.
-  ls: () =>
-    fetch({
-      commandName: 'ls',
-      filename: 'ls.1',
-    }),
-  md5sum: () =>
-    fetch({
-      commandName: 'md5sum',
-      filename: 'md5sum.1',
-    }),
-  mkdir: () =>
-    fetch({
-      commandName: 'mkdir',
-      filename: 'mkdir.1',
-    }),
-  mkfifo: () =>
-    fetch({
-      commandName: 'mkfifo',
-      filename: 'mkfifo.1',
-    }),
-  mknod: () =>
-    fetch({
-      commandName: 'mknod',
-      filename: 'mknod.1',
-    }),
-  mktemp: () =>
-    fetch({
-      commandName: 'mktemp',
-      filename: 'mktemp.1',
-    }),
-  mv: () =>
-    fetch({
-      commandName: 'mv',
-      filename: 'mv.1',
-    }),
-  nice: () =>
-    fetch({
-      commandName: 'nice',
-      filename: 'nice.1',
-    }),
-  nl: () =>
-    fetch({
-      commandName: 'nl',
-      filename: 'nl.1',
-    }),
-  nohup: () =>
-    fetch({
-      commandName: 'nohup',
-      filename: 'nohup.1',
-    }),
-  nproc: () =>
-    fetch({
-      commandName: 'nproc',
-      filename: 'nproc.1',
-    }),
+  ls: build('ls', {
+    filename: 'ls.1',
+  }),
+  md5sum: build('md5sum', {
+    filename: 'md5sum.1',
+  }),
+  mkdir: build('mkdir', {
+    filename: 'mkdir.1',
+  }),
+  mkfifo: build('mkfifo', {
+    filename: 'mkfifo.1',
+  }),
+  mknod: build('mknod', {
+    filename: 'mknod.1',
+  }),
+  mktemp: build('mktemp', {
+    filename: 'mktemp.1',
+  }),
+  mv: build('mv', {
+    filename: 'mv.1',
+  }),
+  nice: build('nice', {
+    filename: 'nice.1',
+  }),
+  nl: build('nl', {
+    filename: 'nl.1',
+  }),
+  nohup: build('nohup', {
+    filename: 'nohup.1',
+  }),
+  nproc: build('nproc', {
+    filename: 'nproc.1',
+  }),
   // BUG: "-M" is not an option
-  numfmt: () =>
-    fetch({
-      commandName: 'numfmt',
-      filename: 'numfmt.1',
-    }),
-  od: () =>
-    fetch({
-      commandName: 'od',
-      filename: 'od.1',
-    }),
-  paste: () =>
-    fetch({
-      commandName: 'paste',
-      filename: 'paste.1',
-    }),
-  pathchk: () =>
-    fetch({
-      commandName: 'pathchk',
-      filename: 'pathchk.1',
-    }),
-  pinky: () =>
-    fetch({
-      commandName: 'pinky',
-      filename: 'pinky.1',
-    }),
-  pr: () =>
-    fetch({
-      commandName: 'pr',
-      filename: 'pr.1',
-    }),
-  printenv: () =>
-    fetch({
-      commandName: 'printenv',
-      filename: 'printenv.1',
-    }),
-  printf: () =>
-    fetch({
-      commandName: 'printf',
-      filename: 'printf.1',
-    }),
-  ptx: () =>
-    fetch({
-      commandName: 'ptx',
-      filename: 'ptx.1',
-    }),
-  pwd: () =>
-    fetch({
-      commandName: 'pwd',
-      filename: 'pwd.1',
-    }),
-  readlink: () =>
-    fetch({
-      commandName: 'readlink',
-      filename: 'readlink.1',
-    }),
-  realpath: () =>
-    fetch({
-      commandName: 'realpath',
-      filename: 'realpath.1',
-    }),
-  rm: () =>
-    fetch({
-      commandName: 'rm',
-      filename: 'rm.1',
-      optionsHeadingID: 'OPTIONS',
-    }),
+  numfmt: build('numfmt', {
+    filename: 'numfmt.1',
+  }),
+  od: build('od', {
+    filename: 'od.1',
+  }),
+  paste: build('paste', {
+    filename: 'paste.1',
+  }),
+  pathchk: build('pathchk', {
+    filename: 'pathchk.1',
+  }),
+  pinky: build('pinky', {
+    filename: 'pinky.1',
+  }),
+  pr: build('pr', {
+    filename: 'pr.1',
+  }),
+  printenv: build('printenv', {
+    filename: 'printenv.1',
+  }),
+  printf: build('printf', {
+    filename: 'printf.1',
+  }),
+  ptx: build('ptx', {
+    filename: 'ptx.1',
+  }),
+  pwd: build('pwd', {
+    filename: 'pwd.1',
+  }),
+  readlink: build('readlink', {
+    filename: 'readlink.1',
+  }),
+  realpath: build('realpath', {
+    filename: 'realpath.1',
+  }),
+  rm: build('rm', {
+    filename: 'rm.1',
+    optionsHeadingID: 'OPTIONS',
+  }),
   // BUG: "--ignore-fail-on-non-empty" option is not recognized as an option.
-  rmdir: () =>
-    fetch({
-      commandName: 'rmdir',
-      filename: 'rmdir.1',
-    }),
-  runcon: () =>
-    fetch({
-      commandName: 'runcon',
-      filename: 'runcon.1',
-    }),
-  seq: () =>
-    fetch({
-      commandName: 'seq',
-      filename: 'seq.1',
-    }),
-  sha1sum: () =>
-    fetch({
-      commandName: 'sha1sum',
-      filename: 'sha1sum.1',
-    }),
-  sha224sum: () =>
-    fetch({
-      commandName: 'sha224sum',
-      filename: 'sha224sum.1',
-    }),
-  sha256sum: () =>
-    fetch({
-      commandName: 'sha256sum',
-      filename: 'sha256sum.1',
-    }),
-  sha384sum: () =>
-    fetch({
-      commandName: 'sha384sum',
-      filename: 'sha384sum.1',
-    }),
-  sha512sum: () =>
-    fetch({
-      commandName: 'sha512sum',
-      filename: 'sha512sum.1',
-    }),
-  shred: () =>
-    fetch({
-      commandName: 'shred',
-      filename: 'shred.1',
-    }),
-  shuf: () =>
-    fetch({
-      commandName: 'shuf',
-      filename: 'shuf.1',
-    }),
-  sleep: () =>
-    fetch({
-      commandName: 'sleep',
-      filename: 'sleep.1',
-    }),
-  sort: () =>
-    fetch({
-      commandName: 'sort',
-      filename: 'sort.1',
-    }),
-  split: () =>
-    fetch({
-      commandName: 'split',
-      filename: 'split.1',
-    }),
+  rmdir: build('rmdir', {
+    filename: 'rmdir.1',
+  }),
+  runcon: build('runcon', {
+    filename: 'runcon.1',
+  }),
+  seq: build('seq', {
+    filename: 'seq.1',
+  }),
+  sha1sum: build('sha1sum', {
+    filename: 'sha1sum.1',
+  }),
+  sha224sum: build('sha224sum', {
+    filename: 'sha224sum.1',
+  }),
+  sha256sum: build('sha256sum', {
+    filename: 'sha256sum.1',
+  }),
+  sha384sum: build('sha384sum', {
+    filename: 'sha384sum.1',
+  }),
+  sha512sum: build('sha512sum', {
+    filename: 'sha512sum.1',
+  }),
+  shred: build('shred', {
+    filename: 'shred.1',
+  }),
+  shuf: build('shuf', {
+    filename: 'shuf.1',
+  }),
+  sleep: build('sleep', {
+    filename: 'sleep.1',
+  }),
+  sort: build('sort', {
+    filename: 'sort.1',
+  }),
+  split: build('split', {
+    filename: 'split.1',
+  }),
   // BUG: "-c" and "--format" are not recognized as separate options
   //      because they are not delimited by "," in the man page.
-  stat: () =>
-    fetch({
-      commandName: 'stat',
-      filename: 'stat.1',
-    }),
-  stdbuf: () =>
-    fetch({
-      commandName: 'stdbuf',
-      filename: 'stdbuf.1',
-    }),
-  stty: () =>
-    fetch({
-      commandName: 'stty',
-      filename: 'stty.1',
-    }),
-  sum: () =>
-    fetch({
-      commandName: 'sum',
-      filename: 'sum.1',
-    }),
-  sync: () =>
-    fetch({
-      commandName: 'sync',
-      filename: 'sync.1',
-    }),
-  tac: () =>
-    fetch({
-      commandName: 'tac',
-      filename: 'tac.1',
-    }),
-  tail: () =>
-    fetch({
-      commandName: 'tail',
-      filename: 'tail.1',
-    }),
-  tee: () =>
-    fetch({
-      commandName: 'tee',
-      filename: 'tee.1',
-    }),
+  stat: build('stat', {
+    filename: 'stat.1',
+  }),
+  stdbuf: build('stdbuf', {
+    filename: 'stdbuf.1',
+  }),
+  stty: build('stty', {
+    filename: 'stty.1',
+  }),
+  sum: build('sum', {
+    filename: 'sum.1',
+  }),
+  sync: build('sync', {
+    filename: 'sync.1',
+  }),
+  tac: build('tac', {
+    filename: 'tac.1',
+  }),
+  tail: build('tail', {
+    filename: 'tail.1',
+  }),
+  tee: build('tee', {
+    filename: 'tee.1',
+  }),
   // NOTE: Options used in the middle of expressions are not recognized as options.
-  test: () =>
-    fetch({
-      commandName: 'test',
-      filename: 'test.1',
-    }),
+  test: build('test', {
+    filename: 'test.1',
+  }),
   // BUG: Some of the options of "timeout" command are not fetched
   //      because their markup structures are inconsistent.
-  timeout: () =>
-    fetch({
-      commandName: 'timeout',
-      filename: 'timeout.1',
-    }),
-  touch: () =>
-    fetch({
-      commandName: 'touch',
-      filename: 'touch.1',
-    }),
-  tr: () =>
-    fetch({
-      commandName: 'tr',
-      filename: 'tr.1',
-    }),
-  true: () =>
-    fetch({
-      commandName: 'true',
-      filename: 'true.1',
-    }),
-  truncate: () =>
-    fetch({
-      commandName: 'truncate',
-      filename: 'truncate.1',
-    }),
-  tsort: () =>
-    fetch({
-      commandName: 'tsort',
-      filename: 'tsort.1',
-    }),
-  tty: () =>
-    fetch({
-      commandName: 'tty',
-      filename: 'tty.1',
-    }),
-  uname: () =>
-    fetch({
-      commandName: 'uname',
-      filename: 'uname.1',
-    }),
-  unexpand: () =>
-    fetch({
-      commandName: 'unexpand',
-      filename: 'unexpand.1',
-    }),
-  uniq: () =>
-    fetch({
-      commandName: 'uniq',
-      filename: 'uniq.1',
-    }),
-  unlink: () =>
-    fetch({
-      commandName: 'unlink',
-      filename: 'unlink.1',
-    }),
-  uptime: () =>
-    fetch({
-      commandName: 'uptime',
-      filename: 'uptime.1',
-    }),
-  users: () =>
-    fetch({
-      commandName: 'users',
-      filename: 'users.1',
-    }),
-  vdir: () =>
-    fetch({
-      commandName: 'vdir',
-      filename: 'vdir.1',
-    }),
-  wc: () =>
-    fetch({
-      commandName: 'wc',
-      filename: 'wc.1',
-    }),
-  who: () =>
-    fetch({
-      commandName: 'who',
-      filename: 'who.1',
-    }),
-  whoami: () =>
-    fetch({
-      commandName: 'whoami',
-      filename: 'whoami.1',
-    }),
-  yes: () =>
-    fetch({
-      commandName: 'yes',
-      filename: 'yes.1',
-    }),
+  timeout: build('timeout', {
+    filename: 'timeout.1',
+  }),
+  touch: build('touch', {
+    filename: 'touch.1',
+  }),
+  tr: build('tr', {
+    filename: 'tr.1',
+  }),
+  true: build('true', {
+    filename: 'true.1',
+  }),
+  truncate: build('truncate', {
+    filename: 'truncate.1',
+  }),
+  tsort: build('tsort', {
+    filename: 'tsort.1',
+  }),
+  tty: build('tty', {
+    filename: 'tty.1',
+  }),
+  uname: build('uname', {
+    filename: 'uname.1',
+  }),
+  unexpand: build('unexpand', {
+    filename: 'unexpand.1',
+  }),
+  uniq: build('uniq', {
+    filename: 'uniq.1',
+  }),
+  unlink: build('unlink', {
+    filename: 'unlink.1',
+  }),
+  uptime: build('uptime', {
+    filename: 'uptime.1',
+  }),
+  users: build('users', {
+    filename: 'users.1',
+  }),
+  vdir: build('vdir', {
+    filename: 'vdir.1',
+  }),
+  wc: build('wc', {
+    filename: 'wc.1',
+  }),
+  who: build('who', {
+    filename: 'who.1',
+  }),
+  whoami: build('whoami', {
+    filename: 'whoami.1',
+  }),
+  yes: build('yes', {
+    filename: 'yes.1',
+  }),
 };

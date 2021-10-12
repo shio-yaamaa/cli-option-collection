@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option } from '../../types';
+import { Command, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
@@ -17,24 +17,23 @@ import {
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
-export interface SourceDef {
-  commandName: string;
+interface Config {
   optionsHeadingID?: string; // Defaults to "DESCRIPTION"
 }
+
+export const build = (commandName: string, config?: Config) => ({
+  fetch: () => fetch(commandName, config?.optionsHeadingID ?? 'DESCRIPTION'),
+});
 
 const documentURL = (commandName: string) =>
   new URL(`https://man.openbsd.org/${commandName}`);
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
+export const fetch = async (
+  commandName: string,
+  optionsHeadingID: string
 ): Promise<Command[]> => {
-  const document = await fetchDocumentFromURL(
-    documentURL(sourceDef.commandName)
-  );
-  const optionSection = findOptionSection(
-    document,
-    sourceDef.optionsHeadingID ?? 'DESCRIPTION'
-  );
+  const document = await fetchDocumentFromURL(documentURL(commandName));
+  const optionSection = findOptionSection(document, optionsHeadingID);
   if (!optionSection) {
     return [];
   }
@@ -48,7 +47,7 @@ export const fetch: Fetcher<SourceDef> = async (
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

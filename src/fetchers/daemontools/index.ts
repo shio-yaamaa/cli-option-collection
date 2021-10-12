@@ -1,16 +1,7 @@
-import { fetch } from './fetcher';
+import { build } from './builder';
 
 export const daemontools = {
-  setlock: () =>
-    fetch({
-      commandName: 'setlock',
-    }),
-  softlimit: () =>
-    fetch({
-      commandName: 'softlimit',
-    }),
-  svc: () =>
-    fetch({
-      commandName: 'svc',
-    }),
+  setlock: build('setlock'),
+  softlimit: build('softlimit'),
+  svc: build('svc'),
 };

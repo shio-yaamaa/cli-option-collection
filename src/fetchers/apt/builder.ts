@@ -12,17 +12,18 @@ import { mergeLists } from '../../utils/utils';
 import { isElement } from '../../utils/typeGuards';
 import { getInnerText } from '../../utils/dom';
 
-export interface SourceDef {
-  commandName: string;
+interface Config {
   url: URL;
 }
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
-): Promise<Command[]> => {
+export const build = (commandName: string, config: Config): Fetcher => ({
+  fetch: () => fetch(commandName, config.url),
+});
+
+const fetch = async (commandName: string, url: URL): Promise<Command[]> => {
   // Man pages on manpages.ubuntu.com have invalid HTML structure, which tries to close a <div> with a </pre>,
   // so a string manipulation is needed before passing the HTML to the DOM parser.
-  const document = await fetchDocumentFromURLViaFilter(sourceDef.url, (data) =>
+  const document = await fetchDocumentFromURLViaFilter(url, (data) =>
     data.replace(/<\/pre>\s*<\/pre>/, '</pre></div>')
   );
   const list = findOptionList(document);
@@ -33,7 +34,7 @@ export const fetch: Fetcher<SourceDef> = async (
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

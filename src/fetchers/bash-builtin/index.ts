@@ -1,4 +1,4 @@
-import { fetch } from './fetcher';
+import { build } from './builder';
 
 // NOTE: Some options are not listed in a tabular format and just explained in the text paragraphs.
 //       Those options are not collected because they cannot be parsed in a consistent way.
@@ -6,268 +6,68 @@ import { fetch } from './fetcher';
 //       http://git.savannah.gnu.org/cgit/bash.git/tree/builtins/reserved.def
 
 export const bashBuiltin = {
-  alias: () =>
-    fetch({
-      commandName: 'alias',
-    }),
-  bg: () =>
-    fetch({
-      commandName: 'bg',
-      defFileBasename: 'fg_bg',
-    }),
+  alias: build('alias', {}),
+  bg: build('bg', { defFileBasename: 'fg_bg' }),
   // BUG: Not parsed correctly because option titles contain double spaces.
-  bind: () =>
-    fetch({
-      commandName: 'bind',
-    }),
-  break: () =>
-    fetch({
-      commandName: 'break',
-    }),
-  builtin: () =>
-    fetch({
-      commandName: 'builtin',
-    }),
-  caller: () =>
-    fetch({
-      commandName: 'caller',
-    }),
-  cd: () =>
-    fetch({
-      commandName: 'cd',
-    }),
-  command: () =>
-    fetch({
-      commandName: 'command',
-    }),
-  compgen: () =>
-    fetch({
-      commandName: 'compgen',
-      defFileBasename: 'complete',
-    }),
-  complete: () =>
-    fetch({
-      commandName: 'complete',
-    }),
-  compopt: () =>
-    fetch({
-      commandName: 'compopt',
-      defFileBasename: 'complete',
-    }),
-  continue: () =>
-    fetch({
-      commandName: 'continue',
-      defFileBasename: 'break',
-    }),
-  declare: () =>
-    fetch({
-      commandName: 'declare',
-    }),
-  dirs: () =>
-    fetch({
-      commandName: 'dirs',
-      defFileBasename: 'pushd',
-    }),
-  disown: () =>
-    fetch({
-      commandName: 'disown',
-      defFileBasename: 'jobs',
-    }),
-  echo: () =>
-    fetch({
-      commandName: 'echo',
-    }),
-  enable: () =>
-    fetch({
-      commandName: 'enable',
-    }),
-  eval: () =>
-    fetch({
-      commandName: 'eval',
-    }),
-  exec: () =>
-    fetch({
-      commandName: 'exec',
-    }),
-  exit: () =>
-    fetch({
-      commandName: 'exit',
-    }),
-  export: () =>
-    fetch({
-      commandName: 'export',
-      defFileBasename: 'setattr',
-    }),
-  false: () =>
-    fetch({
-      commandName: 'false',
-      defFileBasename: 'colon',
-    }),
-  fc: () =>
-    fetch({
-      commandName: 'fc',
-    }),
-  fg: () =>
-    fetch({
-      commandName: 'fg',
-      defFileBasename: 'fg_bg',
-    }),
-  getopts: () =>
-    fetch({
-      commandName: 'getopts',
-    }),
-  hash: () =>
-    fetch({
-      commandName: 'hash',
-    }),
-  help: () =>
-    fetch({
-      commandName: 'help',
-    }),
-  history: () =>
-    fetch({
-      commandName: 'history',
-    }),
-  inlib: () =>
-    fetch({
-      commandName: 'inlib',
-    }),
-  jobs: () =>
-    fetch({
-      commandName: 'jobs',
-    }),
-  kill: () =>
-    fetch({
-      commandName: 'kill',
-    }),
-  let: () =>
-    fetch({
-      commandName: 'let',
-    }),
-  local: () =>
-    fetch({
-      commandName: 'local',
-      defFileBasename: 'declare',
-    }),
-  logout: () =>
-    fetch({
-      commandName: 'logout',
-      defFileBasename: 'exit',
-    }),
+  bind: build('bind', {}),
+  break: build('break', {}),
+  builtin: build('builtin', {}),
+  caller: build('caller', {}),
+  cd: build('cd', {}),
+  command: build('command', {}),
+  compgen: build('compgen', { defFileBasename: 'complete' }),
+  complete: build('complete', {}),
+  compopt: build('compopt', { defFileBasename: 'complete' }),
+  continue: build('continue', { defFileBasename: 'break' }),
+  declare: build('declare', {}),
+  dirs: build('dirs', { defFileBasename: 'pushd' }),
+  disown: build('disown', { defFileBasename: 'jobs' }),
+  echo: build('echo', {}),
+  enable: build('enable', {}),
+  eval: build('eval', {}),
+  exec: build('exec', {}),
+  exit: build('exit', {}),
+  export: build('export', { defFileBasename: 'setattr' }),
+  false: build('false', { defFileBasename: 'colon' }),
+  fc: build('fc', {}),
+  fg: build('fg', { defFileBasename: 'fg_bg' }),
+  getopts: build('getopts', {}),
+  hash: build('hash', {}),
+  help: build('help', {}),
+  history: build('history', {}),
+  inlib: build('inlib', {}),
+  jobs: build('jobs', {}),
+  kill: build('kill', {}),
+  let: build('let', {}),
+  local: build('local', { defFileBasename: 'declare' }),
+  logout: build('logout', { defFileBasename: 'exit' }),
   // BUG: "-u" option is not recognized.
-  mapfile: () =>
-    fetch({
-      commandName: 'mapfile',
-    }),
-  popd: () =>
-    fetch({
-      commandName: 'popd',
-      defFileBasename: 'pushd',
-    }),
-  printf: () =>
-    fetch({
-      commandName: 'printf',
-    }),
-  pushd: () =>
-    fetch({
-      commandName: 'pushd',
-    }),
-  pwd: () =>
-    fetch({
-      commandName: 'pwd',
-      defFileBasename: 'cd',
-    }),
+  mapfile: build('mapfile', {}),
+  popd: build('popd', { defFileBasename: 'pushd' }),
+  printf: build('printf', {}),
+  pushd: build('pushd', {}),
+  pwd: build('pwd', { defFileBasename: 'cd' }),
   // BUG: "-u" option is not recognized.
-  read: () =>
-    fetch({
-      commandName: 'read',
-    }),
-  readarray: () =>
-    fetch({
-      commandName: 'readarray',
-      defFileBasename: 'mapfile',
-    }),
-  readonly: () =>
-    fetch({
-      commandName: 'readonly',
-      defFileBasename: 'setattr',
-    }),
-  return: () =>
-    fetch({
-      commandName: 'return',
-    }),
+  read: build('read', {}),
+  readarray: build('readarray', { defFileBasename: 'mapfile' }),
+  readonly: build('readonly', { defFileBasename: 'setattr' }),
+  return: build('return', {}),
   // BUG: "-o" option's description should contain line breaks but it doesn't.
-  set: () =>
-    fetch({
-      commandName: 'set',
-    }),
-  shift: () =>
-    fetch({
-      commandName: 'shift',
-    }),
-  shopt: () =>
-    fetch({
-      commandName: 'shopt',
-    }),
-  source: () =>
-    fetch({
-      commandName: 'source',
-    }),
-  suspend: () =>
-    fetch({
-      commandName: 'suspend',
-    }),
-  test: () =>
-    fetch({
-      commandName: 'test',
-    }),
-  time: () =>
-    fetch({
-      commandName: 'time',
-      defFileBasename: 'reserved',
-    }),
-  times: () =>
-    fetch({
-      commandName: 'times',
-    }),
-  trap: () =>
-    fetch({
-      commandName: 'trap',
-    }),
-  true: () =>
-    fetch({
-      commandName: 'true',
-      defFileBasename: 'colon',
-    }),
-  type: () =>
-    fetch({
-      commandName: 'type',
-    }),
-  typeset: () =>
-    fetch({
-      commandName: 'typeset',
-      defFileBasename: 'declare',
-    }),
-  ulimit: () =>
-    fetch({
-      commandName: 'ulimit',
-    }),
-  umask: () =>
-    fetch({
-      commandName: 'umask',
-    }),
-  unalias: () =>
-    fetch({
-      commandName: 'unalias',
-      defFileBasename: 'alias',
-    }),
-  unset: () =>
-    fetch({
-      commandName: 'unset',
-      defFileBasename: 'set',
-    }),
-  wait: () =>
-    fetch({
-      commandName: 'wait',
-    }),
+  set: build('set', {}),
+  shift: build('shift', {}),
+  shopt: build('shopt', {}),
+  source: build('source', {}),
+  suspend: build('suspend', {}),
+  test: build('test', {}),
+  time: build('time', { defFileBasename: 'reserved' }),
+  times: build('times', {}),
+  trap: build('trap', {}),
+  true: build('true', { defFileBasename: 'colon' }),
+  type: build('type', {}),
+  typeset: build('typeset', { defFileBasename: 'declare' }),
+  ulimit: build('ulimit', {}),
+  umask: build('umask', {}),
+  unalias: build('unalias', { defFileBasename: 'alias' }),
+  unset: build('unset', { defFileBasename: 'set' }),
+  wait: build('wait', {}),
 };

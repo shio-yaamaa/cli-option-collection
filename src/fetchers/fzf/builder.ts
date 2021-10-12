@@ -1,4 +1,4 @@
-import { Command, Option, Fetcher } from '../../types';
+import { Command, Option } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../../utils/forFetcher/http';
@@ -18,20 +18,24 @@ import { mergeLists } from '../../utils/utils';
 
 // BUG: Options starting with "+" are not collected.
 
-export interface SourceDef {
-  commandName: string;
+interface Config {
   optionsHeaderID: string;
 }
 
-export const fetch: Fetcher<SourceDef> = async (
-  sourceDef: SourceDef
+export const build = (commandName: string, config: Config) => ({
+  fetch: () => fetch(commandName, config.optionsHeaderID),
+});
+
+const fetch = async (
+  commandName: string,
+  optionsHeaderID: string
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromManPageURL(
     new URL(
-      `https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/${sourceDef.commandName}.1`
+      `https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/${commandName}.1`
     )
   );
-  const section = findOptionsSection(document, sourceDef.optionsHeaderID);
+  const section = findOptionsSection(document, optionsHeaderID);
   if (!section) {
     return [];
   }
@@ -39,7 +43,7 @@ export const fetch: Fetcher<SourceDef> = async (
 
   return [
     {
-      name: sourceDef.commandName,
+      name: commandName,
       options: uniqueOptions(options),
     },
   ];

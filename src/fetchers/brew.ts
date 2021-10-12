@@ -1,4 +1,4 @@
-import { FetchFunction, Command, Option } from '../types';
+import { Command, Option, Fetcher } from '../types';
 import { getInnerText } from '../utils/dom';
 import { findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
@@ -28,7 +28,11 @@ const DOC_URL =
   'https://raw.githubusercontent.com/Homebrew/brew/master/manpages/brew.1';
 const SUBCOMMAND_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
-export const brew: FetchFunction = async (): Promise<Command[]> => {
+export const brew: Fetcher = {
+  fetch: () => fetch(),
+};
+
+const fetch = async () => {
   const url = new URL(DOC_URL);
   const document = await fetchDocumentFromManPageURL(url);
   const commandSections = findCommandSections(document);
