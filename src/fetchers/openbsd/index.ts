@@ -76,6 +76,7 @@ export const openbsd = {
   pkill: build('pkill'),
   ps: build('ps'),
   reboot: build('reboot'),
+  renice: build('renice'),
   rev: build('rev'),
   scp: build('scp'),
   sed: build('sed'),

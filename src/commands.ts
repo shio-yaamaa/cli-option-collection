@@ -198,6 +198,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['readonly', bashBuiltin.readonly],
   ['realpath', gnuCoreutils.realpath],
   ['reboot', openbsd.reboot],
+  ['renice', openbsd.renice],
   ['return', bashBuiltin.return],
   ['rev', openbsd.rev],
   ['rm', gnuCoreutils.rm],
