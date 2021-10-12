@@ -86,6 +86,7 @@ export const openbsd = {
   strings: build('strings', {
     optionsHeadingID: 'OPTIONS',
   }),
+  systat: build('systat'),
   tar: build('tar'),
   top: build('top'),
   tput: build('tput'),

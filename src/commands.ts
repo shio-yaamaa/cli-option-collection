@@ -237,6 +237,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['suspend', bashBuiltin.suspend],
   ['svc', daemontools.svc],
   ['sync', gnuCoreutils.sync],
+  ['systat', openbsd.systat],
   ['tac', gnuCoreutils.tac],
   ['tail', gnuCoreutils.tail],
   ['tar', openbsd.tar],
