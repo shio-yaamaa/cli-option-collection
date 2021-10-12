@@ -98,6 +98,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['ffplay', ffmpeg.fetchFfplay],
   ['ffprobe', ffmpeg.fetchFfprobe],
   ['fg', bashBuiltin.fetchFg],
+  ['file', openbsd.fetchFile],
   ['find', openbsd.fetchFind],
   ['finger', openbsd.fetchFinger],
   ['fmt', gnuCoreutils.fetchFmt],

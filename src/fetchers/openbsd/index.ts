@@ -98,6 +98,12 @@ export const fetchEject: FetchFunction = async (): Promise<Command[]> =>
     optionsHeadingID: 'DESCRIPTION',
   });
 
+export const fetchFile: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'file',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
 export const fetchFind: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'find',
