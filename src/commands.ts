@@ -192,6 +192,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['realpath', gnuCoreutils.realpath],
   ['reboot', openbsd.reboot],
   ['return', bashBuiltin.return],
+  ['rev', openbsd.rev],
   ['rm', gnuCoreutils.rm],
   ['rmdir', gnuCoreutils.rmdir],
   ['rsync', rsync],

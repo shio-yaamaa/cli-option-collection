@@ -68,6 +68,7 @@ export const openbsd = {
   ping6: build('ping6'),
   ps: build('ps'),
   reboot: build('reboot'),
+  rev: build('rev'),
   scp: build('scp'),
   sed: build('sed'),
   sftp: build('sftp'),
