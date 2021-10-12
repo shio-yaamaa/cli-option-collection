@@ -19,8 +19,15 @@ import { fetch } from './fetcher';
 //      - compress, uncompress, zcat
 //      - mt, eject
 //      - ping, ping6
+//      - whatis, apropos
 // BUG: Tables and definition lists are not stringified in a human-readable way.
 //      (e.g. netstat -f, gzip -l)
+
+export const fetchApropos: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'apropos',
+    optionsHeadingID: 'DESCRIPTION',
+  });
 
 // BUG: "-safe" flag is not recognized as an option
 //      because it uses single dash with long option name.
@@ -302,6 +309,12 @@ export const fetchUncompress: FetchFunction = async (): Promise<Command[]> =>
 export const fetchWall: FetchFunction = async (): Promise<Command[]> =>
   fetch({
     commandName: 'wall',
+    optionsHeadingID: 'DESCRIPTION',
+  });
+
+export const fetchWhatis: FetchFunction = async (): Promise<Command[]> =>
+  fetch({
+    commandName: 'whatis',
     optionsHeadingID: 'DESCRIPTION',
   });
 

@@ -26,6 +26,7 @@ import { fetchYarn } from './fetchers/yarn';
 
 export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['alias', bashBuiltin.fetchAlias],
+  ['apropos', openbsd.fetchApropos],
   ['apt-cache', apt.fetchAptCache],
   ['apt-get', apt.fetchAptGet],
   ['arch', gnuCoreutils.fetchArch],
@@ -261,6 +262,7 @@ export const baseCommandToFetchFunction = new Map<string, FetchFunction>([
   ['wait', bashBuiltin.fetchWait],
   ['wall', openbsd.fetchWall],
   ['wc', gnuCoreutils.fetchWc],
+  ['whatis', openbsd.fetchWhatis],
   ['who', gnuCoreutils.fetchWho],
   ['whoami', gnuCoreutils.fetchWhoami],
   ['yarn', fetchYarn],

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "apropos",
+    "options": [
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Instead of showing only the title lines, show the complete manual pages, just like man(1) -a would. If the standard output is a terminal device and -c is not specified, use less(1) to paginate them. In -a mode, the options -IKOTW described in the mandoc(1) manual are also available."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C file",
+        "description": "Specify an alternative configuration file in man.conf(5) format."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Search for all words in expression in manual page names only. The search is case-insensitive and matches whole words only. In this mode, macro keys, comparison operators, and logical operators are not available."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "Support the full expression syntax. It is the default for apropos."
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M path",
+        "description": "Use the colon-separated path instead of the default list of paths searched for makewhatis(8) databases. Invalid paths, or paths without manual databases, are ignored."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m path",
+        "description": "Prepend the colon-separated paths to the list of paths searched for makewhatis(8) databases. Invalid paths, or paths without manual databases, are ignored."
+      },
+      {
+        "type": "short",
+        "key": "O",
+        "title": "-O outkey",
+        "description": "Show the values associated with the key outkey instead of the manual descriptions."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S arch",
+        "description": "Restrict the search to pages for the specified machine(1) architecture. arch is case-insensitive. By default, pages for all architectures are shown."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s section",
+        "description": "Restrict the search to the specified section of the manual. By default, pages from all sections are shown. See man(1) for a listing of sections."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i term",
+        "description": "If term is a regular expression, it is evaluated case-insensitively. Has no effect on substring terms."
+      }
+    ]
+  }
+]
