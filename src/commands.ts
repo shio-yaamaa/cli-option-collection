@@ -169,6 +169,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['numfmt', gnuCoreutils.numfmt],
   ['od', gnuCoreutils.od],
   ['paste', gnuCoreutils.paste],
+  ['patch', openbsd.patch],
   ['pathchk', gnuCoreutils.pathchk],
   ['pax', openbsd.pax],
   ['perl', perl],

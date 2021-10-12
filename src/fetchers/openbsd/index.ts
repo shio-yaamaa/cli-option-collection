@@ -62,6 +62,7 @@ export const openbsd = {
   nc: build('nc'),
   netstat: build('netstat'),
   // BUG: Option description for "-rw" is ignored.
+  patch: build('patch'),
   pax: build('pax'),
   ping: build('ping'),
   ping6: build('ping6'),
