@@ -1,1 +1,6 @@
 - Characters to add to short option labels: `#`, `?`, `@`
+- Common formatters for title and description
+  - title: normalizeSpaces
+  - description: compactLinebreaks
+- getInnerText doesn't handle dl well
+  - Put linebreak between entries

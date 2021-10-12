@@ -25,6 +25,17 @@ export const splitByComma: OptionStringsFilter = (
   return splitStrings;
 };
 
+// Example: ["-p | --private", "-w | --workspace"] -> ["-p", "--private", "-w", "--workspace"]
+export const splitByPipe: OptionStringsFilter = (
+  strings: string[]
+): string[] => {
+  const splitStrings: string[] = [];
+  for (const string of strings) {
+    splitStrings.push(...splitAtTopLevel(string, '|', BRACKETS));
+  }
+  return splitStrings;
+};
+
 // Split items by spaces. Only items that start with "-" are split.
 // Example: ["-s --sort-key COLUMN"] -> ["-s", "--sort-key COLUMN"]
 export const splitBySpace: OptionStringsFilter = (

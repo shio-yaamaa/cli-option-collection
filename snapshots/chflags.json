@@ -1,0 +1,37 @@
+[
+  {
+    "name": "chflags",
+    "options": [
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H",
+        "description": "If the -R option is also specified, symbolic links on the command line are followed. Symbolic links encountered in the tree traversal are not followed."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Treat symbolic links like other files: modify links instead of following them. The -h and -R options are mutually exclusive."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L",
+        "description": "If the -R option is also specified, all symbolic links are followed."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "If the -R option is also specified, no symbolic links are followed."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R",
+        "description": "Recurse. Where file is a directory, change the flags of the directory and all the files and directories in the file hierarchy below it."
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "reboot",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Causes system to create a dump before rebooting. This option is useful for debugging system dump procedures or capturing the state of a corrupted or misbehaving system. See savecore(8) for information on how to recover this dump."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Prevent file system cache from being flushed. This option should probably not be used."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "Causes the system to power down, if it is being halted, and the hardware supports automatic power down."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Quick. The system is halted or restarted quickly and ungracefully, and only the flushing of the file system cache is performed. This option should probably not be used."
+      }
+    ]
+  }
+]

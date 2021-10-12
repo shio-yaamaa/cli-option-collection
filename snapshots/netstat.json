@@ -1,0 +1,187 @@
+[
+  {
+    "name": "netstat",
+    "options": [
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "Show the address of any protocol control blocks associated with sockets; useful for debugging e.g. with the -P flag. When used with the -r flag it shows the internal addresses of the routing table. Only the super-user can see these addresses; unprivileged users will see them as 0x0."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "With the default display, show the state of all sockets; normally sockets used by server processes are not shown."
+      },
+      {
+        "type": "short",
+        "key": "B",
+        "title": "-B",
+        "description": "With the default display, show buffer sizes for TCP sockets. This includes the send window size, receive window size and congestion window size."
+      },
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b",
+        "description": "With the interface display (options -I or -i), show bytes in and out, instead of packet statistics."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c count",
+        "description": "Display count updates, then exit. This option has no effect unless -w is specified as well."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "With either the interface display (options -I or -i) or an interval (option -w), show only the number of dropped packets."
+      },
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "With either the interface display (options -I or -i) or an interval (option -w), show only the number of errors on the interface."
+      },
+      {
+        "type": "short",
+        "key": "F",
+        "title": "-F",
+        "description": "When showing routes, only show routes whose gateway are in the same address family as the destination."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f address_family",
+        "description": "Limit statistics or address control block reports to those of the specified address_family.\n\nThe following address families are recognized:\n\nAddress Family Constant Description inet AF_INET IP Version 4 inet6 AF_INET6 IP Version 6 local AF_UNIX Alias for unix mpls AF_MPLS MPLS unix AF_UNIX Local to Host (i.e., pipes)"
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Use unit suffixes to reduce the number of digits shown with the -b and -w options."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g",
+        "description": "Show information related to multicast (group address) routing. By default, show the IP multicast virtual-interface and routing tables. If the -s option is also present, show multicast routing statistics."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I interface",
+        "description": "Show information about the specified interface; used with a wait interval as described below."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Show the state of interfaces which have been auto-configured (interfaces statically configured into a system but not located at boot-time are not shown)."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "With the default display, show only listening sockets. With the -g option, display wider fields for the IPv6 multicast routing table \"Origin\" and \"Group\" columns."
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M core",
+        "description": "Extract values associated with the name list from the specified core instead of the running kernel."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "Show statistics recorded by the memory management routines (the network manages a private pool of memory buffers)."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N system",
+        "description": "Extract the name list from the specified system instead of the running kernel."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Show network addresses as numbers (normally netstat interprets addresses and attempts to display them symbolically). This option may be used with any of the display formats."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P pcbaddr",
+        "description": "Display the contents of the protocol control block (PCB) located at the kernel virtual address pcbaddr. PCB addresses can be obtained using the -A flag. When used with the -v option, also print socket, domain and protocol specific structures. Only the super-user can use the -P option.\n\nThe -P option requires the ability to open /dev/kmem which may be restricted based upon the value of the kern.allowkmem sysctl(8)."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p protocol",
+        "description": "Restrict the output to protocol, which is either a well-known name for a protocol or an alias for it. Some protocol names and aliases are listed in the file /etc/protocols. The program will complain if protocol is unknown. If the -s option is specified, the per-protocol statistics are displayed. Otherwise the states of the matching sockets are shown."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Only show interfaces that have seen packets (or bytes if -b is specified)."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R",
+        "description": "List all rdomains with associated interfaces and routing tables."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Show the routing tables. The output is explained in more detail below. If the -s option is also specified, show routing statistics instead. When used with the -v option, also print routing labels."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Show per-protocol statistics. If this option is repeated, counters with a value of zero are suppressed."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T rtable",
+        "description": "Select an alternate routing table to query. The default is to use the current routing table."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "With the -i option, display the current value of the watchdog timer function."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u",
+        "description": "Limit statistics or address control block reports to the AF_UNIX address family."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Show extra (verbose) detail for the routing tables (-r), or avoid truncation of long addresses. When used with the -P option, also print socket, domain and protocol specific structures."
+      },
+      {
+        "type": "short",
+        "key": "W",
+        "title": "-W interface",
+        "description": "(IEEE 802.11 devices only) Show per-interface IEEE 802.11 wireless statistics."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w wait",
+        "description": "Show network interface statistics at intervals of wait seconds."
+      }
+    ]
+  }
+]

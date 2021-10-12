@@ -1,0 +1,25 @@
+[
+  {
+    "name": "ed",
+    "options": [
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p string",
+        "description": "Specifies a command prompt. This may be toggled on and off with the P command."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Suppress diagnostics. This should be used if ed standard input is from a script."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n or  ^n",
+        "description": "The nth previous line, where n is a non-negative number."
+      }
+    ]
+  }
+]

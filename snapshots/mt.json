@@ -1,0 +1,19 @@
+[
+  {
+    "name": "mt",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f device",
+        "description": "Operate on the device specified."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Insert the device instead of ejecting. For the cd(4) driver, this requests that the tray be closed."
+      }
+    ]
+  }
+]

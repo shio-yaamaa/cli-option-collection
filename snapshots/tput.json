@@ -1,0 +1,19 @@
+[
+  {
+    "name": "tput",
+    "options": [
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "The attributes are read from stdin instead of the command line."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T",
+        "description": "The terminal name as found in the terminfo(5) database; for example, “vt100” or “xterm”. If not specified, tput retrieves the TERM variable from the environment."
+      }
+    ]
+  }
+]

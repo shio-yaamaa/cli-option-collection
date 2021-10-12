@@ -1,0 +1,49 @@
+[
+  {
+    "name": "find",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Causes find to visit directories in post-order i.e. all entries in a directory will be acted on before the directory itself. By default, find visits directories in pre-order i.e. before their contents."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f path",
+        "description": "Specifies a file hierarchy for find to traverse. File hierarchies may be specified without the -f option if they are given immediately after any other options."
+      },
+      {
+        "type": "short",
+        "key": "H",
+        "title": "-H",
+        "description": "Causes the file information and file type (see stat(2)) returned for each symbolic link encountered on the command line to be those of the file referenced by the link, not the link itself. If the referenced file does not exist, the file information and type will be for the link itself. File information of all symbolic links not on the command line is that of the link itself."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "An alias for the -L option. This option exists for backwards compatibility."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L",
+        "description": "Causes the file information and file type (see stat(2)) returned for each symbolic link to be those of the file referenced by the link, not the link itself. If the referenced file does not exist, the file information and type will be for the link itself."
+      },
+      {
+        "type": "short",
+        "key": "X",
+        "title": "-X",
+        "description": "Permit find to be safely used in conjunction with xargs(1). If a file name contains any of the delimiting characters used by xargs, a diagnostic message is displayed on standard error, and the file is skipped. The delimiting characters include single (‘'’) and double (‘\"’) quotes, backslash (‘\\’), space, tab, and newline (‘\\n’) characters. Consider using -print0 instead."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Prevents find from descending into directories that have a device number different than that of the file from which the descent began."
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "name": "file",
+    "options": [
+      {
+        "type": "short",
+        "key": "b",
+        "title": "-b, --brief",
+        "description": "Does not prepend filenames to output lines."
+      },
+      {
+        "type": "long",
+        "key": "brief",
+        "title": "-b, --brief",
+        "description": "Does not prepend filenames to output lines."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c",
+        "description": "Prints a summary of the parsed magic file; usually used for debugging."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h",
+        "description": "Causes symlinks not to be followed. This is the default."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i, --mime, --mime-type",
+        "description": "Outputs MIME type strings rather than the more traditional human-readable ones. Thus it may say “text/plain” rather than “ASCII text”."
+      },
+      {
+        "type": "long",
+        "key": "mime",
+        "title": "-i, --mime, --mime-type",
+        "description": "Outputs MIME type strings rather than the more traditional human-readable ones. Thus it may say “text/plain” rather than “ASCII text”."
+      },
+      {
+        "type": "long",
+        "key": "mime-type",
+        "title": "-i, --mime, --mime-type",
+        "description": "Outputs MIME type strings rather than the more traditional human-readable ones. Thus it may say “text/plain” rather than “ASCII text”."
+      },
+      {
+        "type": "short",
+        "key": "L",
+        "title": "-L, --dereference",
+        "description": "Causes symlinks to be followed."
+      },
+      {
+        "type": "long",
+        "key": "dereference",
+        "title": "-L, --dereference",
+        "description": "Causes symlinks to be followed."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Attempts to read block and character device files, not just regular files."
+      },
+      {
+        "type": "short",
+        "key": "W",
+        "title": "-W",
+        "description": "Displays warnings when parsing the magic file or applying its tests. Usually used for debugging."
+      }
+    ]
+  }
+]
