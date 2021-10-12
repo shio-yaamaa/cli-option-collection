@@ -1,0 +1,109 @@
+[
+  {
+    "name": "pkill",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d delim",
+        "description": "Specify a delimiter to be printed between each process ID. The default is a newline. This option can only be used with the pgrep command."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Match against full argument lists. The default is to match against process names."
+      },
+      {
+        "type": "short",
+        "key": "G",
+        "title": "-G gid",
+        "description": "Restrict matches to processes with a real group ID in the comma-separated list gid."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g pgrp",
+        "description": "Restrict matches to processes with a process group ID in the comma-separated list pgrp. The value zero is taken to mean the process group ID of the running pgrep or pkill command."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "Ask for confirmation before killing a process."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "Long output. Print the process name in addition to the process ID for each matching process. If used in conjunction with -f, print the process ID and the full argument list for each matching process (pgrep only)."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Match only the most recently created (newest) process, if any. Cannot be used in conjunction with -o."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o",
+        "description": "Match only the least recently created (oldest) process, if any. Cannot be used in conjunction with -n."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P ppid",
+        "description": "Restrict matches to processes with a parent process ID in the comma-separated list ppid."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Quiet mode. Perform the action, but don't display anything on standard output. Note that -q takes precedence over other display options such as -l."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s sid",
+        "description": "Restrict matches to processes with a session ID in the comma-separated list sid. The value zero is taken to mean the session ID of the running pgrep or pkill command."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T rtable",
+        "description": "Restrict matches to processes associated with the specified routing tables in the comma-separated list rtable."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t tty",
+        "description": "Restrict matches to processes associated with a terminal in the comma-separated list tty. Terminal names may be of the form ‘ttyxx’ or the shortened form ‘xx’. A single dash (‘-’) matches processes not associated with a terminal."
+      },
+      {
+        "type": "short",
+        "key": "U",
+        "title": "-U uid",
+        "description": "Restrict matches to processes with a real user ID in the comma-separated list uid."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u euid",
+        "description": "Restrict matches to processes with an effective user ID in the comma-separated list euid."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Reverse the sense of the matching; display or signal processes that do not match the given criteria."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Require an exact match of the process name, or argument list if -f is given. The default is to match any substring."
+      }
+    ]
+  }
+]

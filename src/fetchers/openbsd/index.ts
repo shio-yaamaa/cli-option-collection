@@ -19,6 +19,7 @@ import { build } from './builder';
 //      - mt, eject
 //      - ping, ping6
 //      - whatis, apropos
+//      - pgrep, pkill
 // BUG: Tables and definition lists are not stringified in a human-readable way.
 //      (e.g. netstat -f, gzip -l)
 
@@ -69,8 +70,10 @@ export const openbsd = {
   // BUG: Option description for "-rw" is ignored.
   patch: build('patch'),
   pax: build('pax'),
+  pgrep: build('pgrep'),
   ping: build('ping'),
   ping6: build('ping6'),
+  pkill: build('pkill'),
   ps: build('ps'),
   reboot: build('reboot'),
   rev: build('rev'),
