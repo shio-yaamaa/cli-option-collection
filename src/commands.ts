@@ -127,6 +127,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['init', openbsd.init],
   ['inlib', bashBuiltin.inlib],
   ['install', gnuCoreutils.install],
+  ['iostat', openbsd.iostat],
   ['jobs', bashBuiltin.jobs],
   ['join', gnuCoreutils.join],
   ['jq', jq],

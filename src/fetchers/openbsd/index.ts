@@ -51,6 +51,7 @@ export const openbsd = {
   gzip: build('gzip'),
   halt: build('halt'),
   init: build('init'),
+  iostat: build('iostat'),
   ksh: build('ksh'),
   // BUG: "less" has some special characters in options (e.g. -", -~),
   //      but the fetcher doesn't recognize them.
