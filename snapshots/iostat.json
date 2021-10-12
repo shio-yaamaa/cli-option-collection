@@ -1,0 +1,61 @@
+[
+  {
+    "name": "iostat",
+    "options": [
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C",
+        "description": "Show CPU statistics. This is enabled by default unless the -D, -d, or -T flags are used."
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c count",
+        "description": "Repeat the display count times. Unless the -I flag is in effect, the first display is for the time since a reboot and each subsequent report is for the time period since the last display. Unless overridden by the -w option, the wait interval between lines is 1 second."
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D",
+        "description": "Show alternate disk statistics. Displays kilobytes transferred, number of transfers, and time spent in transfers. Use of this flag disables the default display."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Show disk statistics. This is the default. Displays kilobytes per transfer, number of transfers, and megabytes transferred. Use of this flag disables display of CPU and tty statistics."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "Show the running total values, rather than an average."
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M core",
+        "description": "Extract values associated with the name list from the specified core instead of the default /dev/mem."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N system",
+        "description": "Extract the name list from the specified system instead of the default “/bsd”."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T",
+        "description": "Show tty statistics. This is enabled by default unless the -C, -D, or -d flags are used."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w wait",
+        "description": "Pause wait seconds between each display. Unless a count is specified via the -c option, iostat will display output until it is interrupted."
+      }
+    ]
+  }
+]

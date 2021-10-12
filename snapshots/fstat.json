@@ -1,0 +1,61 @@
+[
+  {
+    "name": "fstat",
+    "options": [
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Restrict examination to files open in the same file systems as the named file arguments, or to the file system containing the current directory if there are no additional filename arguments. For example, to find all files open in the file system where the directory /usr/src resides, type\n\n\n\n# fstat -f /usr/src"
+      },
+      {
+        "type": "short",
+        "key": "M",
+        "title": "-M core",
+        "description": "Extract values associated with the name list from the specified core instead of the running kernel."
+      },
+      {
+        "type": "short",
+        "key": "N",
+        "title": "-N system",
+        "description": "Extract the name list from the specified system instead of the running kernel."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Numerical format. Print the device number (maj,min) of the file system the file resides in rather than the mount point name. For special files, print the device number that the special device refers to rather than the filename in /dev. Also, print the mode of the file in octal instead of symbolic form."
+      },
+      {
+        "type": "short",
+        "key": "o",
+        "title": "-o",
+        "description": "Output file offset. Follow the size field with the descriptor's offset. Useful for checking progress as a process works through a large file. This information is only visible to the user or superuser."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p pid",
+        "description": "Report all files open by the specified process. This option may be specified multiple times."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Report per file io statistics in two additional columns ‘XFERS’ and ‘KBYTES’. This information is only visible to the user or superuser."
+      },
+      {
+        "type": "short",
+        "key": "u",
+        "title": "-u user",
+        "description": "Report all files open by the specified user. This option may be specified multiple times."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Verbose mode. Print error messages upon failures to locate particular system data structures rather than silently ignoring them. Most of these data structures are dynamically created or deleted and it is possible for them to disappear while fstat is running. This is normal and unavoidable since the rest of the system is running while fstat itself is running."
+      }
+    ]
+  }
+]

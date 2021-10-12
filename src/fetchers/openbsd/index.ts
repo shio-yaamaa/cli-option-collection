@@ -19,6 +19,7 @@ import { build } from './builder';
 //      - mt, eject
 //      - ping, ping6
 //      - whatis, apropos
+//      - pgrep, pkill
 // BUG: Tables and definition lists are not stringified in a human-readable way.
 //      (e.g. netstat -f, gzip -l)
 
@@ -27,13 +28,16 @@ export const openbsd = {
   // BUG: "-safe" flag is not recognized as an option
   //      because it uses single dash with long option name.
   awk: build('awk'),
+  bc: build('bc'),
   chflags: build('chflags'),
   chio: build('chio'),
   clear: build('clear'),
+  column: build('column'),
   compress: build('compress'),
   csh: build('csh', {
     optionsHeadingID: 'Argument_list_processing',
   }),
+  dc: build('dc'),
   diff: build('diff'),
   dig: build('dig'),
   domainname: build('domainname'),
@@ -43,11 +47,13 @@ export const openbsd = {
   file: build('file'),
   find: build('find'),
   finger: build('finger'),
+  fstat: build('fstat'),
   gunzip: build('gunzip'),
   gzcat: build('gzcat'),
   gzip: build('gzip'),
   halt: build('halt'),
   init: build('init'),
+  iostat: build('iostat'),
   ksh: build('ksh'),
   // BUG: "less" has some special characters in options (e.g. -", -~),
   //      but the fetcher doesn't recognize them.
@@ -62,11 +68,16 @@ export const openbsd = {
   nc: build('nc'),
   netstat: build('netstat'),
   // BUG: Option description for "-rw" is ignored.
+  patch: build('patch'),
   pax: build('pax'),
+  pgrep: build('pgrep'),
   ping: build('ping'),
   ping6: build('ping6'),
+  pkill: build('pkill'),
   ps: build('ps'),
   reboot: build('reboot'),
+  renice: build('renice'),
+  rev: build('rev'),
   scp: build('scp'),
   sed: build('sed'),
   sftp: build('sftp'),
@@ -79,10 +90,12 @@ export const openbsd = {
   strings: build('strings', {
     optionsHeadingID: 'OPTIONS',
   }),
+  systat: build('systat'),
   tar: build('tar'),
   top: build('top'),
   tput: build('tput'),
   uncompress: build('uncompress'),
+  vmstat: build('vmstat'),
   wall: build('wall'),
   whatis: build('whatis'),
   zcat: build('zcat'),
