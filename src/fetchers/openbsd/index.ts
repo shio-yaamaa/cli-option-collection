@@ -88,6 +88,7 @@ export const openbsd = {
   top: build('top'),
   tput: build('tput'),
   uncompress: build('uncompress'),
+  vmstat: build('vmstat'),
   wall: build('wall'),
   whatis: build('whatis'),
   zcat: build('zcat'),

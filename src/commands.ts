@@ -267,6 +267,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['uptime', gnuCoreutils.uptime],
   ['users', gnuCoreutils.users],
   ['vdir', gnuCoreutils.vdir],
+  ['vmstat', openbsd.vmstat],
   ['wait', bashBuiltin.wait],
   ['wall', openbsd.wall],
   ['wc', gnuCoreutils.wc],
