@@ -30,6 +30,7 @@ export const openbsd = {
   chflags: build('chflags'),
   chio: build('chio'),
   clear: build('clear'),
+  column: build('column'),
   compress: build('compress'),
   csh: build('csh', {
     optionsHeadingID: 'Argument_list_processing',

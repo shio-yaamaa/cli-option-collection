@@ -53,6 +53,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['chroot', gnuCoreutils.chroot],
   ['cksum', gnuCoreutils.cksum],
   ['clear', openbsd.clear],
+  ['column', openbsd.column],
   ['comm', gnuCoreutils.comm],
   ['command', bashBuiltin.command],
   ['compgen', bashBuiltin.compgen],
