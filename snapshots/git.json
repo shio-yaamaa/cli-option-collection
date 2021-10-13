@@ -6,7 +6,7 @@
         "type": "long",
         "key": "version",
         "title": "--version",
-        "description": "Prints the Git suite version that the git program came from."
+        "description": "Prints the Git suite version that the git program came from.\n\nThis option is internaly converted to git version ... and accepts the same options as the git-version[1] command. If --help is also given, it takes precedence over --version."
       },
       {
         "type": "long",
@@ -151,6 +151,17 @@
         "key": "list-cmds",
         "title": "--list-cmds=group[, group… ]",
         "description": "List commands by group. This is an internal/experimental option and may change or be removed in the future. Supported groups are: builtins, parseopt (builtin commands that use parse-options), main (all commands in libexec directory), others (all other commands in $PATH that have git- prefix), list-<category> (see categories in command-list.txt), nohelpers (exclude helper commands), alias and config (retrieve command list from config variable completion.commands)"
+      }
+    ]
+  },
+  {
+    "name": "git version",
+    "options": [
+      {
+        "type": "long",
+        "key": "build-options",
+        "title": "--build-options",
+        "description": "Include additional information about how git was built for diagnostic purposes."
       }
     ]
   },
@@ -937,7 +948,7 @@
         "type": "long",
         "key": "abort",
         "title": "--abort",
-        "description": "Restore the original branch and abort the patching operation."
+        "description": "Restore the original branch and abort the patching operation. Revert contents of files involved in the am operation to their pre-am state."
       },
       {
         "type": "long",
@@ -1078,13 +1089,13 @@
         "type": "short",
         "key": "f",
         "title": "-f, --force",
-        "description": "Reset <branchname> to <startpoint>, even if <branchname> exists already. Without -f, git branch refuses to change an existing branch. In combination with -d (or --delete), allow deleting the branch irrespective of its merged status. In combination with -m (or --move), allow renaming the branch even if the new branch name already exists, the same applies for -c (or --copy)."
+        "description": "Reset <branchname> to <startpoint>, even if <branchname> exists already. Without -f, git branch refuses to change an existing branch. In combination with -d (or --delete), allow deleting the branch irrespective of its merged status, or whether it even points to a valid commit. In combination with -m (or --move), allow renaming the branch even if the new branch name already exists, the same applies for -c (or --copy)."
       },
       {
         "type": "long",
         "key": "force",
         "title": "-f, --force",
-        "description": "Reset <branchname> to <startpoint>, even if <branchname> exists already. Without -f, git branch refuses to change an existing branch. In combination with -d (or --delete), allow deleting the branch irrespective of its merged status. In combination with -m (or --move), allow renaming the branch even if the new branch name already exists, the same applies for -c (or --copy)."
+        "description": "Reset <branchname> to <startpoint>, even if <branchname> exists already. Without -f, git branch refuses to change an existing branch. In combination with -d (or --delete), allow deleting the branch irrespective of its merged status, or whether it even points to a valid commit. In combination with -m (or --move), allow renaming the branch even if the new branch name already exists, the same applies for -c (or --copy)."
       },
       {
         "type": "short",
@@ -5026,7 +5037,7 @@
         "type": "long",
         "key": "encoding",
         "title": "--encoding=<encoding>",
-        "description": "The commit objects record the encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output."
+        "description": "Commit objects record the character encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output. Likewise, if iconv(3) fails to convert the commit, we will output the original object verbatim, along with a warning."
       },
       {
         "type": "long",
@@ -5282,13 +5293,13 @@
         "type": "short",
         "key": "s",
         "title": "-s <strategy>, --strategy=<strategy>",
-        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (git merge-recursive when merging a single head, git merge-octopus otherwise)."
+        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (recursive when merging a single head, octopus otherwise)."
       },
       {
         "type": "long",
         "key": "strategy",
         "title": "-s <strategy>, --strategy=<strategy>",
-        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (git merge-recursive when merging a single head, git merge-octopus otherwise)."
+        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (recursive when merging a single head, octopus otherwise)."
       },
       {
         "type": "short",
@@ -5663,13 +5674,13 @@
         "type": "long",
         "key": "commit",
         "title": "--commit, --no-commit",
-        "description": "Perform the merge and commit the result. This option can be used to override --no-commit.\n\nWith --no-commit perform the merge and stop just before creating a merge commit, to give the user a chance to inspect and further tweak the merge result before committing.\n\nNote that fast-forward updates do not create a merge commit and therefore there is no way to stop those merges with --no-commit. Thus, if you want to ensure your branch is not changed or updated by the merge command, use --no-ff with --no-commit."
+        "description": "Perform the merge and commit the result. This option can be used to override --no-commit. Only useful when merging.\n\nWith --no-commit perform the merge and stop just before creating a merge commit, to give the user a chance to inspect and further tweak the merge result before committing.\n\nNote that fast-forward updates do not create a merge commit and therefore there is no way to stop those merges with --no-commit. Thus, if you want to ensure your branch is not changed or updated by the merge command, use --no-ff with --no-commit."
       },
       {
         "type": "long",
         "key": "no-commit",
         "title": "--commit, --no-commit",
-        "description": "Perform the merge and commit the result. This option can be used to override --no-commit.\n\nWith --no-commit perform the merge and stop just before creating a merge commit, to give the user a chance to inspect and further tweak the merge result before committing.\n\nNote that fast-forward updates do not create a merge commit and therefore there is no way to stop those merges with --no-commit. Thus, if you want to ensure your branch is not changed or updated by the merge command, use --no-ff with --no-commit."
+        "description": "Perform the merge and commit the result. This option can be used to override --no-commit. Only useful when merging.\n\nWith --no-commit perform the merge and stop just before creating a merge commit, to give the user a chance to inspect and further tweak the merge result before committing.\n\nNote that fast-forward updates do not create a merge commit and therefore there is no way to stop those merges with --no-commit. Thus, if you want to ensure your branch is not changed or updated by the merge command, use --no-ff with --no-commit."
       },
       {
         "type": "long",
@@ -5697,21 +5708,21 @@
       },
       {
         "type": "long",
+        "key": "ff-only",
+        "title": "--ff-only",
+        "description": "Only update to the new history if there is no divergent local history. This is the default when no method for reconciling divergent histories is provided (via the --rebase=* flags)."
+      },
+      {
+        "type": "long",
         "key": "ff",
-        "title": "--ff, --no-ff, --ff-only",
-        "description": "Specifies how a merge is handled when the merged-in history is already a descendant of the current history. --ff is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the refs/tags/ hierarchy, in which case --no-ff is assumed.\n\nWith --ff, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged branch; do not create a merge commit). When not possible (when the merged-in history is not a descendant of the current history), create a merge commit.\n\nWith --no-ff, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward.\n\nWith --ff-only, resolve the merge as a fast-forward when possible. When not possible, refuse to merge and exit with a non-zero status."
+        "title": "--ff, --no-ff",
+        "description": "When merging rather than rebasing, specifies how a merge is handled when the merged-in history is already a descendant of the current history. If merging is requested, --ff is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the refs/tags/ hierarchy, in which case --no-ff is assumed.\n\nWith --ff, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged branch; do not create a merge commit). When not possible (when the merged-in history is not a descendant of the current history), create a merge commit.\n\nWith --no-ff, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward."
       },
       {
         "type": "long",
         "key": "no-ff",
-        "title": "--ff, --no-ff, --ff-only",
-        "description": "Specifies how a merge is handled when the merged-in history is already a descendant of the current history. --ff is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the refs/tags/ hierarchy, in which case --no-ff is assumed.\n\nWith --ff, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged branch; do not create a merge commit). When not possible (when the merged-in history is not a descendant of the current history), create a merge commit.\n\nWith --no-ff, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward.\n\nWith --ff-only, resolve the merge as a fast-forward when possible. When not possible, refuse to merge and exit with a non-zero status."
-      },
-      {
-        "type": "long",
-        "key": "ff-only",
-        "title": "--ff, --no-ff, --ff-only",
-        "description": "Specifies how a merge is handled when the merged-in history is already a descendant of the current history. --ff is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the refs/tags/ hierarchy, in which case --no-ff is assumed.\n\nWith --ff, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged branch; do not create a merge commit). When not possible (when the merged-in history is not a descendant of the current history), create a merge commit.\n\nWith --no-ff, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward.\n\nWith --ff-only, resolve the merge as a fast-forward when possible. When not possible, refuse to merge and exit with a non-zero status."
+        "title": "--ff, --no-ff",
+        "description": "When merging rather than rebasing, specifies how a merge is handled when the merged-in history is already a descendant of the current history. If merging is requested, --ff is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the refs/tags/ hierarchy, in which case --no-ff is assumed.\n\nWith --ff, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged branch; do not create a merge commit). When not possible (when the merged-in history is not a descendant of the current history), create a merge commit.\n\nWith --no-ff, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward."
       },
       {
         "type": "short",
@@ -5735,13 +5746,13 @@
         "type": "long",
         "key": "log",
         "title": "--log[=<n>], --no-log",
-        "description": "In addition to branch names, populate the log message with one-line descriptions from at most <n> actual commits that are being merged. See also git-fmt-merge-msg[1].\n\nWith --no-log do not list one-line descriptions from the actual commits being merged."
+        "description": "In addition to branch names, populate the log message with one-line descriptions from at most <n> actual commits that are being merged. See also git-fmt-merge-msg[1]. Only useful when merging.\n\nWith --no-log do not list one-line descriptions from the actual commits being merged."
       },
       {
         "type": "long",
         "key": "no-log",
         "title": "--log[=<n>], --no-log",
-        "description": "In addition to branch names, populate the log message with one-line descriptions from at most <n> actual commits that are being merged. See also git-fmt-merge-msg[1].\n\nWith --no-log do not list one-line descriptions from the actual commits being merged."
+        "description": "In addition to branch names, populate the log message with one-line descriptions from at most <n> actual commits that are being merged. See also git-fmt-merge-msg[1]. Only useful when merging.\n\nWith --no-log do not list one-line descriptions from the actual commits being merged."
       },
       {
         "type": "long",
@@ -5777,31 +5788,31 @@
         "type": "long",
         "key": "squash",
         "title": "--squash, --no-squash",
-        "description": "Produce the working tree and index state as if a real merge happened (except for the merge information), but do not actually make a commit, move the HEAD, or record $GIT_DIR/MERGE_HEAD (to cause the next git commit command to create a merge commit). This allows you to create a single commit on top of the current branch whose effect is the same as merging another branch (or more in case of an octopus).\n\nWith --no-squash perform the merge and commit the result. This option can be used to override --squash.\n\nWith --squash, --commit is not allowed, and will fail."
+        "description": "Produce the working tree and index state as if a real merge happened (except for the merge information), but do not actually make a commit, move the HEAD, or record $GIT_DIR/MERGE_HEAD (to cause the next git commit command to create a merge commit). This allows you to create a single commit on top of the current branch whose effect is the same as merging another branch (or more in case of an octopus).\n\nWith --no-squash perform the merge and commit the result. This option can be used to override --squash.\n\nWith --squash, --commit is not allowed, and will fail.\n\nOnly useful when merging."
       },
       {
         "type": "long",
         "key": "no-squash",
         "title": "--squash, --no-squash",
-        "description": "Produce the working tree and index state as if a real merge happened (except for the merge information), but do not actually make a commit, move the HEAD, or record $GIT_DIR/MERGE_HEAD (to cause the next git commit command to create a merge commit). This allows you to create a single commit on top of the current branch whose effect is the same as merging another branch (or more in case of an octopus).\n\nWith --no-squash perform the merge and commit the result. This option can be used to override --squash.\n\nWith --squash, --commit is not allowed, and will fail."
+        "description": "Produce the working tree and index state as if a real merge happened (except for the merge information), but do not actually make a commit, move the HEAD, or record $GIT_DIR/MERGE_HEAD (to cause the next git commit command to create a merge commit). This allows you to create a single commit on top of the current branch whose effect is the same as merging another branch (or more in case of an octopus).\n\nWith --no-squash perform the merge and commit the result. This option can be used to override --squash.\n\nWith --squash, --commit is not allowed, and will fail.\n\nOnly useful when merging."
       },
       {
         "type": "long",
         "key": "no-verify",
         "title": "--no-verify",
-        "description": "This option bypasses the pre-merge and commit-msg hooks. See also githooks[5]."
+        "description": "This option bypasses the pre-merge and commit-msg hooks. See also githooks[5]. Only useful when merging."
       },
       {
         "type": "short",
         "key": "s",
         "title": "-s <strategy>, --strategy=<strategy>",
-        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (git merge-recursive when merging a single head, git merge-octopus otherwise)."
+        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (recursive when merging a single head, octopus otherwise)."
       },
       {
         "type": "long",
         "key": "strategy",
         "title": "-s <strategy>, --strategy=<strategy>",
-        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (git merge-recursive when merging a single head, git merge-octopus otherwise)."
+        "description": "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried. If there is no -s option, a built-in list of strategies is used instead (recursive when merging a single head, octopus otherwise)."
       },
       {
         "type": "short",
@@ -5819,13 +5830,13 @@
         "type": "long",
         "key": "verify-signatures",
         "title": "--verify-signatures, --no-verify-signatures",
-        "description": "Verify that the tip commit of the side branch being merged is signed with a valid key, i.e. a key that has a valid uid: in the default trust model, this means the signing key has been signed by a trusted key. If the tip commit of the side branch is not signed with a valid key, the merge is aborted."
+        "description": "Verify that the tip commit of the side branch being merged is signed with a valid key, i.e. a key that has a valid uid: in the default trust model, this means the signing key has been signed by a trusted key. If the tip commit of the side branch is not signed with a valid key, the merge is aborted.\n\nOnly useful when merging."
       },
       {
         "type": "long",
         "key": "no-verify-signatures",
         "title": "--verify-signatures, --no-verify-signatures",
-        "description": "Verify that the tip commit of the side branch being merged is signed with a valid key, i.e. a key that has a valid uid: in the default trust model, this means the signing key has been signed by a trusted key. If the tip commit of the side branch is not signed with a valid key, the merge is aborted."
+        "description": "Verify that the tip commit of the side branch being merged is signed with a valid key, i.e. a key that has a valid uid: in the default trust model, this means the signing key has been signed by a trusted key. If the tip commit of the side branch is not signed with a valid key, the merge is aborted.\n\nOnly useful when merging."
       },
       {
         "type": "long",
@@ -5855,7 +5866,7 @@
         "type": "long",
         "key": "allow-unrelated-histories",
         "title": "--allow-unrelated-histories",
-        "description": "By default, git merge command refuses to merge histories that do not share a common ancestor. This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare occasion, no configuration variable to enable this by default exists and will not be added."
+        "description": "By default, git merge command refuses to merge histories that do not share a common ancestor. This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare occasion, no configuration variable to enable this by default exists and will not be added.\n\nOnly useful when merging."
       },
       {
         "type": "short",
@@ -5873,7 +5884,7 @@
         "type": "long",
         "key": "no-rebase",
         "title": "--no-rebase",
-        "description": "Override earlier --rebase."
+        "description": "This is shorthand for --rebase=false."
       },
       {
         "type": "long",
@@ -6434,25 +6445,25 @@
         "type": "short",
         "key": "m",
         "title": "-m, --merge",
-        "description": "Use merging strategies to rebase. When the recursive (default) merge strategy is used, this allows rebase to be aware of renames on the upstream side. This is the default.\n\nNote that a rebase merge works by replaying each commit from the working branch on top of the <upstream> branch. Because of this, when a merge conflict happens, the side reported as ours is the so-far rebased series, starting with <upstream>, and theirs is the working branch. In other words, the sides are swapped.\n\nSee also INCOMPATIBLE OPTIONS below."
+        "description": "Using merging strategies to rebase (default).\n\nNote that a rebase merge works by replaying each commit from the working branch on top of the <upstream> branch. Because of this, when a merge conflict happens, the side reported as ours is the so-far rebased series, starting with <upstream>, and theirs is the working branch. In other words, the sides are swapped.\n\nSee also INCOMPATIBLE OPTIONS below."
       },
       {
         "type": "long",
         "key": "merge",
         "title": "-m, --merge",
-        "description": "Use merging strategies to rebase. When the recursive (default) merge strategy is used, this allows rebase to be aware of renames on the upstream side. This is the default.\n\nNote that a rebase merge works by replaying each commit from the working branch on top of the <upstream> branch. Because of this, when a merge conflict happens, the side reported as ours is the so-far rebased series, starting with <upstream>, and theirs is the working branch. In other words, the sides are swapped.\n\nSee also INCOMPATIBLE OPTIONS below."
+        "description": "Using merging strategies to rebase (default).\n\nNote that a rebase merge works by replaying each commit from the working branch on top of the <upstream> branch. Because of this, when a merge conflict happens, the side reported as ours is the so-far rebased series, starting with <upstream>, and theirs is the working branch. In other words, the sides are swapped.\n\nSee also INCOMPATIBLE OPTIONS below."
       },
       {
         "type": "short",
         "key": "s",
         "title": "-s <strategy>, --strategy=<strategy>",
-        "description": "Use the given merge strategy. If there is no -s option git merge-recursive is used instead. This implies --merge.\n\nBecause git rebase replays each commit from the working branch on top of the <upstream> branch using the given strategy, using the ours strategy simply empties all patches from the <branch>, which makes little sense.\n\nSee also INCOMPATIBLE OPTIONS below."
+        "description": "Use the given merge strategy, instead of the default recursive. This implies --merge.\n\nBecause git rebase replays each commit from the working branch on top of the <upstream> branch using the given strategy, using the ours strategy simply empties all patches from the <branch>, which makes little sense.\n\nSee also INCOMPATIBLE OPTIONS below."
       },
       {
         "type": "long",
         "key": "strategy",
         "title": "-s <strategy>, --strategy=<strategy>",
-        "description": "Use the given merge strategy. If there is no -s option git merge-recursive is used instead. This implies --merge.\n\nBecause git rebase replays each commit from the working branch on top of the <upstream> branch using the given strategy, using the ours strategy simply empties all patches from the <branch>, which makes little sense.\n\nSee also INCOMPATIBLE OPTIONS below."
+        "description": "Use the given merge strategy, instead of the default recursive. This implies --merge.\n\nBecause git rebase replays each commit from the working branch on top of the <upstream> branch using the given strategy, using the ours strategy simply empties all patches from the <branch>, which makes little sense.\n\nSee also INCOMPATIBLE OPTIONS below."
       },
       {
         "type": "short",
@@ -6638,13 +6649,13 @@
         "type": "short",
         "key": "r",
         "title": "-r, --rebase-merges[=(rebase-cousins|no-rebase-cousins)]",
-        "description": "By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch. With --rebase-merges, the rebase will instead try to preserve the branching structure within the commits that are to be rebased, by recreating the merge commits. Any resolved merge conflicts or manual amendments in these merge commits will have to be resolved/re-applied manually.\n\nBy default, or when no-rebase-cousins was specified, commits which do not have <upstream> as direct ancestor will keep their original branch point, i.e. commits that would be excluded by git-log[1]'s --ancestry-path option will keep their original ancestry by default. If the rebase-cousins mode is turned on, such commits are instead rebased onto <upstream> (or <onto>, if specified).\n\nThe --rebase-merges mode is similar in spirit to the deprecated --preserve-merges but works with interactive rebases, where commits can be reordered, inserted and dropped at will.\n\nIt is currently only possible to recreate the merge commits using the recursive merge strategy; Different merge strategies can be used only via explicit exec git merge -s <strategy> [...] commands.\n\nSee also REBASING MERGES and INCOMPATIBLE OPTIONS below."
+        "description": "By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch. With --rebase-merges, the rebase will instead try to preserve the branching structure within the commits that are to be rebased, by recreating the merge commits. Any resolved merge conflicts or manual amendments in these merge commits will have to be resolved/re-applied manually.\n\nBy default, or when no-rebase-cousins was specified, commits which do not have <upstream> as direct ancestor will keep their original branch point, i.e. commits that would be excluded by git-log[1]'s --ancestry-path option will keep their original ancestry by default. If the rebase-cousins mode is turned on, such commits are instead rebased onto <upstream> (or <onto>, if specified).\n\nThe --rebase-merges mode is similar in spirit to the deprecated --preserve-merges but works with interactive rebases, where commits can be reordered, inserted and dropped at will.\n\nIt is currently only possible to recreate the merge commits using the recursive merge strategy; different merge strategies can be used only via explicit exec git merge -s <strategy> [...] commands.\n\nSee also REBASING MERGES and INCOMPATIBLE OPTIONS below."
       },
       {
         "type": "long",
         "key": "rebase-merges",
         "title": "-r, --rebase-merges[=(rebase-cousins|no-rebase-cousins)]",
-        "description": "By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch. With --rebase-merges, the rebase will instead try to preserve the branching structure within the commits that are to be rebased, by recreating the merge commits. Any resolved merge conflicts or manual amendments in these merge commits will have to be resolved/re-applied manually.\n\nBy default, or when no-rebase-cousins was specified, commits which do not have <upstream> as direct ancestor will keep their original branch point, i.e. commits that would be excluded by git-log[1]'s --ancestry-path option will keep their original ancestry by default. If the rebase-cousins mode is turned on, such commits are instead rebased onto <upstream> (or <onto>, if specified).\n\nThe --rebase-merges mode is similar in spirit to the deprecated --preserve-merges but works with interactive rebases, where commits can be reordered, inserted and dropped at will.\n\nIt is currently only possible to recreate the merge commits using the recursive merge strategy; Different merge strategies can be used only via explicit exec git merge -s <strategy> [...] commands.\n\nSee also REBASING MERGES and INCOMPATIBLE OPTIONS below."
+        "description": "By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch. With --rebase-merges, the rebase will instead try to preserve the branching structure within the commits that are to be rebased, by recreating the merge commits. Any resolved merge conflicts or manual amendments in these merge commits will have to be resolved/re-applied manually.\n\nBy default, or when no-rebase-cousins was specified, commits which do not have <upstream> as direct ancestor will keep their original branch point, i.e. commits that would be excluded by git-log[1]'s --ancestry-path option will keep their original ancestry by default. If the rebase-cousins mode is turned on, such commits are instead rebased onto <upstream> (or <onto>, if specified).\n\nThe --rebase-merges mode is similar in spirit to the deprecated --preserve-merges but works with interactive rebases, where commits can be reordered, inserted and dropped at will.\n\nIt is currently only possible to recreate the merge commits using the recursive merge strategy; different merge strategies can be used only via explicit exec git merge -s <strategy> [...] commands.\n\nSee also REBASING MERGES and INCOMPATIBLE OPTIONS below."
       },
       {
         "type": "short",
@@ -7526,7 +7537,7 @@
         "type": "long",
         "key": "encoding",
         "title": "--encoding=<encoding>",
-        "description": "The commit objects record the encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output."
+        "description": "Commit objects record the character encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output. Likewise, if iconv(3) fails to convert the commit, we will output the original object verbatim, along with a warning."
       },
       {
         "type": "long",
@@ -9312,7 +9323,7 @@
         "type": "short",
         "key": "o",
         "title": "-o <path>, --output-directory <path>",
-        "description": "Place the resulting bug report file in <path> instead of the root of the Git repository."
+        "description": "Place the resulting bug report file in <path> instead of the current directory."
       },
       {
         "type": "short",
@@ -13992,7 +14003,7 @@
         "type": "long",
         "key": "encoding",
         "title": "--encoding=<encoding>",
-        "description": "The commit objects record the encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output."
+        "description": "Commit objects record the character encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output. Likewise, if iconv(3) fails to convert the commit, we will output the original object verbatim, along with a warning."
       },
       {
         "type": "long",
@@ -15205,7 +15216,7 @@
         "type": "long",
         "key": "encoding",
         "title": "--encoding=<encoding>",
-        "description": "The commit objects record the encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output."
+        "description": "Commit objects record the character encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in X and we are outputting in X, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output. Likewise, if iconv(3) fails to convert the commit, we will output the original object verbatim, along with a warning."
       },
       {
         "type": "long",
@@ -16352,7 +16363,7 @@
       {
         "type": "long",
         "key": "nl",
-        "title": "--nl=<N>",
+        "title": "--nl=<string>",
         "description": "String to be printed at the end of each line, including newline character."
       },
       {

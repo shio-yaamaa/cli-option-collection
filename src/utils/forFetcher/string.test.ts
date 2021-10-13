@@ -1,31 +1,22 @@
 import {
-  normalizeSpacingAroundComma,
+  normalizeCommaDelimitedString,
   normalizeSpaces,
-  normalizeSpacesAndLinebreaks,
   splitByMultipleDelimiters,
   splitAtTopLevel,
   countIndentWidth,
   extractLines,
 } from './string';
 
-describe('normalizeSpacingAroundComma', () => {
+describe('normalizeCommaDelimitedString', () => {
   test('test', () => {
-    expect(normalizeSpacingAroundComma('abc , abc')).toBe('abc, abc');
-    expect(normalizeSpacingAroundComma('abc,abc')).toBe('abc, abc');
+    expect(normalizeCommaDelimitedString('abc , abc')).toBe('abc, abc');
+    expect(normalizeCommaDelimitedString('abc,abc')).toBe('abc, abc');
   });
 });
 
 describe('normalizeSpaces', () => {
   test('test', () => {
     expect(normalizeSpaces('abc  abc abc\nabc')).toBe('abc abc abc\nabc');
-  });
-});
-
-describe('normalizeSpacesAndLinebreaks', () => {
-  test('test', () => {
-    expect(normalizeSpacesAndLinebreaks('abc  abc abc\n \nabc\nabc')).toBe(
-      'abc abc abc abc abc'
-    );
   });
 });
 

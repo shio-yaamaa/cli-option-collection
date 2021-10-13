@@ -4,7 +4,7 @@ import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { makeOptionList } from '../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeCommaDelimitedString } from '../utils/forFetcher/string';
 import { isElement } from '../utils/typeGuards';
 
 // Alternative sources:
@@ -118,7 +118,7 @@ const fetchSubcommand = async (
     options.push(
       ...makeOptionList(
         optionStrings,
-        normalizeSpacingAroundComma(title),
+        normalizeCommaDelimitedString(title),
         description
       )
     );

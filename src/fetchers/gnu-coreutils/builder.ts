@@ -9,7 +9,7 @@ import {
 } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../../utils/forFetcher/string';
+import { normalizeCommaDelimitedString } from '../../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -72,7 +72,7 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
   const dlistEntries = findDListEntries(list);
   const options: Option[] = [];
   for (const { dts, dd } of dlistEntries) {
-    const title = normalizeSpacingAroundComma(getInnerText(dts[0]));
+    const title = normalizeCommaDelimitedString(getInnerText(dts[0]));
     const description = getInnerText(dd).trim();
     const optionStrings = transformOptionStrings(
       [title],

@@ -4,7 +4,7 @@ import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
 import {
-  normalizeSpacingAroundComma,
+  normalizeCommaDelimitedString,
   splitByMultipleDelimiters,
 } from '../utils/forFetcher/string';
 import {
@@ -206,7 +206,7 @@ const paragraphToOptions = (paragraph: string): Option[] => {
     return [];
   }
 
-  const optionTitle = normalizeSpacingAroundComma(sentenceSubjectFlag);
+  const optionTitle = normalizeCommaDelimitedString(sentenceSubjectFlag);
   const optionDescription = paragraph.trim().replace(/\n/g, ' ');
 
   const optionStrings = transformOptionStrings(flags, [

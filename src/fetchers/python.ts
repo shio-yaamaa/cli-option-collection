@@ -4,7 +4,7 @@ import { findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionList } from '../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeCommaDelimitedString } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -59,7 +59,7 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
     options.push(
       ...makeOptionList(
         optionStrings,
-        normalizeSpacingAroundComma(title),
+        normalizeCommaDelimitedString(title),
         getInnerText(dd).trim()
       )
     );

@@ -6,7 +6,7 @@
         "type": "short",
         "key": "f",
         "title": "-f",
-        "description": "Restrict examination to files open in the same file systems as the named file arguments, or to the file system containing the current directory if there are no additional filename arguments. For example, to find all files open in the file system where the directory /usr/src resides, type\n\n\n\n# fstat -f /usr/src"
+        "description": "Restrict examination to files open in the same file systems as the named file arguments, or to the file system containing the current directory if there are no additional filename arguments. For example, to find all files open in the file system where the directory /usr/src resides, type\n\n# fstat -f /usr/src"
       },
       {
         "type": "short",

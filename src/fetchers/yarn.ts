@@ -3,7 +3,7 @@ import { URL } from 'url';
 import { Command, Fetcher, Option } from '../types';
 import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
-import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeCommaDelimitedString } from '../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -72,7 +72,7 @@ const fetchSubcommand = async (
     }
     const optionString = getInnerText(tds[0]);
     const description = getInnerText(tds[1]);
-    const title = normalizeSpacingAroundComma(optionString);
+    const title = normalizeCommaDelimitedString(optionString);
 
     const optionStrings = transformOptionStrings(
       [optionString],

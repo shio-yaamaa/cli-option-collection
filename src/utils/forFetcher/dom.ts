@@ -82,3 +82,25 @@ export const findDListEntries = (
 
   return entries;
 };
+
+export const findElementsUnderHeading = (
+  heading: Element,
+  headingSelectors: string[], // e.g. ["h1", "h2"]
+  selector: string
+): Element[] => {
+  const elementsUnderHeading: Element[] = [];
+
+  let currentElement: Element | null = heading;
+  while ((currentElement = currentElement.nextElementSibling)) {
+    const isHeading = headingSelectors.some((selector) =>
+      currentElement?.matches(selector)
+    );
+    if (isHeading) {
+      break;
+    }
+    if (currentElement.matches(selector)) {
+      elementsUnderHeading.push(currentElement);
+    }
+  }
+  return elementsUnderHeading;
+};
