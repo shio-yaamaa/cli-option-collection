@@ -107,5 +107,6 @@ export const openbsd = {
   wall: build('wall'),
   whatis: build('whatis'),
   whois: build('whois'),
+  xargs: build('xargs'),
   zcat: build('zcat'),
 };

@@ -292,6 +292,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['who', gnuCoreutils.who],
   ['whoami', gnuCoreutils.whoami],
   ['whois', openbsd.whois],
+  ['xargs', openbsd.xargs],
   ['yarn', yarn],
   ['yes', gnuCoreutils.yes],
   ['zcat', openbsd.zcat],
