@@ -24,6 +24,7 @@ import { perl } from './fetchers/perl';
 import { python } from './fetchers/python';
 import { rsync } from './fetchers/rsync';
 import { sshuttle } from './fetchers/sshuttle';
+import { systemd } from './fetchers/systemd';
 import { terraform } from './fetchers/terraform';
 import { yarn } from './fetchers/yarn';
 
@@ -141,6 +142,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['iostat', openbsd.iostat],
   ['jobs', bashBuiltin.jobs],
   ['join', gnuCoreutils.join],
+  ['journalctl', systemd.journalctl],
   ['jq', jq],
   ['kill', join(gnuCoreutils.kill, bashBuiltin.kill)],
   ['ksh', openbsd.ksh],
@@ -254,6 +256,8 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['svc', daemontools.svc],
   ['sync', gnuCoreutils.sync],
   ['systat', openbsd.systat],
+  ['systemctl', systemd.systemctl],
+  ['systemd', systemd.systemd],
   ['tac', gnuCoreutils.tac],
   ['tail', gnuCoreutils.tail],
   ['tar', openbsd.tar],
