@@ -60,7 +60,7 @@
         "type": "short",
         "key": "o",
         "title": "-o option",
-        "description": "Specify an option by its long name. Those described below have no equivalent option letter:\n\n\n\nignoreeof Ignore an end-of-file (‘^D’). EOF normally logs a user out, so setting this can prevent accidental logouts (the user will need to explicitly use the exit command). nolog Do not enter function definitions into command history. posix Enable POSIX mode (see STANDARDS). vi Enable vi(1) command line editing."
+        "description": "Specify an option by its long name. Those described below have no equivalent option letter:\n\nignoreeof Ignore an end-of-file (‘^D’). EOF normally logs a user out, so setting this can prevent accidental logouts (the user will need to explicitly use the exit command). nolog Do not enter function definitions into command history. posix Enable POSIX mode (see STANDARDS). vi Enable vi(1) command line editing."
       },
       {
         "type": "short",

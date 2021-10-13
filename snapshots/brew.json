@@ -2298,15 +2298,15 @@
       },
       {
         "type": "long",
-        "key": "write",
-        "title": "--write",
+        "key": "write-only",
+        "title": "--write-only",
         "description": "Make the expected file modifications without taking any Git actions."
       },
       {
         "type": "long",
         "key": "commit",
         "title": "--commit",
-        "description": "When passed with --write, generate a new commit after writing changes to the formula file."
+        "description": "When passed with --write-only, generate a new commit after writing changes to the formula file."
       },
       {
         "type": "long",

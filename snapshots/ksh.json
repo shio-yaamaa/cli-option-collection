@@ -30,7 +30,7 @@
         "type": "short",
         "key": "r",
         "title": "-r",
-        "description": "Restricted shell. A shell is “restricted” if this option is used; if the basename the shell was invoked with was “rksh”; or if the SHELL parameter is set to “rksh”. The following restrictions come into effect after the shell processes any profile and ENV files:\n\n\n\n * The cd command is disabled.\n * The SHELL, ENV, and PATH parameters cannot be changed.\n * Command names can't be specified with absolute or relative paths.\n * The -p option of the built-in command command can't be used.\n * Redirections that create files can't be used (i.e. ‘>’, ‘>|’, ‘>>’, ‘<>’)."
+        "description": "Restricted shell. A shell is “restricted” if this option is used; if the basename the shell was invoked with was “rksh”; or if the SHELL parameter is set to “rksh”. The following restrictions come into effect after the shell processes any profile and ENV files:\n\n * The cd command is disabled.\n * The SHELL, ENV, and PATH parameters cannot be changed.\n * Command names can't be specified with absolute or relative paths.\n * The -p option of the built-in command command can't be used.\n * Redirections that create files can't be used (i.e. ‘>’, ‘>|’, ‘>>’, ‘<>’)."
       },
       {
         "type": "short",
