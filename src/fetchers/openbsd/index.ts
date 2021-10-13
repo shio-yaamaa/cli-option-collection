@@ -21,7 +21,7 @@ import { build } from './builder';
 //      - whatis, apropos
 //      - pgrep, pkill
 // BUG: Tables and definition lists are not stringified in a human-readable way.
-//      (e.g. netstat -f, gzip -l)
+//      (e.g. netstat -f, gzip -l, make -d)
 
 export const openbsd = {
   apropos: build('apropos'),
@@ -59,6 +59,7 @@ export const openbsd = {
   //      but the fetcher doesn't recognize them.
   less: build('less'),
   login: build('login'),
+  make: build('make'),
   man: build('man'),
   // BUG: "-m" option ("-mdoc | -man") is not recognized.
   mandoc: build('mandoc'),

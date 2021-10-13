@@ -1,0 +1,121 @@
+[
+  {
+    "name": "make",
+    "options": [
+      {
+        "type": "short",
+        "key": "e",
+        "title": "-e",
+        "description": "Environment variables override macro assignments within makefiles."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f mk",
+        "description": "Read file mk instead of the default makefile. If mk is ‘-’, standard input is used. Multiple makefiles may be specified, and are read in the order specified."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Ignore non-zero exit of shell commands in the makefile. Equivalent to specifying ‘-’ before each command line in the makefile."
+      },
+      {
+        "type": "short",
+        "key": "k",
+        "title": "-k",
+        "description": "Continue processing after errors are encountered, but only on those targets that do not depend on the target whose creation caused the error."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Display the commands that would have been executed, but do not actually execute them."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p",
+        "description": "Print a dump of the target rules and variables on stdout. Do not build anything."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Do not execute any commands, but exit with status 0 if the specified targets are up to date, and 1 otherwise."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Do not use the built-in rules specified in the system makefile, <sys.mk>."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "Stop processing when an error is encountered. This is the default behavior. This is needed to negate the -k option during recursive builds."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s",
+        "description": "Do not echo commands as they are executed. Equivalent to specifying ‘@’ before each command line in the makefile."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Rather than re-building a target as specified in the makefile, create it or update its modification time to make it appear up to date, a bit like touch(1)."
+      },
+      {
+        "type": "short",
+        "key": "B",
+        "title": "-B",
+        "description": "Try to be backwards compatible by executing the commands to make the prerequisites in a target rule in sequence. This is the default, in the absence of -j max_processes."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C directory",
+        "description": "Enter directory before doing anything."
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D variable",
+        "description": "Define variable to be 1."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d flags",
+        "description": "Turn on debugging, and specify which portions of make are to print debugging information. flags is one or more of the following: A Print all possible debugging information; equivalent to specifying all of the debugging flags. a Print debugging information about archive searching and caching. c Print debugging information about conditional evaluation. d Print debugging information about directory searching and caching. D Print warning messages about multiply defined command lists. e Print debugging information about expensive command heuristics. f Print debugging information about the expansion of for loops. g1 Print the input graph before making anything. g2 Print the input graph after making everything, or before exiting on error. h Print information about jobs being held back because of sibling/target groups races. j Print debugging information about forking processes to run commands. k Print debugging information about manually killing processes. l Print commands in Makefile targets regardless of whether or not they are prefixed by @. Also known as loud behavior. m Print debugging information about making targets, including modification dates. n Print debugging information about target names equivalence computations. p Help finding concurrency issues for parallel make by adding some randomization. If RANDOM_ORDER is defined, targets will be shuffled before being built. If RANDOM_DELAY is defined, make will wait between 0 and ${RANDOM_DELAY} seconds before starting a command. A given random seed can be forced by setting RANDOM_SEED, but this does not guarantee reproducibility. q ‘quick death’ option: after a fatal error, instead of waiting for other jobs to die, kill them right away. s Print debugging information about inference (suffix) transformation rules. t Print debugging information about target list maintenance. T Print debugging information about target group determination. v Print debugging information about variable assignment."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I directory",
+        "description": "Specify a directory in which to search for makefiles and for \"...\"-style inclusions. Multiple directories can be added to form a search path. Furthermore, the system include path (see the -m option) will be used after this search path."
+      },
+      {
+        "type": "short",
+        "key": "j",
+        "title": "-j max_processes",
+        "description": "Specify the maximum number of processes that make may have running at any one time."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m directory",
+        "description": "Specify a directory in which to search for system include files: sys.mk and <...>-style inclusions. Multiple directories can be added to form the system search path. Using -m will override the default system include directory /usr/share/mk."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V variable",
+        "description": "Print make's idea of the value of variable. Do not build any targets. Multiple instances of this option may be specified; the variables will be printed one per line, with a blank line for each null or undefined variable."
+      }
+    ]
+  }
+]

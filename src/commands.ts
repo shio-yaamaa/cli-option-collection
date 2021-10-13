@@ -149,6 +149,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['ls', gnuCoreutils.ls],
   ['magick', imagemagick.magick],
   ['magick-script', imagemagick.magickScript],
+  ['make', openbsd.make],
   ['man', openbsd.man],
   ['mandoc', openbsd.mandoc],
   ['mapfile', bashBuiltin.mapfile],
