@@ -255,6 +255,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['svc', daemontools.svc],
   ['sync', gnuCoreutils.sync],
   ['systat', openbsd.systat],
+  ['systemctl', systemd.systemctl],
   ['systemd', systemd.systemd],
   ['tac', gnuCoreutils.tac],
   ['tail', gnuCoreutils.tail],

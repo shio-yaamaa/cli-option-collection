@@ -59,7 +59,7 @@ const fetch = async (commandName: string): Promise<Command[]> => {
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts.map((dt) => getInnerText(dt).replace('¶', '').trim());
   const title = mergeOptionTitles(dtTexts);
-  const description = getInnerText(dd);
+  const description = getInnerText(dd).replace(/¶/g, '');
   const optionStrings = transformOptionStrings(dtTexts, [
     splitByComma,
     trimEqualDelimitedArguments,
