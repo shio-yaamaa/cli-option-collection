@@ -30,6 +30,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['alias', bashBuiltin.alias],
   ['apropos', openbsd.apropos],
   ['apt-cache', apt.aptCache],
+  ['apt-file', apt.aptFile],
   ['apt-get', apt.aptGet],
   ['arch', gnuCoreutils.arch],
   ['arp', openbsd.arp],
