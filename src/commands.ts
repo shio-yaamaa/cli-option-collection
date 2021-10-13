@@ -209,6 +209,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['rev', openbsd.rev],
   ['rm', gnuCoreutils.rm],
   ['rmdir', gnuCoreutils.rmdir],
+  ['route', openbsd.route],
   ['rsync', rsync],
   ['runcon', gnuCoreutils.runcon],
   ['scp', openbsd.scp],

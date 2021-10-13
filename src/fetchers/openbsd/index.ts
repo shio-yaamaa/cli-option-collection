@@ -81,6 +81,7 @@ export const openbsd = {
   reboot: build('reboot'),
   renice: build('renice'),
   rev: build('rev'),
+  route: build('route'),
   scp: build('scp'),
   sed: build('sed'),
   sftp: build('sftp'),

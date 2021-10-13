@@ -1,0 +1,43 @@
+[
+  {
+    "name": "route",
+    "options": [
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Run in debug-only mode, i.e., don't actually modify the routing table."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Bypass attempts to print host and network names symbolically when reporting actions. (The process of translating between symbolic names and numerical equivalents can be quite time consuming, and may require correct operation of the network; thus it may be expedient to forgo this, especially when attempting to repair networking operations.)"
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q",
+        "description": "Suppress all output."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T rtable",
+        "description": "Select an alternate routing table to modify or query. The default is to use the current routing table."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t",
+        "description": "Write routing messages to a fake device (/dev/null) instead of a real routing socket to test route manipulation."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "(verbose) Print additional details."
+      }
+    ]
+  }
+]
