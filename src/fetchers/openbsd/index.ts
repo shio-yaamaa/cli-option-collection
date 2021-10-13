@@ -18,13 +18,15 @@ import { build } from './builder';
 //      - compress, uncompress, zcat
 //      - mt, eject
 //      - ping, ping6
+//      - traceroute, traceroute6
 //      - whatis, apropos
 //      - pgrep, pkill
 // BUG: Tables and definition lists are not stringified in a human-readable way.
-//      (e.g. netstat -f, gzip -l)
+//      (e.g. netstat -f, gzip -l, make -d, mount -o)
 
 export const openbsd = {
   apropos: build('apropos'),
+  arp: build('arp'),
   // BUG: "-safe" flag is not recognized as an option
   //      because it uses single dash with long option name.
   awk: build('awk'),
@@ -52,6 +54,8 @@ export const openbsd = {
   gzcat: build('gzcat'),
   gzip: build('gzip'),
   halt: build('halt'),
+  host: build('host'),
+  ifconfig: build('ifconfig'),
   init: build('init'),
   iostat: build('iostat'),
   ksh: build('ksh'),
@@ -59,11 +63,13 @@ export const openbsd = {
   //      but the fetcher doesn't recognize them.
   less: build('less'),
   login: build('login'),
+  make: build('make'),
   man: build('man'),
   // BUG: "-m" option ("-mdoc | -man") is not recognized.
   mandoc: build('mandoc'),
   md5: build('md5'),
   more: build('more'),
+  mount: build('mount'),
   mt: build('mt'),
   nc: build('nc'),
   netstat: build('netstat'),
@@ -78,6 +84,7 @@ export const openbsd = {
   reboot: build('reboot'),
   renice: build('renice'),
   rev: build('rev'),
+  route: build('route'),
   scp: build('scp'),
   sed: build('sed'),
   sftp: build('sftp'),
@@ -94,9 +101,14 @@ export const openbsd = {
   tar: build('tar'),
   top: build('top'),
   tput: build('tput'),
+  traceroute: build('traceroute'),
+  traceroute6: build('traceroute6'),
+  umount: build('umount'),
   uncompress: build('uncompress'),
   vmstat: build('vmstat'),
   wall: build('wall'),
   whatis: build('whatis'),
+  whois: build('whois'),
+  xargs: build('xargs'),
   zcat: build('zcat'),
 };

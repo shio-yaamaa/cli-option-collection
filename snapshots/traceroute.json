@@ -1,0 +1,121 @@
+[
+  {
+    "name": "traceroute",
+    "options": [
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "Look up the AS number for each hop address. Uses the DNS service described at https://www.team-cymru.com/IP-ASN-mapping.html#dns"
+      },
+      {
+        "type": "short",
+        "key": "D",
+        "title": "-D",
+        "description": "Dump the packet data to standard error before transmitting it."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Turn on socket-level debugging."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f first_ttl",
+        "description": "Set the first TTL or hop limit used in outgoing probe packets. The effect is that the first first_ttl - 1 hosts will be skipped in the output of traceroute. The default is 1 (skip no hosts)."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g gateway_addr",
+        "description": "Add gateway_addr to the list of addresses in the IP Loose Source Record Route (LSRR) option. If no gateways are specified, the LSRR option is omitted. This option is not available for IPv6."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "Use ICMP or ICMP6 ECHO instead of UDP datagrams."
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "Display the TTL or hop limit value of the returned packet. This is useful for checking for asymmetric routing."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m max_ttl",
+        "description": "Set the maximum TTL or hop limit. The default is the value of the system's net.inet.ip.ttl or net.inet6.ip6.hlim sysctl(8) variable, which defaults to 64."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Print hop addresses numerically rather than symbolically and numerically (saves a nameserver address-to-name lookup for each gateway found on the path)."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P proto",
+        "description": "Change the protocol being used from UDP to a numeric protocol or a name as specified in /etc/protocols. This will not work reliably for most protocols. If set to 1 (ICMP), then ICMP Echo Request messages will be used (same as ping(8)). This option is not available for IPv6."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p port",
+        "description": "Set the base UDP port number used in probes. The default is 33434. traceroute hopes that nothing is listening on UDP ports base to base+nhops*nqueries-1 at the destination host (so an ICMP PORT_UNREACHABLE message will be returned to terminate the route tracing). If something is listening on a port in the default range, this option can be used to pick an unused port range."
+      },
+      {
+        "type": "short",
+        "key": "q",
+        "title": "-q nqueries",
+        "description": "Set the number of probes per TTL to nqueries. The default is three probes."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S",
+        "description": "Print how many probes were not answered for each hop."
+      },
+      {
+        "type": "short",
+        "key": "s",
+        "title": "-s sourceaddr",
+        "description": "Set the source address to transmit from, which is useful on machines with multiple interfaces."
+      },
+      {
+        "type": "short",
+        "key": "t",
+        "title": "-t toskeyword",
+        "description": "Set the type-of-service (TOS) in probe packets. The value may be one of critical, inetcontrol, lowdelay, netcontrol, throughput, reliability, or one of the DiffServ Code Points: ef, af11 ... af43, cs0 ... cs7; or a number in either hex or decimal. The default is zero. This option can be used to see if different types-of-service result in different paths. If this option is used, changes to the type-of-service in the returned packets are displayed. Not all values of TOS are legal or meaningful - see the IP spec for definitions. Useful values are probably lowdelay and throughput."
+      },
+      {
+        "type": "short",
+        "key": "V",
+        "title": "-V rtable",
+        "description": "Set the routing table to be used."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Verbose output. Received ICMP packets other than TIME_EXCEEDED and UNREACHABLEs are listed."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w waittime",
+        "description": "Set the time, in seconds, to wait for a response to a probe. The default is 3."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Print the ICMP extended headers if available. This option is not available for IPv6."
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "whois",
+    "options": [
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "Use the Asia/Pacific Network Information Center (APNIC) database. It contains network numbers used in East Asia, Australia, New Zealand, and the Pacific islands."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Use the American Registry for Internet Numbers (ARIN) database. It contains network numbers used in those parts of the world covered neither by AfriNIC, APNIC, LACNIC, nor by RIPE.\n\n(Hint: All point of contact handles in the ARIN whois database end with \"-ARIN\".)"
+      },
+      {
+        "type": "short",
+        "key": "c",
+        "title": "-c country-code",
+        "description": "This is the equivalent of using the -h option with an argument of \"country-code.whois-servers.net\"."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Use the US Department of Defense database. It contains points of contact for subdomains of .MIL."
+      },
+      {
+        "type": "short",
+        "key": "g",
+        "title": "-g",
+        "description": "Use the US non-military federal government database, which contains points of contact for subdomains of .GOV."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h host",
+        "description": "Use the specified host instead of the default NIC (whois.crsnic.net). Either a host name or an IP address may be specified.\n\nBy default whois constructs the name of a whois server to use from the top-level domain (TLD) of the supplied (single) argument. For newer generic domains (gTLDs), a lookup for whois.nic.tld is attempted. For other TLDs, or if this lookup fails, \".whois-servers.net\" is appended to the TLD. This effectively allows a suitable whois server to be selected automatically for a large number of TLDs.\n\nIn the event that an IP address is specified, the whois server will default to the American Registry for Internet Numbers (ARIN). If a query to ARIN references APNIC, LACNIC, or RIPE, that server will be queried also, provided that the -Q option is not specified.\n\nIf the query is not a domain name or IP address, whois will fall back to whois.crsnic.net."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I",
+        "description": "Use the Internet Assigned Numbers Authority (whois.iana.org) root zone database. It contains information about top-level domains."
+      },
+      {
+        "type": "short",
+        "key": "i",
+        "title": "-i",
+        "description": "Use the Network Solutions Registry for Internet Numbers (whois.networksolutions.com) database. Historically, it contained network numbers and domain contact information for most of .COM, .NET, .ORG and .EDU domains. However, the registration of these domains is now done by a number of independent and competing registrars and this database holds no information on the domains registered by organizations other than Network Solutions, Inc. Also, note that the InterNIC database (whois.internic.net) is no longer handled by Network Solutions, Inc. For details, see http://www.internic.net/.\n\n(Hint: Contact information, identified by the term handle, can be looked up by prefixing \"!\" or \"handle \" to the NIC handle in the query.)"
+      },
+      {
+        "type": "short",
+        "key": "l",
+        "title": "-l",
+        "description": "Use the Latin American and Caribbean IP address Regional Registry (LACNIC) database. It contains network numbers used in much of Latin America and the Caribbean."
+      },
+      {
+        "type": "short",
+        "key": "m",
+        "title": "-m",
+        "description": "Use the Route Arbiter Database (RADB) database. It contains route policy specifications for a large number of operators' networks."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "Use the PeeringDB database of AS numbers. It contains details about presence at internet peering points for many network operators."
+      },
+      {
+        "type": "short",
+        "key": "p",
+        "title": "-p port",
+        "description": "Connect to the whois server on port. If this option is not specified, whois defaults to the “whois” port listed in /etc/services (port 43)."
+      },
+      {
+        "type": "short",
+        "key": "Q",
+        "title": "-Q",
+        "description": "Do a quick lookup. This means that whois will not attempt to lookup the name in the authoritative whois server (if one is listed) nor will it contact InterNic if a lookup fails. This flag has no effect when combined with any other flag."
+      },
+      {
+        "type": "short",
+        "key": "R",
+        "title": "-R",
+        "description": "Use the Russia Network Information Center (RIPN) database. It contains network numbers and domain contact information for subdomains of .RU. This option is deprecated; use the -c option with an argument of \"RU\" instead."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Use the Reseaux IP Europeens (RIPE) database. It contains network numbers and domain contact information for Europe."
+      }
+    ]
+  }
+]
