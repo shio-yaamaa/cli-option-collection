@@ -23,6 +23,7 @@ import { openbsd } from './fetchers/openbsd';
 import { perl } from './fetchers/perl';
 import { python } from './fetchers/python';
 import { rsync } from './fetchers/rsync';
+import { ruby } from './fetchers/ruby';
 import { sshuttle } from './fetchers/sshuttle';
 import { systemd } from './fetchers/systemd';
 import { terraform } from './fetchers/terraform';
@@ -219,6 +220,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['rmdir', gnuCoreutils.rmdir],
   ['route', openbsd.route],
   ['rsync', rsync],
+  ['ruby', ruby.ruby],
   ['runcon', gnuCoreutils.runcon],
   ['scp', openbsd.scp],
   ['sed', openbsd.sed],
