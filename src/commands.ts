@@ -9,6 +9,7 @@ import { daemontools } from './fetchers/daemontools';
 import { docker } from './fetchers/docker';
 import { ffmpeg } from './fetchers/ffmpeg';
 import { fzf } from './fetchers/fzf';
+import { gem } from './fetchers/gem';
 import { git } from './fetchers/git';
 import { gnuCoreutils } from './fetchers/gnu-coreutils';
 import { go } from './fetchers/go';
@@ -111,6 +112,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['fstat', openbsd.fstat],
   ['fzf', fzf.fzf],
   ['fzf-tmux', fzf.fzfTmux],
+  ['gem', gem],
   ['getopts', bashBuiltin.getopts],
   ['git', git],
   ['go', go],
