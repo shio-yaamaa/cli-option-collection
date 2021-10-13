@@ -18,6 +18,7 @@ import { build } from './builder';
 //      - compress, uncompress, zcat
 //      - mt, eject
 //      - ping, ping6
+//      - traceroute, traceroute6
 //      - whatis, apropos
 //      - pgrep, pkill
 // BUG: Tables and definition lists are not stringified in a human-readable way.
@@ -95,6 +96,8 @@ export const openbsd = {
   tar: build('tar'),
   top: build('top'),
   tput: build('tput'),
+  traceroute: build('traceroute'),
+  traceroute6: build('traceroute6'),
   uncompress: build('uncompress'),
   vmstat: build('vmstat'),
   wall: build('wall'),

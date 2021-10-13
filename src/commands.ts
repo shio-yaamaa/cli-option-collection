@@ -259,6 +259,8 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['touch', gnuCoreutils.touch],
   ['tput', openbsd.tput],
   ['tr', gnuCoreutils.tr],
+  ['traceroute', openbsd.traceroute],
+  ['traceroute6', openbsd.traceroute6],
   ['trap', bashBuiltin.trap],
   ['true', join(gnuCoreutils.true, bashBuiltin.true)],
   ['truncate', gnuCoreutils.truncate],
