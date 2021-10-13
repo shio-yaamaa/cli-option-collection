@@ -163,6 +163,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['mknod', gnuCoreutils.mknod],
   ['mktemp', gnuCoreutils.mktemp],
   ['more', openbsd.more],
+  ['mount', openbsd.mount],
   ['mt', openbsd.mt],
   ['mv', gnuCoreutils.mv],
   ['mysql', mysql.mysql],

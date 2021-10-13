@@ -22,7 +22,7 @@ import { build } from './builder';
 //      - whatis, apropos
 //      - pgrep, pkill
 // BUG: Tables and definition lists are not stringified in a human-readable way.
-//      (e.g. netstat -f, gzip -l, make -d)
+//      (e.g. netstat -f, gzip -l, make -d, mount -o)
 
 export const openbsd = {
   apropos: build('apropos'),
@@ -69,6 +69,7 @@ export const openbsd = {
   mandoc: build('mandoc'),
   md5: build('md5'),
   more: build('more'),
+  mount: build('mount'),
   mt: build('mt'),
   nc: build('nc'),
   netstat: build('netstat'),
