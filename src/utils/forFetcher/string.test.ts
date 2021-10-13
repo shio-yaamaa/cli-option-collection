@@ -1,7 +1,6 @@
 import {
   normalizeCommaDelimitedString,
   normalizeSpaces,
-  normalizeSpacesAndLinebreaks,
   splitByMultipleDelimiters,
   splitAtTopLevel,
   countIndentWidth,
@@ -18,14 +17,6 @@ describe('normalizeCommaDelimitedString', () => {
 describe('normalizeSpaces', () => {
   test('test', () => {
     expect(normalizeSpaces('abc  abc abc\nabc')).toBe('abc abc abc\nabc');
-  });
-});
-
-describe('normalizeSpacesAndLinebreaks', () => {
-  test('test', () => {
-    expect(normalizeSpacesAndLinebreaks('abc  abc abc\n \nabc\nabc')).toBe(
-      'abc abc abc abc abc'
-    );
   });
 });
 
