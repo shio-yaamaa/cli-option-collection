@@ -5,6 +5,7 @@ import { apt } from './fetchers/apt';
 import { bashBuiltin } from './fetchers/bash-builtin';
 import { brew } from './fetchers/brew';
 import { bundler } from './fetchers/bundler';
+import { cargo } from './fetchers/cargo';
 import { daemontools } from './fetchers/daemontools';
 import { docker } from './fetchers/docker';
 import { ffmpeg } from './fetchers/ffmpeg';
@@ -48,6 +49,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['builtin', bashBuiltin.builtin],
   ['bundle', bundler.bundle],
   ['caller', bashBuiltin.caller],
+  ['cargo', cargo],
   ['cat', gnuCoreutils.cat],
   ['cd', bashBuiltin.cd],
   ['chcon', gnuCoreutils.chcon],
