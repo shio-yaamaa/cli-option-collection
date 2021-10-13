@@ -1,0 +1,25 @@
+[
+  {
+    "name": "ifconfig",
+    "options": [
+      {
+        "type": "short",
+        "key": "A",
+        "title": "-A",
+        "description": "Causes full interface alias information for each interface to be displayed."
+      },
+      {
+        "type": "short",
+        "key": "a",
+        "title": "-a",
+        "description": "Causes ifconfig to print information on all interfaces. The protocol family may be specified as well. This is the default, if no parameters are given to ifconfig."
+      },
+      {
+        "type": "short",
+        "key": "C",
+        "title": "-C",
+        "description": "Print the names of all network pseudo-devices that can be created dynamically at runtime using ifconfig create."
+      }
+    ]
+  }
+]

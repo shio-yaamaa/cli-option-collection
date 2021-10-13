@@ -129,6 +129,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['hostname', gnuCoreutils.hostname],
   ['htop', htop],
   ['id', gnuCoreutils.id],
+  ['ifconfig', openbsd.ifconfig],
   ['init', openbsd.init],
   ['inlib', bashBuiltin.inlib],
   ['install', gnuCoreutils.install],
