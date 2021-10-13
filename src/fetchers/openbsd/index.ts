@@ -54,6 +54,7 @@ export const openbsd = {
   gzcat: build('gzcat'),
   gzip: build('gzip'),
   halt: build('halt'),
+  host: build('host'),
   ifconfig: build('ifconfig'),
   init: build('init'),
   iostat: build('iostat'),
