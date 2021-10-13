@@ -142,6 +142,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['iostat', openbsd.iostat],
   ['jobs', bashBuiltin.jobs],
   ['join', gnuCoreutils.join],
+  ['journalctl', systemd.journalctl],
   ['jq', jq],
   ['kill', join(gnuCoreutils.kill, bashBuiltin.kill)],
   ['ksh', openbsd.ksh],

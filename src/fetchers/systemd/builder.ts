@@ -15,6 +15,8 @@ import {
   splitByComma,
   transformOptionStrings,
   trimEqualDelimitedArguments,
+  trimOptionalElements,
+  trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
 
@@ -62,7 +64,9 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const description = getInnerText(dd).replace(/¶/g, '');
   const optionStrings = transformOptionStrings(dtTexts, [
     splitByComma,
+    trimOptionalElements,
     trimEqualDelimitedArguments,
+    trimSpaceDelimitedArguments,
   ]);
   return makeOptionList(optionStrings, title, description);
 };
