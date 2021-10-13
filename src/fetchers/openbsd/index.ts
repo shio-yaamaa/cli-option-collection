@@ -106,5 +106,6 @@ export const openbsd = {
   vmstat: build('vmstat'),
   wall: build('wall'),
   whatis: build('whatis'),
+  whois: build('whois'),
   zcat: build('zcat'),
 };
