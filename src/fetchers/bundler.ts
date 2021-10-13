@@ -12,7 +12,7 @@ import {
   makeOptionList,
   mergeOptionTitles,
 } from '../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../utils/forFetcher/string';
+import { normalizeCommaDelimitedString } from '../utils/forFetcher/string';
 import {
   splitByComma,
   splitByCustomString,
@@ -98,7 +98,7 @@ const fetchSubcommand = async ({
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts.map((dt) => getInnerText(dt));
-  const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
+  const title = normalizeCommaDelimitedString(mergeOptionTitles(dtTexts));
   const description = getInnerText(dd);
   const optionStrings = transformOptionStrings(dtTexts, [
     splitByComma,

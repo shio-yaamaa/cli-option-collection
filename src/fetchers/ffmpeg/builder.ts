@@ -7,7 +7,7 @@ import {
   makeOptionListForSingleDashStyle,
   mergeOptionTitles,
 } from '../../utils/forFetcher/optionString';
-import { normalizeSpacingAroundComma } from '../../utils/forFetcher/string';
+import { normalizeCommaDelimitedString } from '../../utils/forFetcher/string';
 import {
   splitByComma,
   transformOptionStrings,
@@ -48,7 +48,7 @@ const findTopLevelLists = (document: Document): HTMLDListElement[] =>
 
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts.map((dt) => getInnerText(dt).trim());
-  const title = normalizeSpacingAroundComma(mergeOptionTitles(dtTexts));
+  const title = normalizeCommaDelimitedString(mergeOptionTitles(dtTexts));
   const description = getInnerText(dd).trim();
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,

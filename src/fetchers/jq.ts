@@ -5,7 +5,7 @@ import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
 import { makeOptionList } from '../utils/forFetcher/optionString';
-import { normalizeSpacingAroundSlash } from '../utils/forFetcher/string';
+import { normalizeSlashDelimitedString } from '../utils/forFetcher/string';
 import {
   transformOptionStrings,
   trimNonDelimitedArguments,
@@ -52,7 +52,7 @@ const sectionToOptions = (section: Element): Option[] => {
       continue;
     }
     const liText = getInnerText(li);
-    const title = normalizeSpacingAroundSlash(liText.trim().slice(0, -1));
+    const title = normalizeSlashDelimitedString(liText.trim().slice(0, -1));
     const description = findDescriptionForList(ul);
     const optionStrings = ulToOptionStrings(ul);
     options.push(...makeOptionList(optionStrings, title, description));

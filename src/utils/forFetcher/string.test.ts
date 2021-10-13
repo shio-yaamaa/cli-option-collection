@@ -1,5 +1,5 @@
 import {
-  normalizeSpacingAroundComma,
+  normalizeCommaDelimitedString,
   normalizeSpaces,
   normalizeSpacesAndLinebreaks,
   splitByMultipleDelimiters,
@@ -8,10 +8,10 @@ import {
   extractLines,
 } from './string';
 
-describe('normalizeSpacingAroundComma', () => {
+describe('normalizeCommaDelimitedString', () => {
   test('test', () => {
-    expect(normalizeSpacingAroundComma('abc , abc')).toBe('abc, abc');
-    expect(normalizeSpacingAroundComma('abc,abc')).toBe('abc, abc');
+    expect(normalizeCommaDelimitedString('abc , abc')).toBe('abc, abc');
+    expect(normalizeCommaDelimitedString('abc,abc')).toBe('abc, abc');
   });
 });
 
