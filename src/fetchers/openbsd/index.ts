@@ -26,6 +26,7 @@ import { build } from './builder';
 
 export const openbsd = {
   apropos: build('apropos'),
+  arp: build('arp'),
   // BUG: "-safe" flag is not recognized as an option
   //      because it uses single dash with long option name.
   awk: build('awk'),

@@ -32,6 +32,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['apt-cache', apt.aptCache],
   ['apt-get', apt.aptGet],
   ['arch', gnuCoreutils.arch],
+  ['arp', openbsd.arp],
   ['awk', openbsd.awk],
   ['b2sum', gnuCoreutils.b2sum],
   ['base32', gnuCoreutils.base32],
