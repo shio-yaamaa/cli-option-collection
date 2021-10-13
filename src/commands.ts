@@ -275,6 +275,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['typeset', bashBuiltin.typeset],
   ['ulimit', bashBuiltin.ulimit],
   ['umask', bashBuiltin.umask],
+  ['umount', openbsd.umount],
   ['unalias', bashBuiltin.unalias],
   ['uname', gnuCoreutils.uname],
   ['uncompress', openbsd.uncompress],

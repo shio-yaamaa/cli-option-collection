@@ -103,6 +103,7 @@ export const openbsd = {
   tput: build('tput'),
   traceroute: build('traceroute'),
   traceroute6: build('traceroute6'),
+  umount: build('umount'),
   uncompress: build('uncompress'),
   vmstat: build('vmstat'),
   wall: build('wall'),
