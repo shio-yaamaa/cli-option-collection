@@ -5,12 +5,14 @@ export const normalizeSpacingAroundComma = (original: string): string =>
   original
     .split(',')
     .map((item) => item.trim())
+    .filter((item) => item.length > 0)
     .join(', ');
 
 export const normalizeSpacingAroundSlash = (original: string): string =>
   original
     .split('/')
     .map((item) => item.trim())
+    .filter((item) => item.length > 0)
     .join(' / ');
 
 export const normalizeSpaces = (original: string): string =>

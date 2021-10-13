@@ -56,6 +56,16 @@ export const splitBySpace: OptionStringsFilter = (
   return allItems;
 };
 
+export const splitByCustomString = (delimiter: string): OptionStringsFilter => {
+  return (strings: string[]) => {
+    const splitStrings: string[] = [];
+    for (const string of strings) {
+      splitStrings.push(...splitAtTopLevel(string, delimiter, BRACKETS));
+    }
+    return splitStrings;
+  };
+};
+
 // Example: ["--ignore=PATTERN"] -> ["--ignore"]
 export const trimEqualDelimitedArguments: OptionStringsFilter = (
   strings: string[]
