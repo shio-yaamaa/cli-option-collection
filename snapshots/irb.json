@@ -1,0 +1,229 @@
+[
+  {
+    "name": "irb",
+    "options": [
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "Prints the version of irb."
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E external[:internal], --encoding external[:internal]",
+        "description": "Same as `ruby -E' . Specifies the default value(s) for external encodings and internal encoding. Values should be separated with colon (:).\n\nYou can omit the one for internal encodings, then the value (Encoding.default_internal) will be nil."
+      },
+      {
+        "type": "long",
+        "key": "encoding",
+        "title": "-E external[:internal], --encoding external[:internal]",
+        "description": "Same as `ruby -E' . Specifies the default value(s) for external encodings and internal encoding. Values should be separated with colon (:).\n\nYou can omit the one for internal encodings, then the value (Encoding.default_internal) will be nil."
+      },
+      {
+        "type": "short",
+        "key": "I",
+        "title": "-I path",
+        "description": "Same as `ruby -I' . Specifies $LOAD_PATH directory"
+      },
+      {
+        "type": "short",
+        "key": "U",
+        "title": "-U",
+        "description": "Same as `ruby -U' . Sets the default value for internal encodings (Encoding.default_internal) to UTF-8."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d",
+        "description": "Same as `ruby -d' . Sets $DEBUG to true."
+      },
+      {
+        "type": "short",
+        "key": "f",
+        "title": "-f",
+        "description": "Suppresses read of ~/.irbrc."
+      },
+      {
+        "type": "short",
+        "key": "w",
+        "title": "-w",
+        "description": "Same as `ruby -w' ."
+      },
+      {
+        "type": "short",
+        "key": "W",
+        "title": "-W",
+        "description": "Same as `ruby -W' ."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h, --help",
+        "description": "Prints a summary of the options."
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "-h, --help",
+        "description": "Prints a summary of the options."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r library",
+        "description": "Same as `ruby -r'. Causes irb to load the library using require."
+      },
+      {
+        "type": "long",
+        "key": "inspect",
+        "title": "--inspect",
+        "description": "Uses `inspect' for output (default except for bc mode)"
+      },
+      {
+        "type": "long",
+        "key": "noinspect",
+        "title": "--noinspect",
+        "description": "Doesn't use inspect for output"
+      },
+      {
+        "type": "long",
+        "key": "multiline",
+        "title": "--multiline",
+        "description": "Uses multiline editor module."
+      },
+      {
+        "type": "long",
+        "key": "nomultiline",
+        "title": "--nomultiline",
+        "description": "Doesn't use multiline editor module."
+      },
+      {
+        "type": "long",
+        "key": "singleline",
+        "title": "--singleline",
+        "description": "Uses singleline editor module."
+      },
+      {
+        "type": "long",
+        "key": "nosingleline",
+        "title": "--nosingleline",
+        "description": "Doesn't use singleline editor module."
+      },
+      {
+        "type": "long",
+        "key": "extra-doc-dir",
+        "title": "--extra-doc-dir",
+        "description": "Add an extra doc dir for the doc dialog."
+      },
+      {
+        "type": "long",
+        "key": "echo",
+        "title": "--echo",
+        "description": "Show result (default)."
+      },
+      {
+        "type": "long",
+        "key": "noecho",
+        "title": "--noecho",
+        "description": "Don't show result."
+      },
+      {
+        "type": "long",
+        "key": "echo-on-assignment",
+        "title": "--echo-on-assignment",
+        "description": "Show result on assignment."
+      },
+      {
+        "type": "long",
+        "key": "noecho-on-assignment",
+        "title": "--noecho-on-assignment",
+        "description": "Don't show result on assignment."
+      },
+      {
+        "type": "long",
+        "key": "truncate-echo-on-assignment",
+        "title": "--truncate-echo-on-assignment",
+        "description": "Show truncated result on assignment (default)."
+      },
+      {
+        "type": "long",
+        "key": "colorize",
+        "title": "--colorize",
+        "description": "Use colorization."
+      },
+      {
+        "type": "long",
+        "key": "nocolorize",
+        "title": "--nocolorize",
+        "description": "Don't use colorization."
+      },
+      {
+        "type": "long",
+        "key": "autocomplete",
+        "title": "--autocomplete",
+        "description": "Use autocompletion."
+      },
+      {
+        "type": "long",
+        "key": "noautocomplete",
+        "title": "--noautocomplete",
+        "description": "Don't use autocompletion."
+      },
+      {
+        "type": "long",
+        "key": "verbose",
+        "title": "--verbose",
+        "description": "Show details."
+      },
+      {
+        "type": "long",
+        "key": "noverbose",
+        "title": "--noverbose",
+        "description": "Don't show details."
+      },
+      {
+        "type": "long",
+        "key": "prompt",
+        "title": "--prompt mode, --prompt-mode mode",
+        "description": "Switch prompt mode. Pre-defined prompt modes are `default', `simple', `xmp' and `inf-ruby'."
+      },
+      {
+        "type": "long",
+        "key": "prompt-mode",
+        "title": "--prompt mode, --prompt-mode mode",
+        "description": "Switch prompt mode. Pre-defined prompt modes are `default', `simple', `xmp' and `inf-ruby'."
+      },
+      {
+        "type": "long",
+        "key": "inf-ruby-mode",
+        "title": "--inf-ruby-mode",
+        "description": "Uses prompt appropriate for inf-ruby-mode on emacs. Suppresses --multiline and --singleline."
+      },
+      {
+        "type": "long",
+        "key": "simple-prompt",
+        "title": "--simple-prompt",
+        "description": "Makes prompts simple."
+      },
+      {
+        "type": "long",
+        "key": "noprompt",
+        "title": "--noprompt",
+        "description": "No prompt mode."
+      },
+      {
+        "type": "long",
+        "key": "tracer",
+        "title": "--tracer",
+        "description": "Displays trace for each execution of commands."
+      },
+      {
+        "type": "long",
+        "key": "back-trace-limit",
+        "title": "--back-trace-limit n",
+        "description": "Displays backtrace top n and tail n. The default value is 16."
+      }
+    ]
+  }
+]

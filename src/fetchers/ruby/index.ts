@@ -5,5 +5,8 @@ import { build } from './builder';
 //      They are currently just ignored.
 
 export const ruby = {
+  erb: build('erb', { manFilename: 'erb.1' }),
+  irb: build('irb', { manFilename: 'irb.1' }),
+  ri: build('ri', { manFilename: 'ri.1' }),
   ruby: build('ruby', { manFilename: 'ruby.1' }),
 };
