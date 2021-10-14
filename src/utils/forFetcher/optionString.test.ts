@@ -1,8 +1,5 @@
 import { OptionStyle } from '../../types';
-import {
-  makeOptionList,
-  makeOptionListForSingleDashStyle,
-} from './optionString';
+import { makeOptionList } from './optionString';
 
 describe('makeOptionList', () => {
   test('OptionStyle.SHORT_AND_LONG', () => {
@@ -34,8 +31,9 @@ describe('makeOptionList', () => {
 
   test('OptionStyle.SINGLE_DASH', () => {
     const optionStrings = ['-a', '-long', '--double', 'invalid'];
-    const optionKeyTypes = makeOptionListForSingleDashStyle(
+    const optionKeyTypes = makeOptionList(
       optionStrings,
+      OptionStyle.SINGLE_DASH,
       'title',
       'description'
     );
