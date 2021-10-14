@@ -1,0 +1,97 @@
+[
+  {
+    "name": "erb",
+    "options": [
+      {
+        "type": "long",
+        "key": "version",
+        "title": "--version",
+        "description": "Prints the version of erb."
+      },
+      {
+        "type": "short",
+        "key": "E",
+        "title": "-E external[:internal], --encoding external[:internal]",
+        "description": "Specifies the default value(s) for external encodings and internal encoding. Values should be separated with colon (:).\n\nYou can omit the one for internal encodings, then the value (Encoding.default_internal) will be nil."
+      },
+      {
+        "type": "long",
+        "key": "encoding",
+        "title": "-E external[:internal], --encoding external[:internal]",
+        "description": "Specifies the default value(s) for external encodings and internal encoding. Values should be separated with colon (:).\n\nYou can omit the one for internal encodings, then the value (Encoding.default_internal) will be nil."
+      },
+      {
+        "type": "short",
+        "key": "P",
+        "title": "-P",
+        "description": "Disables ruby code evaluation for lines beginning with %."
+      },
+      {
+        "type": "short",
+        "key": "S",
+        "title": "-S level",
+        "description": "Specifies the safe level in which eRuby script will run."
+      },
+      {
+        "type": "short",
+        "key": "T",
+        "title": "-T mode",
+        "description": "Specifies trim mode (default 0). mode can be one of 0 EOL remains after the embedded ruby script is evaluated. 1 EOL is removed if the line ends with %>. 2 EOL is removed if the line starts with <% and ends with %>. - EOL is removed if the line ends with -%>. And leading whitespaces are removed if the erb directive starts with <%-."
+      },
+      {
+        "type": "short",
+        "key": "r",
+        "title": "-r",
+        "description": "Load a library"
+      },
+      {
+        "type": "short",
+        "key": "U",
+        "title": "-U",
+        "description": "can be one of Sets the default value for internal encodings (Encoding.default_internal) to UTF-8."
+      },
+      {
+        "type": "short",
+        "key": "d",
+        "title": "-d, --debug",
+        "description": "Turns on debug mode. $DEBUG will be set to true."
+      },
+      {
+        "type": "long",
+        "key": "debug",
+        "title": "-d, --debug",
+        "description": "Turns on debug mode. $DEBUG will be set to true."
+      },
+      {
+        "type": "short",
+        "key": "h",
+        "title": "-h, --help",
+        "description": "Prints a summary of the options."
+      },
+      {
+        "type": "long",
+        "key": "help",
+        "title": "-h, --help",
+        "description": "Prints a summary of the options."
+      },
+      {
+        "type": "short",
+        "key": "n",
+        "title": "-n",
+        "description": "Used with -x. Prepends the line number to each line in the output."
+      },
+      {
+        "type": "short",
+        "key": "v",
+        "title": "-v",
+        "description": "Enables verbose mode. $VERBOSE will be set to true."
+      },
+      {
+        "type": "short",
+        "key": "x",
+        "title": "-x",
+        "description": "Converts the eRuby script into Ruby script and prints it without line numbers."
+      }
+    ]
+  }
+]

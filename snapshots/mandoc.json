@@ -24,7 +24,7 @@
         "type": "short",
         "key": "K",
         "title": "-K encoding",
-        "description": "Specify the input encoding. The supported encoding arguments are us-ascii, iso-8859-1, and utf-8. If not specified, autodetection uses the first match in the following list:\n 1. If the first three bytes of the input file are the UTF-8 byte order mark (BOM, 0xefbbbf), input is interpreted as utf-8.\n 2. If the first or second line of the input file matches the emacs mode line format\n    \n    \n    \n    .\\\" -*- [...;] coding: encoding; -*-\n    \n    then input is interpreted according to encoding.\n\n 3. If the first non-ASCII byte in the file introduces a valid UTF-8 sequence, input is interpreted as utf-8.\n 4. Otherwise, input is interpreted as iso-8859-1."
+        "description": "Specify the input encoding. The supported encoding arguments are us-ascii, iso-8859-1, and utf-8. If not specified, autodetection uses the first match in the following list:\n 1. If the first three bytes of the input file are the UTF-8 byte order mark (BOM, 0xefbbbf), input is interpreted as utf-8.\n 2. If the first or second line of the input file matches the emacs mode line format\n\n    .\\\" -*- [...;] coding: encoding; -*-\n    \n    then input is interpreted according to encoding.\n\n 3. If the first non-ASCII byte in the file introduces a valid UTF-8 sequence, input is interpreted as utf-8.\n 4. Otherwise, input is interpreted as iso-8859-1."
       },
       {
         "type": "short",

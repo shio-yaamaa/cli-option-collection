@@ -23,6 +23,7 @@ import { openbsd } from './fetchers/openbsd';
 import { perl } from './fetchers/perl';
 import { python } from './fetchers/python';
 import { rsync } from './fetchers/rsync';
+import { ruby } from './fetchers/ruby';
 import { sshuttle } from './fetchers/sshuttle';
 import { systemd } from './fetchers/systemd';
 import { terraform } from './fetchers/terraform';
@@ -96,6 +97,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['eject', openbsd.eject],
   ['enable', bashBuiltin.enable],
   ['env', gnuCoreutils.env],
+  ['erb', ruby.erb],
   ['eval', bashBuiltin.eval],
   ['exec', bashBuiltin.exec],
   ['exit', bashBuiltin.exit],
@@ -140,6 +142,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['inlib', bashBuiltin.inlib],
   ['install', gnuCoreutils.install],
   ['iostat', openbsd.iostat],
+  ['irb', ruby.irb],
   ['jobs', bashBuiltin.jobs],
   ['join', gnuCoreutils.join],
   ['journalctl', systemd.journalctl],
@@ -215,10 +218,12 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['renice', openbsd.renice],
   ['return', bashBuiltin.return],
   ['rev', openbsd.rev],
+  ['ri', ruby.ri],
   ['rm', gnuCoreutils.rm],
   ['rmdir', gnuCoreutils.rmdir],
   ['route', openbsd.route],
   ['rsync', rsync],
+  ['ruby', ruby.ruby],
   ['runcon', gnuCoreutils.runcon],
   ['scp', openbsd.scp],
   ['sed', openbsd.sed],

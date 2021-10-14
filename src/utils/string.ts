@@ -15,5 +15,5 @@ export const escapeHTML = (string: string): string => {
 
 // If there are more than two consecutive empty lines, squash them into one.
 export const squashLinebreaks = (string: string): string => {
-  return string.replace(/\n{3,}/g, '\n\n');
+  return string.replace(/\n([^\S\n]*\n){2,}/g, '\n\n');
 };
