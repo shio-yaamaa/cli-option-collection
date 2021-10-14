@@ -30,7 +30,7 @@ interface SubcommandLocation {
   url: URL; // e.g. https://www.terraform.io/docs/cli/commands/apply.html
 }
 
-const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
+const OPTION_STYLE = OptionStyle.SINGLE_DASH;
 const BASE_URL = 'https://www.terraform.io/';
 
 const fetch = async (): Promise<Command[]> => {
