@@ -26,7 +26,7 @@ export const makeOptionList = (
   }
 };
 
-// Example: ["-I", "--ignore"] -> [{ key: "I", type: OptionType.SHORT }, { key: "ignore", type: OptionType.LONG }]
+// Example: ["-I", "--ignore"] -> [{ key: "I" }, { key: "ignore" }]
 // It ignores empty option names.
 // Example: ["--"] -> []
 // It cannot handle options with values. Do not pass options like "-dcharset" or "--option=value"

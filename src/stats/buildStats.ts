@@ -1,6 +1,5 @@
 import { baseCommandNames } from '../commands';
 import { readSnapshot } from '../snapshot';
-import { OptionType } from '../types';
 import { Stats } from './types';
 
 const RANKING_LIMIT = 10; // Show top 10
@@ -22,9 +21,8 @@ export const buildStats = (): Stats => {
       });
       shortOptionCounts.push({
         commandName: command.name,
-        count: command.options.filter(
-          (option) => option.type === OptionType.SHORT
-        ).length,
+        count: command.options.filter((option) => option.key.length === 1)
+          .length,
       });
     }
   }

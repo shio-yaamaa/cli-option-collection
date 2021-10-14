@@ -1,4 +1,4 @@
-import { Command, Fetcher, Option, OptionType } from '../types';
+import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -27,8 +27,6 @@ import { isElement } from '../utils/typeGuards';
 //       and not in consistent list format.
 //       Even if there is a list, not all the options are listed (e.g. "go test").
 //       This fetcher cannot fetch all the options and may easily break.
-// NOTE: Go uses single dash for both short and long options,
-//       but this fetcher sticks with the POSIX-style option notations.
 // NOTE: Go does not plan to have man page. https://github.com/golang/go/issues/101
 // BUG: Flags presented in "Testing flags" section are not fetched.
 // BUG: When there are multiple flag explanations in a single paragraph, only the first one can be fetched.
@@ -175,8 +173,8 @@ const preToOptions = (pre: string): Option[] => {
     )[0];
     const optionKey = optionString.slice(1); // Remove the "-" prefix
     const description = descriptionLines.map((line) => line.trim()).join(' ');
+    // TODO: Use makeOptionList()
     options.push({
-      type: optionKey.length === 1 ? OptionType.SHORT : OptionType.LONG,
       key: optionKey,
       title: flag.trim(),
       description,
