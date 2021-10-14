@@ -1,87 +1,74 @@
 [
   {
     "name": "csh",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "b",
         "title": "-b",
         "description": "This flag forces a “break” from option processing, causing any further shell arguments to be treated as non-option arguments. The remaining arguments will not be interpreted as shell options. This may be used to pass options to a shell script without confusion or possible subterfuge. The shell will not run a set-user-ID script without this option."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "Commands are read from the (single) following argument which must be present. Any remaining arguments are placed in argv."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e",
         "description": "The shell exits if any invoked command terminates abnormally or yields a non-zero exit status."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "The shell will start faster, because it will not execute user or system startup files, load saved history or perform command hashing. Note: if the environment variable HOME is not set, fast startup is the default."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "The shell is interactive and prompts for its top-level input, even if it appears not to be a terminal. Shells are interactive without this option if their inputs and outputs are terminals."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "The shell is a login shell (only applicable if -l is the only flag specified)."
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m",
         "description": "Read .cshrc, regardless of its owner and group. This option is dangerous and should only be used by su(1)."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "Commands are parsed, but not executed. This aids in syntactic checking of shell scripts. When used interactively, the shell can be terminated by pressing control-D (end-of-file character), since exit will not work."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "Command input is taken from the standard input."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "A single line of input is read and executed. A backslash (‘\\’) may be used to escape the newline at the end of this line and continue onto another line."
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V",
         "description": "Causes the verbose variable to be set even before .cshrc is executed."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "Causes the verbose variable to be set, with the effect that command input is echoed after history substitution."
       },
       {
-        "type": "short",
         "key": "X",
         "title": "-X",
         "description": "Causes the echo variable to be set even before .cshrc is executed."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "Causes the echo variable to be set, so that commands are echoed immediately before execution."

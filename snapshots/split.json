@@ -1,153 +1,129 @@
 [
   {
     "name": "split",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --suffix-length=N",
         "description": "generate suffixes of length N (default 2)"
       },
       {
-        "type": "long",
         "key": "suffix-length",
         "title": "-a, --suffix-length=N",
         "description": "generate suffixes of length N (default 2)"
       },
       {
-        "type": "long",
         "key": "additional-suffix",
         "title": "--additional-suffix=SUFFIX",
         "description": "append an additional SUFFIX to file names"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --bytes=SIZE",
         "description": "put SIZE bytes per output file"
       },
       {
-        "type": "long",
         "key": "bytes",
         "title": "-b, --bytes=SIZE",
         "description": "put SIZE bytes per output file"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C, --line-bytes=SIZE",
         "description": "put at most SIZE bytes of records per output file"
       },
       {
-        "type": "long",
         "key": "line-bytes",
         "title": "-C, --line-bytes=SIZE",
         "description": "put at most SIZE bytes of records per output file"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "use numeric suffixes starting at 0, not alphabetic"
       },
       {
-        "type": "long",
         "key": "numeric-suffixes",
         "title": "--numeric-suffixes[=FROM]",
         "description": "same as -d, but allow setting the start value"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "use hex suffixes starting at 0, not alphabetic"
       },
       {
-        "type": "long",
         "key": "hex-suffixes",
         "title": "--hex-suffixes[=FROM]",
         "description": "same as -x, but allow setting the start value"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --elide-empty-files",
         "description": "do not generate empty output files with '-n'"
       },
       {
-        "type": "long",
         "key": "elide-empty-files",
         "title": "-e, --elide-empty-files",
         "description": "do not generate empty output files with '-n'"
       },
       {
-        "type": "long",
         "key": "filter",
         "title": "--filter=COMMAND",
         "description": "write to shell COMMAND; file name is $FILE"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --lines=NUMBER",
         "description": "put NUMBER lines/records per output file"
       },
       {
-        "type": "long",
         "key": "lines",
         "title": "-l, --lines=NUMBER",
         "description": "put NUMBER lines/records per output file"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --number=CHUNKS",
         "description": "generate CHUNKS output files; see explanation below"
       },
       {
-        "type": "long",
         "key": "number",
         "title": "-n, --number=CHUNKS",
         "description": "generate CHUNKS output files; see explanation below"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --separator=SEP",
         "description": "use SEP instead of newline as the record separator; '\\0' (zero) specifies the NUL character"
       },
       {
-        "type": "long",
         "key": "separator",
         "title": "-t, --separator=SEP",
         "description": "use SEP instead of newline as the record separator; '\\0' (zero) specifies the NUL character"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --unbuffered",
         "description": "immediately copy input to output with '-n r/...'"
       },
       {
-        "type": "long",
         "key": "unbuffered",
         "title": "-u, --unbuffered",
         "description": "immediately copy input to output with '-n r/...'"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "--verbose",
         "description": "print a diagnostic just before each output file is opened"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

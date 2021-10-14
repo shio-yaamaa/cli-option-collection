@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import {
   DListEntry,
@@ -29,6 +29,7 @@ import { mergeLists } from '../utils/utils';
 // NOTE: This command has options that include colons (e.g. "-d:MOD[=bar,baz]").
 //       This fetcher cannot distinguish them from ordinary short options (e.g. "-d").
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL = 'https://perldoc.perl.org/perlrun';
 
 export const perl: Fetcher = {
@@ -50,6 +51,7 @@ const fetch = async (): Promise<Command[]> => {
   return [
     {
       name: 'perl',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -77,5 +79,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimAfterColons,
   ]);
 
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

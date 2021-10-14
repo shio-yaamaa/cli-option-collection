@@ -1,27 +1,24 @@
 [
   {
     "name": "printenv",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "0",
         "title": "-0, --null",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "long",
         "key": "null",
         "title": "-0, --null",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

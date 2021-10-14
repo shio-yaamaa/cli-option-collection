@@ -1,9 +1,9 @@
 [
   {
     "name": "unalias",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "remove all alias definitions"

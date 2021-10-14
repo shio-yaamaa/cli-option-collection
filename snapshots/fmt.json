@@ -1,99 +1,84 @@
 [
   {
     "name": "fmt",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --crown-margin",
         "description": "preserve indentation of first two lines"
       },
       {
-        "type": "long",
         "key": "crown-margin",
         "title": "-c, --crown-margin",
         "description": "preserve indentation of first two lines"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --prefix=STRING",
         "description": "reformat only lines beginning with STRING, reattaching the prefix to reformatted lines"
       },
       {
-        "type": "long",
         "key": "prefix",
         "title": "-p, --prefix=STRING",
         "description": "reformat only lines beginning with STRING, reattaching the prefix to reformatted lines"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --split-only",
         "description": "split long lines, but do not refill"
       },
       {
-        "type": "long",
         "key": "split-only",
         "title": "-s, --split-only",
         "description": "split long lines, but do not refill"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --tagged-paragraph",
         "description": "indentation of first line different from second"
       },
       {
-        "type": "long",
         "key": "tagged-paragraph",
         "title": "-t, --tagged-paragraph",
         "description": "indentation of first line different from second"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --uniform-spacing",
         "description": "one space between words, two after sentences"
       },
       {
-        "type": "long",
         "key": "uniform-spacing",
         "title": "-u, --uniform-spacing",
         "description": "one space between words, two after sentences"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --width=WIDTH",
         "description": "maximum line width (default of 75 columns)"
       },
       {
-        "type": "long",
         "key": "width",
         "title": "-w, --width=WIDTH",
         "description": "maximum line width (default of 75 columns)"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --goal=WIDTH",
         "description": "goal width (default of 93% of width)"
       },
       {
-        "type": "long",
         "key": "goal",
         "title": "-g, --goal=WIDTH",
         "description": "goal width (default of 93% of width)"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

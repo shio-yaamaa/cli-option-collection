@@ -1,21 +1,19 @@
 [
   {
     "name": "bc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "bc is actually a preprocessor for dc(1), which it invokes automatically, unless the -c (compile only) option is present. In this case the generated dc(1) instructions are sent to the standard output, instead of being interpreted by a running dc(1) process."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e expression",
         "description": "Evaluate expression. If multiple -e options are specified, they are processed in the order given, separated by newlines."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "Include an arbitrary precision math library. The definitions in the library are available to command line expressions and are documented below."

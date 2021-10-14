@@ -1,171 +1,144 @@
 [
   {
     "name": "od",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --address-radix=RADIX",
         "description": "output format for file offsets; RADIX is one of [doxn], for Decimal, Octal, Hex or None"
       },
       {
-        "type": "long",
         "key": "address-radix",
         "title": "-A, --address-radix=RADIX",
         "description": "output format for file offsets; RADIX is one of [doxn], for Decimal, Octal, Hex or None"
       },
       {
-        "type": "long",
         "key": "endian",
         "title": "--endian={big|little}",
         "description": "swap input bytes according the specified order"
       },
       {
-        "type": "short",
         "key": "j",
         "title": "-j, --skip-bytes=BYTES",
         "description": "skip BYTES input bytes first"
       },
       {
-        "type": "long",
         "key": "skip-bytes",
         "title": "-j, --skip-bytes=BYTES",
         "description": "skip BYTES input bytes first"
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N, --read-bytes=BYTES",
         "description": "limit dump to BYTES input bytes"
       },
       {
-        "type": "long",
         "key": "read-bytes",
         "title": "-N, --read-bytes=BYTES",
         "description": "limit dump to BYTES input bytes"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S BYTES, --strings[=BYTES]",
         "description": "output strings of at least BYTES graphic chars; 3 is implied when BYTES is not specified"
       },
       {
-        "type": "long",
         "key": "strings",
         "title": "-S BYTES, --strings[=BYTES]",
         "description": "output strings of at least BYTES graphic chars; 3 is implied when BYTES is not specified"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --format=TYPE",
         "description": "select output format or formats"
       },
       {
-        "type": "long",
         "key": "format",
         "title": "-t, --format=TYPE",
         "description": "select output format or formats"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --output-duplicates",
         "description": "do not use * to mark line suppression"
       },
       {
-        "type": "long",
         "key": "output-duplicates",
         "title": "-v, --output-duplicates",
         "description": "do not use * to mark line suppression"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w[BYTES], --width[=BYTES]",
         "description": "output BYTES bytes per output line; 32 is implied when BYTES is not specified"
       },
       {
-        "type": "long",
         "key": "width",
         "title": "-w[BYTES], --width[=BYTES]",
         "description": "output BYTES bytes per output line; 32 is implied when BYTES is not specified"
       },
       {
-        "type": "long",
         "key": "traditional",
         "title": "--traditional",
         "description": "accept arguments in third form above"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "same as -t a, select named characters, ignoring high-order bit"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b",
         "description": "same as -t o1, select octal bytes"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "same as -t c, select printable characters or backslash escapes"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "same as -t u2, select unsigned decimal 2-byte units"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "same as -t fF, select floats"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "same as -t dI, select decimal ints"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "same as -t dL, select decimal longs"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o",
         "description": "same as -t o2, select octal 2-byte units"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "same as -t d2, select decimal 2-byte units"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "same as -t x2, select hexadecimal 2-byte units"

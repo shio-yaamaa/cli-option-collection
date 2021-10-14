@@ -1,27 +1,24 @@
 [
   {
     "name": "column",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c columns",
         "description": "Output is formatted for a display columns wide."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s sep",
         "description": "Specify a set of characters to delimit columns for the -t option. It defaults to space and tab."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Table mode. Each input line provides the text for one output row. It is split into cells using the -s option. Leading, trailing, and multiple adjacent delimiters are ignored. Each column is as wide as the widest cell in it. Columns are separated by two spaces."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "Fill rows before filling columns."

@@ -1,297 +1,249 @@
 [
   {
     "name": "pr",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "pages",
         "title": "+FIRST_PAGE[:LAST_PAGE], --pages=FIRST_PAGE[:LAST_PAGE]",
         "description": "begin [stop] printing with page FIRST_[LAST_]PAGE"
       },
       {
-        "type": "long",
         "key": "columns",
         "title": "-COLUMN, --columns=COLUMN",
         "description": "output COLUMN columns and print columns down, unless -a is used. Balance number of lines in the columns on each page"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --across",
         "description": "print columns across rather than down, used together with -COLUMN"
       },
       {
-        "type": "long",
         "key": "across",
         "title": "-a, --across",
         "description": "print columns across rather than down, used together with -COLUMN"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --show-control-chars",
         "description": "use hat notation (^G) and octal backslash notation"
       },
       {
-        "type": "long",
         "key": "show-control-chars",
         "title": "-c, --show-control-chars",
         "description": "use hat notation (^G) and octal backslash notation"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --double-space",
         "description": "double space the output"
       },
       {
-        "type": "long",
         "key": "double-space",
         "title": "-d, --double-space",
         "description": "double space the output"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --date-format=FORMAT",
         "description": "use FORMAT for the header date"
       },
       {
-        "type": "long",
         "key": "date-format",
         "title": "-D, --date-format=FORMAT",
         "description": "use FORMAT for the header date"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e[CHAR[WIDTH]], --expand-tabs[=CHAR[WIDTH]]",
         "description": "expand input CHARs (TABs) to tab WIDTH (8)"
       },
       {
-        "type": "long",
         "key": "expand-tabs",
         "title": "-e[CHAR[WIDTH]], --expand-tabs[=CHAR[WIDTH]]",
         "description": "expand input CHARs (TABs) to tab WIDTH (8)"
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F, -f, --form-feed",
         "description": "use form feeds instead of newlines to separate pages (by a 3-line page header with -F or a 5-line header and trailer without -F)"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-F, -f, --form-feed",
         "description": "use form feeds instead of newlines to separate pages (by a 3-line page header with -F or a 5-line header and trailer without -F)"
       },
       {
-        "type": "long",
         "key": "form-feed",
         "title": "-F, -f, --form-feed",
         "description": "use form feeds instead of newlines to separate pages (by a 3-line page header with -F or a 5-line header and trailer without -F)"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --header=HEADER",
         "description": "use a centered HEADER instead of filename in page header, -h \"\" prints a blank line, don't use -h\"\""
       },
       {
-        "type": "long",
         "key": "header",
         "title": "-h, --header=HEADER",
         "description": "use a centered HEADER instead of filename in page header, -h \"\" prints a blank line, don't use -h\"\""
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i[CHAR[WIDTH]], --output-tabs[=CHAR[WIDTH]]",
         "description": "replace spaces with CHARs (TABs) to tab WIDTH (8)"
       },
       {
-        "type": "long",
         "key": "output-tabs",
         "title": "-i[CHAR[WIDTH]], --output-tabs[=CHAR[WIDTH]]",
         "description": "replace spaces with CHARs (TABs) to tab WIDTH (8)"
       },
       {
-        "type": "short",
         "key": "J",
         "title": "-J, --join-lines",
         "description": "merge full lines, turns off -W line truncation, no column alignment, --sep-string[=STRING] sets separators"
       },
       {
-        "type": "long",
         "key": "join-lines",
         "title": "-J, --join-lines",
         "description": "merge full lines, turns off -W line truncation, no column alignment, --sep-string[=STRING] sets separators"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --length=PAGE_LENGTH",
         "description": "set the page length to PAGE_LENGTH (66) lines (default number of lines of text 56, and with -F 63). implies -t if PAGE_LENGTH <= 10"
       },
       {
-        "type": "long",
         "key": "length",
         "title": "-l, --length=PAGE_LENGTH",
         "description": "set the page length to PAGE_LENGTH (66) lines (default number of lines of text 56, and with -F 63). implies -t if PAGE_LENGTH <= 10"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m, --merge",
         "description": "print all files in parallel, one in each column, truncate lines, but join lines of full length with -J"
       },
       {
-        "type": "long",
         "key": "merge",
         "title": "-m, --merge",
         "description": "print all files in parallel, one in each column, truncate lines, but join lines of full length with -J"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n[SEP[DIGITS]], --number-lines[=SEP[DIGITS]]",
         "description": "number lines, use DIGITS (5) digits, then SEP (TAB), default counting starts with 1st line of input file"
       },
       {
-        "type": "long",
         "key": "number-lines",
         "title": "-n[SEP[DIGITS]], --number-lines[=SEP[DIGITS]]",
         "description": "number lines, use DIGITS (5) digits, then SEP (TAB), default counting starts with 1st line of input file"
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N, --first-line-number=NUMBER",
         "description": "start counting with NUMBER at 1st line of first page printed (see +FIRST_PAGE)"
       },
       {
-        "type": "long",
         "key": "first-line-number",
         "title": "-N, --first-line-number=NUMBER",
         "description": "start counting with NUMBER at 1st line of first page printed (see +FIRST_PAGE)"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --indent=MARGIN",
         "description": "offset each line with MARGIN (zero) spaces, do not affect -w or -W, MARGIN will be added to PAGE_WIDTH"
       },
       {
-        "type": "long",
         "key": "indent",
         "title": "-o, --indent=MARGIN",
         "description": "offset each line with MARGIN (zero) spaces, do not affect -w or -W, MARGIN will be added to PAGE_WIDTH"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --no-file-warnings",
         "description": "omit warning when a file cannot be opened"
       },
       {
-        "type": "long",
         "key": "no-file-warnings",
         "title": "-r, --no-file-warnings",
         "description": "omit warning when a file cannot be opened"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s[CHAR], --separator[=CHAR]",
         "description": "separate columns by a single character, default for CHAR is the <TAB> character without -w and 'no char' with -w. -s[CHAR] turns off line truncation of all 3 column options (-COLUMN|-a -COLUMN|-m) except -w is set"
       },
       {
-        "type": "long",
         "key": "separator",
         "title": "-s[CHAR], --separator[=CHAR]",
         "description": "separate columns by a single character, default for CHAR is the <TAB> character without -w and 'no char' with -w. -s[CHAR] turns off line truncation of all 3 column options (-COLUMN|-a -COLUMN|-m) except -w is set"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S[STRING], --sep-string[=STRING]",
         "description": "separate columns by STRING, without -S: Default separator <TAB> with -J and <space> otherwise (same as -S\" \"), no effect on column options"
       },
       {
-        "type": "long",
         "key": "sep-string",
         "title": "-S[STRING], --sep-string[=STRING]",
         "description": "separate columns by STRING, without -S: Default separator <TAB> with -J and <space> otherwise (same as -S\" \"), no effect on column options"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --omit-header",
         "description": "omit page headers and trailers; implied if PAGE_LENGTH <= 10"
       },
       {
-        "type": "long",
         "key": "omit-header",
         "title": "-t, --omit-header",
         "description": "omit page headers and trailers; implied if PAGE_LENGTH <= 10"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --omit-pagination",
         "description": "omit page headers and trailers, eliminate any pagination by form feeds set in input files"
       },
       {
-        "type": "long",
         "key": "omit-pagination",
         "title": "-T, --omit-pagination",
         "description": "omit page headers and trailers, eliminate any pagination by form feeds set in input files"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --show-nonprinting",
         "description": "use octal backslash notation"
       },
       {
-        "type": "long",
         "key": "show-nonprinting",
         "title": "-v, --show-nonprinting",
         "description": "use octal backslash notation"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --width=PAGE_WIDTH",
         "description": "set page width to PAGE_WIDTH (72) characters for multiple text-column output only, -s[char] turns off (72)"
       },
       {
-        "type": "long",
         "key": "width",
         "title": "-w, --width=PAGE_WIDTH",
         "description": "set page width to PAGE_WIDTH (72) characters for multiple text-column output only, -s[char] turns off (72)"
       },
       {
-        "type": "short",
         "key": "W",
         "title": "-W, --page-width=PAGE_WIDTH",
         "description": "set page width to PAGE_WIDTH (72) characters always, truncate lines, except -J option is set, no interference with -S or -s"
       },
       {
-        "type": "long",
         "key": "page-width",
         "title": "-W, --page-width=PAGE_WIDTH",
         "description": "set page width to PAGE_WIDTH (72) characters always, truncate lines, except -J option is set, no interference with -S or -s"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

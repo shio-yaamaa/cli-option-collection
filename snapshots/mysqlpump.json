@@ -1,579 +1,484 @@
 [
   {
     "name": "mysqlpump",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "add-drop-database",
         "title": "--add-drop-database",
         "description": "Add DROP DATABASE statement before each CREATE DATABASE statement"
       },
       {
-        "type": "long",
         "key": "add-drop-table",
         "title": "--add-drop-table",
         "description": "Add DROP TABLE statement before each CREATE TABLE statement"
       },
       {
-        "type": "long",
         "key": "add-drop-user",
         "title": "--add-drop-user",
         "description": "Add DROP USER statement before each CREATE USER statement"
       },
       {
-        "type": "long",
         "key": "add-locks",
         "title": "--add-locks",
         "description": "Surround each table dump with LOCK TABLES and UNLOCK TABLES statements"
       },
       {
-        "type": "long",
         "key": "all-databases",
         "title": "--all-databases, -A",
         "description": "Dump all databases"
       },
       {
-        "type": "short",
         "key": "A",
         "title": "--all-databases, -A",
         "description": "Dump all databases"
       },
       {
-        "type": "long",
         "key": "bind-address",
         "title": "--bind-address=ip_address",
         "description": "Use specified network interface to connect to MySQL Server"
       },
       {
-        "type": "long",
         "key": "character-sets-dir",
         "title": "--character-sets-dir=path",
         "description": "Directory where character sets are installed"
       },
       {
-        "type": "long",
         "key": "column-statistics",
         "title": "--column-statistics",
         "description": "Write ANALYZE TABLE statements to generate statistics histograms"
       },
       {
-        "type": "long",
         "key": "complete-insert",
         "title": "--complete-insert",
         "description": "Use complete INSERT statements that include column names"
       },
       {
-        "type": "long",
         "key": "compress",
         "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
       {
-        "type": "long",
         "key": "compress-output",
         "title": "--compress-output=algorithm",
         "description": "Output compression algorithm"
       },
       {
-        "type": "long",
         "key": "compression-algorithms",
         "title": "--compression-algorithms=value",
         "description": "Permitted compression algorithms for connections to server"
       },
       {
-        "type": "long",
         "key": "databases",
         "title": "--databases, -B",
         "description": "Interpret all name arguments as database names"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "--databases, -B",
         "description": "Interpret all name arguments as database names"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug[=debug_options], -# [debug_options]",
         "description": "Write debugging log"
       },
       {
-        "type": "long",
         "key": "debug-check",
         "title": "--debug-check",
         "description": "Print debugging information when program exits"
       },
       {
-        "type": "long",
         "key": "debug-info",
         "title": "--debug-info, -T",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "--debug-info, -T",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
       {
-        "type": "long",
         "key": "default-auth",
         "title": "--default-auth=plugin",
         "description": "Authentication plugin to use"
       },
       {
-        "type": "long",
         "key": "default-character-set",
         "title": "--default-character-set=charset_name",
         "description": "Specify default character set"
       },
       {
-        "type": "long",
         "key": "default-parallelism",
         "title": "--default-parallelism=N",
         "description": "Default number of threads for parallel processing"
       },
       {
-        "type": "long",
         "key": "defaults-extra-file",
         "title": "--defaults-extra-file=file_name",
         "description": "Read named option file in addition to usual option files"
       },
       {
-        "type": "long",
         "key": "defaults-file",
         "title": "--defaults-file=file_name",
         "description": "Read only named option file"
       },
       {
-        "type": "long",
         "key": "defaults-group-suffix",
         "title": "--defaults-group-suffix=str",
         "description": "Option group suffix value"
       },
       {
-        "type": "long",
         "key": "defer-table-indexes",
         "title": "--defer-table-indexes",
         "description": "For reloading, defer index creation until after loading table rows"
       },
       {
-        "type": "long",
         "key": "events",
         "title": "--events",
         "description": "Dump events from dumped databases"
       },
       {
-        "type": "long",
         "key": "exclude-databases",
         "title": "--exclude-databases=db_list",
         "description": "Databases to exclude from dump"
       },
       {
-        "type": "long",
         "key": "exclude-events",
         "title": "--exclude-events=event_list",
         "description": "Events to exclude from dump"
       },
       {
-        "type": "long",
         "key": "exclude-routines",
         "title": "--exclude-routines=routine_list",
         "description": "Routines to exclude from dump"
       },
       {
-        "type": "long",
         "key": "exclude-tables",
         "title": "--exclude-tables=table_list",
         "description": "Tables to exclude from dump"
       },
       {
-        "type": "long",
         "key": "exclude-triggers",
         "title": "--exclude-triggers=trigger_list",
         "description": "Triggers to exclude from dump"
       },
       {
-        "type": "long",
         "key": "exclude-users",
         "title": "--exclude-users=user_list",
         "description": "Users to exclude from dump"
       },
       {
-        "type": "long",
         "key": "extended-insert",
         "title": "--extended-insert=N",
         "description": "Use multiple-row INSERT syntax"
       },
       {
-        "type": "long",
         "key": "get-server-public-key",
         "title": "--get-server-public-key",
         "description": "Request RSA public key from server"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help, -?",
         "description": "Display help message and exit"
       },
       {
-        "type": "short",
         "key": "?",
         "title": "--help, -?",
         "description": "Display help message and exit"
       },
       {
-        "type": "long",
         "key": "hex-blob",
         "title": "--hex-blob",
         "description": "Dump binary columns using hexadecimal notation"
       },
       {
-        "type": "long",
         "key": "host",
         "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
       {
-        "type": "long",
         "key": "include-databases",
         "title": "--include-databases=db_list",
         "description": "Databases to include in dump"
       },
       {
-        "type": "long",
         "key": "include-events",
         "title": "--include-events=event_list",
         "description": "Events to include in dump"
       },
       {
-        "type": "long",
         "key": "include-routines",
         "title": "--include-routines=routine_list",
         "description": "Routines to include in dump"
       },
       {
-        "type": "long",
         "key": "include-tables",
         "title": "--include-tables=table_list",
         "description": "Tables to include in dump"
       },
       {
-        "type": "long",
         "key": "include-triggers",
         "title": "--include-triggers=trigger_list",
         "description": "Triggers to include in dump"
       },
       {
-        "type": "long",
         "key": "include-users",
         "title": "--include-users=user_list",
         "description": "Users to include in dump"
       },
       {
-        "type": "long",
         "key": "insert-ignore",
         "title": "--insert-ignore",
         "description": "Write INSERT IGNORE rather than INSERT statements"
       },
       {
-        "type": "long",
         "key": "log-error-file",
         "title": "--log-error-file=file_name",
         "description": "Append warnings and errors to named file"
       },
       {
-        "type": "long",
         "key": "login-path",
         "title": "--login-path=name",
         "description": "Read login path options from .mylogin.cnf"
       },
       {
-        "type": "long",
         "key": "max-allowed-packet",
         "title": "--max-allowed-packet=N",
         "description": "Maximum packet length to send to or receive from server"
       },
       {
-        "type": "long",
         "key": "net-buffer-length",
         "title": "--net-buffer-length=N",
         "description": "Buffer size for TCP/IP and socket communication"
       },
       {
-        "type": "long",
         "key": "no-create-db",
         "title": "--no-create-db",
         "description": "Do not write CREATE DATABASE statements"
       },
       {
-        "type": "long",
         "key": "no-create-info",
         "title": "--no-create-info, -t",
         "description": "Do not write CREATE TABLE statements that re-create each dumped table"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "--no-create-info, -t",
         "description": "Do not write CREATE TABLE statements that re-create each dumped table"
       },
       {
-        "type": "long",
         "key": "no-defaults",
         "title": "--no-defaults",
         "description": "Read no option files"
       },
       {
-        "type": "long",
         "key": "parallel-schemas",
         "title": "--parallel-schemas=[N:]db_list",
         "description": "Specify schema-processing parallelism"
       },
       {
-        "type": "long",
         "key": "password",
         "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
       {
-        "type": "long",
         "key": "plugin-dir",
         "title": "--plugin-dir=dir_name",
         "description": "Directory where plugins are installed"
       },
       {
-        "type": "long",
         "key": "port",
         "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
       {
-        "type": "long",
         "key": "print-defaults",
         "title": "--print-defaults",
         "description": "Print default options"
       },
       {
-        "type": "long",
         "key": "protocol",
         "title": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
         "description": "Transport protocol to use"
       },
       {
-        "type": "long",
         "key": "replace",
         "title": "--replace",
         "description": "Write REPLACE statements rather than INSERT statements"
       },
       {
-        "type": "long",
         "key": "result-file",
         "title": "--result-file=file_name",
         "description": "Direct output to a given file"
       },
       {
-        "type": "long",
         "key": "routines",
         "title": "--routines",
         "description": "Dump stored routines (procedures and functions) from dumped databases"
       },
       {
-        "type": "long",
         "key": "server-public-key-path",
         "title": "--server-public-key-path=file_name",
         "description": "Path name to file containing RSA public key"
       },
       {
-        "type": "long",
         "key": "set-charset",
         "title": "--set-charset",
         "description": "Add SET NAMES default_character_set to output"
       },
       {
-        "type": "long",
         "key": "set-gtid-purged",
         "title": "--set-gtid-purged=value",
         "description": "Whether to add SET @@GLOBAL.GTID_PURGED to output"
       },
       {
-        "type": "long",
         "key": "single-transaction",
         "title": "--single-transaction",
         "description": "Dump tables within single transaction"
       },
       {
-        "type": "long",
         "key": "skip-definer",
         "title": "--skip-definer",
         "description": "Omit DEFINER and SQL SECURITY clauses from view and stored program CREATE statements"
       },
       {
-        "type": "long",
         "key": "skip-dump-rows",
         "title": "--skip-dump-rows, -d",
         "description": "Do not dump table rows"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "--skip-dump-rows, -d",
         "description": "Do not dump table rows"
       },
       {
-        "type": "long",
         "key": "socket",
         "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
       {
-        "type": "long",
         "key": "ssl-ca",
         "title": "--ssl-ca",
         "description": "File that contains list of trusted SSL Certificate Authorities"
       },
       {
-        "type": "long",
         "key": "ssl-capath",
         "title": "--ssl-capath",
         "description": "Directory that contains trusted SSL Certificate Authority certificate files"
       },
       {
-        "type": "long",
         "key": "ssl-cert",
         "title": "--ssl-cert",
         "description": "File that contains X.509 certificate"
       },
       {
-        "type": "long",
         "key": "ssl-cipher",
         "title": "--ssl-cipher",
         "description": "Permissible ciphers for connection encryption"
       },
       {
-        "type": "long",
         "key": "ssl-crl",
         "title": "--ssl-crl",
         "description": "File that contains certificate revocation lists"
       },
       {
-        "type": "long",
         "key": "ssl-crlpath",
         "title": "--ssl-crlpath",
         "description": "Directory that contains certificate revocation-list files"
       },
       {
-        "type": "long",
         "key": "ssl-fips-mode",
         "title": "--ssl-fips-mode={OFF|ON|STRICT}",
         "description": "Whether to enable FIPS mode on client side"
       },
       {
-        "type": "long",
         "key": "ssl-key",
         "title": "--ssl-key",
         "description": "File that contains X.509 key"
       },
       {
-        "type": "long",
         "key": "ssl-mode",
         "title": "--ssl-mode",
         "description": "Desired security state of connection to server"
       },
       {
-        "type": "long",
         "key": "tls-ciphersuites",
         "title": "--tls-ciphersuites=ciphersuite_list",
         "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
       },
       {
-        "type": "long",
         "key": "tls-version",
         "title": "--tls-version=protocol_list",
         "description": "Permissible TLS protocols for encrypted connections"
       },
       {
-        "type": "long",
         "key": "triggers",
         "title": "--triggers",
         "description": "Dump triggers for each dumped table"
       },
       {
-        "type": "long",
         "key": "tz-utc",
         "title": "--tz-utc",
         "description": "Add SET TIME_ZONE='+00:00' to dump file"
       },
       {
-        "type": "long",
         "key": "user",
         "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
       {
-        "type": "long",
         "key": "users",
         "title": "--users",
         "description": "Dump user accounts"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version, -V",
         "description": "Display version information and exit"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "--version, -V",
         "description": "Display version information and exit"
       },
       {
-        "type": "long",
         "key": "watch-progress",
         "title": "--watch-progress",
         "description": "Display progress indicator"
       },
       {
-        "type": "long",
         "key": "zstd-compression-level",
         "title": "--zstd-compression-level=level",
         "description": "Compression level for connections to server that use zstd compression"

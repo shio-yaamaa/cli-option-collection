@@ -1,6 +1,7 @@
 [
   {
     "name": "readarray",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

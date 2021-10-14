@@ -1,14 +1,36 @@
-import { Option, OptionType } from '../../types';
+import { Option, OptionStyle } from '../../types';
 
 const SHORT_OPTION_PATTERN = /^-([A-Za-z0-9?])$/;
 const LONG_OPTION_PATTERN = /^--([A-Za-z0-9][A-Za-z0-9-_]*)$/;
 const SINGLE_DASH_STYLE_OPTION_PATTERN = /^-([A-Za-z0-9][A-Za-z0-9-_]*)$/;
 
-// Example: ["-I", "--ignore"] -> [{ key: "I", type: OptionType.SHORT }, { key: "ignore", type: OptionType.LONG }]
+export const makeOptionList = (
+  optionStrings: string[],
+  optionStyle: OptionStyle,
+  title: string,
+  description: string
+): Option[] => {
+  switch (optionStyle) {
+    case OptionStyle.SHORT_AND_LONG:
+      return makeOptionListForShortAndLongStyle(
+        optionStrings,
+        title,
+        description
+      );
+    case OptionStyle.SINGLE_DASH:
+      return makeOptionListForSingleDashStyle(
+        optionStrings,
+        title,
+        description
+      );
+  }
+};
+
+// Example: ["-I", "--ignore"] -> [{ key: "I" }, { key: "ignore" }]
 // It ignores empty option names.
 // Example: ["--"] -> []
 // It cannot handle options with values. Do not pass options like "-dcharset" or "--option=value"
-export const makeOptionList = (
+const makeOptionListForShortAndLongStyle = (
   optionStrings: string[],
   title: string,
   description: string
@@ -19,7 +41,6 @@ export const makeOptionList = (
     const shortMatch = optionString.match(SHORT_OPTION_PATTERN);
     if (shortMatch) {
       options.push({
-        type: OptionType.SHORT,
         key: shortMatch[1],
         title,
         description,
@@ -29,7 +50,6 @@ export const makeOptionList = (
     const longMatch = optionString.match(LONG_OPTION_PATTERN);
     if (longMatch) {
       options.push({
-        type: OptionType.LONG,
         key: longMatch[1],
         title,
         description,
@@ -41,8 +61,8 @@ export const makeOptionList = (
   return options;
 };
 
-// The same as makeOptionList, but for single-dash style commands like go.
-export const makeOptionListForSingleDashStyle = (
+// The same as makeOptionListForShortAndLongStyle, but for single-dash style commands like "go".
+const makeOptionListForSingleDashStyle = (
   optionStrings: string[],
   title: string,
   description: string
@@ -53,7 +73,6 @@ export const makeOptionListForSingleDashStyle = (
     const match = optionString.match(SINGLE_DASH_STYLE_OPTION_PATTERN);
     if (match) {
       options.push({
-        type: match[1].length === 1 ? OptionType.SHORT : OptionType.LONG,
         key: match[1],
         title,
         description,
@@ -64,7 +83,7 @@ export const makeOptionListForSingleDashStyle = (
   return options;
 };
 
-// Example: ["-d", "-dt"] -> ["-d, -dt"]
+// Example: ["-d", "-dt"] -> "-d, -dt"
 export const mergeOptionTitles = (optionTitles: string[]): string => {
   return optionTitles.map((optionTitle) => optionTitle.trim()).join(', ');
 };

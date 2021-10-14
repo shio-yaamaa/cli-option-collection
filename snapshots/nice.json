@@ -1,27 +1,24 @@
 [
   {
     "name": "nice",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --adjustment=N",
         "description": "add integer N to the niceness (default 10)"
       },
       {
-        "type": "long",
         "key": "adjustment",
         "title": "-n, --adjustment=N",
         "description": "add integer N to the niceness (default 10)"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

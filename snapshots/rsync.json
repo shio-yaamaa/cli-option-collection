@@ -1,1149 +1,959 @@
 [
   {
     "name": "rsync",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "verbose",
         "title": "--verbose, -v",
         "description": "increase verbosity"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "--verbose, -v",
         "description": "increase verbosity"
       },
       {
-        "type": "long",
         "key": "info",
         "title": "--info=FLAGS",
         "description": "fine-grained informational verbosity"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug=FLAGS",
         "description": "fine-grained debug verbosity"
       },
       {
-        "type": "long",
         "key": "stderr",
         "title": "--stderr=e|a|c",
         "description": "change stderr output mode (default: errors)"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "--quiet, -q",
         "description": "suppress non-error messages"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "--quiet, -q",
         "description": "suppress non-error messages"
       },
       {
-        "type": "long",
         "key": "no-motd",
         "title": "--no-motd",
         "description": "suppress daemon-mode MOTD"
       },
       {
-        "type": "long",
         "key": "checksum",
         "title": "--checksum, -c",
         "description": "skip based on checksum, not mod-time & size"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "--checksum, -c",
         "description": "skip based on checksum, not mod-time & size"
       },
       {
-        "type": "long",
         "key": "archive",
         "title": "--archive, -a",
         "description": "archive mode is -rlptgoD (no -A,-X,-U,-N,-H)"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "--archive, -a",
         "description": "archive mode is -rlptgoD (no -A,-X,-U,-N,-H)"
       },
       {
-        "type": "long",
         "key": "no-OPTION",
         "title": "--no-OPTION",
         "description": "turn off an implied OPTION (e.g. --no-D)"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "--recursive, -r",
         "description": "recurse into directories"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "--recursive, -r",
         "description": "recurse into directories"
       },
       {
-        "type": "long",
         "key": "relative",
         "title": "--relative, -R",
         "description": "use relative path names"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "--relative, -R",
         "description": "use relative path names"
       },
       {
-        "type": "long",
         "key": "no-implied-dirs",
         "title": "--no-implied-dirs",
         "description": "don't send implied dirs with --relative"
       },
       {
-        "type": "long",
         "key": "backup",
         "title": "--backup, -b",
         "description": "make backups (see --suffix & --backup-dir)"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "--backup, -b",
         "description": "make backups (see --suffix & --backup-dir)"
       },
       {
-        "type": "long",
         "key": "backup-dir",
         "title": "--backup-dir=DIR",
         "description": "make backups into hierarchy based in DIR"
       },
       {
-        "type": "long",
         "key": "suffix",
         "title": "--suffix=SUFFIX",
         "description": "backup suffix (default ~ w/o --backup-dir)"
       },
       {
-        "type": "long",
         "key": "update",
         "title": "--update, -u",
         "description": "skip files that are newer on the receiver"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "--update, -u",
         "description": "skip files that are newer on the receiver"
       },
       {
-        "type": "long",
         "key": "inplace",
         "title": "--inplace",
         "description": "update destination files in-place"
       },
       {
-        "type": "long",
         "key": "append",
         "title": "--append",
         "description": "append data onto shorter files"
       },
       {
-        "type": "long",
         "key": "append-verify",
         "title": "--append-verify",
         "description": "--append w/old data in file checksum"
       },
       {
-        "type": "long",
         "key": "dirs",
         "title": "--dirs, -d",
         "description": "transfer directories without recursing"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "--dirs, -d",
         "description": "transfer directories without recursing"
       },
       {
-        "type": "long",
         "key": "mkpath",
         "title": "--mkpath",
         "description": "create the destination's path component"
       },
       {
-        "type": "long",
         "key": "links",
         "title": "--links, -l",
         "description": "copy symlinks as symlinks"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "--links, -l",
         "description": "copy symlinks as symlinks"
       },
       {
-        "type": "long",
         "key": "copy-links",
         "title": "--copy-links, -L",
         "description": "transform symlink into referent file/dir"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "--copy-links, -L",
         "description": "transform symlink into referent file/dir"
       },
       {
-        "type": "long",
         "key": "copy-unsafe-links",
         "title": "--copy-unsafe-links",
         "description": "only \"unsafe\" symlinks are transformed"
       },
       {
-        "type": "long",
         "key": "safe-links",
         "title": "--safe-links",
         "description": "ignore symlinks that point outside the tree"
       },
       {
-        "type": "long",
         "key": "munge-links",
         "title": "--munge-links",
         "description": "munge symlinks to make them safe & unusable"
       },
       {
-        "type": "long",
         "key": "copy-dirlinks",
         "title": "--copy-dirlinks, -k",
         "description": "transform symlink to dir into referent dir"
       },
       {
-        "type": "short",
         "key": "k",
         "title": "--copy-dirlinks, -k",
         "description": "transform symlink to dir into referent dir"
       },
       {
-        "type": "long",
         "key": "keep-dirlinks",
         "title": "--keep-dirlinks, -K",
         "description": "treat symlinked dir on receiver as dir"
       },
       {
-        "type": "short",
         "key": "K",
         "title": "--keep-dirlinks, -K",
         "description": "treat symlinked dir on receiver as dir"
       },
       {
-        "type": "long",
         "key": "hard-links",
         "title": "--hard-links, -H",
         "description": "preserve hard links"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "--hard-links, -H",
         "description": "preserve hard links"
       },
       {
-        "type": "long",
         "key": "perms",
         "title": "--perms, -p",
         "description": "preserve permissions"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "--perms, -p",
         "description": "preserve permissions"
       },
       {
-        "type": "long",
         "key": "executability",
         "title": "--executability, -E",
         "description": "preserve executability"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "--executability, -E",
         "description": "preserve executability"
       },
       {
-        "type": "long",
         "key": "chmod",
         "title": "--chmod=CHMOD",
         "description": "affect file and/or directory permissions"
       },
       {
-        "type": "long",
         "key": "acls",
         "title": "--acls, -A",
         "description": "preserve ACLs (implies --perms)"
       },
       {
-        "type": "short",
         "key": "A",
         "title": "--acls, -A",
         "description": "preserve ACLs (implies --perms)"
       },
       {
-        "type": "long",
         "key": "xattrs",
         "title": "--xattrs, -X",
         "description": "preserve extended attributes"
       },
       {
-        "type": "short",
         "key": "X",
         "title": "--xattrs, -X",
         "description": "preserve extended attributes"
       },
       {
-        "type": "long",
         "key": "owner",
         "title": "--owner, -o",
         "description": "preserve owner (super-user only)"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "--owner, -o",
         "description": "preserve owner (super-user only)"
       },
       {
-        "type": "long",
         "key": "group",
         "title": "--group, -g",
         "description": "preserve group"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "--group, -g",
         "description": "preserve group"
       },
       {
-        "type": "long",
         "key": "devices",
         "title": "--devices",
         "description": "preserve device files (super-user only)"
       },
       {
-        "type": "long",
         "key": "specials",
         "title": "--specials",
         "description": "preserve special files"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D",
         "description": "same as --devices --specials"
       },
       {
-        "type": "long",
         "key": "times",
         "title": "--times, -t",
         "description": "preserve modification times"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "--times, -t",
         "description": "preserve modification times"
       },
       {
-        "type": "long",
         "key": "atimes",
         "title": "--atimes, -U",
         "description": "preserve access (use) times"
       },
       {
-        "type": "short",
         "key": "U",
         "title": "--atimes, -U",
         "description": "preserve access (use) times"
       },
       {
-        "type": "long",
         "key": "open-noatime",
         "title": "--open-noatime",
         "description": "avoid changing the atime on opened files"
       },
       {
-        "type": "long",
         "key": "crtimes",
         "title": "--crtimes, -N",
         "description": "preserve create times (newness)"
       },
       {
-        "type": "short",
         "key": "N",
         "title": "--crtimes, -N",
         "description": "preserve create times (newness)"
       },
       {
-        "type": "long",
         "key": "omit-dir-times",
         "title": "--omit-dir-times, -O",
         "description": "omit directories from --times"
       },
       {
-        "type": "short",
         "key": "O",
         "title": "--omit-dir-times, -O",
         "description": "omit directories from --times"
       },
       {
-        "type": "long",
         "key": "omit-link-times",
         "title": "--omit-link-times, -J",
         "description": "omit symlinks from --times"
       },
       {
-        "type": "short",
         "key": "J",
         "title": "--omit-link-times, -J",
         "description": "omit symlinks from --times"
       },
       {
-        "type": "long",
         "key": "super",
         "title": "--super",
         "description": "receiver attempts super-user activities"
       },
       {
-        "type": "long",
         "key": "fake-super",
         "title": "--fake-super",
         "description": "store/recover privileged attrs using xattrs"
       },
       {
-        "type": "long",
         "key": "sparse",
         "title": "--sparse, -S",
         "description": "turn sequences of nulls into sparse blocks"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "--sparse, -S",
         "description": "turn sequences of nulls into sparse blocks"
       },
       {
-        "type": "long",
         "key": "preallocate",
         "title": "--preallocate",
         "description": "allocate dest files before writing them"
       },
       {
-        "type": "long",
         "key": "write-devices",
         "title": "--write-devices",
         "description": "write to devices as files (implies --inplace)"
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "--dry-run, -n",
         "description": "perform a trial run with no changes made"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "--dry-run, -n",
         "description": "perform a trial run with no changes made"
       },
       {
-        "type": "long",
         "key": "whole-file",
         "title": "--whole-file, -W",
         "description": "copy files whole (w/o delta-xfer algorithm)"
       },
       {
-        "type": "short",
         "key": "W",
         "title": "--whole-file, -W",
         "description": "copy files whole (w/o delta-xfer algorithm)"
       },
       {
-        "type": "long",
         "key": "checksum-choice",
         "title": "--checksum-choice=STR",
         "description": "choose the checksum algorithm (aka --cc)"
       },
       {
-        "type": "long",
         "key": "one-file-system",
         "title": "--one-file-system, -x",
         "description": "don't cross filesystem boundaries"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "--one-file-system, -x",
         "description": "don't cross filesystem boundaries"
       },
       {
-        "type": "long",
         "key": "block-size",
         "title": "--block-size=SIZE, -B",
         "description": "force a fixed checksum block-size"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "--block-size=SIZE, -B",
         "description": "force a fixed checksum block-size"
       },
       {
-        "type": "long",
         "key": "rsh",
         "title": "--rsh=COMMAND, -e",
         "description": "specify the remote shell to use"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "--rsh=COMMAND, -e",
         "description": "specify the remote shell to use"
       },
       {
-        "type": "long",
         "key": "rsync-path",
         "title": "--rsync-path=PROGRAM",
         "description": "specify the rsync to run on remote machine"
       },
       {
-        "type": "long",
         "key": "existing",
         "title": "--existing",
         "description": "skip creating new files on receiver"
       },
       {
-        "type": "long",
         "key": "ignore-existing",
         "title": "--ignore-existing",
         "description": "skip updating files that exist on receiver"
       },
       {
-        "type": "long",
         "key": "remove-source-files",
         "title": "--remove-source-files",
         "description": "sender removes synchronized files (non-dir)"
       },
       {
-        "type": "long",
         "key": "del",
         "title": "--del",
         "description": "an alias for --delete-during"
       },
       {
-        "type": "long",
         "key": "delete",
         "title": "--delete",
         "description": "delete extraneous files from dest dirs"
       },
       {
-        "type": "long",
         "key": "delete-before",
         "title": "--delete-before",
         "description": "receiver deletes before xfer, not during"
       },
       {
-        "type": "long",
         "key": "delete-during",
         "title": "--delete-during",
         "description": "receiver deletes during the transfer"
       },
       {
-        "type": "long",
         "key": "delete-delay",
         "title": "--delete-delay",
         "description": "find deletions during, delete after"
       },
       {
-        "type": "long",
         "key": "delete-after",
         "title": "--delete-after",
         "description": "receiver deletes after transfer, not during"
       },
       {
-        "type": "long",
         "key": "delete-excluded",
         "title": "--delete-excluded",
         "description": "also delete excluded files from dest dirs"
       },
       {
-        "type": "long",
         "key": "ignore-missing-args",
         "title": "--ignore-missing-args",
         "description": "ignore missing source args without error"
       },
       {
-        "type": "long",
         "key": "delete-missing-args",
         "title": "--delete-missing-args",
         "description": "delete missing source args from destination"
       },
       {
-        "type": "long",
         "key": "ignore-errors",
         "title": "--ignore-errors",
         "description": "delete even if there are I/O errors"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "--force",
         "description": "force deletion of dirs even if not empty"
       },
       {
-        "type": "long",
         "key": "max-delete",
         "title": "--max-delete=NUM",
         "description": "don't delete more than NUM files"
       },
       {
-        "type": "long",
         "key": "max-size",
         "title": "--max-size=SIZE",
         "description": "don't transfer any file larger than SIZE"
       },
       {
-        "type": "long",
         "key": "min-size",
         "title": "--min-size=SIZE",
         "description": "don't transfer any file smaller than SIZE"
       },
       {
-        "type": "long",
         "key": "max-alloc",
         "title": "--max-alloc=SIZE",
         "description": "change a limit relating to memory alloc"
       },
       {
-        "type": "long",
         "key": "partial",
         "title": "--partial",
         "description": "keep partially transferred files"
       },
       {
-        "type": "long",
         "key": "partial-dir",
         "title": "--partial-dir=DIR",
         "description": "put a partially transferred file into DIR"
       },
       {
-        "type": "long",
         "key": "delay-updates",
         "title": "--delay-updates",
         "description": "put all updated files into place at end"
       },
       {
-        "type": "long",
         "key": "prune-empty-dirs",
         "title": "--prune-empty-dirs, -m",
         "description": "prune empty directory chains from file-list"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "--prune-empty-dirs, -m",
         "description": "prune empty directory chains from file-list"
       },
       {
-        "type": "long",
         "key": "numeric-ids",
         "title": "--numeric-ids",
         "description": "don't map uid/gid values by user/group name"
       },
       {
-        "type": "long",
         "key": "usermap",
         "title": "--usermap=STRING",
         "description": "custom username mapping"
       },
       {
-        "type": "long",
         "key": "groupmap",
         "title": "--groupmap=STRING",
         "description": "custom groupname mapping"
       },
       {
-        "type": "long",
         "key": "chown",
         "title": "--chown=USER:GROUP",
         "description": "simple username/groupname mapping"
       },
       {
-        "type": "long",
         "key": "timeout",
         "title": "--timeout=SECONDS",
         "description": "set I/O timeout in seconds"
       },
       {
-        "type": "long",
         "key": "contimeout",
         "title": "--contimeout=SECONDS",
         "description": "set daemon connection timeout in seconds"
       },
       {
-        "type": "long",
         "key": "ignore-times",
         "title": "--ignore-times, -I",
         "description": "don't skip files that match size and time"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "--ignore-times, -I",
         "description": "don't skip files that match size and time"
       },
       {
-        "type": "long",
         "key": "size-only",
         "title": "--size-only",
         "description": "skip files that match in size"
       },
       {
-        "type": "long",
         "key": "modify-window",
         "title": "--modify-window=NUM, -@",
         "description": "set the accuracy for mod-time comparisons"
       },
       {
-        "type": "long",
         "key": "temp-dir",
         "title": "--temp-dir=DIR, -T",
         "description": "create temporary files in directory DIR"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "--temp-dir=DIR, -T",
         "description": "create temporary files in directory DIR"
       },
       {
-        "type": "long",
         "key": "fuzzy",
         "title": "--fuzzy, -y",
         "description": "find similar file for basis if no dest file"
       },
       {
-        "type": "short",
         "key": "y",
         "title": "--fuzzy, -y",
         "description": "find similar file for basis if no dest file"
       },
       {
-        "type": "long",
         "key": "compare-dest",
         "title": "--compare-dest=DIR",
         "description": "also compare destination files relative to DIR"
       },
       {
-        "type": "long",
         "key": "copy-dest",
         "title": "--copy-dest=DIR",
         "description": "... and include copies of unchanged files"
       },
       {
-        "type": "long",
         "key": "link-dest",
         "title": "--link-dest=DIR",
         "description": "hardlink to files in DIR when unchanged"
       },
       {
-        "type": "long",
         "key": "compress",
         "title": "--compress, -z",
         "description": "compress file data during the transfer"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "--compress, -z",
         "description": "compress file data during the transfer"
       },
       {
-        "type": "long",
         "key": "compress-choice",
         "title": "--compress-choice=STR",
         "description": "choose the compression algorithm (aka --zc)"
       },
       {
-        "type": "long",
         "key": "compress-level",
         "title": "--compress-level=NUM",
         "description": "explicitly set compression level (aka --zl)"
       },
       {
-        "type": "long",
         "key": "skip-compress",
         "title": "--skip-compress=LIST",
         "description": "skip compressing files with suffix in LIST"
       },
       {
-        "type": "long",
         "key": "cvs-exclude",
         "title": "--cvs-exclude, -C",
         "description": "auto-ignore files in the same way CVS does"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "--cvs-exclude, -C",
         "description": "auto-ignore files in the same way CVS does"
       },
       {
-        "type": "long",
         "key": "filter",
         "title": "--filter=RULE, -f",
         "description": "add a file-filtering RULE"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "--filter=RULE, -f",
         "description": "add a file-filtering RULE"
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F",
         "description": "same as --filter='dir-merge /.rsync-filter' repeated: --filter='- .rsync-filter'"
       },
       {
-        "type": "long",
         "key": "exclude",
         "title": "--exclude=PATTERN",
         "description": "exclude files matching PATTERN"
       },
       {
-        "type": "long",
         "key": "exclude-from",
         "title": "--exclude-from=FILE",
         "description": "read exclude patterns from FILE"
       },
       {
-        "type": "long",
         "key": "include",
         "title": "--include=PATTERN",
         "description": "don't exclude files matching PATTERN"
       },
       {
-        "type": "long",
         "key": "include-from",
         "title": "--include-from=FILE",
         "description": "read include patterns from FILE"
       },
       {
-        "type": "long",
         "key": "files-from",
         "title": "--files-from=FILE",
         "description": "read list of source-file names from FILE"
       },
       {
-        "type": "long",
         "key": "from0",
         "title": "--from0, -0",
         "description": "all *-from/filter files are delimited by 0s"
       },
       {
-        "type": "short",
         "key": "0",
         "title": "--from0, -0",
         "description": "all *-from/filter files are delimited by 0s"
       },
       {
-        "type": "long",
         "key": "protect-args",
         "title": "--protect-args, -s",
         "description": "no space-splitting; wildcard chars only"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "--protect-args, -s",
         "description": "no space-splitting; wildcard chars only"
       },
       {
-        "type": "long",
         "key": "copy-as",
         "title": "--copy-as=USER[:GROUP]",
         "description": "specify user & optional group for the copy"
       },
       {
-        "type": "long",
         "key": "address",
         "title": "--address=ADDRESS",
         "description": "bind address for outgoing socket to daemon"
       },
       {
-        "type": "long",
         "key": "port",
         "title": "--port=PORT",
         "description": "specify double-colon alternate port number"
       },
       {
-        "type": "long",
         "key": "sockopts",
         "title": "--sockopts=OPTIONS",
         "description": "specify custom TCP options"
       },
       {
-        "type": "long",
         "key": "blocking-io",
         "title": "--blocking-io",
         "description": "use blocking I/O for the remote shell"
       },
       {
-        "type": "long",
         "key": "outbuf",
         "title": "--outbuf=N|L|B",
         "description": "set out buffering to None, Line, or Block"
       },
       {
-        "type": "long",
         "key": "stats",
         "title": "--stats",
         "description": "give some file-transfer stats"
       },
       {
-        "type": "long",
         "key": "8-bit-output",
         "title": "--8-bit-output, -8",
         "description": "leave high-bit chars unescaped in output"
       },
       {
-        "type": "short",
         "key": "8",
         "title": "--8-bit-output, -8",
         "description": "leave high-bit chars unescaped in output"
       },
       {
-        "type": "long",
         "key": "human-readable",
         "title": "--human-readable, -h",
         "description": "output numbers in a human-readable format"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "--human-readable, -h",
         "description": "output numbers in a human-readable format"
       },
       {
-        "type": "long",
         "key": "progress",
         "title": "--progress",
         "description": "show progress during transfer"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P",
         "description": "same as --partial --progress"
       },
       {
-        "type": "long",
         "key": "itemize-changes",
         "title": "--itemize-changes, -i",
         "description": "output a change-summary for all updates"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "--itemize-changes, -i",
         "description": "output a change-summary for all updates"
       },
       {
-        "type": "long",
         "key": "remote-option",
         "title": "--remote-option=OPT, -M",
         "description": "send OPTION to the remote side only"
       },
       {
-        "type": "short",
         "key": "M",
         "title": "--remote-option=OPT, -M",
         "description": "send OPTION to the remote side only"
       },
       {
-        "type": "long",
         "key": "out-format",
         "title": "--out-format=FORMAT",
         "description": "output updates using the specified FORMAT"
       },
       {
-        "type": "long",
         "key": "log-file",
         "title": "--log-file=FILE",
         "description": "log what we're doing to the specified FILE"
       },
       {
-        "type": "long",
         "key": "log-file-format",
         "title": "--log-file-format=FMT",
         "description": "log updates using the specified FMT"
       },
       {
-        "type": "long",
         "key": "password-file",
         "title": "--password-file=FILE",
         "description": "read daemon-access password from FILE"
       },
       {
-        "type": "long",
         "key": "early-input",
         "title": "--early-input=FILE",
         "description": "use FILE for daemon's early exec input"
       },
       {
-        "type": "long",
         "key": "list-only",
         "title": "--list-only",
         "description": "list the files instead of copying them"
       },
       {
-        "type": "long",
         "key": "bwlimit",
         "title": "--bwlimit=RATE",
         "description": "limit socket I/O bandwidth"
       },
       {
-        "type": "long",
         "key": "stop-after",
         "title": "--stop-after=MINS",
         "description": "Stop rsync after MINS minutes have elapsed"
       },
       {
-        "type": "long",
         "key": "stop-at",
         "title": "--stop-at=y-m-dTh:m",
         "description": "Stop rsync at the specified point in time"
       },
       {
-        "type": "long",
         "key": "fsync",
         "title": "--fsync",
         "description": "fsync every written file"
       },
       {
-        "type": "long",
         "key": "write-batch",
         "title": "--write-batch=FILE",
         "description": "write a batched update to FILE"
       },
       {
-        "type": "long",
         "key": "only-write-batch",
         "title": "--only-write-batch=FILE",
         "description": "like --write-batch but w/o updating dest"
       },
       {
-        "type": "long",
         "key": "read-batch",
         "title": "--read-batch=FILE",
         "description": "read a batched update from FILE"
       },
       {
-        "type": "long",
         "key": "protocol",
         "title": "--protocol=NUM",
         "description": "force an older protocol version to be used"
       },
       {
-        "type": "long",
         "key": "iconv",
         "title": "--iconv=CONVERT_SPEC",
         "description": "request charset conversion of filenames"
       },
       {
-        "type": "long",
         "key": "checksum-seed",
         "title": "--checksum-seed=NUM",
         "description": "set block/file checksum seed (advanced)"
       },
       {
-        "type": "long",
         "key": "ipv4",
         "title": "--ipv4, -4",
         "description": "prefer IPv4"
       },
       {
-        "type": "short",
         "key": "4",
         "title": "--ipv4, -4",
         "description": "prefer IPv4"
       },
       {
-        "type": "long",
         "key": "ipv6",
         "title": "--ipv6, -6",
         "description": "prefer IPv6"
       },
       {
-        "type": "short",
         "key": "6",
         "title": "--ipv6, -6",
         "description": "prefer IPv6"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version, -V",
         "description": "print the version + other info and exit"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "--version, -V",
         "description": "print the version + other info and exit"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help, -h (*)",
         "description": "show this help (* -h is help only on its own)"
       },
       {
-        "type": "long",
         "key": "daemon",
         "title": "--daemon",
         "description": "run as an rsync daemon"
       },
       {
-        "type": "long",
         "key": "config",
         "title": "--config=FILE",
         "description": "specify alternate rsyncd.conf file"
       },
       {
-        "type": "long",
         "key": "dparam",
         "title": "--dparam=OVERRIDE, -M",
         "description": "override global daemon config parameter"
       },
       {
-        "type": "long",
         "key": "no-detach",
         "title": "--no-detach",
         "description": "do not detach from the parent"

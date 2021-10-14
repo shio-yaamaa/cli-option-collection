@@ -1,6 +1,7 @@
 [
   {
     "name": "continue",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

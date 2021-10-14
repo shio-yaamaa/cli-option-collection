@@ -1,51 +1,44 @@
 [
   {
     "name": "arp",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "Display all of the current ARP entries. See also the -d option below. The following information will be printed:\nHost The network address of the host. Ethernet Address The Ethernet address of the host. If the address is not available, it will be displayed as “(incomplete)”. Netif The network interface associated with the ARP entry. Expire The time until expiry of the entry. If the entry is marked “permanent” or “static”, it will never expire. Flags Flags on the ARP entry, in a single letter. They are: local (‘l’) and published (‘p’)."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "Delete an entry for the host called hostname. Alternatively, the -d flag may be combined with the -a flag to delete all entries, with hostname lookups automatically disabled. Only the superuser may delete entries."
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F",
         "description": "Force existing entries for the given host to be overwritten (only relevant to the -f and -s options)."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f file",
         "description": "Process entries from file to be set in the ARP tables. See the -s option for a description of the file format and the effect of the -F option."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "Do not perform domain name resolution. If a name cannot be resolved without DNS, an error will be reported."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s hostname ether_addr [temp | permanent] [pub]",
         "description": "Create an ARP entry for the host called hostname with the Ethernet address ether_addr. The Ethernet address is given as six hexadecimal bytes separated by colons. The entry will be static (will not time out) unless the word temp is given in the command. A static ARP entry can be overwritten by network traffic, unless the word permanent is given. If the word pub is given, the entry will be “published”; that is, this system will act as an ARP server, responding to requests for hostname even though the host address is not its own. This behavior has traditionally been called proxy ARP.\n\nIf the entry already exists for the given host, it will not be replaced unless -F is given."
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V rdomain",
         "description": "Select the routing domain."
       },
       {
-        "type": "short",
         "key": "W",
         "title": "-W ether_addr [iface]",
         "description": "Send the Wake on LAN frame from all interfaces on the local machine that are up, if iface has not been specified. Otherwise the frame will be sent from iface. ether_addr is the Ethernet address of the remote machine or a hostname entry in /etc/ethers. This option cannot be used in combination with any other option."

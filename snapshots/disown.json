@@ -1,21 +1,19 @@
 [
   {
     "name": "disown",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "remove all jobs if JOBSPEC is not supplied"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h",
         "description": "mark each JOBSPEC so that SIGHUP is not sent to the job if the shell receives a SIGHUP"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "remove only running jobs"

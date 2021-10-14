@@ -13,12 +13,13 @@ export const OptionItem: React.VFC<Props> = (props) => {
     /\n/g,
     '<br>'
   );
+  const optionLengthType = props.option.key.length === 1 ? 'short' : 'long';
   return (
     <div>
       <p>
         <code className="title">{props.option.title}</code>
-        <span className={`type ${props.option.type}`}>
-          {props.option.type.toUpperCase()}
+        <span className={`type ${optionLengthType}`}>
+          {optionLengthType.toUpperCase()}
         </span>
         <code>{props.option.key}</code>
       </p>

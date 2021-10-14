@@ -1,6 +1,7 @@
 [
   {
     "name": "caller",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

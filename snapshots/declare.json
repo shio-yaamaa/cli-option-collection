@@ -1,87 +1,74 @@
 [
   {
     "name": "declare",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "restrict action or display to function names and definitions"
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F",
         "description": "restrict display to function names only (plus line number and source file when debugging)"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g",
         "description": "create global variables when used in a shell function; otherwise ignored"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "if creating a local variable, inherit the attributes and value of a variable with the same name at a previous scope"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "display the attributes and value of each NAME"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "to make NAMEs indexed arrays (if supported)"
       },
       {
-        "type": "short",
         "key": "A",
         "title": "-A",
         "description": "to make NAMEs associative arrays (if supported)"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "to make NAMEs have the `integer' attribute"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "to convert the value of each NAME to lower case on assignment"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "make NAME a reference to the variable named by its value"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "to make NAMEs readonly"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "to make NAMEs have the `trace' attribute"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "to convert the value of each NAME to upper case on assignment"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "to make NAMEs export"

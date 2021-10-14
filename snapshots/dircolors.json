@@ -1,63 +1,54 @@
 [
   {
     "name": "dircolors",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --sh, --bourne-shell",
         "description": "output Bourne shell code to set LS_COLORS"
       },
       {
-        "type": "long",
         "key": "sh",
         "title": "-b, --sh, --bourne-shell",
         "description": "output Bourne shell code to set LS_COLORS"
       },
       {
-        "type": "long",
         "key": "bourne-shell",
         "title": "-b, --sh, --bourne-shell",
         "description": "output Bourne shell code to set LS_COLORS"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --csh, --c-shell",
         "description": "output C shell code to set LS_COLORS"
       },
       {
-        "type": "long",
         "key": "csh",
         "title": "-c, --csh, --c-shell",
         "description": "output C shell code to set LS_COLORS"
       },
       {
-        "type": "long",
         "key": "c-shell",
         "title": "-c, --csh, --c-shell",
         "description": "output C shell code to set LS_COLORS"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --print-database",
         "description": "output defaults"
       },
       {
-        "type": "long",
         "key": "print-database",
         "title": "-p, --print-database",
         "description": "output defaults"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

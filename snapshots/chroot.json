@@ -1,33 +1,29 @@
 [
   {
     "name": "chroot",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "groups",
         "title": "--groups=G_LIST",
         "description": "specify supplementary groups as g1,g2,..,gN"
       },
       {
-        "type": "long",
         "key": "userspec",
         "title": "--userspec=USER:GROUP",
         "description": "specify user and group (ID or name) to use"
       },
       {
-        "type": "long",
         "key": "skip-chdir",
         "title": "--skip-chdir",
         "description": "do not change working directory to '/'"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

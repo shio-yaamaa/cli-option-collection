@@ -1,6 +1,7 @@
 [
   {
     "name": "domainname",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

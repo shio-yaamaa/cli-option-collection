@@ -1,129 +1,109 @@
 [
   {
     "name": "uniq",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --count",
         "description": "prefix lines by the number of occurrences"
       },
       {
-        "type": "long",
         "key": "count",
         "title": "-c, --count",
         "description": "prefix lines by the number of occurrences"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --repeated",
         "description": "only print duplicate lines, one for each group"
       },
       {
-        "type": "long",
         "key": "repeated",
         "title": "-d, --repeated",
         "description": "only print duplicate lines, one for each group"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D",
         "description": "print all duplicate lines"
       },
       {
-        "type": "long",
         "key": "all-repeated",
         "title": "--all-repeated[=METHOD]",
         "description": "like -D, but allow separating groups with an empty line; METHOD={none(default),prepend,separate}"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --skip-fields=N",
         "description": "avoid comparing the first N fields"
       },
       {
-        "type": "long",
         "key": "skip-fields",
         "title": "-f, --skip-fields=N",
         "description": "avoid comparing the first N fields"
       },
       {
-        "type": "long",
         "key": "group",
         "title": "--group[=METHOD]",
         "description": "show all items, separating groups with an empty line; METHOD={separate(default),prepend,append,both}"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --ignore-case",
         "description": "ignore differences in case when comparing"
       },
       {
-        "type": "long",
         "key": "ignore-case",
         "title": "-i, --ignore-case",
         "description": "ignore differences in case when comparing"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --skip-chars=N",
         "description": "avoid comparing the first N characters"
       },
       {
-        "type": "long",
         "key": "skip-chars",
         "title": "-s, --skip-chars=N",
         "description": "avoid comparing the first N characters"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --unique",
         "description": "only print unique lines"
       },
       {
-        "type": "long",
         "key": "unique",
         "title": "-u, --unique",
         "description": "only print unique lines"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z, --zero-terminated",
         "description": "line delimiter is NUL, not newline"
       },
       {
-        "type": "long",
         "key": "zero-terminated",
         "title": "-z, --zero-terminated",
         "description": "line delimiter is NUL, not newline"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --check-chars=N",
         "description": "compare no more than N characters in lines"
       },
       {
-        "type": "long",
         "key": "check-chars",
         "title": "-w, --check-chars=N",
         "description": "compare no more than N characters in lines"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

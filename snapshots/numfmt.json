@@ -1,123 +1,104 @@
 [
   {
     "name": "numfmt",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "print warnings about invalid input"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --delimiter=X",
         "description": "use X instead of whitespace for field delimiter"
       },
       {
-        "type": "long",
         "key": "delimiter",
         "title": "-d, --delimiter=X",
         "description": "use X instead of whitespace for field delimiter"
       },
       {
-        "type": "long",
         "key": "field",
         "title": "--field=FIELDS",
         "description": "replace the numbers in these input fields (default=1); see FIELDS below"
       },
       {
-        "type": "long",
         "key": "format",
         "title": "--format=FORMAT",
         "description": "use printf style floating-point FORMAT; see FORMAT below for details"
       },
       {
-        "type": "long",
         "key": "from",
         "title": "--from=UNIT",
         "description": "auto-scale input numbers to UNITs; default is 'none'; see UNIT below"
       },
       {
-        "type": "long",
         "key": "from-unit",
         "title": "--from-unit=N",
         "description": "specify the input unit size (instead of the default 1)"
       },
       {
-        "type": "long",
         "key": "grouping",
         "title": "--grouping",
         "description": "use locale-defined grouping of digits, e.g. 1,000,000 (which means it has no effect in the C/POSIX locale)"
       },
       {
-        "type": "long",
         "key": "header",
         "title": "--header[=N]",
         "description": "print (without converting) the first N header lines; N defaults to 1 if not specified"
       },
       {
-        "type": "long",
         "key": "invalid",
         "title": "--invalid=MODE",
         "description": "failure mode for invalid numbers: MODE can be: abort (default), fail, warn, ignore"
       },
       {
-        "type": "long",
         "key": "padding",
         "title": "--padding=N",
         "description": "pad the output to N characters; positive N will right-align; negative N will left-align; padding is ignored if the output is wider than N; the default is to automatically pad if a whitespace is found"
       },
       {
-        "type": "long",
         "key": "round",
         "title": "--round=METHOD",
         "description": "use METHOD for rounding when scaling; METHOD can be: up, down, from-zero (default), towards-zero, nearest"
       },
       {
-        "type": "long",
         "key": "suffix",
         "title": "--suffix=SUFFIX",
         "description": "add SUFFIX to output numbers, and accept optional SUFFIX in input numbers"
       },
       {
-        "type": "long",
         "key": "to",
         "title": "--to=UNIT",
         "description": "auto-scale output numbers to UNITs; see UNIT below"
       },
       {
-        "type": "long",
         "key": "to-unit",
         "title": "--to-unit=N",
         "description": "the output unit size (instead of the default 1)"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z, --zero-terminated",
         "description": "line delimiter is NUL, not newline"
       },
       {
-        "type": "long",
         "key": "zero-terminated",
         "title": "-z, --zero-terminated",
         "description": "line delimiter is NUL, not newline"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
       },
       {
-        "type": "short",
         "key": "M",
         "title": "-M",
         "description": "from first to M'th field (inclusive)"

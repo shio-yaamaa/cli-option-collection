@@ -1,39 +1,34 @@
 [
   {
     "name": "mknod",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "m",
         "title": "-m, --mode=MODE",
         "description": "set file permission bits to MODE, not a=rw - umask"
       },
       {
-        "type": "long",
         "key": "mode",
         "title": "-m, --mode=MODE",
         "description": "set file permission bits to MODE, not a=rw - umask"
       },
       {
-        "type": "short",
         "key": "Z",
         "title": "-Z",
         "description": "set the SELinux security context to default type"
       },
       {
-        "type": "long",
         "key": "context",
         "title": "--context[=CTX]",
         "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

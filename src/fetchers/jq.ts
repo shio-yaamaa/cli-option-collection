@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -17,6 +17,7 @@ import { isElement } from '../utils/typeGuards';
 // - https://github.com/stedolan/jq/blob/master/src/main.c#L73
 // - https://github.com/stedolan/jq/blob/master/docs/content/manual/manual.yml
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL = 'https://stedolan.github.io/jq/manual/';
 
 export const jq: Fetcher = {
@@ -34,6 +35,7 @@ const fetch = async (): Promise<Command[]> => {
   return [
     {
       name: 'jq',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -55,7 +57,9 @@ const sectionToOptions = (section: Element): Option[] => {
     const title = normalizeSlashDelimitedString(liText.trim().slice(0, -1));
     const description = findDescriptionForList(ul);
     const optionStrings = ulToOptionStrings(ul);
-    options.push(...makeOptionList(optionStrings, title, description));
+    options.push(
+      ...makeOptionList(optionStrings, OPTION_STYLE, title, description)
+    );
   }
 
   return options;

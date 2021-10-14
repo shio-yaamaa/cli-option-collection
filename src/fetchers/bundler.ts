@@ -1,4 +1,4 @@
-import { Command, Option } from '../types';
+import { Command, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import {
   DListEntry,
@@ -33,6 +33,8 @@ interface SubcommandLocation {
   command: string; // e.g. "bundle install"
   url: URL; // e.g. https://bundler.io/man/bundle-install.1.html
 }
+
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 const fetchBundle = async (): Promise<Command[]> => {
   const subcommandLocations = await fetchSubcommandLocations();
@@ -76,6 +78,7 @@ const fetchSubcommand = async ({
   if (!optionsHeading) {
     return {
       name: command,
+      optionStyle: OPTION_STYLE,
       options: [],
     };
   }
@@ -92,6 +95,7 @@ const fetchSubcommand = async ({
 
   return {
     name: command,
+    optionStyle: OPTION_STYLE,
     options: uniqueOptions(options),
   };
 };
@@ -106,5 +110,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimOptionalElements,
     trimEqualDelimitedArguments,
   ]);
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

@@ -1,87 +1,74 @@
 [
   {
     "name": "xargs",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "0",
         "title": "-0",
         "description": "Change xargs to expect NUL (‘\\0’) characters as separators, instead of spaces and newlines. The quoting mechanisms described above are not performed. This option is expected to be used in concert with the -print0 function in find(1)."
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E eofstr",
         "description": "Use eofstr as a logical EOF marker."
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I replstr",
         "description": "Execute utility for each input line, replacing one or more occurrences of replstr in up to replacements (or 5 if no -R flag is specified) arguments to utility with the entire line of input. The resulting arguments, after replacement is done, will not be allowed to grow beyond 255 bytes; this is implemented by concatenating as much of the argument containing replstr as possible, to the constructed arguments to utility, up to 255 bytes. The 255 byte limit does not apply to arguments to utility which do not contain replstr, and furthermore, no replacement will be done on utility itself. Implies -x."
       },
       {
-        "type": "short",
         "key": "J",
         "title": "-J replstr",
         "description": "If this option is specified, xargs will use the data read from standard input to replace the first occurrence of replstr instead of appending that data after all other arguments. This option will not effect how many arguments will be read from input (-n), or the size of the command(s) xargs will generate (-s). The option just moves where those arguments will be placed in the command(s) that are executed. The replstr must show up as a distinct argument to xargs. It will not be recognized if, for instance, it is in the middle of a quoted string. Furthermore, only the first occurrence of the replstr will be replaced. For example, the following command will copy the list of files and directories which start with an uppercase letter in the current directory to destdir:\n\n/bin/ls -1d [A-Z]* | xargs -J % cp -Rp % destdir"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L number",
         "description": "Call utility for every number of non-empty lines read. A line ending in unescaped white space and the next non-empty line are considered to form one single line. If EOF is reached and fewer than number lines have been read then utility will be called with the available lines."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n number",
         "description": "Set the maximum number of arguments taken from standard input for each invocation of utility. An invocation of utility will use less than number standard input arguments if the number of bytes accumulated (see the -s option) exceeds the specified size or there are fewer than number arguments remaining for the last invocation of utility. The current default value for number is 5000."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o",
         "description": "Reopen stdin as /dev/tty in the child process before executing the command. This is useful if you want xargs to run an interactive application."
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P maxprocs",
         "description": "Parallel mode: run at most maxprocs invocations of utility at once."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "Echo each command to be executed and ask the user whether it should be executed. If the answer starts with ‘y’ or ‘Y’, the command is executed; otherwise it is skipped. No commands are executed if the process is not attached to a terminal."
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R replacements",
         "description": "Specify the maximum number of arguments that -I will do replacement in. If replacements is negative, the number of arguments in which to replace is unbounded."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "Do not run the command if there are no arguments. Normally the command is executed at least once even if there are no arguments."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s size",
         "description": "Set the maximum number of bytes for the command line length provided to utility. The sum of the length of the utility name, the arguments passed to utility (including NUL terminators) and the current environment will be less than or equal to this number. The current default value for size is ARG_MAX - 4096."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Echo the command to be executed to standard error immediately before it is executed."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "Force xargs to terminate immediately if a command line containing number arguments will not fit in the specified (or default) command line length."

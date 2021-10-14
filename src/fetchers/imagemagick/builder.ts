@@ -1,8 +1,8 @@
-import { Command, Option } from '../../types';
+import { Command, Option, OptionStyle } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
-import { makeOptionListForSingleDashStyle } from '../../utils/forFetcher/optionString';
+import { makeOptionList } from '../../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
   trimSpaceDelimitedArguments,
@@ -11,6 +11,8 @@ import {
 export interface Config {
   url: URL;
 }
+
+const OPTION_STYLE = OptionStyle.SINGLE_DASH;
 
 export const build = (commandName: string, config: Config) => ({
   fetch: () => fetch(commandName, config.url),
@@ -27,6 +29,7 @@ const fetch = async (commandName: string, url: URL): Promise<Command[]> => {
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -47,7 +50,7 @@ const optionTableToOptions = (table: Element): Option[] => {
       [trimSpaceDelimitedArguments]
     );
     options.push(
-      ...makeOptionListForSingleDashStyle(optionStrings, title, description)
+      ...makeOptionList(optionStrings, OPTION_STYLE, title, description)
     );
   }
   return options;

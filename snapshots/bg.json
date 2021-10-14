@@ -1,6 +1,7 @@
 [
   {
     "name": "bg",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

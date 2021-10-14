@@ -1,6 +1,7 @@
 [
   {
     "name": "return",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

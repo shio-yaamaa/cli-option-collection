@@ -1,27 +1,24 @@
 [
   {
     "name": "fc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "e",
         "title": "-e ENAME",
         "description": "select which editor to use. Default is FCEDIT, then EDITOR, then vi"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "list lines instead of editing"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "omit line numbers when listing"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "reverse the order of the lines (newest listed first)"

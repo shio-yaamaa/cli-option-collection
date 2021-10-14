@@ -1,183 +1,154 @@
 [
   {
     "name": "perl",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "0",
         "title": "-0[octal/hexadecimal]",
         "description": "specifies the input record separator ($/) as an octal or hexadecimal number. If there are no digits, the null character is the separator. Other switches may precede or follow the digits. For example, if you have a version of find which can print filenames terminated by the null character, you can say this:\n\nfind . -name '*.orig' -print0 | perl -n0e unlink\n\nThe special value 00 will cause Perl to slurp files in paragraph mode. Any value 0400 or above will cause Perl to slurp files whole, but by convention the value 0777 is the one normally used for this purpose.\n\nYou can also specify the separator character using hexadecimal notation: -0xHHH..., where the H are valid hexadecimal digits. Unlike the octal form, this one may be used to specify any Unicode character, even those beyond 0xFF. So if you really want a record separator of 0777, specify it as -0x1FF. (This means that you cannot use the \"-x\" option with a directory name that consists of hexadecimal digits, or else Perl will think you have specified a hex number to -0.)"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "turns on autosplit mode when used with a \"-n\" or \"-p\". An implicit split command to the @F array is done as the first thing inside the implicit while loop produced by the \"-n\" or \"-p\".\n\nperl -ane 'print pop(@F), \"\\n\";'\n\nis equivalent to\n\nwhile (<>) {\n    @F = split(' ');\n    print pop(@F), \"\\n\";\n}\n\nAn alternate delimiter may be specified using -F.\n\n-a implicitly sets \"-n\"."
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C [number/list]",
         "description": "The -C flag controls some of the Perl Unicode features.\n\nAs of 5.8.1, the -C can be followed either by a number or a list of option letters. The letters, their numeric values, and effects are as follows; listing the letters is equal to summing the numbers.\n\nI     1   STDIN is assumed to be in UTF-8\nO     2   STDOUT will be in UTF-8\nE     4   STDERR will be in UTF-8\nS     7   I + O + E\ni     8   UTF-8 is the default PerlIO layer for input streams\no    16   UTF-8 is the default PerlIO layer for output streams\nD    24   i + o\nA    32   the @ARGV elements are expected to be strings encoded\n          in UTF-8\nL    64   normally the \"IOEioA\" are unconditional, the L makes\n          them conditional on the locale environment variables\n          (the LC_ALL, LC_CTYPE, and LANG, in the order of\n          decreasing precedence) -- if the variables indicate\n          UTF-8, then the selected \"IOEioA\" are in effect\na   256   Set ${^UTF8CACHE} to -1, to run the UTF-8 caching\n          code in debugging mode.\n\nFor example, -COE and -C6 will both turn on UTF-8-ness on both STDOUT and STDERR. Repeating letters is just redundant, not cumulative nor toggling.\n\nThe io options mean that any subsequent open() (or similar I/O operations) in main program scope will have the :utf8 PerlIO layer implicitly applied to them, in other words, UTF-8 is expected from any input stream, and UTF-8 is produced to any output stream. This is just the default set via ${^OPEN}, with explicit layers in open() and with binmode() one can manipulate streams as usual. This has no effect on code run in modules.\n\n-C on its own (not followed by any number or option list), or the empty string \"\" for the \"PERL_UNICODE\" environment variable, has the same effect as -CSDL. In other words, the standard I/O handles and the default open() layer are UTF-8-fied but only if the locale environment variables indicate a UTF-8 locale. This behaviour follows the implicit (and problematic) UTF-8 behaviour of Perl 5.8.0. (See \"UTF-8 no longer default under UTF-8 locales\" in perl581delta.)\n\nYou can use -C0 (or \"0\" for PERL_UNICODE) to explicitly disable all the above Unicode features.\n\nThe read-only magic variable ${^UNICODE} reflects the numeric value of this setting. This variable is set during Perl startup and is thereafter read-only. If you want runtime effects, use the three-arg open() (see \"open\" in perlfunc), the two-arg binmode() (see \"binmode\" in perlfunc), and the open pragma (see open).\n\n(In Perls earlier than 5.8.1 the -C switch was a Win32-only switch that enabled the use of Unicode-aware \"wide system call\" Win32 APIs. This feature was practically unused, however, and the command line switch was therefore \"recycled\".)\n\nNote: Since perl 5.10.1, if the -C option is used on the #! line, it must be specified on the command line as well, since the standard streams are already set up at this point in the execution of the perl interpreter. You can also use binmode() to set the encoding of an I/O stream."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "causes Perl to check the syntax of the program and then exit without executing it. Actually, it will execute any BEGIN, UNITCHECK, or CHECK blocks and any use statements: these are considered as occurring outside the execution of your program. INIT and END blocks, however, will be skipped."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, -dt",
         "description": "runs the program under the Perl debugger. See perldebug. If t is specified, it indicates to the debugger that threads will be used in the code being debugged."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-Dletters, -Dnumber",
         "description": "sets debugging flags. This switch is enabled only if your perl binary has been built with debugging enabled: normal production perls won't have been.\n\nFor example, to watch how perl executes your program, use -Dtls. Another nice value is -Dx, which lists your compiled syntax tree, and -Dr displays compiled regular expressions; the format of the output is explained in perldebguts.\n\nAs an alternative, specify a number instead of list of letters (e.g., -D14 is equivalent to -Dtls):\n\n        1  p  Tokenizing and parsing (with v, displays parse\n              stack)\n        2  s  Stack snapshots (with v, displays all stacks)\n        4  l  Context (loop) stack processing\n        8  t  Trace execution\n       16  o  Method and overloading resolution\n       32  c  String/numeric conversions\n       64  P  Print profiling info, source file input state\n      128  m  Memory and SV allocation\n      256  f  Format processing\n      512  r  Regular expression parsing and execution\n     1024  x  Syntax tree dump\n     2048  u  Tainting checks\n     4096  U  Unofficial, User hacking (reserved for private,\n              unreleased use)\n    16384  X  Scratchpad allocation\n    32768  D  Cleaning up\n    65536  S  Op slab allocation\n   131072  T  Tokenizing\n   262144  R  Include reference counts of dumped variables\n              (eg when using -Ds)\n   524288  J  show s,t,P-debug (don't Jump over) on opcodes within\n              package DB\n  1048576  v  Verbose: use in conjunction with other flags to\n              increase the verbosity of the output.  Is a no-op on\n              many of the other flags\n  2097152  C  Copy On Write\n  4194304  A  Consistency checks on internal structures\n  8388608  q  quiet - currently only suppresses the \"EXECUTING\"\n              message\n 16777216  M  trace smart match resolution\n 33554432  B  dump suBroutine definitions, including special\n              Blocks like BEGIN\n 67108864  L  trace Locale-related info; what gets output is very\n              subject to change\n134217728  i  trace PerlIO layer processing.  Set PERLIO_DEBUG to\n              the filename to trace to.\n268435456  y  trace y///, tr/// compilation and execution\n\nAll these flags require -DDEBUGGING when you compile the Perl executable (but see :opd in Devel::Peek or \"'debug' mode\" in re which may change this). See the INSTALL file in the Perl source distribution for how to do this.\n\nIf you're just trying to get a print out of each line of Perl code as it executes, the way that sh -x provides for shell scripts, you can't use Perl's -D switch. Instead do this\n\n# If you have \"env\" utility\nenv PERLDB_OPTS=\"NonStop=1 AutoTrace=1 frame=2\" perl -dS program\n\n# Bourne shell syntax\n$ PERLDB_OPTS=\"NonStop=1 AutoTrace=1 frame=2\" perl -dS program\n\n# csh syntax\n% (setenv PERLDB_OPTS \"NonStop=1 AutoTrace=1 frame=2\"; perl -dS program)\n\nSee perldebug for details and variations."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e commandline",
         "description": "may be used to enter one line of program. If -e is given, Perl will not look for a filename in the argument list. Multiple -e commands may be given to build up a multi-line script. Make sure to use semicolons where you would in a normal program."
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E commandline",
         "description": "behaves just like -e, except that it implicitly enables all optional features (in the main compilation unit). See feature."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "Disable executing $Config{sitelib}/sitecustomize.pl at startup.\n\nPerl can be built so that it by default will try to execute $Config{sitelib}/sitecustomize.pl at startup (in a BEGIN block). This is a hook that allows the sysadmin to customize how Perl behaves. It can for instance be used to add entries to the @INC array to make Perl find modules in non-standard locations.\n\nPerl actually inserts the following code:\n\nBEGIN {\n    do { local $!; -f \"$Config{sitelib}/sitecustomize.pl\"; }\n        && do \"$Config{sitelib}/sitecustomize.pl\";\n}\n\nSince it is an actual do (not a require), sitecustomize.pl doesn't need to return a true value. The code is run in package main, in its own lexical scope. However, if the script dies, $@ will not be set.\n\nThe value of $Config{sitelib} is also determined in C code and not read from Config.pm, which is not loaded.\n\nThe code is executed very early. For example, any changes made to @INC will show up in the output of `perl -V`. Of course, END blocks will be likewise executed very late.\n\nTo determine at runtime if this capability has been compiled in your perl, you can check the value of $Config{usesitecustomize}."
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-Fpattern",
         "description": "specifies the pattern to split on for \"-a\". The pattern may be surrounded by //, \"\", or '', otherwise it will be put in single quotes. You can't use literal whitespace or NUL characters in the pattern.\n\n-F implicitly sets both \"-a\" and \"-n\"."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h",
         "description": "prints a summary of the options."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i[extension]",
         "description": "specifies that files processed by the <> construct are to be edited in-place. It does this by renaming the input file, opening the output file by the original name, and selecting that output file as the default for print() statements. The extension, if supplied, is used to modify the name of the old file to make a backup copy, following these rules:\n\nIf no extension is supplied, and your system supports it, the original file is kept open without a name while the output is redirected to a new file with the original filename. When perl exits, cleanly or not, the original file is unlinked.\n\nIf the extension doesn't contain a *, then it is appended to the end of the current filename as a suffix. If the extension does contain one or more * characters, then each * is replaced with the current filename. In Perl terms, you could think of this as:\n\n($backup = $extension) =~ s/\\*/$file_name/g;\n\nThis allows you to add a prefix to the backup file, instead of (or in addition to) a suffix:\n\n$ perl -pi'orig_*' -e 's/bar/baz/' fileA  # backup to\n                                          # 'orig_fileA'\n\nOr even to place backup copies of the original files into another directory (provided the directory already exists):\n\n$ perl -pi'old/*.orig' -e 's/bar/baz/' fileA  # backup to\n                                              # 'old/fileA.orig'\n\nThese sets of one-liners are equivalent:\n\n$ perl -pi -e 's/bar/baz/' fileA          # overwrite current file\n$ perl -pi'*' -e 's/bar/baz/' fileA       # overwrite current file\n\n$ perl -pi'.orig' -e 's/bar/baz/' fileA   # backup to 'fileA.orig'\n$ perl -pi'*.orig' -e 's/bar/baz/' fileA  # backup to 'fileA.orig'\n\nFrom the shell, saying\n\n$ perl -p -i.orig -e \"s/foo/bar/; ... \"\n\nis the same as using the program:\n\n#!/usr/bin/perl -pi.orig\ns/foo/bar/;\n\nwhich is equivalent to\n\n#!/usr/bin/perl\n$extension = '.orig';\nLINE: while (<>) {\n    if ($ARGV ne $oldargv) {\n        if ($extension !~ /\\*/) {\n            $backup = $ARGV . $extension;\n        }\n        else {\n            ($backup = $extension) =~ s/\\*/$ARGV/g;\n        }\n        rename($ARGV, $backup);\n        open(ARGVOUT, \">$ARGV\");\n        select(ARGVOUT);\n        $oldargv = $ARGV;\n    }\n    s/foo/bar/;\n}\ncontinue {\n    print;  # this prints to original filename\n}\nselect(STDOUT);\n\nexcept that the -i form doesn't need to compare $ARGV to $oldargv to know when the filename has changed. It does, however, use ARGVOUT for the selected filehandle. Note that STDOUT is restored as the default output filehandle after the loop.\n\nAs shown above, Perl creates the backup file whether or not any output is actually changed. So this is just a fancy way to copy files:\n\n    $ perl -p -i'/some/file/path/*' -e 1 file1 file2 file3...\nor\n    $ perl -p -i'.orig' -e 1 file1 file2 file3...\n\nYou can use eof without parentheses to locate the end of each input file, in case you want to append to each file, or reset line numbering (see example in \"eof\" in perlfunc).\n\nIf, for a given file, Perl is unable to create the backup file as specified in the extension then it will skip that file and continue on with the next one (if it exists).\n\nFor a discussion of issues surrounding file permissions and -i, see \"Why does Perl let me delete read-only files? Why does -i clobber protected files? Isn't this a bug in Perl?\" in perlfaq5.\n\nYou cannot use -i to create directories or to strip extensions from files.\n\nPerl does not expand ~ in filenames, which is good, since some folks use it for their backup files:\n\n$ perl -pi~ -e 's/foo/bar/' file1 file2 file3...\n\nNote that because -i renames or deletes the original file before creating a new file of the same name, Unix-style soft and hard links will not be preserved.\n\nFinally, the -i switch does not impede execution when no files are given on the command line. In this case, no backup is made (the original file cannot, of course, be determined) and processing proceeds from STDIN to STDOUT as might be expected."
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-Idirectory",
         "description": "Directories specified by -I are prepended to the search path for modules (@INC)."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l[octnum]",
         "description": "enables automatic line-ending processing. It has two separate effects. First, it automatically chomps $/ (the input record separator) when used with \"-n\" or \"-p\". Second, it assigns $\\ (the output record separator) to have the value of octnum so that any print statements will have that separator added back on. If octnum is omitted, sets $\\ to the current value of $/. For instance, to trim lines to 80 columns:\n\nperl -lpe 'substr($_, 80) = \"\"'\n\nNote that the assignment $\\ = $/ is done when the switch is processed, so the input record separator can be different than the output record separator if the -l switch is followed by a -0 switch:\n\ngnufind / -print0 | perl -ln0e 'print \"found $_\" if -p'\n\nThis sets $\\ to newline and then sets $/ to the null character."
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m[-]module, -M[-]module, -M[-]'module ...', -[mM][-]module=arg[,arg]...",
         "description": "-mmodule executes use module (); before executing your program. This loads the module, but does not call its import method, so does not import subroutines and does not give effect to a pragma.\n\n-Mmodule executes use module ; before executing your program. This loads the module and calls its import method, causing the module to have its default effect, typically importing subroutines or giving effect to a pragma. You can use quotes to add extra code after the module name, e.g., '-MMODULE qw(foo bar)'.\n\nIf the first character after the -M or -m is a dash (-) then the 'use' is replaced with 'no'. This makes no difference for -m.\n\nA little builtin syntactic sugar means you can also say -mMODULE=foo,bar or -MMODULE=foo,bar as a shortcut for '-MMODULE qw(foo bar)'. This avoids the need to use quotes when importing symbols. The actual code generated by -MMODULE=foo,bar is use module split(/,/,q{foo,bar}). Note that the = form removes the distinction between -m and -M; that is, -mMODULE=foo,bar is the same as -MMODULE=foo,bar.\n\nA consequence of the split formulation is that -MMODULE=number never does a version check, unless MODULE::import() itself is set up to do a version check, which could happen for example if MODULE inherits from Exporter."
       },
       {
-        "type": "short",
         "key": "M",
         "title": "-m[-]module, -M[-]module, -M[-]'module ...', -[mM][-]module=arg[,arg]...",
         "description": "-mmodule executes use module (); before executing your program. This loads the module, but does not call its import method, so does not import subroutines and does not give effect to a pragma.\n\n-Mmodule executes use module ; before executing your program. This loads the module and calls its import method, causing the module to have its default effect, typically importing subroutines or giving effect to a pragma. You can use quotes to add extra code after the module name, e.g., '-MMODULE qw(foo bar)'.\n\nIf the first character after the -M or -m is a dash (-) then the 'use' is replaced with 'no'. This makes no difference for -m.\n\nA little builtin syntactic sugar means you can also say -mMODULE=foo,bar or -MMODULE=foo,bar as a shortcut for '-MMODULE qw(foo bar)'. This avoids the need to use quotes when importing symbols. The actual code generated by -MMODULE=foo,bar is use module split(/,/,q{foo,bar}). Note that the = form removes the distinction between -m and -M; that is, -mMODULE=foo,bar is the same as -MMODULE=foo,bar.\n\nA consequence of the split formulation is that -MMODULE=number never does a version check, unless MODULE::import() itself is set up to do a version check, which could happen for example if MODULE inherits from Exporter."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "causes Perl to assume the following loop around your program, which makes it iterate over filename arguments somewhat like sed -n or awk:\n\nLINE:\n  while (<>) {\n      ...             # your program goes here\n  }\n\nNote that the lines are not printed by default. See \"-p\" to have lines printed. If a file named by an argument cannot be opened for some reason, Perl warns you about it and moves on to the next file.\n\nAlso note that <> passes command line arguments to \"open\" in perlfunc, which doesn't necessarily interpret them as file names. See perlop for possible security implications.\n\nHere is an efficient way to delete all files that haven't been modified for at least a week:\n\nfind . -mtime +7 -print | perl -nle unlink\n\nThis is faster than using the -exec switch of find because you don't have to start a process on every filename found (but it's not faster than using the -delete switch available in newer versions of find. It does suffer from the bug of mishandling newlines in pathnames, which you can fix if you follow the example under -0.\n\nBEGIN and END blocks may be used to capture control before or after the implicit program loop, just as in awk."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "causes Perl to assume the following loop around your program, which makes it iterate over filename arguments somewhat like sed:\n\nLINE:\n  while (<>) {\n      ...             # your program goes here\n  } continue {\n      print or die \"-p destination: $!\\n\";\n  }\n\nIf a file named by an argument cannot be opened for some reason, Perl warns you about it, and moves on to the next file. Note that the lines are printed automatically. An error occurring during printing is treated as fatal. To suppress printing use the \"-n\" switch. A -p overrides a -n switch.\n\nBEGIN and END blocks may be used to capture control before or after the implicit loop, just as in awk."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "enables rudimentary switch parsing for switches on the command line after the program name but before any filename arguments (or before an argument of --). Any switch found there is removed from @ARGV and sets the corresponding variable in the Perl program. The following program prints \"1\" if the program is invoked with a -xyz switch, and \"abc\" if it is invoked with -xyz=abc.\n\n#!/usr/bin/perl -s\nif ($xyz) { print \"$xyz\\n\" }\n\nDo note that a switch like --help creates the variable ${-help}, which is not compliant with use strict \"refs\". Also, when using this option on a script with warnings enabled you may get a lot of spurious \"used only once\" warnings."
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S",
         "description": "makes Perl use the \"PATH\" environment variable to search for the program unless the name of the program contains path separators.\n\nOn some platforms, this also makes Perl append suffixes to the filename while searching for it. For example, on Win32 platforms, the \".bat\" and \".cmd\" suffixes are appended if a lookup for the original name fails, and if the name does not already end in one of those suffixes. If your Perl was compiled with DEBUGGING turned on, using the -Dp switch to Perl shows how the search progresses.\n\nTypically this is used to emulate #! startup on platforms that don't support #!. It's also convenient when debugging a script that uses #!, and is thus normally found by the shell's $PATH search mechanism.\n\nThis example works on many platforms that have a shell compatible with Bourne shell:\n\n#!/usr/bin/perl\neval 'exec /usr/bin/perl -wS $0 ${1+\"$@\"}'\n        if 0; # ^ Run only under a shell\n\nThe system ignores the first line and feeds the program to /bin/sh, which proceeds to try to execute the Perl program as a shell script. The shell executes the second line as a normal shell command, and thus starts up the Perl interpreter. On some systems $0 doesn't always contain the full pathname, so the \"-S\" tells Perl to search for the program if necessary. After Perl locates the program, it parses the lines and ignores them because the check 'if 0' is never true. If the program will be interpreted by csh, you will need to replace ${1+\"$@\"} with $*, even though that doesn't understand embedded spaces (and such) in the argument list. To start up sh rather than csh, some systems may have to replace the #! line with a line containing just a colon, which will be politely ignored by Perl. Other systems can't control that, and need a totally devious construct that will work under any of csh, sh, or Perl, such as the following:\n\neval '(exit $?0)' && eval 'exec perl -wS $0 ${1+\"$@\"}'\n& eval 'exec /usr/bin/perl -wS $0 $argv:q'\n        if 0; # ^ Run only under a shell\n\nIf the filename supplied contains directory separators (and so is an absolute or relative pathname), and if that file is not found, platforms that append file extensions will do so and try to look for the file with those extensions added, one by one.\n\nOn DOS-like platforms, if the program does not contain directory separators, it will first be searched for in the current directory before being searched for on the PATH. On Unix platforms, the program will be searched for strictly on the PATH."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Like \"-T\", but taint checks will issue warnings rather than fatal errors. These warnings can now be controlled normally with no warnings qw(taint).\n\nNote: This is not a substitute for -T! This is meant to be used only as a temporary development aid while securing legacy code: for real production code and for new secure code written from scratch, always use the real \"-T\"."
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T",
         "description": "turns on \"taint\" so you can test them. Ordinarily these checks are done only when running setuid or setgid. It's a good idea to turn them on explicitly for programs that run on behalf of someone else whom you might not necessarily trust, such as CGI programs or any internet servers you might write in Perl. See perlsec for details. For security reasons, this option must be seen by Perl quite early; usually this means it must appear early on the command line or in the #! line for systems which support that construct."
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "This switch causes Perl to dump core after compiling your program. You can then in theory take this core dump and turn it into an executable file by using the undump program (not supplied). This speeds startup at the expense of some disk space (which you can minimize by stripping the executable). (Still, a \"hello world\" executable comes out to about 200K on my machine.) If you want to execute a portion of your program before dumping, use the CORE::dump() function instead. Note: availability of undump is platform specific and may not be available for a specific port of Perl."
       },
       {
-        "type": "short",
         "key": "U",
         "title": "-U",
         "description": "allows Perl to do unsafe operations. Currently the only \"unsafe\" operations are attempting to unlink directories while running as superuser and running setuid programs with fatal taint checks turned into warnings. Note that warnings must be enabled along with this option to actually generate the taint-check warnings."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "prints the version and patchlevel of your perl executable."
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V",
         "description": "prints summary of the major perl configuration values and the current values of @INC."
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w",
         "description": "prints warnings about dubious constructs, such as variable names mentioned only once and scalar variables used before being set; redefined subroutines; references to undefined filehandles; filehandles opened read-only that you are attempting to write on; values used as a number that don't look like numbers; using an array as though it were a scalar; if your subroutines recurse more than 100 deep; and innumerable other things.\n\nThis switch really just enables the global $^W variable; normally, the lexically scoped use warnings pragma is preferred. You can disable or promote into fatal errors specific warnings using __WARN__ hooks, as described in perlvar and \"warn\" in perlfunc. See also perldiag and perltrap. A fine-grained warning facility is also available if you want to manipulate entire classes of warnings; see warnings."
       },
       {
-        "type": "short",
         "key": "W",
         "title": "-W",
         "description": "Enables all warnings regardless of no warnings or $^W. See warnings."
       },
       {
-        "type": "short",
         "key": "X",
         "title": "-X",
         "description": "Disables all warnings regardless of use warnings or $^W. See warnings.\n\nForbidden in \"PERL5OPT\"."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, -xdirectory",
         "description": "tells Perl that the program is embedded in a larger chunk of unrelated text, such as in a mail message. Leading garbage will be discarded until the first line that starts with #! and contains the string \"perl\". Any meaningful switches on that line will be applied.\n\nAll references to line numbers by the program (warnings, errors, ...) will treat the #! line as the first line. Thus a warning on the 2nd line of the program, which is on the 100th line in the file will be reported as line 2, not as line 100. This can be overridden by using the #line directive. (See \"Plain Old Comments (Not!)\" in perlsyn)\n\nIf a directory name is specified, Perl will switch to that directory before running the program. The -x switch controls only the disposal of leading garbage. The program must be terminated with __END__ if there is trailing garbage to be ignored; the program can process any or all of the trailing garbage via the DATA filehandle if desired.\n\nThe directory, if specified, must appear immediately following the -x with no intervening whitespace."

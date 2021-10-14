@@ -1,51 +1,44 @@
 [
   {
     "name": "stty",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "print all current settings in human-readable form"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "print all current settings in human-readable form"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --save",
         "description": "print all current settings in a stty-readable form"
       },
       {
-        "type": "long",
         "key": "save",
         "title": "-g, --save",
         "description": "print all current settings in a stty-readable form"
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F, --file=DEVICE",
         "description": "open and use the specified DEVICE instead of stdin"
       },
       {
-        "type": "long",
         "key": "file",
         "title": "-F, --file=DEVICE",
         "description": "open and use the specified DEVICE instead of stdin"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

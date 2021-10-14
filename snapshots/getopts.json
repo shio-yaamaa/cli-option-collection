@@ -1,6 +1,7 @@
 [
   {
     "name": "getopts",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

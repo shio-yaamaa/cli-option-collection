@@ -1,4 +1,4 @@
-import { Command, Option, Fetcher } from '../types';
+import { Command, Option, Fetcher, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
@@ -15,6 +15,7 @@ import { isElement } from '../utils/typeGuards';
 // Alternative sources:
 // - https://docs.python.org/3/using/cmdline.html
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL =
   'https://raw.githubusercontent.com/python/cpython/main/Misc/python.man';
 
@@ -33,6 +34,7 @@ const fetch = async (): Promise<Command[]> => {
   return [
     {
       name: 'python',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -59,6 +61,7 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
     options.push(
       ...makeOptionList(
         optionStrings,
+        OPTION_STYLE,
         normalizeCommaDelimitedString(title),
         getInnerText(dd).trim()
       )

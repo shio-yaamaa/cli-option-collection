@@ -1,63 +1,54 @@
 [
   {
     "name": "read",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a array",
         "description": "assign the words read to sequential indices of the array variable ARRAY, starting at zero"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d delim",
         "description": "continue until the first character of DELIM is read, rather than newline"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e",
         "description": "use Readline to obtain the line"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i text",
         "description": "use TEXT as the initial text for Readline"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n nchars",
         "description": "return after reading NCHARS characters rather than waiting for a newline, but honor a delimiter if fewer than NCHARS characters are read before the delimiter"
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N nchars",
         "description": "return only after reading exactly NCHARS characters, unless EOF is encountered or read times out, ignoring any delimiter"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p prompt",
         "description": "output the string PROMPT without a trailing newline before attempting to read"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "do not allow backslashes to escape any characters"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "do not echo input coming from a terminal"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t timeout",
         "description": "time out and return failure if a complete line of input is not read within TIMEOUT seconds. The value of the TMOUT variable is the default timeout. TIMEOUT may be a fractional number. If TIMEOUT is 0, read returns immediately, without trying to read any data, returning success only if input is available on the specified file descriptor. The exit status is greater than 128 if the timeout is exceeded"

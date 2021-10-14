@@ -1,57 +1,49 @@
 [
   {
     "name": "kill",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --list",
         "description": "list signal names, or convert signal names to/from numbers"
       },
       {
-        "type": "long",
         "key": "list",
         "title": "-l, --list",
         "description": "list signal names, or convert signal names to/from numbers"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --table",
         "description": "print a table of signal information"
       },
       {
-        "type": "long",
         "key": "table",
         "title": "-t, --table",
         "description": "print a table of signal information"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s sig",
         "description": "SIG is a signal name"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n sig",
         "description": "SIG is a signal number"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L",
         "description": "synonym for -l"

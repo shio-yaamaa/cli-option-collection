@@ -1,51 +1,44 @@
 [
   {
     "name": "paste",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --delimiters=LIST",
         "description": "reuse characters from LIST instead of TABs"
       },
       {
-        "type": "long",
         "key": "delimiters",
         "title": "-d, --delimiters=LIST",
         "description": "reuse characters from LIST instead of TABs"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --serial",
         "description": "paste one file at a time instead of in parallel"
       },
       {
-        "type": "long",
         "key": "serial",
         "title": "-s, --serial",
         "description": "paste one file at a time instead of in parallel"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z, --zero-terminated",
         "description": "line delimiter is NUL, not newline"
       },
       {
-        "type": "long",
         "key": "zero-terminated",
         "title": "-z, --zero-terminated",
         "description": "line delimiter is NUL, not newline"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
@@ -18,6 +18,7 @@ import {
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL =
   'https://raw.githubusercontent.com/htop-dev/htop/main/htop.1.in';
 
@@ -36,6 +37,7 @@ const fetch = async (): Promise<Command[]> => {
   return [
     {
       name: 'htop',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -69,5 +71,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimOptionalElements,
     trimSpaceDelimitedArguments,
   ]);
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

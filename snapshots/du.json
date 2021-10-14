@@ -1,267 +1,224 @@
 [
   {
     "name": "du",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "0",
         "title": "-0, --null",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "long",
         "key": "null",
         "title": "-0, --null",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "write counts for all files, not just directories"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "write counts for all files, not just directories"
       },
       {
-        "type": "long",
         "key": "apparent-size",
         "title": "--apparent-size",
         "description": "print apparent sizes rather than device usage; although the apparent size is usually smaller, it may be larger due to holes in ('sparse') files, internal fragmentation, indirect blocks, and the like"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --block-size=SIZE",
         "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
-        "type": "long",
         "key": "block-size",
         "title": "-B, --block-size=SIZE",
         "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --bytes",
         "description": "equivalent to '--apparent-size --block-size=1'"
       },
       {
-        "type": "long",
         "key": "bytes",
         "title": "-b, --bytes",
         "description": "equivalent to '--apparent-size --block-size=1'"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --total",
         "description": "produce a grand total"
       },
       {
-        "type": "long",
         "key": "total",
         "title": "-c, --total",
         "description": "produce a grand total"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --dereference-args",
         "description": "dereference only symlinks that are listed on the command line"
       },
       {
-        "type": "long",
         "key": "dereference-args",
         "title": "-D, --dereference-args",
         "description": "dereference only symlinks that are listed on the command line"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --max-depth=N",
         "description": "print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument; --max-depth=0 is the same as --summarize"
       },
       {
-        "type": "long",
         "key": "max-depth",
         "title": "-d, --max-depth=N",
         "description": "print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument; --max-depth=0 is the same as --summarize"
       },
       {
-        "type": "long",
         "key": "files0-from",
         "title": "--files0-from=F",
         "description": "summarize device usage of the NUL-terminated file names specified in file F; if F is -, then read names from standard input"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H",
         "description": "equivalent to --dereference-args (-D)"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --human-readable",
         "description": "print sizes in human readable format (e.g., 1K 234M 2G)"
       },
       {
-        "type": "long",
         "key": "human-readable",
         "title": "-h, --human-readable",
         "description": "print sizes in human readable format (e.g., 1K 234M 2G)"
       },
       {
-        "type": "long",
         "key": "inodes",
         "title": "--inodes",
         "description": "list inode usage information instead of block usage"
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k",
         "description": "like --block-size=1K"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L, --dereference",
         "description": "dereference all symbolic links"
       },
       {
-        "type": "long",
         "key": "dereference",
         "title": "-L, --dereference",
         "description": "dereference all symbolic links"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --count-links",
         "description": "count sizes many times if hard linked"
       },
       {
-        "type": "long",
         "key": "count-links",
         "title": "-l, --count-links",
         "description": "count sizes many times if hard linked"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m",
         "description": "like --block-size=1M"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --no-dereference",
         "description": "don't follow any symbolic links (this is the default)"
       },
       {
-        "type": "long",
         "key": "no-dereference",
         "title": "-P, --no-dereference",
         "description": "don't follow any symbolic links (this is the default)"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S, --separate-dirs",
         "description": "for directories do not include size of subdirectories"
       },
       {
-        "type": "long",
         "key": "separate-dirs",
         "title": "-S, --separate-dirs",
         "description": "for directories do not include size of subdirectories"
       },
       {
-        "type": "long",
         "key": "si",
         "title": "--si",
         "description": "like -h, but use powers of 1000 not 1024"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --summarize",
         "description": "display only a total for each argument"
       },
       {
-        "type": "long",
         "key": "summarize",
         "title": "-s, --summarize",
         "description": "display only a total for each argument"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --threshold=SIZE",
         "description": "exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative"
       },
       {
-        "type": "long",
         "key": "threshold",
         "title": "-t, --threshold=SIZE",
         "description": "exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative"
       },
       {
-        "type": "long",
         "key": "time",
         "title": "--time",
         "description": "show time of the last modification of any file in the directory, or any of its subdirectories"
       },
       {
-        "type": "long",
         "key": "time-style",
         "title": "--time-style=STYLE",
         "description": "show times using STYLE, which can be: full-iso, long-iso, iso, or +FORMAT; FORMAT is interpreted like in 'date'"
       },
       {
-        "type": "short",
         "key": "X",
         "title": "-X, --exclude-from=FILE",
         "description": "exclude files that match any pattern in FILE"
       },
       {
-        "type": "long",
         "key": "exclude-from",
         "title": "-X, --exclude-from=FILE",
         "description": "exclude files that match any pattern in FILE"
       },
       {
-        "type": "long",
         "key": "exclude",
         "title": "--exclude=PATTERN",
         "description": "exclude files that match PATTERN"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --one-file-system",
         "description": "skip directories on different file systems"
       },
       {
-        "type": "long",
         "key": "one-file-system",
         "title": "-x, --one-file-system",
         "description": "skip directories on different file systems"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

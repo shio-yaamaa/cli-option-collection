@@ -1,51 +1,44 @@
 [
   {
     "name": "basename",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --multiple",
         "description": "support multiple arguments and treat each as a NAME"
       },
       {
-        "type": "long",
         "key": "multiple",
         "title": "-a, --multiple",
         "description": "support multiple arguments and treat each as a NAME"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --suffix=SUFFIX",
         "description": "remove a trailing SUFFIX; implies -a"
       },
       {
-        "type": "long",
         "key": "suffix",
         "title": "-s, --suffix=SUFFIX",
         "description": "remove a trailing SUFFIX; implies -a"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z, --zero",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "long",
         "key": "zero",
         "title": "-z, --zero",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

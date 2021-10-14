@@ -1,6 +1,7 @@
 [
   {
     "name": "typeset",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

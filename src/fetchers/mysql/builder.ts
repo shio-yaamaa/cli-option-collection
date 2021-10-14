@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option } from '../../types';
+import { Fetcher, Command, Option, OptionStyle } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { makeOptionList } from '../../utils/forFetcher/optionString';
@@ -27,6 +27,8 @@ interface OptionTableItem {
   description: string;
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
+
 export const fetch = async (
   commandName: string,
   url: URL
@@ -49,6 +51,7 @@ export const fetch = async (
       options.push(
         ...makeOptionList(
           [hashDescriptionPair.title],
+          OPTION_STYLE,
           hashDescriptionPair.title,
           hashDescriptionPair.description
         )
@@ -59,6 +62,7 @@ export const fetch = async (
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options,
     },
   ];
@@ -141,6 +145,7 @@ const findOptionsCorrespondingToOptionTableItem = (
 
   return makeOptionList(
     optionStrings,
+    OPTION_STYLE,
     normalizeCommaDelimitedString(title),
     optionTableItem.description
   );

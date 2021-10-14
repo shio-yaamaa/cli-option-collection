@@ -1,171 +1,144 @@
 [
   {
     "name": "df",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "include pseudo, duplicate, inaccessible file systems"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "include pseudo, duplicate, inaccessible file systems"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --block-size=SIZE",
         "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
-        "type": "long",
         "key": "block-size",
         "title": "-B, --block-size=SIZE",
         "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --human-readable",
         "description": "print sizes in powers of 1024 (e.g., 1023M)"
       },
       {
-        "type": "long",
         "key": "human-readable",
         "title": "-h, --human-readable",
         "description": "print sizes in powers of 1024 (e.g., 1023M)"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H, --si",
         "description": "print sizes in powers of 1000 (e.g., 1.1G)"
       },
       {
-        "type": "long",
         "key": "si",
         "title": "-H, --si",
         "description": "print sizes in powers of 1000 (e.g., 1.1G)"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --inodes",
         "description": "list inode information instead of block usage"
       },
       {
-        "type": "long",
         "key": "inodes",
         "title": "-i, --inodes",
         "description": "list inode information instead of block usage"
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k",
         "description": "like --block-size=1K"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "limit listing to local file systems"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "limit listing to local file systems"
       },
       {
-        "type": "long",
         "key": "no-sync",
         "title": "--no-sync",
         "description": "do not invoke sync before getting usage info (default)"
       },
       {
-        "type": "long",
         "key": "output",
         "title": "--output[=FIELD_LIST]",
         "description": "use the output format defined by FIELD_LIST, or print all fields if FIELD_LIST is omitted."
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --portability",
         "description": "use the POSIX output format"
       },
       {
-        "type": "long",
         "key": "portability",
         "title": "-P, --portability",
         "description": "use the POSIX output format"
       },
       {
-        "type": "long",
         "key": "sync",
         "title": "--sync",
         "description": "invoke sync before getting usage info"
       },
       {
-        "type": "long",
         "key": "total",
         "title": "--total",
         "description": "elide all entries insignificant to available space, and produce a grand total"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --type=TYPE",
         "description": "limit listing to file systems of type TYPE"
       },
       {
-        "type": "long",
         "key": "type",
         "title": "-t, --type=TYPE",
         "description": "limit listing to file systems of type TYPE"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --print-type",
         "description": "print file system type"
       },
       {
-        "type": "long",
         "key": "print-type",
         "title": "-T, --print-type",
         "description": "print file system type"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --exclude-type=TYPE",
         "description": "limit listing to file systems not of type TYPE"
       },
       {
-        "type": "long",
         "key": "exclude-type",
         "title": "-x, --exclude-type=TYPE",
         "description": "limit listing to file systems not of type TYPE"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "(ignored)"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

@@ -1,51 +1,44 @@
 [
   {
     "name": "sed",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "The files listed as parameters for the w function or flag are created (or truncated) before any processing begins, by default. The -a option causes sed to delay opening each file until a command containing the related w function or flag is applied to a line of input."
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E",
         "description": "Interpret regular expressions using POSIX extended regular expression syntax. The default behaviour is to use POSIX basic regular expression syntax."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e command",
         "description": "Append the editing commands specified by the command argument to the list of commands."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f command_file",
         "description": "Append the editing commands found in the file command_file to the list of commands. The editing commands should each be listed on a separate line."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i[extension]",
         "description": "Edit files in place, saving backups with the specified extension. If a zero length extension is given, no backup will be saved. It is not recommended to give a zero length extension when in place editing files, as it risks corruption or partial content in situations where disk space is exhausted, etc. In -i mode, the hold space, line numbers, and ranges are reset between files."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "An alias for -E, for compatibility with GNU sed."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "By default, each line of input is echoed to the standard output after all of the commands have been applied to it. The -n option suppresses this behavior."
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "Force output to be line buffered, printing each line as it becomes available. By default, output is line buffered when standard output is a terminal and block buffered otherwise. See setvbuf(3) for a more detailed explanation."

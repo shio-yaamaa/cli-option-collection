@@ -1,4 +1,4 @@
-import { Command, Fetcher, Option } from '../../types';
+import { Command, Fetcher, Option, OptionStyle } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -8,6 +8,8 @@ import {
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../../utils/utils';
+
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 export const build = (commandName: string): Fetcher => ({
   fetch: () => fetch(commandName),
@@ -23,6 +25,7 @@ const fetch = async (commandName: string): Promise<Command[]> => {
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -50,5 +53,5 @@ const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
     [title],
     [trimSpaceDelimitedArguments]
   );
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

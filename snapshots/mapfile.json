@@ -1,45 +1,39 @@
 [
   {
     "name": "mapfile",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d delim",
         "description": "Use DELIM to terminate lines, instead of newline"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n count",
         "description": "Copy at most COUNT lines. If COUNT is 0, all lines are copied"
       },
       {
-        "type": "short",
         "key": "O",
         "title": "-O origin",
         "description": "Begin assigning to ARRAY at index ORIGIN. The default index is 0"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s count",
         "description": "Discard the first COUNT lines read"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Remove a trailing DELIM from each line read (default newline)"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C callback",
         "description": "Evaluate CALLBACK each time QUANTUM lines are read"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c quantum",
         "description": "Specify the number of lines read between each call to CALLBACK"

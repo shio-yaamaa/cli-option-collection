@@ -1,507 +1,424 @@
 [
   {
     "name": "ls",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "do not ignore entries starting with ."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "do not ignore entries starting with ."
       },
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --almost-all",
         "description": "do not list implied . and .."
       },
       {
-        "type": "long",
         "key": "almost-all",
         "title": "-A, --almost-all",
         "description": "do not list implied . and .."
       },
       {
-        "type": "long",
         "key": "author",
         "title": "--author",
         "description": "with -l, print the author of each file"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --escape",
         "description": "print C-style escapes for nongraphic characters"
       },
       {
-        "type": "long",
         "key": "escape",
         "title": "-b, --escape",
         "description": "print C-style escapes for nongraphic characters"
       },
       {
-        "type": "long",
         "key": "block-size",
         "title": "--block-size=SIZE",
         "description": "with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --ignore-backups",
         "description": "do not list implied entries ending with ~"
       },
       {
-        "type": "long",
         "key": "ignore-backups",
         "title": "-B, --ignore-backups",
         "description": "do not list implied entries ending with ~"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "with -lt: sort by, and show, ctime (time of last modification of file status information); with -l: show ctime and sort by name; otherwise: sort by ctime, newest first"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C",
         "description": "list entries by columns"
       },
       {
-        "type": "long",
         "key": "color",
         "title": "--color[=WHEN]",
         "description": "colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --directory",
         "description": "list directories themselves, not their contents"
       },
       {
-        "type": "long",
         "key": "directory",
         "title": "-d, --directory",
         "description": "list directories themselves, not their contents"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --dired",
         "description": "generate output designed for Emacs' dired mode"
       },
       {
-        "type": "long",
         "key": "dired",
         "title": "-D, --dired",
         "description": "generate output designed for Emacs' dired mode"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "list all entries in directory order"
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F, --classify[=WHEN]",
         "description": "append indicator (one of */=>@|) to entries; WHEN can be 'always' (default if omitted), 'auto', or 'never'"
       },
       {
-        "type": "long",
         "key": "classify",
         "title": "-F, --classify[=WHEN]",
         "description": "append indicator (one of */=>@|) to entries; WHEN can be 'always' (default if omitted), 'auto', or 'never'"
       },
       {
-        "type": "long",
         "key": "file-type",
         "title": "--file-type",
         "description": "likewise, except do not append '*'"
       },
       {
-        "type": "long",
         "key": "format",
         "title": "--format=WORD",
         "description": "across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C"
       },
       {
-        "type": "long",
         "key": "full-time",
         "title": "--full-time",
         "description": "like -l --time-style=full-iso"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g",
         "description": "like -l, but do not list owner"
       },
       {
-        "type": "long",
         "key": "group-directories-first",
         "title": "--group-directories-first",
         "description": "group directories before files;"
       },
       {
-        "type": "short",
         "key": "G",
         "title": "-G, --no-group",
         "description": "in a long listing, don't print group names"
       },
       {
-        "type": "long",
         "key": "no-group",
         "title": "-G, --no-group",
         "description": "in a long listing, don't print group names"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --human-readable",
         "description": "with -l and -s, print sizes like 1K 234M 2G etc."
       },
       {
-        "type": "long",
         "key": "human-readable",
         "title": "-h, --human-readable",
         "description": "with -l and -s, print sizes like 1K 234M 2G etc."
       },
       {
-        "type": "long",
         "key": "si",
         "title": "--si",
         "description": "likewise, but use powers of 1000 not 1024"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H, --dereference-command-line",
         "description": "follow symbolic links listed on the command line"
       },
       {
-        "type": "long",
         "key": "dereference-command-line",
         "title": "-H, --dereference-command-line",
         "description": "follow symbolic links listed on the command line"
       },
       {
-        "type": "long",
         "key": "dereference-command-line-symlink-to-dir",
         "title": "--dereference-command-line-symlink-to-dir",
         "description": "follow each command line symbolic link"
       },
       {
-        "type": "long",
         "key": "hide",
         "title": "--hide=PATTERN",
         "description": "do not list implied entries matching shell PATTERN (overridden by -a or -A)"
       },
       {
-        "type": "long",
         "key": "hyperlink",
         "title": "--hyperlink[=WHEN]",
         "description": "hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'"
       },
       {
-        "type": "long",
         "key": "indicator-style",
         "title": "--indicator-style=WORD",
         "description": "append indicator with style WORD to entry names: none (default), slash (-p), file-type (--file-type), classify (-F)"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --inode",
         "description": "print the index number of each file"
       },
       {
-        "type": "long",
         "key": "inode",
         "title": "-i, --inode",
         "description": "print the index number of each file"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I, --ignore=PATTERN",
         "description": "do not list implied entries matching shell PATTERN"
       },
       {
-        "type": "long",
         "key": "ignore",
         "title": "-I, --ignore=PATTERN",
         "description": "do not list implied entries matching shell PATTERN"
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k, --kibibytes",
         "description": "default to 1024-byte blocks for file system usage; used only with -s and per directory totals"
       },
       {
-        "type": "long",
         "key": "kibibytes",
         "title": "-k, --kibibytes",
         "description": "default to 1024-byte blocks for file system usage; used only with -s and per directory totals"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "use a long listing format"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L, --dereference",
         "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
       },
       {
-        "type": "long",
         "key": "dereference",
         "title": "-L, --dereference",
         "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m",
         "description": "fill width with a comma separated list of entries"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --numeric-uid-gid",
         "description": "like -l, but list numeric user and group IDs"
       },
       {
-        "type": "long",
         "key": "numeric-uid-gid",
         "title": "-n, --numeric-uid-gid",
         "description": "like -l, but list numeric user and group IDs"
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N, --literal",
         "description": "print entry names without quoting"
       },
       {
-        "type": "long",
         "key": "literal",
         "title": "-N, --literal",
         "description": "print entry names without quoting"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o",
         "description": "like -l, but do not list group information"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --indicator-style=slash",
         "description": "append / indicator to directories"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --hide-control-chars",
         "description": "print ? instead of nongraphic characters"
       },
       {
-        "type": "long",
         "key": "hide-control-chars",
         "title": "-q, --hide-control-chars",
         "description": "print ? instead of nongraphic characters"
       },
       {
-        "type": "long",
         "key": "show-control-chars",
         "title": "--show-control-chars",
         "description": "show nongraphic characters as-is (the default, unless program is 'ls' and output is a terminal)"
       },
       {
-        "type": "short",
         "key": "Q",
         "title": "-Q, --quote-name",
         "description": "enclose entry names in double quotes"
       },
       {
-        "type": "long",
         "key": "quote-name",
         "title": "-Q, --quote-name",
         "description": "enclose entry names in double quotes"
       },
       {
-        "type": "long",
         "key": "quoting-style",
         "title": "--quoting-style=WORD",
         "description": "use quoting style WORD for entry names: literal, locale, shell, shell-always, shell-escape, shell-escape-always, c, escape (overrides QUOTING_STYLE environment variable)"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --reverse",
         "description": "reverse order while sorting"
       },
       {
-        "type": "long",
         "key": "reverse",
         "title": "-r, --reverse",
         "description": "reverse order while sorting"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "list subdirectories recursively"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "list subdirectories recursively"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --size",
         "description": "print the allocated size of each file, in blocks"
       },
       {
-        "type": "long",
         "key": "size",
         "title": "-s, --size",
         "description": "print the allocated size of each file, in blocks"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S",
         "description": "sort by file size, largest first"
       },
       {
-        "type": "long",
         "key": "sort",
         "title": "--sort=WORD",
         "description": "sort by WORD instead of name: none (-U), size (-S), time (-t), version (-v), extension (-X), width"
       },
       {
-        "type": "long",
         "key": "time",
         "title": "--time=WORD",
         "description": "change the default of using modification times; access time (-u): atime, access, use; change time (-c): ctime, status; birth time: birth, creation;"
       },
       {
-        "type": "long",
         "key": "time-style",
         "title": "--time-style=TIME_STYLE",
         "description": "time/date format with -l; see TIME_STYLE below"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "sort by time, newest first; see --time"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --tabsize=COLS",
         "description": "assume tab stops at each COLS instead of 8"
       },
       {
-        "type": "long",
         "key": "tabsize",
         "title": "-T, --tabsize=COLS",
         "description": "assume tab stops at each COLS instead of 8"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "with -lt: sort by, and show, access time; with -l: show access time and sort by name; otherwise: sort by access time, newest first"
       },
       {
-        "type": "short",
         "key": "U",
         "title": "-U",
         "description": "do not sort; list entries in directory order"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "natural sort of (version) numbers within text"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --width=COLS",
         "description": "set output width to COLS. 0 means no limit"
       },
       {
-        "type": "long",
         "key": "width",
         "title": "-w, --width=COLS",
         "description": "set output width to COLS. 0 means no limit"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "list entries by lines instead of by columns"
       },
       {
-        "type": "short",
         "key": "X",
         "title": "-X",
         "description": "sort alphabetically by entry extension"
       },
       {
-        "type": "short",
         "key": "Z",
         "title": "-Z, --context",
         "description": "print any security context of each file"
       },
       {
-        "type": "long",
         "key": "context",
         "title": "-Z, --context",
         "description": "print any security context of each file"
       },
       {
-        "type": "long",
         "key": "zero",
         "title": "--zero",
         "description": "end each output line with NUL, not newline"
       },
       {
-        "type": "short",
         "key": "1",
         "title": "-1",
         "description": "list one file per line"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

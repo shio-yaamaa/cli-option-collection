@@ -1,87 +1,74 @@
 [
   {
     "name": "chmod",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --changes",
         "description": "like verbose but report only when a change is made"
       },
       {
-        "type": "long",
         "key": "changes",
         "title": "-c, --changes",
         "description": "like verbose but report only when a change is made"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --silent, --quiet",
         "description": "suppress most error messages"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "-f, --silent, --quiet",
         "description": "suppress most error messages"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-f, --silent, --quiet",
         "description": "suppress most error messages"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "output a diagnostic for every file processed"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "output a diagnostic for every file processed"
       },
       {
-        "type": "long",
         "key": "no-preserve-root",
         "title": "--no-preserve-root",
         "description": "do not treat '/' specially (the default)"
       },
       {
-        "type": "long",
         "key": "preserve-root",
         "title": "--preserve-root",
         "description": "fail to operate recursively on '/'"
       },
       {
-        "type": "long",
         "key": "reference",
         "title": "--reference=RFILE",
         "description": "use RFILE's mode instead of MODE values"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "change files and directories recursively"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "change files and directories recursively"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

@@ -1,4 +1,4 @@
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import {
   findAnchorsWithPattern,
@@ -30,6 +30,7 @@ interface SubcommandLocation {
   headingID: string;
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL = 'https://guides.rubygems.org/command-reference/';
 
 const fetch = async (): Promise<Command[]> => {
@@ -73,6 +74,7 @@ const fetchSubcommand = (
   const options = mergeLists(lis.map((li) => listItemToOptions(li)));
   return {
     name: command,
+    optionStyle: OPTION_STYLE,
     options: uniqueOptions(options),
   };
 };
@@ -98,5 +100,5 @@ const listItemToOptions = (listItem: Element): Option[] => {
       trimEqualDelimitedArguments,
     ]
   );
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

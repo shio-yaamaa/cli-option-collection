@@ -1,21 +1,19 @@
 [
   {
     "name": "help",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "output short description for each topic"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m",
         "description": "display usage in pseudo-manpage format"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "output only a short usage synopsis for each topic matching PATTERN"

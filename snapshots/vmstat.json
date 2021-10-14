@@ -1,69 +1,59 @@
 [
   {
     "name": "vmstat",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c count",
         "description": "Repeat the display count times. The first display is for the time since a reboot and each subsequent report is for the time period since the last display. If no wait interval is specified, the default is 1 second."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "Report on the number of fork(2), __tfork(3), and vfork(2) system calls as well as kernel thread creations since system startup, and the number of pages of virtual memory involved in each."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "Report on the number of interrupts taken by each device since system startup."
       },
       {
-        "type": "short",
         "key": "M",
         "title": "-M core",
         "description": "Extract values associated with the name list from the specified core instead of the running kernel."
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m",
         "description": "Report on the usage of kernel dynamic memory listed first by size of allocation and then by type of usage."
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N system",
         "description": "Extract the name list from the specified system instead of the running kernel."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "Display the contents of the uvmexp structure (see uvm_init(9)), giving the total number of several kinds of paging related events which have occurred since system startup."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Report on the number of page in and page reclaims since system startup, and the amount of time required by each."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "Print more verbose information."
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w wait",
         "description": "Pause wait seconds between each display. If no repeat count is specified, the default is infinity."
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z",
         "description": "When used with -i, also list devices which have not yet generated an interrupt."

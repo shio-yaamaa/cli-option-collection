@@ -1,19 +1,19 @@
 [
   {
     "name": "brew analytics",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew autoremove",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "List what would be uninstalled, but do not actually uninstall anything."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "List what would be uninstalled, but do not actually uninstall anything."
@@ -22,37 +22,34 @@
   },
   {
     "name": "brew casks",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew cleanup",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "prune",
         "title": "--prune",
         "description": "Remove all cache files older than specified days. If you want to remove everything, use --prune=all."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Show what would be removed, but do not actually remove anything."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Show what would be removed, but do not actually remove anything."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "Scrub the cache, including downloads for even the latest versions. Note downloads for any installed formulae or casks will still not be deleted. If you want to delete those too: rm -rf \"$(brew --cache)\""
       },
       {
-        "type": "long",
         "key": "prune-prefix",
         "title": "--prune-prefix",
         "description": "Only prune the symlinks and directories from the prefix and remove no other files."
@@ -61,21 +58,19 @@
   },
   {
     "name": "brew commands",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "List only the names of commands without category headers."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "List only the names of commands without category headers."
       },
       {
-        "type": "long",
         "key": "include-aliases",
         "title": "--include-aliases",
         "description": "Include aliases of internal commands."
@@ -84,107 +79,94 @@
   },
   {
     "name": "brew completions",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew config",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew deps",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "Sort dependencies in topological order."
       },
       {
-        "type": "long",
         "key": "1",
         "title": "--1",
         "description": "Only show dependencies one level down, instead of recursing."
       },
       {
-        "type": "long",
         "key": "union",
         "title": "--union",
         "description": "Show the union of dependencies for multiple formula, instead of the intersection."
       },
       {
-        "type": "long",
         "key": "full-name",
         "title": "--full-name",
         "description": "List dependencies by their full name."
       },
       {
-        "type": "long",
         "key": "include-build",
         "title": "--include-build",
         "description": "Include :build dependencies for formula."
       },
       {
-        "type": "long",
         "key": "include-optional",
         "title": "--include-optional",
         "description": "Include :optional dependencies for formula."
       },
       {
-        "type": "long",
         "key": "include-test",
         "title": "--include-test",
         "description": "Include :test dependencies for formula (non-recursive)."
       },
       {
-        "type": "long",
         "key": "skip-recommended",
         "title": "--skip-recommended",
         "description": "Skip :recommended dependencies for formula."
       },
       {
-        "type": "long",
         "key": "include-requirements",
         "title": "--include-requirements",
         "description": "Include requirements in addition to dependencies for formula."
       },
       {
-        "type": "long",
         "key": "tree",
         "title": "--tree",
         "description": "Show dependencies as a tree. When given multiple formula arguments, show individual trees for each formula."
       },
       {
-        "type": "long",
         "key": "annotate",
         "title": "--annotate",
         "description": "Mark any build, test, optional, or recommended dependencies as such in the output."
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "List dependencies for formulae that are currently installed. If formula is specified, list only its dependencies that are currently installed."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "List dependencies for all available formulae."
       },
       {
-        "type": "long",
         "key": "for-each",
         "title": "--for-each",
         "description": "Switch into the mode used by the --all option, but only list dependencies for each provided formula, one formula per line. This is used for debugging the --installed/--all display mode."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -193,39 +175,34 @@
   },
   {
     "name": "brew desc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --search",
         "description": "Search both names and descriptions for text. If text is flanked by slashes, it is interpreted as a regular expression."
       },
       {
-        "type": "long",
         "key": "search",
         "title": "-s, --search",
         "description": "Search both names and descriptions for text. If text is flanked by slashes, it is interpreted as a regular expression."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --name",
         "description": "Search just names for text. If text is flanked by slashes, it is interpreted as a regular expression."
       },
       {
-        "type": "long",
         "key": "name",
         "title": "-n, --name",
         "description": "Search just names for text. If text is flanked by slashes, it is interpreted as a regular expression."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --description",
         "description": "Search just descriptions for text. If text is flanked by slashes, it is interpreted as a regular expression."
       },
       {
-        "type": "long",
         "key": "description",
         "title": "-d, --description",
         "description": "Search just descriptions for text. If text is flanked by slashes, it is interpreted as a regular expression."
@@ -234,25 +211,24 @@
   },
   {
     "name": "brew developer",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew doctor",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "list-checks",
         "title": "--list-checks",
         "description": "List all audit methods, which can be run individually if provided as arguments."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --audit-debug",
         "description": "Enable debugging and profiling of audit methods."
       },
       {
-        "type": "long",
         "key": "audit-debug",
         "title": "-D, --audit-debug",
         "description": "Enable debugging and profiling of audit methods."
@@ -261,21 +237,19 @@
   },
   {
     "name": "brew dr",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "list-checks",
         "title": "--list-checks",
         "description": "List all audit methods, which can be run individually if provided as arguments."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --audit-debug",
         "description": "Enable debugging and profiling of audit methods."
       },
       {
-        "type": "long",
         "key": "audit-debug",
         "title": "-D, --audit-debug",
         "description": "Enable debugging and profiling of audit methods."
@@ -284,93 +258,79 @@
   },
   {
     "name": "brew fetch",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "bottle-tag",
         "title": "--bottle-tag",
         "description": "Download a bottle for given tag."
       },
       {
-        "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
         "description": "Fetch HEAD version instead of stable version."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Remove a previously cached version and re-fetch."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Remove a previously cached version and re-fetch."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Do a verbose VCS checkout, if the URL represents a VCS. This is useful for seeing if an existing VCS cache has been updated."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Do a verbose VCS checkout, if the URL represents a VCS. This is useful for seeing if an existing VCS cache has been updated."
       },
       {
-        "type": "long",
         "key": "retry",
         "title": "--retry",
         "description": "Retry if downloading fails or re-download if the checksum of a previously cached version no longer matches."
       },
       {
-        "type": "long",
         "key": "deps",
         "title": "--deps",
         "description": "Also download dependencies for any listed formula."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --build-from-source",
         "description": "Download source packages rather than a bottle."
       },
       {
-        "type": "long",
         "key": "build-from-source",
         "title": "-s, --build-from-source",
         "description": "Download source packages rather than a bottle."
       },
       {
-        "type": "long",
         "key": "build-bottle",
         "title": "--build-bottle",
         "description": "Download source packages (for eventual bottling) rather than a bottle."
       },
       {
-        "type": "long",
         "key": "force-bottle",
         "title": "--force-bottle",
         "description": "Download a bottle if it exists for the current or newest version of macOS, even if it would not be used during installation."
       },
       {
-        "type": "long",
         "key": "quarantine",
         "title": "--[no-]quarantine",
         "description": "Disable/enable quarantining of downloads (default: enabled)."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -379,37 +339,34 @@
   },
   {
     "name": "brew formulae",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew gist-logs",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "with-hostname",
         "title": "--with-hostname",
         "description": "Include the hostname in the Gist."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --new-issue",
         "description": "Automatically create a new issue in the appropriate GitHub repository after creating the Gist."
       },
       {
-        "type": "long",
         "key": "new-issue",
         "title": "-n, --new-issue",
         "description": "Automatically create a new issue in the appropriate GitHub repository after creating the Gist."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --private",
         "description": "The Gist will be marked private and will not appear in listings but will be accessible with its link."
       },
       {
-        "type": "long",
         "key": "private",
         "title": "-p, --private",
         "description": "The Gist will be marked private and will not appear in listings but will be accessible with its link."
@@ -418,15 +375,14 @@
   },
   {
     "name": "brew home",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -435,15 +391,14 @@
   },
   {
     "name": "brew homepage",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -452,69 +407,59 @@
   },
   {
     "name": "brew info",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "analytics",
         "title": "--analytics",
         "description": "List global Homebrew analytics data or, if specified, installation and build error data for formula (provided neither HOMEBREW_NO_ANALYTICS nor HOMEBREW_NO_GITHUB_API are set)."
       },
       {
-        "type": "long",
         "key": "days",
         "title": "--days",
         "description": "How many days of analytics data to retrieve. The value for days must be 30, 90 or 365. The default is 30."
       },
       {
-        "type": "long",
         "key": "category",
         "title": "--category",
         "description": "Which type of analytics data to retrieve. The value for category must be install, install-on-request or build-error; cask-install or os-version may be specified if formula is not. The default is install."
       },
       {
-        "type": "long",
         "key": "github",
         "title": "--github",
         "description": "Open the GitHub source page for formula and cask in a browser. To view the history locally: brew log -p formula or cask"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Print a JSON representation. Currently the default value for version is v1 for formula. For formula and cask use v2. See the docs for examples of using the JSON output: https://docs.brew.sh/Querying-Brew"
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Print JSON of formulae that are currently installed."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Print JSON of all available formulae."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Show more verbose analytics data for formula."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Show more verbose analytics data for formula."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -523,69 +468,59 @@
   },
   {
     "name": "brew abv",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "analytics",
         "title": "--analytics",
         "description": "List global Homebrew analytics data or, if specified, installation and build error data for formula (provided neither HOMEBREW_NO_ANALYTICS nor HOMEBREW_NO_GITHUB_API are set)."
       },
       {
-        "type": "long",
         "key": "days",
         "title": "--days",
         "description": "How many days of analytics data to retrieve. The value for days must be 30, 90 or 365. The default is 30."
       },
       {
-        "type": "long",
         "key": "category",
         "title": "--category",
         "description": "Which type of analytics data to retrieve. The value for category must be install, install-on-request or build-error; cask-install or os-version may be specified if formula is not. The default is install."
       },
       {
-        "type": "long",
         "key": "github",
         "title": "--github",
         "description": "Open the GitHub source page for formula and cask in a browser. To view the history locally: brew log -p formula or cask"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Print a JSON representation. Currently the default value for version is v1 for formula. For formula and cask use v2. See the docs for examples of using the JSON output: https://docs.brew.sh/Querying-Brew"
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Print JSON of formulae that are currently installed."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Print JSON of all available formulae."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Show more verbose analytics data for formula."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Show more verbose analytics data for formula."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -594,183 +529,154 @@
   },
   {
     "name": "brew install",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --debug",
         "description": "If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory."
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "-d, --debug",
         "description": "If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Install formulae without checking for previously installed keg-only or non-migrated versions. When installing casks, overwrite existing files (binaries and symlinks are excluded, unless originally from the same cask)."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Install formulae without checking for previously installed keg-only or non-migrated versions. When installing casks, overwrite existing files (binaries and symlinks are excluded, unless originally from the same cask)."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Print the verification and postinstall steps."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Print the verification and postinstall steps."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "env",
         "title": "--env",
         "description": "Disabled other than for internal Homebrew use."
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
         "description": "An unsupported Homebrew development flag to skip installing any dependencies of any kind. If the dependencies are not already present, the formula will have issues. If you're not developing Homebrew, consider adjusting your PATH rather than using this flag."
       },
       {
-        "type": "long",
         "key": "only-dependencies",
         "title": "--only-dependencies",
         "description": "Install the dependencies with specified options but do not install the formula itself."
       },
       {
-        "type": "long",
         "key": "cc",
         "title": "--cc",
         "description": "Attempt to compile using the specified compiler, which should be the name of the compiler's executable, e.g. gcc-7 for GCC 7. In order to use LLVM's clang, specify llvm_clang. To use the Apple-provided clang, specify clang. This option will only accept compilers that are provided by Homebrew or bundled with macOS. Please do not file issues if you encounter errors while using this option."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --build-from-source",
         "description": "Compile formula from source even if a bottle is provided. Dependencies will still be installed from bottles if they are available."
       },
       {
-        "type": "long",
         "key": "build-from-source",
         "title": "-s, --build-from-source",
         "description": "Compile formula from source even if a bottle is provided. Dependencies will still be installed from bottles if they are available."
       },
       {
-        "type": "long",
         "key": "force-bottle",
         "title": "--force-bottle",
         "description": "Install from a bottle if it exists for the current or newest version of macOS, even if it would not normally be used for installation."
       },
       {
-        "type": "long",
         "key": "include-test",
         "title": "--include-test",
         "description": "Install testing dependencies required to run brew test formula."
       },
       {
-        "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
         "description": "If formula defines it, install the HEAD version, aka. main, trunk, unstable, master."
       },
       {
-        "type": "long",
         "key": "fetch-HEAD",
         "title": "--fetch-HEAD",
         "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released."
       },
       {
-        "type": "long",
         "key": "keep-tmp",
         "title": "--keep-tmp",
         "description": "Retain the temporary files created during installation."
       },
       {
-        "type": "long",
         "key": "build-bottle",
         "title": "--build-bottle",
         "description": "Prepare the formula for eventual bottling during installation, skipping any post-install steps."
       },
       {
-        "type": "long",
         "key": "bottle-arch",
         "title": "--bottle-arch",
         "description": "Optimise bottles for the specified architecture rather than the oldest architecture supported by the version of macOS the bottles are built on."
       },
       {
-        "type": "long",
         "key": "display-times",
         "title": "--display-times",
         "description": "Print install times for each package at the end of the run."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "Download and patch formula, then open a shell. This allows the user to run ./configure --help and otherwise determine how to turn the software package into a Homebrew package."
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "Download and patch formula, then open a shell. This allows the user to run ./configure --help and otherwise determine how to turn the software package into a Homebrew package."
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --git",
         "description": "Create a Git repository, useful for creating patches to the software."
       },
       {
-        "type": "long",
         "key": "git",
         "title": "-g, --git",
         "description": "Create a Git repository, useful for creating patches to the software."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
       },
       {
-        "type": "long",
         "key": "binaries",
         "title": "--[no-]binaries",
         "description": "Disable/enable linking of helper executables (default: enabled)."
       },
       {
-        "type": "long",
         "key": "require-sha",
         "title": "--require-sha",
         "description": "Require all casks to have a checksum."
       },
       {
-        "type": "long",
         "key": "quarantine",
         "title": "--[no-]quarantine",
         "description": "Disable/enable quarantining of downloads (default: enabled)."
       },
       {
-        "type": "long",
         "key": "skip-cask-deps",
         "title": "--skip-cask-deps",
         "description": "Skip installing cask dependencies."
@@ -779,27 +685,24 @@
   },
   {
     "name": "brew leaves",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --installed-on-request",
         "description": "Only list leaves that were manually installed."
       },
       {
-        "type": "long",
         "key": "installed-on-request",
         "title": "-r, --installed-on-request",
         "description": "Only list leaves that were manually installed."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --installed-as-dependency",
         "description": "Only list leaves that were installed as dependencies."
       },
       {
-        "type": "long",
         "key": "installed-as-dependency",
         "title": "-p, --installed-as-dependency",
         "description": "Only list leaves that were installed as dependencies."
@@ -808,39 +711,34 @@
   },
   {
     "name": "brew link",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "overwrite",
         "title": "--overwrite",
         "description": "Delete files that already exist in the prefix while linking."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "List files which would be linked or deleted by brew link --overwrite without actually linking or deleting any files."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "List files which would be linked or deleted by brew link --overwrite without actually linking or deleting any files."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Allow keg-only formulae to be linked."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Allow keg-only formulae to be linked."
       },
       {
-        "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
         "description": "Link the HEAD version of the formula if it is installed."
@@ -849,39 +747,34 @@
   },
   {
     "name": "brew ln",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "overwrite",
         "title": "--overwrite",
         "description": "Delete files that already exist in the prefix while linking."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "List files which would be linked or deleted by brew link --overwrite without actually linking or deleting any files."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "List files which would be linked or deleted by brew link --overwrite without actually linking or deleting any files."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Allow keg-only formulae to be linked."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Allow keg-only formulae to be linked."
       },
       {
-        "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
         "description": "Link the HEAD version of the formula if it is installed."
@@ -890,63 +783,54 @@
   },
   {
     "name": "brew list",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "List only formulae, or treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "List only casks, or treat all named arguments as casks."
       },
       {
-        "type": "long",
         "key": "full-name",
         "title": "--full-name",
         "description": "Print formulae with fully-qualified names. Unless --full-name, --versions or --pinned are passed, other options (i.e. -1, -l, -r and -t) are passed to ls(1) which produces the actual output."
       },
       {
-        "type": "long",
         "key": "versions",
         "title": "--versions",
         "description": "Show the version number for installed formulae, or only the specified formulae if formula are provided."
       },
       {
-        "type": "long",
         "key": "multiple",
         "title": "--multiple",
         "description": "Only show formulae with multiple versions installed."
       },
       {
-        "type": "long",
         "key": "pinned",
         "title": "--pinned",
         "description": "List only pinned formulae, or only the specified (pinned) formulae if formula are provided. See also pin, unpin."
       },
       {
-        "type": "short",
         "key": "1",
         "title": "-1",
         "description": "Force output to be one entry per line. This is the default when output is not to a terminal."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "List formulae and/or casks in long format. Has no effect when a formula or cask name is passed as an argument."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "Reverse the order of the formulae and/or casks sort to list the oldest entries first. Has no effect when a formula or cask name is passed as an argument."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Sort formulae and/or casks by time modified, listing most recently modified first. Has no effect when a formula or cask name is passed as an argument."
@@ -955,63 +839,54 @@
   },
   {
     "name": "brew ls",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "List only formulae, or treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "List only casks, or treat all named arguments as casks."
       },
       {
-        "type": "long",
         "key": "full-name",
         "title": "--full-name",
         "description": "Print formulae with fully-qualified names. Unless --full-name, --versions or --pinned are passed, other options (i.e. -1, -l, -r and -t) are passed to ls(1) which produces the actual output."
       },
       {
-        "type": "long",
         "key": "versions",
         "title": "--versions",
         "description": "Show the version number for installed formulae, or only the specified formulae if formula are provided."
       },
       {
-        "type": "long",
         "key": "multiple",
         "title": "--multiple",
         "description": "Only show formulae with multiple versions installed."
       },
       {
-        "type": "long",
         "key": "pinned",
         "title": "--pinned",
         "description": "List only pinned formulae, or only the specified (pinned) formulae if formula are provided. See also pin, unpin."
       },
       {
-        "type": "short",
         "key": "1",
         "title": "-1",
         "description": "Force output to be one entry per line. This is the default when output is not to a terminal."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "List formulae and/or casks in long format. Has no effect when a formula or cask name is passed as an argument."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "Reverse the order of the formulae and/or casks sort to list the oldest entries first. Has no effect when a formula or cask name is passed as an argument."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Sort formulae and/or casks by time modified, listing most recently modified first. Has no effect when a formula or cask name is passed as an argument."
@@ -1020,57 +895,49 @@
   },
   {
     "name": "brew log",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --patch",
         "description": "Also print patch from commit."
       },
       {
-        "type": "long",
         "key": "patch",
         "title": "-p, --patch",
         "description": "Also print patch from commit."
       },
       {
-        "type": "long",
         "key": "stat",
         "title": "--stat",
         "description": "Also print diffstat from commit."
       },
       {
-        "type": "long",
         "key": "oneline",
         "title": "--oneline",
         "description": "Print only one line per commit."
       },
       {
-        "type": "short",
         "key": "1",
         "title": "-1",
         "description": "Print only one commit."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --max-count",
         "description": "Print only a specified number of commits."
       },
       {
-        "type": "long",
         "key": "max-count",
         "title": "-n, --max-count",
         "description": "Print only a specified number of commits."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -1079,27 +946,24 @@
   },
   {
     "name": "brew migrate",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Treat installed formula and provided formula as if they are from the same taps and migrate them anyway."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Treat installed formula and provided formula as if they are from the same taps and migrate them anyway."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Show what would be migrated, but do not actually migrate anything."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Show what would be migrated, but do not actually migrate anything."
@@ -1108,9 +972,9 @@
   },
   {
     "name": "brew missing",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "hide",
         "title": "--hide",
         "description": "Act as if none of the specified hidden are installed. hidden should be a comma-separated list of formulae."
@@ -1119,27 +983,24 @@
   },
   {
     "name": "brew options",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "compact",
         "title": "--compact",
         "description": "Show all options on a single line separated by spaces."
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Show options for formulae that are currently installed."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Show options for all available formulae."
       },
       {
-        "type": "long",
         "key": "command",
         "title": "--command",
         "description": "Show options for the specified command."
@@ -1148,69 +1009,59 @@
   },
   {
     "name": "brew outdated",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "List only the names of outdated kegs (takes precedence over --verbose)."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "List only the names of outdated kegs (takes precedence over --verbose)."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Include detailed version information."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Include detailed version information."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "List only outdated formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "List only outdated casks."
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Print output in JSON format. There are two versions: v1 and v2. v1 is deprecated and is currently the default if no version is specified. v2 prints outdated formulae and casks."
       },
       {
-        "type": "long",
         "key": "fetch-HEAD",
         "title": "--fetch-HEAD",
         "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released."
       },
       {
-        "type": "long",
         "key": "greedy",
         "title": "--greedy",
         "description": "Print outdated casks with auto_updates true or version :latest."
       },
       {
-        "type": "long",
         "key": "greedy-latest",
         "title": "--greedy-latest",
         "description": "Print outdated casks including those with version :latest."
       },
       {
-        "type": "long",
         "key": "greedy-auto-updates",
         "title": "--greedy-auto-updates",
         "description": "Print outdated casks including those with auto_updates true."
@@ -1219,23 +1070,24 @@
   },
   {
     "name": "brew pin",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew postinstall",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew readall",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "aliases",
         "title": "--aliases",
         "description": "Verify any alias symlinks in each tap."
       },
       {
-        "type": "long",
         "key": "syntax",
         "title": "--syntax",
         "description": "Syntax-check all of Homebrew's Ruby files (if no <tap> is passed)."
@@ -1244,129 +1096,109 @@
   },
   {
     "name": "brew reinstall",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --debug",
         "description": "If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory."
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "-d, --debug",
         "description": "If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Install without checking for previously installed keg-only or non-migrated versions."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Install without checking for previously installed keg-only or non-migrated versions."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Print the verification and postinstall steps."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Print the verification and postinstall steps."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --build-from-source",
         "description": "Compile formula from source even if a bottle is available."
       },
       {
-        "type": "long",
         "key": "build-from-source",
         "title": "-s, --build-from-source",
         "description": "Compile formula from source even if a bottle is available."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "Download and patch formula, then open a shell. This allows the user to run ./configure --help and otherwise determine how to turn the software package into a Homebrew package."
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "Download and patch formula, then open a shell. This allows the user to run ./configure --help and otherwise determine how to turn the software package into a Homebrew package."
       },
       {
-        "type": "long",
         "key": "force-bottle",
         "title": "--force-bottle",
         "description": "Install from a bottle if it exists for the current or newest version of macOS, even if it would not normally be used for installation."
       },
       {
-        "type": "long",
         "key": "keep-tmp",
         "title": "--keep-tmp",
         "description": "Retain the temporary files created during installation."
       },
       {
-        "type": "long",
         "key": "display-times",
         "title": "--display-times",
         "description": "Print install times for each formula at the end of the run."
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --git",
         "description": "Create a Git repository, useful for creating patches to the software."
       },
       {
-        "type": "long",
         "key": "git",
         "title": "-g, --git",
         "description": "Create a Git repository, useful for creating patches to the software."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
       },
       {
-        "type": "long",
         "key": "binaries",
         "title": "--[no-]binaries",
         "description": "Disable/enable linking of helper executables (default: enabled)."
       },
       {
-        "type": "long",
         "key": "require-sha",
         "title": "--require-sha",
         "description": "Require all casks to have a checksum."
       },
       {
-        "type": "long",
         "key": "quarantine",
         "title": "--[no-]quarantine",
         "description": "Disable/enable quarantining of downloads (default: enabled)."
       },
       {
-        "type": "long",
         "key": "skip-cask-deps",
         "title": "--skip-cask-deps",
         "description": "Skip installing cask dependencies."
@@ -1375,81 +1207,69 @@
   },
   {
     "name": "brew search",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Search online and locally for formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Search online and locally for casks."
       },
       {
-        "type": "long",
         "key": "desc",
         "title": "--desc",
         "description": "Search for formulae with a description matching text and casks with a name matching text."
       },
       {
-        "type": "long",
         "key": "pull-request",
         "title": "--pull-request",
         "description": "Search for GitHub pull requests containing text."
       },
       {
-        "type": "long",
         "key": "open",
         "title": "--open",
         "description": "Search for only open GitHub pull requests."
       },
       {
-        "type": "long",
         "key": "closed",
         "title": "--closed",
         "description": "Search for only closed GitHub pull requests."
       },
       {
-        "type": "long",
         "key": "repology",
         "title": "--repology",
         "description": "Search for text in the given database."
       },
       {
-        "type": "long",
         "key": "macports",
         "title": "--macports",
         "description": "Search for text in the given database."
       },
       {
-        "type": "long",
         "key": "fink",
         "title": "--fink",
         "description": "Search for text in the given database."
       },
       {
-        "type": "long",
         "key": "opensuse",
         "title": "--opensuse",
         "description": "Search for text in the given database."
       },
       {
-        "type": "long",
         "key": "fedora",
         "title": "--fedora",
         "description": "Search for text in the given database."
       },
       {
-        "type": "long",
         "key": "debian",
         "title": "--debian",
         "description": "Search for text in the given database."
       },
       {
-        "type": "long",
         "key": "ubuntu",
         "title": "--ubuntu",
         "description": "Search for text in the given database."
@@ -1458,43 +1278,39 @@
   },
   {
     "name": "brew shellenv",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew tap",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "full",
         "title": "--full",
         "description": "Convert a shallow clone to a full clone without untapping. Taps are only cloned as shallow clones if --shallow was originally passed."
       },
       {
-        "type": "long",
         "key": "shallow",
         "title": "--shallow",
         "description": "Fetch tap as a shallow clone rather than a full clone. Useful for continuous integration."
       },
       {
-        "type": "long",
         "key": "force-auto-update",
         "title": "--force-auto-update",
         "description": "Auto-update tap even if it is not hosted on GitHub. By default, only taps hosted on GitHub are auto-updated (for performance reasons)."
       },
       {
-        "type": "long",
         "key": "custom-remote",
         "title": "--custom-remote",
         "description": "Install or change a tap with a custom remote. Useful for mirrors."
       },
       {
-        "type": "long",
         "key": "repair",
         "title": "--repair",
         "description": "Migrate tapped formulae from symlink-based to directory-based structure."
       },
       {
-        "type": "long",
         "key": "list-pinned",
         "title": "--list-pinned",
         "description": "List all pinned taps."
@@ -1503,15 +1319,14 @@
   },
   {
     "name": "brew tap-info",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Show information on each installed tap."
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Print a JSON representation of tap. Currently the default and only accepted value for version is v1. See the docs for examples of using the JSON output: https://docs.brew.sh/Querying-Brew"
@@ -1520,39 +1335,34 @@
   },
   {
     "name": "brew uninstall",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Delete all installed versions of formula. Uninstall even if cask is not installed, overwrite existing files and ignore errors when removing files."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Delete all installed versions of formula. Uninstall even if cask is not installed, overwrite existing files and ignore errors when removing files."
       },
       {
-        "type": "long",
         "key": "zap",
         "title": "--zap",
         "description": "Remove all files associated with a cask. May remove files which are shared between applications."
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
         "description": "Don't fail uninstall, even if formula is a dependency of any installed formulae."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -1561,39 +1371,34 @@
   },
   {
     "name": "brew remove",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Delete all installed versions of formula. Uninstall even if cask is not installed, overwrite existing files and ignore errors when removing files."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Delete all installed versions of formula. Uninstall even if cask is not installed, overwrite existing files and ignore errors when removing files."
       },
       {
-        "type": "long",
         "key": "zap",
         "title": "--zap",
         "description": "Remove all files associated with a cask. May remove files which are shared between applications."
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
         "description": "Don't fail uninstall, even if formula is a dependency of any installed formulae."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -1602,39 +1407,34 @@
   },
   {
     "name": "brew rm",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Delete all installed versions of formula. Uninstall even if cask is not installed, overwrite existing files and ignore errors when removing files."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Delete all installed versions of formula. Uninstall even if cask is not installed, overwrite existing files and ignore errors when removing files."
       },
       {
-        "type": "long",
         "key": "zap",
         "title": "--zap",
         "description": "Remove all files associated with a cask. May remove files which are shared between applications."
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
         "description": "Don't fail uninstall, even if formula is a dependency of any installed formulae."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -1643,15 +1443,14 @@
   },
   {
     "name": "brew unlink",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "List files which would be unlinked without actually unlinking or deleting any files."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "List files which would be unlinked without actually unlinking or deleting any files."
@@ -1660,19 +1459,19 @@
   },
   {
     "name": "brew unpin",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew untap",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Untap even if formulae or casks from this tap are currently installed."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Untap even if formulae or casks from this tap are currently installed."
@@ -1681,27 +1480,24 @@
   },
   {
     "name": "brew update",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "merge",
         "title": "--merge",
         "description": "Use git merge to apply updates (rather than git rebase)."
       },
       {
-        "type": "long",
         "key": "preinstall",
         "title": "--preinstall",
         "description": "Run on auto-updates (e.g. before brew install). Skips some slower steps."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Always do a slower, full update check (even if unnecessary)."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Always do a slower, full update check (even if unnecessary)."
@@ -1710,163 +1506,139 @@
   },
   {
     "name": "brew update-reset",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew upgrade",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --debug",
         "description": "If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory."
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "-d, --debug",
         "description": "If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Install formulae without checking for previously installed keg-only or non-migrated versions. When installing casks, overwrite existing files (binaries and symlinks are excluded, unless originally from the same cask)."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Install formulae without checking for previously installed keg-only or non-migrated versions. When installing casks, overwrite existing files (binaries and symlinks are excluded, unless originally from the same cask)."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Print the verification and postinstall steps."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Print the verification and postinstall steps."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Show what would be upgraded, but do not actually upgrade anything."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Show what would be upgraded, but do not actually upgrade anything."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae. If no named arguments are specified, upgrade only outdated formulae."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --build-from-source",
         "description": "Compile formula from source even if a bottle is available."
       },
       {
-        "type": "long",
         "key": "build-from-source",
         "title": "-s, --build-from-source",
         "description": "Compile formula from source even if a bottle is available."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "Download and patch formula, then open a shell. This allows the user to run ./configure --help and otherwise determine how to turn the software package into a Homebrew package."
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "Download and patch formula, then open a shell. This allows the user to run ./configure --help and otherwise determine how to turn the software package into a Homebrew package."
       },
       {
-        "type": "long",
         "key": "force-bottle",
         "title": "--force-bottle",
         "description": "Install from a bottle if it exists for the current or newest version of macOS, even if it would not normally be used for installation."
       },
       {
-        "type": "long",
         "key": "fetch-HEAD",
         "title": "--fetch-HEAD",
         "description": "Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released."
       },
       {
-        "type": "long",
         "key": "ignore-pinned",
         "title": "--ignore-pinned",
         "description": "Set a successful exit status even if pinned formulae are not upgraded."
       },
       {
-        "type": "long",
         "key": "keep-tmp",
         "title": "--keep-tmp",
         "description": "Retain the temporary files created during installation."
       },
       {
-        "type": "long",
         "key": "display-times",
         "title": "--display-times",
         "description": "Print install times for each package at the end of the run."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks. If no named arguments are specified, upgrade only outdated casks."
       },
       {
-        "type": "long",
         "key": "binaries",
         "title": "--[no-]binaries",
         "description": "Disable/enable linking of helper executables (default: enabled)."
       },
       {
-        "type": "long",
         "key": "require-sha",
         "title": "--require-sha",
         "description": "Require all casks to have a checksum."
       },
       {
-        "type": "long",
         "key": "quarantine",
         "title": "--[no-]quarantine",
         "description": "Disable/enable quarantining of downloads (default: enabled)."
       },
       {
-        "type": "long",
         "key": "skip-cask-deps",
         "title": "--skip-cask-deps",
         "description": "Skip installing cask dependencies."
       },
       {
-        "type": "long",
         "key": "greedy",
         "title": "--greedy",
         "description": "Also include casks with auto_updates true or version :latest."
       },
       {
-        "type": "long",
         "key": "greedy-latest",
         "title": "--greedy-latest",
         "description": "Also include casks with version :latest."
       },
       {
-        "type": "long",
         "key": "greedy-auto-updates",
         "title": "--greedy-auto-updates",
         "description": "Also include casks with auto_updates true."
@@ -1875,51 +1647,44 @@
   },
   {
     "name": "brew uses",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "recursive",
         "title": "--recursive",
         "description": "Resolve more than one level of dependencies."
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Only list formulae and casks that are currently installed."
       },
       {
-        "type": "long",
         "key": "include-build",
         "title": "--include-build",
         "description": "Include all formulae that specify formula as :build type dependency."
       },
       {
-        "type": "long",
         "key": "include-test",
         "title": "--include-test",
         "description": "Include all formulae that specify formula as :test type dependency."
       },
       {
-        "type": "long",
         "key": "include-optional",
         "title": "--include-optional",
         "description": "Include all formulae that specify formula as :optional type dependency."
       },
       {
-        "type": "long",
         "key": "skip-recommended",
         "title": "--skip-recommended",
         "description": "Skip all formulae that specify formula as :recommended type dependency."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Include only formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Include only casks."
@@ -1928,15 +1693,14 @@
   },
   {
     "name": "brew environment",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "shell",
         "title": "--shell",
         "description": "Generate a list of environment variables for the specified shell, or --shell=auto to detect the current shell."
       },
       {
-        "type": "long",
         "key": "plain",
         "title": "--plain",
         "description": "Generate plain output even when piped."
@@ -1945,123 +1709,104 @@
   },
   {
     "name": "brew audit",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "strict",
         "title": "--strict",
         "description": "Run additional, stricter style checks."
       },
       {
-        "type": "long",
         "key": "git",
         "title": "--git",
         "description": "Run additional, slower style checks that navigate the Git repository."
       },
       {
-        "type": "long",
         "key": "online",
         "title": "--online",
         "description": "Run additional, slower style checks that require a network connection."
       },
       {
-        "type": "long",
         "key": "new",
         "title": "--new",
         "description": "Run various additional style checks to determine if a new formula or cask is eligible for Homebrew. This should be used when creating new formula and implies --strict and --online."
       },
       {
-        "type": "long",
         "key": "appcast",
         "title": "--[no-]appcast",
         "description": "Audit the appcast."
       },
       {
-        "type": "long",
         "key": "token-conflicts",
         "title": "--token-conflicts",
         "description": "Audit for token conflicts."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Check the formulae within the given tap, specified as user/repo."
       },
       {
-        "type": "long",
         "key": "fix",
         "title": "--fix",
         "description": "Fix style violations automatically using RuboCop's auto-correct feature."
       },
       {
-        "type": "long",
         "key": "display-cop-names",
         "title": "--display-cop-names",
         "description": "Include the RuboCop cop name for each violation in the output."
       },
       {
-        "type": "long",
         "key": "display-filename",
         "title": "--display-filename",
         "description": "Prefix every line of output with the file or formula name being audited, to make output easy to grep."
       },
       {
-        "type": "long",
         "key": "display-failures-only",
         "title": "--display-failures-only",
         "description": "Only display casks that fail the audit. This is the default for formulae."
       },
       {
-        "type": "long",
         "key": "skip-style",
         "title": "--skip-style",
         "description": "Skip running non-RuboCop style checks. Useful if you plan on running brew style separately. Enabled by default unless a formula is specified by name."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --audit-debug",
         "description": "Enable debugging and profiling of audit methods."
       },
       {
-        "type": "long",
         "key": "audit-debug",
         "title": "-D, --audit-debug",
         "description": "Enable debugging and profiling of audit methods."
       },
       {
-        "type": "long",
         "key": "only",
         "title": "--only",
         "description": "Specify a comma-separated method list to only run the methods named audit_method."
       },
       {
-        "type": "long",
         "key": "except",
         "title": "--except",
         "description": "Specify a comma-separated method list to skip running the methods named audit_method."
       },
       {
-        "type": "long",
         "key": "only-cops",
         "title": "--only-cops",
         "description": "Specify a comma-separated cops list to check for violations of only the listed RuboCop cops."
       },
       {
-        "type": "long",
         "key": "except-cops",
         "title": "--except-cops",
         "description": "Specify a comma-separated cops list to skip checking for violations of the listed RuboCop cops."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -2070,75 +1815,64 @@
   },
   {
     "name": "brew bottle",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "skip-relocation",
         "title": "--skip-relocation",
         "description": "Do not check if the bottle can be marked as relocatable."
       },
       {
-        "type": "long",
         "key": "force-core-tap",
         "title": "--force-core-tap",
         "description": "Build a bottle even if formula is not in homebrew/core or any installed taps."
       },
       {
-        "type": "long",
         "key": "no-rebuild",
         "title": "--no-rebuild",
         "description": "If the formula specifies a rebuild version, remove it from the generated DSL."
       },
       {
-        "type": "long",
         "key": "keep-old",
         "title": "--keep-old",
         "description": "If the formula specifies a rebuild version, attempt to preserve its value in the generated DSL."
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Write bottle information to a JSON file, which can be used as the value for --merge."
       },
       {
-        "type": "long",
         "key": "merge",
         "title": "--merge",
         "description": "Generate an updated bottle block for a formula and optionally merge it into the formula file. Instead of a formula name, requires the path to a JSON file generated with brew bottle --json formula."
       },
       {
-        "type": "long",
         "key": "write",
         "title": "--write",
         "description": "Write changes to the formula file. A new commit will be generated unless --no-commit is passed."
       },
       {
-        "type": "long",
         "key": "no-commit",
         "title": "--no-commit",
         "description": "When passed with --write, a new commit will not generated after writing changes to the formula file."
       },
       {
-        "type": "long",
         "key": "only-json-tab",
         "title": "--only-json-tab",
         "description": "When passed with --json, the tab will be written to the JSON file but not the bottle."
       },
       {
-        "type": "long",
         "key": "committer",
         "title": "--committer",
         "description": "Specify a committer name and email in git's standard author format."
       },
       {
-        "type": "long",
         "key": "root-url",
         "title": "--root-url",
         "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
-        "type": "long",
         "key": "root-url-using",
         "title": "--root-url-using",
         "description": "Use the specified download strategy class for downloading the bottle's URL instead of Homebrew's default."
@@ -2147,33 +1881,29 @@
   },
   {
     "name": "brew bump",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "full-name",
         "title": "--full-name",
         "description": "Print formulae/casks with fully-qualified names."
       },
       {
-        "type": "long",
         "key": "no-pull-requests",
         "title": "--no-pull-requests",
         "description": "Do not retrieve pull requests from GitHub."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Check only formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Check only casks."
       },
       {
-        "type": "long",
         "key": "limit",
         "title": "--limit",
         "description": "Limit number of package results returned."
@@ -2182,99 +1912,84 @@
   },
   {
     "name": "brew bump-cask-pr",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "write",
         "title": "--write",
         "description": "Make the expected file modifications without taking any Git actions."
       },
       {
-        "type": "long",
         "key": "commit",
         "title": "--commit",
         "description": "When passed with --write, generate a new commit after writing changes to the cask file."
       },
       {
-        "type": "long",
         "key": "no-audit",
         "title": "--no-audit",
         "description": "Don't run brew audit before opening the PR."
       },
       {
-        "type": "long",
         "key": "online",
         "title": "--online",
         "description": "Run brew audit --online before opening the PR."
       },
       {
-        "type": "long",
         "key": "no-style",
         "title": "--no-style",
         "description": "Don't run brew style --fix before opening the PR."
       },
       {
-        "type": "long",
         "key": "no-browse",
         "title": "--no-browse",
         "description": "Print the pull request URL instead of opening in a browser."
       },
       {
-        "type": "long",
         "key": "no-fork",
         "title": "--no-fork",
         "description": "Don't try to fork the repository."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "Specify the new version for the cask."
       },
       {
-        "type": "long",
         "key": "message",
         "title": "--message",
         "description": "Append message to the default pull request message."
       },
       {
-        "type": "long",
         "key": "url",
         "title": "--url",
         "description": "Specify the URL for the new download."
       },
       {
-        "type": "long",
         "key": "sha256",
         "title": "--sha256",
         "description": "Specify the SHA-256 checksum of the new download."
       },
       {
-        "type": "long",
         "key": "fork-org",
         "title": "--fork-org",
         "description": "Use the specified GitHub organization for forking."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Ignore duplicate open PRs."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Ignore duplicate open PRs."
@@ -2283,117 +1998,99 @@
   },
   {
     "name": "brew bump-formula-pr",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "write-only",
         "title": "--write-only",
         "description": "Make the expected file modifications without taking any Git actions."
       },
       {
-        "type": "long",
         "key": "commit",
         "title": "--commit",
         "description": "When passed with --write-only, generate a new commit after writing changes to the formula file."
       },
       {
-        "type": "long",
         "key": "no-audit",
         "title": "--no-audit",
         "description": "Don't run brew audit before opening the PR."
       },
       {
-        "type": "long",
         "key": "strict",
         "title": "--strict",
         "description": "Run brew audit --strict before opening the PR."
       },
       {
-        "type": "long",
         "key": "online",
         "title": "--online",
         "description": "Run brew audit --online before opening the PR."
       },
       {
-        "type": "long",
         "key": "no-browse",
         "title": "--no-browse",
         "description": "Print the pull request URL instead of opening in a browser."
       },
       {
-        "type": "long",
         "key": "no-fork",
         "title": "--no-fork",
         "description": "Don't try to fork the repository."
       },
       {
-        "type": "long",
         "key": "mirror",
         "title": "--mirror",
         "description": "Use the specified URL as a mirror URL. If URL is a comma-separated list of URLs, multiple mirrors will be added."
       },
       {
-        "type": "long",
         "key": "fork-org",
         "title": "--fork-org",
         "description": "Use the specified GitHub organization for forking."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "Use the specified version to override the value parsed from the URL or tag. Note that --version=0 can be used to delete an existing version override from a formula if it has become redundant."
       },
       {
-        "type": "long",
         "key": "message",
         "title": "--message",
         "description": "Append message to the default pull request message."
       },
       {
-        "type": "long",
         "key": "url",
         "title": "--url",
         "description": "Specify the URL for the new download. If a URL is specified, the SHA-256 checksum of the new download should also be specified."
       },
       {
-        "type": "long",
         "key": "sha256",
         "title": "--sha256",
         "description": "Specify the SHA-256 checksum of the new download."
       },
       {
-        "type": "long",
         "key": "tag",
         "title": "--tag",
         "description": "Specify the new git commit tag for the formula."
       },
       {
-        "type": "long",
         "key": "revision",
         "title": "--revision",
         "description": "Specify the new commit revision corresponding to the specified git tag or specified version."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Ignore duplicate open PRs. Remove all mirrors if --mirror was not specified."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Ignore duplicate open PRs. Remove all mirrors if --mirror was not specified."
@@ -2402,27 +2099,24 @@
   },
   {
     "name": "brew bump-revision",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "write-only",
         "title": "--write-only",
         "description": "Make the expected file modifications without taking any Git actions."
       },
       {
-        "type": "long",
         "key": "message",
         "title": "--message",
         "description": "Append message to the default commit message."
@@ -2431,27 +2125,24 @@
   },
   {
     "name": "brew bump-unversioned-casks",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Do everything except caching state and opening pull requests."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Do everything except caching state and opening pull requests."
       },
       {
-        "type": "long",
         "key": "limit",
         "title": "--limit",
         "description": "Maximum runtime in minutes."
       },
       {
-        "type": "long",
         "key": "state-file",
         "title": "--state-file",
         "description": "File for caching state."
@@ -2460,15 +2151,14 @@
   },
   {
     "name": "brew cat",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -2477,121 +2167,104 @@
   },
   {
     "name": "brew command",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew create",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "autotools",
         "title": "--autotools",
         "description": "Create a basic template for an Autotools-style build."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Create a basic template for a cask."
       },
       {
-        "type": "long",
         "key": "cmake",
         "title": "--cmake",
         "description": "Create a basic template for a CMake-style build."
       },
       {
-        "type": "long",
         "key": "crystal",
         "title": "--crystal",
         "description": "Create a basic template for a Crystal build."
       },
       {
-        "type": "long",
         "key": "go",
         "title": "--go",
         "description": "Create a basic template for a Go build."
       },
       {
-        "type": "long",
         "key": "meson",
         "title": "--meson",
         "description": "Create a basic template for a Meson-style build."
       },
       {
-        "type": "long",
         "key": "node",
         "title": "--node",
         "description": "Create a basic template for a Node build."
       },
       {
-        "type": "long",
         "key": "perl",
         "title": "--perl",
         "description": "Create a basic template for a Perl build."
       },
       {
-        "type": "long",
         "key": "python",
         "title": "--python",
         "description": "Create a basic template for a Python build."
       },
       {
-        "type": "long",
         "key": "ruby",
         "title": "--ruby",
         "description": "Create a basic template for a Ruby build."
       },
       {
-        "type": "long",
         "key": "rust",
         "title": "--rust",
         "description": "Create a basic template for a Rust build."
       },
       {
-        "type": "long",
         "key": "no-fetch",
         "title": "--no-fetch",
         "description": "Homebrew will not download URL to the cache and will thus not add its SHA-256 to the formula for you, nor will it check the GitHub API for GitHub projects (to fill out its description and homepage)."
       },
       {
-        "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
         "description": "Indicate that URL points to the package's repository rather than a file."
       },
       {
-        "type": "long",
         "key": "set-name",
         "title": "--set-name",
         "description": "Explicitly set the name of the new formula or cask."
       },
       {
-        "type": "long",
         "key": "set-version",
         "title": "--set-version",
         "description": "Explicitly set the version of the new formula or cask."
       },
       {
-        "type": "long",
         "key": "set-license",
         "title": "--set-license",
         "description": "Explicitly set the license of the new formula."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Generate the new formula within the given tap, specified as user/repo."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Ignore errors for disallowed formula names and names that shadow aliases."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Ignore errors for disallowed formula names and names that shadow aliases."
@@ -2600,51 +2273,44 @@
   },
   {
     "name": "brew dispatch-build-bottle",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Target tap repository (default: homebrew/core)."
       },
       {
-        "type": "long",
         "key": "issue",
         "title": "--issue",
         "description": "If specified, post a comment to this issue number if the job fails."
       },
       {
-        "type": "long",
         "key": "macos",
         "title": "--macos",
         "description": "Version of macOS the bottle should be built for."
       },
       {
-        "type": "long",
         "key": "workflow",
         "title": "--workflow",
         "description": "Dispatch specified workflow (default: dispatch-build-bottle.yml)."
       },
       {
-        "type": "long",
         "key": "upload",
         "title": "--upload",
         "description": "Upload built bottles."
       },
       {
-        "type": "long",
         "key": "linux",
         "title": "--linux",
         "description": "Dispatch bottle for Linux (using GitHub runners)."
       },
       {
-        "type": "long",
         "key": "linux-self-hosted",
         "title": "--linux-self-hosted",
         "description": "Dispatch bottle for Linux (using self-hosted runner)."
       },
       {
-        "type": "long",
         "key": "linux-wheezy",
         "title": "--linux-wheezy",
         "description": "Use Debian Wheezy container for building the bottle on Linux."
@@ -2653,15 +2319,14 @@
   },
   {
     "name": "brew edit",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
@@ -2670,21 +2335,19 @@
   },
   {
     "name": "brew extract",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "Extract the specified version of formula instead of the most recent."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Overwrite the destination formula if it already exists."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Overwrite the destination formula if it already exists."
@@ -2693,13 +2356,14 @@
   },
   {
     "name": "brew formula",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew generate-man-completions",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "fail-if-not-changed",
         "title": "--fail-if-not-changed",
         "description": "Return a failing status code if no changes are detected in the manpage outputs. This can be used to notify CI when the manpages are out of date. Additionally, the date used in new manpages will match those in the existing manpages (to allow comparison without factoring in the date)."
@@ -2708,9 +2372,9 @@
   },
   {
     "name": "brew install-bundler-gems",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "groups",
         "title": "--groups",
         "description": "Installs the specified comma-separated list of gem groups (default: last used)."
@@ -2719,15 +2383,14 @@
   },
   {
     "name": "brew irb",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "examples",
         "title": "--examples",
         "description": "Show several examples."
       },
       {
-        "type": "long",
         "key": "pry",
         "title": "--pry",
         "description": "Use Pry instead of IRB. Implied if HOMEBREW_PRY is set."
@@ -2736,21 +2399,19 @@
   },
   {
     "name": "brew linkage",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "test",
         "title": "--test",
         "description": "Show only missing libraries and exit with a non-zero status if any missing libraries are found."
       },
       {
-        "type": "long",
         "key": "reverse",
         "title": "--reverse",
         "description": "For every library that a keg references, print its dylib path followed by the binaries that link to it."
       },
       {
-        "type": "long",
         "key": "cached",
         "title": "--cached",
         "description": "Print the cached linkage values stored in HOMEBREW_CACHE, set by a previous brew linkage run."
@@ -2759,63 +2420,54 @@
   },
   {
     "name": "brew livecheck",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "full-name",
         "title": "--full-name",
         "description": "Print formulae/casks with fully-qualified names."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Check formulae/casks within the given tap, specified as user/repo."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Check all available formulae/casks."
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Check formulae/casks that are currently installed."
       },
       {
-        "type": "long",
         "key": "newer-only",
         "title": "--newer-only",
         "description": "Show the latest version only if it's newer than the formula/cask."
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Output information in JSON format."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Only check formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Only check casks."
@@ -2824,63 +2476,54 @@
   },
   {
     "name": "brew lc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "full-name",
         "title": "--full-name",
         "description": "Print formulae/casks with fully-qualified names."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Check formulae/casks within the given tap, specified as user/repo."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Check all available formulae/casks."
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "--installed",
         "description": "Check formulae/casks that are currently installed."
       },
       {
-        "type": "long",
         "key": "newer-only",
         "title": "--newer-only",
         "description": "Show the latest version only if it's newer than the formula/cask."
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Output information in JSON format."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Suppress warnings, don't print a progress bar for JSON output."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Only check formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Only check casks."
@@ -2889,51 +2532,44 @@
   },
   {
     "name": "brew pr-automerge",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Target tap repository (default: homebrew/core)."
       },
       {
-        "type": "long",
         "key": "with-label",
         "title": "--with-label",
         "description": "Pull requests must have this label."
       },
       {
-        "type": "long",
         "key": "without-labels",
         "title": "--without-labels",
         "description": "Pull requests must not have these labels (default: do not merge, new formula, automerge-skip, linux to homebrew-core)."
       },
       {
-        "type": "long",
         "key": "without-approval",
         "title": "--without-approval",
         "description": "Pull requests do not require approval to be merged."
       },
       {
-        "type": "long",
         "key": "publish",
         "title": "--publish",
         "description": "Run brew pr-publish on matching pull requests."
       },
       {
-        "type": "long",
         "key": "autosquash",
         "title": "--autosquash",
         "description": "Instruct brew pr-publish to automatically reformat and reword commits in the pull request to our preferred format."
       },
       {
-        "type": "long",
         "key": "no-autosquash",
         "title": "--no-autosquash",
         "description": "Instruct brew pr-publish to skip automatically reformatting and rewording commits in the pull request to the preferred format."
       },
       {
-        "type": "long",
         "key": "ignore-failures",
         "title": "--ignore-failures",
         "description": "Include pull requests that have failing status checks."
@@ -2942,39 +2578,34 @@
   },
   {
     "name": "brew pr-publish",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "autosquash",
         "title": "--autosquash",
         "description": "If supported on the target tap, automatically reformat and reword commits in the pull request to our preferred format."
       },
       {
-        "type": "long",
         "key": "no-autosquash",
         "title": "--no-autosquash",
         "description": "Skip automatically reformatting and rewording commits in the pull request to the preferred format, even if supported on the target tap."
       },
       {
-        "type": "long",
         "key": "branch",
         "title": "--branch",
         "description": "Branch to publish to (default: master)."
       },
       {
-        "type": "long",
         "key": "message",
         "title": "--message",
         "description": "Message to include when autosquashing revision bumps, deletions, and rebuilds."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Target tap repository (default: homebrew/core)."
       },
       {
-        "type": "long",
         "key": "workflow",
         "title": "--workflow",
         "description": "Target workflow filename (default: publish-commit-bottles.yml)."
@@ -2983,111 +2614,94 @@
   },
   {
     "name": "brew pr-pull",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "no-upload",
         "title": "--no-upload",
         "description": "Download the bottles but don't upload them."
       },
       {
-        "type": "long",
         "key": "no-commit",
         "title": "--no-commit",
         "description": "Do not generate a new commit before uploading."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "clean",
         "title": "--clean",
         "description": "Do not amend the commits from pull requests."
       },
       {
-        "type": "long",
         "key": "keep-old",
         "title": "--keep-old",
         "description": "If the formula specifies a rebuild version, attempt to preserve its value in the generated DSL."
       },
       {
-        "type": "long",
         "key": "autosquash",
         "title": "--autosquash",
         "description": "Automatically reformat and reword commits in the pull request to our preferred format."
       },
       {
-        "type": "long",
         "key": "branch-okay",
         "title": "--branch-okay",
         "description": "Do not warn if pulling to a branch besides the repository default (useful for testing)."
       },
       {
-        "type": "long",
         "key": "resolve",
         "title": "--resolve",
         "description": "When a patch fails to apply, leave in progress and allow user to resolve, instead of aborting."
       },
       {
-        "type": "long",
         "key": "warn-on-upload-failure",
         "title": "--warn-on-upload-failure",
         "description": "Warn instead of raising an error if the bottle upload fails. Useful for repairing bottle uploads that previously failed."
       },
       {
-        "type": "long",
         "key": "committer",
         "title": "--committer",
         "description": "Specify a committer name and email in git's standard author format."
       },
       {
-        "type": "long",
         "key": "message",
         "title": "--message",
         "description": "Message to include when autosquashing revision bumps, deletions, and rebuilds."
       },
       {
-        "type": "long",
         "key": "artifact",
         "title": "--artifact",
         "description": "Download artifacts with the specified name (default: bottles)."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Target tap repository (default: homebrew/core)."
       },
       {
-        "type": "long",
         "key": "root-url",
         "title": "--root-url",
         "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
-        "type": "long",
         "key": "root-url-using",
         "title": "--root-url-using",
         "description": "Use the specified download strategy class for downloading the bottle's URL instead of Homebrew's default."
       },
       {
-        "type": "long",
         "key": "workflows",
         "title": "--workflows",
         "description": "Retrieve artifacts from the specified workflow (default: tests.yml). Can be a comma-separated list to include multiple workflows."
       },
       {
-        "type": "long",
         "key": "ignore-missing-artifacts",
         "title": "--ignore-missing-artifacts",
         "description": "Comma-separated list of workflows which can be ignored if they have not been run."
@@ -3096,57 +2710,49 @@
   },
   {
     "name": "brew pr-upload",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "keep-old",
         "title": "--keep-old",
         "description": "If the formula specifies a rebuild version, attempt to preserve its value in the generated DSL."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "no-commit",
         "title": "--no-commit",
         "description": "Do not generate a new commit before uploading."
       },
       {
-        "type": "long",
         "key": "warn-on-upload-failure",
         "title": "--warn-on-upload-failure",
         "description": "Warn instead of raising an error if the bottle upload fails. Useful for repairing bottle uploads that previously failed."
       },
       {
-        "type": "long",
         "key": "committer",
         "title": "--committer",
         "description": "Specify a committer name and email in git's standard author format."
       },
       {
-        "type": "long",
         "key": "github-org",
         "title": "--github-org",
         "description": "Upload to the specified GitHub organisation's GitHub Packages (default: homebrew)."
       },
       {
-        "type": "long",
         "key": "root-url",
         "title": "--root-url",
         "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
-        "type": "long",
         "key": "root-url-using",
         "title": "--root-url-using",
         "description": "Use the specified download strategy class for downloading the bottle's URL instead of Homebrew's default."
@@ -3155,9 +2761,9 @@
   },
   {
     "name": "brew prof",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "stackprof",
         "title": "--stackprof",
         "description": "Use stackprof instead of ruby-prof (the default)."
@@ -3166,15 +2772,14 @@
   },
   {
     "name": "brew release",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "major",
         "title": "--major",
         "description": "Create a major release."
       },
       {
-        "type": "long",
         "key": "minor",
         "title": "--minor",
         "description": "Create a minor release."
@@ -3183,19 +2788,19 @@
   },
   {
     "name": "brew rubocop",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew ruby",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "Load a library using require."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e",
         "description": "Execute the given text string as a script."
@@ -3204,21 +2809,19 @@
   },
   {
     "name": "brew sh",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "env",
         "title": "--env",
         "description": "Use the standard PATH instead of superenv's when std is passed."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --cmd",
         "description": "Execute commands in a non-interactive shell."
       },
       {
-        "type": "long",
         "key": "cmd",
         "title": "-c, --cmd",
         "description": "Execute commands in a non-interactive shell."
@@ -3227,49 +2830,44 @@
   },
   {
     "name": "brew sponsors",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew style",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "fix",
         "title": "--fix",
         "description": "Fix style violations automatically using RuboCop's auto-correct feature."
       },
       {
-        "type": "long",
         "key": "display-cop-names",
         "title": "--display-cop-names",
         "description": "Include the RuboCop cop name for each violation in the output."
       },
       {
-        "type": "long",
         "key": "reset-cache",
         "title": "--reset-cache",
         "description": "Reset the RuboCop cache."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "Treat all named arguments as formulae."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
       },
       {
-        "type": "long",
         "key": "only-cops",
         "title": "--only-cops",
         "description": "Specify a comma-separated cops list to check for violations of only the listed RuboCop cops."
       },
       {
-        "type": "long",
         "key": "except-cops",
         "title": "--except-cops",
         "description": "Specify a comma-separated cops list to skip checking for violations of the listed RuboCop cops."
@@ -3278,21 +2876,19 @@
   },
   {
     "name": "brew tap-new",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "no-git",
         "title": "--no-git",
         "description": "Don't initialize a Git repository for the tap."
       },
       {
-        "type": "long",
         "key": "pull-label",
         "title": "--pull-label",
         "description": "Label name for pull requests ready to be pulled (default: pr-pull)."
       },
       {
-        "type": "long",
         "key": "branch",
         "title": "--branch",
         "description": "Initialize Git repository and setup GitHub Actions workflows with the specified branch name (default: main)."
@@ -3301,33 +2897,29 @@
   },
   {
     "name": "brew test",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Test formulae even if they are unlinked."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Test formulae even if they are unlinked."
       },
       {
-        "type": "long",
         "key": "HEAD",
         "title": "--HEAD",
         "description": "Test the head version of a formula."
       },
       {
-        "type": "long",
         "key": "keep-tmp",
         "title": "--keep-tmp",
         "description": "Retain the temporary files created for the test."
       },
       {
-        "type": "long",
         "key": "retry",
         "title": "--retry",
         "description": "Retry if a testing fails."
@@ -3336,45 +2928,39 @@
   },
   {
     "name": "brew tests",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "coverage",
         "title": "--coverage",
         "description": "Generate code coverage reports."
       },
       {
-        "type": "long",
         "key": "generic",
         "title": "--generic",
         "description": "Run only OS-agnostic tests."
       },
       {
-        "type": "long",
         "key": "no-compat",
         "title": "--no-compat",
         "description": "Do not load the compatibility layer when running tests."
       },
       {
-        "type": "long",
         "key": "online",
         "title": "--online",
         "description": "Include tests that use the GitHub API and tests that use any of the taps for official external commands."
       },
       {
-        "type": "long",
         "key": "byebug",
         "title": "--byebug",
         "description": "Enable debugging using byebug."
       },
       {
-        "type": "long",
         "key": "only",
         "title": "--only",
         "description": "Run only test_script_spec.rb. Appending :line_number will start at a specific line."
       },
       {
-        "type": "long",
         "key": "seed",
         "title": "--seed",
         "description": "Randomise tests with the specified value instead of a random seed."
@@ -3383,57 +2969,49 @@
   },
   {
     "name": "brew typecheck",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "fix",
         "title": "--fix",
         "description": "Automatically fix type errors."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence all non-critical errors."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence all non-critical errors."
       },
       {
-        "type": "long",
         "key": "update",
         "title": "--update",
         "description": "Update RBI files."
       },
       {
-        "type": "long",
         "key": "suggest-typed",
         "title": "--suggest-typed",
         "description": "Try upgrading typed sigils."
       },
       {
-        "type": "long",
         "key": "fail-if-not-changed",
         "title": "--fail-if-not-changed",
         "description": "Return a failing status code if all gems are up to date and gem definitions do not need a tapioca update."
       },
       {
-        "type": "long",
         "key": "dir",
         "title": "--dir",
         "description": "Typecheck all files in a specific directory."
       },
       {
-        "type": "long",
         "key": "file",
         "title": "--file",
         "description": "Typecheck a single file."
       },
       {
-        "type": "long",
         "key": "ignore",
         "title": "--ignore",
         "description": "Ignores input files that contain the given string in their paths (relative to the input path passed to Sorbet)."
@@ -3442,57 +3020,49 @@
   },
   {
     "name": "brew tc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "fix",
         "title": "--fix",
         "description": "Automatically fix type errors."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence all non-critical errors."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence all non-critical errors."
       },
       {
-        "type": "long",
         "key": "update",
         "title": "--update",
         "description": "Update RBI files."
       },
       {
-        "type": "long",
         "key": "suggest-typed",
         "title": "--suggest-typed",
         "description": "Try upgrading typed sigils."
       },
       {
-        "type": "long",
         "key": "fail-if-not-changed",
         "title": "--fail-if-not-changed",
         "description": "Return a failing status code if all gems are up to date and gem definitions do not need a tapioca update."
       },
       {
-        "type": "long",
         "key": "dir",
         "title": "--dir",
         "description": "Typecheck all files in a specific directory."
       },
       {
-        "type": "long",
         "key": "file",
         "title": "--file",
         "description": "Typecheck a single file."
       },
       {
-        "type": "long",
         "key": "ignore",
         "title": "--ignore",
         "description": "Ignores input files that contain the given string in their paths (relative to the input path passed to Sorbet)."
@@ -3501,21 +3071,19 @@
   },
   {
     "name": "brew unbottled",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "tag",
         "title": "--tag",
         "description": "Use the specified bottle tag (e.g. big_sur) instead of the current OS."
       },
       {
-        "type": "long",
         "key": "dependents",
         "title": "--dependents",
         "description": "Skip getting analytics data and sort by number of dependents instead."
       },
       {
-        "type": "long",
         "key": "total",
         "title": "--total",
         "description": "Print the number of unbottled and total formulae."
@@ -3524,39 +3092,34 @@
   },
   {
     "name": "brew unpack",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "destdir",
         "title": "--destdir",
         "description": "Create subdirectories in the directory named by path instead."
       },
       {
-        "type": "long",
         "key": "patch",
         "title": "--patch",
         "description": "Patches for formula will be applied to the unpacked source."
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --git",
         "description": "Initialise a Git repository in the unpacked source. This is useful for creating patches for the software."
       },
       {
-        "type": "long",
         "key": "git",
         "title": "-g, --git",
         "description": "Initialise a Git repository in the unpacked source. This is useful for creating patches for the software."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Overwrite the destination directory if it already exists."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Overwrite the destination directory if it already exists."
@@ -3565,9 +3128,9 @@
   },
   {
     "name": "brew update-license-data",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "fail-if-not-changed",
         "title": "--fail-if-not-changed",
         "description": "Return a failing status code if current license data's version is the same as the upstream. This can be used to notify CI when the SPDX license data is out of date."
@@ -3576,61 +3139,54 @@
   },
   {
     "name": "brew update-maintainers",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew update-python-resources",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --print-only",
         "description": "Print the updated resource blocks instead of changing formula."
       },
       {
-        "type": "long",
         "key": "print-only",
         "title": "-p, --print-only",
         "description": "Print the updated resource blocks instead of changing formula."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --silent",
         "description": "Suppress any output."
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "-s, --silent",
         "description": "Suppress any output."
       },
       {
-        "type": "long",
         "key": "ignore-non-pypi-packages",
         "title": "--ignore-non-pypi-packages",
         "description": "Don't fail if formula is not a PyPI package."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "Use the specified version when finding resources for formula. If no version is specified, the current version for formula will be used."
       },
       {
-        "type": "long",
         "key": "package-name",
         "title": "--package-name",
         "description": "Use the specified package-name when finding resources for formula. If no package name is specified, it will be inferred from the formula's stable URL."
       },
       {
-        "type": "long",
         "key": "extra-packages",
         "title": "--extra-packages",
         "description": "Include these additional packages when finding resources."
       },
       {
-        "type": "long",
         "key": "exclude-packages",
         "title": "--exclude-packages",
         "description": "Exclude these packages when finding resources."
@@ -3639,27 +3195,24 @@
   },
   {
     "name": "brew update-test",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "to-tag",
         "title": "--to-tag",
         "description": "Set HOMEBREW_UPDATE_TO_TAG to test updating between tags."
       },
       {
-        "type": "long",
         "key": "keep-tmp",
         "title": "--keep-tmp",
         "description": "Retain the temporary directory containing the new repository clone."
       },
       {
-        "type": "long",
         "key": "commit",
         "title": "--commit",
         "description": "Use the specified commit as the start commit."
       },
       {
-        "type": "long",
         "key": "before",
         "title": "--before",
         "description": "Use the commit at the specified date as the start commit."
@@ -3668,9 +3221,9 @@
   },
   {
     "name": "brew vendor-gems",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "update",
         "title": "--update",
         "description": "Update all vendored Gems to the latest version."
@@ -3679,9 +3232,9 @@
   },
   {
     "name": "brew alias",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "edit",
         "title": "--edit",
         "description": "Edit aliases in a text editor. Either one or all aliases may be opened at once. If the given alias doesn't exist it'll be pre-populated with a template."
@@ -3690,27 +3243,24 @@
   },
   {
     "name": "brew autoupdate",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "upgrade",
         "title": "--upgrade",
         "description": "Automatically upgrade your installed formulae. If the Caskroom exists locally Casks will be upgraded as well. Must be passed with start."
       },
       {
-        "type": "long",
         "key": "cleanup",
         "title": "--cleanup",
         "description": "Automatically clean brew's cache and logs. Must be passed with start."
       },
       {
-        "type": "long",
         "key": "enable-notification",
         "title": "--enable-notification",
         "description": "Send a notification when the autoupdate process has finished successfully, if terminal-notifier is installed & found. Note that currently a new experimental notifier runs automatically on macOS Catalina and newer, without requiring any external dependencies. Must be passed with start."
       },
       {
-        "type": "long",
         "key": "immediate",
         "title": "--immediate",
         "description": "Starts the autoupdate command immediately, instead of waiting for one interval (24 hours by default) to pass first. Must be passed with start."
@@ -3719,111 +3269,94 @@
   },
   {
     "name": "brew bundle",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "file",
         "title": "--file",
         "description": "Read the Brewfile from this location. Use --file=- to pipe to stdin/stdout."
       },
       {
-        "type": "long",
         "key": "global",
         "title": "--global",
         "description": "Read the Brewfile from ~/.Brewfile."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "install prints output from commands as they are run. check lists all missing dependencies."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "install prints output from commands as they are run. check lists all missing dependencies."
       },
       {
-        "type": "long",
         "key": "no-upgrade",
         "title": "--no-upgrade",
         "description": "install won't run brew upgrade on outdated dependencies. Note they may still be upgraded by brew install if needed."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "dump overwrites an existing Brewfile. cleanup actually performs its cleanup operations."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "dump overwrites an existing Brewfile. cleanup actually performs its cleanup operations."
       },
       {
-        "type": "long",
         "key": "cleanup",
         "title": "--cleanup",
         "description": "install performs cleanup operation, same as running cleanup --force."
       },
       {
-        "type": "long",
         "key": "no-lock",
         "title": "--no-lock",
         "description": "install won't output a Brewfile.lock.json."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "list all dependencies."
       },
       {
-        "type": "long",
         "key": "formula",
         "title": "--formula",
         "description": "list Homebrew dependencies."
       },
       {
-        "type": "long",
         "key": "cask",
         "title": "--cask",
         "description": "list Homebrew Cask dependencies."
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "list tap dependencies."
       },
       {
-        "type": "long",
         "key": "mas",
         "title": "--mas",
         "description": "list Mac App Store dependencies."
       },
       {
-        "type": "long",
         "key": "whalebrew",
         "title": "--whalebrew",
         "description": "list Whalebrew dependencies."
       },
       {
-        "type": "long",
         "key": "describe",
         "title": "--describe",
         "description": "dump adds a description comment above each line, unless the dependency does not have a description."
       },
       {
-        "type": "long",
         "key": "no-restart",
         "title": "--no-restart",
         "description": "dump does not add restart_service to formula lines."
       },
       {
-        "type": "long",
         "key": "zap",
         "title": "--zap",
         "description": "cleanup casks using the zap command instead of uninstall."
@@ -3832,19 +3365,19 @@
   },
   {
     "name": "brew command-not-found-init",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew services",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "file",
         "title": "--file",
         "description": "Use the plist file from this location to start or run the service."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Run subcommand on all services."
@@ -3853,207 +3386,174 @@
   },
   {
     "name": "brew test-bot",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "dry-run",
         "title": "--dry-run",
         "description": "Print what would be done rather than doing it."
       },
       {
-        "type": "long",
         "key": "cleanup",
         "title": "--cleanup",
         "description": "Clean all state from the Homebrew directory. Use with care!"
       },
       {
-        "type": "long",
         "key": "skip-setup",
         "title": "--skip-setup",
         "description": "Don't check if the local system is set up correctly."
       },
       {
-        "type": "long",
         "key": "build-from-source",
         "title": "--build-from-source",
         "description": "Build from source rather than building bottles."
       },
       {
-        "type": "long",
         "key": "build-dependents-from-source",
         "title": "--build-dependents-from-source",
         "description": "Build dependents from source rather than testing bottles."
       },
       {
-        "type": "long",
         "key": "junit",
         "title": "--junit",
         "description": "generate a JUnit XML test results file."
       },
       {
-        "type": "long",
         "key": "keep-old",
         "title": "--keep-old",
         "description": "Run brew bottle --keep-old to build new bottles for a single platform."
       },
       {
-        "type": "long",
         "key": "skip-relocation",
         "title": "--skip-relocation",
         "description": "Run brew bottle --skip-relocation to build new bottles that don't require relocation."
       },
       {
-        "type": "long",
         "key": "only-json-tab",
         "title": "--only-json-tab",
         "description": "Run brew bottle --only-json-tab to build new bottles that do not contain a tab."
       },
       {
-        "type": "long",
         "key": "local",
         "title": "--local",
         "description": "Ask Homebrew to write verbose logs under ./logs/ and set $HOME to ./home/"
       },
       {
-        "type": "long",
         "key": "tap",
         "title": "--tap",
         "description": "Use the Git repository of the given tap. Defaults to the core tap for syntax checking."
       },
       {
-        "type": "long",
         "key": "fail-fast",
         "title": "--fail-fast",
         "description": "Immediately exit on a failing step."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Print test step output in real time. Has the side effect of passing output as raw bytes instead of re-encoding in UTF-8."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Print test step output in real time. Has the side effect of passing output as raw bytes instead of re-encoding in UTF-8."
       },
       {
-        "type": "long",
         "key": "test-default-formula",
         "title": "--test-default-formula",
         "description": "Use a default testing formula when not building a tap and no other formulae are specified."
       },
       {
-        "type": "long",
         "key": "root-url",
         "title": "--root-url",
         "description": "Use the specified URL as the root of the bottle's URL instead of Homebrew's default."
       },
       {
-        "type": "long",
         "key": "git-name",
         "title": "--git-name",
         "description": "Set the Git author/committer names to the given name."
       },
       {
-        "type": "long",
         "key": "git-email",
         "title": "--git-email",
         "description": "Set the Git author/committer email to the given email."
       },
       {
-        "type": "long",
         "key": "publish",
         "title": "--publish",
         "description": "Publish the uploaded bottles."
       },
       {
-        "type": "long",
         "key": "skip-dependents",
         "title": "--skip-dependents",
         "description": "Don't test any dependents."
       },
       {
-        "type": "long",
         "key": "skip-recursive-dependents",
         "title": "--skip-recursive-dependents",
         "description": "Only test the direct dependents."
       },
       {
-        "type": "long",
         "key": "skip-unbottled-arm",
         "title": "--skip-unbottled-arm",
         "description": "Only test bottled formulae on Apple Silicon."
       },
       {
-        "type": "long",
         "key": "skip-unbottled-linux",
         "title": "--skip-unbottled-linux",
         "description": "Only test bottled formulae on Linux."
       },
       {
-        "type": "long",
         "key": "only-cleanup-before",
         "title": "--only-cleanup-before",
         "description": "Only run the pre-cleanup step. Needs --cleanup."
       },
       {
-        "type": "long",
         "key": "only-setup",
         "title": "--only-setup",
         "description": "Only run the local system setup check step."
       },
       {
-        "type": "long",
         "key": "only-tap-syntax",
         "title": "--only-tap-syntax",
         "description": "Only run the tap syntax check step."
       },
       {
-        "type": "long",
         "key": "only-formulae",
         "title": "--only-formulae",
         "description": "Only run the formulae steps."
       },
       {
-        "type": "long",
         "key": "only-formulae-detect",
         "title": "--only-formulae-detect",
         "description": "Only run the formulae detection steps."
       },
       {
-        "type": "long",
         "key": "only-formulae-dependents",
         "title": "--only-formulae-dependents",
         "description": "Only run the formulae dependents steps."
       },
       {
-        "type": "long",
         "key": "only-cleanup-after",
         "title": "--only-cleanup-after",
         "description": "Only run the post-cleanup step. Needs --cleanup."
       },
       {
-        "type": "long",
         "key": "testing-formulae",
         "title": "--testing-formulae",
         "description": "Use these testing formulae rather than running the formulae detection steps."
       },
       {
-        "type": "long",
         "key": "added-formulae",
         "title": "--added-formulae",
         "description": "Use these added formulae rather than running the formulae detection steps."
       },
       {
-        "type": "long",
         "key": "deleted-formulae",
         "title": "--deleted-formulae",
         "description": "Use these deleted formulae rather than running the formulae detection steps."
       },
       {
-        "type": "long",
         "key": "skipped-or-failed-formulae",
         "title": "--skipped-or-failed-formulae",
         "description": "Use these skipped or failed formulae from formulae steps for a formulae dependents step."
@@ -4062,13 +3562,14 @@
   },
   {
     "name": "brew unalias",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "brew which-formula",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "explain",
         "title": "--explain",
         "description": "Output explanation of how to get 'cmd' by installing one of the providing formulae."
@@ -4077,33 +3578,29 @@
   },
   {
     "name": "brew which-update",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "stats",
         "title": "--stats",
         "description": "Print statistics about the database contents (number of commands and formulae, list of missing formulae)."
       },
       {
-        "type": "long",
         "key": "commit",
         "title": "--commit",
         "description": "Commit the changes using git."
       },
       {
-        "type": "long",
         "key": "update-existing",
         "title": "--update-existing",
         "description": "Update database entries with outdated formula versions."
       },
       {
-        "type": "long",
         "key": "install-missing",
         "title": "--install-missing",
         "description": "Install and update formulae that are missing from the database and don't have bottles."
       },
       {
-        "type": "long",
         "key": "max-downloads",
         "title": "--max-downloads",
         "description": "Specify a maximum number of formulae to download and update."

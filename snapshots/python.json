@@ -1,141 +1,119 @@
 [
   {
     "name": "python",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "B",
         "title": "-B",
         "description": "Don't write .pyc files on import. See also PYTHONDONTWRITEBYTECODE."
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b",
         "description": "Issue warnings about str(bytes_instance), str(bytearray_instance) and comparing bytes/bytearray with str. (-bb: issue errors)"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c command",
         "description": "Specify the command to execute (see next section). This terminates the option list (following options are passed as arguments to the command)."
       },
       {
-        "type": "long",
         "key": "check-hash-based-pycs",
         "title": "--check-hash-based-pycs mode",
         "description": "Configure how Python evaluates the up-to-dateness of hash-based .pyc files."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "Turn on parser debugging output (for expert only, depending on compilation options)."
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E",
         "description": "Ignore environment variables like PYTHONPATH and PYTHONHOME that modify the behavior of the interpreter."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, -?, --help",
         "description": "Prints the usage for the interpreter executable and exits."
       },
       {
-        "type": "short",
         "key": "?",
         "title": "-h, -?, --help",
         "description": "Prints the usage for the interpreter executable and exits."
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, -?, --help",
         "description": "Prints the usage for the interpreter executable and exits."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command. It does not read the $PYTHONSTARTUP file. This can be useful to inspect global variables or a stack trace when a script raises an exception."
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "Run Python in isolated mode. This also implies -E and -s. In isolated mode sys.path contains neither the script's directory nor the user's site-packages directory. All PYTHON* environment variables are ignored, too. Further restrictions may be imposed to prevent the user from injecting malicious code."
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m module-name",
         "description": "Searches sys.path for the named module and runs the corresponding .py file as a script. This terminates the option list (following options are passed as arguments to the module)."
       },
       {
-        "type": "short",
         "key": "O",
         "title": "-O",
         "description": "Remove assert statements and any code conditional on the value of __debug__; augment the filename for compiled (bytecode) files by adding .opt-1 before the .pyc extension."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q",
         "description": "Do not print the version and copyright messages. These messages are also suppressed in non-interactive mode."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "Don't add user site directory to sys.path."
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S",
         "description": "Disable the import of the module site and the site-dependent manipulations of sys.path that it entails. Also disable these manipulations if site is explicitly imported later."
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "Force the stdout and stderr streams to be unbuffered. This option has no effect on the stdin stream."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "Print a message each time a module is initialized, showing the place (filename or built-in module) from which it is loaded. When given twice, print a message for each file that is checked for when searching for a module. Also provides information on module cleanup at exit."
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --version",
         "description": "Prints the Python version number of the executable and exits. When given twice, print more information about the build."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-V, --version",
         "description": "Prints the Python version number of the executable and exits. When given twice, print more information about the build."
       },
       {
-        "type": "short",
         "key": "W",
         "title": "-W argument",
         "description": "Warning control. Python's warning machinery by default prints warning messages to sys.stderr.\n\nThe simplest settings apply a particular action unconditionally to all warnings emitted by a process (even those that are otherwise ignored by default):\n\n-Wdefault # Warn once per call location\n-Werror # Convert to exceptions\n-Walways # Warn every time\n-Wmodule # Warn once per calling module\n-Wonce # Warn once per Python process\n-Wignore # Never warn\n\nThe action names can be abbreviated as desired and the interpreter will resolve them to the appropriate action name. For example, -Wi is the same as -Wignore .\n\nThe full form of argument is: action:message:category:module:lineno\n\nEmpty fields match all values; trailing empty fields may be omitted. For example -W ignore::DeprecationWarning ignores all DeprecationWarning warnings.\n\nThe action field is as explained above but only applies to warnings that match the remaining fields.\n\nThe message field must match the whole printed warning message; this match is case-insensitive.\n\nThe category field matches the warning category (ex: \"DeprecationWarning\"). This must be a class name; the match test whether the actual warning category of the message is a subclass of the specified warning category.\n\nThe module field matches the (fully-qualified) module name; this match is case-sensitive.\n\nThe lineno field matches the line number, where zero matches all line numbers and is thus equivalent to an omitted line number.\n\nMultiple -W options can be given; when a warning matches more than one option, the action for the last matching option is performed. Invalid -W options are ignored (though, a warning message is printed about invalid options when the first warning is issued).\n\nWarnings can also be controlled using the PYTHONWARNINGS environment variable and from within a Python program using the warnings module. For example, the warnings.filterwarnings() function can be used to use a regular expression on the warning message."
       },
       {
-        "type": "short",
         "key": "X",
         "title": "-X option",
         "description": "Set implementation specific option. The following options are available:\n\n-X faulthandler: enable faulthandler\n\n-X showrefcount: output the total reference count and number of used\nmemory blocks when the program finishes or after each statement in the\ninteractive interpreter. This only works on debug builds\n\n-X tracemalloc: start tracing Python memory allocations using the\ntracemalloc module. By default, only the most recent frame is stored in a\ntraceback of a trace. Use -X tracemalloc=NFRAME to start tracing with a\ntraceback limit of NFRAME frames\n\n-X importtime: show how long each import takes. It shows module name,\ncumulative time (including nested imports) and self time (excluding\nnested imports). Note that its output may be broken in multi-threaded\napplication. Typical usage is python3 -X importtime -c 'import asyncio'\n\n-X dev: enable CPython's \"development mode\", introducing additional runtime\nchecks which are too expensive to be enabled by default. It will not be\nmore verbose than the default if the code is correct: new warnings are\nonly emitted when an issue is detected. Effect of the developer mode:\n* Add default warning filter, as -W default\n* Install debug hooks on memory allocators: see the PyMem_SetupDebugHooks() C function\n* Enable the faulthandler module to dump the Python traceback on a crash\n* Enable asyncio debug mode\n* Set the dev_mode attribute of sys.flags to True\n* io.IOBase destructor logs close() exceptions\n\n-X utf8: enable UTF-8 mode for operating system interfaces, overriding the default\nlocale-aware mode. -X utf8=0 explicitly disables UTF-8 mode (even when it would\notherwise activate automatically). See PYTHONUTF8 for more details\n\n-X pycache_prefix=PATH: enable writing .pyc files to a parallel tree rooted at the\ngiven directory instead of to the code tree."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "Skip the first line of the source. This is intended for a DOS specific hack only. Warning: the line numbers in error messages will be off by one!"

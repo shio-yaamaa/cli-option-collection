@@ -1,9 +1,9 @@
 [
   {
     "name": "wall",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "g",
         "title": "-g group",
         "description": "Send messages to users in this group. This option may be specified multiple times, and any user in any of the specified groups will receive the message."

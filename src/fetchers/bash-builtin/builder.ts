@@ -1,6 +1,6 @@
 import tabToSpace from 'tab-to-space';
 
-import { Fetcher, Command, Option } from '../../types';
+import { Fetcher, Command, Option, OptionStyle } from '../../types';
 import { fetchPlainTextFromURL } from '../../utils/forFetcher/http';
 import { ListItem, parseTextList } from '../../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -24,6 +24,8 @@ interface Config {
   defFileBasename?: string; // Defaults to commandName
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
+
 export const build = (commandName: string, config?: Config): Fetcher => ({
   fetch: () => fetch(commandName, config?.defFileBasename ?? commandName),
 });
@@ -43,6 +45,7 @@ export const fetch = async (
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -80,5 +83,5 @@ const listItemToOptions = (listItem: ListItem): Option[] => {
     [trimSpaceDelimitedArguments]
   );
   const description = normalizeSpaces(listItem.descriptionLines.join(' '));
-  return makeOptionList(optionString, title, description);
+  return makeOptionList(optionString, OPTION_STYLE, title, description);
 };

@@ -1,165 +1,139 @@
 [
   {
     "name": "ri",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --[no-]interactive",
         "description": "In interactive mode you can repeatedly look up methods with autocomplete."
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --[no-]interactive",
         "description": "In interactive mode you can repeatedly look up methods with autocomplete."
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --[no-]all",
         "description": "Show all documentation for a class or module."
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --[no-]all",
         "description": "Show all documentation for a class or module."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --[no-]list",
         "description": "List classes ri knows about."
       },
       {
-        "type": "long",
         "key": "list",
         "title": "-l, --[no-]list",
         "description": "List classes ri knows about."
       },
       {
-        "type": "long",
         "key": "pager",
         "title": "--[no-]pager",
         "description": "Send output to a pager, rather than directly to stdout."
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T",
         "description": "Synonym for --no-pager."
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w WIDTH, --width=WIDTH",
         "description": "Set the width of the output."
       },
       {
-        "type": "long",
         "key": "width",
         "title": "-w WIDTH, --width=WIDTH",
         "description": "Set the width of the output."
       },
       {
-        "type": "long",
         "key": "server",
         "title": "--server[=PORT]",
         "description": "Run RDoc server on the given port. The default port is 8214."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f FORMAT, --format=FORMAT",
         "description": "Use the selected formatter. The default formatter is bs for paged output and ansi otherwise. Valid formatters are: ansi, bs, markdown, rdoc."
       },
       {
-        "type": "long",
         "key": "format",
         "title": "-f FORMAT, --format=FORMAT",
         "description": "Use the selected formatter. The default formatter is bs for paged output and ansi otherwise. Valid formatters are: ansi, bs, markdown, rdoc."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Show help and exit."
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Show help and exit."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version",
         "description": "Output version information and exit."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version",
         "description": "Output version information and exit."
       },
       {
-        "type": "long",
         "key": "list-doc-dirs",
         "title": "--[no-]list-doc-dirs",
         "description": "List the directories from which ri will source documentation on stdout and exit."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d DIRNAME, --doc-dir=DIRNAME",
         "description": "List of directories from which to source documentation in addition to the standard directories. May be repeated."
       },
       {
-        "type": "long",
         "key": "doc-dir",
         "title": "-d DIRNAME, --doc-dir=DIRNAME",
         "description": "List of directories from which to source documentation in addition to the standard directories. May be repeated."
       },
       {
-        "type": "long",
         "key": "no-standard-docs",
         "title": "--no-standard-docs",
         "description": "Do not include documentation from the Ruby standard library, site_lib, installed gems, or ~/.rdoc. Use with --doc-dir."
       },
       {
-        "type": "long",
         "key": "system",
         "title": "--[no-]system",
         "description": "Include documentation from Ruby's standard library. Defaults to true."
       },
       {
-        "type": "long",
         "key": "site",
         "title": "--[no-]site",
         "description": "Include documentation from libraries installed in site_lib. Defaults to true."
       },
       {
-        "type": "long",
         "key": "gems",
         "title": "--[no-]gems",
         "description": "Include documentation from RubyGems. Defaults to true."
       },
       {
-        "type": "long",
         "key": "home",
         "title": "--[no-]home",
         "description": "Include documentation stored in ~/.rdoc. Defaults to true."
       },
       {
-        "type": "long",
         "key": "profile",
         "title": "--[no-]profile",
         "description": "Run with the Ruby profiler."
       },
       {
-        "type": "long",
         "key": "dump",
         "title": "--dump=CACHE",
         "description": "Dump data from an ri cache or data file."

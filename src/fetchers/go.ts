@@ -1,8 +1,8 @@
-import { Command, Fetcher, Option, OptionType } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import {
   normalizeCommaDelimitedString,
   splitByMultipleDelimiters,
@@ -27,8 +27,6 @@ import { isElement } from '../utils/typeGuards';
 //       and not in consistent list format.
 //       Even if there is a list, not all the options are listed (e.g. "go test").
 //       This fetcher cannot fetch all the options and may easily break.
-// NOTE: Go uses single dash for both short and long options,
-//       but this fetcher sticks with the POSIX-style option notations.
 // NOTE: Go does not plan to have man page. https://github.com/golang/go/issues/101
 // BUG: Flags presented in "Testing flags" section are not fetched.
 // BUG: When there are multiple flag explanations in a single paragraph, only the first one can be fetched.
@@ -40,6 +38,7 @@ interface Section {
   pres: string[];
 }
 
+const OPTION_STYLE = OptionStyle.SINGLE_DASH;
 const DOC_URL = 'https://pkg.go.dev/cmd/go';
 const COMMAND_WORD_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
@@ -125,6 +124,7 @@ const sectionToCommand = (section: Section): Command | null => {
 
   return {
     name: commandName,
+    optionStyle: OPTION_STYLE,
     options: uniqueOptions(options),
   };
 };
@@ -164,7 +164,8 @@ const preToOptions = (pre: string): Option[] => {
 
   for (const { heading, contents } of flagDescriptionLinesPairs) {
     const flag = heading;
-    const descriptionLines = contents;
+    const title = flag.trim();
+    const description = contents.map((line) => line.trim()).join(' ');
     const optionString = transformOptionStrings(
       [flag],
       [
@@ -173,14 +174,9 @@ const preToOptions = (pre: string): Option[] => {
         trimEqualDelimitedArguments,
       ]
     )[0];
-    const optionKey = optionString.slice(1); // Remove the "-" prefix
-    const description = descriptionLines.map((line) => line.trim()).join(' ');
-    options.push({
-      type: optionKey.length === 1 ? OptionType.SHORT : OptionType.LONG,
-      key: optionKey,
-      title: flag.trim(),
-      description,
-    });
+    options.push(
+      ...makeOptionList([optionString], OPTION_STYLE, title, description)
+    );
   }
 
   return options;
@@ -214,8 +210,9 @@ const paragraphToOptions = (paragraph: string): Option[] => {
     trimSpaceDelimitedArguments,
     trimEqualDelimitedArguments,
   ]);
-  return makeOptionListForSingleDashStyle(
+  return makeOptionList(
     optionStrings,
+    OPTION_STYLE,
     optionTitle,
     optionDescription
   );

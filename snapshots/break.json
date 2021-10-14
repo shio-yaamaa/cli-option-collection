@@ -1,6 +1,7 @@
 [
   {
     "name": "break",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

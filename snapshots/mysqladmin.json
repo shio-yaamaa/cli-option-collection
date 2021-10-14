@@ -1,423 +1,354 @@
 [
   {
     "name": "mysqladmin",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "bind-address",
         "title": "--bind-address=ip_address",
         "description": "Use specified network interface to connect to MySQL Server"
       },
       {
-        "type": "long",
         "key": "compress",
         "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "--compress, -C",
         "description": "Compress all information sent between client and server"
       },
       {
-        "type": "long",
         "key": "compression-algorithms",
         "title": "--compression-algorithms=value",
         "description": "Permitted compression algorithms for connections to server"
       },
       {
-        "type": "long",
         "key": "connect-timeout",
         "title": "--connect-timeout=value",
         "description": "Number of seconds before connection timeout"
       },
       {
-        "type": "long",
         "key": "count",
         "title": "--count=N, -c N",
         "description": "Number of iterations to make for repeated command execution"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "--count=N, -c N",
         "description": "Number of iterations to make for repeated command execution"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug[=debug_options], -# [debug_options]",
         "description": "Write debugging log"
       },
       {
-        "type": "long",
         "key": "debug-check",
         "title": "--debug-check",
         "description": "Print debugging information when program exits"
       },
       {
-        "type": "long",
         "key": "debug-info",
         "title": "--debug-info",
         "description": "Print debugging information, memory, and CPU statistics when program exits"
       },
       {
-        "type": "long",
         "key": "default-auth",
         "title": "--default-auth=plugin",
         "description": "Authentication plugin to use"
       },
       {
-        "type": "long",
         "key": "default-character-set",
         "title": "--default-character-set=charset_name",
         "description": "Specify default character set"
       },
       {
-        "type": "long",
         "key": "defaults-extra-file",
         "title": "--defaults-extra-file=file_name",
         "description": "Read named option file in addition to usual option files"
       },
       {
-        "type": "long",
         "key": "defaults-file",
         "title": "--defaults-file=file_name",
         "description": "Read only named option file"
       },
       {
-        "type": "long",
         "key": "defaults-group-suffix",
         "title": "--defaults-group-suffix=str",
         "description": "Option group suffix value"
       },
       {
-        "type": "long",
         "key": "enable-cleartext-plugin",
         "title": "--enable-cleartext-plugin",
         "description": "Enable cleartext authentication plugin"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "--force, -f",
         "description": "Continue even if an SQL error occurs"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "--force, -f",
         "description": "Continue even if an SQL error occurs"
       },
       {
-        "type": "long",
         "key": "get-server-public-key",
         "title": "--get-server-public-key",
         "description": "Request RSA public key from server"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help, -?",
         "description": "Display help message and exit"
       },
       {
-        "type": "short",
         "key": "?",
         "title": "--help, -?",
         "description": "Display help message and exit"
       },
       {
-        "type": "long",
         "key": "host",
         "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "--host=host_name, -h host_name",
         "description": "Host on which MySQL server is located"
       },
       {
-        "type": "long",
         "key": "login-path",
         "title": "--login-path=name",
         "description": "Read login path options from .mylogin.cnf"
       },
       {
-        "type": "long",
         "key": "no-beep",
         "title": "--no-beep, -b",
         "description": "Do not beep when errors occur"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "--no-beep, -b",
         "description": "Do not beep when errors occur"
       },
       {
-        "type": "long",
         "key": "no-defaults",
         "title": "--no-defaults",
         "description": "Read no option files"
       },
       {
-        "type": "long",
         "key": "password",
         "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
       },
       {
-        "type": "long",
         "key": "pipe",
         "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"
       },
       {
-        "type": "short",
         "key": "W",
         "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"
       },
       {
-        "type": "long",
         "key": "plugin-dir",
         "title": "--plugin-dir=dir_name",
         "description": "Directory where plugins are installed"
       },
       {
-        "type": "long",
         "key": "port",
         "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "--port=port_num, -P port_num",
         "description": "TCP/IP port number for connection"
       },
       {
-        "type": "long",
         "key": "print-defaults",
         "title": "--print-defaults",
         "description": "Print default options"
       },
       {
-        "type": "long",
         "key": "protocol",
         "title": "--protocol={TCP|SOCKET|PIPE|MEMORY}",
         "description": "Transport protocol to use"
       },
       {
-        "type": "long",
         "key": "relative",
         "title": "--relative, -r",
         "description": "Show the difference between the current and previous values when used with the --sleep option"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "--relative, -r",
         "description": "Show the difference between the current and previous values when used with the --sleep option"
       },
       {
-        "type": "long",
         "key": "server-public-key-path",
         "title": "--server-public-key-path=file_name",
         "description": "Path name to file containing RSA public key"
       },
       {
-        "type": "long",
         "key": "shared-memory-base-name",
         "title": "--shared-memory-base-name=name",
         "description": "Shared-memory name for shared-memory connections (Windows only)"
       },
       {
-        "type": "long",
         "key": "show-warnings",
         "title": "--show-warnings",
         "description": "Show warnings after statement execution"
       },
       {
-        "type": "long",
         "key": "shutdown-timeout",
         "title": "--shutdown-timeout=value",
         "description": "The maximum number of seconds to wait for server shutdown"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent, -s",
         "description": "Silent mode"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "--silent, -s",
         "description": "Silent mode"
       },
       {
-        "type": "long",
         "key": "sleep",
         "title": "--sleep=delay, -i delay",
         "description": "Execute commands repeatedly, sleeping for delay seconds in between"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "--sleep=delay, -i delay",
         "description": "Execute commands repeatedly, sleeping for delay seconds in between"
       },
       {
-        "type": "long",
         "key": "socket",
         "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "--socket=path, -S path",
         "description": "Unix socket file or Windows named pipe to use"
       },
       {
-        "type": "long",
         "key": "ssl-ca",
         "title": "--ssl-ca",
         "description": "File that contains list of trusted SSL Certificate Authorities"
       },
       {
-        "type": "long",
         "key": "ssl-capath",
         "title": "--ssl-capath",
         "description": "Directory that contains trusted SSL Certificate Authority certificate files"
       },
       {
-        "type": "long",
         "key": "ssl-cert",
         "title": "--ssl-cert",
         "description": "File that contains X.509 certificate"
       },
       {
-        "type": "long",
         "key": "ssl-cipher",
         "title": "--ssl-cipher",
         "description": "Permissible ciphers for connection encryption"
       },
       {
-        "type": "long",
         "key": "ssl-crl",
         "title": "--ssl-crl",
         "description": "File that contains certificate revocation lists"
       },
       {
-        "type": "long",
         "key": "ssl-crlpath",
         "title": "--ssl-crlpath",
         "description": "Directory that contains certificate revocation-list files"
       },
       {
-        "type": "long",
         "key": "ssl-fips-mode",
         "title": "--ssl-fips-mode={OFF|ON|STRICT}",
         "description": "Whether to enable FIPS mode on client side"
       },
       {
-        "type": "long",
         "key": "ssl-key",
         "title": "--ssl-key",
         "description": "File that contains X.509 key"
       },
       {
-        "type": "long",
         "key": "ssl-mode",
         "title": "--ssl-mode",
         "description": "Desired security state of connection to server"
       },
       {
-        "type": "long",
         "key": "tls-ciphersuites",
         "title": "--tls-ciphersuites=ciphersuite_list",
         "description": "Permissible TLSv1.3 ciphersuites for encrypted connections"
       },
       {
-        "type": "long",
         "key": "tls-version",
         "title": "--tls-version=protocol_list",
         "description": "Permissible TLS protocols for encrypted connections"
       },
       {
-        "type": "long",
         "key": "user",
         "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "--user=user_name, -u user_name",
         "description": "MySQL user name to use when connecting to server"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "--verbose, -v",
         "description": "Verbose mode"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "--verbose, -v",
         "description": "Verbose mode"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version, -V",
         "description": "Display version information and exit"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "--version, -V",
         "description": "Display version information and exit"
       },
       {
-        "type": "long",
         "key": "vertical",
         "title": "--vertical, -E",
         "description": "Print query output rows vertically (one line per column value)"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "--vertical, -E",
         "description": "Print query output rows vertically (one line per column value)"
       },
       {
-        "type": "long",
         "key": "wait",
         "title": "--wait[=count], -w[count]",
         "description": "If the connection cannot be established, wait and retry instead of aborting"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "--wait[=count], -w[count]",
         "description": "If the connection cannot be established, wait and retry instead of aborting"
       },
       {
-        "type": "long",
         "key": "zstd-compression-level",
         "title": "--zstd-compression-level=level",
         "description": "Compression level for connections to server that use zstd compression"
