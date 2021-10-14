@@ -61,7 +61,6 @@ const fetch = async (
 const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
   const dtTexts = dts.map((dt) => getInnerText(dt));
   const title = mergeOptionTitles(dtTexts);
-  // TODO: Squash more than three consecutive line breaks like in "ruby -S"
   const description = getInnerText(dd).trim();
   const optionStrings = transformOptionStrings(dtTexts, [
     trimOptionalElements,

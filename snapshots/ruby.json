@@ -78,7 +78,7 @@
         "type": "short",
         "key": "S",
         "title": "-S",
-        "description": "Makes Ruby use the PATH environment variable to search for script, unless its name begins with a slash. This is used to emulate #! on machines that don't support it, in the following manner:\n\n#! /usr/local/bin/ruby\n# This line makes the next one a comment in Ruby \\\n  exec /usr/local/bin/ruby -S $0 $*\n    \n\nOn some systems $0 does not always contain the full pathname, so you need the -S switch to tell Ruby to search for the script if necessary (to handle embedded spaces and such). A better construct than $* would be ${1+\"$@\"}, but it does not work if the script is being interpreted by csh(1)."
+        "description": "Makes Ruby use the PATH environment variable to search for script, unless its name begins with a slash. This is used to emulate #! on machines that don't support it, in the following manner:\n\n#! /usr/local/bin/ruby\n# This line makes the next one a comment in Ruby \\\n  exec /usr/local/bin/ruby -S $0 $*\n\nOn some systems $0 does not always contain the full pathname, so you need the -S switch to tell Ruby to search for the script if necessary (to handle embedded spaces and such). A better construct than $* would be ${1+\"$@\"}, but it does not work if the script is being interpreted by csh(1)."
       },
       {
         "type": "short",
