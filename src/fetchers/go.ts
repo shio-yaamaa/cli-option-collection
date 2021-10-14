@@ -2,7 +2,7 @@ import { Command, Fetcher, Option } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import {
   normalizeCommaDelimitedString,
   splitByMultipleDelimiters,
@@ -162,7 +162,8 @@ const preToOptions = (pre: string): Option[] => {
 
   for (const { heading, contents } of flagDescriptionLinesPairs) {
     const flag = heading;
-    const descriptionLines = contents;
+    const title = flag.trim();
+    const description = contents.map((line) => line.trim()).join(' ');
     const optionString = transformOptionStrings(
       [flag],
       [
@@ -171,14 +172,7 @@ const preToOptions = (pre: string): Option[] => {
         trimEqualDelimitedArguments,
       ]
     )[0];
-    const optionKey = optionString.slice(1); // Remove the "-" prefix
-    const description = descriptionLines.map((line) => line.trim()).join(' ');
-    // TODO: Use makeOptionList()
-    options.push({
-      key: optionKey,
-      title: flag.trim(),
-      description,
-    });
+    options.push(...makeOptionList([optionString], title, description));
   }
 
   return options;
