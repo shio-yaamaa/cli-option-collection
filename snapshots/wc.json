@@ -1,81 +1,69 @@
 [
   {
     "name": "wc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --bytes",
         "description": "print the byte counts"
       },
       {
-        "type": "long",
         "key": "bytes",
         "title": "-c, --bytes",
         "description": "print the byte counts"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m, --chars",
         "description": "print the character counts"
       },
       {
-        "type": "long",
         "key": "chars",
         "title": "-m, --chars",
         "description": "print the character counts"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --lines",
         "description": "print the newline counts"
       },
       {
-        "type": "long",
         "key": "lines",
         "title": "-l, --lines",
         "description": "print the newline counts"
       },
       {
-        "type": "long",
         "key": "files0-from",
         "title": "--files0-from=F",
         "description": "read input from the files specified by NUL-terminated names in file F; If F is - then read names from standard input"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L, --max-line-length",
         "description": "print the maximum display width"
       },
       {
-        "type": "long",
         "key": "max-line-length",
         "title": "-L, --max-line-length",
         "description": "print the maximum display width"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --words",
         "description": "print the word counts"
       },
       {
-        "type": "long",
         "key": "words",
         "title": "-w, --words",
         "description": "print the word counts"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

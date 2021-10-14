@@ -1,27 +1,24 @@
 [
   {
     "name": "renice",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "g",
         "title": "-g",
         "description": "Alter the scheduling priority of all processes in process group id."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n increment",
         "description": "A positive or negative decimal integer used to modify the scheduling priority. For compatibility with historic versions of this utility, if -n is omitted and increment is the first argument to renice, then increment is taken as an absolute priority rather than an increment."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "Alter the scheduling priority of process id."
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "Alter the scheduling priority of all processes belonging to user id, which may be a user name or ID."

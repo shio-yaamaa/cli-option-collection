@@ -1,15 +1,14 @@
 [
   {
     "name": "dc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "e",
         "title": "-e expression",
         "description": "Evaluate expression. If multiple -e options are specified, they will be processed in the order given."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x",
         "description": "Enable extended register mode. This mode is used by bc(1) to allow more than 256 registers. See Registers for a more detailed description."

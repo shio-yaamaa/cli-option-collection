@@ -1,21 +1,19 @@
 [
   {
     "name": "printf",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v var",
         "description": "assign the output to shell variable VAR rather than display it on the standard output"

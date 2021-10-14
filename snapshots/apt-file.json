@@ -1,165 +1,139 @@
 [
   {
     "name": "apt-file",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --architecture architecture[,...]",
         "description": "This option is useful if you search a package for a different architecture from the one installed on your system. It can be a comma-separated list for searching on multiple architectures."
       },
       {
-        "type": "long",
         "key": "architecture",
         "title": "-a, --architecture architecture[,...]",
         "description": "This option is useful if you search a package for a different architecture from the one installed on your system. It can be a comma-separated list for searching on multiple architectures."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --config-file APT config-file",
         "description": "Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set before the default configuration files are parsed specify a file with the APT_CONFIG environment variable. See apt.conf(5) for syntax information. The configuration file will be read relative to when it appears on the command line and can overwrite options that appear before it. Note that the config file will also be passed to all APT tools called by apt-file."
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "-c, --config-file APT config-file",
         "description": "Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set before the default configuration files are parsed specify a file with the APT_CONFIG environment variable. See apt.conf(5) for syntax information. The configuration file will be read relative to when it appears on the command line and can overwrite options that appear before it. Note that the config file will also be passed to all APT tools called by apt-file."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --from-deb",
         "description": "Use contents of the given .deb archives(s) as patterns.  Useful for searching for file conflicts with other packages.  Implies -F."
       },
       {
-        "type": "long",
         "key": "from-deb",
         "title": "-D, --from-deb",
         "description": "Use contents of the given .deb archives(s) as patterns.  Useful for searching for file conflicts with other packages.  Implies -F."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --from-file",
         "description": "Read patterns from the given file(s), one per line.  Use - as filename for stdin.  If no files are given, then the list will be read from stdin.  This is much faster than invoking apt-file many times."
       },
       {
-        "type": "long",
         "key": "from-file",
         "title": "-f, --from-file",
         "description": "Read patterns from the given file(s), one per line.  Use - as filename for stdin.  If no files are given, then the list will be read from stdin.  This is much faster than invoking apt-file many times."
       },
       {
-        "type": "long",
         "key": "filter-origins",
         "title": "--filter-origins origin[,...]",
         "description": "Only search indices from the listed origins (e.g. \"Debian\"). This filter matches against the name listed in the Origin field from the Release file. If set to '*', this filter will be disabled (mostly useful for overriding the setting in a configuration file) Alias of the APT config option: apt-file::Search-Filter::Origin"
       },
       {
-        "type": "long",
         "key": "filter-suites",
         "title": "--filter-suites suite[,...]",
         "description": "Only search indices from the listed suites or codenames (e.g. \"unstable\"). This filter matches against the name listed in the Codename and Suite fields from the Release file.  This means that either \"unstable\" or \"sid\" will match Debian's unstable suite. If set to '*', this filter will be disabled (mostly useful for overriding the setting in a configuration file) Alias of the APT config option: apt-file::Search-Filter::Suite"
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F, --fixed-string",
         "description": "Do not expand search pattern with generic characters at pattern's start and end. This is default for show and list actions."
       },
       {
-        "type": "long",
         "key": "fixed-string",
         "title": "-F, --fixed-string",
         "description": "Do not expand search pattern with generic characters at pattern's start and end. This is default for show and list actions."
       },
       {
-        "type": "long",
         "key": "index-names",
         "title": "--index-names type[,...], -I type[,...]",
         "description": "Only search indexes of the given name(s). If set to the special value ALL (case- sensitive), then all apt-file indices are searched. The name(s) must match one or more of the identifiers used in the APT configuration (minus leading \"Contents-\").  Example if the configuration has the following snippets:  Acquire::IndexTargets::deb::Contents-deb { ... };  Acquire::IndexTargets::deb-src::Contents-dsc { ... };  Acquire::IndexTargets::deb::Contents-udeb { ... };  Acquire::IndexTargets::deb::Contents-deb-legacy {     # Explicitly named to \"Contents-deb\"     Identifier \"Contents-deb\";     ...;  }; Then, apt-file will recognise \"deb\", \"dsc\" and \"udeb\" as index names. This option defaults to the value of the \"apt-file::Index-Names\" apt config option (or \"deb\" if omitted)."
       },
       {
-        "type": "short",
         "key": "I",
         "title": "--index-names type[,...], -I type[,...]",
         "description": "Only search indexes of the given name(s). If set to the special value ALL (case- sensitive), then all apt-file indices are searched. The name(s) must match one or more of the identifiers used in the APT configuration (minus leading \"Contents-\").  Example if the configuration has the following snippets:  Acquire::IndexTargets::deb::Contents-deb { ... };  Acquire::IndexTargets::deb-src::Contents-dsc { ... };  Acquire::IndexTargets::deb::Contents-udeb { ... };  Acquire::IndexTargets::deb::Contents-deb-legacy {     # Explicitly named to \"Contents-deb\"     Identifier \"Contents-deb\";     ...;  }; Then, apt-file will recognise \"deb\", \"dsc\" and \"udeb\" as index names. This option defaults to the value of the \"apt-file::Index-Names\" apt config option (or \"deb\" if omitted)."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --ignore-case",
         "description": "Ignore case when searching for pattern."
       },
       {
-        "type": "long",
         "key": "ignore-case",
         "title": "-i, --ignore-case",
         "description": "Ignore case when searching for pattern."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --package-only",
         "description": "Only display package name; do not display file names."
       },
       {
-        "type": "long",
         "key": "package-only",
         "title": "-l, --package-only",
         "description": "Only display package name; do not display file names."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --option APT::Option=Value",
         "description": "Set a Configuration Option; This will set an arbitrary configuration option. The syntax is -o APT::Option=Value.  -o and --option can be used multiple times to set different options. This option can be used to overwrite other command line options (e.g. \"-o apt-file::Search-Filter::Origin=Debian\" is effectively the same as \"--filter-origins Debian\"). Note that the config options passed via this option will also be passed to all APT tools called by apt-file."
       },
       {
-        "type": "long",
         "key": "option",
         "title": "-o, --option APT::Option=Value",
         "description": "Set a Configuration Option; This will set an arbitrary configuration option. The syntax is -o APT::Option=Value.  -o and --option can be used multiple times to set different options. This option can be used to overwrite other command line options (e.g. \"-o apt-file::Search-Filter::Origin=Debian\" is effectively the same as \"--filter-origins Debian\"). Note that the config options passed via this option will also be passed to all APT tools called by apt-file."
       },
       {
-        "type": "long",
         "key": "substring-match",
         "title": "--substring-match",
         "description": "Match if the given search pattern is a substring of a path or package. This is default for search and find actions."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Run apt-file in verbose/debug mode."
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Run apt-file in verbose/debug mode."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --regexp",
         "description": "Treat pattern as a (perl) regular expression. See perlreref(1) for details. Without this option, pattern is treated as a literal string to search for. Be advised that this option can be rather slow.  If performance is an issue, consider giving apt-file non-regex pattern matching too much and pipe the output to perl -ne '/<pattern-here>/'.  This enables apt-file to use more optimizations and leaves less work to the \"slower\" regex."
       },
       {
-        "type": "long",
         "key": "regexp",
         "title": "-x, --regexp",
         "description": "Treat pattern as a (perl) regular expression. See perlreref(1) for details. Without this option, pattern is treated as a literal string to search for. Be advised that this option can be rather slow.  If performance is an issue, consider giving apt-file non-regex pattern matching too much and pipe the output to perl -ne '/<pattern-here>/'.  This enables apt-file to use more optimizations and leaves less work to the \"slower\" regex."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Display a short help screen."
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Display a short help screen."

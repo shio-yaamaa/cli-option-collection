@@ -1,33 +1,29 @@
 [
   {
     "name": "pathchk",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "check for most POSIX systems"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P",
         "description": "check for empty names and leading \"-\""
       },
       {
-        "type": "long",
         "key": "portability",
         "title": "--portability",
         "description": "check for all POSIX systems (equivalent to -p -P)"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

@@ -1,105 +1,89 @@
 [
   {
     "name": "shred",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "change permissions to allow writing if necessary"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "change permissions to allow writing if necessary"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --iterations=N",
         "description": "overwrite N times instead of the default (3)"
       },
       {
-        "type": "long",
         "key": "iterations",
         "title": "-n, --iterations=N",
         "description": "overwrite N times instead of the default (3)"
       },
       {
-        "type": "long",
         "key": "random-source",
         "title": "--random-source=FILE",
         "description": "get random bytes from FILE"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --size=N",
         "description": "shred this many bytes (suffixes like K, M, G accepted)"
       },
       {
-        "type": "long",
         "key": "size",
         "title": "-s, --size=N",
         "description": "shred this many bytes (suffixes like K, M, G accepted)"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "deallocate and remove file after overwriting"
       },
       {
-        "type": "long",
         "key": "remove",
         "title": "--remove[=HOW]",
         "description": "like -u but give control on HOW to delete; See below"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "show progress"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "show progress"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --exact",
         "description": "do not round file sizes up to the next full block;"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-x, --exact",
         "description": "do not round file sizes up to the next full block;"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z, --zero",
         "description": "add a final overwrite with zeros to hide shredding"
       },
       {
-        "type": "long",
         "key": "zero",
         "title": "-z, --zero",
         "description": "add a final overwrite with zeros to hide shredding"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

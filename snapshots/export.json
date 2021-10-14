@@ -1,21 +1,19 @@
 [
   {
     "name": "export",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "refer to shell functions"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "remove the export property from each NAME"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "display a list of all exported variables and functions"

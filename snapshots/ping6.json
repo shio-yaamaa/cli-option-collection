@@ -1,147 +1,124 @@
 [
   {
     "name": "ping6",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c count",
         "description": "Stop sending after count ECHO_REQUEST packets have been sent. If count is 0, send an unlimited number of packets."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D",
         "description": "Don't fragment IP packets."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "Set the SO_DEBUG option on the socket being used. This option has no effect on OpenBSD."
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E",
         "description": "Emit an audible beep (by sending an ASCII BEL character to the standard error output) when no packet is received before the next packet is transmitted. To cater for round-trip times that are longer than the interval between transmissions, further missing packets cause a bell only if the maximum number of unreceived packets has increased. This option is disabled for flood pings."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e",
         "description": "Emit an audible beep (by sending an ASCII BEL character to the standard error output) after each non-duplicate response is received. This option is disabled for flood pings."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "Flood ping. Outputs packets as fast as they come back or one hundred times per second, whichever is more. For every ECHO_REQUEST sent, a period ‘.’ is printed, while for every ECHO_REPLY received a backspace is printed. This provides a rapid display of how many packets are being dropped. Only the superuser may use this option.\nThis can be very hard on a network and should be used with caution."
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g",
         "description": "Provides a visual display of packets received and lost. For every ECHO_REPLY received, an exclamation mark ‘!’ is printed, while for every missed packet a period ‘.’ is printed. Duplicate and truncated replies are indicated with ‘D’ and ‘T’ respectively."
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H",
         "description": "Try reverse lookups for addresses."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h hoplimit",
         "description": "(IPv6 only) Set the hoplimit."
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I sourceaddr",
         "description": "Set the source address to transmit from, which is useful on machines with multiple interfaces. For unicast and multicast pings."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i interval",
         "description": "Send one packet every interval seconds. The default is one second. The interval may contain a fractional portion. Only the superuser may specify a value less than one second. This option is incompatible with the -f option."
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L",
         "description": "Disable the loopback, so the transmitting host doesn't see the ICMP requests. For multicast pings."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l preload",
         "description": "Send preload packets as fast as possible before reverting to normal behavior. Only root may set a preload value."
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m",
         "description": "(IPv6 only) Do not fragment unicast packets to fit the minimum IPv6 MTU. If specified twice, do this for multicast packets as well."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "Numeric output only. No attempt will be made to look up symbolic names from addresses in the reply."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p pattern",
         "description": "Specify up to 16 pad bytes to fill out the packet sent. This is useful for diagnosing data-dependent problems in a network. For example, \"-p ff\" causes the sent packet to be filled with all ones."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q",
         "description": "Quiet output. Nothing is displayed except the summary lines at startup time and when finished."
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R",
         "description": "(IPv4 only) Record route. Includes the RECORD_ROUTE option in the ECHO_REQUEST packet and displays the route buffer on returned packets. Note that the IP header is only large enough for nine such routes. If more routes come back than should, such as due to an illegal spoofed packet, ping will print the route list and then truncate it at the correct spot. Many hosts ignore or discard this option."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s packetsize",
         "description": "Specify the number of data bytes to be sent. The default is 56, which translates into 64 ICMP data bytes when combined with the 8 bytes of ICMP header data. The maximum packet size is 65467 for IPv4 and 65527 for IPv6."
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T toskeyword",
         "description": "Change the IPv4 TOS or IPv6 Traffic Class value. toskeyword may be one of critical, inetcontrol, lowdelay, netcontrol, throughput, reliability, or one of the DiffServ Code Points: ef, af11 ... af43, cs0 ... cs7; or a number in either hex or decimal."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t ttl",
         "description": "(IPv4 only) Use the specified time-to-live."
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V rtable",
         "description": "Set the routing table to be used for outgoing packets."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "Verbose output. ICMP packets other than ECHO_REPLY that are received are listed."
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w maxwait",
         "description": "Specify the maximum number of seconds to wait for responses after the last request has been sent. The default is 10."

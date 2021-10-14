@@ -1,6 +1,7 @@
 [
   {
     "name": "exit",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

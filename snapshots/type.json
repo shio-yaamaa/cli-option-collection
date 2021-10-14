@@ -1,33 +1,29 @@
 [
   {
     "name": "type",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "display all locations containing an executable named NAME; includes aliases, builtins, and functions, if and only if the `-p' option is not also used"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "suppress shell function lookup"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P",
         "description": "force a PATH search for each NAME, even if it is an alias, builtin, or function, and returns the name of the disk file that would be executed"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "returns either the name of the disk file that would be executed, or nothing if `type -t NAME' would not return `file'"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "output a single word which is one of `alias', `keyword', `function', `builtin', `file' or `', if NAME is an alias, shell reserved word, shell function, shell builtin, disk file, or not found, respectively"

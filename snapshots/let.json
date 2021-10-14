@@ -1,6 +1,7 @@
 [
   {
     "name": "let",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

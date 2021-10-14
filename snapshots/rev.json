@@ -1,6 +1,7 @@
 [
   {
     "name": "rev",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

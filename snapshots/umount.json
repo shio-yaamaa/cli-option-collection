@@ -1,33 +1,29 @@
 [
   {
     "name": "umount",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "All of the file systems except root returned by getmntinfo(3) are unmounted."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "The file system is forcibly unmounted. Active special devices continue to work, but all other files return errors if further accesses are attempted. The root file system cannot be forcibly unmounted."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h host",
         "description": "Only filesystems mounted from the specified host will be unmounted. This option implies the -a option and, unless otherwise specified with the -t option, will only unmount NFS filesystems."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t type",
         "description": "Indicates that actions should only be taken on filesystems of the specified type. More than one type may be specified in a comma separated list. The list of filesystem types can be prefixed with “no” to specify the filesystem types for which action should not be taken. For example, the following command unmounts all filesystems of type NFS and MFS:\n\n# umount -a -t nfs,mfs"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "Verbose, additional information is printed out as each file system is unmounted."

@@ -1,519 +1,434 @@
 [
   {
     "name": "journalctl",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "no-full",
         "title": "--no-full, --full, -l",
         "description": "Ellipsize fields when they do not fit in available columns. The default is to show full fields, allowing them to wrap or be truncated by the pager, if one is used.\n\nThe old options -l/--full are not useful anymore, except to undo --no-full."
       },
       {
-        "type": "long",
         "key": "full",
         "title": "--no-full, --full, -l",
         "description": "Ellipsize fields when they do not fit in available columns. The default is to show full fields, allowing them to wrap or be truncated by the pager, if one is used.\n\nThe old options -l/--full are not useful anymore, except to undo --no-full."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "--no-full, --full, -l",
         "description": "Ellipsize fields when they do not fit in available columns. The default is to show full fields, allowing them to wrap or be truncated by the pager, if one is used.\n\nThe old options -l/--full are not useful anymore, except to undo --no-full."
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "Show all fields in full, even if they include unprintable characters or are very long. By default, fields with unprintable characters are abbreviated as \"blob data\". (Note that the pager may escape unprintable characters again.)"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "Show all fields in full, even if they include unprintable characters or are very long. By default, fields with unprintable characters are abbreviated as \"blob data\". (Note that the pager may escape unprintable characters again.)"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --follow",
         "description": "Show only the most recent journal entries, and continuously print new entries as they are appended to the journal."
       },
       {
-        "type": "long",
         "key": "follow",
         "title": "-f, --follow",
         "description": "Show only the most recent journal entries, and continuously print new entries as they are appended to the journal."
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --pager-end",
         "description": "Immediately jump to the end of the journal inside the implied pager tool. This implies -n1000 to guarantee that the pager will not buffer logs of unbounded size. This may be overridden with an explicit -n with some other numeric value, while -nall will disable this cap. Note that this option is only supported for the less(1) pager."
       },
       {
-        "type": "long",
         "key": "pager-end",
         "title": "-e, --pager-end",
         "description": "Immediately jump to the end of the journal inside the implied pager tool. This implies -n1000 to guarantee that the pager will not buffer logs of unbounded size. This may be overridden with an explicit -n with some other numeric value, while -nall will disable this cap. Note that this option is only supported for the less(1) pager."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --lines=",
         "description": "Show the most recent journal events and limit the number of events shown. If --follow is used, this option is implied. The argument is a positive integer or \"all\" to disable line limiting. The default value is 10 if no argument is given."
       },
       {
-        "type": "long",
         "key": "lines",
         "title": "-n, --lines=",
         "description": "Show the most recent journal events and limit the number of events shown. If --follow is used, this option is implied. The argument is a positive integer or \"all\" to disable line limiting. The default value is 10 if no argument is given."
       },
       {
-        "type": "long",
         "key": "no-tail",
         "title": "--no-tail",
         "description": "Show all stored output lines, even in follow mode. Undoes the effect of --lines=."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --reverse",
         "description": "Reverse output so that the newest entries are displayed first."
       },
       {
-        "type": "long",
         "key": "reverse",
         "title": "-r, --reverse",
         "description": "Reverse output so that the newest entries are displayed first."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --output=",
         "description": "Controls the formatting of the journal entries that are shown. Takes one of the following options:\n\nshort \n\nis the default and generates an output that is mostly identical to the formatting of classic syslog files, showing one line per journal entry.\n\nshort-full \n\nis very similar, but shows timestamps in the format the --since= and --until= options accept. Unlike the timestamp information shown in short output mode this mode includes weekday, year and timezone information in the output, and is locale-independent.\n\nshort-iso \n\nis very similar, but shows ISO 8601 wallclock timestamps.\n\nshort-iso-precise \n\nas for short-iso but includes full microsecond precision.\n\nshort-precise \n\nis very similar, but shows classic syslog timestamps with full microsecond precision.\n\nshort-monotonic \n\nis very similar, but shows monotonic timestamps instead of wallclock timestamps.\n\nshort-unix \n\nis very similar, but shows seconds passed since January 1st 1970 UTC instead of wallclock timestamps (\"UNIX time\"). The time is shown with microsecond accuracy.\n\nverbose \n\nshows the full-structured entry items with all fields.\n\nexport \n\nserializes the journal into a binary (but mostly text-based) stream suitable for backups and network transfer (see Journal Export Format for more information). To import the binary stream back into native journald format use systemd-journal-remote(8).\n\njson \n\nformats entries as JSON objects, separated by newline characters (see Journal JSON Format for more information). Field values are generally encoded as JSON strings, with three exceptions:\n\n 1. Fields larger than 4096 bytes are encoded as null values. (This may be turned off by passing --all, but be aware that this may allocate overly long JSON objects.)\n\n 2. Journal entries permit non-unique fields within the same log entry. JSON does not allow non-unique fields within objects. Due to this, if a non-unique field is encountered a JSON array is used as field value, listing all field values as elements.\n\n 3. Fields containing non-printable or non-UTF8 bytes are encoded as arrays containing the raw bytes individually formatted as unsigned numbers.\n\nNote that this encoding is reversible (with the exception of the size limit).\n\njson-pretty \n\nformats entries as JSON data structures, but formats them in multiple lines in order to make them more readable by humans.\n\njson-sse \n\nformats entries as JSON data structures, but wraps them in a format suitable for Server-Sent Events.\n\njson-seq \n\nformats entries as JSON data structures, but prefixes them with an ASCII Record Separator character (0x1E) and suffixes them with an ASCII Line Feed character (0x0A), in accordance with JavaScript Object Notation (JSON) Text Sequences (\"application/json-seq\").\n\ncat \n\ngenerates a very terse output, only showing the actual message of each journal entry with no metadata, not even a timestamp. If combined with the --output-fields= option will output the listed fields for each log record, instead of the message.\n\nwith-unit \n\nsimilar to short-full, but prefixes the unit and user unit names instead of the traditional syslog identifier. Useful when using templated instances, as it will include the arguments in the unit names."
       },
       {
-        "type": "long",
         "key": "output",
         "title": "-o, --output=",
         "description": "Controls the formatting of the journal entries that are shown. Takes one of the following options:\n\nshort \n\nis the default and generates an output that is mostly identical to the formatting of classic syslog files, showing one line per journal entry.\n\nshort-full \n\nis very similar, but shows timestamps in the format the --since= and --until= options accept. Unlike the timestamp information shown in short output mode this mode includes weekday, year and timezone information in the output, and is locale-independent.\n\nshort-iso \n\nis very similar, but shows ISO 8601 wallclock timestamps.\n\nshort-iso-precise \n\nas for short-iso but includes full microsecond precision.\n\nshort-precise \n\nis very similar, but shows classic syslog timestamps with full microsecond precision.\n\nshort-monotonic \n\nis very similar, but shows monotonic timestamps instead of wallclock timestamps.\n\nshort-unix \n\nis very similar, but shows seconds passed since January 1st 1970 UTC instead of wallclock timestamps (\"UNIX time\"). The time is shown with microsecond accuracy.\n\nverbose \n\nshows the full-structured entry items with all fields.\n\nexport \n\nserializes the journal into a binary (but mostly text-based) stream suitable for backups and network transfer (see Journal Export Format for more information). To import the binary stream back into native journald format use systemd-journal-remote(8).\n\njson \n\nformats entries as JSON objects, separated by newline characters (see Journal JSON Format for more information). Field values are generally encoded as JSON strings, with three exceptions:\n\n 1. Fields larger than 4096 bytes are encoded as null values. (This may be turned off by passing --all, but be aware that this may allocate overly long JSON objects.)\n\n 2. Journal entries permit non-unique fields within the same log entry. JSON does not allow non-unique fields within objects. Due to this, if a non-unique field is encountered a JSON array is used as field value, listing all field values as elements.\n\n 3. Fields containing non-printable or non-UTF8 bytes are encoded as arrays containing the raw bytes individually formatted as unsigned numbers.\n\nNote that this encoding is reversible (with the exception of the size limit).\n\njson-pretty \n\nformats entries as JSON data structures, but formats them in multiple lines in order to make them more readable by humans.\n\njson-sse \n\nformats entries as JSON data structures, but wraps them in a format suitable for Server-Sent Events.\n\njson-seq \n\nformats entries as JSON data structures, but prefixes them with an ASCII Record Separator character (0x1E) and suffixes them with an ASCII Line Feed character (0x0A), in accordance with JavaScript Object Notation (JSON) Text Sequences (\"application/json-seq\").\n\ncat \n\ngenerates a very terse output, only showing the actual message of each journal entry with no metadata, not even a timestamp. If combined with the --output-fields= option will output the listed fields for each log record, instead of the message.\n\nwith-unit \n\nsimilar to short-full, but prefixes the unit and user unit names instead of the traditional syslog identifier. Useful when using templated instances, as it will include the arguments in the unit names."
       },
       {
-        "type": "long",
         "key": "output-fields",
         "title": "--output-fields=",
         "description": "A comma separated list of the fields which should be included in the output. This has an effect only for the output modes which would normally show all fields (verbose, export, json, json-pretty, json-sse and json-seq), as well as on cat. For the former, the \"__CURSOR\", \"__REALTIME_TIMESTAMP\", \"__MONOTONIC_TIMESTAMP\", and \"_BOOT_ID\" fields are always printed."
       },
       {
-        "type": "long",
         "key": "utc",
         "title": "--utc",
         "description": "Express time in Coordinated Universal Time (UTC)."
       },
       {
-        "type": "long",
         "key": "no-hostname",
         "title": "--no-hostname",
         "description": "Don't show the hostname field of log messages originating from the local host. This switch has an effect only on the short family of output modes (see above).\n\nNote: this option does not remove occurrences of the hostname from log entries themselves, so it does not prevent the hostname from being visible in the logs."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --catalog",
         "description": "Augment log lines with explanation texts from the message catalog. This will add explanatory help texts to log messages in the output where this is available. These short help texts will explain the context of an error or log event, possible solutions, as well as pointers to support forums, developer documentation, and any other relevant manuals. Note that help texts are not available for all messages, but only for selected ones. For more information on the message catalog, please refer to the Message Catalog Developer Documentation.\n\nNote: when attaching journalctl output to bug reports, please do not use -x."
       },
       {
-        "type": "long",
         "key": "catalog",
         "title": "-x, --catalog",
         "description": "Augment log lines with explanation texts from the message catalog. This will add explanatory help texts to log messages in the output where this is available. These short help texts will explain the context of an error or log event, possible solutions, as well as pointers to support forums, developer documentation, and any other relevant manuals. Note that help texts are not available for all messages, but only for selected ones. For more information on the message catalog, please refer to the Message Catalog Developer Documentation.\n\nNote: when attaching journalctl output to bug reports, please do not use -x."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Suppresses all informational messages (i.e. \"-- Journal begins at …\", \"-- Reboot --\"), any warning messages regarding inaccessible system journals when run as a normal user."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Suppresses all informational messages (i.e. \"-- Journal begins at …\", \"-- Reboot --\"), any warning messages regarding inaccessible system journals when run as a normal user."
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m, --merge",
         "description": "Show entries interleaved from all available journals, including remote ones."
       },
       {
-        "type": "long",
         "key": "merge",
         "title": "-m, --merge",
         "description": "Show entries interleaved from all available journals, including remote ones."
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b [[ID][±offset]|all], --boot[=[ID][±offset]|all]",
         "description": "Show messages from a specific boot. This will add a match for \"_BOOT_ID=\".\n\nThe argument may be empty, in which case logs for the current boot will be shown.\n\nIf the boot ID is omitted, a positive offset will look up the boots starting from the beginning of the journal, and an equal-or-less-than zero offset will look up boots starting from the end of the journal. Thus, 1 means the first boot found in the journal in chronological order, 2 the second and so on; while -0 is the last boot, -1 the boot before last, and so on. An empty offset is equivalent to specifying -0, except when the current boot is not the last boot (e.g. because --directory was specified to look at logs from a different machine).\n\nIf the 32-character ID is specified, it may optionally be followed by offset which identifies the boot relative to the one given by boot ID. Negative values mean earlier boots and positive values mean later boots. If offset is not specified, a value of zero is assumed, and the logs for the boot given by ID are shown.\n\nThe special argument all can be used to negate the effect of an earlier use of -b."
       },
       {
-        "type": "long",
         "key": "boot",
         "title": "-b [[ID][±offset]|all], --boot[=[ID][±offset]|all]",
         "description": "Show messages from a specific boot. This will add a match for \"_BOOT_ID=\".\n\nThe argument may be empty, in which case logs for the current boot will be shown.\n\nIf the boot ID is omitted, a positive offset will look up the boots starting from the beginning of the journal, and an equal-or-less-than zero offset will look up boots starting from the end of the journal. Thus, 1 means the first boot found in the journal in chronological order, 2 the second and so on; while -0 is the last boot, -1 the boot before last, and so on. An empty offset is equivalent to specifying -0, except when the current boot is not the last boot (e.g. because --directory was specified to look at logs from a different machine).\n\nIf the 32-character ID is specified, it may optionally be followed by offset which identifies the boot relative to the one given by boot ID. Negative values mean earlier boots and positive values mean later boots. If offset is not specified, a value of zero is assumed, and the logs for the boot given by ID are shown.\n\nThe special argument all can be used to negate the effect of an earlier use of -b."
       },
       {
-        "type": "long",
         "key": "list-boots",
         "title": "--list-boots",
         "description": "Show a tabular list of boot numbers (relative to the current boot), their IDs, and the timestamps of the first and last message pertaining to the boot."
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k, --dmesg",
         "description": "Show only kernel messages. This implies -b and adds the match \"_TRANSPORT=kernel\"."
       },
       {
-        "type": "long",
         "key": "dmesg",
         "title": "-k, --dmesg",
         "description": "Show only kernel messages. This implies -b and adds the match \"_TRANSPORT=kernel\"."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --identifier=SYSLOG_IDENTIFIER",
         "description": "Show messages for the specified syslog identifier SYSLOG_IDENTIFIER.\n\nThis parameter can be specified multiple times."
       },
       {
-        "type": "long",
         "key": "identifier",
         "title": "-t, --identifier=SYSLOG_IDENTIFIER",
         "description": "Show messages for the specified syslog identifier SYSLOG_IDENTIFIER.\n\nThis parameter can be specified multiple times."
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --unit=UNIT|PATTERN",
         "description": "Show messages for the specified systemd unit UNIT (such as a service unit), or for any of the units matched by PATTERN. If a pattern is specified, a list of unit names found in the journal is compared with the specified pattern and all that match are used. For each unit name, a match is added for messages from the unit (\"_SYSTEMD_UNIT=UNIT\"), along with additional matches for messages from systemd and messages about coredumps for the specified unit. A match is also added for \"_SYSTEMD_SLICE=UNIT\", such that if the provided UNIT is a systemd.slice(5) unit, all logs of children of the slice will be shown.\n\nThis parameter can be specified multiple times."
       },
       {
-        "type": "long",
         "key": "unit",
         "title": "-u, --unit=UNIT|PATTERN",
         "description": "Show messages for the specified systemd unit UNIT (such as a service unit), or for any of the units matched by PATTERN. If a pattern is specified, a list of unit names found in the journal is compared with the specified pattern and all that match are used. For each unit name, a match is added for messages from the unit (\"_SYSTEMD_UNIT=UNIT\"), along with additional matches for messages from systemd and messages about coredumps for the specified unit. A match is also added for \"_SYSTEMD_SLICE=UNIT\", such that if the provided UNIT is a systemd.slice(5) unit, all logs of children of the slice will be shown.\n\nThis parameter can be specified multiple times."
       },
       {
-        "type": "long",
         "key": "user-unit",
         "title": "--user-unit=",
         "description": "Show messages for the specified user session unit. This will add a match for messages from the unit (\"_SYSTEMD_USER_UNIT=\" and \"_UID=\") and additional matches for messages from session systemd and messages about coredumps for the specified unit. A match is also added for \"_SYSTEMD_USER_SLICE=UNIT\", such that if the provided UNIT is a systemd.slice(5) unit, all logs of children of the unit will be shown.\n\nThis parameter can be specified multiple times."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --priority=",
         "description": "Filter output by message priorities or priority ranges. Takes either a single numeric or textual log level (i.e. between 0/\"emerg\" and 7/\"debug\"), or a range of numeric/text log levels in the form FROM..TO. The log levels are the usual syslog log levels as documented in syslog(3), i.e. \"emerg\" (0), \"alert\" (1), \"crit\" (2), \"err\" (3), \"warning\" (4), \"notice\" (5), \"info\" (6), \"debug\" (7). If a single log level is specified, all messages with this log level or a lower (hence more important) log level are shown. If a range is specified, all messages within the range are shown, including both the start and the end value of the range. This will add \"PRIORITY=\" matches for the specified priorities."
       },
       {
-        "type": "long",
         "key": "priority",
         "title": "-p, --priority=",
         "description": "Filter output by message priorities or priority ranges. Takes either a single numeric or textual log level (i.e. between 0/\"emerg\" and 7/\"debug\"), or a range of numeric/text log levels in the form FROM..TO. The log levels are the usual syslog log levels as documented in syslog(3), i.e. \"emerg\" (0), \"alert\" (1), \"crit\" (2), \"err\" (3), \"warning\" (4), \"notice\" (5), \"info\" (6), \"debug\" (7). If a single log level is specified, all messages with this log level or a lower (hence more important) log level are shown. If a range is specified, all messages within the range are shown, including both the start and the end value of the range. This will add \"PRIORITY=\" matches for the specified priorities."
       },
       {
-        "type": "long",
         "key": "facility",
         "title": "--facility=",
         "description": "Filter output by syslog facility. Takes a comma-separated list of numbers or facility names. The names are the usual syslog facilities as documented in syslog(3). --facility=help may be used to display a list of known facility names and exit."
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --grep=",
         "description": "Filter output to entries where the MESSAGE= field matches the specified regular expression. PERL-compatible regular expressions are used, see pcre2pattern(3) for a detailed description of the syntax.\n\nIf the pattern is all lowercase, matching is case insensitive. Otherwise, matching is case sensitive. This can be overridden with the --case-sensitive option, see below."
       },
       {
-        "type": "long",
         "key": "grep",
         "title": "-g, --grep=",
         "description": "Filter output to entries where the MESSAGE= field matches the specified regular expression. PERL-compatible regular expressions are used, see pcre2pattern(3) for a detailed description of the syntax.\n\nIf the pattern is all lowercase, matching is case insensitive. Otherwise, matching is case sensitive. This can be overridden with the --case-sensitive option, see below."
       },
       {
-        "type": "long",
         "key": "case-sensitive",
         "title": "--case-sensitive[=BOOLEAN]",
         "description": "Make pattern matching case sensitive or case insensitive."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --cursor=",
         "description": "Start showing entries from the location in the journal specified by the passed cursor."
       },
       {
-        "type": "long",
         "key": "cursor",
         "title": "-c, --cursor=",
         "description": "Start showing entries from the location in the journal specified by the passed cursor."
       },
       {
-        "type": "long",
         "key": "cursor-file",
         "title": "--cursor-file=FILE",
         "description": "If FILE exists and contains a cursor, start showing entries after this location. Otherwise the show entries according the other given options. At the end, write the cursor of the last entry to FILE. Use this option to continually read the journal by sequentially calling journalctl."
       },
       {
-        "type": "long",
         "key": "after-cursor",
         "title": "--after-cursor=",
         "description": "Start showing entries from the location in the journal after the location specified by the passed cursor. The cursor is shown when the --show-cursor option is used."
       },
       {
-        "type": "long",
         "key": "show-cursor",
         "title": "--show-cursor",
         "description": "The cursor is shown after the last entry after two dashes:\n\n-- cursor: s=0639…\n\nThe format of the cursor is private and subject to change."
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S, --since=, -U, --until=",
         "description": "Start showing entries on or newer than the specified date, or on or older than the specified date, respectively. Date specifications should be of the format \"2012-10-30 18:17:16\". If the time part is omitted, \"00:00:00\" is assumed. If only the seconds component is omitted, \":00\" is assumed. If the date component is omitted, the current day is assumed. Alternatively the strings \"yesterday\", \"today\", \"tomorrow\" are understood, which refer to 00:00:00 of the day before the current day, the current day, or the day after the current day, respectively. \"now\" refers to the current time. Finally, relative times may be specified, prefixed with \"-\" or \"+\", referring to times before or after the current time, respectively. For complete time and date specification, see systemd.time(7). Note that --output=short-full prints timestamps that follow precisely this format."
       },
       {
-        "type": "long",
         "key": "since",
         "title": "-S, --since=, -U, --until=",
         "description": "Start showing entries on or newer than the specified date, or on or older than the specified date, respectively. Date specifications should be of the format \"2012-10-30 18:17:16\". If the time part is omitted, \"00:00:00\" is assumed. If only the seconds component is omitted, \":00\" is assumed. If the date component is omitted, the current day is assumed. Alternatively the strings \"yesterday\", \"today\", \"tomorrow\" are understood, which refer to 00:00:00 of the day before the current day, the current day, or the day after the current day, respectively. \"now\" refers to the current time. Finally, relative times may be specified, prefixed with \"-\" or \"+\", referring to times before or after the current time, respectively. For complete time and date specification, see systemd.time(7). Note that --output=short-full prints timestamps that follow precisely this format."
       },
       {
-        "type": "short",
         "key": "U",
         "title": "-S, --since=, -U, --until=",
         "description": "Start showing entries on or newer than the specified date, or on or older than the specified date, respectively. Date specifications should be of the format \"2012-10-30 18:17:16\". If the time part is omitted, \"00:00:00\" is assumed. If only the seconds component is omitted, \":00\" is assumed. If the date component is omitted, the current day is assumed. Alternatively the strings \"yesterday\", \"today\", \"tomorrow\" are understood, which refer to 00:00:00 of the day before the current day, the current day, or the day after the current day, respectively. \"now\" refers to the current time. Finally, relative times may be specified, prefixed with \"-\" or \"+\", referring to times before or after the current time, respectively. For complete time and date specification, see systemd.time(7). Note that --output=short-full prints timestamps that follow precisely this format."
       },
       {
-        "type": "long",
         "key": "until",
         "title": "-S, --since=, -U, --until=",
         "description": "Start showing entries on or newer than the specified date, or on or older than the specified date, respectively. Date specifications should be of the format \"2012-10-30 18:17:16\". If the time part is omitted, \"00:00:00\" is assumed. If only the seconds component is omitted, \":00\" is assumed. If the date component is omitted, the current day is assumed. Alternatively the strings \"yesterday\", \"today\", \"tomorrow\" are understood, which refer to 00:00:00 of the day before the current day, the current day, or the day after the current day, respectively. \"now\" refers to the current time. Finally, relative times may be specified, prefixed with \"-\" or \"+\", referring to times before or after the current time, respectively. For complete time and date specification, see systemd.time(7). Note that --output=short-full prints timestamps that follow precisely this format."
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F, --field=",
         "description": "Print all possible data values the specified field can take in all entries of the journal."
       },
       {
-        "type": "long",
         "key": "field",
         "title": "-F, --field=",
         "description": "Print all possible data values the specified field can take in all entries of the journal."
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N, --fields",
         "description": "Print all field names currently used in all entries of the journal."
       },
       {
-        "type": "long",
         "key": "fields",
         "title": "-N, --fields",
         "description": "Print all field names currently used in all entries of the journal."
       },
       {
-        "type": "long",
         "key": "system",
         "title": "--system, --user",
         "description": "Show messages from system services and the kernel (with --system). Show messages from service of current user (with --user). If neither is specified, show all messages that the user can see."
       },
       {
-        "type": "long",
         "key": "user",
         "title": "--system, --user",
         "description": "Show messages from system services and the kernel (with --system). Show messages from service of current user (with --user). If neither is specified, show all messages that the user can see."
       },
       {
-        "type": "short",
         "key": "M",
         "title": "-M, --machine=",
         "description": "Show messages from a running, local container. Specify a container name to connect to."
       },
       {
-        "type": "long",
         "key": "machine",
         "title": "-M, --machine=",
         "description": "Show messages from a running, local container. Specify a container name to connect to."
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D DIR, --directory=DIR",
         "description": "Takes a directory path as argument. If specified, journalctl will operate on the specified journal directory DIR instead of the default runtime and system journal paths."
       },
       {
-        "type": "long",
         "key": "directory",
         "title": "-D DIR, --directory=DIR",
         "description": "Takes a directory path as argument. If specified, journalctl will operate on the specified journal directory DIR instead of the default runtime and system journal paths."
       },
       {
-        "type": "long",
         "key": "file",
         "title": "--file=GLOB",
         "description": "Takes a file glob as an argument. If specified, journalctl will operate on the specified journal files matching GLOB instead of the default runtime and system journal paths. May be specified multiple times, in which case files will be suitably interleaved."
       },
       {
-        "type": "long",
         "key": "root",
         "title": "--root=ROOT",
         "description": "Takes a directory path as an argument. If specified, journalctl will operate on journal directories and catalog file hierarchy underneath the specified directory instead of the root directory (e.g. --update-catalog will create ROOT/var/lib/systemd/catalog/database, and journal files under ROOT/run/journal/ or ROOT/var/log/journal/ will be displayed)."
       },
       {
-        "type": "long",
         "key": "image",
         "title": "--image=IMAGE",
         "description": "Takes a path to a disk image file or block device node. If specified, journalctl will operate on the file system in the indicated disk image. This is similar to --root= but operates on file systems stored in disk images or block devices, thus providing an easy way to extract log data from disk images. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the Discoverable Partitions Specification. For further information on supported disk images, see systemd-nspawn(1)'s switch of the same name."
       },
       {
-        "type": "long",
         "key": "namespace",
         "title": "--namespace=NAMESPACE",
         "description": "Takes a journal namespace identifier string as argument. If not specified the data collected by the default namespace is shown. If specified shows the log data of the specified namespace instead. If the namespace is specified as \"*\" data from all namespaces is shown, interleaved. If the namespace identifier is prefixed with \"+\" data from the specified namespace and the default namespace is shown, interleaved, but no other. For details about journal namespaces see systemd-journald.service(8)."
       },
       {
-        "type": "long",
         "key": "header",
         "title": "--header",
         "description": "Instead of showing journal contents, show internal header information of the journal fields accessed."
       },
       {
-        "type": "long",
         "key": "disk-usage",
         "title": "--disk-usage",
         "description": "Shows the current disk usage of all journal files. This shows the sum of the disk usage of all archived and active journal files."
       },
       {
-        "type": "long",
         "key": "vacuum-size",
         "title": "--vacuum-size=, --vacuum-time=, --vacuum-files=",
         "description": "Removes the oldest archived journal files until the disk space they use falls below the specified size (specified with the usual \"K\", \"M\", \"G\" and \"T\" suffixes), or all archived journal files contain no data older than the specified timespan (specified with the usual \"s\", \"m\", \"h\", \"days\", \"months\", \"weeks\" and \"years\" suffixes), or no more than the specified number of separate journal files remain. Note that running --vacuum-size= has only an indirect effect on the output shown by --disk-usage, as the latter includes active journal files, while the vacuuming operation only operates on archived journal files. Similarly, --vacuum-files= might not actually reduce the number of journal files to below the specified number, as it will not remove active journal files.\n\n--vacuum-size=, --vacuum-time= and --vacuum-files= may be combined in a single invocation to enforce any combination of a size, a time and a number of files limit on the archived journal files. Specifying any of these three parameters as zero is equivalent to not enforcing the specific limit, and is thus redundant.\n\nThese three switches may also be combined with --rotate into one command. If so, all active files are rotated first, and the requested vacuuming operation is executed right after. The rotation has the effect that all currently active files are archived (and potentially new, empty journal files opened as replacement), and hence the vacuuming operation has the greatest effect as it can take all log data written so far into account."
       },
       {
-        "type": "long",
         "key": "vacuum-time",
         "title": "--vacuum-size=, --vacuum-time=, --vacuum-files=",
         "description": "Removes the oldest archived journal files until the disk space they use falls below the specified size (specified with the usual \"K\", \"M\", \"G\" and \"T\" suffixes), or all archived journal files contain no data older than the specified timespan (specified with the usual \"s\", \"m\", \"h\", \"days\", \"months\", \"weeks\" and \"years\" suffixes), or no more than the specified number of separate journal files remain. Note that running --vacuum-size= has only an indirect effect on the output shown by --disk-usage, as the latter includes active journal files, while the vacuuming operation only operates on archived journal files. Similarly, --vacuum-files= might not actually reduce the number of journal files to below the specified number, as it will not remove active journal files.\n\n--vacuum-size=, --vacuum-time= and --vacuum-files= may be combined in a single invocation to enforce any combination of a size, a time and a number of files limit on the archived journal files. Specifying any of these three parameters as zero is equivalent to not enforcing the specific limit, and is thus redundant.\n\nThese three switches may also be combined with --rotate into one command. If so, all active files are rotated first, and the requested vacuuming operation is executed right after. The rotation has the effect that all currently active files are archived (and potentially new, empty journal files opened as replacement), and hence the vacuuming operation has the greatest effect as it can take all log data written so far into account."
       },
       {
-        "type": "long",
         "key": "vacuum-files",
         "title": "--vacuum-size=, --vacuum-time=, --vacuum-files=",
         "description": "Removes the oldest archived journal files until the disk space they use falls below the specified size (specified with the usual \"K\", \"M\", \"G\" and \"T\" suffixes), or all archived journal files contain no data older than the specified timespan (specified with the usual \"s\", \"m\", \"h\", \"days\", \"months\", \"weeks\" and \"years\" suffixes), or no more than the specified number of separate journal files remain. Note that running --vacuum-size= has only an indirect effect on the output shown by --disk-usage, as the latter includes active journal files, while the vacuuming operation only operates on archived journal files. Similarly, --vacuum-files= might not actually reduce the number of journal files to below the specified number, as it will not remove active journal files.\n\n--vacuum-size=, --vacuum-time= and --vacuum-files= may be combined in a single invocation to enforce any combination of a size, a time and a number of files limit on the archived journal files. Specifying any of these three parameters as zero is equivalent to not enforcing the specific limit, and is thus redundant.\n\nThese three switches may also be combined with --rotate into one command. If so, all active files are rotated first, and the requested vacuuming operation is executed right after. The rotation has the effect that all currently active files are archived (and potentially new, empty journal files opened as replacement), and hence the vacuuming operation has the greatest effect as it can take all log data written so far into account."
       },
       {
-        "type": "long",
         "key": "list-catalog",
         "title": "--list-catalog [128-bit-ID…]",
         "description": "List the contents of the message catalog as a table of message IDs, plus their short description strings.\n\nIf any 128-bit-IDs are specified, only those entries are shown."
       },
       {
-        "type": "long",
         "key": "dump-catalog",
         "title": "--dump-catalog [128-bit-ID…]",
         "description": "Show the contents of the message catalog, with entries separated by a line consisting of two dashes and the ID (the format is the same as .catalog files).\n\nIf any 128-bit-IDs are specified, only those entries are shown."
       },
       {
-        "type": "long",
         "key": "update-catalog",
         "title": "--update-catalog",
         "description": "Update the message catalog index. This command needs to be executed each time new catalog files are installed, removed, or updated to rebuild the binary catalog index."
       },
       {
-        "type": "long",
         "key": "setup-keys",
         "title": "--setup-keys",
         "description": "Instead of showing journal contents, generate a new key pair for Forward Secure Sealing (FSS). This will generate a sealing key and a verification key. The sealing key is stored in the journal data directory and shall remain on the host. The verification key should be stored externally. Refer to the Seal= option in journald.conf(5) for information on Forward Secure Sealing and for a link to a refereed scholarly paper detailing the cryptographic theory it is based on."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "--force",
         "description": "When --setup-keys is passed and Forward Secure Sealing (FSS) has already been configured, recreate FSS keys."
       },
       {
-        "type": "long",
         "key": "interval",
         "title": "--interval=",
         "description": "Specifies the change interval for the sealing key when generating an FSS key pair with --setup-keys. Shorter intervals increase CPU consumption but shorten the time range of undetectable journal alterations. Defaults to 15min."
       },
       {
-        "type": "long",
         "key": "verify",
         "title": "--verify",
         "description": "Check the journal file for internal consistency. If the file has been generated with FSS enabled and the FSS verification key has been specified with --verify-key=, authenticity of the journal file is verified."
       },
       {
-        "type": "long",
         "key": "verify-key",
         "title": "--verify-key=",
         "description": "Specifies the FSS verification key to use for the --verify operation."
       },
       {
-        "type": "long",
         "key": "sync",
         "title": "--sync",
         "description": "Asks the journal daemon to write all yet unwritten journal data to the backing file system and synchronize all journals. This call does not return until the synchronization operation is complete. This command guarantees that any log messages written before its invocation are safely stored on disk at the time it returns."
       },
       {
-        "type": "long",
         "key": "flush",
         "title": "--flush",
         "description": "Asks the journal daemon to flush any log data stored in /run/log/journal/ into /var/log/journal/, if persistent storage is enabled. This call does not return until the operation is complete. Note that this call is idempotent: the data is only flushed from /run/log/journal/ into /var/log/journal/ once during system runtime (but see --relinquish-var below), and this command exits cleanly without executing any operation if this has already happened. This command effectively guarantees that all data is flushed to /var/log/journal/ at the time it returns."
       },
       {
-        "type": "long",
         "key": "relinquish-var",
         "title": "--relinquish-var",
         "description": "Asks the journal daemon for the reverse operation to --flush: if requested the daemon will write further log data to /run/log/journal/ and stops writing to /var/log/journal/. A subsequent call to --flush causes the log output to switch back to /var/log/journal/, see above."
       },
       {
-        "type": "long",
         "key": "smart-relinquish-var",
         "title": "--smart-relinquish-var",
         "description": "Similar to --relinquish-var but executes no operation if the root file system and /var/lib/journal/ reside on the same mount point. This operation is used during system shutdown in order to make the journal daemon stop writing data to /var/log/journal/ in case that directory is located on a mount point that needs to be unmounted."
       },
       {
-        "type": "long",
         "key": "rotate",
         "title": "--rotate",
         "description": "Asks the journal daemon to rotate journal files. This call does not return until the rotation operation is complete. Journal file rotation has the effect that all currently active journal files are marked as archived and renamed, so that they are never written to in future. New (empty) journal files are then created in their place. This operation may be combined with --vacuum-size=, --vacuum-time= and --vacuum-file= into a single command, see above."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Print a short help text and exit."
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Print a short help text and exit."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "Print a short version string and exit."
       },
       {
-        "type": "long",
         "key": "no-pager",
         "title": "--no-pager",
         "description": "Do not pipe output into a pager."

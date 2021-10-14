@@ -1,111 +1,94 @@
 [
   {
     "name": "yarn add",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E, --exact",
         "description": "Don't use any semver modifier on the resolved range"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-E, --exact",
         "description": "Don't use any semver modifier on the resolved range"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --tilde",
         "description": "Use the ~ semver modifier on the resolved range"
       },
       {
-        "type": "long",
         "key": "tilde",
         "title": "-T, --tilde",
         "description": "Use the ~ semver modifier on the resolved range"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C, --caret",
         "description": "Use the ^ semver modifier on the resolved range"
       },
       {
-        "type": "long",
         "key": "caret",
         "title": "-C, --caret",
         "description": "Use the ^ semver modifier on the resolved range"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --dev",
         "description": "Add a package as a dev dependency"
       },
       {
-        "type": "long",
         "key": "dev",
         "title": "-D, --dev",
         "description": "Add a package as a dev dependency"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --peer",
         "description": "Add a package as a peer dependency"
       },
       {
-        "type": "long",
         "key": "peer",
         "title": "-P, --peer",
         "description": "Add a package as a peer dependency"
       },
       {
-        "type": "short",
         "key": "O",
         "title": "-O, --optional",
         "description": "Add / upgrade a package to an optional regular / peer dependency"
       },
       {
-        "type": "long",
         "key": "optional",
         "title": "-O, --optional",
         "description": "Add / upgrade a package to an optional regular / peer dependency"
       },
       {
-        "type": "long",
         "key": "prefer-dev",
         "title": "--prefer-dev",
         "description": "Add / upgrade a package to a dev dependency"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "Reuse the specified package from other workspaces in the project"
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "Reuse the specified package from other workspaces in the project"
       },
       {
-        "type": "long",
         "key": "cached",
         "title": "--cached",
         "description": "Reuse the highest version already used somewhere within the project"
       },
       {
-        "type": "long",
         "key": "mode",
         "title": "--mode #0",
         "description": "Change what artifacts installs generate"
@@ -114,21 +97,19 @@
   },
   {
     "name": "yarn bin",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Print both the binary name and the locator of the package that provides the binary"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Print both the binary name and the locator of the package that provides the binary"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -137,15 +118,14 @@
   },
   {
     "name": "yarn cache clean",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "mirror",
         "title": "--mirror",
         "description": "Remove the global cache files instead of the local cache files"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Remove both the global cache files and the local cache files of the current project"
@@ -154,15 +134,14 @@
   },
   {
     "name": "yarn config get",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "long",
         "key": "no-redacted",
         "title": "--no-redacted",
         "description": "Don't redact secrets (such as tokens) from the output"
@@ -171,21 +150,19 @@
   },
   {
     "name": "yarn config set",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Set complex configuration settings to JSON values"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H, --home",
         "description": "Update the home configuration instead of the project configuration"
       },
       {
-        "type": "long",
         "key": "home",
         "title": "-H, --home",
         "description": "Update the home configuration instead of the project configuration"
@@ -194,15 +171,14 @@
   },
   {
     "name": "yarn config unset",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "H",
         "title": "-H, --home",
         "description": "Update the home configuration instead of the project configuration"
       },
       {
-        "type": "long",
         "key": "home",
         "title": "-H, --home",
         "description": "Update the home configuration instead of the project configuration"
@@ -211,27 +187,24 @@
   },
   {
     "name": "yarn config",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Print the setting description on top of the regular key/value information"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Print the setting description on top of the regular key/value information"
       },
       {
-        "type": "long",
         "key": "why",
         "title": "--why",
         "description": "Print the reason why a setting is set a particular way"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -240,9 +213,9 @@
   },
   {
     "name": "yarn constraints query",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -251,15 +224,14 @@
   },
   {
     "name": "yarn constraints source",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Also print the fact database automatically compiled from the workspace manifests"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Also print the fact database automatically compiled from the workspace manifests"
@@ -268,9 +240,9 @@
   },
   {
     "name": "yarn constraints",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "fix",
         "title": "--fix",
         "description": "Attempt to automatically fix unambiguous issues, following a multi-pass process"
@@ -279,39 +251,34 @@
   },
   {
     "name": "yarn dedupe",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --strategy #0",
         "description": "The strategy to use when deduping dependencies"
       },
       {
-        "type": "long",
         "key": "strategy",
         "title": "-s, --strategy #0",
         "description": "The strategy to use when deduping dependencies"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --check",
         "description": "Exit with exit code 1 when duplicates are found, without persisting the dependency tree"
       },
       {
-        "type": "long",
         "key": "check",
         "title": "-c, --check",
         "description": "Exit with exit code 1 when duplicates are found, without persisting the dependency tree"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "long",
         "key": "mode",
         "title": "--mode #0",
         "description": "Change what artifacts installs generate"
@@ -320,27 +287,24 @@
   },
   {
     "name": "yarn dlx",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --package #0",
         "description": "The package(s) to install before running the command"
       },
       {
-        "type": "long",
         "key": "package",
         "title": "-p, --package #0",
         "description": "The package(s) to install before running the command"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Only report critical errors instead of printing the full install logs"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Only report critical errors instead of printing the full install logs"
@@ -349,83 +313,74 @@
   },
   {
     "name": "yarn exec",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn explain peer-requirements",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn info",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Print versions of a package from the whole project"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Print versions of a package from the whole project"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "Print information for all packages, including transitive dependencies"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "Print information for all packages, including transitive dependencies"
       },
       {
-        "type": "short",
         "key": "X",
         "title": "-X, --extra #0",
         "description": "An array of requests of extra data provided by plugins"
       },
       {
-        "type": "long",
         "key": "extra",
         "title": "-X, --extra #0",
         "description": "An array of requests of extra data provided by plugins"
       },
       {
-        "type": "long",
         "key": "cache",
         "title": "--cache",
         "description": "Print information about the cache entry of a package (path, size, checksum)"
       },
       {
-        "type": "long",
         "key": "dependents",
         "title": "--dependents",
         "description": "Print all dependents for each matching package"
       },
       {
-        "type": "long",
         "key": "manifest",
         "title": "--manifest",
         "description": "Print data obtained by looking at the package archive (license, homepage, ...)"
       },
       {
-        "type": "long",
         "key": "name-only",
         "title": "--name-only",
         "description": "Only print the name for the matching packages"
       },
       {
-        "type": "long",
         "key": "virtuals",
         "title": "--virtuals",
         "description": "Print each instance of the virtual packages"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -434,39 +389,34 @@
   },
   {
     "name": "yarn init",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --private",
         "description": "Initialize a private package"
       },
       {
-        "type": "long",
         "key": "private",
         "title": "-p, --private",
         "description": "Initialize a private package"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --workspace",
         "description": "Initialize a workspace root with a packages/ directory"
       },
       {
-        "type": "long",
         "key": "workspace",
         "title": "-w, --workspace",
         "description": "Initialize a workspace root with a packages/ directory"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --install",
         "description": "Initialize a package with a specific bundle that will be locked in the project"
       },
       {
-        "type": "long",
         "key": "install",
         "title": "-i, --install",
         "description": "Initialize a package with a specific bundle that will be locked in the project"
@@ -475,39 +425,34 @@
   },
   {
     "name": "yarn install",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "long",
         "key": "immutable",
         "title": "--immutable",
         "description": "Abort with an error exit code if the lockfile was to be modified"
       },
       {
-        "type": "long",
         "key": "immutable-cache",
         "title": "--immutable-cache",
         "description": "Abort with an error exit code if the cache folder was to be modified"
       },
       {
-        "type": "long",
         "key": "check-cache",
         "title": "--check-cache",
         "description": "Always refetch the packages and ensure that their checksums are consistent"
       },
       {
-        "type": "long",
         "key": "inline-builds",
         "title": "--inline-builds",
         "description": "Verbosely print the output of the build steps of dependencies"
       },
       {
-        "type": "long",
         "key": "mode",
         "title": "--mode #0",
         "description": "Change what artifacts installs generate"
@@ -516,39 +461,34 @@
   },
   {
     "name": "yarn link",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Link all workspaces belonging to the target project to the current one"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Link all workspaces belonging to the target project to the current one"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --private",
         "description": "Also link private workspaces belonging to the target project to the current one"
       },
       {
-        "type": "long",
         "key": "private",
         "title": "-p, --private",
         "description": "Also link private workspaces belonging to the target project to the current one"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --relative",
         "description": "Link workspaces using relative paths instead of absolute paths"
       },
       {
-        "type": "long",
         "key": "relative",
         "title": "-r, --relative",
         "description": "Link workspaces using relative paths instead of absolute paths"
@@ -557,49 +497,44 @@
   },
   {
     "name": "yarn node",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn npm audit",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Audit dependencies from all workspaces"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Audit dependencies from all workspaces"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "Audit transitive dependencies as well"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "Audit transitive dependencies as well"
       },
       {
-        "type": "long",
         "key": "environment",
         "title": "--environment #0",
         "description": "Which environments to cover"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "long",
         "key": "severity",
         "title": "--severity #0",
         "description": "Minimal severity requested for packages to be displayed"
@@ -608,21 +543,19 @@
   },
   {
     "name": "yarn npm info",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --fields #0",
         "description": "A comma-separated list of manifest fields that should be displayed"
       },
       {
-        "type": "long",
         "key": "fields",
         "title": "-f, --fields #0",
         "description": "A comma-separated list of manifest fields that should be displayed"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -631,21 +564,19 @@
   },
   {
     "name": "yarn npm login",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --scope #0",
         "description": "Login to the registry configured for a given scope"
       },
       {
-        "type": "long",
         "key": "scope",
         "title": "-s, --scope #0",
         "description": "Login to the registry configured for a given scope"
       },
       {
-        "type": "long",
         "key": "publish",
         "title": "--publish",
         "description": "Login to the publish registry"
@@ -654,33 +585,29 @@
   },
   {
     "name": "yarn npm logout",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --scope #0",
         "description": "Logout of the registry configured for a given scope"
       },
       {
-        "type": "long",
         "key": "scope",
         "title": "-s, --scope #0",
         "description": "Logout of the registry configured for a given scope"
       },
       {
-        "type": "long",
         "key": "publish",
         "title": "--publish",
         "description": "Logout of the publish registry"
       },
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Logout of all registries"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Logout of all registries"
@@ -689,21 +616,19 @@
   },
   {
     "name": "yarn npm publish",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "access",
         "title": "--access #0",
         "description": "The access for the published package (public or restricted)"
       },
       {
-        "type": "long",
         "key": "tag",
         "title": "--tag #0",
         "description": "The tag on the registry that the package should be attached to"
       },
       {
-        "type": "long",
         "key": "tolerate-republish",
         "title": "--tolerate-republish",
         "description": "Warn and exit when republishing an already existing version of a package"
@@ -712,13 +637,14 @@
   },
   {
     "name": "yarn npm tag add",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn npm tag list",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -727,25 +653,24 @@
   },
   {
     "name": "yarn npm tag remove",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn npm whoami",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --scope #0",
         "description": "Print username for the registry configured for a given scope"
       },
       {
-        "type": "long",
         "key": "scope",
         "title": "-s, --scope #0",
         "description": "Print username for the registry configured for a given scope"
       },
       {
-        "type": "long",
         "key": "publish",
         "title": "--publish",
         "description": "Print username for the publish registry"
@@ -754,39 +679,34 @@
   },
   {
     "name": "yarn pack",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "install-if-needed",
         "title": "--install-if-needed",
         "description": "Run a preliminary yarn install if the package contains build scripts"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print the file paths without actually generating the package archive"
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print the file paths without actually generating the package archive"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --out #0",
         "description": "Create the archive at the specified path"
       },
       {
-        "type": "long",
         "key": "out",
         "title": "-o, --out #0",
         "description": "Create the archive at the specified path"
@@ -795,15 +715,14 @@
   },
   {
     "name": "yarn patch-commit",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --save",
         "description": "Add the patch to your resolution entries"
       },
       {
-        "type": "long",
         "key": "save",
         "title": "-s, --save",
         "description": "Add the patch to your resolution entries"
@@ -812,9 +731,9 @@
   },
   {
     "name": "yarn patch",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -823,39 +742,34 @@
   },
   {
     "name": "yarn plugin import from sources",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "path",
         "title": "--path #0",
         "description": "The path where the repository should be cloned to"
       },
       {
-        "type": "long",
         "key": "repository",
         "title": "--repository #0",
         "description": "The repository that should be cloned"
       },
       {
-        "type": "long",
         "key": "branch",
         "title": "--branch #0",
         "description": "The branch of the repository that should be cloned"
       },
       {
-        "type": "long",
         "key": "no-minify",
         "title": "--no-minify",
         "description": "Build a plugin for development (debugging) - non-minified and non-mangled"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Always clone the repository instead of trying to fetch the latest commits"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Always clone the repository instead of trying to fetch the latest commits"
@@ -864,13 +778,14 @@
   },
   {
     "name": "yarn plugin import",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn plugin list",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -879,13 +794,14 @@
   },
   {
     "name": "yarn plugin remove",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn plugin runtime",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -894,25 +810,24 @@
   },
   {
     "name": "yarn rebuild",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn remove",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Apply the operation to all workspaces from the current project"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Apply the operation to all workspaces from the current project"
       },
       {
-        "type": "long",
         "key": "mode",
         "title": "--mode #0",
         "description": "Change what artifacts installs generate"
@@ -921,39 +836,34 @@
   },
   {
     "name": "yarn run",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "inspect",
         "title": "--inspect",
         "description": "Forwarded to the underlying Node process when executing a binary"
       },
       {
-        "type": "long",
         "key": "inspect-brk",
         "title": "--inspect-brk",
         "description": "Forwarded to the underlying Node process when executing a binary"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --top-level",
         "description": "Check the root workspace for scripts and/or binaries instead of the current one"
       },
       {
-        "type": "long",
         "key": "top-level",
         "title": "-T, --top-level",
         "description": "Check the root workspace for scripts and/or binaries instead of the current one"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --binaries-only",
         "description": "Ignore any user defined scripts and only check for binaries"
       },
       {
-        "type": "long",
         "key": "binaries-only",
         "title": "-B, --binaries-only",
         "description": "Ignore any user defined scripts and only check for binaries"
@@ -962,19 +872,19 @@
   },
   {
     "name": "yarn search",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn set resolution",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --save",
         "description": "Persist the resolution inside the top-level manifest"
       },
       {
-        "type": "long",
         "key": "save",
         "title": "-s, --save",
         "description": "Persist the resolution inside the top-level manifest"
@@ -983,51 +893,44 @@
   },
   {
     "name": "yarn set version from sources",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "path",
         "title": "--path #0",
         "description": "The path where the repository should be cloned to"
       },
       {
-        "type": "long",
         "key": "repository",
         "title": "--repository #0",
         "description": "The repository that should be cloned"
       },
       {
-        "type": "long",
         "key": "branch",
         "title": "--branch #0",
         "description": "The branch of the repository that should be cloned"
       },
       {
-        "type": "long",
         "key": "plugin",
         "title": "--plugin #0",
         "description": "An array of additional plugins that should be included in the bundle"
       },
       {
-        "type": "long",
         "key": "no-minify",
         "title": "--no-minify",
         "description": "Build a bundle for development (debugging) - non-minified and non-mangled"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "Always clone the repository instead of trying to fetch the latest commits"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "Always clone the repository instead of trying to fetch the latest commits"
       },
       {
-        "type": "long",
         "key": "skip-plugins",
         "title": "--skip-plugins",
         "description": "Skip updating the contrib plugins"
@@ -1036,9 +939,9 @@
   },
   {
     "name": "yarn set version",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "only-if-needed",
         "title": "--only-if-needed",
         "description": "Only lock the Yarn version if it isn't already locked"
@@ -1047,39 +950,34 @@
   },
   {
     "name": "yarn stage",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --commit",
         "description": "Commit the staged files"
       },
       {
-        "type": "long",
         "key": "commit",
         "title": "-c, --commit",
         "description": "Commit the staged files"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --reset",
         "description": "Remove all files from the staging area"
       },
       {
-        "type": "long",
         "key": "reset",
         "title": "-r, --reset",
         "description": "Remove all files from the staging area"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --dry-run",
         "description": "Print the commit message and the list of modified files without staging / committing"
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, --dry-run",
         "description": "Print the commit message and the list of modified files without staging / committing"
@@ -1088,15 +986,14 @@
   },
   {
     "name": "yarn unlink",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Unlink all workspaces belonging to the target project from the current one"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Unlink all workspaces belonging to the target project from the current one"
@@ -1105,33 +1002,29 @@
   },
   {
     "name": "yarn unplug",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Unplug direct dependencies from the entire project"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Unplug direct dependencies from the entire project"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "Unplug both direct and transitive dependencies"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "Unplug both direct and transitive dependencies"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -1140,69 +1033,59 @@
   },
   {
     "name": "yarn up",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "Offer various choices, depending on the detected upgrade paths"
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "Offer various choices, depending on the detected upgrade paths"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E, --exact",
         "description": "Don't use any semver modifier on the resolved range"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-E, --exact",
         "description": "Don't use any semver modifier on the resolved range"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --tilde",
         "description": "Use the ~ semver modifier on the resolved range"
       },
       {
-        "type": "long",
         "key": "tilde",
         "title": "-T, --tilde",
         "description": "Use the ~ semver modifier on the resolved range"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C, --caret",
         "description": "Use the ^ semver modifier on the resolved range"
       },
       {
-        "type": "long",
         "key": "caret",
         "title": "-C, --caret",
         "description": "Use the ^ semver modifier on the resolved range"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "Resolve again ALL resolutions for those packages"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "Resolve again ALL resolutions for those packages"
       },
       {
-        "type": "long",
         "key": "mode",
         "title": "--mode #0",
         "description": "Change what artifacts installs generate"
@@ -1211,43 +1094,39 @@
   },
   {
     "name": "yarn upgrade-interactive",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn version apply",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Apply the deferred version changes on all workspaces"
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "--dry-run",
         "description": "Print the versions without actually generating the package archive"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--prerelease",
         "description": "Add a prerelease identifier to new versions"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "Release the transitive workspaces as well"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "Release the transitive workspaces as well"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
@@ -1256,15 +1135,14 @@
   },
   {
     "name": "yarn version check",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "Open an interactive interface used to set version bumps"
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "Open an interactive interface used to set version bumps"
@@ -1273,27 +1151,24 @@
   },
   {
     "name": "yarn version",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --deferred",
         "description": "Prepare the version to be bumped during the next release cycle"
       },
       {
-        "type": "long",
         "key": "deferred",
         "title": "-d, --deferred",
         "description": "Prepare the version to be bumped during the next release cycle"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --immediate",
         "description": "Bump the version immediately"
       },
       {
-        "type": "long",
         "key": "immediate",
         "title": "-i, --immediate",
         "description": "Bump the version immediately"
@@ -1302,27 +1177,24 @@
   },
   {
     "name": "yarn why",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "List, for each workspace, what are all the paths that lead to the dependency"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "List, for each workspace, what are all the paths that lead to the dependency"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "long",
         "key": "peers",
         "title": "--peers",
         "description": "Also print the peer dependencies that match the specified name"
@@ -1331,31 +1203,29 @@
   },
   {
     "name": "yarn workspace",
+    "optionStyle": "short-and-long",
     "options": []
   },
   {
     "name": "yarn workspaces focus",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"
       },
       {
-        "type": "long",
         "key": "production",
         "title": "--production",
         "description": "Only install regular dependencies by omitting dev dependencies"
       },
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Install the entire project"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Install the entire project"
@@ -1364,117 +1234,99 @@
   },
   {
     "name": "yarn workspaces foreach",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "Find packages via dependencies/devDependencies instead of using the workspaces field"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "Find packages via dependencies/devDependencies instead of using the workspaces field"
       },
       {
-        "type": "long",
         "key": "from",
         "title": "--from #0",
         "description": "An array of glob pattern idents from which to base any recursion"
       },
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --all",
         "description": "Run the command on all workspaces of a project"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-A, --all",
         "description": "Run the command on all workspaces of a project"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Prefix each output line with the name of the originating workspace"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Prefix each output line with the name of the originating workspace"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --parallel",
         "description": "Run the commands in parallel"
       },
       {
-        "type": "long",
         "key": "parallel",
         "title": "-p, --parallel",
         "description": "Run the commands in parallel"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interlaced",
         "description": "Print the output of commands in real-time instead of buffering it"
       },
       {
-        "type": "long",
         "key": "interlaced",
         "title": "-i, --interlaced",
         "description": "Print the output of commands in real-time instead of buffering it"
       },
       {
-        "type": "short",
         "key": "j",
         "title": "-j, --jobs #0",
         "description": "The maximum number of parallel tasks that the execution will be limited to; or unlimited"
       },
       {
-        "type": "long",
         "key": "jobs",
         "title": "-j, --jobs #0",
         "description": "The maximum number of parallel tasks that the execution will be limited to; or unlimited"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --topological",
         "description": "Run the command after all workspaces it depends on (regular) have finished"
       },
       {
-        "type": "long",
         "key": "topological",
         "title": "-t, --topological",
         "description": "Run the command after all workspaces it depends on (regular) have finished"
       },
       {
-        "type": "long",
         "key": "topological-dev",
         "title": "--topological-dev",
         "description": "Run the command after all workspaces it depends on (regular + dev) have finished"
       },
       {
-        "type": "long",
         "key": "include",
         "title": "--include #0",
         "description": "An array of glob pattern idents; only matching workspaces will be traversed"
       },
       {
-        "type": "long",
         "key": "exclude",
         "title": "--exclude #0",
         "description": "An array of glob pattern idents; matching workspaces won't be traversed"
       },
       {
-        "type": "long",
         "key": "no-private",
         "title": "--no-private",
         "description": "Avoid running the command on private workspaces"
@@ -1483,21 +1335,19 @@
   },
   {
     "name": "yarn workspaces list",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "Also return the cross-dependencies between workspaces"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "Also return the cross-dependencies between workspaces"
       },
       {
-        "type": "long",
         "key": "json",
         "title": "--json",
         "description": "Format the output as an NDJSON stream"

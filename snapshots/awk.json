@@ -1,33 +1,29 @@
 [
   {
     "name": "awk",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d[n]",
         "description": "Debug mode. Set debug level to n, or 1 if n is not specified. A value greater than 1 causes awk to dump core on fatal errors."
       },
       {
-        "type": "short",
         "key": "F",
         "title": "-F fs",
         "description": "Define the input field separator to be the regular expression fs."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f progfile",
         "description": "Read program code from the specified file progfile instead of from the command line."
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V",
         "description": "Print the version number of awk to standard output and exit."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v var=value",
         "description": "Assign value to variable var before prog is executed; any number of -v options may be present."

@@ -1,6 +1,7 @@
 [
   {
     "name": "inlib",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

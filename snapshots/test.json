@@ -1,171 +1,144 @@
 [
   {
     "name": "test",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n STRING",
         "description": "the length of STRING is nonzero"
       },
       {
-        "type": "short",
         "key": "z",
         "title": "-z STRING",
         "description": "the length of STRING is zero"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b FILE",
         "description": "FILE exists and is block special"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c FILE",
         "description": "FILE exists and is character special"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d FILE",
         "description": "FILE exists and is a directory"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e FILE",
         "description": "FILE exists"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f FILE",
         "description": "FILE exists and is a regular file"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g FILE",
         "description": "FILE exists and is set-group-ID"
       },
       {
-        "type": "short",
         "key": "G",
         "title": "-G FILE",
         "description": "FILE exists and is owned by the effective group ID"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h FILE",
         "description": "FILE exists and is a symbolic link (same as -L)"
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k FILE",
         "description": "FILE exists and has its sticky bit set"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L FILE",
         "description": "FILE exists and is a symbolic link (same as -h)"
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N FILE",
         "description": "FILE exists and has been modified since it was last read"
       },
       {
-        "type": "short",
         "key": "O",
         "title": "-O FILE",
         "description": "FILE exists and is owned by the effective user ID"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p FILE",
         "description": "FILE exists and is a named pipe"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r FILE",
         "description": "FILE exists and read permission is granted"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s FILE",
         "description": "FILE exists and has a size greater than zero"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S FILE",
         "description": "FILE exists and is a socket"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t FD",
         "description": "file descriptor FD is opened on a terminal"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u FILE",
         "description": "FILE exists and its set-user-ID bit is set"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w FILE",
         "description": "FILE exists and write permission is granted"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x FILE",
         "description": "FILE exists and execute (or search) permission is granted"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a FILE",
         "description": "True if file exists."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o OPTION",
         "description": "True if the shell option OPTION is enabled."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v VAR",
         "description": "True if the shell variable VAR is set."
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R VAR",
         "description": "True if the shell variable VAR is set and is a name reference."

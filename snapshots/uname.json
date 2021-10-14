@@ -1,123 +1,104 @@
 [
   {
     "name": "uname",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "print all information, in the following order, except omit -p and -i if unknown:"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "print all information, in the following order, except omit -p and -i if unknown:"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --kernel-name",
         "description": "print the kernel name"
       },
       {
-        "type": "long",
         "key": "kernel-name",
         "title": "-s, --kernel-name",
         "description": "print the kernel name"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --nodename",
         "description": "print the network node hostname"
       },
       {
-        "type": "long",
         "key": "nodename",
         "title": "-n, --nodename",
         "description": "print the network node hostname"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --kernel-release",
         "description": "print the kernel release"
       },
       {
-        "type": "long",
         "key": "kernel-release",
         "title": "-r, --kernel-release",
         "description": "print the kernel release"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --kernel-version",
         "description": "print the kernel version"
       },
       {
-        "type": "long",
         "key": "kernel-version",
         "title": "-v, --kernel-version",
         "description": "print the kernel version"
       },
       {
-        "type": "short",
         "key": "m",
         "title": "-m, --machine",
         "description": "print the machine hardware name"
       },
       {
-        "type": "long",
         "key": "machine",
         "title": "-m, --machine",
         "description": "print the machine hardware name"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --processor",
         "description": "print the processor type (non-portable)"
       },
       {
-        "type": "long",
         "key": "processor",
         "title": "-p, --processor",
         "description": "print the processor type (non-portable)"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --hardware-platform",
         "description": "print the hardware platform (non-portable)"
       },
       {
-        "type": "long",
         "key": "hardware-platform",
         "title": "-i, --hardware-platform",
         "description": "print the hardware platform (non-portable)"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --operating-system",
         "description": "print the operating system"
       },
       {
-        "type": "long",
         "key": "operating-system",
         "title": "-o, --operating-system",
         "description": "print the operating system"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

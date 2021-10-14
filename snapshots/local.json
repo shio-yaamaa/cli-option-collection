@@ -1,6 +1,7 @@
 [
   {
     "name": "local",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

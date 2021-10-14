@@ -1,105 +1,89 @@
 [
   {
     "name": "gem build",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to build"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "--force",
         "description": "skip validation of the spec"
       },
       {
-        "type": "long",
         "key": "strict",
         "title": "--strict",
         "description": "consider warnings as errors when validating the spec"
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --output FILE",
         "description": "output gem with the given filename"
       },
       {
-        "type": "long",
         "key": "output",
         "title": "-o, --output FILE",
         "description": "output gem with the given filename"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C PATH",
         "description": "Run as if gem build was started in instead of the current working directory."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -108,177 +92,149 @@
   },
   {
     "name": "gem cert",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --add CERT",
         "description": "Add a trusted certificate."
       },
       {
-        "type": "long",
         "key": "add",
         "title": "-a, --add CERT",
         "description": "Add a trusted certificate."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --list [FILTER]",
         "description": "List trusted certificates where the subject contains FILTER"
       },
       {
-        "type": "long",
         "key": "list",
         "title": "-l, --list [FILTER]",
         "description": "List trusted certificates where the subject contains FILTER"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remove FILTER",
         "description": "Remove trusted certificates where the subject contains FILTER"
       },
       {
-        "type": "long",
         "key": "remove",
         "title": "-r, --remove FILTER",
         "description": "Remove trusted certificates where the subject contains FILTER"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --build EMAIL_ADDR",
         "description": "Build private key and self-signed certificate for EMAIL_ADDR"
       },
       {
-        "type": "long",
         "key": "build",
         "title": "-b, --build EMAIL_ADDR",
         "description": "Build private key and self-signed certificate for EMAIL_ADDR"
       },
       {
-        "type": "short",
         "key": "C",
         "title": "-C, --certificate CERT",
         "description": "Signing certificate for --sign"
       },
       {
-        "type": "long",
         "key": "certificate",
         "title": "-C, --certificate CERT",
         "description": "Signing certificate for --sign"
       },
       {
-        "type": "short",
         "key": "K",
         "title": "-K, --private-key KEY",
         "description": "Key for --sign or --build"
       },
       {
-        "type": "long",
         "key": "private-key",
         "title": "-K, --private-key KEY",
         "description": "Key for --sign or --build"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --sign CERT",
         "description": "Signs CERT with the key from -K and the certificate from -C"
       },
       {
-        "type": "long",
         "key": "sign",
         "title": "-s, --sign CERT",
         "description": "Signs CERT with the key from -K and the certificate from -C"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --days NUMBER_OF_DAYS",
         "description": "Days before the certificate expires"
       },
       {
-        "type": "long",
         "key": "days",
         "title": "-d, --days NUMBER_OF_DAYS",
         "description": "Days before the certificate expires"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --re-sign",
         "description": "Re-signs the certificate from -C with the key from -K"
       },
       {
-        "type": "long",
         "key": "re-sign",
         "title": "-R, --re-sign",
         "description": "Re-signs the certificate from -C with the key from -K"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -287,111 +243,94 @@
   },
   {
     "name": "gem check",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --[no-]alien",
         "description": "Report “unmanaged” or rogue files in the gem repository"
       },
       {
-        "type": "long",
         "key": "alien",
         "title": "-a, --[no-]alien",
         "description": "Report “unmanaged” or rogue files in the gem repository"
       },
       {
-        "type": "long",
         "key": "doctor",
         "title": "--[no-]doctor",
         "description": "Clean up uninstalled gems and broken specifications"
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "--[no-]dry-run",
         "description": "Do not remove files, only report what would be removed"
       },
       {
-        "type": "long",
         "key": "gems",
         "title": "--[no-]gems",
         "description": "Check installed gems for problems"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to check"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to check"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -400,111 +339,94 @@
   },
   {
     "name": "gem cleanup",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, -d, --dry-run",
         "description": "Do not uninstall gems"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-n, -d, --dry-run",
         "description": "Do not uninstall gems"
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "-n, -d, --dry-run",
         "description": "Do not uninstall gems"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --[no-]check-development",
         "description": "Check development dependencies while uninstalling (default: true)"
       },
       {
-        "type": "long",
         "key": "check-development",
         "title": "-D, --[no-]check-development",
         "description": "Check development dependencies while uninstalling (default: true)"
       },
       {
-        "type": "long",
         "key": "user-install",
         "title": "--[no-]user-install",
         "description": "Cleanup in user’s home directory instead of GEM_HOME."
       },
       {
-        "type": "long",
         "key": "dryrun",
         "title": "--dryrun",
         "description": "Do not uninstall gems"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -513,123 +435,104 @@
   },
   {
     "name": "gem contents",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to contents"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to contents"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Contents for all gems"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --spec-dir a,b,c",
         "description": "Search for gems under specific paths"
       },
       {
-        "type": "long",
         "key": "spec-dir",
         "title": "-s, --spec-dir a,b,c",
         "description": "Search for gems under specific paths"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --[no-]lib-only",
         "description": "Only return files in the Gem’s lib_dirs"
       },
       {
-        "type": "long",
         "key": "lib-only",
         "title": "-l, --[no-]lib-only",
         "description": "Only return files in the Gem’s lib_dirs"
       },
       {
-        "type": "long",
         "key": "prefix",
         "title": "--[no-]prefix",
         "description": "Don’t include installed path prefix"
       },
       {
-        "type": "long",
         "key": "show-install-dir",
         "title": "--[no-]show-install-dir",
         "description": "Show only the gem install dir"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -638,189 +541,159 @@
   },
   {
     "name": "gem dependency",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to dependency"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to dependency"
       },
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to dependency"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Allow prerelease versions of a gem"
       },
       {
-        "type": "long",
         "key": "pipe",
         "title": "--pipe",
         "description": "Pipe Format (name --version ver)"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -829,69 +702,59 @@
   },
   {
     "name": "gem environment",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -900,135 +763,114 @@
   },
   {
     "name": "gem fetch",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to fetch"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to fetch"
       },
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to fetch"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Allow prerelease versions of a gem"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -1037,93 +879,79 @@
   },
   {
     "name": "gem generate_index",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --directory=DIRNAME",
         "description": "repository base dir containing gems subdir"
       },
       {
-        "type": "long",
         "key": "directory",
         "title": "-d, --directory=DIRNAME",
         "description": "repository base dir containing gems subdir"
       },
       {
-        "type": "long",
         "key": "modern",
         "title": "--[no-]modern",
         "description": "Generate indexes for RubyGems (always true)"
       },
       {
-        "type": "long",
         "key": "update",
         "title": "--update",
         "description": "Update modern indexes with gems added since the last update"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -1132,69 +960,59 @@
   },
   {
     "name": "gem help",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -1203,225 +1021,189 @@
   },
   {
     "name": "gem info",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "Equivalent to --no-installed"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to info for use with --installed"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to info for use with --installed"
       },
       {
-        "type": "long",
         "key": "versions",
         "title": "--[no-]versions",
         "description": "Display only gem names"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Display prerelease versions"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -1430,375 +1212,314 @@
   },
   {
     "name": "gem install",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to install"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to install"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to install"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Allow prerelease versions of a gem to be installed. (Only for listed gems)"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --install-dir DIR",
         "description": "Gem repository directory to get installed gems"
       },
       {
-        "type": "long",
         "key": "install-dir",
         "title": "-i, --install-dir DIR",
         "description": "Gem repository directory to get installed gems"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --bindir DIR",
         "description": "Directory where executables will be placed when the gem is installed"
       },
       {
-        "type": "long",
         "key": "bindir",
         "title": "-n, --bindir DIR",
         "description": "Directory where executables will be placed when the gem is installed"
       },
       {
-        "type": "long",
         "key": "document",
         "title": "--document [TYPES]",
         "description": "Generate documentation for installed gems List the documentation types you wish to generate. For example: rdoc,ri"
       },
       {
-        "type": "long",
         "key": "build-root",
         "title": "--build-root DIR",
         "description": "Temporary installation root. Useful for building packages. Do not use this when installing remote gems."
       },
       {
-        "type": "long",
         "key": "vendor",
         "title": "--vendor",
         "description": "Install gem into the vendor directory. Only for use by gem repackagers."
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N, --no-document",
         "description": "Disable documentation generation"
       },
       {
-        "type": "long",
         "key": "no-document",
         "title": "-N, --no-document",
         "description": "Disable documentation generation"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E, --[no-]env-shebang",
         "description": "Rewrite the shebang line on installed scripts to use /usr/bin/env"
       },
       {
-        "type": "long",
         "key": "env-shebang",
         "title": "-E, --[no-]env-shebang",
         "description": "Rewrite the shebang line on installed scripts to use /usr/bin/env"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --[no-]force",
         "description": "Force gem to install, bypassing dependency checks"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --[no-]force",
         "description": "Force gem to install, bypassing dependency checks"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --[no-]wrappers",
         "description": "Use bin wrappers for executables Not available on dosish platforms"
       },
       {
-        "type": "long",
         "key": "wrappers",
         "title": "-w, --[no-]wrappers",
         "description": "Use bin wrappers for executables Not available on dosish platforms"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --trust-policy POLICY",
         "description": "Specify gem trust policy"
       },
       {
-        "type": "long",
         "key": "trust-policy",
         "title": "-P, --trust-policy POLICY",
         "description": "Specify gem trust policy"
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
         "description": "Do not install any required dependent gems"
       },
       {
-        "type": "long",
         "key": "format-executable",
         "title": "--[no-]format-executable",
         "description": "Make installed executable names match Ruby. If Ruby is ruby18, foo_exec will be foo_exec18"
       },
       {
-        "type": "long",
         "key": "user-install",
         "title": "--[no-]user-install",
         "description": "Install in user’s home directory instead of GEM_HOME."
       },
       {
-        "type": "long",
         "key": "development",
         "title": "--development",
         "description": "Install additional development dependencies"
       },
       {
-        "type": "long",
         "key": "development-all",
         "title": "--development-all",
         "description": "Install development dependencies for all gems (including dev deps themselves)"
       },
       {
-        "type": "long",
         "key": "conservative",
         "title": "--conservative",
         "description": "Don’t attempt to upgrade gems already meeting version requirement"
       },
       {
-        "type": "long",
         "key": "minimal-deps",
         "title": "--[no-]minimal-deps",
         "description": "Don’t upgrade any dependencies that already meet version requirements"
       },
       {
-        "type": "long",
         "key": "post-install-message",
         "title": "--[no-]post-install-message",
         "description": "Print post install message"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --file [FILE]",
         "description": "Read from a gem dependencies API file and install the listed gems"
       },
       {
-        "type": "long",
         "key": "file",
         "title": "-g, --file [FILE]",
         "description": "Read from a gem dependencies API file and install the listed gems"
       },
       {
-        "type": "long",
         "key": "without",
         "title": "--without GROUPS",
         "description": "Omit the named groups (comma separated) when installing from a gem dependencies file"
       },
       {
-        "type": "long",
         "key": "default",
         "title": "--default",
         "description": "Add the gem’s full specification to specifications/default and extract only its bin"
       },
       {
-        "type": "long",
         "key": "explain",
         "title": "--explain",
         "description": "Rather than install the gems, indicate which would be installed"
       },
       {
-        "type": "long",
         "key": "lock",
         "title": "--[no-]lock",
         "description": "Create a lock file (when used with -g/–file)"
       },
       {
-        "type": "long",
         "key": "suggestions",
         "title": "--[no-]suggestions",
         "description": "Suggest alternates when gems are not found"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -1807,237 +1528,199 @@
   },
   {
     "name": "gem list",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "Equivalent to --no-installed"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to list for use with --installed"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to list for use with --installed"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --[no-]details",
         "description": "Display detailed information of gem(s)"
       },
       {
-        "type": "long",
         "key": "details",
         "title": "-d, --[no-]details",
         "description": "Display detailed information of gem(s)"
       },
       {
-        "type": "long",
         "key": "versions",
         "title": "--[no-]versions",
         "description": "Display only gem names"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Display prerelease versions"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2046,81 +1729,69 @@
   },
   {
     "name": "gem lock",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --[no-]strict",
         "description": "fail if unable to satisfy a dependency"
       },
       {
-        "type": "long",
         "key": "strict",
         "title": "-s, --[no-]strict",
         "description": "fail if unable to satisfy a dependency"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2129,69 +1800,59 @@
   },
   {
     "name": "gem mirror",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2200,93 +1861,79 @@
   },
   {
     "name": "gem open",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --editor COMMAND",
         "description": "Prepends COMMAND to gem path. Could be used to specify editor."
       },
       {
-        "type": "long",
         "key": "editor",
         "title": "-e, --editor COMMAND",
         "description": "Prepends COMMAND to gem path. Could be used to specify editor."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Opens specific gem version"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Opens specific gem version"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2295,165 +1942,139 @@
   },
   {
     "name": "gem outdated",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to outdated"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2462,129 +2083,109 @@
   },
   {
     "name": "gem owner",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "k",
         "title": "-k, --key KEYNAME",
         "description": "Use the given API key from ~/.local/share/gem/credentials"
       },
       {
-        "type": "long",
         "key": "key",
         "title": "-k, --key KEYNAME",
         "description": "Use the given API key from ~/.local/share/gem/credentials"
       },
       {
-        "type": "long",
         "key": "otp",
         "title": "--otp CODE",
         "description": "Digit code for multifactor authentication You can also use the environment variable GEM_HOST_OTP_CODE"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --add EMAIL",
         "description": "Add an owner"
       },
       {
-        "type": "long",
         "key": "add",
         "title": "-a, --add EMAIL",
         "description": "Add an owner"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remove EMAIL",
         "description": "Remove an owner"
       },
       {
-        "type": "long",
         "key": "remove",
         "title": "-r, --remove EMAIL",
         "description": "Remove an owner"
       },
       {
-        "type": "long",
         "key": "host",
         "title": "--host HOST",
         "description": "Use another gemcutter-compatible host (e.g. https://rubygems.org)"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2593,135 +2194,114 @@
   },
   {
     "name": "gem pristine",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Restore all installed gems to pristine condition"
       },
       {
-        "type": "long",
         "key": "skip",
         "title": "--skip=gem_name",
         "description": "used on --all, skip if name == gem_name"
       },
       {
-        "type": "long",
         "key": "extensions",
         "title": "--[no-]extensions",
         "description": "Restore gems with extensions in addition to regular gems"
       },
       {
-        "type": "long",
         "key": "only-executables",
         "title": "--only-executables",
         "description": "Only restore executables"
       },
       {
-        "type": "long",
         "key": "only-plugins",
         "title": "--only-plugins",
         "description": "Only restore plugins"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E, --[no-]env-shebang",
         "description": "Rewrite executables with a shebang of /usr/bin/env"
       },
       {
-        "type": "long",
         "key": "env-shebang",
         "title": "-E, --[no-]env-shebang",
         "description": "Rewrite executables with a shebang of /usr/bin/env"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --bindir DIR",
         "description": "Directory where executables are located"
       },
       {
-        "type": "long",
         "key": "bindir",
         "title": "-n, --bindir DIR",
         "description": "Directory where executables are located"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to restore to pristine condition"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to restore to pristine condition"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2730,105 +2310,89 @@
   },
   {
     "name": "gem push",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "k",
         "title": "-k, --key KEYNAME",
         "description": "Use the given API key from ~/.local/share/gem/credentials"
       },
       {
-        "type": "long",
         "key": "key",
         "title": "-k, --key KEYNAME",
         "description": "Use the given API key from ~/.local/share/gem/credentials"
       },
       {
-        "type": "long",
         "key": "otp",
         "title": "--otp CODE",
         "description": "Digit code for multifactor authentication You can also use the environment variable GEM_HOST_OTP_CODE"
       },
       {
-        "type": "long",
         "key": "host",
         "title": "--host HOST",
         "description": "Push to another gemcutter-compatible host (e.g. https://rubygems.org)"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -2837,249 +2401,209 @@
   },
   {
     "name": "gem query",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --name-matches REGEXP",
         "description": "Name of gem(s) to query on matches the provided REGEXP"
       },
       {
-        "type": "long",
         "key": "name-matches",
         "title": "-n, --name-matches REGEXP",
         "description": "Name of gem(s) to query on matches the provided REGEXP"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "Equivalent to --no-installed"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to query for use with --installed"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to query for use with --installed"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --[no-]details",
         "description": "Display detailed information of gem(s)"
       },
       {
-        "type": "long",
         "key": "details",
         "title": "-d, --[no-]details",
         "description": "Display detailed information of gem(s)"
       },
       {
-        "type": "long",
         "key": "versions",
         "title": "--[no-]versions",
         "description": "Display only gem names"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Display prerelease versions"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3088,105 +2612,89 @@
   },
   {
     "name": "gem rdoc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Generate RDoc/RI documentation for all installed gems"
       },
       {
-        "type": "long",
         "key": "rdoc",
         "title": "--[no-]rdoc",
         "description": "Generate RDoc HTML"
       },
       {
-        "type": "long",
         "key": "ri",
         "title": "--[no-]ri",
         "description": "Generate RI data"
       },
       {
-        "type": "long",
         "key": "overwrite",
         "title": "--[no-]overwrite",
         "description": "Overwrite installed documents"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to rdoc"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to rdoc"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3195,237 +2703,199 @@
   },
   {
     "name": "gem search",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "long",
         "key": "installed",
         "title": "-i, --[no-]installed",
         "description": "Check for installed gem"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "Equivalent to --no-installed"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to search for use with --installed"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to search for use with --installed"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --[no-]details",
         "description": "Display detailed information of gem(s)"
       },
       {
-        "type": "long",
         "key": "details",
         "title": "-d, --[no-]details",
         "description": "Display detailed information of gem(s)"
       },
       {
-        "type": "long",
         "key": "versions",
         "title": "--[no-]versions",
         "description": "Display only gem names"
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "Display all gem versions"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "exact",
         "title": "-e, --exact",
         "description": "Name of gem(s) to query on matches the provided STRING"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Display prerelease versions"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3434,123 +2904,104 @@
   },
   {
     "name": "gem server",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --port=PORT",
         "description": "port to listen on"
       },
       {
-        "type": "long",
         "key": "port",
         "title": "-p, --port=PORT",
         "description": "port to listen on"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --dir=GEMDIR",
         "description": "directories from which to serve gems multiple directories may be provided"
       },
       {
-        "type": "long",
         "key": "dir",
         "title": "-d, --dir=GEMDIR",
         "description": "directories from which to serve gems multiple directories may be provided"
       },
       {
-        "type": "long",
         "key": "daemon",
         "title": "--[no-]daemon",
         "description": "run as a daemon"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --bind=HOST,HOST",
         "description": "addresses to bind"
       },
       {
-        "type": "long",
         "key": "bind",
         "title": "-b, --bind=HOST,HOST",
         "description": "addresses to bind"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --launch[=COMMAND]",
         "description": "launches a browser window COMMAND defaults to ‘start’ on Windows and ‘open’ on all other platforms"
       },
       {
-        "type": "long",
         "key": "launch",
         "title": "-l, --launch[=COMMAND]",
         "description": "launches a browser window COMMAND defaults to ‘start’ on Windows and ‘open’ on all other platforms"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3559,81 +3010,69 @@
   },
   {
     "name": "gem signin",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "host",
         "title": "--host HOST",
         "description": "Push to another gemcutter-compatible host"
       },
       {
-        "type": "long",
         "key": "otp",
         "title": "--otp CODE",
         "description": "Digit code for multifactor authentication You can also use the environment variable GEM_HOST_OTP_CODE"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3642,69 +3081,59 @@
   },
   {
     "name": "gem signout",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3713,153 +3142,129 @@
   },
   {
     "name": "gem sources",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --add SOURCE_URI",
         "description": "Add source"
       },
       {
-        "type": "long",
         "key": "add",
         "title": "-a, --add SOURCE_URI",
         "description": "Add source"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --list",
         "description": "List sources"
       },
       {
-        "type": "long",
         "key": "list",
         "title": "-l, --list",
         "description": "List sources"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remove SOURCE_URI",
         "description": "Remove source"
       },
       {
-        "type": "long",
         "key": "remove",
         "title": "-r, --remove SOURCE_URI",
         "description": "Remove source"
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c, --clear-all",
         "description": "Remove all sources (clear the cache)"
       },
       {
-        "type": "long",
         "key": "clear-all",
         "title": "-c, --clear-all",
         "description": "Remove all sources (clear the cache)"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --update",
         "description": "Update source cache"
       },
       {
-        "type": "long",
         "key": "update",
         "title": "-u, --update",
         "description": "Update source cache"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --[no-]force",
         "description": "Do not show any confirmation prompts and behave as if ‘yes’ was always answered"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --[no-]force",
         "description": "Do not show any confirmation prompts and behave as if ‘yes’ was always answered"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -3868,207 +3273,174 @@
   },
   {
     "name": "gem specification",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to examine"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to examine"
       },
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to specification"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Allow prerelease versions of a gem"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "--all",
         "description": "Output specifications for all versions of the gem"
       },
       {
-        "type": "long",
         "key": "ruby",
         "title": "--ruby",
         "description": "Output ruby format"
       },
       {
-        "type": "long",
         "key": "yaml",
         "title": "--yaml",
         "description": "Output YAML format"
       },
       {
-        "type": "long",
         "key": "marshal",
         "title": "--marshal",
         "description": "Output Marshal format"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -4077,69 +3449,59 @@
   },
   {
     "name": "gem stale",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -4148,189 +3510,159 @@
   },
   {
     "name": "gem uninstall",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --[no-]all",
         "description": "Uninstall all matching versions"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --[no-]all",
         "description": "Uninstall all matching versions"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I, --[no-]ignore-dependencies",
         "description": "Ignore dependency requirements while uninstalling"
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "-I, --[no-]ignore-dependencies",
         "description": "Ignore dependency requirements while uninstalling"
       },
       {
-        "type": "short",
         "key": "D",
         "title": "-D, --[no-]check-development",
         "description": "Check development dependencies while uninstalling (default: false)"
       },
       {
-        "type": "long",
         "key": "check-development",
         "title": "-D, --[no-]check-development",
         "description": "Check development dependencies while uninstalling (default: false)"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --[no-]executables",
         "description": "Uninstall applicable executables without confirmation"
       },
       {
-        "type": "long",
         "key": "executables",
         "title": "-x, --[no-]executables",
         "description": "Uninstall applicable executables without confirmation"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --install-dir DIR",
         "description": "Directory to uninstall gem from"
       },
       {
-        "type": "long",
         "key": "install-dir",
         "title": "-i, --install-dir DIR",
         "description": "Directory to uninstall gem from"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --bindir DIR",
         "description": "Directory to remove executables from"
       },
       {
-        "type": "long",
         "key": "bindir",
         "title": "-n, --bindir DIR",
         "description": "Directory to remove executables from"
       },
       {
-        "type": "long",
         "key": "user-install",
         "title": "--[no-]user-install",
         "description": "Uninstall from user’s home directory in addition to GEM_HOME."
       },
       {
-        "type": "long",
         "key": "format-executable",
         "title": "--[no-]format-executable",
         "description": "Assume executable names match Ruby’s prefix and suffix."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "--[no-]force",
         "description": "Uninstall all versions of the named gems ignoring dependencies"
       },
       {
-        "type": "long",
         "key": "abort-on-dependent",
         "title": "--[no-]abort-on-dependent",
         "description": "Prevent uninstalling gems that are depended on by other gems."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to uninstall"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to uninstall"
       },
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to uninstall"
       },
       {
-        "type": "long",
         "key": "vendor",
         "title": "--vendor",
         "description": "Uninstall gem from the vendor directory. Only for use by gem repackagers."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -4339,105 +3671,89 @@
   },
   {
     "name": "gem unpack",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "target",
         "title": "--target=DIR",
         "description": "target directory for unpacking"
       },
       {
-        "type": "long",
         "key": "spec",
         "title": "--spec",
         "description": "unpack the gem specification"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to unpack"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to unpack"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --trust-policy POLICY",
         "description": "Specify gem trust policy"
       },
       {
-        "type": "long",
         "key": "trust-policy",
         "title": "-P, --trust-policy POLICY",
         "description": "Specify gem trust policy"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -4446,369 +3762,309 @@
   },
   {
     "name": "gem update",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "system",
         "title": "--system [VERSION]",
         "description": "Update the RubyGems system software"
       },
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to update"
       },
       {
-        "type": "long",
         "key": "prerelease",
         "title": "--[no-]prerelease",
         "description": "Allow prerelease versions of a gem as update targets"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "long",
         "key": "update-sources",
         "title": "-u, --[no-]update-sources",
         "description": "Update local source cache"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --install-dir DIR",
         "description": "Gem repository directory to get installed gems"
       },
       {
-        "type": "long",
         "key": "install-dir",
         "title": "-i, --install-dir DIR",
         "description": "Gem repository directory to get installed gems"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --bindir DIR",
         "description": "Directory where executables will be placed when the gem is installed"
       },
       {
-        "type": "long",
         "key": "bindir",
         "title": "-n, --bindir DIR",
         "description": "Directory where executables will be placed when the gem is installed"
       },
       {
-        "type": "long",
         "key": "document",
         "title": "--document [TYPES]",
         "description": "Generate documentation for installed gems List the documentation types you wish to generate. For example: rdoc,ri"
       },
       {
-        "type": "long",
         "key": "build-root",
         "title": "--build-root DIR",
         "description": "Temporary installation root. Useful for building packages. Do not use this when installing remote gems."
       },
       {
-        "type": "long",
         "key": "vendor",
         "title": "--vendor",
         "description": "Install gem into the vendor directory. Only for use by gem repackagers."
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N, --no-document",
         "description": "Disable documentation generation"
       },
       {
-        "type": "long",
         "key": "no-document",
         "title": "-N, --no-document",
         "description": "Disable documentation generation"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E, --[no-]env-shebang",
         "description": "Rewrite the shebang line on installed scripts to use /usr/bin/env"
       },
       {
-        "type": "long",
         "key": "env-shebang",
         "title": "-E, --[no-]env-shebang",
         "description": "Rewrite the shebang line on installed scripts to use /usr/bin/env"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --[no-]force",
         "description": "Force gem to install, bypassing dependency checks"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --[no-]force",
         "description": "Force gem to install, bypassing dependency checks"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --[no-]wrappers",
         "description": "Use bin wrappers for executables Not available on dosish platforms"
       },
       {
-        "type": "long",
         "key": "wrappers",
         "title": "-w, --[no-]wrappers",
         "description": "Use bin wrappers for executables Not available on dosish platforms"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --trust-policy POLICY",
         "description": "Specify gem trust policy"
       },
       {
-        "type": "long",
         "key": "trust-policy",
         "title": "-P, --trust-policy POLICY",
         "description": "Specify gem trust policy"
       },
       {
-        "type": "long",
         "key": "ignore-dependencies",
         "title": "--ignore-dependencies",
         "description": "Do not install any required dependent gems"
       },
       {
-        "type": "long",
         "key": "format-executable",
         "title": "--[no-]format-executable",
         "description": "Make installed executable names match Ruby. If Ruby is ruby18, foo_exec will be foo_exec18"
       },
       {
-        "type": "long",
         "key": "user-install",
         "title": "--[no-]user-install",
         "description": "Install in user’s home directory instead of GEM_HOME."
       },
       {
-        "type": "long",
         "key": "development",
         "title": "--development",
         "description": "Install additional development dependencies"
       },
       {
-        "type": "long",
         "key": "development-all",
         "title": "--development-all",
         "description": "Install development dependencies for all gems (including dev deps themselves)"
       },
       {
-        "type": "long",
         "key": "conservative",
         "title": "--conservative",
         "description": "Don’t attempt to upgrade gems already meeting version requirement"
       },
       {
-        "type": "long",
         "key": "minimal-deps",
         "title": "--[no-]minimal-deps",
         "description": "Don’t upgrade any dependencies that already meet version requirements"
       },
       {
-        "type": "long",
         "key": "post-install-message",
         "title": "--[no-]post-install-message",
         "description": "Print post install message"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --file [FILE]",
         "description": "Read from a gem dependencies API file and install the listed gems"
       },
       {
-        "type": "long",
         "key": "file",
         "title": "-g, --file [FILE]",
         "description": "Read from a gem dependencies API file and install the listed gems"
       },
       {
-        "type": "long",
         "key": "without",
         "title": "--without GROUPS",
         "description": "Omit the named groups (comma separated) when installing from a gem dependencies file"
       },
       {
-        "type": "long",
         "key": "default",
         "title": "--default",
         "description": "Add the gem’s full specification to specifications/default and extract only its bin"
       },
       {
-        "type": "long",
         "key": "explain",
         "title": "--explain",
         "description": "Rather than install the gems, indicate which would be installed"
       },
       {
-        "type": "long",
         "key": "lock",
         "title": "--[no-]lock",
         "description": "Create a lock file (when used with -g/–file)"
       },
       {
-        "type": "long",
         "key": "suggestions",
         "title": "--[no-]suggestions",
         "description": "Suggest alternates when gems are not found"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "long",
         "key": "local",
         "title": "-l, --local",
         "description": "Restrict operations to the LOCAL domain"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "long",
         "key": "remote",
         "title": "-r, --remote",
         "description": "Restrict operations to the REMOTE domain"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "long",
         "key": "both",
         "title": "-b, --both",
         "description": "Allow LOCAL and REMOTE operations"
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "bulk-threshold",
         "title": "-B, --bulk-threshold COUNT",
         "description": "Threshold for switching to bulk synchronization (default 1000)"
       },
       {
-        "type": "long",
         "key": "clear-sources",
         "title": "--clear-sources",
         "description": "Clear the gem sources"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "long",
         "key": "source",
         "title": "-s, --source URL",
         "description": "Append URL to list of remote gem sources"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "long",
         "key": "http-proxy",
         "title": "-p, --[no-]http-proxy [URL]",
         "description": "Use HTTP proxy for remote operations"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -4817,93 +4073,79 @@
   },
   {
     "name": "gem which",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --[no-]all",
         "description": "show all matching files"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --[no-]all",
         "description": "show all matching files"
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g, --[no-]gems-first",
         "description": "search gems before non-gems"
       },
       {
-        "type": "long",
         "key": "gems-first",
         "title": "-g, --[no-]gems-first",
         "description": "search gems before non-gems"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"
@@ -4912,111 +4154,94 @@
   },
   {
     "name": "gem yank",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to remove"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-v, --version VERSION",
         "description": "Specify version of gem to remove"
       },
       {
-        "type": "long",
         "key": "platform",
         "title": "--platform PLATFORM",
         "description": "Specify the platform of gem to remove"
       },
       {
-        "type": "long",
         "key": "otp",
         "title": "--otp CODE",
         "description": "Digit code for multifactor authentication You can also use the environment variable GEM_HOST_OTP_CODE"
       },
       {
-        "type": "long",
         "key": "host",
         "title": "--host HOST",
         "description": "Yank from another gemcutter-compatible host (e.g. https://rubygems.org)"
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k, --key KEYNAME",
         "description": "Use the given API key from ~/.local/share/gem/credentials"
       },
       {
-        "type": "long",
         "key": "key",
         "title": "-k, --key KEYNAME",
         "description": "Use the given API key from ~/.local/share/gem/credentials"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Get help on this command"
       },
       {
-        "type": "short",
         "key": "V",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-V, --[no-]verbose",
         "description": "Set the verbose level of output"
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Silence command progress meter"
       },
       {
-        "type": "long",
         "key": "silent",
         "title": "--silent",
         "description": "Silence RubyGems output"
       },
       {
-        "type": "long",
         "key": "config-file",
         "title": "--config-file FILE",
         "description": "Use this config file instead of default"
       },
       {
-        "type": "long",
         "key": "backtrace",
         "title": "--backtrace",
         "description": "Show stack backtrace on errors"
       },
       {
-        "type": "long",
         "key": "debug",
         "title": "--debug",
         "description": "Turn on Ruby debugging"
       },
       {
-        "type": "long",
         "key": "norc",
         "title": "--norc",
         "description": "Avoid loading any .gemrc file"

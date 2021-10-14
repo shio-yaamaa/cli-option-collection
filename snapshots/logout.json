@@ -1,6 +1,7 @@
 [
   {
     "name": "logout",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

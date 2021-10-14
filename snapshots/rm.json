@@ -1,105 +1,89 @@
 [
   {
     "name": "rm",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "ignore nonexistent files and arguments, never prompt"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "ignore nonexistent files and arguments, never prompt"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "prompt before every removal"
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I",
         "description": "prompt once before removing more than three files, or when removing recursively; less intrusive than -i, while still giving protection against most mistakes"
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "--interactive[=WHEN]",
         "description": "prompt according to WHEN: never, once (-I), or always (-i); without WHEN, prompt always"
       },
       {
-        "type": "long",
         "key": "one-file-system",
         "title": "--one-file-system",
         "description": "when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument"
       },
       {
-        "type": "long",
         "key": "no-preserve-root",
         "title": "--no-preserve-root",
         "description": "do not treat '/' specially"
       },
       {
-        "type": "long",
         "key": "preserve-root",
         "title": "--preserve-root[=all]",
         "description": "do not remove '/' (default); with 'all', reject any command line argument on a separate device from its parent"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, -R, --recursive",
         "description": "remove directories and their contents recursively"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-r, -R, --recursive",
         "description": "remove directories and their contents recursively"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-r, -R, --recursive",
         "description": "remove directories and their contents recursively"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --dir",
         "description": "remove empty directories"
       },
       {
-        "type": "long",
         "key": "dir",
         "title": "-d, --dir",
         "description": "remove empty directories"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "explain what is being done"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "explain what is being done"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

@@ -1,69 +1,59 @@
 [
   {
     "name": "softlimit",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "m",
         "title": "-m n",
         "description": "Same as -d n -s n -l n -a n."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d n",
         "description": "Limit the data segment per process to n bytes."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s n",
         "description": "Limit the stack segment per process to n bytes."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l n",
         "description": "Limit the locked physical pages per process to n bytes. This option has no effect on some operating systems."
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a n",
         "description": "Limit the total of all segments per process to n bytes. This option has no effect on some operating systems."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o n",
         "description": "Limit the number of open file descriptors per process to n. This option has no effect on some operating systems."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p n",
         "description": "Limit the number of processes per uid to n."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f n",
         "description": "Limit output file sizes to n bytes."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c n",
         "description": "Limit core file sizes to n bytes."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r n",
         "description": "Limit the resident set size to n bytes. This limit is not enforced unless physical memory is full."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t n",
         "description": "Limit the CPU time to n seconds. This limit is not enforced except that the process receives a SIGXCPU signal after n seconds."

@@ -1,51 +1,44 @@
 [
   {
     "name": "base64",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d, --decode",
         "description": "decode data"
       },
       {
-        "type": "long",
         "key": "decode",
         "title": "-d, --decode",
         "description": "decode data"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --ignore-garbage",
         "description": "when decoding, ignore non-alphabet characters"
       },
       {
-        "type": "long",
         "key": "ignore-garbage",
         "title": "-i, --ignore-garbage",
         "description": "when decoding, ignore non-alphabet characters"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --wrap=COLS",
         "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable line wrapping"
       },
       {
-        "type": "long",
         "key": "wrap",
         "title": "-w, --wrap=COLS",
         "description": "wrap encoded lines after COLS character (default 76). Use 0 to disable line wrapping"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

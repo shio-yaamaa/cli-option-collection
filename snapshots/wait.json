@@ -1,6 +1,7 @@
 [
   {
     "name": "wait",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

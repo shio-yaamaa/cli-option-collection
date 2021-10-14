@@ -1,45 +1,39 @@
 [
   {
     "name": "shutdown",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "When used with -h, -p, or -r causes system to perform a dump. This option is useful for debugging system dump procedures or capturing the state of a corrupted or misbehaving system. See savecore(8) for information on how to recover this dump."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "Create the file /fastboot so that the file systems will not be checked by fsck(8) during the next boot. (See rc(8))."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h",
         "description": "The system is halted at the specified time when shutdown execs halt(8)."
       },
       {
-        "type": "short",
         "key": "k",
         "title": "-k",
         "description": "Kick everybody off. The -k option does not actually halt the system, but leaves the system multi-user with logins disabled (for all but superuser)."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "When used with -h, -p, or -r prevents the normal sync(2) before stopping the system."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "The system is powered down at the specified time. The -p flag is passed on to halt(8), causing machines which support automatic power down to do so after halting."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "shutdown execs reboot(8) at the specified time."

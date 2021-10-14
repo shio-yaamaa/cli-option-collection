@@ -1,51 +1,44 @@
 [
   {
     "name": "seq",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --format=FORMAT",
         "description": "use printf style floating-point FORMAT"
       },
       {
-        "type": "long",
         "key": "format",
         "title": "-f, --format=FORMAT",
         "description": "use printf style floating-point FORMAT"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --separator=STRING",
         "description": "use STRING to separate numbers (default: \\n)"
       },
       {
-        "type": "long",
         "key": "separator",
         "title": "-s, --separator=STRING",
         "description": "use STRING to separate numbers (default: \\n)"
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w, --equal-width",
         "description": "equalize width by padding with leading zeroes"
       },
       {
-        "type": "long",
         "key": "equal-width",
         "title": "-w, --equal-width",
         "description": "equalize width by padding with leading zeroes"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

@@ -1,39 +1,34 @@
 [
   {
     "name": "enable",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "print a list of builtins showing whether or not each is enabled"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "disable each NAME or display a list of disabled builtins"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "print the list of builtins in a reusable format"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s",
         "description": "print only the names of Posix `special' builtins"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "Load builtin NAME from shared object FILENAME"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "Remove a builtin loaded with -f"

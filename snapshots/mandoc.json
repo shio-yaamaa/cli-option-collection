@@ -1,45 +1,39 @@
 [
   {
     "name": "mandoc",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "If the standard output is a terminal device and -c is not specified, use less(1) to paginate the output, just like man(1) would."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "Copy the formatted manual pages to the standard output without using less(1) to paginate them. This is the default. It can be specified to override -a."
       },
       {
-        "type": "short",
         "key": "I",
         "title": "-I os=name",
         "description": "Override the default operating system name for the mdoc(7) Os and for the man(7) TH macro."
       },
       {
-        "type": "short",
         "key": "K",
         "title": "-K encoding",
         "description": "Specify the input encoding. The supported encoding arguments are us-ascii, iso-8859-1, and utf-8. If not specified, autodetection uses the first match in the following list:\n 1. If the first three bytes of the input file are the UTF-8 byte order mark (BOM, 0xefbbbf), input is interpreted as utf-8.\n 2. If the first or second line of the input file matches the emacs mode line format\n\n    .\\\" -*- [...;] coding: encoding; -*-\n    \n    then input is interpreted according to encoding.\n\n 3. If the first non-ASCII byte in the file introduces a valid UTF-8 sequence, input is interpreted as utf-8.\n 4. Otherwise, input is interpreted as iso-8859-1."
       },
       {
-        "type": "short",
         "key": "O",
         "title": "-O options",
         "description": "Comma-separated output options. See the descriptions of the individual output formats for supported options."
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T output",
         "description": "Select the output format. Supported values for the output argument are ascii, html, the default of locale, man, markdown, pdf, ps, tree, and utf8.\n\nThe special -T lint mode only parses the input and produces no output. It implies -W all and redirects parser messages, which usually appear on standard error output, to standard output."
       },
       {
-        "type": "short",
         "key": "W",
         "title": "-W level",
         "description": "Specify the minimum message level to be reported on the standard error output and to affect the exit status. The level can be base, style, warning, error, or unsupp. The base level automatically derives the operating system from the contents of the Os macro, from the -Ios command line option, or from the uname(3) return value. The levels openbsd and netbsd are variants of base that bypass autodetection and request validation of base system conventions for a particular operating system. The level all is an alias for base. By default, mandoc is silent. See EXIT STATUS and DIAGNOSTICS for details.\n\nThe special option -W stop tells mandoc to exit after parsing a file that causes warnings or errors of at least the requested level. No formatted output will be produced from that file. If both a level and stop are requested, they can be joined with a comma, for example -W error,stop."

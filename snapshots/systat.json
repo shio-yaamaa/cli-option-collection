@@ -1,63 +1,54 @@
 [
   {
     "name": "systat",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a",
         "description": "Display all lines."
       },
       {
-        "type": "short",
         "key": "B",
         "title": "-B",
         "description": "Raw, non-interactive mode. The default is to exit after two screen updates, with statistics only ever displayed once. Useful for views such as cpu, where initial calculations are useless."
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b",
         "description": "Raw, non-interactive mode. The default is to exit after one screen update, with statistics displayed every update."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d count",
         "description": "Exit after count screen updates."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h",
         "description": "Human readable mode, where applicable."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "Interactive mode."
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N",
         "description": "Resolve network addresses to names. This is the opposite of the -n option."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "Do not try to reverse map IP addresses. This is the default."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s delay",
         "description": "Specifies the screen refresh time interval in seconds. This option is overridden by the final delay argument, if given. The default interval is 5 seconds."
       },
       {
-        "type": "short",
         "key": "w",
         "title": "-w width",
         "description": "Specifies the maximum width of the output in raw, non-interactive mode."

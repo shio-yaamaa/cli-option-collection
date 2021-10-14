@@ -1,99 +1,84 @@
 [
   {
     "name": "uncompress",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "b",
         "title": "-b bits",
         "description": "Specify the bits code limit (see below)."
       },
       {
-        "type": "short",
         "key": "c",
         "title": "-c",
         "description": "Compressed or uncompressed output is written to the standard output. No files are modified (force zcat mode)."
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "Decompress the source files instead of compressing them (force uncompress mode)."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f",
         "description": "Force compression of file, even if it is not actually reduced in size. Additionally, files are overwritten without prompting for confirmation. If the input data is not in a format recognized by compress and if the option -c is also given, copy the input data without change to the standard output: let zcat behave as cat(1)."
       },
       {
-        "type": "short",
         "key": "g",
         "title": "-g",
         "description": "Use the deflate scheme, which reportedly provides better compression rates (force gzip(1) mode)."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h",
         "description": "Print a short help message."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l",
         "description": "List information for the specified compressed files. The following information is listed: compressed size Size of the compressed file. uncompressed size Size of the file when uncompressed. compression ratio Ratio of the difference between the compressed and uncompressed sizes to the uncompressed size. uncompressed name Name the file will be saved as when uncompressing.\n\nIf the -v option is specified, the following additional information is printed:\n\ncompression method Name of the method used to compress the file. crc 32-bit CRC (cyclic redundancy code) of the uncompressed file. time stamp Date and time corresponding to the last data modification time (mtime) of the compressed file (if the -n option is specified, the time stamp stored in the compressed file is printed instead)."
       },
       {
-        "type": "short",
         "key": "N",
         "title": "-N",
         "description": "When uncompressing or listing, use the time stamp and file name stored in the compressed file, if any, for the uncompressed version. This information is only available when the deflate scheme (-g) is used."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n",
         "description": "When compressing, do not store the original file name and time stamp in the header of the compressed file."
       },
       {
-        "type": "short",
         "key": "O",
         "title": "-O",
         "description": "Use compress mode (the default)."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o filename",
         "description": "Set the output file name."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q",
         "description": "Be quiet: suppress all messages."
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r",
         "description": "Recursive mode: compress will descend into specified directories."
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S suffix",
         "description": "Set the suffix for compressed files."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "Test the integrity of each file leaving any files intact."
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v",
         "description": "Print the percentage reduction of each file and other information."

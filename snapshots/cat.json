@@ -1,117 +1,99 @@
 [
   {
     "name": "cat",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "A",
         "title": "-A, --show-all",
         "description": "equivalent to -vET"
       },
       {
-        "type": "long",
         "key": "show-all",
         "title": "-A, --show-all",
         "description": "equivalent to -vET"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b, --number-nonblank",
         "description": "number nonempty output lines, overrides -n"
       },
       {
-        "type": "long",
         "key": "number-nonblank",
         "title": "-b, --number-nonblank",
         "description": "number nonempty output lines, overrides -n"
       },
       {
-        "type": "short",
         "key": "e",
         "title": "-e",
         "description": "equivalent to -vE"
       },
       {
-        "type": "short",
         "key": "E",
         "title": "-E, --show-ends",
         "description": "display $ at end of each line"
       },
       {
-        "type": "long",
         "key": "show-ends",
         "title": "-E, --show-ends",
         "description": "display $ at end of each line"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --number",
         "description": "number all output lines"
       },
       {
-        "type": "long",
         "key": "number",
         "title": "-n, --number",
         "description": "number all output lines"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --squeeze-blank",
         "description": "suppress repeated empty output lines"
       },
       {
-        "type": "long",
         "key": "squeeze-blank",
         "title": "-s, --squeeze-blank",
         "description": "suppress repeated empty output lines"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t",
         "description": "equivalent to -vT"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --show-tabs",
         "description": "display TAB characters as ^I"
       },
       {
-        "type": "long",
         "key": "show-tabs",
         "title": "-T, --show-tabs",
         "description": "display TAB characters as ^I"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u",
         "description": "(ignored)"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --show-nonprinting",
         "description": "use ^ and M- notation, except for LFD and TAB"
       },
       {
-        "type": "long",
         "key": "show-nonprinting",
         "title": "-v, --show-nonprinting",
         "description": "use ^ and M- notation, except for LFD and TAB"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

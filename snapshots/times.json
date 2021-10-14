@@ -1,6 +1,7 @@
 [
   {
     "name": "times",
+    "optionStyle": "short-and-long",
     "options": []
   }
 ]

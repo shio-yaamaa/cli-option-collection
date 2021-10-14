@@ -1,417 +1,349 @@
 [
   {
     "name": "systemctl",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --type=",
         "description": "The argument should be a comma-separated list of unit types such as service and socket.\n\nIf one of the arguments is a unit type, when listing units, limit display to certain unit types. Otherwise, units of all types will be shown.\n\nAs a special case, if one of the arguments is help, a list of allowed values will be printed and the program will exit."
       },
       {
-        "type": "long",
         "key": "type",
         "title": "-t, --type=",
         "description": "The argument should be a comma-separated list of unit types such as service and socket.\n\nIf one of the arguments is a unit type, when listing units, limit display to certain unit types. Otherwise, units of all types will be shown.\n\nAs a special case, if one of the arguments is help, a list of allowed values will be printed and the program will exit."
       },
       {
-        "type": "long",
         "key": "state",
         "title": "--state=",
         "description": "The argument should be a comma-separated list of unit LOAD, SUB, or ACTIVE states. When listing units, show only those in the specified states. Use --state=failed to show only failed units.\n\nAs a special case, if one of the arguments is help, a list of allowed values will be printed and the program will exit."
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p, --property=",
         "description": "When showing unit/job/manager properties with the show command, limit display to properties specified in the argument. The argument should be a comma-separated list of property names, such as \"MainPID\". Unless specified, all known properties are shown. If specified more than once, all properties with the specified names are shown. Shell completion is implemented for property names.\n\nFor the manager itself, systemctl show will show all available properties. Those properties are documented in systemd-system.conf(5).\n\nProperties for units vary by unit type, so showing any unit (even a non-existent one) is a way to list properties pertaining to this type. Similarly, showing any job will list properties pertaining to all jobs. Properties for units are documented in systemd.unit(5), and the pages for individual unit types systemd.service(5), systemd.socket(5), etc."
       },
       {
-        "type": "long",
         "key": "property",
         "title": "-p, --property=",
         "description": "When showing unit/job/manager properties with the show command, limit display to properties specified in the argument. The argument should be a comma-separated list of property names, such as \"MainPID\". Unless specified, all known properties are shown. If specified more than once, all properties with the specified names are shown. Shell completion is implemented for property names.\n\nFor the manager itself, systemctl show will show all available properties. Those properties are documented in systemd-system.conf(5).\n\nProperties for units vary by unit type, so showing any unit (even a non-existent one) is a way to list properties pertaining to this type. Similarly, showing any job will list properties pertaining to all jobs. Properties for units are documented in systemd.unit(5), and the pages for individual unit types systemd.service(5), systemd.socket(5), etc."
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P",
         "description": "Equivalent to --value --property=, i.e. shows the value of the property without the property name or \"=\". Note that using -P once will also affect all properties listed with -p/--property=."
       },
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --all",
         "description": "When listing units with list-units, also show inactive units and units which are following other units. When showing unit/job/manager properties, show all properties regardless whether they are set or not.\n\nTo list all units installed in the file system, use the list-unit-files command instead.\n\nWhen listing units with list-dependencies, recursively show dependencies of all dependent units (by default only dependencies of target units are shown).\n\nWhen used with status, show journal messages in full, even if they include unprintable characters or are very long. By default, fields with unprintable characters are abbreviated as \"blob data\". (Note that the pager may escape unprintable characters again.)"
       },
       {
-        "type": "long",
         "key": "all",
         "title": "-a, --all",
         "description": "When listing units with list-units, also show inactive units and units which are following other units. When showing unit/job/manager properties, show all properties regardless whether they are set or not.\n\nTo list all units installed in the file system, use the list-unit-files command instead.\n\nWhen listing units with list-dependencies, recursively show dependencies of all dependent units (by default only dependencies of target units are shown).\n\nWhen used with status, show journal messages in full, even if they include unprintable characters or are very long. By default, fields with unprintable characters are abbreviated as \"blob data\". (Note that the pager may escape unprintable characters again.)"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --recursive",
         "description": "When listing units, also show units of local containers. Units of local containers will be prefixed with the container name, separated by a single colon character (\":\")."
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-r, --recursive",
         "description": "When listing units, also show units of local containers. Units of local containers will be prefixed with the container name, separated by a single colon character (\":\")."
       },
       {
-        "type": "long",
         "key": "reverse",
         "title": "--reverse",
         "description": "Show reverse dependencies between units with list-dependencies, i.e. follow dependencies of type WantedBy=, RequiredBy=, PartOf=, BoundBy=, instead of Wants= and similar."
       },
       {
-        "type": "long",
         "key": "after",
         "title": "--after",
         "description": "With list-dependencies, show the units that are ordered before the specified unit. In other words, recursively list units following the After= dependency.\n\nNote that any After= dependency is automatically mirrored to create a Before= dependency. Temporal dependencies may be specified explicitly, but are also created implicitly for units which are WantedBy= targets (see systemd.target(5)), and as a result of other directives (for example RequiresMountsFor=). Both explicitly and implicitly introduced dependencies are shown with list-dependencies.\n\nWhen passed to the list-jobs command, for each printed job show which other jobs are waiting for it. May be combined with --before to show both the jobs waiting for each job as well as all jobs each job is waiting for."
       },
       {
-        "type": "long",
         "key": "before",
         "title": "--before",
         "description": "With list-dependencies, show the units that are ordered after the specified unit. In other words, recursively list units following the Before= dependency.\n\nWhen passed to the list-jobs command, for each printed job show which other jobs it is waiting for. May be combined with --after to show both the jobs waiting for each job as well as all jobs each job is waiting for."
       },
       {
-        "type": "long",
         "key": "with-dependencies",
         "title": "--with-dependencies",
         "description": "When used with status, cat, list-units, and list-unit-files, those commands print all specified units and the dependencies of those units.\n\nOptions --reverse, --after, --before may be used to change what types of dependencies are shown."
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --full",
         "description": "Do not ellipsize unit names, process tree entries, journal output, or truncate unit descriptions in the output of status, list-units, list-jobs, and list-timers.\n\nAlso, show installation targets in the output of is-enabled."
       },
       {
-        "type": "long",
         "key": "full",
         "title": "-l, --full",
         "description": "Do not ellipsize unit names, process tree entries, journal output, or truncate unit descriptions in the output of status, list-units, list-jobs, and list-timers.\n\nAlso, show installation targets in the output of is-enabled."
       },
       {
-        "type": "long",
         "key": "value",
         "title": "--value",
         "description": "When printing properties with show, only print the value, and skip the property name and \"=\". Also see option -P above."
       },
       {
-        "type": "long",
         "key": "show-types",
         "title": "--show-types",
         "description": "When showing sockets, show the type of the socket."
       },
       {
-        "type": "long",
         "key": "job-mode",
         "title": "--job-mode=",
         "description": "When queuing a new job, this option controls how to deal with already queued jobs. It takes one of \"fail\", \"replace\", \"replace-irreversibly\", \"isolate\", \"ignore-dependencies\", \"ignore-requirements\", \"flush\", or \"triggering\". Defaults to \"replace\", except when the isolate command is used which implies the \"isolate\" job mode.\n\nIf \"fail\" is specified and a requested operation conflicts with a pending job (more specifically: causes an already pending start job to be reversed into a stop job or vice versa), cause the operation to fail.\n\nIf \"replace\" (the default) is specified, any conflicting pending job will be replaced, as necessary.\n\nIf \"replace-irreversibly\" is specified, operate like \"replace\", but also mark the new jobs as irreversible. This prevents future conflicting transactions from replacing these jobs (or even being enqueued while the irreversible jobs are still pending). Irreversible jobs can still be cancelled using the cancel command. This job mode should be used on any transaction which pulls in shutdown.target.\n\n\"isolate\" is only valid for start operations and causes all other units to be stopped when the specified unit is started. This mode is always used when the isolate command is used.\n\n\"flush\" will cause all queued jobs to be canceled when the new job is enqueued.\n\nIf \"ignore-dependencies\" is specified, then all unit dependencies are ignored for this new job and the operation is executed immediately. If passed, no required units of the unit passed will be pulled in, and no ordering dependencies will be honored. This is mostly a debugging and rescue tool for the administrator and should not be used by applications.\n\n\"ignore-requirements\" is similar to \"ignore-dependencies\", but only causes the requirement dependencies to be ignored, the ordering dependencies will still be honored."
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --show-transaction",
         "description": "When enqueuing a unit job (for example as effect of a systemctl start invocation or similar), show brief information about all jobs enqueued, covering both the requested job and any added because of unit dependencies. Note that the output will only include jobs immediately part of the transaction requested. It is possible that service start-up program code run as effect of the enqueued jobs might request further jobs to be pulled in. This means that completion of the listed jobs might ultimately entail more jobs than the listed ones."
       },
       {
-        "type": "long",
         "key": "show-transaction",
         "title": "-T, --show-transaction",
         "description": "When enqueuing a unit job (for example as effect of a systemctl start invocation or similar), show brief information about all jobs enqueued, covering both the requested job and any added because of unit dependencies. Note that the output will only include jobs immediately part of the transaction requested. It is possible that service start-up program code run as effect of the enqueued jobs might request further jobs to be pulled in. This means that completion of the listed jobs might ultimately entail more jobs than the listed ones."
       },
       {
-        "type": "long",
         "key": "fail",
         "title": "--fail",
         "description": "Shorthand for --job-mode=fail.\n\nWhen used with the kill command, if no units were killed, the operation results in an error."
       },
       {
-        "type": "long",
         "key": "check-inhibitors",
         "title": "--check-inhibitors=",
         "description": "When system shutdown or sleep state is request, this option controls how to deal with inhibitor locks. It takes one of \"auto\", \"yes\" or \"no\". Defaults to \"auto\", which will behave like \"yes\" for interactive invocations (i.e. from a TTY) and \"no\" for non-interactive invocations. \"yes\" will let the request respect inhibitor locks. \"no\" will let the request ignore inhibitor locks.\n\nApplications can establish inhibitor locks to avoid that certain important operations (such as CD burning or suchlike) are interrupted by system shutdown or a sleep state. Any user may take these locks and privileged users may override these locks. If any locks are taken, shutdown and sleep state requests will normally fail (unless privileged) and a list of active locks is printed. However, if \"no\" is specified or \"auto\" is specified on a non-interactive requests, the established locks are ignored and not shown, and the operation attempted anyway, possibly requiring additional privileges. May be overridden by --force."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i",
         "description": "Shortcut for --check-inhibitors=no."
       },
       {
-        "type": "long",
         "key": "dry-run",
         "title": "--dry-run",
         "description": "Just print what would be done. Currently supported by verbs halt, poweroff, reboot, kexec, suspend, hibernate, hybrid-sleep, suspend-then-hibernate, default, rescue, emergency, and exit."
       },
       {
-        "type": "short",
         "key": "q",
         "title": "-q, --quiet",
         "description": "Suppress printing of the results of various commands and also the hints about truncated log lines. This does not suppress output of commands for which the printed output is the only result (like show). Errors are always printed."
       },
       {
-        "type": "long",
         "key": "quiet",
         "title": "-q, --quiet",
         "description": "Suppress printing of the results of various commands and also the hints about truncated log lines. This does not suppress output of commands for which the printed output is the only result (like show). Errors are always printed."
       },
       {
-        "type": "long",
         "key": "no-block",
         "title": "--no-block",
         "description": "Do not synchronously wait for the requested operation to finish. If this is not specified, the job will be verified, enqueued and systemctl will wait until the unit's start-up is completed. By passing this argument, it is only verified and enqueued. This option may not be combined with --wait."
       },
       {
-        "type": "long",
         "key": "wait",
         "title": "--wait",
         "description": "Synchronously wait for started units to terminate again. This option may not be combined with --no-block. Note that this will wait forever if any given unit never terminates (by itself or by getting stopped explicitly); particularly services which use \"RemainAfterExit=yes\".\n\nWhen used with is-system-running, wait until the boot process is completed before returning."
       },
       {
-        "type": "long",
         "key": "user",
         "title": "--user",
         "description": "Talk to the service manager of the calling user, rather than the service manager of the system."
       },
       {
-        "type": "long",
         "key": "system",
         "title": "--system",
         "description": "Talk to the service manager of the system. This is the implied default."
       },
       {
-        "type": "long",
         "key": "failed",
         "title": "--failed",
         "description": "List units in failed state. This is equivalent to --state=failed."
       },
       {
-        "type": "long",
         "key": "no-wall",
         "title": "--no-wall",
         "description": "Do not send wall message before halt, power-off and reboot."
       },
       {
-        "type": "long",
         "key": "global",
         "title": "--global",
         "description": "When used with enable and disable, operate on the global user configuration directory, thus enabling or disabling a unit file globally for all future logins of all users."
       },
       {
-        "type": "long",
         "key": "no-reload",
         "title": "--no-reload",
         "description": "When used with enable and disable, do not implicitly reload daemon configuration after executing the changes."
       },
       {
-        "type": "long",
         "key": "no-ask-password",
         "title": "--no-ask-password",
         "description": "When used with start and related commands, disables asking for passwords. Background services may require input of a password or passphrase string, for example to unlock system hard disks or cryptographic certificates. Unless this option is specified and the command is invoked from a terminal, systemctl will query the user on the terminal for the necessary secrets. Use this option to switch this behavior off. In this case, the password must be supplied by some other means (for example graphical password agents) or the service might fail. This also disables querying the user for authentication for privileged operations."
       },
       {
-        "type": "long",
         "key": "kill-who",
         "title": "--kill-who=",
         "description": "When used with kill, choose which processes to send a signal to. Must be one of main, control or all to select whether to kill only the main process, the control process or all processes of the unit. The main process of the unit is the one that defines the life-time of it. A control process of a unit is one that is invoked by the manager to induce state changes of it. For example, all processes started due to the ExecStartPre=, ExecStop= or ExecReload= settings of service units are control processes. Note that there is only one control process per unit at a time, as only one state change is executed at a time. For services of type Type=forking, the initial process started by the manager for ExecStart= is a control process, while the process ultimately forked off by that one is then considered the main process of the unit (if it can be determined). This is different for service units of other types, where the process forked off by the manager for ExecStart= is always the main process itself. A service unit consists of zero or one main process, zero or one control process plus any number of additional processes. Not all unit types manage processes of these types however. For example, for mount units, control processes are defined (which are the invocations of /usr/bin/mount and /usr/bin/umount), but no main process is defined. If omitted, defaults to all."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --signal=",
         "description": "When used with kill, choose which signal to send to selected processes. Must be one of the well-known signal specifiers such as SIGTERM, SIGINT or SIGSTOP. If omitted, defaults to SIGTERM.\n\nThe special value \"help\" will list the known values and the program will exit immediately, and the special value \"list\" will list known values along with the numerical signal numbers and the program will exit immediately."
       },
       {
-        "type": "long",
         "key": "signal",
         "title": "-s, --signal=",
         "description": "When used with kill, choose which signal to send to selected processes. Must be one of the well-known signal specifiers such as SIGTERM, SIGINT or SIGSTOP. If omitted, defaults to SIGTERM.\n\nThe special value \"help\" will list the known values and the program will exit immediately, and the special value \"list\" will list known values along with the numerical signal numbers and the program will exit immediately."
       },
       {
-        "type": "long",
         "key": "what",
         "title": "--what=",
         "description": "Select what type of per-unit resources to remove when the clean command is invoked, see below. Takes one of configuration, state, cache, logs, runtime to select the type of resource. This option may be specified more than once, in which case all specified resource types are removed. Also accepts the special value all as a shortcut for specifying all five resource types. If this option is not specified defaults to the combination of cache and runtime, i.e. the two kinds of resources that are generally considered to be redundant and can be reconstructed on next invocation."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "When used with enable, overwrite any existing conflicting symlinks.\n\nWhen used with edit, create all of the specified units which do not already exist.\n\nWhen used with halt, poweroff, reboot or kexec, execute the selected operation without shutting down all units. However, all processes will be killed forcibly and all file systems are unmounted or remounted read-only. This is hence a drastic but relatively safe option to request an immediate reboot. If --force is specified twice for these operations (with the exception of kexec), they will be executed immediately, without terminating any processes or unmounting any file systems. Warning: specifying --force twice with any of these operations might result in data loss. Note that when --force is specified twice the selected operation is executed by systemctl itself, and the system manager is not contacted. This means the command should succeed even when the system manager has crashed."
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "When used with enable, overwrite any existing conflicting symlinks.\n\nWhen used with edit, create all of the specified units which do not already exist.\n\nWhen used with halt, poweroff, reboot or kexec, execute the selected operation without shutting down all units. However, all processes will be killed forcibly and all file systems are unmounted or remounted read-only. This is hence a drastic but relatively safe option to request an immediate reboot. If --force is specified twice for these operations (with the exception of kexec), they will be executed immediately, without terminating any processes or unmounting any file systems. Warning: specifying --force twice with any of these operations might result in data loss. Note that when --force is specified twice the selected operation is executed by systemctl itself, and the system manager is not contacted. This means the command should succeed even when the system manager has crashed."
       },
       {
-        "type": "long",
         "key": "message",
         "title": "--message=",
         "description": "When used with halt, poweroff or reboot, set a short message explaining the reason for the operation. The message will be logged together with the default shutdown message."
       },
       {
-        "type": "long",
         "key": "now",
         "title": "--now",
         "description": "When used with enable, the units will also be started. When used with disable or mask, the units will also be stopped. The start or stop operation is only carried out when the respective enable or disable operation has been successful."
       },
       {
-        "type": "long",
         "key": "root",
         "title": "--root=",
         "description": "When used with enable/disable/is-enabled (and related commands), use the specified root path when looking for unit files. If this option is present, systemctl will operate on the file system directly, instead of communicating with the systemd daemon to carry out changes."
       },
       {
-        "type": "long",
         "key": "runtime",
         "title": "--runtime",
         "description": "When used with enable, disable, edit, (and related commands), make changes only temporarily, so that they are lost on the next reboot. This will have the effect that changes are not made in subdirectories of /etc/ but in /run/, with identical immediate effects, however, since the latter is lost on reboot, the changes are lost too.\n\nSimilarly, when used with set-property, make changes only temporarily, so that they are lost on the next reboot."
       },
       {
-        "type": "long",
         "key": "preset-mode",
         "title": "--preset-mode=",
         "description": "Takes one of \"full\" (the default), \"enable-only\", \"disable-only\". When used with the preset or preset-all commands, controls whether units shall be disabled and enabled according to the preset rules, or only enabled, or only disabled."
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --lines=",
         "description": "When used with status, controls the number of journal lines to show, counting from the most recent ones. Takes a positive integer argument, or 0 to disable journal output. Defaults to 10."
       },
       {
-        "type": "long",
         "key": "lines",
         "title": "-n, --lines=",
         "description": "When used with status, controls the number of journal lines to show, counting from the most recent ones. Takes a positive integer argument, or 0 to disable journal output. Defaults to 10."
       },
       {
-        "type": "short",
         "key": "o",
         "title": "-o, --output=",
         "description": "When used with status, controls the formatting of the journal entries that are shown. For the available choices, see journalctl(1). Defaults to \"short\"."
       },
       {
-        "type": "long",
         "key": "output",
         "title": "-o, --output=",
         "description": "When used with status, controls the formatting of the journal entries that are shown. For the available choices, see journalctl(1). Defaults to \"short\"."
       },
       {
-        "type": "long",
         "key": "firmware-setup",
         "title": "--firmware-setup",
         "description": "When used with the reboot command, indicate to the system's firmware to reboot into the firmware setup interface. Note that this functionality is not available on all systems."
       },
       {
-        "type": "long",
         "key": "boot-loader-menu",
         "title": "--boot-loader-menu=",
         "description": "When used with the reboot command, indicate to the system's boot loader to show the boot loader menu on the following boot. Takes a time value as parameter — indicating the menu timeout. Pass zero in order to disable the menu timeout. Note that not all boot loaders support this functionality."
       },
       {
-        "type": "long",
         "key": "boot-loader-entry",
         "title": "--boot-loader-entry=",
         "description": "When used with the reboot command, indicate to the system's boot loader to boot into a specific boot loader entry on the following boot. Takes a boot loader entry identifier as argument, or \"help\" in order to list available entries. Note that not all boot loaders support this functionality."
       },
       {
-        "type": "long",
         "key": "reboot-argument",
         "title": "--reboot-argument=",
         "description": "This switch is used with reboot. The value is architecture and firmware specific. As an example, \"recovery\" might be used to trigger system recovery, and \"fota\" might be used to trigger a “firmware over the air” update."
       },
       {
-        "type": "long",
         "key": "plain",
         "title": "--plain",
         "description": "When used with list-dependencies, list-units or list-machines, the output is printed as a list instead of a tree, and the bullet circles are omitted."
       },
       {
-        "type": "long",
         "key": "timestamp",
         "title": "--timestamp=",
         "description": "Change the format of printed timestamps. The following values may be used:\n\npretty (this is the default)\n\n\"Day YYYY-MM-DD HH:MM:SS TZ\"\n\nus, µs\n\n\"Day YYYY-MM-DD HH:MM:SS.UUUUUU TZ\"\n\nutc\n\n\"Day YYYY-MM-DD HH:MM:SS UTC\"\n\nus+utc, µs+utc\n\n\"Day YYYY-MM-DD HH:MM:SS.UUUUUU UTC\""
       },
       {
-        "type": "long",
         "key": "mkdir",
         "title": "--mkdir",
         "description": "When used with bind, creates the destination file or directory before applying the bind mount. Note that even though the name of this option suggests that it is suitable only for directories, this option also creates the destination file node to mount over if the object to mount is not a directory, but a regular file, device node, socket or FIFO."
       },
       {
-        "type": "long",
         "key": "marked",
         "title": "--marked",
         "description": "Only allowed with reload-or-restart. Enqueues restart jobs for all units that have the \"needs-restart\" mark, and reload jobs for units that have the \"needs-reload\" mark. When a unit marked for reload does not support reload, restart will be queued. Those properties can be set using set-property Marks.\n\nUnless --no-block is used, systemctl will wait for the queued jobs to finish."
       },
       {
-        "type": "long",
         "key": "read-only",
         "title": "--read-only",
         "description": "When used with bind, creates a read-only bind mount."
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H, --host=",
         "description": "Execute the operation remotely. Specify a hostname, or a username and hostname separated by \"@\", to connect to. The hostname may optionally be suffixed by a port ssh is listening on, separated by \":\", and then a container name, separated by \"/\", which connects directly to a specific container on the specified host. This will use SSH to talk to the remote machine manager instance. Container names may be enumerated with machinectl -H HOST. Put IPv6 addresses in brackets."
       },
       {
-        "type": "long",
         "key": "host",
         "title": "-H, --host=",
         "description": "Execute the operation remotely. Specify a hostname, or a username and hostname separated by \"@\", to connect to. The hostname may optionally be suffixed by a port ssh is listening on, separated by \":\", and then a container name, separated by \"/\", which connects directly to a specific container on the specified host. This will use SSH to talk to the remote machine manager instance. Container names may be enumerated with machinectl -H HOST. Put IPv6 addresses in brackets."
       },
       {
-        "type": "short",
         "key": "M",
         "title": "-M, --machine=",
         "description": "Execute operation on a local container. Specify a container name to connect to, optionally prefixed by a user name to connect as and a separating \"@\" character. If the special string \".host\" is used in place of the container name, a connection to the local system is made (which is useful to connect to a specific user's user bus: \"--user --machine=lennart@.host\"). If the \"@\" syntax is not used, the connection is made as root user. If the \"@\" syntax is used either the left hand side or the right hand side may be omitted (but not both) in which case the local user name and \".host\" are implied."
       },
       {
-        "type": "long",
         "key": "machine",
         "title": "-M, --machine=",
         "description": "Execute operation on a local container. Specify a container name to connect to, optionally prefixed by a user name to connect as and a separating \"@\" character. If the special string \".host\" is used in place of the container name, a connection to the local system is made (which is useful to connect to a specific user's user bus: \"--user --machine=lennart@.host\"). If the \"@\" syntax is not used, the connection is made as root user. If the \"@\" syntax is used either the left hand side or the right hand side may be omitted (but not both) in which case the local user name and \".host\" are implied."
       },
       {
-        "type": "long",
         "key": "no-pager",
         "title": "--no-pager",
         "description": "Do not pipe output into a pager."
       },
       {
-        "type": "long",
         "key": "legend",
         "title": "--legend=BOOL",
         "description": "Enable or disable printing of the legend, i.e. column headers and the footer with hints. The legend is printed by default, unless disabled with --quiet or similar."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --help",
         "description": "Print a short help text and exit."
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, --help",
         "description": "Print a short help text and exit."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "Print a short version string and exit."

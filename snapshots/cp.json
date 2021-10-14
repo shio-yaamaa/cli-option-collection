@@ -1,297 +1,249 @@
 [
   {
     "name": "cp",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "short",
         "key": "a",
         "title": "-a, --archive",
         "description": "same as -dR --preserve=all"
       },
       {
-        "type": "long",
         "key": "archive",
         "title": "-a, --archive",
         "description": "same as -dR --preserve=all"
       },
       {
-        "type": "long",
         "key": "attributes-only",
         "title": "--attributes-only",
         "description": "don't copy the file data, just the attributes"
       },
       {
-        "type": "long",
         "key": "backup",
         "title": "--backup[=CONTROL]",
         "description": "make a backup of each existing destination file"
       },
       {
-        "type": "short",
         "key": "b",
         "title": "-b",
         "description": "like --backup but does not accept an argument"
       },
       {
-        "type": "long",
         "key": "copy-contents",
         "title": "--copy-contents",
         "description": "copy contents of special files when recursive"
       },
       {
-        "type": "short",
         "key": "d",
         "title": "-d",
         "description": "same as --no-dereference --preserve=links"
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f, --force",
         "description": "if an existing destination file cannot be opened, remove it and try again (this option is ignored when the -n option is also used)"
       },
       {
-        "type": "long",
         "key": "force",
         "title": "-f, --force",
         "description": "if an existing destination file cannot be opened, remove it and try again (this option is ignored when the -n option is also used)"
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i, --interactive",
         "description": "prompt before overwrite (overrides a previous -n option)"
       },
       {
-        "type": "long",
         "key": "interactive",
         "title": "-i, --interactive",
         "description": "prompt before overwrite (overrides a previous -n option)"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H",
         "description": "follow command-line symbolic links in SOURCE"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --link",
         "description": "hard link files instead of copying"
       },
       {
-        "type": "long",
         "key": "link",
         "title": "-l, --link",
         "description": "hard link files instead of copying"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L, --dereference",
         "description": "always follow symbolic links in SOURCE"
       },
       {
-        "type": "long",
         "key": "dereference",
         "title": "-L, --dereference",
         "description": "always follow symbolic links in SOURCE"
       },
       {
-        "type": "short",
         "key": "n",
         "title": "-n, --no-clobber",
         "description": "do not overwrite an existing file (overrides a previous -i option)"
       },
       {
-        "type": "long",
         "key": "no-clobber",
         "title": "-n, --no-clobber",
         "description": "do not overwrite an existing file (overrides a previous -i option)"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P, --no-dereference",
         "description": "never follow symbolic links in SOURCE"
       },
       {
-        "type": "long",
         "key": "no-dereference",
         "title": "-P, --no-dereference",
         "description": "never follow symbolic links in SOURCE"
       },
       {
-        "type": "short",
         "key": "p",
         "title": "-p",
         "description": "same as --preserve=mode,ownership,timestamps"
       },
       {
-        "type": "long",
         "key": "preserve",
         "title": "--preserve[=ATTR_LIST]",
         "description": "preserve the specified attributes (default: mode,ownership,timestamps), if possible additional attributes: context, links, xattr, all"
       },
       {
-        "type": "long",
         "key": "no-preserve",
         "title": "--no-preserve=ATTR_LIST",
         "description": "don't preserve the specified attributes"
       },
       {
-        "type": "long",
         "key": "parents",
         "title": "--parents",
         "description": "use full source file name under DIRECTORY"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, -r, --recursive",
         "description": "copy directories recursively"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-R, -r, --recursive",
         "description": "copy directories recursively"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, -r, --recursive",
         "description": "copy directories recursively"
       },
       {
-        "type": "long",
         "key": "reflink",
         "title": "--reflink[=WHEN]",
         "description": "control clone/CoW copies. See below"
       },
       {
-        "type": "long",
         "key": "remove-destination",
         "title": "--remove-destination",
         "description": "remove each existing destination file before attempting to open it (contrast with --force)"
       },
       {
-        "type": "long",
         "key": "sparse",
         "title": "--sparse=WHEN",
         "description": "control creation of sparse files. See below"
       },
       {
-        "type": "long",
         "key": "strip-trailing-slashes",
         "title": "--strip-trailing-slashes",
         "description": "remove any trailing slashes from each SOURCE argument"
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s, --symbolic-link",
         "description": "make symbolic links instead of copying"
       },
       {
-        "type": "long",
         "key": "symbolic-link",
         "title": "-s, --symbolic-link",
         "description": "make symbolic links instead of copying"
       },
       {
-        "type": "short",
         "key": "S",
         "title": "-S, --suffix=SUFFIX",
         "description": "override the usual backup suffix"
       },
       {
-        "type": "long",
         "key": "suffix",
         "title": "-S, --suffix=SUFFIX",
         "description": "override the usual backup suffix"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --target-directory=DIRECTORY",
         "description": "copy all SOURCE arguments into DIRECTORY"
       },
       {
-        "type": "long",
         "key": "target-directory",
         "title": "-t, --target-directory=DIRECTORY",
         "description": "copy all SOURCE arguments into DIRECTORY"
       },
       {
-        "type": "short",
         "key": "T",
         "title": "-T, --no-target-directory",
         "description": "treat DEST as a normal file"
       },
       {
-        "type": "long",
         "key": "no-target-directory",
         "title": "-T, --no-target-directory",
         "description": "treat DEST as a normal file"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --update",
         "description": "copy only when the SOURCE file is newer than the destination file or when the destination file is missing"
       },
       {
-        "type": "long",
         "key": "update",
         "title": "-u, --update",
         "description": "copy only when the SOURCE file is newer than the destination file or when the destination file is missing"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "explain what is being done"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "explain what is being done"
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x, --one-file-system",
         "description": "stay on this file system"
       },
       {
-        "type": "long",
         "key": "one-file-system",
         "title": "-x, --one-file-system",
         "description": "stay on this file system"
       },
       {
-        "type": "short",
         "key": "Z",
         "title": "-Z",
         "description": "set SELinux security context of destination file to default type"
       },
       {
-        "type": "long",
         "key": "context",
         "title": "--context[=CTX]",
         "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"

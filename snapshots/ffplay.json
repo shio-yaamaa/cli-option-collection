@@ -1,423 +1,354 @@
 [
   {
     "name": "ffplay",
+    "optionStyle": "single-dash",
     "options": [
       {
-        "type": "short",
         "key": "L",
         "title": "-L",
         "description": "Show license."
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, -?, -help, --help [arg]",
         "description": "Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown.\n\nPossible values of arg are:\n\nlong\n\nPrint advanced tool options in addition to the basic tool options.\n\nfull\n\nPrint complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.\n\ndecoder=decoder_name\n\nPrint detailed information about the decoder named decoder_name. Use the -decoders option to get a list of all decoders.\n\nencoder=encoder_name\n\nPrint detailed information about the encoder named encoder_name. Use the -encoders option to get a list of all encoders.\n\ndemuxer=demuxer_name\n\nPrint detailed information about the demuxer named demuxer_name. Use the -formats option to get a list of all demuxers and muxers.\n\nmuxer=muxer_name\n\nPrint detailed information about the muxer named muxer_name. Use the -formats option to get a list of all muxers and demuxers.\n\nfilter=filter_name\n\nPrint detailed information about the filter named filter_name. Use the -filters option to get a list of all filters.\n\nbsf=bitstream_filter_name\n\nPrint detailed information about the bitstream filter named bitstream_filter_name. Use the -bsfs option to get a list of all bitstream filters.\n\nprotocol=protocol_name\n\nPrint detailed information about the protocol named protocol_name. Use the -protocols option to get a list of all protocols."
       },
       {
-        "type": "long",
         "key": "help",
         "title": "-h, -?, -help, --help [arg]",
         "description": "Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown.\n\nPossible values of arg are:\n\nlong\n\nPrint advanced tool options in addition to the basic tool options.\n\nfull\n\nPrint complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.\n\ndecoder=decoder_name\n\nPrint detailed information about the decoder named decoder_name. Use the -decoders option to get a list of all decoders.\n\nencoder=encoder_name\n\nPrint detailed information about the encoder named encoder_name. Use the -encoders option to get a list of all encoders.\n\ndemuxer=demuxer_name\n\nPrint detailed information about the demuxer named demuxer_name. Use the -formats option to get a list of all demuxers and muxers.\n\nmuxer=muxer_name\n\nPrint detailed information about the muxer named muxer_name. Use the -formats option to get a list of all muxers and demuxers.\n\nfilter=filter_name\n\nPrint detailed information about the filter named filter_name. Use the -filters option to get a list of all filters.\n\nbsf=bitstream_filter_name\n\nPrint detailed information about the bitstream filter named bitstream_filter_name. Use the -bsfs option to get a list of all bitstream filters.\n\nprotocol=protocol_name\n\nPrint detailed information about the protocol named protocol_name. Use the -protocols option to get a list of all protocols."
       },
       {
-        "type": "long",
         "key": "version",
         "title": "-version",
         "description": "Show version."
       },
       {
-        "type": "long",
         "key": "buildconf",
         "title": "-buildconf",
         "description": "Show the build configuration, one option per line."
       },
       {
-        "type": "long",
         "key": "formats",
         "title": "-formats",
         "description": "Show available formats (including devices)."
       },
       {
-        "type": "long",
         "key": "demuxers",
         "title": "-demuxers",
         "description": "Show available demuxers."
       },
       {
-        "type": "long",
         "key": "muxers",
         "title": "-muxers",
         "description": "Show available muxers."
       },
       {
-        "type": "long",
         "key": "devices",
         "title": "-devices",
         "description": "Show available devices."
       },
       {
-        "type": "long",
         "key": "codecs",
         "title": "-codecs",
         "description": "Show all codecs known to libavcodec.\n\nNote that the term ’codec’ is used throughout this documentation as a shortcut for what is more correctly called a media bitstream format."
       },
       {
-        "type": "long",
         "key": "decoders",
         "title": "-decoders",
         "description": "Show available decoders."
       },
       {
-        "type": "long",
         "key": "encoders",
         "title": "-encoders",
         "description": "Show all available encoders."
       },
       {
-        "type": "long",
         "key": "bsfs",
         "title": "-bsfs",
         "description": "Show available bitstream filters."
       },
       {
-        "type": "long",
         "key": "protocols",
         "title": "-protocols",
         "description": "Show available protocols."
       },
       {
-        "type": "long",
         "key": "filters",
         "title": "-filters",
         "description": "Show available libavfilter filters."
       },
       {
-        "type": "long",
         "key": "pix_fmts",
         "title": "-pix_fmts",
         "description": "Show available pixel formats."
       },
       {
-        "type": "long",
         "key": "sample_fmts",
         "title": "-sample_fmts",
         "description": "Show available sample formats."
       },
       {
-        "type": "long",
         "key": "layouts",
         "title": "-layouts",
         "description": "Show channel names and standard channel layouts."
       },
       {
-        "type": "long",
         "key": "colors",
         "title": "-colors",
         "description": "Show recognized color names."
       },
       {
-        "type": "long",
         "key": "sources",
         "title": "-sources device[, opt1=val1[, opt2=val2]...]",
         "description": "Show autodetected sources of the input device. Some devices may provide system-dependent source names that cannot be autodetected. The returned list cannot be assumed to be always complete.\n\nffmpeg -sources pulse,server=192.168.0.4"
       },
       {
-        "type": "long",
         "key": "sinks",
         "title": "-sinks device[, opt1=val1[, opt2=val2]...]",
         "description": "Show autodetected sinks of the output device. Some devices may provide system-dependent sink names that cannot be autodetected. The returned list cannot be assumed to be always complete.\n\nffmpeg -sinks pulse,server=192.168.0.4"
       },
       {
-        "type": "long",
         "key": "loglevel",
         "title": "-loglevel [flags+]loglevel | -v [flags+]loglevel",
         "description": "Set logging level and flags used by the library.\n\nThe optional flags prefix can consist of the following values:\n\n‘repeat’\n\nIndicates that repeated log output should not be compressed to the first line and the \"Last message repeated n times\" line will be omitted.\n\n‘level’\n\nIndicates that log output should add a [level] prefix to each message line. This can be used as an alternative to log coloring, e.g. when dumping the log to file.\n\nFlags can also be used alone by adding a ’+’/’-’ prefix to set/reset a single flag without affecting other flags or changing loglevel. When setting both flags and loglevel, a ’+’ separator is expected between the last flags value and before loglevel.\n\nloglevel is a string or a number containing one of the following values:\n\n‘quiet, -8’\n\nShow nothing at all; be silent.\n\n‘panic, 0’\n\nOnly show fatal errors which could lead the process to crash, such as an assertion failure. This is not currently used for anything.\n\n‘fatal, 8’\n\nOnly show fatal errors. These are errors after which the process absolutely cannot continue.\n\n‘error, 16’\n\nShow all errors, including ones which can be recovered from.\n\n‘warning, 24’\n\nShow all warnings and errors. Any message related to possibly incorrect or unexpected events will be shown.\n\n‘info, 32’\n\nShow informative messages during processing. This is in addition to warnings and errors. This is the default value.\n\n‘verbose, 40’\n\nSame as info, except more verbose.\n\n‘debug, 48’\n\nShow everything, including debugging information.\n\n‘trace, 56’\n\nFor example to enable repeated log output, add the level prefix, and set loglevel to verbose:\n\nffmpeg -loglevel repeat+level+verbose -i input output\n\nAnother example that enables repeated log output without affecting current state of level prefix flag or loglevel:\n\nffmpeg [...] -loglevel +repeat\n\nBy default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable AV_LOG_FORCE_NOCOLOR, or can be forced setting the environment variable AV_LOG_FORCE_COLOR."
       },
       {
-        "type": "long",
         "key": "report",
         "title": "-report",
         "description": "Dump full command line and log output to a file named program-YYYYMMDD-HHMMSS.log in the current directory. This file can be useful for bug reports. It also implies -loglevel debug.\n\nSetting the environment variable FFREPORT to any value has the same effect. If the value is a ’:’-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter ’:’ (see the “Quoting and escaping” section in the ffmpeg-utils manual).\n\nThe following options are recognized:\n\nfile\n\nset the file name to use for the report; %p is expanded to the name of the program, %t is expanded to a timestamp, %% is expanded to a plain %\n\nlevel\n\nset the log verbosity level using a numerical value (see -loglevel).\n\nFor example, to output a report to a file named ffreport.log using a log level of 32 (alias for log level info):\n\nFFREPORT=file=ffreport.log:level=32 ffmpeg -i input output\n\nErrors in parsing the environment variable are not fatal, and will not appear in the report."
       },
       {
-        "type": "long",
         "key": "hide_banner",
         "title": "-hide_banner",
         "description": "Suppress printing banner.\n\nAll FFmpeg tools will normally show a copyright notice, build options and library versions. This option can be used to suppress printing this information."
       },
       {
-        "type": "long",
         "key": "cpuflags",
         "title": "-cpuflags flags (global)",
         "description": "Allows setting and clearing cpu flags. This option is intended for testing. Do not use it unless you know what you’re doing.\n\nffmpeg -cpuflags -sse+mmx ...\nffmpeg -cpuflags mmx ...\nffmpeg -cpuflags 0 ...\n\nPossible flags for this option are:\n\n‘x86’ ‘mmx’ ‘mmxext’ ‘sse’ ‘sse2’ ‘sse2slow’ ‘sse3’ ‘sse3slow’ ‘ssse3’ ‘atom’ ‘sse4.1’ ‘sse4.2’ ‘avx’ ‘avx2’ ‘xop’ ‘fma3’ ‘fma4’ ‘3dnow’ ‘3dnowext’ ‘bmi1’ ‘bmi2’ ‘cmov’ ‘ARM’ ‘armv5te’ ‘armv6’ ‘armv6t2’ ‘vfp’ ‘vfpv3’ ‘neon’ ‘setend’ ‘AArch64’ ‘armv8’ ‘vfp’ ‘neon’ ‘PowerPC’ ‘altivec’ ‘Specific Processors’ ‘pentium2’ ‘pentium3’ ‘pentium4’ ‘k6’ ‘k62’ ‘athlon’ ‘athlonxp’ ‘k8’"
       },
       {
-        "type": "long",
         "key": "cpucount",
         "title": "-cpucount count (global)",
         "description": "Override detection of CPU count. This option is intended for testing. Do not use it unless you know what you’re doing.\n\nffmpeg -cpucount 2"
       },
       {
-        "type": "long",
         "key": "max_alloc",
         "title": "-max_alloc bytes",
         "description": "Set the maximum size limit for allocating a block on the heap by ffmpeg’s family of malloc functions. Exercise extreme caution when using this option. Don’t use if you do not understand the full consequence of doing so. Default is INT_MAX."
       },
       {
-        "type": "short",
         "key": "x",
         "title": "-x width",
         "description": "Force displayed width."
       },
       {
-        "type": "short",
         "key": "y",
         "title": "-y height",
         "description": "Force displayed height."
       },
       {
-        "type": "short",
         "key": "s",
         "title": "-s size",
         "description": "Set frame size (WxH or abbreviation), needed for videos which do not contain a header with the frame size like raw YUV. This option has been deprecated in favor of private options, try -video_size."
       },
       {
-        "type": "long",
         "key": "fs",
         "title": "-fs",
         "description": "Start in fullscreen mode."
       },
       {
-        "type": "long",
         "key": "an",
         "title": "-an",
         "description": "Disable audio."
       },
       {
-        "type": "long",
         "key": "vn",
         "title": "-vn",
         "description": "Disable video."
       },
       {
-        "type": "long",
         "key": "sn",
         "title": "-sn",
         "description": "Disable subtitles."
       },
       {
-        "type": "long",
         "key": "ss",
         "title": "-ss pos",
         "description": "Seek to pos. Note that in most formats it is not possible to seek exactly, so ffplay will seek to the nearest seek point to pos.\n\npos must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual."
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t duration",
         "description": "Play duration seconds of audio/video.\n\nduration must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual."
       },
       {
-        "type": "long",
         "key": "bytes",
         "title": "-bytes",
         "description": "Seek by bytes."
       },
       {
-        "type": "long",
         "key": "seek_interval",
         "title": "-seek_interval",
         "description": "Set custom interval, in seconds, for seeking using left/right keys. Default is 10 seconds."
       },
       {
-        "type": "long",
         "key": "nodisp",
         "title": "-nodisp",
         "description": "Disable graphical display."
       },
       {
-        "type": "long",
         "key": "noborder",
         "title": "-noborder",
         "description": "Borderless window."
       },
       {
-        "type": "long",
         "key": "alwaysontop",
         "title": "-alwaysontop",
         "description": "Window always on top. Available on: X11 with SDL >= 2.0.5, Windows SDL >= 2.0.6."
       },
       {
-        "type": "long",
         "key": "volume",
         "title": "-volume",
         "description": "Set the startup volume. 0 means silence, 100 means no volume reduction or amplification. Negative values are treated as 0, values above 100 are treated as 100."
       },
       {
-        "type": "short",
         "key": "f",
         "title": "-f fmt",
         "description": "Force format."
       },
       {
-        "type": "long",
         "key": "window_title",
         "title": "-window_title title",
         "description": "Set window title (default is the input filename)."
       },
       {
-        "type": "long",
         "key": "left",
         "title": "-left title",
         "description": "Set the x position for the left of the window (default is a centered window)."
       },
       {
-        "type": "long",
         "key": "top",
         "title": "-top title",
         "description": "Set the y position for the top of the window (default is a centered window)."
       },
       {
-        "type": "long",
         "key": "loop",
         "title": "-loop number",
         "description": "Loops movie playback <number> times. 0 means forever."
       },
       {
-        "type": "long",
         "key": "showmode",
         "title": "-showmode mode",
         "description": "Set the show mode to use. Available values for mode are:\n\n‘0, video’\n\nshow video\n\n‘1, waves’\n\nshow audio waves\n\n‘2, rdft’\n\nshow audio frequency band using RDFT ((Inverse) Real Discrete Fourier Transform)\n\nDefault value is \"video\", if video is not present or cannot be played \"rdft\" is automatically selected.\n\nYou can interactively cycle through the available show modes by pressing the key w."
       },
       {
-        "type": "long",
         "key": "vf",
         "title": "-vf filtergraph",
         "description": "Create the filtergraph specified by filtergraph and use it to filter the video stream.\n\nfiltergraph is a description of the filtergraph to apply to the stream, and must have a single video input and a single video output. In the filtergraph, the input is associated to the label in, and the output to the label out. See the ffmpeg-filters manual for more information about the filtergraph syntax.\n\nYou can specify this parameter multiple times and cycle through the specified filtergraphs along with the show modes by pressing the key w."
       },
       {
-        "type": "long",
         "key": "af",
         "title": "-af filtergraph",
         "description": "filtergraph is a description of the filtergraph to apply to the input audio. Use the option \"-filters\" to show all the available filters (including sources and sinks)."
       },
       {
-        "type": "short",
         "key": "i",
         "title": "-i input_url",
         "description": "Read input_url."
       },
       {
-        "type": "long",
         "key": "pix_fmt",
         "title": "-pix_fmt format",
         "description": "Set pixel format. This option has been deprecated in favor of private options, try -pixel_format."
       },
       {
-        "type": "long",
         "key": "stats",
         "title": "-stats",
         "description": "Print several playback statistics, in particular show the stream duration, the codec parameters, the current position in the stream and the audio/video synchronisation drift. It is shown by default, unless the log level is lower than info. Its display can be forced by manually specifying this option. To disable it, you need to specify -nostats."
       },
       {
-        "type": "long",
         "key": "fast",
         "title": "-fast",
         "description": "Non-spec-compliant optimizations."
       },
       {
-        "type": "long",
         "key": "genpts",
         "title": "-genpts",
         "description": "Generate pts."
       },
       {
-        "type": "long",
         "key": "sync",
         "title": "-sync type",
         "description": "Set the master clock to audio (type=audio), video (type=video) or external (type=ext). Default is audio. The master clock is used to control audio-video synchronization. Most media players use audio as master clock, but in some cases (streaming or high quality broadcast) it is necessary to change that. This option is mainly used for debugging purposes."
       },
       {
-        "type": "long",
         "key": "ast",
         "title": "-ast audio_stream_specifier",
         "description": "Select the desired audio stream using the given stream specifier. The stream specifiers are described in the Stream specifiers chapter. If this option is not specified, the \"best\" audio stream is selected in the program of the already selected video stream."
       },
       {
-        "type": "long",
         "key": "vst",
         "title": "-vst video_stream_specifier",
         "description": "Select the desired video stream using the given stream specifier. The stream specifiers are described in the Stream specifiers chapter. If this option is not specified, the \"best\" video stream is selected."
       },
       {
-        "type": "long",
         "key": "sst",
         "title": "-sst subtitle_stream_specifier",
         "description": "Select the desired subtitle stream using the given stream specifier. The stream specifiers are described in the Stream specifiers chapter. If this option is not specified, the \"best\" subtitle stream is selected in the program of the already selected video or audio stream."
       },
       {
-        "type": "long",
         "key": "autoexit",
         "title": "-autoexit",
         "description": "Exit when video is done playing."
       },
       {
-        "type": "long",
         "key": "exitonkeydown",
         "title": "-exitonkeydown",
         "description": "Exit if any key is pressed."
       },
       {
-        "type": "long",
         "key": "exitonmousedown",
         "title": "-exitonmousedown",
         "description": "Exit if any mouse button is pressed."
       },
       {
-        "type": "long",
         "key": "codec",
         "title": "-codec:media_specifier codec_name",
         "description": "Force a specific decoder implementation for the stream identified by media_specifier, which can assume the values a (audio), v (video), and s subtitle."
       },
       {
-        "type": "long",
         "key": "acodec",
         "title": "-acodec codec_name",
         "description": "Force a specific audio decoder."
       },
       {
-        "type": "long",
         "key": "vcodec",
         "title": "-vcodec codec_name",
         "description": "Force a specific video decoder."
       },
       {
-        "type": "long",
         "key": "scodec",
         "title": "-scodec codec_name",
         "description": "Force a specific subtitle decoder."
       },
       {
-        "type": "long",
         "key": "autorotate",
         "title": "-autorotate",
         "description": "Automatically rotate the video according to file metadata. Enabled by default, use -noautorotate to disable it."
       },
       {
-        "type": "long",
         "key": "framedrop",
         "title": "-framedrop",
         "description": "Drop video frames if video is out of sync. Enabled by default if the master clock is not set to video. Use this option to enable frame dropping for all master clock sources, use -noframedrop to disable it."
       },
       {
-        "type": "long",
         "key": "infbuf",
         "title": "-infbuf",
         "description": "Do not limit the input buffer size, read as much data as possible from the input as soon as possible. Enabled by default for realtime streams, where data may be dropped if not read in time. Use this option to enable infinite buffers for all inputs, use -noinfbuf to disable it."
       },
       {
-        "type": "long",
         "key": "filter_threads",
         "title": "-filter_threads nb_threads",
         "description": "Defines how many threads are used to process a filter pipeline. Each pipeline will produce a thread pool with this many threads available for parallel processing. The default is 0 which means that the thread count will be determined by the number of available CPUs."

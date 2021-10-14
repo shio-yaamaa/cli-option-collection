@@ -1,141 +1,119 @@
 [
   {
     "name": "chcon",
+    "optionStyle": "short-and-long",
     "options": [
       {
-        "type": "long",
         "key": "dereference",
         "title": "--dereference",
         "description": "affect the referent of each symbolic link (this is the default), rather than the symbolic link itself"
       },
       {
-        "type": "short",
         "key": "h",
         "title": "-h, --no-dereference",
         "description": "affect symbolic links instead of any referenced file"
       },
       {
-        "type": "long",
         "key": "no-dereference",
         "title": "-h, --no-dereference",
         "description": "affect symbolic links instead of any referenced file"
       },
       {
-        "type": "short",
         "key": "u",
         "title": "-u, --user=USER",
         "description": "set user USER in the target security context"
       },
       {
-        "type": "long",
         "key": "user",
         "title": "-u, --user=USER",
         "description": "set user USER in the target security context"
       },
       {
-        "type": "short",
         "key": "r",
         "title": "-r, --role=ROLE",
         "description": "set role ROLE in the target security context"
       },
       {
-        "type": "long",
         "key": "role",
         "title": "-r, --role=ROLE",
         "description": "set role ROLE in the target security context"
       },
       {
-        "type": "short",
         "key": "t",
         "title": "-t, --type=TYPE",
         "description": "set type TYPE in the target security context"
       },
       {
-        "type": "long",
         "key": "type",
         "title": "-t, --type=TYPE",
         "description": "set type TYPE in the target security context"
       },
       {
-        "type": "short",
         "key": "l",
         "title": "-l, --range=RANGE",
         "description": "set range RANGE in the target security context"
       },
       {
-        "type": "long",
         "key": "range",
         "title": "-l, --range=RANGE",
         "description": "set range RANGE in the target security context"
       },
       {
-        "type": "long",
         "key": "no-preserve-root",
         "title": "--no-preserve-root",
         "description": "do not treat '/' specially (the default)"
       },
       {
-        "type": "long",
         "key": "preserve-root",
         "title": "--preserve-root",
         "description": "fail to operate recursively on '/'"
       },
       {
-        "type": "long",
         "key": "reference",
         "title": "--reference=RFILE",
         "description": "use RFILE's security context rather than specifying a CONTEXT value"
       },
       {
-        "type": "short",
         "key": "R",
         "title": "-R, --recursive",
         "description": "operate on files and directories recursively"
       },
       {
-        "type": "long",
         "key": "recursive",
         "title": "-R, --recursive",
         "description": "operate on files and directories recursively"
       },
       {
-        "type": "short",
         "key": "v",
         "title": "-v, --verbose",
         "description": "output a diagnostic for every file processed"
       },
       {
-        "type": "long",
         "key": "verbose",
         "title": "-v, --verbose",
         "description": "output a diagnostic for every file processed"
       },
       {
-        "type": "short",
         "key": "H",
         "title": "-H",
         "description": "if a command line argument is a symbolic link to a directory, traverse it"
       },
       {
-        "type": "short",
         "key": "L",
         "title": "-L",
         "description": "traverse every symbolic link to a directory encountered"
       },
       {
-        "type": "short",
         "key": "P",
         "title": "-P",
         "description": "do not traverse any symbolic links (default)"
       },
       {
-        "type": "long",
         "key": "help",
         "title": "--help",
         "description": "display this help and exit"
       },
       {
-        "type": "long",
         "key": "version",
         "title": "--version",
         "description": "output version information and exit"
