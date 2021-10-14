@@ -14,7 +14,7 @@ export const CommandItem: React.VFC<Props> = (props) => (
     </h2>
     <ul>
       {props.command.options.map((option) => (
-        <li key={`${props.command.name}-${option.type}-${option.key}`}>
+        <li key={`${props.command.name}-${option.key}`}>
           <OptionItem option={option} />
         </li>
       ))}
