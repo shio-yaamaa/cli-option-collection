@@ -61,7 +61,7 @@ const makeOptionListForShortAndLongStyle = (
   return options;
 };
 
-// The same as makeOptionList, but for single-dash style commands like "go".
+// The same as makeOptionListForShortAndLongStyle, but for single-dash style commands like "go".
 const makeOptionListForSingleDashStyle = (
   optionStrings: string[],
   title: string,
