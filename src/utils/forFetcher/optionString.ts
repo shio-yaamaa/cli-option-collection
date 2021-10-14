@@ -41,7 +41,7 @@ export const makeOptionList = (
   return options;
 };
 
-// The same as makeOptionList, but for single-dash style commands like go.
+// The same as makeOptionList, but for single-dash style commands like "go".
 export const makeOptionListForSingleDashStyle = (
   optionStrings: string[],
   title: string,
@@ -64,7 +64,7 @@ export const makeOptionListForSingleDashStyle = (
   return options;
 };
 
-// Example: ["-d", "-dt"] -> ["-d, -dt"]
+// Example: ["-d", "-dt"] -> "-d, -dt"
 export const mergeOptionTitles = (optionTitles: string[]): string => {
   return optionTitles.map((optionTitle) => optionTitle.trim()).join(', ');
 };
