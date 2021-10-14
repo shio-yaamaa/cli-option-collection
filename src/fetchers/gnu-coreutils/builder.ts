@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { Command, Option } from '../../types';
+import { Command, Option, OptionStyle } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { findDListEntries } from '../../utils/forFetcher/dom';
 import {
@@ -23,6 +23,8 @@ interface Config {
   filename: string;
   optionsHeadingID?: string; // Defaults to "DESCRIPTION"
 }
+
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 export const build = (commandName: string, config: Config) => ({
   fetch: () =>
@@ -51,6 +53,7 @@ export const fetch = async (
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -83,7 +86,9 @@ const optionListToOptions = (list: HTMLDListElement): Option[] => {
         trimSpaceDelimitedArguments,
       ]
     );
-    options.push(...makeOptionList(optionStrings, title, description));
+    options.push(
+      ...makeOptionList(optionStrings, OPTION_STYLE, title, description)
+    );
   }
   return options;
 };

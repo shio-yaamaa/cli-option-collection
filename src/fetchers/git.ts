@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import {
   findAnchorsWithPattern,
@@ -39,6 +39,7 @@ interface SubcommandLocation {
   url: URL; // e.g. https://git-scm.com/docs/git-add
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const BASE_URL = 'https://git-scm.com';
 const SUBCOMMAND_LINK_PATTERN = /^\/docs\/git-.*/;
 const SUBCOMMAND_LINK_TEXT_PATTERN = /^git-.*\[1\]$/;
@@ -89,6 +90,7 @@ const fetchSubcommand = async (
   const document = await fetchDocumentFromURL(location.url);
   return {
     name: location.command,
+    optionStyle: OPTION_STYLE,
     options: findOptions(document),
   };
 };
@@ -116,7 +118,9 @@ const findOptions = (document: Document): Option[] => {
       trimEqualDelimitedArguments,
       trimNonDelimitedArguments,
     ]);
-    options.push(...makeOptionList(optionStrings, title, description));
+    options.push(
+      ...makeOptionList(optionStrings, OPTION_STYLE, title, description)
+    );
   }
   return uniqueOptions(options);
 };

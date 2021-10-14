@@ -1,4 +1,4 @@
-import { Command, Option } from '../../types';
+import { Command, Option, OptionStyle } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
@@ -20,6 +20,8 @@ import { mergeLists } from '../../utils/utils';
 interface Config {
   optionsHeadingID?: string; // Defaults to "DESCRIPTION"
 }
+
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 export const build = (commandName: string, config?: Config) => ({
   fetch: () => fetch(commandName, config?.optionsHeadingID ?? 'DESCRIPTION'),
@@ -48,6 +50,7 @@ export const fetch = async (
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -75,5 +78,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimSpaceDelimitedArguments,
     trimOptionalElements,
   ]);
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

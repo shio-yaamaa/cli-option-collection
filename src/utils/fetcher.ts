@@ -13,10 +13,11 @@ export const joinFetchers = (...fetchers: Fetcher[]): Fetcher => {
         (command) => command.name,
         (a: Command, b: Command) => ({
           name: a.name,
-          options: uniqueBy([...a.options, ...b.options], (option) => [
-            option.type,
-            option.key,
-          ]),
+          optionStyle: a.optionStyle,
+          options: uniqueBy(
+            [...a.options, ...b.options],
+            (option) => option.key
+          ),
         })
       );
     },

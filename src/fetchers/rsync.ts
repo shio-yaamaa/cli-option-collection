@@ -1,4 +1,4 @@
-import { Command, Option, Fetcher } from '../types';
+import { Command, Option, Fetcher, OptionStyle } from '../types';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -23,6 +23,7 @@ import { getInnerText } from '../utils/dom';
 // NOTE: There are multiple interpretations of -h and -M.
 //       Only the first one is listed in the result.
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL = 'https://download.samba.org/pub/rsync/rsync.1';
 
 export const rsync: Fetcher = {
@@ -37,6 +38,7 @@ const fetch = async (): Promise<Command[]> => {
   return [
     {
       name: 'rsync',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -76,6 +78,7 @@ const listToOptions = (list: Element): Option[] => {
     options.push(
       ...makeOptionList(
         optionStrings,
+        OPTION_STYLE,
         mergeOptionTitles(titles),
         descriptionLines.join(' ')
       )

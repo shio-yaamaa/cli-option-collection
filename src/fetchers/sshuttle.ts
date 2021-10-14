@@ -1,4 +1,4 @@
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { DListEntry, findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
@@ -15,6 +15,7 @@ import { mergeLists } from '../utils/utils';
 // Alternative sources:
 // - https://github.com/sshuttle/sshuttle/blob/bd00a530dde4ec71aa5bc08984e33241b8b7eaa4/sshuttle/options.py#L188
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL = 'https://sshuttle.readthedocs.io/en/stable/manpage.html';
 
 export const sshuttle: Fetcher = {
@@ -34,6 +35,7 @@ const fetch = async (): Promise<Command[]> => {
   return [
     {
       name: 'sshuttle',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -53,5 +55,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     [title],
     [splitByComma, trimSpaceDelimitedArguments, trimEqualDelimitedArguments]
   );
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

@@ -1,4 +1,4 @@
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -38,6 +38,7 @@ interface Section {
   pres: string[];
 }
 
+const OPTION_STYLE = OptionStyle.SINGLE_DASH;
 const DOC_URL = 'https://pkg.go.dev/cmd/go';
 const COMMAND_WORD_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
@@ -123,6 +124,7 @@ const sectionToCommand = (section: Section): Command | null => {
 
   return {
     name: commandName,
+    optionStyle: OPTION_STYLE,
     options: uniqueOptions(options),
   };
 };
@@ -172,7 +174,9 @@ const preToOptions = (pre: string): Option[] => {
         trimEqualDelimitedArguments,
       ]
     )[0];
-    options.push(...makeOptionList([optionString], title, description));
+    options.push(
+      ...makeOptionList([optionString], OPTION_STYLE, title, description)
+    );
   }
 
   return options;
@@ -206,8 +210,9 @@ const paragraphToOptions = (paragraph: string): Option[] => {
     trimSpaceDelimitedArguments,
     trimEqualDelimitedArguments,
   ]);
-  return makeOptionListForSingleDashStyle(
+  return makeOptionList(
     optionStrings,
+    OPTION_STYLE,
     optionTitle,
     optionDescription
   );

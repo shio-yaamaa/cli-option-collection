@@ -1,4 +1,4 @@
-import { Fetcher, Command, Option } from '../../types';
+import { Fetcher, Command, Option, OptionStyle } from '../../types';
 import { fetchDocumentFromURLViaFilter } from '../../utils/forFetcher/http';
 import { ListItem, parseTextList } from '../../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../../utils/forFetcher/options';
@@ -15,6 +15,8 @@ import { getInnerText } from '../../utils/dom';
 interface Config {
   url: URL;
 }
+
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 export const build = (commandName: string, config: Config): Fetcher => ({
   fetch: () => fetch(commandName, config.url),
@@ -35,6 +37,7 @@ const fetch = async (commandName: string, url: URL): Promise<Command[]> => {
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -72,6 +75,7 @@ const listItemToOptions = ({
 
   return makeOptionList(
     optionStrings,
+    OPTION_STYLE,
     titles.join(' '),
     descriptionLines.join(' ')
   );

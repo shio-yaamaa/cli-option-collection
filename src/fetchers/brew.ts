@@ -1,4 +1,4 @@
-import { Command, Option, Fetcher } from '../types';
+import { Command, Option, Fetcher, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { findDListEntries } from '../utils/forFetcher/dom';
 import { fetchDocumentFromManPageURL } from '../utils/forFetcher/http';
@@ -24,6 +24,7 @@ import { mergeLists } from '../utils/utils';
 //       are merged into a single subcommand, "brew autoupdate".
 // BUG: Top-level options (e.g. "--env", "--version") are ignored.
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL =
   'https://raw.githubusercontent.com/Homebrew/brew/master/manpages/brew.1';
 const SUBCOMMAND_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
@@ -88,6 +89,7 @@ const commandSectionToCommands = (commandSection: Element): Command[] => {
   for (const commandName of commandNames) {
     commands.push({
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options,
     });
   }
@@ -140,7 +142,9 @@ const optionListToOptions = (dlist: HTMLDListElement): Option[] => {
       splitByComma,
       trimOptionalElements,
     ]);
-    options.push(...makeOptionList(optionStrings, title, description));
+    options.push(
+      ...makeOptionList(optionStrings, OPTION_STYLE, title, description)
+    );
   }
   return options;
 };

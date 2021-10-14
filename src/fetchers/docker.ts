@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { makeOptionList } from '../utils/forFetcher/optionString';
@@ -19,6 +19,7 @@ interface SubcommandLocation {
   url: URL; // e.g. https://docs.docker.com/engine/reference/commandline/attach/
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const BASE_URL = 'https://docs.docker.com';
 
 export const docker: Fetcher = {
@@ -97,6 +98,7 @@ const fetchSubcommand = async (
   if (!table) {
     return {
       name: location.command,
+      optionStyle: OPTION_STYLE,
       options: [],
     };
   }
@@ -118,6 +120,7 @@ const fetchSubcommand = async (
     options.push(
       ...makeOptionList(
         optionStrings,
+        OPTION_STYLE,
         normalizeCommaDelimitedString(title),
         description
       )
@@ -126,6 +129,7 @@ const fetchSubcommand = async (
 
   return {
     name: location.command,
+    optionStyle: OPTION_STYLE,
     options,
   };
 };

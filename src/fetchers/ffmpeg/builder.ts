@@ -1,10 +1,10 @@
-import { Command, Fetcher, Option } from '../../types';
+import { Command, Fetcher, Option, OptionStyle } from '../../types';
 import { getInnerText } from '../../utils/dom';
 import { DListEntry, findDListEntries } from '../../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../../utils/forFetcher/http';
 import { uniqueOptions } from '../../utils/forFetcher/options';
 import {
-  makeOptionListForSingleDashStyle,
+  makeOptionList,
   mergeOptionTitles,
 } from '../../utils/forFetcher/optionString';
 import { normalizeCommaDelimitedString } from '../../utils/forFetcher/string';
@@ -18,8 +18,8 @@ import {
 import { mergeLists } from '../../utils/utils';
 
 // BUG: "no" prefix is not considered.
-// NOTE: ffmpeg uses single dash for both single-letter and multiple-letter options,
-//       but this fetcher distinguishes these two types anyway.
+
+const OPTION_STYLE = OptionStyle.SINGLE_DASH;
 
 export const build = (commandName: string): Fetcher => ({
   fetch: () => fetch(commandName),
@@ -38,6 +38,7 @@ const fetch = async (commandName: string): Promise<Command[]> => {
   return [
     {
       name: commandName,
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -56,5 +57,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimSpaceDelimitedArguments,
     trimAfterColons,
   ]);
-  return makeOptionListForSingleDashStyle(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

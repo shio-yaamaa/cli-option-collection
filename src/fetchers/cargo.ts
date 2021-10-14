@@ -1,4 +1,4 @@
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import {
   DListEntry,
@@ -18,6 +18,8 @@ import {
   trimSpaceDelimitedArguments,
 } from '../utils/forFetcher/transformOptionString';
 import { mergeLists } from '../utils/utils';
+
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 export const cargo: Fetcher = {
   fetch: () => fetch(),
@@ -86,6 +88,7 @@ const fetchSubcommand = async ({
   if (!optionsHeading) {
     return {
       name: command,
+      optionStyle: OPTION_STYLE,
       options: [],
     };
   }
@@ -100,6 +103,7 @@ const fetchSubcommand = async ({
   );
   return {
     name: command,
+    optionStyle: OPTION_STYLE,
     options: uniqueOptions(options),
   };
 };
@@ -112,5 +116,5 @@ const dlistEntryToOptions = ({ dts, dd }: DListEntry): Option[] => {
     trimOptionalElements,
     trimSpaceDelimitedArguments,
   ]);
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

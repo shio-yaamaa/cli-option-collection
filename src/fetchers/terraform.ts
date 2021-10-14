@@ -1,11 +1,11 @@
 import { URL } from 'url';
 
-import { Command, Option, Fetcher } from '../types';
+import { Command, Option, Fetcher, OptionStyle } from '../types';
 import { getInnerText } from '../utils/dom';
 import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { uniqueOptions } from '../utils/forFetcher/options';
-import { makeOptionListForSingleDashStyle } from '../utils/forFetcher/optionString';
+import { makeOptionList } from '../utils/forFetcher/optionString';
 import {
   transformOptionStrings,
   trimSpaceDelimitedArguments,
@@ -30,6 +30,7 @@ interface SubcommandLocation {
   url: URL; // e.g. https://www.terraform.io/docs/cli/commands/apply.html
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const BASE_URL = 'https://www.terraform.io/';
 
 const fetch = async (): Promise<Command[]> => {
@@ -78,6 +79,7 @@ const fetchSubcommand = async (
 
   return {
     name: location.command,
+    optionStyle: OPTION_STYLE,
     options: uniqueOptions(options),
   };
 };
@@ -106,5 +108,5 @@ const listItemToOptions = (listItem: Element): Option[] => {
     [title],
     [trimSpaceDelimitedArguments, trimEqualDelimitedArguments]
   );
-  return makeOptionListForSingleDashStyle(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

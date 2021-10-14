@@ -1,4 +1,4 @@
-import { Command, Option } from '../types';
+import { Command, Option, OptionStyle } from '../types';
 import { fetchPlainTextFromURL } from '../utils/forFetcher/http';
 import { ListItem, parseTextList } from '../utils/forFetcher/textListParser';
 import { uniqueOptions } from '../utils/forFetcher/options';
@@ -17,6 +17,7 @@ import { mergeLists } from '../utils/utils';
 // Alternative sources:
 // - https://graphviz.org/doc/info/command.html
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const DOC_URL = 'https://gitlab.com/graphviz/graphviz/-/raw/main/doc/Dot.ref';
 
 export const graphviz = {
@@ -48,6 +49,7 @@ const fetchDot = async (): Promise<Command[]> => {
   return [
     {
       name: 'dot',
+      optionStyle: OPTION_STYLE,
       options: uniqueOptions(options),
     },
   ];
@@ -61,5 +63,5 @@ const indentedListItemToOptions = (listItem: ListItem): Option[] => {
     trimEqualDelimitedArguments,
     trimNonDelimitedArguments,
   ]);
-  return makeOptionList(optionStrings, title, description);
+  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
 };

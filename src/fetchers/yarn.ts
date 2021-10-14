@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { Command, Fetcher, Option } from '../types';
+import { Command, Fetcher, Option, OptionStyle } from '../types';
 import { findAnchorsWithPattern } from '../utils/forFetcher/dom';
 import { fetchDocumentFromURL } from '../utils/forFetcher/http';
 import { normalizeCommaDelimitedString } from '../utils/forFetcher/string';
@@ -27,6 +27,7 @@ interface SubcommandLocation {
   url: URL; // e.g. https://yarnpkg.com/cli/install
 }
 
+const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 const BASE_URL = 'https://yarnpkg.com';
 const SUBCOMMAND_LINK_PATTERN = /^\/cli\//;
 const SUBCOMMAND_TEXT_PATTERN = /^yarn\s/;
@@ -78,11 +79,14 @@ const fetchSubcommand = async (
       [optionString],
       [splitByComma, trimSpaceDelimitedArguments]
     );
-    options.push(...makeOptionList(optionStrings, title, description));
+    options.push(
+      ...makeOptionList(optionStrings, OPTION_STYLE, title, description)
+    );
   }
 
   return {
     name: location.commandName,
+    optionStyle: OPTION_STYLE,
     options,
   };
 };
