@@ -1,4 +1,7 @@
 import parse from 'parenthesis';
+import { uniqueBy } from '../utils';
+
+const PARENTHESIS_PLACEHOLDER_PATTERN = /___(\d+)___/g; // When escape is "___"
 
 // Example: "abc , abc" -> "abc, abc"
 export const normalizeCommaDelimitedString = (original: string): string =>
@@ -18,42 +21,86 @@ export const normalizeSlashDelimitedString = (original: string): string =>
 export const normalizeSpaces = (original: string): string =>
   original.replace(/[^\S\r\n]+/g, ' '); // Replace whitespace except linebreaks with spaces.
 
-export const splitAtTopLevel = (
+// Parse brackets with the library "parenthesis", but only with the depth of 1.
+export const extractTopLevelBrackets = (
   string: string,
-  delimiter: string,
   brackets: string[]
-): string[] => {
-  const parsed: string[] = parse(string, {
+): {
+  skeleton: string;
+  fillings: string[];
+} => {
+  const skeletonElements: string[] = parse(string, {
     brackets,
     flat: true,
     escape: '___',
   });
 
-  // Restore the contents of nested brackets
-  const contents = [...parsed];
-  for (const [contentIndex, content] of Array.from(
-    [...contents].entries()
-  ).reverse()) {
-    let filledContent = content;
-    for (const [fillerIndex, filler] of contents.entries()) {
-      if (fillerIndex > 0) {
-        filledContent = filledContent.replace(`___${fillerIndex}___`, filler);
-      }
+  const placeholderIdToOwnerIndex = new Map<number, number>();
+  for (const [index, element] of skeletonElements.entries()) {
+    const matches = element.matchAll(PARENTHESIS_PLACEHOLDER_PATTERN);
+    for (const match of matches) {
+      const placeholderId = parseInt(match[1]);
+      placeholderIdToOwnerIndex.set(placeholderId, index);
     }
-    contents[contentIndex] = filledContent;
   }
 
-  const split = parsed[0].split(delimiter);
+  const sortedPlaceholderIds = [...placeholderIdToOwnerIndex.keys()].sort();
+  const filledElements = [...skeletonElements];
 
-  return split.map((item) => {
-    let filled = item;
-    for (const [index, content] of contents.entries()) {
-      if (index > 0) {
-        filled = filled.replace(`___${index}___`, content);
-      }
+  // Restore the contents of nested brackets.
+  // Needs to be in the ascending order of the placeholder ID
+  // so that every placeholder will be filled.
+  for (const placeholderId of sortedPlaceholderIds) {
+    const placeholderOwnerIndex = placeholderIdToOwnerIndex.get(placeholderId);
+    if (placeholderOwnerIndex === undefined) {
+      continue;
     }
-    return filled.trim();
-  });
+    filledElements[placeholderOwnerIndex] = filledElements[
+      placeholderOwnerIndex
+    ].replace(`___${placeholderId}___`, filledElements[placeholderId]);
+  }
+
+  return {
+    skeleton: skeletonElements[0],
+    fillings: filledElements,
+  };
+};
+
+// Put fillings back to the original place in the skeleton.
+// The opposite operation of extractTopLevelBrackets.
+const fillSkeleton = (skeleton: string, fillings: string[]): string => {
+  let filled = skeleton;
+  const matches = skeleton.matchAll(PARENTHESIS_PLACEHOLDER_PATTERN);
+  for (const match of matches) {
+    const placeholderId = parseInt(match[1]);
+    filled = filled.replace(`___${placeholderId}___`, fillings[placeholderId]);
+  }
+  return filled;
+};
+
+export const splitAtTopLevel = (
+  string: string,
+  delimiter: string,
+  brackets: string[]
+): string[] => {
+  const { skeleton, fillings } = extractTopLevelBrackets(string, brackets);
+  const split = skeleton.split(delimiter);
+  return split.map((item) => fillSkeleton(item, fillings).trim());
+};
+
+// Example: "(a, (b, c)), [d, (e, f)]" -> "a, (b, c), [d, (e, f)]"
+export const stripTopLevelParentheses = (
+  string: string,
+  brackets: string[]
+): string => {
+  const allBrackets = uniqueBy(['()', ...brackets], (item) => item);
+  const { skeleton, fillings } = extractTopLevelBrackets(string, allBrackets);
+  const matches = skeleton.matchAll(/\((___\d+___)\)/g);
+  let stripped = skeleton;
+  for (const match of matches) {
+    stripped = stripped.replace(match[0], match[1]);
+  }
+  return fillSkeleton(stripped, fillings).trim();
 };
 
 export const splitByMultipleDelimiters = (
