@@ -1,51 +1,95 @@
 import { Command } from '../types';
+import { buildRanking } from '../utils/utils';
+import { AliasStats } from './types';
 
-type LongName = Map<string, number>;
+type AliasCounts = Map<string, FullnameCounts>;
+type FullnameCounts = Map<string, number>;
 
-export class AliasStatsBuilder {
-  private aliasMap: Map<string, LongName>;
+const ALPHABET_SHORT_OPTION_KEY_PATTERN = /^[A-Za-z]$/;
+
+class AliasCounter {
+  private counts: AliasCounts;
 
   constructor() {
-    this.aliasMap = new Map<string, LongName>();
+    this.counts = new Map();
   }
 
-  public addCommand(command: Command) {
-    const shortToLongMap = buildShortToLongMap(command);
-    for (const short of shortToLongMap.keys()) {
-      const longs = shortToLongMap.get(short) ?? [];
-      const entry = this.aliasMap.get(short);
-      if (!entry) {
-        this.aliasMap.set(short, new Map<string, number>());
-      }
-      const existEntry = this.aliasMap.get(short)!;
-      for (const long of longs) {
-        const count = existEntry.get(long) ?? 0;
-        existEntry.set(long, count + 1);
-      }
-    }
+  public getCounts() {
+    return this.counts;
   }
 
-  public show() {
-    console.log(this.aliasMap);
+  public add(alias: string, fullname: string, count: number) {
+    const fullnameCounts: FullnameCounts = this.counts.get(alias) ?? new Map();
+    const fullnameCount = fullnameCounts.get(fullname) ?? 0;
+    fullnameCounts.set(fullname, fullnameCount + count);
+    this.counts.set(alias, fullnameCounts);
   }
 }
 
-const ALPHABET_SHORT_OPTION_KEY_PATTERN = /^[A-Za-z]$/;
-const buildShortToLongMap = (command: Command) => {
+export class AliasStatsBuilder {
+  private limit: number;
+  private aliasCounts: AliasCounts;
+
+  constructor(limit: number) {
+    this.limit = limit;
+    this.aliasCounts = new Map();
+  }
+
+  public addCommand(command: Command) {
+    const aliasCounts = buildAliasCountsForCommand(command);
+    this.aliasCounts = mergeAliasCounts(this.aliasCounts, aliasCounts);
+  }
+
+  public build(): AliasStats {
+    const stats: AliasStats = new Map();
+    for (const [alias, fullnameCounts] of this.aliasCounts.entries()) {
+      stats.set(
+        alias,
+        buildRanking(
+          Array.from(fullnameCounts.entries()).map(([fullname, count]) => ({
+            fullname,
+            count,
+          })),
+          (a, b) => b.count - a.count,
+          this.limit
+        )
+      );
+    }
+    return stats;
+  }
+}
+
+const buildAliasCountsForCommand = (command: Command): AliasCounts => {
   const titleToKeys = new Map<string, string[]>();
   for (const option of command.options) {
-    const got = titleToKeys.get(option.title) ?? [];
-    titleToKeys.set(option.title, [...got, option.key]);
+    const existingKeys = titleToKeys.get(option.title) ?? [];
+    titleToKeys.set(option.title, [...existingKeys, option.key]);
   }
-  const shortToLongs = new Map<string, string[]>();
+
+  const counter = new AliasCounter();
   for (const option of command.options) {
     if (ALPHABET_SHORT_OPTION_KEY_PATTERN.test(option.key)) {
       const keys = titleToKeys.get(option.title) ?? [];
-      shortToLongs.set(
-        option.key,
-        keys.filter((key) => key.length > 1)
-      );
+      const fullnames = keys.filter((key) => key.length > 1);
+      for (const fullname of fullnames) {
+        counter.add(option.key, fullname, 1);
+      }
     }
   }
-  return shortToLongs;
+  return counter.getCounts();
+};
+
+const mergeAliasCounts = (
+  aliasCounts1: AliasCounts,
+  aliasCounts2: AliasCounts
+): AliasCounts => {
+  const counter = new AliasCounter();
+  for (const aliasCounts of [aliasCounts1, aliasCounts2]) {
+    for (const [alias, fullnameCounts] of aliasCounts.entries()) {
+      for (const [fullname, count] of fullnameCounts.entries()) {
+        counter.add(alias, fullname, count);
+      }
+    }
+  }
+  return counter.getCounts();
 };

@@ -1,59 +1,32 @@
+import { Stats } from './types';
+
 import { baseCommandNames } from '../commands';
 import { readSnapshot } from '../snapshot';
 import { AliasStatsBuilder } from './aliasStats';
-import { Stats } from './types';
+import { CommandRankingsBuilder } from './commandRankings';
+import { OverallStatsBuilder } from './overallStats';
 
 const RANKING_LIMIT = 10; // Show top 10
 
 export const buildStats = (): Stats => {
-  const aliasStatsBuilder = new AliasStatsBuilder();
-
-  let commandCount = 0;
-  let optionCount = 0;
-  const optionCounts: { commandName: string; count: number }[] = [];
-  const shortOptionCounts: { commandName: string; count: number }[] = [];
+  const overallStatsBuilder = new OverallStatsBuilder();
+  const commandRankingsBuilder = new CommandRankingsBuilder(RANKING_LIMIT);
+  const aliasStatsBuilder = new AliasStatsBuilder(RANKING_LIMIT);
 
   for (const baseCommandName of baseCommandNames) {
+    overallStatsBuilder.incrementBaseCommand();
+
     const commands = readSnapshot(baseCommandName);
-    commandCount += commands.length;
     for (const command of commands) {
-      optionCount += command.options.length;
-      optionCounts.push({
-        commandName: command.name,
-        count: command.options.length,
-      });
-      shortOptionCounts.push({
-        commandName: command.name,
-        count: command.options.filter((option) => option.key.length === 1)
-          .length,
-      });
+      overallStatsBuilder.addCommand(command);
+      commandRankingsBuilder.addCommand(command);
       aliasStatsBuilder.addCommand(command);
     }
   }
-  aliasStatsBuilder.show();
 
   return {
-    baseCommandCount: baseCommandNames.length,
-    commandCount,
-    optionCount,
-
-    optionCountRanking: buildRanking(
-      optionCounts,
-      (a, b) => b.count - a.count,
-      RANKING_LIMIT
-    ),
-    shortOptionCountRanking: buildRanking(
-      shortOptionCounts,
-      (a, b) => b.count - a.count,
-      RANKING_LIMIT
-    ),
+    overallStats: overallStatsBuilder.build(),
+    commandRankings: commandRankingsBuilder.build(),
+    aliasStats: aliasStatsBuilder.build(),
   };
-};
-
-const buildRanking = <ItemType>(
-  items: ItemType[],
-  compareFn: (a: ItemType, b: ItemType) => number,
-  limit: number
-): ItemType[] => {
-  return [...items].sort(compareFn).slice(0, limit);
 };
