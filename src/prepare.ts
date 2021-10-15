@@ -17,7 +17,7 @@ export const prepare = async () => {
 };
 
 // Download and decompress the latest GNU coreutils from https://ftp.gnu.org/gnu/coreutils/
-// The directory name is download/gnu-coreutils
+// The directory name is downloads/gnu-coreutils
 const prepareGNUCoreutils = async () => {
   const document = await fetchDocumentFromURL(new URL(GNU_COREUTILS_INDEX_URL));
   const anchors = Array.from(document.querySelectorAll('a'));
