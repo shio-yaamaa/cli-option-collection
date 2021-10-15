@@ -1,10 +1,13 @@
 import { baseCommandNames } from '../commands';
 import { readSnapshot } from '../snapshot';
+import { AliasStatsBuilder } from './aliasStats';
 import { Stats } from './types';
 
 const RANKING_LIMIT = 10; // Show top 10
 
 export const buildStats = (): Stats => {
+  const aliasStatsBuilder = new AliasStatsBuilder();
+
   let commandCount = 0;
   let optionCount = 0;
   const optionCounts: { commandName: string; count: number }[] = [];
@@ -24,8 +27,10 @@ export const buildStats = (): Stats => {
         count: command.options.filter((option) => option.key.length === 1)
           .length,
       });
+      aliasStatsBuilder.addCommand(command);
     }
   }
+  aliasStatsBuilder.show();
 
   return {
     baseCommandCount: baseCommandNames.length,
