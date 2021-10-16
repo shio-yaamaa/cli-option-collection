@@ -25,6 +25,7 @@ import { python } from './fetchers/python';
 import { rsync } from './fetchers/rsync';
 import { ruby } from './fetchers/ruby';
 import { sshuttle } from './fetchers/sshuttle';
+import { svn } from './fetchers/svn';
 import { systemd } from './fetchers/systemd';
 import { terraform } from './fetchers/terraform';
 import { yarn } from './fetchers/yarn';
@@ -259,6 +260,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['sum', gnuCoreutils.sum],
   ['suspend', bashBuiltin.suspend],
   ['svc', daemontools.svc],
+  ['svn', svn.svn],
   ['sync', gnuCoreutils.sync],
   ['systat', openbsd.systat],
   ['systemctl', systemd.systemctl],

@@ -1,5 +1,8 @@
 import parse from 'parenthesis';
-import { splitAtTopLevel } from './string';
+import {
+  splitAtTopLevel,
+  stripTopLevelParentheses as stripTopLevelParenthesesSingle,
+} from './string';
 
 type OptionStringsFilter = (string: string[]) => string[];
 
@@ -104,7 +107,7 @@ export const trimOptionalElements: OptionStringsFilter = (
       flat: true,
       escape: '___',
     });
-    return parsed[0].replace(/\[___[0-9]+___\]/, '');
+    return parsed[0].replace(/\[___[0-9]+___\]/g, '');
   });
 };
 
@@ -114,5 +117,14 @@ export const trimAfterColons: OptionStringsFilter = (
 ): string[] => {
   return strings.map((string) =>
     splitAtTopLevel(string, ':', BRACKETS)[0].trim()
+  );
+};
+
+// Example: ["--change (-c)", "--changelist (--cl)"] -> ["--change -c", "--changelist --cl"]
+export const stripTopLevelParentheses: OptionStringsFilter = (
+  strings: string[]
+): string[] => {
+  return strings.map((string) =>
+    stripTopLevelParenthesesSingle(string, BRACKETS)
   );
 };
