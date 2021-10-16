@@ -195,6 +195,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['mysqlpump', mysql.mysqlpump],
   ['mysqlshow', mysql.mysqlshow],
   ['mysqlslap', mysql.mysqlslap],
+  ['nano', freebsd.nano],
   ['nc', openbsd.nc],
   ['netstat', openbsd.netstat],
   ['nice', gnuCoreutils.nice],
