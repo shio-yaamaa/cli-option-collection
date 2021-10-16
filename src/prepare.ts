@@ -1,17 +1,30 @@
-import { downloadArchive, fetchDocumentFromURL } from './utils/forFetcher/http';
-
 import {
-  download,
+  downloadArchive,
   DOWNLOADS_DIRECTORY,
   fetchDocumentFromURL,
 } from './utils/forFetcher/http';
+import { findAnchorsWithPattern } from './utils/forFetcher/dom';
+import { rmSync } from 'fs-extra';
 
-const decompressTarxz = require('decompress-tarxz');
-
+const CURL_DOWNLOAD_URL = 'https://curl.se/download.html';
 const GNU_COREUTILS_INDEX_URL = 'https://ftp.gnu.org/gnu/coreutils/';
 
 export const prepare = async () => {
+  rmSync(DOWNLOADS_DIRECTORY, { recursive: true, force: true });
   await prepareGNUCoreutils();
+  await prepareCurl();
+};
+
+const prepareCurl = async () => {
+  const document = await fetchDocumentFromURL(new URL(CURL_DOWNLOAD_URL));
+  const downloadContainer = document.querySelector('.download');
+  const anchors =
+    downloadContainer &&
+    findAnchorsWithPattern(downloadContainer, /\.tar\.xz/, null);
+  if (!anchors || anchors.length === 0) {
+    throw new Error('Cannot find download link of curl');
+  }
+  downloadArchive(new URL(anchors[0].href), '.tar.xz', 'curl');
 };
 
 // Download and decompress the latest GNU coreutils from https://ftp.gnu.org/gnu/coreutils/
