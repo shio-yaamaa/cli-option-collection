@@ -18,6 +18,7 @@ import { go } from './fetchers/go';
 import { graphviz } from './fetchers/graphviz';
 import { grep } from './fetchers/grep';
 import { htop } from './fetchers/htop';
+import { iconv } from './fetchers/iconv';
 import { imagemagick } from './fetchers/imagemagick';
 import { jq } from './fetchers/jq';
 import { mysql } from './fetchers/mysql';
@@ -145,6 +146,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['hostid', gnuCoreutils.hostid],
   ['hostname', gnuCoreutils.hostname],
   ['htop', htop],
+  ['iconv', iconv],
   ['id', gnuCoreutils.id],
   ['ifconfig', openbsd.ifconfig],
   ['init', openbsd.init],
