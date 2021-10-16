@@ -1,5 +1,9 @@
 import { build } from './builder';
 
+// Alternative sources:
+// - nano
+//   - https://www.nano-editor.org/dist/latest/nano.1.html
+
 // BUG: Options with single dash and multiple letters (e.g. "zip -AC")
 //      are not recognized.
 // BUG: Line breaks in descriptions are removed, making them hard to read.
@@ -10,8 +14,16 @@ import { build } from './builder';
 //      - "zip -!"
 //      - "zip -@"
 //      - "zip -$"
+//      - "nano -%"
+//      - "nano -_"
 
 export const freebsd = {
+  nano: build('nano', {
+    url: new URL(
+      'https://www.freebsd.org/cgi/man.cgi?query=nano&manpath=FreeBSD+13.0-RELEASE+and+Ports'
+    ),
+    optionsHeading: 'OPTIONS',
+  }),
   unzip: build('unzip', {
     url: new URL(
       'https://www.freebsd.org/cgi/man.cgi?query=unzip&manpath=FreeBSD+13.0-RELEASE+and+Ports'

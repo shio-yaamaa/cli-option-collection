@@ -1,0 +1,543 @@
+[
+  {
+    "name": "nano",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "A",
+        "title": "-A, --smarthome",
+        "description": "Make the Home key smarter.  When Home is pressed anywhere but at the very beginning of non-whitespace characters on a  line,  the cursor  will  jump  to  that beginning (either forwards or back- wards).  If the cursor is already at that position, it will jump to the true beginning of the line."
+      },
+      {
+        "key": "smarthome",
+        "title": "-A, --smarthome",
+        "description": "Make the Home key smarter.  When Home is pressed anywhere but at the very beginning of non-whitespace characters on a  line,  the cursor  will  jump  to  that beginning (either forwards or back- wards).  If the cursor is already at that position, it will jump to the true beginning of the line."
+      },
+      {
+        "key": "B",
+        "title": "-B, --backup",
+        "description": "When  saving  a  file, back up the previous version of it, using the current filename suffixed with a tilde (~)."
+      },
+      {
+        "key": "backup",
+        "title": "-B, --backup",
+        "description": "When  saving  a  file, back up the previous version of it, using the current filename suffixed with a tilde (~)."
+      },
+      {
+        "key": "C",
+        "title": "-C directory, --backupdir=directory",
+        "description": "Make and keep not just one backup file,  but  make  and  keep  a uniquely numbered one every time a file is saved -- when backups are enabled (-B).  The uniquely numbered files are stored in the specified directory."
+      },
+      {
+        "key": "backupdir",
+        "title": "-C directory, --backupdir=directory",
+        "description": "Make and keep not just one backup file,  but  make  and  keep  a uniquely numbered one every time a file is saved -- when backups are enabled (-B).  The uniquely numbered files are stored in the specified directory."
+      },
+      {
+        "key": "D",
+        "title": "-D, --boldtext",
+        "description": "For the interface, use bold instead of reverse video.  This will be overridden by setting the  options  titlecolor,  statuscolor, keycolor,  functioncolor,  numbercolor,  and/or selectedcolor in your nanorc file.  See nanorc(5)."
+      },
+      {
+        "key": "boldtext",
+        "title": "-D, --boldtext",
+        "description": "For the interface, use bold instead of reverse video.  This will be overridden by setting the  options  titlecolor,  statuscolor, keycolor,  functioncolor,  numbercolor,  and/or selectedcolor in your nanorc file.  See nanorc(5)."
+      },
+      {
+        "key": "E",
+        "title": "-E, --tabstospaces",
+        "description": "Convert typed tabs to spaces."
+      },
+      {
+        "key": "tabstospaces",
+        "title": "-E, --tabstospaces",
+        "description": "Convert typed tabs to spaces."
+      },
+      {
+        "key": "F",
+        "title": "-F, --multibuffer",
+        "description": "Read a file into a new buffer by default."
+      },
+      {
+        "key": "multibuffer",
+        "title": "-F, --multibuffer",
+        "description": "Read a file into a new buffer by default."
+      },
+      {
+        "key": "G",
+        "title": "-G, --locking",
+        "description": "Use vim-style file locking when editing files."
+      },
+      {
+        "key": "locking",
+        "title": "-G, --locking",
+        "description": "Use vim-style file locking when editing files."
+      },
+      {
+        "key": "H",
+        "title": "-H, --historylog",
+        "description": "Save the last hundred search strings and replacement strings and executed  commands,  so  they can be easily reused in later ses- sions."
+      },
+      {
+        "key": "historylog",
+        "title": "-H, --historylog",
+        "description": "Save the last hundred search strings and replacement strings and executed  commands,  so  they can be easily reused in later ses- sions."
+      },
+      {
+        "key": "I",
+        "title": "-I, --ignorercfiles",
+        "description": "Don't look at the system's nanorc nor at the user's nanorc."
+      },
+      {
+        "key": "ignorercfiles",
+        "title": "-I, --ignorercfiles",
+        "description": "Don't look at the system's nanorc nor at the user's nanorc."
+      },
+      {
+        "key": "J",
+        "title": "-J number, --guidestripe=number",
+        "description": "Draw a vertical stripe at the given column, to  help  judge  the width of the text.  (The color of the stripe can be changed with set stripecolor in your nanorc file.)"
+      },
+      {
+        "key": "guidestripe",
+        "title": "-J number, --guidestripe=number",
+        "description": "Draw a vertical stripe at the given column, to  help  judge  the width of the text.  (The color of the stripe can be changed with set stripecolor in your nanorc file.)"
+      },
+      {
+        "key": "K",
+        "title": "-K, --rawsequences",
+        "description": "Interpret escape sequences directly (instead of  asking  ncurses to  translate  them).   If you need this option to get your key- board to work properly, please report a bug.  Using this  option disables nano's mouse support."
+      },
+      {
+        "key": "rawsequences",
+        "title": "-K, --rawsequences",
+        "description": "Interpret escape sequences directly (instead of  asking  ncurses to  translate  them).   If you need this option to get your key- board to work properly, please report a bug.  Using this  option disables nano's mouse support."
+      },
+      {
+        "key": "L",
+        "title": "-L, --nonewlines",
+        "description": "Don't  automatically add a newline when a text does not end with one.  (This can cause you to save non-POSIX text files.)"
+      },
+      {
+        "key": "nonewlines",
+        "title": "-L, --nonewlines",
+        "description": "Don't  automatically add a newline when a text does not end with one.  (This can cause you to save non-POSIX text files.)"
+      },
+      {
+        "key": "M",
+        "title": "-M, --trimblanks",
+        "description": "Snip trailing whitespace from the wrapped  line  when  automatic hard-wrapping occurs or when text is justified."
+      },
+      {
+        "key": "trimblanks",
+        "title": "-M, --trimblanks",
+        "description": "Snip trailing whitespace from the wrapped  line  when  automatic hard-wrapping occurs or when text is justified."
+      },
+      {
+        "key": "N",
+        "title": "-N, --noconvert",
+        "description": "Disable automatic conversion of files from DOS/Mac format."
+      },
+      {
+        "key": "noconvert",
+        "title": "-N, --noconvert",
+        "description": "Disable automatic conversion of files from DOS/Mac format."
+      },
+      {
+        "key": "O",
+        "title": "-O, --bookstyle",
+        "description": "When  justifying,  treat any line that starts with whitespace as the beginning of a paragraph (unless auto-indenting is on)."
+      },
+      {
+        "key": "bookstyle",
+        "title": "-O, --bookstyle",
+        "description": "When  justifying,  treat any line that starts with whitespace as the beginning of a paragraph (unless auto-indenting is on)."
+      },
+      {
+        "key": "P",
+        "title": "-P, --positionlog",
+        "description": "For the 200 most recent files, log the last position of the cur- sor,  and  place it at that position again upon reopening such a file."
+      },
+      {
+        "key": "positionlog",
+        "title": "-P, --positionlog",
+        "description": "For the 200 most recent files, log the last position of the cur- sor,  and  place it at that position again upon reopening such a file."
+      },
+      {
+        "key": "Q",
+        "title": "-Q \"regex\", --quotestr=\"regex\"",
+        "description": "Set the regular expression for matching the quoting  part  of  a line.   The default value is \"^([ \\t]*([!#%:;>|}]|//))+\".  (Note that \\t stands for an actual Tab.)  This makes  it  possible  to rejustify blocks of quoted text when composing email, and to re- wrap blocks of line comments when writing source code."
+      },
+      {
+        "key": "quotestr",
+        "title": "-Q \"regex\", --quotestr=\"regex\"",
+        "description": "Set the regular expression for matching the quoting  part  of  a line.   The default value is \"^([ \\t]*([!#%:;>|}]|//))+\".  (Note that \\t stands for an actual Tab.)  This makes  it  possible  to rejustify blocks of quoted text when composing email, and to re- wrap blocks of line comments when writing source code."
+      },
+      {
+        "key": "R",
+        "title": "-R, --restricted",
+        "description": "Restricted mode: don't read or write to any file  not  specified on  the  command  line.  This means: don't read or write history files; don't allow suspending; don't allow spell checking; don't allow  a  file to be appended to, prepended to, or saved under a different name if it already has  one;  and  don't  make  backup files.   Restricted  mode can also be activated by invoking nano with any name beginning with 'r' (e.g. \"rnano\")."
+      },
+      {
+        "key": "restricted",
+        "title": "-R, --restricted",
+        "description": "Restricted mode: don't read or write to any file  not  specified on  the  command  line.  This means: don't read or write history files; don't allow suspending; don't allow spell checking; don't allow  a  file to be appended to, prepended to, or saved under a different name if it already has  one;  and  don't  make  backup files.   Restricted  mode can also be activated by invoking nano with any name beginning with 'r' (e.g. \"rnano\")."
+      },
+      {
+        "key": "S",
+        "title": "-S, --softwrap",
+        "description": "Display over multiple screen rows lines that exceed the screen's width.  (You can make this soft-wrapping occur at whitespace in- stead of rudely at the screen's edge, by using also --atblanks.) (The old short option, -$, is deprecated.)"
+      },
+      {
+        "key": "softwrap",
+        "title": "-S, --softwrap",
+        "description": "Display over multiple screen rows lines that exceed the screen's width.  (You can make this soft-wrapping occur at whitespace in- stead of rudely at the screen's edge, by using also --atblanks.) (The old short option, -$, is deprecated.)"
+      },
+      {
+        "key": "T",
+        "title": "-T number, --tabsize=number",
+        "description": "Set  the  size (width) of a tab to number columns.  The value of number must be greater than 0.  The default value is 8."
+      },
+      {
+        "key": "tabsize",
+        "title": "-T number, --tabsize=number",
+        "description": "Set  the  size (width) of a tab to number columns.  The value of number must be greater than 0.  The default value is 8."
+      },
+      {
+        "key": "U",
+        "title": "-U, --quickblank",
+        "description": "Make status-bar messages disappear after 1 keystroke instead  of after 20.  Note that options -c (--constantshow) and -_ (--mini- bar) override this."
+      },
+      {
+        "key": "quickblank",
+        "title": "-U, --quickblank",
+        "description": "Make status-bar messages disappear after 1 keystroke instead  of after 20.  Note that options -c (--constantshow) and -_ (--mini- bar) override this."
+      },
+      {
+        "key": "V",
+        "title": "-V, --version",
+        "description": "Show the current version number and exit."
+      },
+      {
+        "key": "version",
+        "title": "-V, --version",
+        "description": "Show the current version number and exit."
+      },
+      {
+        "key": "W",
+        "title": "-W, --wordbounds",
+        "description": "Detect word boundaries differently by treating punctuation char- acters as part of a word."
+      },
+      {
+        "key": "wordbounds",
+        "title": "-W, --wordbounds",
+        "description": "Detect word boundaries differently by treating punctuation char- acters as part of a word."
+      },
+      {
+        "key": "X",
+        "title": "-X \"characters\", --wordchars=\"characters\"",
+        "description": "Specify  which other characters (besides the normal alphanumeric ones) should be considered as part of a word.  When  using  this option, you probably want to omit -W (--wordbounds)."
+      },
+      {
+        "key": "wordchars",
+        "title": "-X \"characters\", --wordchars=\"characters\"",
+        "description": "Specify  which other characters (besides the normal alphanumeric ones) should be considered as part of a word.  When  using  this option, you probably want to omit -W (--wordbounds)."
+      },
+      {
+        "key": "Y",
+        "title": "-Y name, --syntax=name",
+        "description": "Specify  the  name  of the syntax highlighting to use from among the ones defined in the nanorc files."
+      },
+      {
+        "key": "syntax",
+        "title": "-Y name, --syntax=name",
+        "description": "Specify  the  name  of the syntax highlighting to use from among the ones defined in the nanorc files."
+      },
+      {
+        "key": "Z",
+        "title": "-Z, --zap",
+        "description": "Let an unmodified Backspace or Delete erase  the  marked  region (instead  of  a single character, and without affecting the cut- buffer)."
+      },
+      {
+        "key": "zap",
+        "title": "-Z, --zap",
+        "description": "Let an unmodified Backspace or Delete erase  the  marked  region (instead  of  a single character, and without affecting the cut- buffer)."
+      },
+      {
+        "key": "a",
+        "title": "-a, --atblanks",
+        "description": "When doing soft line wrapping, wrap lines at whitespace  instead of always at the edge of the screen."
+      },
+      {
+        "key": "atblanks",
+        "title": "-a, --atblanks",
+        "description": "When doing soft line wrapping, wrap lines at whitespace  instead of always at the edge of the screen."
+      },
+      {
+        "key": "b",
+        "title": "-b, --breaklonglines",
+        "description": "Automatically  hard-wrap  the current line when it becomes over- long.  (This option is the opposite of -w (--nowrap) -- the last one given takes effect.)"
+      },
+      {
+        "key": "breaklonglines",
+        "title": "-b, --breaklonglines",
+        "description": "Automatically  hard-wrap  the current line when it becomes over- long.  (This option is the opposite of -w (--nowrap) -- the last one given takes effect.)"
+      },
+      {
+        "key": "c",
+        "title": "-c, --constantshow",
+        "description": "Constantly  show  the  cursor  position on the status bar.  Note that this overrides option -U (--quickblank)."
+      },
+      {
+        "key": "constantshow",
+        "title": "-c, --constantshow",
+        "description": "Constantly  show  the  cursor  position on the status bar.  Note that this overrides option -U (--quickblank)."
+      },
+      {
+        "key": "d",
+        "title": "-d, --rebinddelete",
+        "description": "Interpret the Delete and Backspace keys differently so that both Backspace  and  Delete  work properly.  You should only use this option when on your system either Backspace acts like Delete  or Delete acts like Backspace."
+      },
+      {
+        "key": "rebinddelete",
+        "title": "-d, --rebinddelete",
+        "description": "Interpret the Delete and Backspace keys differently so that both Backspace  and  Delete  work properly.  You should only use this option when on your system either Backspace acts like Delete  or Delete acts like Backspace."
+      },
+      {
+        "key": "e",
+        "title": "-e, --emptyline",
+        "description": "Do  not  use  the  line below the title bar, leaving it entirely blank."
+      },
+      {
+        "key": "emptyline",
+        "title": "-e, --emptyline",
+        "description": "Do  not  use  the  line below the title bar, leaving it entirely blank."
+      },
+      {
+        "key": "f",
+        "title": "-f file, --rcfile=file",
+        "description": "Read only this file for setting nano's options, instead of read- ing both the system-wide and the user's nanorc files."
+      },
+      {
+        "key": "rcfile",
+        "title": "-f file, --rcfile=file",
+        "description": "Read only this file for setting nano's options, instead of read- ing both the system-wide and the user's nanorc files."
+      },
+      {
+        "key": "g",
+        "title": "-g, --showcursor",
+        "description": "Make  the  cursor visible in the file browser (putting it on the highlighted item) and in the help viewer.   Useful  for  braille users and people with poor vision."
+      },
+      {
+        "key": "showcursor",
+        "title": "-g, --showcursor",
+        "description": "Make  the  cursor visible in the file browser (putting it on the highlighted item) and in the help viewer.   Useful  for  braille users and people with poor vision."
+      },
+      {
+        "key": "h",
+        "title": "-h, --help",
+        "description": "Show a summary of the available command-line options and exit."
+      },
+      {
+        "key": "help",
+        "title": "-h, --help",
+        "description": "Show a summary of the available command-line options and exit."
+      },
+      {
+        "key": "i",
+        "title": "-i, --autoindent",
+        "description": "Automatically  indent a newly created line to the same number of tabs and/or spaces as the previous line (or as the next line  if the previous line is the beginning of a paragraph)."
+      },
+      {
+        "key": "autoindent",
+        "title": "-i, --autoindent",
+        "description": "Automatically  indent a newly created line to the same number of tabs and/or spaces as the previous line (or as the next line  if the previous line is the beginning of a paragraph)."
+      },
+      {
+        "key": "j",
+        "title": "-j, --jumpyscrolling",
+        "description": "Scroll the buffer contents per half-screen instead of per line."
+      },
+      {
+        "key": "jumpyscrolling",
+        "title": "-j, --jumpyscrolling",
+        "description": "Scroll the buffer contents per half-screen instead of per line."
+      },
+      {
+        "key": "k",
+        "title": "-k, --cutfromcursor",
+        "description": "Make  the  'Cut Text' command (normally ^K) cut from the current cursor position to the end of the line, instead of  cutting  the entire line."
+      },
+      {
+        "key": "cutfromcursor",
+        "title": "-k, --cutfromcursor",
+        "description": "Make  the  'Cut Text' command (normally ^K) cut from the current cursor position to the end of the line, instead of  cutting  the entire line."
+      },
+      {
+        "key": "l",
+        "title": "-l, --linenumbers",
+        "description": "Display  line  numbers  to the left of the text area.  (Any line with an anchor additionally gets a mark in the margin.)"
+      },
+      {
+        "key": "linenumbers",
+        "title": "-l, --linenumbers",
+        "description": "Display  line  numbers  to the left of the text area.  (Any line with an anchor additionally gets a mark in the margin.)"
+      },
+      {
+        "key": "m",
+        "title": "-m, --mouse",
+        "description": "Enable mouse support, if available for your  system.   When  en- abled,  mouse  clicks  can  be used to place the cursor, set the mark (with a double click), and execute  shortcuts.   The  mouse will work in the X Window System, and on the console when gpm is running.  Text can still be selected through dragging by holding down the Shift key."
+      },
+      {
+        "key": "mouse",
+        "title": "-m, --mouse",
+        "description": "Enable mouse support, if available for your  system.   When  en- abled,  mouse  clicks  can  be used to place the cursor, set the mark (with a double click), and execute  shortcuts.   The  mouse will work in the X Window System, and on the console when gpm is running.  Text can still be selected through dragging by holding down the Shift key."
+      },
+      {
+        "key": "n",
+        "title": "-n, --noread",
+        "description": "Treat  any  name  given on the command line as a new file.  This allows nano to write to named pipes: it will start with a  blank buffer,  and  will  write  to  the  pipe when the user saves the \"file\".  This way nano can be used as an editor  in  combination with  for instance gpg without having to write sensitive data to disk first."
+      },
+      {
+        "key": "noread",
+        "title": "-n, --noread",
+        "description": "Treat  any  name  given on the command line as a new file.  This allows nano to write to named pipes: it will start with a  blank buffer,  and  will  write  to  the  pipe when the user saves the \"file\".  This way nano can be used as an editor  in  combination with  for instance gpg without having to write sensitive data to disk first."
+      },
+      {
+        "key": "o",
+        "title": "-o directory, --operatingdir=directory",
+        "description": "Set the operating directory.  This makes nano set  up  something similar to a chroot."
+      },
+      {
+        "key": "operatingdir",
+        "title": "-o directory, --operatingdir=directory",
+        "description": "Set the operating directory.  This makes nano set  up  something similar to a chroot."
+      },
+      {
+        "key": "p",
+        "title": "-p, --preserve",
+        "description": "Preserve  the XON and XOFF sequences (^Q and ^S) so they will be caught by the terminal."
+      },
+      {
+        "key": "preserve",
+        "title": "-p, --preserve",
+        "description": "Preserve  the XON and XOFF sequences (^Q and ^S) so they will be caught by the terminal."
+      },
+      {
+        "key": "q",
+        "title": "-q, --indicator",
+        "description": "Display a \"scrollbar\" on the righthand side of the edit  window. It shows the position of the viewport in the buffer and how much of the buffer is covered by the viewport."
+      },
+      {
+        "key": "indicator",
+        "title": "-q, --indicator",
+        "description": "Display a \"scrollbar\" on the righthand side of the edit  window. It shows the position of the viewport in the buffer and how much of the buffer is covered by the viewport."
+      },
+      {
+        "key": "r",
+        "title": "-r number, --fill=number",
+        "description": "Set the target width for justifying and automatic  hard-wrapping at  this number of columns.  If the value is 0 or less, wrapping will occur at the width of the screen minus number columns,  al- lowing the wrap point to vary along with the width of the screen if the screen is resized.  The default value is -8."
+      },
+      {
+        "key": "fill",
+        "title": "-r number, --fill=number",
+        "description": "Set the target width for justifying and automatic  hard-wrapping at  this number of columns.  If the value is 0 or less, wrapping will occur at the width of the screen minus number columns,  al- lowing the wrap point to vary along with the width of the screen if the screen is resized.  The default value is -8."
+      },
+      {
+        "key": "s",
+        "title": "-s \"program [argument ...]\", --speller=\"program [argument ...]\"",
+        "description": "Use this command to perform spell checking and  correcting,  in- stead  of using the built-in corrector that calls hunspell(1) or spell(1)."
+      },
+      {
+        "key": "speller",
+        "title": "-s \"program [argument ...]\", --speller=\"program [argument ...]\"",
+        "description": "Use this command to perform spell checking and  correcting,  in- stead  of using the built-in corrector that calls hunspell(1) or spell(1)."
+      },
+      {
+        "key": "t",
+        "title": "-t, --saveonexit",
+        "description": "Save a changed buffer without prompting (when exiting with  ^X). (The old form of the long option, --tempfile, is deprecated.)"
+      },
+      {
+        "key": "saveonexit",
+        "title": "-t, --saveonexit",
+        "description": "Save a changed buffer without prompting (when exiting with  ^X). (The old form of the long option, --tempfile, is deprecated.)"
+      },
+      {
+        "key": "u",
+        "title": "-u, --unix",
+        "description": "Save  a  file  by default in Unix format.  This overrides nano's default behavior of saving a file in the  format  that  it  had. (This option has no effect when you also use --noconvert.)"
+      },
+      {
+        "key": "unix",
+        "title": "-u, --unix",
+        "description": "Save  a  file  by default in Unix format.  This overrides nano's default behavior of saving a file in the  format  that  it  had. (This option has no effect when you also use --noconvert.)"
+      },
+      {
+        "key": "v",
+        "title": "-v, --view",
+        "description": "Just  view  the file and disallow editing: read-only mode.  This mode allows the user to open also other files for  viewing,  un- less --restricted is given too."
+      },
+      {
+        "key": "view",
+        "title": "-v, --view",
+        "description": "Just  view  the file and disallow editing: read-only mode.  This mode allows the user to open also other files for  viewing,  un- less --restricted is given too."
+      },
+      {
+        "key": "w",
+        "title": "-w, --nowrap",
+        "description": "Do  not automatically hard-wrap the current line when it becomes overlong.  This is the default.  (This option is the opposite of -b (--breaklonglines) -- the last one given takes effect.)"
+      },
+      {
+        "key": "nowrap",
+        "title": "-w, --nowrap",
+        "description": "Do  not automatically hard-wrap the current line when it becomes overlong.  This is the default.  (This option is the opposite of -b (--breaklonglines) -- the last one given takes effect.)"
+      },
+      {
+        "key": "x",
+        "title": "-x, --nohelp",
+        "description": "Don't show the two help lines at the bottom of the screen."
+      },
+      {
+        "key": "nohelp",
+        "title": "-x, --nohelp",
+        "description": "Don't show the two help lines at the bottom of the screen."
+      },
+      {
+        "key": "y",
+        "title": "-y, --afterends",
+        "description": "Make Ctrl+Right and Ctrl+Delete stop at word ends instead of be- ginnings."
+      },
+      {
+        "key": "afterends",
+        "title": "-y, --afterends",
+        "description": "Make Ctrl+Right and Ctrl+Delete stop at word ends instead of be- ginnings."
+      },
+      {
+        "key": "z",
+        "title": "-z, --suspendable",
+        "description": "Allow the user to suspend the editor (with ^Z by default)."
+      },
+      {
+        "key": "suspendable",
+        "title": "-z, --suspendable",
+        "description": "Allow the user to suspend the editor (with ^Z by default)."
+      },
+      {
+        "key": "stateflags",
+        "title": "-%, --stateflags",
+        "description": "Use the top-right corner of the screen for  showing  some  state flags:  I  when  auto-indenting,  M  when the mark is on, L when hard-wrapping (breaking long lines), R when recording  a  macro, and  S  when soft-wrapping.  When the buffer is modified, a star (*) is shown after the filename in the center of the title bar."
+      },
+      {
+        "key": "minibar",
+        "title": "-_, --minibar",
+        "description": "Suppress the title bar and instead show  information  about  the current buffer at the bottom of the screen, in the space for the status bar.  In this \"minibar\" the file name  is  shown  on  the left,  followed  by an asterisk if the buffer has been modified. On the right are displayed the current line and  column  number, the  code  of the character under the cursor (in Unicode format: U+xxxx), the same flags as are shown by --stateflags, and a per- centage  that  expresses  how  far  the  cursor is into the file (linewise).  When a file is  loaded  or  saved,  and  also  when switching  between buffers, the number of lines in the buffer is displayed after the file name.  This number is cleared upon  the next  keystroke, or replaced with an [i/n] counter when multiple buffers are open.  The line plus column numbers and the  charac- ter code are displayed only when --constantshow is used, and can be toggled on and off with M-C.  The state flags  are  displayed only when --stateflags is used."
+      },
+      {
+        "key": "magic",
+        "title": "-!, --magic",
+        "description": "When neither the file's name nor its first line give a clue, try using libmagic to determine the applicable syntax."
+      }
+    ]
+  }
+]

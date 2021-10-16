@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 302
-- Number of commands (including subcommands): 1061
-- Number of options: 15577
+- Number of base commands: 303
+- Number of commands (including subcommands): 1062
+- Number of options: 15684
 
 # Command Rankings
 
@@ -27,15 +27,15 @@
 ||Command Name|Count|
 |:--|:--|:--|
 |1|`curl`|59|
-|2|`rsync`|50|
-|3|`less`|47|
-|4|`zip`|46|
-|5|`ssh`|44|
-|6|`dir`|40|
-|7|`ls`|40|
-|8|`vdir`|40|
-|9|`wget2`|40|
-|10|`nc`|39|
+|2|`nano`|52|
+|3|`rsync`|50|
+|4|`less`|47|
+|5|`zip`|46|
+|6|`ssh`|44|
+|7|`dir`|40|
+|8|`ls`|40|
+|9|`vdir`|40|
+|10|`wget2`|40|
 
 # Aliases
 
@@ -148,7 +148,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`help`|86|
+|1|`help`|87|
 |2|`host`|8|
 |3|`human-readable`|6|
 |4|`no-dereference`|4|
@@ -183,8 +183,9 @@
 |3|`join-output`|1|
 |4|`jump-target`|1|
 |5|`syslog`|1|
-|6|`skip-bytes`|1|
-|7|`junk-paths`|1|
+|6|`jumpyscrolling`|1|
+|7|`skip-bytes`|1|
+|8|`junk-paths`|1|
 
 ## k
 
@@ -288,7 +289,8 @@
 |6|`disable`|1|
 |7|`qscale`|1|
 |8|`no-quiet`|1|
-|9|`count`|1|
+|9|`indicator`|1|
+|10|`count`|1|
 
 ## r
 
@@ -363,7 +365,7 @@
 |7|`reroll-count`|1|
 |8|`invert-match`|1|
 |9|`verify`|1|
-|10|`starting-line-number`|1|
+|10|`view`|1|
 
 ## w
 
@@ -407,8 +409,8 @@
 |6|`max-forw-scroll`|1|
 |7|`no-tablespaces`|1|
 |8|`number-int-cols`|1|
-|9|`fuzzy`|1|
-|10|`yydebug`|1|
+|9|`afterends`|1|
+|10|`fuzzy`|1|
 
 ## z
 
@@ -421,9 +423,9 @@
 |5|`time-cond`|1|
 |6|`null-data`|1|
 |7|`window`|1|
-|8|`suffix`|1|
-|9|`compress`|1|
-|10|`archive-comment`|1|
+|8|`suspendable`|1|
+|9|`suffix`|1|
+|10|`compress`|1|
 
 ## A
 
@@ -453,7 +455,7 @@
 |7|`use-ascii`|1|
 |8|`auto-buffers`|1|
 |9|`batch`|1|
-|10|`prefix`|1|
+|10|`backup`|1|
 
 ## C
 
@@ -526,7 +528,8 @@
 |5|`groups`|1|
 |6|`HILITE-SEARCH`|1|
 |7|`named-commands`|1|
-|8|`traditional`|1|
+|8|`locking`|1|
+|9|`traditional`|1|
 
 ## H
 
@@ -555,8 +558,8 @@
 |6|`iso-8601`|1|
 |7|`ignore-dependencies`|1|
 |8|`IGNORE-CASE`|1|
-|9|`ignore-times`|1|
-|10|`no-image`|1|
+|9|`ignorercfiles`|1|
+|10|`ignore-times`|1|
 
 ## J
 
@@ -564,9 +567,10 @@
 |:--|:--|:--|
 |1|`remote-header-name`|1|
 |2|`status-column`|1|
-|3|`join-lines`|1|
-|4|`omit-link-times`|1|
-|5|`junk-sfx`|1|
+|3|`guidestripe`|1|
+|4|`join-lines`|1|
+|5|`omit-link-times`|1|
+|6|`junk-sfx`|1|
 
 ## K
 
@@ -577,7 +581,8 @@
 |3|`private-key`|1|
 |4|`quit-on-intr`|1|
 |5|`disable-keys`|1|
-|6|`keep-dirlinks`|1|
+|6|`rawsequences`|1|
+|7|`keep-dirlinks`|1|
 
 ## L
 
@@ -607,7 +612,7 @@
 |7|`monochrome-output`|1|
 |8|`LONG-PROMPT`|1|
 |9|`network-timeout`|1|
-|10|`macro-name`|1|
+|10|`trimblanks`|1|
 
 ## N
 
@@ -632,10 +637,11 @@
 |2|`remote-name`|1|
 |3|`open-files-in-pager`|1|
 |4|`LOG-FILE`|1|
-|5|`format`|1|
-|6|`omit-dir-times`|1|
-|7|`optional`|1|
-|8|`output-file`|1|
+|5|`bookstyle`|1|
+|6|`format`|1|
+|7|`omit-dir-times`|1|
+|8|`optional`|1|
+|9|`output-file`|1|
 
 ## P
 
@@ -662,6 +668,7 @@
 |4|`QUIET`|1|
 |5|`SILENT`|1|
 |6|`quote-names`|1|
+|7|`quotestr`|1|
 
 ## R
 
@@ -698,7 +705,7 @@
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`no-target-directory`|4|
-|2|`tabsize`|3|
+|2|`tabsize`|4|
 |3|`debug-info`|3|
 |4|`timeout`|2|
 |5|`tilde`|2|
@@ -721,14 +728,14 @@
 |7|`UNDERLINE-SPECIAL`|1|
 |8|`safe-updates`|1|
 |9|`i-am-a-dummy`|1|
-|10|`atimes`|1|
+|10|`quickblank`|1|
 
 ## V
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`verbose`|35|
-|2|`version`|17|
+|2|`version`|18|
 |3|`verbose-versions`|1|
 |4|`version-control`|1|
 |5|`version-sort`|1|
@@ -744,9 +751,10 @@
 |4|`worktree`|1|
 |5|`staged`|1|
 |6|`HILITE-UNREAD`|1|
-|7|`page-width`|1|
-|8|`word-regexp`|1|
-|9|`whole-file`|1|
+|7|`wordbounds`|1|
+|8|`page-width`|1|
+|9|`word-regexp`|1|
+|10|`whole-file`|1|
 
 ## X
 
@@ -759,15 +767,16 @@
 |5|`exclude-directories`|2|
 |6|`request`|1|
 |7|`no-init`|1|
-|8|`xattrs`|1|
-|9|`listen-once`|1|
-|10|`extra`|1|
+|8|`wordchars`|1|
+|9|`xattrs`|1|
+|10|`listen-once`|1|
 
 ## Y
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`speed-limit`|1|
+|2|`syntax`|1|
 
 ## Z
 
@@ -775,5 +784,6 @@
 |:--|:--|:--|
 |1|`context`|5|
 |2|`parallel`|1|
-|3|`compression-method`|1|
+|3|`zap`|1|
+|4|`compression-method`|1|
 

@@ -11,6 +11,7 @@ import {
 import { countIndentWidth, extractLines } from '../../utils/forFetcher/string';
 import { ListItem, parseTextList } from '../../utils/forFetcher/textListParser';
 import {
+  splitByComma,
   transformOptionStrings,
   trimEqualDelimitedArguments,
   trimOptionalElements,
@@ -68,6 +69,7 @@ const listItemToOptions = ({
   const title = mergeOptionTitles(titles);
   const description = descriptionLines.join(' ');
   const optionStrings = transformOptionStrings(titles, [
+    splitByComma,
     trimOptionalElements,
     trimSpaceDelimitedArguments,
     trimEqualDelimitedArguments,
