@@ -1,0 +1,458 @@
+[
+  {
+    "name": "svnsync copy-revprops",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option CONFSPEC",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. CONFSPEC is a string which specifies the configuration option namespace, name and value that you'd like to assign, formatted as FILE:SECTION:OPTION=[VALUE]. In this syntax, FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "disable-locking",
+        "title": "--disable-locking",
+        "description": "Causes svnsync to bypass its own exclusive access mechanisms and operate on the assumption that its exclusive access to the mirror repository is being guaranteed through some other, out-of-band mechanism."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Used by svnsync copy-revprops to specify a particular revision or revision range on which to operate."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Used by svnsync copy-revprops to specify a particular revision or revision range on which to operate."
+      },
+      {
+        "key": "source-password",
+        "title": "--source-password PASSWD",
+        "description": "Specifies the password for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "source-prop-encoding",
+        "title": "--source-prop-encoding ARG",
+        "description": "Instructs svnsync to assume that translatable Subversion revision properties found in the source repository are stored using the character encoding ARG and to transcode those into UTF-8 when copying them into the mirror repository."
+      },
+      {
+        "key": "source-username",
+        "title": "--source-username NAME",
+        "description": "Specifies the username for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "steal-lock",
+        "title": "--steal-lock",
+        "description": "Causes svnsync to steal, as necessary, the lock which it uses on the mirror repository to ensure exclusive repository access. (This option should only be used when a lock exists in the mirror repository and is known to be stale—that is, when you are certain that there are no other svnsync processes accessing that repository.)"
+      },
+      {
+        "key": "sync-password",
+        "title": "--sync-password PASSWD",
+        "description": "Specifies the password for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-username",
+        "title": "--sync-username NAME",
+        "description": "Specifies the username for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      }
+    ]
+  },
+  {
+    "name": "svnsync help",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnsync info",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option CONFSPEC",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. CONFSPEC is a string which specifies the configuration option namespace, name and value that you'd like to assign, formatted as FILE:SECTION:OPTION=[VALUE]. In this syntax, FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "source-password",
+        "title": "--source-password PASSWD",
+        "description": "Specifies the password for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "source-username",
+        "title": "--source-username NAME",
+        "description": "Specifies the username for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-password",
+        "title": "--sync-password PASSWD",
+        "description": "Specifies the password for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-username",
+        "title": "--sync-username NAME",
+        "description": "Specifies the username for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      }
+    ]
+  },
+  {
+    "name": "svnsync initialize",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "allow-non-empty",
+        "title": "--allow-non-empty",
+        "description": "Disables the verification (which svnsync initialize performs by default) that the repository being initialized is empty of history version."
+      },
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option CONFSPEC",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. CONFSPEC is a string which specifies the configuration option namespace, name and value that you'd like to assign, formatted as FILE:SECTION:OPTION=[VALUE]. In this syntax, FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "disable-locking",
+        "title": "--disable-locking",
+        "description": "Causes svnsync to bypass its own exclusive access mechanisms and operate on the assumption that its exclusive access to the mirror repository is being guaranteed through some other, out-of-band mechanism."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "source-password",
+        "title": "--source-password PASSWD",
+        "description": "Specifies the password for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "source-prop-encoding",
+        "title": "--source-prop-encoding ARG",
+        "description": "Instructs svnsync to assume that translatable Subversion revision properties found in the source repository are stored using the character encoding ARG and to transcode those into UTF-8 when copying them into the mirror repository."
+      },
+      {
+        "key": "source-username",
+        "title": "--source-username NAME",
+        "description": "Specifies the username for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "steal-lock",
+        "title": "--steal-lock",
+        "description": "Causes svnsync to steal, as necessary, the lock which it uses on the mirror repository to ensure exclusive repository access. (This option should only be used when a lock exists in the mirror repository and is known to be stale—that is, when you are certain that there are no other svnsync processes accessing that repository.)"
+      },
+      {
+        "key": "sync-password",
+        "title": "--sync-password PASSWD",
+        "description": "Specifies the password for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-username",
+        "title": "--sync-username NAME",
+        "description": "Specifies the username for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      }
+    ]
+  },
+  {
+    "name": "svnsync init",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "allow-non-empty",
+        "title": "--allow-non-empty",
+        "description": "Disables the verification (which svnsync initialize performs by default) that the repository being initialized is empty of history version."
+      },
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option CONFSPEC",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. CONFSPEC is a string which specifies the configuration option namespace, name and value that you'd like to assign, formatted as FILE:SECTION:OPTION=[VALUE]. In this syntax, FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "disable-locking",
+        "title": "--disable-locking",
+        "description": "Causes svnsync to bypass its own exclusive access mechanisms and operate on the assumption that its exclusive access to the mirror repository is being guaranteed through some other, out-of-band mechanism."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "source-password",
+        "title": "--source-password PASSWD",
+        "description": "Specifies the password for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "source-prop-encoding",
+        "title": "--source-prop-encoding ARG",
+        "description": "Instructs svnsync to assume that translatable Subversion revision properties found in the source repository are stored using the character encoding ARG and to transcode those into UTF-8 when copying them into the mirror repository."
+      },
+      {
+        "key": "source-username",
+        "title": "--source-username NAME",
+        "description": "Specifies the username for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "steal-lock",
+        "title": "--steal-lock",
+        "description": "Causes svnsync to steal, as necessary, the lock which it uses on the mirror repository to ensure exclusive repository access. (This option should only be used when a lock exists in the mirror repository and is known to be stale—that is, when you are certain that there are no other svnsync processes accessing that repository.)"
+      },
+      {
+        "key": "sync-password",
+        "title": "--sync-password PASSWD",
+        "description": "Specifies the password for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-username",
+        "title": "--sync-username NAME",
+        "description": "Specifies the username for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      }
+    ]
+  },
+  {
+    "name": "svnsync synchronize",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option CONFSPEC",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. CONFSPEC is a string which specifies the configuration option namespace, name and value that you'd like to assign, formatted as FILE:SECTION:OPTION=[VALUE]. In this syntax, FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "disable-locking",
+        "title": "--disable-locking",
+        "description": "Causes svnsync to bypass its own exclusive access mechanisms and operate on the assumption that its exclusive access to the mirror repository is being guaranteed through some other, out-of-band mechanism."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "source-password",
+        "title": "--source-password PASSWD",
+        "description": "Specifies the password for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "source-prop-encoding",
+        "title": "--source-prop-encoding ARG",
+        "description": "Instructs svnsync to assume that translatable Subversion revision properties found in the source repository are stored using the character encoding ARG and to transcode those into UTF-8 when copying them into the mirror repository."
+      },
+      {
+        "key": "source-username",
+        "title": "--source-username NAME",
+        "description": "Specifies the username for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "steal-lock",
+        "title": "--steal-lock",
+        "description": "Causes svnsync to steal, as necessary, the lock which it uses on the mirror repository to ensure exclusive repository access. (This option should only be used when a lock exists in the mirror repository and is known to be stale—that is, when you are certain that there are no other svnsync processes accessing that repository.)"
+      },
+      {
+        "key": "sync-password",
+        "title": "--sync-password PASSWD",
+        "description": "Specifies the password for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-username",
+        "title": "--sync-username NAME",
+        "description": "Specifies the username for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      }
+    ]
+  },
+  {
+    "name": "svnsync sync",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option CONFSPEC",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. CONFSPEC is a string which specifies the configuration option namespace, name and value that you'd like to assign, formatted as FILE:SECTION:OPTION=[VALUE]. In this syntax, FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "disable-locking",
+        "title": "--disable-locking",
+        "description": "Causes svnsync to bypass its own exclusive access mechanisms and operate on the assumption that its exclusive access to the mirror repository is being guaranteed through some other, out-of-band mechanism."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "source-password",
+        "title": "--source-password PASSWD",
+        "description": "Specifies the password for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "source-prop-encoding",
+        "title": "--source-prop-encoding ARG",
+        "description": "Instructs svnsync to assume that translatable Subversion revision properties found in the source repository are stored using the character encoding ARG and to transcode those into UTF-8 when copying them into the mirror repository."
+      },
+      {
+        "key": "source-username",
+        "title": "--source-username NAME",
+        "description": "Specifies the username for the Subversion server from which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "steal-lock",
+        "title": "--steal-lock",
+        "description": "Causes svnsync to steal, as necessary, the lock which it uses on the mirror repository to ensure exclusive repository access. (This option should only be used when a lock exists in the mirror repository and is known to be stale—that is, when you are certain that there are no other svnsync processes accessing that repository.)"
+      },
+      {
+        "key": "sync-password",
+        "title": "--sync-password PASSWD",
+        "description": "Specifies the password for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "sync-username",
+        "title": "--sync-username NAME",
+        "description": "Specifies the username for the Subversion server to which you are syncing. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      }
+    ]
+  }
+]

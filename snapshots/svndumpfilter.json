@@ -1,0 +1,89 @@
+[
+  {
+    "name": "svndumpfilter exclude",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "drop-empty-revs",
+        "title": "--drop-empty-revs",
+        "description": "If filtering causes any revision to be empty (i.e., causes no change to the repository), removes these revisions from the final dump file."
+      },
+      {
+        "key": "pattern",
+        "title": "--pattern",
+        "description": "Treat the path prefixes provided to the filtering commands as file glob patterns rather than explicit path substrings."
+      },
+      {
+        "key": "preserve-revprops",
+        "title": "--preserve-revprops",
+        "description": "If all nodes in a revision are removed by filtering and --drop-empty-revs is not passed, the default behavior of svndumpfilter is to remove all revision properties except for the date and the log message (which will merely indicate that the revision is empty). Passing this option will preserve existing revision properties (which may or may not make sense since the related content is no longer present in the dump file)."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet",
+        "description": "Does not display filtering statistics."
+      },
+      {
+        "key": "renumber-revs",
+        "title": "--renumber-revs",
+        "description": "Renumbers revisions that remain after filtering."
+      },
+      {
+        "key": "skip-missing-merge-sources",
+        "title": "--skip-missing-merge-sources",
+        "description": "Skips merge sources that have been removed as part of the filtering. Without this option, svndumpfilter will exit with an error if the merge source for a retained path is removed by filtering."
+      },
+      {
+        "key": "targets",
+        "title": "--targets FILENAME",
+        "description": "Instructs svndumpfilter to read additional path prefixes—one per line—from the file located at FILENAME. This is especially useful for complex filtering operations which require more prefixes than the operating system allows to be specified on a single command line."
+      }
+    ]
+  },
+  {
+    "name": "svndumpfilter include",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "drop-empty-revs",
+        "title": "--drop-empty-revs",
+        "description": "If filtering causes any revision to be empty (i.e., causes no change to the repository), removes these revisions from the final dump file."
+      },
+      {
+        "key": "pattern",
+        "title": "--pattern",
+        "description": "Treat the path prefixes provided to the filtering commands as file glob patterns rather than explicit path substrings."
+      },
+      {
+        "key": "preserve-revprops",
+        "title": "--preserve-revprops",
+        "description": "If all nodes in a revision are removed by filtering and --drop-empty-revs is not passed, the default behavior of svndumpfilter is to remove all revision properties except for the date and the log message (which will merely indicate that the revision is empty). Passing this option will preserve existing revision properties (which may or may not make sense since the related content is no longer present in the dump file)."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet",
+        "description": "Does not display filtering statistics."
+      },
+      {
+        "key": "renumber-revs",
+        "title": "--renumber-revs",
+        "description": "Renumbers revisions that remain after filtering."
+      },
+      {
+        "key": "skip-missing-merge-sources",
+        "title": "--skip-missing-merge-sources",
+        "description": "Skips merge sources that have been removed as part of the filtering. Without this option, svndumpfilter will exit with an error if the merge source for a retained path is removed by filtering."
+      },
+      {
+        "key": "targets",
+        "title": "--targets FILENAME",
+        "description": "Instructs svndumpfilter to read additional path prefixes—one per line—from the file located at FILENAME. This is especially useful for complex filtering operations which require more prefixes than the operating system allows to be specified on a single command line."
+      }
+    ]
+  },
+  {
+    "name": "svndumpfilter help",
+    "optionStyle": "short-and-long",
+    "options": []
+  }
+]

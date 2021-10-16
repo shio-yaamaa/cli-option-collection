@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 283
-- Number of commands (including subcommands): 925
-- Number of options: 13292
+- Number of base commands: 291
+- Number of commands (including subcommands): 1050
+- Number of options: 14738
 
 # Command Rankings
 
@@ -75,7 +75,7 @@
 |:--|:--|:--|
 |1|`check`|11|
 |2|`cpu-shares`|9|
-|3|`change`|4|
+|3|`change`|8|
 |4|`config-file`|3|
 |5|`changes`|3|
 |6|`count`|3|
@@ -134,21 +134,21 @@
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`group`|5|
-|2|`git`|3|
-|3|`walk-reflogs`|3|
-|4|`file`|2|
-|5|`gui`|2|
-|6|`generate`|1|
-|7|`globoff`|1|
-|8|`goal`|1|
-|9|`gems-first`|1|
-|10|`guides`|1|
+|2|`use-merge-history`|5|
+|3|`git`|3|
+|4|`walk-reflogs`|3|
+|5|`file`|2|
+|6|`gui`|2|
+|7|`generate`|1|
+|8|`globoff`|1|
+|9|`goal`|1|
+|10|`gems-first`|1|
 
 ## h
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`help`|81|
+|1|`help`|83|
 |2|`host`|8|
 |3|`human-readable`|6|
 |4|`no-dereference`|4|
@@ -219,9 +219,9 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`memory`|9|
-|2|`merge`|8|
-|3|`message`|7|
+|1|`message`|23|
+|2|`memory`|9|
+|3|`merge`|8|
 |4|`mode`|4|
 |5|`message-id`|2|
 |6|`canonicalize-missing`|2|
@@ -279,7 +279,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`quiet`|148|
+|1|`quiet`|202|
 |2|`hide-control-chars`|3|
 |3|`silent`|3|
 |4|`quick`|3|
@@ -293,16 +293,16 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`remote`|10|
-|2|`recursive`|5|
-|3|`reverse`|5|
-|4|`remove`|4|
-|5|`reference`|3|
-|6|`relative`|3|
-|7|`role`|2|
-|8|`remotes`|2|
-|9|`installed-on-request`|1|
-|10|`retry`|1|
+|1|`revision`|63|
+|2|`remote`|10|
+|3|`recursive`|5|
+|4|`reverse`|5|
+|5|`remove`|4|
+|6|`reference`|3|
+|7|`relative`|3|
+|8|`role`|2|
+|9|`remotes`|2|
+|10|`installed-on-request`|1|
 
 ## s
 
@@ -323,16 +323,16 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`tty`|8|
-|2|`text`|7|
-|3|`time`|5|
-|4|`type`|4|
-|5|`target-directory`|4|
-|6|`tag`|4|
-|7|`timestamps`|3|
-|8|`track`|3|
-|9|`tags`|3|
-|10|`tabs`|2|
+|1|`transaction`|16|
+|2|`tty`|8|
+|3|`text`|7|
+|4|`time`|5|
+|5|`type`|4|
+|6|`target-directory`|4|
+|7|`tag`|4|
+|8|`timestamps`|3|
+|9|`track`|3|
+|10|`tags`|3|
 
 ## u
 
@@ -342,18 +342,18 @@
 |2|`update-sources`|9|
 |3|`update`|5|
 |4|`patch`|4|
-|5|`untracked-files`|2|
-|6|`unique`|2|
-|7|`utc`|1|
-|8|`universal`|1|
-|9|`username`|1|
-|10|`unset`|1|
+|5|`show-updates`|3|
+|6|`untracked-files`|2|
+|7|`unique`|2|
+|8|`utc`|1|
+|9|`universal`|1|
+|10|`username`|1|
 
 ## v
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`verbose`|99|
+|1|`verbose`|118|
 |2|`version`|23|
 |3|`volume`|4|
 |4|`show-nonprinting`|2|
@@ -383,16 +383,16 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`one-file-system`|3|
-|2|`exclude`|2|
-|3|`regexp`|1|
-|4|`proxy`|1|
-|5|`exclude-type`|1|
-|6|`extended`|1|
-|7|`executables`|1|
-|8|`extcmd`|1|
-|9|`catalog`|1|
-|10|`tabs`|1|
+|1|`extensions`|9|
+|2|`one-file-system`|3|
+|3|`exclude`|2|
+|4|`regexp`|1|
+|5|`proxy`|1|
+|6|`exclude-type`|1|
+|7|`extended`|1|
+|8|`executables`|1|
+|9|`extcmd`|1|
+|10|`catalog`|1|
 
 ## y
 
@@ -500,7 +500,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`file`|5|
+|1|`file`|24|
 |2|`fixed-strings`|4|
 |3|`classify`|3|
 |4|`fixed-string`|1|
@@ -591,15 +591,15 @@
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`find-renames`|5|
-|2|`machine`|2|
-|3|`manual`|1|
-|4|`no-mouse`|1|
-|5|`color-output`|1|
-|6|`monochrome-output`|1|
-|7|`LONG-PROMPT`|1|
-|8|`network-timeout`|1|
-|9|`macro-name`|1|
-|10|`remote-option`|1|
+|2|`memory-cache-size`|5|
+|3|`machine`|2|
+|4|`manual`|1|
+|5|`no-mouse`|1|
+|6|`color-output`|1|
+|7|`monochrome-output`|1|
+|8|`LONG-PROMPT`|1|
+|9|`network-timeout`|1|
+|10|`macro-name`|1|
 
 ## N
 
@@ -656,7 +656,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`recursive`|16|
+|1|`recursive`|37|
 |2|`reverse`|2|
 |3|`requirements`|1|
 |4|`remote-time`|1|
@@ -746,7 +746,8 @@
 |5|`request`|1|
 |6|`no-init`|1|
 |7|`xattrs`|1|
-|8|`extra`|1|
+|8|`listen-once`|1|
+|9|`extra`|1|
 
 ## Y
 

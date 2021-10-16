@@ -1,0 +1,53 @@
+[
+  {
+    "name": "svnversion",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "no-newline",
+        "title": "--no-newline (-n)",
+        "description": "Omits the usual trailing newline from the output."
+      },
+      {
+        "key": "n",
+        "title": "--no-newline (-n)",
+        "description": "Omits the usual trailing newline from the output."
+      },
+      {
+        "key": "committed",
+        "title": "--committed (-c)",
+        "description": "Uses the last-changed revisions rather than the current (i.e., highest locally available) revisions."
+      },
+      {
+        "key": "c",
+        "title": "--committed (-c)",
+        "description": "Uses the last-changed revisions rather than the current (i.e., highest locally available) revisions."
+      },
+      {
+        "key": "help",
+        "title": "--help (-h)",
+        "description": "Prints a help summary."
+      },
+      {
+        "key": "h",
+        "title": "--help (-h)",
+        "description": "Prints a help summary."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the program print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the program print only essential information while performing an operation."
+      },
+      {
+        "key": "version",
+        "title": "--version",
+        "description": "Prints the version of svnversion and exit with no error."
+      }
+    ]
+  }
+]

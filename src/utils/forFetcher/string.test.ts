@@ -5,6 +5,8 @@ import {
   splitAtTopLevel,
   countIndentWidth,
   extractLines,
+  extractTopLevelBrackets,
+  stripTopLevelParentheses,
 } from './string';
 
 describe('normalizeCommaDelimitedString', () => {
@@ -31,6 +33,25 @@ describe('splitByMultipleDelimiters', () => {
   });
 });
 
+describe('extractTopLevelBrackets', () => {
+  test('test', () => {
+    const string = '[aaa], <bbb>, [ccc, [ddd, [eee, fff]]]';
+    const { skeleton, fillings } = extractTopLevelBrackets(string, [
+      '[]',
+      '<>',
+    ]);
+    expect(skeleton).toBe('[___1___], <___5___>, [___4___]');
+    expect(fillings).toStrictEqual([
+      '[aaa], <bbb>, [ccc, [ddd, [eee, fff]]]',
+      'aaa',
+      'eee, fff',
+      'ddd, [eee, fff]',
+      'ccc, [ddd, [eee, fff]]',
+      'bbb',
+    ]);
+  });
+});
+
 describe('splitAtTopLevel', () => {
   test('test', () => {
     const string = 'aaa, bbb, [ccc, [ddd, eee]], <fff, ggg>, "hhh, iii"';
@@ -43,6 +64,14 @@ describe('splitAtTopLevel', () => {
       '"hhh',
       'iii"',
     ]);
+  });
+});
+
+describe('stripTopLevelParentheses', () => {
+  test('test', () => {
+    const string = '(a, (b, c)), [d, (e, f)], {g, (h, i)}';
+    const split = stripTopLevelParentheses(string, ['[]', '<>']);
+    expect(split).toBe('a, (b, c), [d, (e, f)], {g, h, i}');
   });
 });
 

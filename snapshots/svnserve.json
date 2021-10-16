@@ -1,0 +1,153 @@
+[
+  {
+    "name": "svnserve",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "cache-fulltexts",
+        "title": "--cache-fulltexts ARG",
+        "description": "Toggles support for fulltext file content caching (in FSFS repositories only)."
+      },
+      {
+        "key": "cache-txdeltas",
+        "title": "--cache-txdeltas ARG",
+        "description": "Toggles support for file content delta caching (in FSFS repositories only)."
+      },
+      {
+        "key": "compression",
+        "title": "--compression LEVEL",
+        "description": "Specifies the level of compression used for wire transmissions as an integer beween 0 and 9, inclusive. A value of 9 offers the best compression, 5 is the default value, and 0 disables compression altogether."
+      },
+      {
+        "key": "daemon",
+        "title": "--daemon (-d)",
+        "description": "Causes svnserve to run in daemon mode. svnserve backgrounds itself and accepts and serves TCP/IP connections on the svn port (3690, by default)."
+      },
+      {
+        "key": "d",
+        "title": "--daemon (-d)",
+        "description": "Causes svnserve to run in daemon mode. svnserve backgrounds itself and accepts and serves TCP/IP connections on the svn port (3690, by default)."
+      },
+      {
+        "key": "foreground",
+        "title": "--foreground",
+        "description": "When used together with -d, causes svnserve to stay in the foreground. This is mainly useful for debugging."
+      },
+      {
+        "key": "inetd",
+        "title": "--inetd (-i)",
+        "description": "Causes svnserve to use the stdin and stdout file descriptors, as is appropriate for a daemon running out of inetd."
+      },
+      {
+        "key": "i",
+        "title": "--inetd (-i)",
+        "description": "Causes svnserve to use the stdin and stdout file descriptors, as is appropriate for a daemon running out of inetd."
+      },
+      {
+        "key": "help",
+        "title": "--help (-h)",
+        "description": "Displays a usage summary and exits."
+      },
+      {
+        "key": "h",
+        "title": "--help (-h)",
+        "description": "Displays a usage summary and exits."
+      },
+      {
+        "key": "listen-host",
+        "title": "--listen-host HOST",
+        "description": "Causes svnserve to listen on the interface specified by HOST, which may be either a hostname or an IP address."
+      },
+      {
+        "key": "listen-once",
+        "title": "--listen-once (-X)",
+        "description": "Causes svnserve to accept one connection on the svn port, serve it, and exit. This option is mainly useful for debugging."
+      },
+      {
+        "key": "X",
+        "title": "--listen-once (-X)",
+        "description": "Causes svnserve to accept one connection on the svn port, serve it, and exit. This option is mainly useful for debugging."
+      },
+      {
+        "key": "listen-port",
+        "title": "--listen-port PORT",
+        "description": "Causes svnserve to listen on PORT when run in daemon mode. (FreeBSD daemons listen only on tcp6 by default—this option tells them to also listen on tcp4.)"
+      },
+      {
+        "key": "log-file",
+        "title": "--log-file FILENAME",
+        "description": "Instructs svnserve to create (if necessary) and use the file located at FILENAME for Subversion operational log output of the same sort that mod_dav_svn generates. See the section called “High-level Logging” for details."
+      },
+      {
+        "key": "memory-cache-size",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "M",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "pid-file",
+        "title": "--pid-file FILENAME",
+        "description": "Causes svnserve to write its process ID to FILENAME, which must be writable by the user under which svnserve is running."
+      },
+      {
+        "key": "prefer-ipv6",
+        "title": "--prefer-ipv6 (-6)",
+        "description": "When resolving the listen hostname, prever an IPv6 answer over an IPv4 one. IPv4 is preferred by default."
+      },
+      {
+        "key": "6",
+        "title": "--prefer-ipv6 (-6)",
+        "description": "When resolving the listen hostname, prever an IPv6 answer over an IPv4 one. IPv4 is preferred by default."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet",
+        "description": "Disables progress notifications. Error output will still be printed."
+      },
+      {
+        "key": "root",
+        "title": "--root (-r) ROOT",
+        "description": "Sets the virtual root for repositories served by svnserve. The pathname in URLs provided by the client will be interpreted relative to this root and will not be allowed to escape this root."
+      },
+      {
+        "key": "r",
+        "title": "--root (-r) ROOT",
+        "description": "Sets the virtual root for repositories served by svnserve. The pathname in URLs provided by the client will be interpreted relative to this root and will not be allowed to escape this root."
+      },
+      {
+        "key": "threads",
+        "title": "--threads (-T)",
+        "description": "When running in daemon mode, causes svnserve to spawn a thread instead of a process for each connection (e.g., for when running on Windows). The svnserve process still backgrounds itself at startup time."
+      },
+      {
+        "key": "T",
+        "title": "--threads (-T)",
+        "description": "When running in daemon mode, causes svnserve to spawn a thread instead of a process for each connection (e.g., for when running on Windows). The svnserve process still backgrounds itself at startup time."
+      },
+      {
+        "key": "tunnel",
+        "title": "--tunnel (-t)",
+        "description": "Causes svnserve to run in tunnel mode, which is just like the inetd mode of operation (both modes serve one connection over stdin/stdout, and then exit), except that the connection is considered to be preauthenticated with the username of the current UID. This flag is automatically passed for you by the client when running over a tunnel agent such as ssh. That means there's rarely any need for you to pass this option to svnserve. So, if you find yourself typing svnserve --tunnel on the command line and wondering what to do next, see the section called “Tunneling over SSH”."
+      },
+      {
+        "key": "t",
+        "title": "--tunnel (-t)",
+        "description": "Causes svnserve to run in tunnel mode, which is just like the inetd mode of operation (both modes serve one connection over stdin/stdout, and then exit), except that the connection is considered to be preauthenticated with the username of the current UID. This flag is automatically passed for you by the client when running over a tunnel agent such as ssh. That means there's rarely any need for you to pass this option to svnserve. So, if you find yourself typing svnserve --tunnel on the command line and wondering what to do next, see the section called “Tunneling over SSH”."
+      },
+      {
+        "key": "tunnel-user",
+        "title": "--tunnel-user NAME",
+        "description": "Used in conjunction with the --tunnel option, tells svnserve to assume that NAME is the authenticated user, rather than the UID of the svnserve process. This is useful for users wishing to share a single system account over SSH, but to maintain separate commit identities."
+      },
+      {
+        "key": "version",
+        "title": "--version",
+        "description": "Displays version information and a list of repository backend modules available, and then exits."
+      }
+    ]
+  }
+]
