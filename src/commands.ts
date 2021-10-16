@@ -6,6 +6,7 @@ import { bashBuiltin } from './fetchers/bash-builtin';
 import { brew } from './fetchers/brew';
 import { bundler } from './fetchers/bundler';
 import { cargo } from './fetchers/cargo';
+import { curl } from './fetchers/curl';
 import { daemontools } from './fetchers/daemontools';
 import { docker } from './fetchers/docker';
 import { ffmpeg } from './fetchers/ffmpeg';
@@ -75,6 +76,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['cp', gnuCoreutils.cp],
   ['csh', openbsd.csh],
   ['csplit', gnuCoreutils.csplit],
+  ['curl', curl.curl],
   ['cut', gnuCoreutils.cut],
   ['date', gnuCoreutils.date],
   ['dc', openbsd.dc],
