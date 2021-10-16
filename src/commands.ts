@@ -262,6 +262,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['svc', daemontools.svc],
   ['svn', svn.svn],
   ['svnadmin', svn.svnadmin],
+  ['svndumpfilter', svn.svndumpfilter],
   ['svnlook', svn.svnlook],
   ['svnrdump', svn.svnrdump],
   ['svnserve', svn.svnserve],
