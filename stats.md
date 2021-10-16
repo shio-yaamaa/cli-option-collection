@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 291
-- Number of commands (including subcommands): 1050
-- Number of options: 14738
+- Number of base commands: 292
+- Number of commands (including subcommands): 1051
+- Number of options: 14939
 
 # Command Rankings
 
@@ -17,10 +17,10 @@
 |4|`magick`|241|
 |5|`magick-script`|237|
 |6|`ffmpeg`|156|
-|7|`rsync`|144|
-|8|`mysqldump`|123|
-|9|`docker run`|103|
-|10|`docker container run`|103|
+|7|`wget`|153|
+|8|`rsync`|144|
+|9|`mysqldump`|123|
+|10|`docker run`|103|
 
 ## Ranking by Number of Short (Single-Letter) Options
 
@@ -34,8 +34,8 @@
 |6|`ls`|40|
 |7|`vdir`|40|
 |8|`nc`|39|
-|9|`mysql`|34|
-|10|`mysqldump`|34|
+|9|`wget`|39|
+|10|`mysql`|34|
 
 # Aliases
 
@@ -90,8 +90,8 @@
 |:--|:--|:--|
 |1|`detach`|12|
 |2|`directory`|8|
-|3|`delete`|6|
-|4|`debug`|5|
+|3|`debug`|6|
+|4|`delete`|6|
 |5|`decode`|3|
 |6|`delimiter`|3|
 |7|`driver`|3|
@@ -107,12 +107,12 @@
 |2|`env`|7|
 |3|`exact`|5|
 |4|`no-edit`|2|
-|5|`canonicalize-existing`|2|
-|6|`edges`|1|
-|7|`referer`|1|
-|8|`editor`|1|
-|9|`exclude`|1|
-|10|`email`|1|
+|5|`execute`|2|
+|6|`canonicalize-existing`|2|
+|7|`edges`|1|
+|8|`referer`|1|
+|9|`editor`|1|
+|10|`exclude`|1|
 
 ## f
 
@@ -148,7 +148,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`help`|83|
+|1|`help`|84|
 |2|`host`|8|
 |3|`human-readable`|6|
 |4|`no-dereference`|4|
@@ -279,7 +279,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`quiet`|202|
+|1|`quiet`|203|
 |2|`hide-control-chars`|3|
 |3|`silent`|3|
 |4|`quick`|3|
@@ -295,7 +295,7 @@
 |:--|:--|:--|
 |1|`revision`|63|
 |2|`remote`|10|
-|3|`recursive`|5|
+|3|`recursive`|6|
 |4|`reverse`|5|
 |5|`remove`|4|
 |6|`reference`|3|
@@ -353,7 +353,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`verbose`|118|
+|1|`verbose`|119|
 |2|`version`|23|
 |3|`volume`|4|
 |4|`show-nonprinting`|2|
@@ -373,9 +373,9 @@
 |3|`workdir`|8|
 |4|`ignore-all-space`|5|
 |5|`wrap`|3|
-|6|`workspace`|2|
-|7|`wrappers`|2|
-|8|`wait`|2|
+|6|`wait`|3|
+|7|`workspace`|2|
+|8|`wrappers`|2|
 |9|`write-out`|1|
 |10|`web`|1|
 
@@ -449,7 +449,7 @@
 |7|`auto-buffers`|1|
 |8|`batch`|1|
 |9|`prefix`|1|
-|10|`binaries-only`|1|
+|10|`base`|1|
 
 ## C
 
@@ -551,6 +551,7 @@
 |6|`ignore-dependencies`|1|
 |7|`IGNORE-CASE`|1|
 |8|`ignore-times`|1|
+|9|`include-directories`|1|
 
 ## J
 
@@ -570,6 +571,7 @@
 |3|`quit-on-intr`|1|
 |4|`disable-keys`|1|
 |5|`keep-dirlinks`|1|
+|6|`backup-converted`|1|
 
 ## L
 
@@ -625,7 +627,8 @@
 |3|`LOG-FILE`|1|
 |4|`format`|1|
 |5|`omit-dir-times`|1|
-|6|`optional`|1|
+|6|`output-document`|1|
+|7|`optional`|1|
 
 ## P
 
@@ -651,6 +654,7 @@
 |3|`QUIET`|1|
 |4|`SILENT`|1|
 |5|`quote-names`|1|
+|6|`quota`|1|
 
 ## R
 
@@ -710,13 +714,14 @@
 |7|`safe-updates`|1|
 |8|`i-am-a-dummy`|1|
 |9|`atimes`|1|
+|10|`user-agent`|1|
 
 ## V
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`verbose`|35|
-|2|`version`|15|
+|2|`version`|16|
 |3|`verbose-versions`|1|
 |4|`version-control`|1|
 |5|`version-sort`|1|
@@ -747,7 +752,8 @@
 |6|`no-init`|1|
 |7|`xattrs`|1|
 |8|`listen-once`|1|
-|9|`extra`|1|
+|9|`exclude-directories`|1|
+|10|`extra`|1|
 
 ## Y
 

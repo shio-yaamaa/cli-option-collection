@@ -103,6 +103,15 @@ export const stripTopLevelParentheses = (
   return fillSkeleton(stripped, fillings).trim();
 };
 
+// The single quote to be stripped is not the ASCII single quote.
+export const stripOuterSingleQuote = (string: string): string => {
+  if (string.startsWith('‘') && string.endsWith('’')) {
+    return string.slice(1, -1);
+  } else {
+    return string;
+  }
+};
+
 export const splitByMultipleDelimiters = (
   string: string,
   delimiters: (string | RegExp)[]
