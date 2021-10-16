@@ -316,6 +316,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['uniq', gnuCoreutils.uniq],
   ['unlink', gnuCoreutils.unlink],
   ['unset', bashBuiltin.unset],
+  ['unzip', freebsd.unzip],
   ['uptime', gnuCoreutils.uptime],
   ['users', gnuCoreutils.users],
   ['vdir', gnuCoreutils.vdir],

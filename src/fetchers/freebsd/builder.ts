@@ -20,21 +20,26 @@ import { mergeLists } from '../../utils/utils';
 
 interface Config {
   url: URL;
+  optionsHeading: string;
 }
 
 export const build = (commandName: string, config: Config): Fetcher => ({
-  fetch: () => fetch(commandName, config.url),
+  fetch: () => fetch(commandName, config.url, config.optionsHeading),
 });
 
 const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
-const fetch = async (commandName: string, url: URL): Promise<Command[]> => {
+const fetch = async (
+  commandName: string,
+  url: URL,
+  optionsHeading: string
+): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(url);
   const pre = document.querySelector('#content')?.querySelector('pre');
   if (!pre) {
     return [];
   }
-  const options = textToOptions(getInnerText(pre));
+  const options = textToOptions(getInnerText(pre), optionsHeading);
   return [
     {
       name: commandName,
@@ -44,12 +49,12 @@ const fetch = async (commandName: string, url: URL): Promise<Command[]> => {
   ];
 };
 
-const textToOptions = (text: string): Option[] => {
+const textToOptions = (text: string, optionsHeading: string): Option[] => {
   const lines = text.split('\n').map((line) => tabToSpace(line, 8));
 
   const optionSectionLines = extractLines(
     lines,
-    (line) => line === 'OPTIONS',
+    (line) => line === optionsHeading,
     (line) => countIndentWidth(line) === 0 && line.trim().length > 0
   ).slice(1, -1);
   const listItems = parseTextList(optionSectionLines);

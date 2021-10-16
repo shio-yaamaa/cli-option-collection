@@ -1,0 +1,98 @@
+[
+  {
+    "name": "unzip",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "a",
+        "title": "-a",
+        "description": "When extracting a text file, convert DOS-style line endings to Unix-style line endings."
+      },
+      {
+        "key": "C",
+        "title": "-C",
+        "description": "Match file names case-insensitively."
+      },
+      {
+        "key": "c",
+        "title": "-c",
+        "description": "Extract to stdout/screen.  When extracting files from the zipfile, they are written to stdout.  This is similar to -p, but does not suppress normal output."
+      },
+      {
+        "key": "d",
+        "title": "-d dir",
+        "description": "Extract files into the specified directory rather than the current directory."
+      },
+      {
+        "key": "f",
+        "title": "-f",
+        "description": "Update existing.  Extract only files from the zipfile if a file with the same name already exists on disk and is older than the former.  Otherwise, the file is silently skipped."
+      },
+      {
+        "key": "j",
+        "title": "-j",
+        "description": "Ignore directories stored in the zipfile; instead, extract all files directly into the extraction directory."
+      },
+      {
+        "key": "L",
+        "title": "-L",
+        "description": "Convert the names of the extracted files and directories to lowercase."
+      },
+      {
+        "key": "l",
+        "title": "-l",
+        "description": "List, rather than extract, the contents of the zipfile."
+      },
+      {
+        "key": "n",
+        "title": "-n",
+        "description": "No overwrite.  When extracting a file from the zipfile, if a file with the same name already exists on disk, the file is silently skipped."
+      },
+      {
+        "key": "o",
+        "title": "-o",
+        "description": "Overwrite.  When extracting a file from the zipfile, if a file with the same name already exists on disk, the existing file is replaced with the file from the zipfile."
+      },
+      {
+        "key": "p",
+        "title": "-p",
+        "description": "Extract to stdout.  When extracting files from the zipfile, they are written to stdout.  The normal output is suppressed as if -q was specified."
+      },
+      {
+        "key": "q",
+        "title": "-q",
+        "description": "Quiet: print less information while extracting."
+      },
+      {
+        "key": "t",
+        "title": "-t",
+        "description": "Test: do not extract anything, but verify the checksum of ev- ery file in the archive."
+      },
+      {
+        "key": "u",
+        "title": "-u",
+        "description": "Update.  When extracting a file from the zipfile, if a file with the same name already exists on disk, the existing file is replaced with the file from the zipfile if and only if the latter is newer than the former.  Otherwise, the file is silently skipped."
+      },
+      {
+        "key": "v",
+        "title": "-v",
+        "description": "List verbosely, rather than extract, the contents of the zip- file.  This differs from -l by using the long listing.  Note that most of the data is currently fake and does not reflect the content of the archive."
+      },
+      {
+        "key": "x",
+        "title": "-x pattern",
+        "description": "Exclude files matching the pattern pattern."
+      },
+      {
+        "key": "y",
+        "title": "-y",
+        "description": "Print four digit years in listings instead of two."
+      },
+      {
+        "key": "Z",
+        "title": "-Z mode",
+        "description": "Emulate zipinfo(1L) mode.  Enabling zipinfo(1L) mode changes the way in which additional arguments are parsed.  Currently only zipinfo(1L) mode 1 is supported, which lists the file names one per line."
+      }
+    ]
+  }
+]
