@@ -99,6 +99,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['du', gnuCoreutils.du],
   ['echo', join(gnuCoreutils.echo, bashBuiltin.echo)],
   ['ed', openbsd.ed],
+  ['egrep', openbsd.egrep],
   ['eject', openbsd.eject],
   ['enable', bashBuiltin.enable],
   ['env', gnuCoreutils.env],
@@ -116,6 +117,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['ffplay', ffmpeg.ffplay],
   ['ffprobe', ffmpeg.ffprobe],
   ['fg', bashBuiltin.fg],
+  ['fgrep', openbsd.fgrep],
   ['file', openbsd.file],
   ['find', openbsd.find],
   ['finger', openbsd.finger],
@@ -128,6 +130,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['getopts', bashBuiltin.getopts],
   ['git', git],
   ['go', go],
+  ['grep', openbsd.grep],
   ['groups', gnuCoreutils.groups],
   ['gunzip', openbsd.gunzip],
   ['gzcat', openbsd.gzcat],
@@ -326,6 +329,9 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['yarn', yarn],
   ['yes', gnuCoreutils.yes],
   ['zcat', openbsd.zcat],
+  ['zegrep', openbsd.zegrep],
+  ['zfgrep', openbsd.zfgrep],
+  ['zgrep', openbsd.zgrep],
 ]);
 
 export const baseCommandNames = Array.from(baseCommandToFetcher.keys());

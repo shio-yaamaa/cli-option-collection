@@ -45,11 +45,14 @@ export const openbsd = {
   domainname: build('domainname'),
   // BUG: Not only options but also some of address symbols are recognized as options.
   ed: build('ed'),
+  egrep: build('egrep'),
   eject: build('eject'),
+  fgrep: build('fgrep'),
   file: build('file'),
   find: build('find'),
   finger: build('finger'),
   fstat: build('fstat'),
+  grep: build('grep'),
   gunzip: build('gunzip'),
   gzcat: build('gzcat'),
   gzip: build('gzip'),
@@ -111,4 +114,7 @@ export const openbsd = {
   whois: build('whois'),
   xargs: build('xargs'),
   zcat: build('zcat'),
+  zegrep: build('zegrep'),
+  zfgrep: build('zfgrep'),
+  zgrep: build('zgrep'),
 };

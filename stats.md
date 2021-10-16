@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 293
-- Number of commands (including subcommands): 1052
-- Number of options: 15170
+- Number of base commands: 299
+- Number of commands (including subcommands): 1058
+- Number of options: 15368
 
 # Command Rankings
 
@@ -456,15 +456,15 @@
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`compress`|7|
-|2|`find-copies`|5|
-|3|`reuse-message`|2|
-|4|`caret`|2|
-|5|`continue-at`|1|
-|6|`chdir`|1|
-|7|`certificate`|1|
-|8|`ignore-space-change`|1|
-|9|`ignore-whitespace`|1|
-|10|`whitespace`|1|
+|2|`context`|6|
+|3|`find-copies`|5|
+|4|`reuse-message`|2|
+|5|`caret`|2|
+|6|`continue-at`|1|
+|7|`chdir`|1|
+|8|`certificate`|1|
+|9|`ignore-space-change`|1|
+|10|`ignore-whitespace`|1|
 
 ## D
 
