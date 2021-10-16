@@ -12,16 +12,16 @@ import { build } from './builder';
 //      - "zip -$"
 
 export const freebsd = {
-  zip: build('zip', {
-    url: new URL(
-      'https://www.freebsd.org/cgi/man.cgi?query=zip&manpath=FreeBSD+13.0-RELEASE+and+Ports'
-    ),
-    optionsHeading: 'OPTIONS',
-  }),
   unzip: build('unzip', {
     url: new URL(
       'https://www.freebsd.org/cgi/man.cgi?query=unzip&manpath=FreeBSD+13.0-RELEASE+and+Ports'
     ),
     optionsHeading: 'DESCRIPTION',
+  }),
+  zip: build('zip', {
+    url: new URL(
+      'https://www.freebsd.org/cgi/man.cgi?query=zip&manpath=FreeBSD+13.0-RELEASE+and+Ports'
+    ),
+    optionsHeading: 'OPTIONS',
   }),
 };
