@@ -7,6 +7,7 @@ import {
   transformOptionStrings,
   trimSpaceDelimitedArguments,
 } from '../../utils/forFetcher/transformOptionString';
+import { splitN } from '../../utils/string';
 import { mergeLists } from '../../utils/utils';
 
 const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
@@ -42,13 +43,13 @@ const listToOptions = (list: HTMLUListElement): Option[] => {
 const listItemToOptions = (listItem: HTMLLIElement): Option[] => {
   const listItemText = getInnerText(listItem);
 
-  const colonIndex = listItemText.indexOf(':');
-  if (colonIndex === -1) {
+  const [title, description] = splitN(listItemText, ':', 2).map((item) =>
+    item.trim()
+  );
+  if (!title || !description) {
     return [];
   }
 
-  const title = listItemText.slice(0, colonIndex).trim();
-  const description = listItemText.slice(colonIndex + 1).trim();
   const optionStrings = transformOptionStrings(
     [title],
     [trimSpaceDelimitedArguments]
