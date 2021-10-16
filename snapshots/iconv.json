@@ -1,0 +1,58 @@
+[
+  {
+    "name": "iconv",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "f",
+        "title": "-f encoding, --from-code=encoding",
+        "description": "Specifies the encoding of the input."
+      },
+      {
+        "key": "from-code",
+        "title": "-f encoding, --from-code=encoding",
+        "description": "Specifies the encoding of the input."
+      },
+      {
+        "key": "t",
+        "title": "-t encoding, --to-code=encoding",
+        "description": "Specifies the encoding of the output."
+      },
+      {
+        "key": "to-code",
+        "title": "-t encoding, --to-code=encoding",
+        "description": "Specifies the encoding of the output."
+      },
+      {
+        "key": "c",
+        "title": "-c",
+        "description": "When this option is given, characters that cannot be converted are silently discarded, instead of leading to a conversion error."
+      },
+      {
+        "key": "unicode-subst",
+        "title": "--unicode-subst=formatstring",
+        "description": "When this option is given, Unicode characters that cannot be represented in the target encoding are replaced with a placeholder string that is constructed from the given formatstring, applied to the Unicode code point. The formatstring must be a format string in the same format as for the printf command or the printf() function, taking either no argument or exactly one unsigned integer argument."
+      },
+      {
+        "key": "byte-subst",
+        "title": "--byte-subst=formatstring",
+        "description": "When this option is given, bytes in the input that are not valid in the source encoding are replaced with a placeholder string that is constructed from the given formatstring, applied to the byte's value. The formatstring must be a format string in the same format as for the printf command or the printf() function, taking either no argument or exactly one unsigned integer argument."
+      },
+      {
+        "key": "widechar-subst",
+        "title": "--widechar-subst=formatstring",
+        "description": "When this option is given, wide characters in the input that are not valid in the source encoding are replaced with a placeholder string that is constructed from the given formatstring, applied to the byte's value. The formatstring must be a format string in the same format as for the printf command or the printf() function, taking either no argument or exactly one unsigned integer argument."
+      },
+      {
+        "key": "s",
+        "title": "-s, --silent",
+        "description": "When this option is given, error messages about invalid or unconvertible characters are omitted, but the actual converted text is unaffected."
+      },
+      {
+        "key": "silent",
+        "title": "-s, --silent",
+        "description": "When this option is given, error messages about invalid or unconvertible characters are omitted, but the actual converted text is unaffected."
+      }
+    ]
+  }
+]
