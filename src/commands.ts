@@ -210,6 +210,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['pax', openbsd.pax],
   ['perl', perl],
   ['pgrep', openbsd.pgrep],
+  ['pico', freebsd.pico],
   ['ping', openbsd.ping],
   ['ping6', openbsd.ping6],
   ['pinky', gnuCoreutils.pinky],

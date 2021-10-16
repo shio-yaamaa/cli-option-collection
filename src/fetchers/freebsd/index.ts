@@ -1,3 +1,4 @@
+import { OptionStyle } from '../../types';
 import { build } from './builder';
 
 // Alternative sources:
@@ -22,18 +23,28 @@ export const freebsd = {
     url: new URL(
       'https://www.freebsd.org/cgi/man.cgi?query=nano&manpath=FreeBSD+13.0-RELEASE+and+Ports'
     ),
+    optionStyle: OptionStyle.SHORT_AND_LONG,
     optionsHeading: 'OPTIONS',
+  }),
+  pico: build('pico', {
+    url: new URL(
+      'https://www.freebsd.org/cgi/man.cgi?query=pico&manpath=FreeBSD+13.0-RELEASE+and+Ports'
+    ),
+    optionStyle: OptionStyle.SINGLE_DASH,
+    optionsHeading: 'Options',
   }),
   unzip: build('unzip', {
     url: new URL(
       'https://www.freebsd.org/cgi/man.cgi?query=unzip&manpath=FreeBSD+13.0-RELEASE+and+Ports'
     ),
+    optionStyle: OptionStyle.SHORT_AND_LONG,
     optionsHeading: 'DESCRIPTION',
   }),
   zip: build('zip', {
     url: new URL(
       'https://www.freebsd.org/cgi/man.cgi?query=zip&manpath=FreeBSD+13.0-RELEASE+and+Ports'
     ),
+    optionStyle: OptionStyle.SHORT_AND_LONG,
     optionsHeading: 'OPTIONS',
   }),
 };
