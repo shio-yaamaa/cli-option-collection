@@ -1,0 +1,604 @@
+[
+  {
+    "name": "svnlook author",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook cat",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook changed",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "copy-info",
+        "title": "--copy-info",
+        "description": "Causes svnlook changed to show detailed copy source information."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook date",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook diff",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "diff-copy-from",
+        "title": "--diff-copy-from",
+        "description": "Print differences for copied items against the copy source."
+      },
+      {
+        "key": "no-diff-added",
+        "title": "--no-diff-added",
+        "description": "Prevents svnlook diff from printing differences for added files. The default behavior when you add a file is to print the same differences that you would see if you had added the entire contents of an existing (empty) file."
+      },
+      {
+        "key": "no-diff-deleted",
+        "title": "--no-diff-deleted",
+        "description": "Prevents svnlook diff from printing differences for deleted files. The default behavior when a file is deleted in a transaction/revision is to print the same differences that you would see if you had left the file but removed all the content."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "extensions",
+        "title": "--extensions (-x) ARG",
+        "description": "Specifies customizations which Subversion should make when performing difference calculations. Valid extensions include:\n\n--ignore-space-change (-b)\n\nIgnore changes in the amount of white space.\n\n--ignore-all-space (-w)\n\nIgnore all white space.\n\n--ignore-eol-style\n\nIgnore changes in EOL (end-of-line) style.\n\n--show-c-function (-p)\n\nShow C function names in the diff output.\n\n--unified (-u)\n\nShow three lines of unified diff context.\n\nThe default value is -u.\n\nNote that when Subversion is configured to invoke an external diff command, the value of the --extension (-x) option isn't restricted to the previously mentioned options, but may be any additional arguments which Subversion should pass to that command. If you wish to pass multiple arguments, you must enclose all of them in quotes."
+      },
+      {
+        "key": "x",
+        "title": "--extensions (-x) ARG",
+        "description": "Specifies customizations which Subversion should make when performing difference calculations. Valid extensions include:\n\n--ignore-space-change (-b)\n\nIgnore changes in the amount of white space.\n\n--ignore-all-space (-w)\n\nIgnore all white space.\n\n--ignore-eol-style\n\nIgnore changes in EOL (end-of-line) style.\n\n--show-c-function (-p)\n\nShow C function names in the diff output.\n\n--unified (-u)\n\nShow three lines of unified diff context.\n\nThe default value is -u.\n\nNote that when Subversion is configured to invoke an external diff command, the value of the --extension (-x) option isn't restricted to the previously mentioned options, but may be any additional arguments which Subversion should pass to that command. If you wish to pass multiple arguments, you must enclose all of them in quotes."
+      }
+    ]
+  },
+  {
+    "name": "svnlook dirs-changed",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook filesize",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook help",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnlook h",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnlook ?",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnlook history",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "limit",
+        "title": "--limit (-l) ARG",
+        "description": "Limit output to a maximum number of ARG items."
+      },
+      {
+        "key": "l",
+        "title": "--limit (-l) ARG",
+        "description": "Limit output to a maximum number of ARG items."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "show-ids",
+        "title": "--show-ids",
+        "description": "Shows the filesystem node revision IDs for each path in the filesystem tree."
+      }
+    ]
+  },
+  {
+    "name": "svnlook info",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook lock",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnlook log",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook propget",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "revprop",
+        "title": "--revprop",
+        "description": "Operates on a revision property instead of a property specific to a file or directory. This option requires that you also pass a revision with the --revision (-r) option."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook pget",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "revprop",
+        "title": "--revprop",
+        "description": "Operates on a revision property instead of a property specific to a file or directory. This option requires that you also pass a revision with the --revision (-r) option."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook pg",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "revprop",
+        "title": "--revprop",
+        "description": "Operates on a revision property instead of a property specific to a file or directory. This option requires that you also pass a revision with the --revision (-r) option."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook proplist",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "revprop",
+        "title": "--revprop",
+        "description": "Operates on a revision property instead of a property specific to a file or directory. This option requires that you also pass a revision with the --revision (-r) option."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "verbose",
+        "title": "--verbose (-v)",
+        "description": "Be verbose. When used with svnlook proplist, for example, this causes Subversion to display not just the list of properties, but their values also."
+      },
+      {
+        "key": "v",
+        "title": "--verbose (-v)",
+        "description": "Be verbose. When used with svnlook proplist, for example, this causes Subversion to display not just the list of properties, but their values also."
+      },
+      {
+        "key": "xml",
+        "title": "--xml",
+        "description": "Prints output in XML format."
+      }
+    ]
+  },
+  {
+    "name": "svnlook plist",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "revprop",
+        "title": "--revprop",
+        "description": "Operates on a revision property instead of a property specific to a file or directory. This option requires that you also pass a revision with the --revision (-r) option."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "verbose",
+        "title": "--verbose (-v)",
+        "description": "Be verbose. When used with svnlook proplist, for example, this causes Subversion to display not just the list of properties, but their values also."
+      },
+      {
+        "key": "v",
+        "title": "--verbose (-v)",
+        "description": "Be verbose. When used with svnlook proplist, for example, this causes Subversion to display not just the list of properties, but their values also."
+      },
+      {
+        "key": "xml",
+        "title": "--xml",
+        "description": "Prints output in XML format."
+      }
+    ]
+  },
+  {
+    "name": "svnlook pl",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "revprop",
+        "title": "--revprop",
+        "description": "Operates on a revision property instead of a property specific to a file or directory. This option requires that you also pass a revision with the --revision (-r) option."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "verbose",
+        "title": "--verbose (-v)",
+        "description": "Be verbose. When used with svnlook proplist, for example, this causes Subversion to display not just the list of properties, but their values also."
+      },
+      {
+        "key": "v",
+        "title": "--verbose (-v)",
+        "description": "Be verbose. When used with svnlook proplist, for example, this causes Subversion to display not just the list of properties, but their values also."
+      },
+      {
+        "key": "xml",
+        "title": "--xml",
+        "description": "Prints output in XML format."
+      }
+    ]
+  },
+  {
+    "name": "svnlook tree",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "full-paths",
+        "title": "--full-paths",
+        "description": "Causes svnlook tree to display full paths instead of hierarchical, indented path components."
+      },
+      {
+        "key": "non-recursive",
+        "title": "--non-recursive (-N)",
+        "description": "Operate on a single directory only."
+      },
+      {
+        "key": "N",
+        "title": "--non-recursive (-N)",
+        "description": "Operate on a single directory only."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) REV",
+        "description": "Specifies a particular revision number that you wish to examine."
+      },
+      {
+        "key": "show-ids",
+        "title": "--show-ids",
+        "description": "Shows the filesystem node revision IDs for each path in the filesystem tree."
+      },
+      {
+        "key": "transaction",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      },
+      {
+        "key": "t",
+        "title": "--transaction (-t) ID",
+        "description": "Specifies a particular transaction ID that you wish to examine."
+      }
+    ]
+  },
+  {
+    "name": "svnlook uuid",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnlook youngest",
+    "optionStyle": "short-and-long",
+    "options": []
+  }
+]
