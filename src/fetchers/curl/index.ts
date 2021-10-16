@@ -1,3 +1,4 @@
+import { buildManFetcher } from './manFetcherBuilder';
 import { fetchCurl } from './curl';
 
 // Alternative sources:
@@ -15,9 +16,13 @@ import { fetchCurl } from './curl';
 //       This might cause a bug in the future.
 // NOTE: The fetcher just downloads the repository instead of using GitHub API
 //       to avoid authentication and hitting the rate limit.
+// BUG: Lists in option descriptions (e.g. description of "mk-ca-bundle -p")
+//      are not considered to be a part of the description because of the HTML structure.
 
 export const curl = {
   curl: {
     fetch: () => fetchCurl(),
   },
+  curlConfig: buildManFetcher('curl-config', { filename: 'curl-config.1' }),
+  mkCaBundle: buildManFetcher('make-ca-bundle', { filename: 'mk-ca-bundle.1' }),
 };

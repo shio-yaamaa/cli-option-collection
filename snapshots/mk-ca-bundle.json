@@ -1,0 +1,78 @@
+[
+  {
+    "name": "make-ca-bundle",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "b",
+        "title": "-b",
+        "description": "backup an existing version of outputfilename"
+      },
+      {
+        "key": "d",
+        "title": "-d [name]",
+        "description": "specify which Mozilla tree to pull certdata.txt from (or a custom URL). Valid names are: aurora, beta, central, mozilla, nss, release (default). They are shortcuts for which source tree to get the cert data from."
+      },
+      {
+        "key": "f",
+        "title": "-f",
+        "description": "force rebuild even if certdata.txt is current (Added in version 1.17)"
+      },
+      {
+        "key": "i",
+        "title": "-i",
+        "description": "print version info about used modules"
+      },
+      {
+        "key": "k",
+        "title": "-k",
+        "description": "Allow insecure data transfer. By default (since 1.27) this command will fail if the HTTPS transfer fails. This overrides that decision (and opens for man-in-the-middle attacks)."
+      },
+      {
+        "key": "l",
+        "title": "-l",
+        "description": "print license info about certdata.txt"
+      },
+      {
+        "key": "m",
+        "title": "-m",
+        "description": "(Added in 1.26) Include meta data comments in the output. The meta data is specific information about each certificate that is stored in the original file as comments and using this option will make those comments get passed on to the output file. The meta data is not parsed in any way by mk-ca-bundle."
+      },
+      {
+        "key": "n",
+        "title": "-n",
+        "description": "no download of certdata.txt (to use existing)"
+      },
+      {
+        "key": "p",
+        "title": "-p [purposes]:[levels]",
+        "description": "list of Mozilla trust purposes and levels for certificates to include in output. Takes the form of a comma separated list of purposes, a colon, and a comma separated list of levels. The default is to include all certificates trusted to issue SSL Server certificates (SERVER_AUTH:TRUSTED_DELEGATOR).\n\n(Added in version 1.21, Perl only)\n\nValid purposes are:"
+      },
+      {
+        "key": "q",
+        "title": "-q",
+        "description": "be really quiet (no progress output at all)"
+      },
+      {
+        "key": "t",
+        "title": "-t",
+        "description": "include plain text listing of certificates"
+      },
+      {
+        "key": "s",
+        "title": "-s [algorithms]",
+        "description": "comma separated list of signature algorithms with which to hash/fingerprint each certificate and output when run in plain text mode.\n\n(Added in version 1.21, Perl only)\n\nValid algorithms are:"
+      },
+      {
+        "key": "u",
+        "title": "-u",
+        "description": "unlink (remove) certdata.txt after processing"
+      },
+      {
+        "key": "v",
+        "title": "-v",
+        "description": "be verbose and print out processed CAs"
+      }
+    ]
+  }
+]
