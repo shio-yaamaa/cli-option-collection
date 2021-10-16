@@ -6,6 +6,7 @@ import axios from 'axios';
 import { ensureDirSync, rmSync, moveSync } from 'fs-extra';
 import { JSDOM, VirtualConsole } from 'jsdom';
 import decompress from 'decompress';
+import marked from 'marked';
 
 const decompressTarxz = require('decompress-tarxz');
 
@@ -31,6 +32,13 @@ export const fetchDocumentFromURLViaFilter = async (
   const response = await axios.get(url.toString());
   const data = filter(response.data);
   return new JSDOM(data).window.document;
+};
+
+export const fetchDocumentFromMarkdownPageURL = async (
+  url: URL
+): Promise<Document> => {
+  const text = await fetchPlainTextFromURL(url);
+  return new JSDOM(marked(text)).window.document;
 };
 
 export const fetchDocumentFromManPageURL = async (

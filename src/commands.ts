@@ -29,6 +29,7 @@ import { sshuttle } from './fetchers/sshuttle';
 import { svn } from './fetchers/svn';
 import { systemd } from './fetchers/systemd';
 import { terraform } from './fetchers/terraform';
+import { wget } from './fetchers/wget';
 import { yarn } from './fetchers/yarn';
 
 export const baseCommandToFetcher = new Map<string, Fetcher>([
@@ -315,6 +316,8 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['wait', bashBuiltin.wait],
   ['wall', openbsd.wall],
   ['wc', gnuCoreutils.wc],
+  ['wget', wget.wget],
+  ['wget2', wget.wget2],
   ['whatis', openbsd.whatis],
   ['who', gnuCoreutils.who],
   ['whoami', gnuCoreutils.whoami],

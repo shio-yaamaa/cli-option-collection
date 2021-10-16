@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 291
-- Number of commands (including subcommands): 1050
-- Number of options: 14738
+- Number of base commands: 293
+- Number of commands (including subcommands): 1052
+- Number of options: 15170
 
 # Command Rankings
 
@@ -16,11 +16,11 @@
 |3|`magick mogrify`|242|
 |4|`magick`|241|
 |5|`magick-script`|237|
-|6|`ffmpeg`|156|
-|7|`rsync`|144|
-|8|`mysqldump`|123|
-|9|`docker run`|103|
-|10|`docker container run`|103|
+|6|`wget2`|182|
+|7|`ffmpeg`|156|
+|8|`wget`|153|
+|9|`rsync`|144|
+|10|`mysqldump`|123|
 
 ## Ranking by Number of Short (Single-Letter) Options
 
@@ -33,9 +33,9 @@
 |5|`dir`|40|
 |6|`ls`|40|
 |7|`vdir`|40|
-|8|`nc`|39|
-|9|`mysql`|34|
-|10|`mysqldump`|34|
+|8|`wget2`|40|
+|9|`nc`|39|
+|10|`wget`|39|
 
 # Aliases
 
@@ -51,8 +51,8 @@
 |6|`append`|4|
 |7|`all-tags`|4|
 |8|`author`|2|
-|9|`all-versions`|1|
-|10|`architecture`|1|
+|9|`append-output`|2|
+|10|`all-versions`|1|
 
 ## b
 
@@ -67,7 +67,7 @@
 |7|`boot`|2|
 |8|`no-beep`|2|
 |9|`backup`|2|
-|10|`compile`|1|
+|10|`background`|2|
 
 ## c
 
@@ -82,7 +82,7 @@
 |7|`bytes`|3|
 |8|`reedit-message`|2|
 |9|`no-create`|2|
-|10|`cmd`|1|
+|10|`continue`|2|
 
 ## d
 
@@ -90,8 +90,8 @@
 |:--|:--|:--|
 |1|`detach`|12|
 |2|`directory`|8|
-|3|`delete`|6|
-|4|`debug`|5|
+|3|`debug`|7|
+|4|`delete`|6|
 |5|`decode`|3|
 |6|`delimiter`|3|
 |7|`driver`|3|
@@ -106,13 +106,13 @@
 |1|`edit`|10|
 |2|`env`|7|
 |3|`exact`|5|
-|4|`no-edit`|2|
-|5|`canonicalize-existing`|2|
-|6|`edges`|1|
-|7|`referer`|1|
-|8|`editor`|1|
-|9|`exclude`|1|
-|10|`email`|1|
+|4|`execute`|3|
+|5|`no-edit`|2|
+|6|`canonicalize-existing`|2|
+|7|`edges`|1|
+|8|`referer`|1|
+|9|`editor`|1|
+|10|`exclude`|1|
 
 ## f
 
@@ -148,7 +148,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`help`|83|
+|1|`help`|85|
 |2|`host`|8|
 |3|`human-readable`|6|
 |4|`no-dereference`|4|
@@ -172,7 +172,7 @@
 |7|`install-dir`|3|
 |8|`regexp-ignore-case`|3|
 |9|`include`|2|
-|10|`important`|1|
+|10|`input-file`|2|
 
 ## j
 
@@ -192,13 +192,13 @@
 |1|`key`|4|
 |2|`keep`|4|
 |3|`kibibytes`|3|
-|4|`keep-files`|1|
-|5|`insecure`|1|
-|6|`keep-subject`|1|
-|7|`keep-index`|1|
-|8|`no-keep-index`|1|
-|9|`keep-unreachable`|1|
-|10|`killed`|1|
+|4|`convert-links`|2|
+|5|`keep-files`|1|
+|6|`insecure`|1|
+|7|`keep-subject`|1|
+|8|`keep-index`|1|
+|9|`no-keep-index`|1|
+|10|`keep-unreachable`|1|
 
 ## l
 
@@ -225,10 +225,10 @@
 |4|`mode`|4|
 |5|`message-id`|2|
 |6|`canonicalize-missing`|2|
-|7|`ignore-missing`|1|
-|8|`fix-missing`|1|
-|9|`max-time`|1|
-|10|`multi`|1|
+|7|`mirror`|2|
+|8|`ignore-missing`|1|
+|9|`fix-missing`|1|
+|10|`max-time`|1|
 
 ## n
 
@@ -254,11 +254,11 @@
 |3|`server-option`|3|
 |4|`opt`|2|
 |5|`owner`|2|
-|6|`only`|1|
-|7|`only-matching`|1|
-|8|`push-option`|1|
-|9|`others`|1|
-|10|`log-file`|1|
+|6|`output-file`|2|
+|7|`only`|1|
+|8|`only-matching`|1|
+|9|`push-option`|1|
+|10|`others`|1|
 
 ## p
 
@@ -279,7 +279,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`quiet`|202|
+|1|`quiet`|204|
 |2|`hide-control-chars`|3|
 |3|`silent`|3|
 |4|`quick`|3|
@@ -295,7 +295,7 @@
 |:--|:--|:--|
 |1|`revision`|63|
 |2|`remote`|10|
-|3|`recursive`|5|
+|3|`recursive`|7|
 |4|`reverse`|5|
 |5|`remove`|4|
 |6|`reference`|3|
@@ -353,7 +353,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`verbose`|118|
+|1|`verbose`|120|
 |2|`version`|23|
 |3|`volume`|4|
 |4|`show-nonprinting`|2|
@@ -372,10 +372,10 @@
 |2|`warn`|8|
 |3|`workdir`|8|
 |4|`ignore-all-space`|5|
-|5|`wrap`|3|
-|6|`workspace`|2|
-|7|`wrappers`|2|
-|8|`wait`|2|
+|5|`wait`|4|
+|6|`wrap`|3|
+|7|`workspace`|2|
+|8|`wrappers`|2|
 |9|`write-out`|1|
 |10|`web`|1|
 
@@ -386,13 +386,13 @@
 |1|`extensions`|9|
 |2|`one-file-system`|3|
 |3|`exclude`|2|
-|4|`regexp`|1|
-|5|`proxy`|1|
-|6|`exclude-type`|1|
-|7|`extended`|1|
-|8|`executables`|1|
-|9|`extcmd`|1|
-|10|`catalog`|1|
+|4|`force-directories`|2|
+|5|`regexp`|1|
+|6|`proxy`|1|
+|7|`exclude-type`|1|
+|8|`extended`|1|
+|9|`executables`|1|
+|10|`extcmd`|1|
 
 ## y
 
@@ -428,13 +428,13 @@
 |1|`all`|10|
 |2|`almost-all`|3|
 |3|`all-databases`|3|
-|4|`show-all`|1|
-|5|`user-agent`|1|
-|6|`no-ignore-removal`|1|
-|7|`authors-file`|1|
-|8|`SEARCH-SKIP-SCREEN`|1|
-|9|`no-auto-rehash`|1|
-|10|`address-radix`|1|
+|4|`accept`|2|
+|5|`reject`|2|
+|6|`show-all`|1|
+|7|`user-agent`|1|
+|8|`no-ignore-removal`|1|
+|9|`authors-file`|1|
+|10|`SEARCH-SKIP-SCREEN`|1|
 
 ## B
 
@@ -445,11 +445,11 @@
 |3|`block-size`|3|
 |4|`ignore-backups`|3|
 |5|`databases`|3|
-|6|`use-ascii`|1|
-|7|`auto-buffers`|1|
-|8|`batch`|1|
-|9|`prefix`|1|
-|10|`binaries-only`|1|
+|6|`base`|2|
+|7|`use-ascii`|1|
+|8|`auto-buffers`|1|
+|9|`batch`|1|
+|10|`prefix`|1|
 
 ## C
 
@@ -474,12 +474,12 @@
 |2|`audit-debug`|3|
 |3|`dired`|3|
 |4|`check-development`|2|
-|5|`from-deb`|1|
-|6|`dump-header`|1|
-|7|`dereference-args`|1|
-|8|`directory`|1|
-|9|`database`|1|
-|10|`delete`|1|
+|5|`domains`|2|
+|6|`from-deb`|1|
+|7|`dump-header`|1|
+|8|`dereference-args`|1|
+|9|`directory`|1|
+|10|`database`|1|
 
 ## E
 
@@ -489,12 +489,12 @@
 |2|`encoding`|3|
 |3|`env-shebang`|3|
 |4|`vertical`|2|
-|5|`exact`|2|
-|6|`show-ends`|1|
-|7|`cert`|1|
-|8|`basic-regexp`|1|
-|9|`QUIT-AT-EOF`|1|
-|10|`events`|1|
+|5|`adjust-extension`|2|
+|6|`exact`|2|
+|7|`show-ends`|1|
+|8|`cert`|1|
+|9|`basic-regexp`|1|
+|10|`QUIT-AT-EOF`|1|
 
 ## F
 
@@ -503,13 +503,13 @@
 |1|`file`|24|
 |2|`fixed-strings`|4|
 |3|`classify`|3|
-|4|`fixed-string`|1|
-|5|`format`|1|
-|6|`form`|1|
-|7|`filter`|1|
-|8|`field`|1|
-|9|`quit-if-one-screen`|1|
-|10|`directory`|1|
+|4|`force-html`|2|
+|5|`fixed-string`|1|
+|6|`format`|1|
+|7|`form`|1|
+|8|`filter`|1|
+|9|`field`|1|
+|10|`quit-if-one-screen`|1|
 
 ## G
 
@@ -530,14 +530,14 @@
 |:--|:--|:--|
 |1|`dereference-command-line`|3|
 |2|`human`|2|
-|3|`home`|2|
-|4|`header`|1|
-|5|`si`|1|
-|6|`human-readable`|1|
-|7|`help`|1|
-|8|`highlight-changes`|1|
-|9|`html`|1|
-|10|`hard-links`|1|
+|3|`span-hosts`|2|
+|4|`home`|2|
+|5|`header`|1|
+|6|`si`|1|
+|7|`human-readable`|1|
+|8|`help`|1|
+|9|`highlight-changes`|1|
+|10|`html`|1|
 
 ## I
 
@@ -545,12 +545,13 @@
 |:--|:--|:--|
 |1|`ignore-matching-lines`|5|
 |2|`ignore`|3|
-|3|`index-names`|1|
-|4|`head`|1|
-|5|`iso-8601`|1|
-|6|`ignore-dependencies`|1|
-|7|`IGNORE-CASE`|1|
-|8|`ignore-times`|1|
+|3|`include-directories`|2|
+|4|`index-names`|1|
+|5|`head`|1|
+|6|`iso-8601`|1|
+|7|`ignore-dependencies`|1|
+|8|`IGNORE-CASE`|1|
+|9|`ignore-times`|1|
 
 ## J
 
@@ -565,11 +566,12 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`config`|1|
-|2|`private-key`|1|
-|3|`quit-on-intr`|1|
-|4|`disable-keys`|1|
-|5|`keep-dirlinks`|1|
+|1|`backup-converted`|2|
+|2|`config`|1|
+|3|`private-key`|1|
+|4|`quit-on-intr`|1|
+|5|`disable-keys`|1|
+|6|`keep-dirlinks`|1|
 
 ## L
 
@@ -578,13 +580,13 @@
 |1|`dereference`|7|
 |2|`logical`|3|
 |3|`follow-link`|2|
-|4|`location`|1|
-|5|`files-with-matches`|1|
-|6|`name-only`|1|
-|7|`files-without-match`|1|
-|8|`no-lessopen`|1|
-|9|`skip-line-numbers`|1|
-|10|`local`|1|
+|4|`relative`|2|
+|5|`location`|1|
+|6|`files-with-matches`|1|
+|7|`name-only`|1|
+|8|`files-without-match`|1|
+|9|`no-lessopen`|1|
+|10|`skip-line-numbers`|1|
 
 ## M
 
@@ -607,25 +609,26 @@
 |:--|:--|:--|
 |1|`literal`|3|
 |2|`no-document`|2|
-|3|`no-buffer`|1|
-|4|`intent-to-add`|1|
-|5|`no-numbered`|1|
-|6|`no-fetch`|1|
-|7|`fields`|1|
-|8|`LINE-NUMBERS`|1|
-|9|`skip-column-names`|1|
-|10|`no-set-names`|1|
+|3|`timestamping`|2|
+|4|`no-buffer`|1|
+|5|`intent-to-add`|1|
+|6|`no-numbered`|1|
+|7|`no-fetch`|1|
+|8|`fields`|1|
+|9|`LINE-NUMBERS`|1|
+|10|`skip-column-names`|1|
 
 ## O
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`remote-name`|1|
-|2|`open-files-in-pager`|1|
-|3|`LOG-FILE`|1|
-|4|`format`|1|
-|5|`omit-dir-times`|1|
-|6|`optional`|1|
+|1|`output-document`|2|
+|2|`remote-name`|1|
+|3|`open-files-in-pager`|1|
+|4|`LOG-FILE`|1|
+|5|`format`|1|
+|6|`omit-dir-times`|1|
+|7|`optional`|1|
 
 ## P
 
@@ -637,20 +640,21 @@
 |4|`trust-policy`|3|
 |5|`physical`|3|
 |6|`no-dereference`|2|
-|7|`build-profiles`|1|
-|8|`ftp-port`|1|
-|9|`portability`|1|
-|10|`no-pager`|1|
+|7|`directory-prefix`|2|
+|8|`build-profiles`|1|
+|9|`ftp-port`|1|
+|10|`portability`|1|
 
 ## Q
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`quote-name`|3|
-|2|`quote`|1|
-|3|`QUIET`|1|
-|4|`SILENT`|1|
-|5|`quote-names`|1|
+|2|`quota`|2|
+|3|`quote`|1|
+|4|`QUIET`|1|
+|5|`SILENT`|1|
+|6|`quote-names`|1|
 
 ## R
 
@@ -658,14 +662,14 @@
 |:--|:--|:--|
 |1|`recursive`|37|
 |2|`reverse`|2|
-|3|`requirements`|1|
-|4|`remote-time`|1|
-|5|`rfc-email`|1|
-|6|`re-sign`|1|
-|7|`raw-input`|1|
-|8|`RAW-CONTROL-CHARS`|1|
-|9|`routines`|1|
-|10|`right-side-refs`|1|
+|3|`accept`|2|
+|4|`reject`|2|
+|5|`requirements`|1|
+|6|`remote-time`|1|
+|7|`rfc-email`|1|
+|8|`re-sign`|1|
+|9|`raw-input`|1|
+|10|`RAW-CONTROL-CHARS`|1|
 
 ## S
 
@@ -675,12 +679,12 @@
 |2|`no-gpg-sign`|8|
 |3|`socket`|8|
 |4|`suffix`|4|
-|5|`show-error`|1|
-|6|`separate-dirs`|1|
-|7|`split-string`|1|
-|8|`worktree`|1|
-|9|`staged`|1|
-|10|`since`|1|
+|5|`server-response`|2|
+|6|`show-error`|1|
+|7|`separate-dirs`|1|
+|8|`split-string`|1|
+|9|`worktree`|1|
+|10|`staged`|1|
 
 ## T
 
@@ -689,34 +693,35 @@
 |1|`no-target-directory`|4|
 |2|`tabsize`|3|
 |3|`debug-info`|3|
-|4|`tilde`|2|
-|5|`show-tabs`|1|
-|6|`upload-file`|1|
-|7|`print-type`|1|
-|8|`tag-file`|1|
-|9|`tab`|1|
-|10|`omit-pagination`|1|
+|4|`timeout`|2|
+|5|`tilde`|2|
+|6|`show-tabs`|1|
+|7|`upload-file`|1|
+|8|`print-type`|1|
+|9|`tag-file`|1|
+|10|`tab`|1|
 
 ## U
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`unified`|5|
-|2|`proxy-user`|1|
-|3|`no-unicode`|1|
-|4|`since`|1|
-|5|`until`|1|
-|6|`UNDERLINE-SPECIAL`|1|
-|7|`safe-updates`|1|
-|8|`i-am-a-dummy`|1|
-|9|`atimes`|1|
+|2|`user-agent`|2|
+|3|`proxy-user`|1|
+|4|`no-unicode`|1|
+|5|`since`|1|
+|6|`until`|1|
+|7|`UNDERLINE-SPECIAL`|1|
+|8|`safe-updates`|1|
+|9|`i-am-a-dummy`|1|
+|10|`atimes`|1|
 
 ## V
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`verbose`|35|
-|2|`version`|15|
+|2|`version`|17|
 |3|`verbose-versions`|1|
 |4|`version-control`|1|
 |5|`version-sort`|1|
@@ -743,11 +748,12 @@
 |2|`dirstat`|5|
 |3|`exclude-from`|3|
 |4|`xml`|2|
-|5|`request`|1|
-|6|`no-init`|1|
-|7|`xattrs`|1|
-|8|`listen-once`|1|
-|9|`extra`|1|
+|5|`exclude-directories`|2|
+|6|`request`|1|
+|7|`no-init`|1|
+|8|`xattrs`|1|
+|9|`listen-once`|1|
+|10|`extra`|1|
 
 ## Y
 
