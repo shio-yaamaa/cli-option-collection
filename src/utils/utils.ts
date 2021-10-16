@@ -30,3 +30,11 @@ export const mergeBy = <ItemType, KeyType>(
 export const mergeLists = <T>(lists: T[][]): T[] => {
   return ([] as T[]).concat(...lists);
 };
+
+export const buildRanking = <ItemType>(
+  items: ItemType[],
+  compareFn: (a: ItemType, b: ItemType) => number,
+  limit: number
+): ItemType[] => {
+  return [...items].sort(compareFn).slice(0, limit);
+};

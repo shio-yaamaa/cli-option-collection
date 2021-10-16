@@ -3,7 +3,12 @@ export interface Fetcher {
 }
 
 export enum OptionStyle {
+  // POSIX (short) + GNU (long) style
+  // Example: -v, --version
   SHORT_AND_LONG = 'short-and-long',
+
+  // Go flag style
+  // Example: -v, -version
   SINGLE_DASH = 'single-dash',
 }
 

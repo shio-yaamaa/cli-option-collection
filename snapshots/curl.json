@@ -1,0 +1,1513 @@
+[
+  {
+    "name": "curl",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "abstract-unix-socket",
+        "title": "--abstract-unix-socket <path>",
+        "description": "Connect via abstract Unix domain socket"
+      },
+      {
+        "key": "alt-svc",
+        "title": "--alt-svc <file name>",
+        "description": "Enable alt-svc with this cache file"
+      },
+      {
+        "key": "anyauth",
+        "title": "--anyauth",
+        "description": "Pick any authentication method"
+      },
+      {
+        "key": "a",
+        "title": "-a, --append",
+        "description": "Append to target file when uploading"
+      },
+      {
+        "key": "append",
+        "title": "-a, --append",
+        "description": "Append to target file when uploading"
+      },
+      {
+        "key": "aws-sigv4",
+        "title": "--aws-sigv4 <provider1[:provider2[:region[:service]]]>",
+        "description": "Use AWS V4 signature authentication"
+      },
+      {
+        "key": "basic",
+        "title": "--basic",
+        "description": "Use HTTP Basic Authentication"
+      },
+      {
+        "key": "cacert",
+        "title": "--cacert <file>",
+        "description": "CA certificate to verify peer against"
+      },
+      {
+        "key": "capath",
+        "title": "--capath <dir>",
+        "description": "CA directory to verify peer against"
+      },
+      {
+        "key": "cert-status",
+        "title": "--cert-status",
+        "description": "Verify the status of the server cert via OCSP-staple"
+      },
+      {
+        "key": "cert-type",
+        "title": "--cert-type <type>",
+        "description": "Certificate type (DER/PEM/ENG)"
+      },
+      {
+        "key": "E",
+        "title": "-E, --cert <certificate[:password]>",
+        "description": "Client certificate file and password"
+      },
+      {
+        "key": "cert",
+        "title": "-E, --cert <certificate[:password]>",
+        "description": "Client certificate file and password"
+      },
+      {
+        "key": "ciphers",
+        "title": "--ciphers <list of ciphers>",
+        "description": "SSL ciphers to use"
+      },
+      {
+        "key": "compressed-ssh",
+        "title": "--compressed-ssh",
+        "description": "Enable SSH compression"
+      },
+      {
+        "key": "compressed",
+        "title": "--compressed",
+        "description": "Request compressed response"
+      },
+      {
+        "key": "K",
+        "title": "-K, --config <file>",
+        "description": "Read config from a file"
+      },
+      {
+        "key": "config",
+        "title": "-K, --config <file>",
+        "description": "Read config from a file"
+      },
+      {
+        "key": "connect-timeout",
+        "title": "--connect-timeout <fractional seconds>",
+        "description": "Maximum time allowed for connection"
+      },
+      {
+        "key": "connect-to",
+        "title": "--connect-to <HOST1:PORT1:HOST2:PORT2>",
+        "description": "Connect to host"
+      },
+      {
+        "key": "C",
+        "title": "-C, --continue-at <offset>",
+        "description": "Resumed transfer offset"
+      },
+      {
+        "key": "continue-at",
+        "title": "-C, --continue-at <offset>",
+        "description": "Resumed transfer offset"
+      },
+      {
+        "key": "c",
+        "title": "-c, --cookie-jar <filename>",
+        "description": "Write cookies to <filename> after operation"
+      },
+      {
+        "key": "cookie-jar",
+        "title": "-c, --cookie-jar <filename>",
+        "description": "Write cookies to <filename> after operation"
+      },
+      {
+        "key": "b",
+        "title": "-b, --cookie <data|filename>",
+        "description": "Send cookies from string/file"
+      },
+      {
+        "key": "cookie",
+        "title": "-b, --cookie <data|filename>",
+        "description": "Send cookies from string/file"
+      },
+      {
+        "key": "create-dirs",
+        "title": "--create-dirs",
+        "description": "Create necessary local directory hierarchy"
+      },
+      {
+        "key": "create-file-mode",
+        "title": "--create-file-mode <mode>",
+        "description": "File mode for created files"
+      },
+      {
+        "key": "crlf",
+        "title": "--crlf",
+        "description": "Convert LF to CRLF in upload"
+      },
+      {
+        "key": "crlfile",
+        "title": "--crlfile <file>",
+        "description": "Use this CRL list"
+      },
+      {
+        "key": "curves",
+        "title": "--curves <algorithm list>",
+        "description": "(EC) TLS key exchange algorithm(s) to request"
+      },
+      {
+        "key": "data-ascii",
+        "title": "--data-ascii <data>",
+        "description": "HTTP POST ASCII data"
+      },
+      {
+        "key": "data-binary",
+        "title": "--data-binary <data>",
+        "description": "HTTP POST binary data"
+      },
+      {
+        "key": "data-raw",
+        "title": "--data-raw <data>",
+        "description": "HTTP POST data, '@' allowed"
+      },
+      {
+        "key": "data-urlencode",
+        "title": "--data-urlencode <data>",
+        "description": "HTTP POST data url encoded"
+      },
+      {
+        "key": "d",
+        "title": "-d, --data <data>",
+        "description": "HTTP POST data"
+      },
+      {
+        "key": "data",
+        "title": "-d, --data <data>",
+        "description": "HTTP POST data"
+      },
+      {
+        "key": "delegation",
+        "title": "--delegation <LEVEL>",
+        "description": "GSS-API delegation permission"
+      },
+      {
+        "key": "digest",
+        "title": "--digest",
+        "description": "Use HTTP Digest Authentication"
+      },
+      {
+        "key": "disable-eprt",
+        "title": "--disable-eprt",
+        "description": "Inhibit using EPRT or LPRT"
+      },
+      {
+        "key": "disable-epsv",
+        "title": "--disable-epsv",
+        "description": "Inhibit using EPSV"
+      },
+      {
+        "key": "q",
+        "title": "-q, --disable",
+        "description": "Disable .curlrc"
+      },
+      {
+        "key": "disable",
+        "title": "-q, --disable",
+        "description": "Disable .curlrc"
+      },
+      {
+        "key": "disallow-username-in-url",
+        "title": "--disallow-username-in-url",
+        "description": "Disallow username in url"
+      },
+      {
+        "key": "dns-interface",
+        "title": "--dns-interface <interface>",
+        "description": "Interface to use for DNS requests"
+      },
+      {
+        "key": "dns-ipv4-addr",
+        "title": "--dns-ipv4-addr <address>",
+        "description": "IPv4 address to use for DNS requests"
+      },
+      {
+        "key": "dns-ipv6-addr",
+        "title": "--dns-ipv6-addr <address>",
+        "description": "IPv6 address to use for DNS requests"
+      },
+      {
+        "key": "dns-servers",
+        "title": "--dns-servers <addresses>",
+        "description": "DNS server addrs to use"
+      },
+      {
+        "key": "doh-cert-status",
+        "title": "--doh-cert-status",
+        "description": "Verify the status of the DoH server cert via OCSP-staple"
+      },
+      {
+        "key": "doh-insecure",
+        "title": "--doh-insecure",
+        "description": "Allow insecure DoH server connections"
+      },
+      {
+        "key": "doh-url",
+        "title": "--doh-url <URL>",
+        "description": "Resolve host names over DoH"
+      },
+      {
+        "key": "D",
+        "title": "-D, --dump-header <filename>",
+        "description": "Write the received headers to <filename>"
+      },
+      {
+        "key": "dump-header",
+        "title": "-D, --dump-header <filename>",
+        "description": "Write the received headers to <filename>"
+      },
+      {
+        "key": "egd-file",
+        "title": "--egd-file <file>",
+        "description": "EGD socket path for random data"
+      },
+      {
+        "key": "engine",
+        "title": "--engine <name>",
+        "description": "Crypto engine to use"
+      },
+      {
+        "key": "etag-compare",
+        "title": "--etag-compare <file>",
+        "description": "Pass an ETag from a file as a custom header"
+      },
+      {
+        "key": "etag-save",
+        "title": "--etag-save <file>",
+        "description": "Parse ETag from a request and save it to a file"
+      },
+      {
+        "key": "expect100-timeout",
+        "title": "--expect100-timeout <seconds>",
+        "description": "How long to wait for 100-continue"
+      },
+      {
+        "key": "fail-early",
+        "title": "--fail-early",
+        "description": "Fail on first transfer error, do not continue"
+      },
+      {
+        "key": "fail-with-body",
+        "title": "--fail-with-body",
+        "description": "Fail on HTTP errors but save the body"
+      },
+      {
+        "key": "f",
+        "title": "-f, --fail",
+        "description": "Fail silently (no output at all) on HTTP errors"
+      },
+      {
+        "key": "fail",
+        "title": "-f, --fail",
+        "description": "Fail silently (no output at all) on HTTP errors"
+      },
+      {
+        "key": "false-start",
+        "title": "--false-start",
+        "description": "Enable TLS False Start"
+      },
+      {
+        "key": "form-string",
+        "title": "--form-string <name=string>",
+        "description": "Specify multipart MIME data"
+      },
+      {
+        "key": "F",
+        "title": "-F, --form <name=content>",
+        "description": "Specify multipart MIME data"
+      },
+      {
+        "key": "form",
+        "title": "-F, --form <name=content>",
+        "description": "Specify multipart MIME data"
+      },
+      {
+        "key": "ftp-account",
+        "title": "--ftp-account <data>",
+        "description": "Account data string"
+      },
+      {
+        "key": "ftp-alternative-to-user",
+        "title": "--ftp-alternative-to-user <command>",
+        "description": "String to replace USER [name]"
+      },
+      {
+        "key": "ftp-create-dirs",
+        "title": "--ftp-create-dirs",
+        "description": "Create the remote dirs if not present"
+      },
+      {
+        "key": "ftp-method",
+        "title": "--ftp-method <method>",
+        "description": "Control CWD usage"
+      },
+      {
+        "key": "ftp-pasv",
+        "title": "--ftp-pasv",
+        "description": "Use PASV/EPSV instead of PORT"
+      },
+      {
+        "key": "P",
+        "title": "-P, --ftp-port <address>",
+        "description": "Use PORT instead of PASV"
+      },
+      {
+        "key": "ftp-port",
+        "title": "-P, --ftp-port <address>",
+        "description": "Use PORT instead of PASV"
+      },
+      {
+        "key": "ftp-pret",
+        "title": "--ftp-pret",
+        "description": "Send PRET before PASV"
+      },
+      {
+        "key": "ftp-skip-pasv-ip",
+        "title": "--ftp-skip-pasv-ip",
+        "description": "Skip the IP address for PASV"
+      },
+      {
+        "key": "ftp-ssl-ccc-mode",
+        "title": "--ftp-ssl-ccc-mode <active/passive>",
+        "description": "Set CCC mode"
+      },
+      {
+        "key": "ftp-ssl-ccc",
+        "title": "--ftp-ssl-ccc",
+        "description": "Send CCC after authenticating"
+      },
+      {
+        "key": "ftp-ssl-control",
+        "title": "--ftp-ssl-control",
+        "description": "Require SSL/TLS for FTP login, clear for transfer"
+      },
+      {
+        "key": "G",
+        "title": "-G, --get",
+        "description": "Put the post data in the URL and use GET"
+      },
+      {
+        "key": "get",
+        "title": "-G, --get",
+        "description": "Put the post data in the URL and use GET"
+      },
+      {
+        "key": "g",
+        "title": "-g, --globoff",
+        "description": "Disable URL sequences and ranges using {} and []"
+      },
+      {
+        "key": "globoff",
+        "title": "-g, --globoff",
+        "description": "Disable URL sequences and ranges using {} and []"
+      },
+      {
+        "key": "happy-eyeballs-timeout-ms",
+        "title": "--happy-eyeballs-timeout-ms <milliseconds>",
+        "description": "Time for IPv6 before trying IPv4"
+      },
+      {
+        "key": "haproxy-protocol",
+        "title": "--haproxy-protocol",
+        "description": "Send HAProxy PROXY protocol v1 header"
+      },
+      {
+        "key": "I",
+        "title": "-I, --head",
+        "description": "Show document info only"
+      },
+      {
+        "key": "head",
+        "title": "-I, --head",
+        "description": "Show document info only"
+      },
+      {
+        "key": "H",
+        "title": "-H, --header <header/@file>",
+        "description": "Pass custom header(s) to server"
+      },
+      {
+        "key": "header",
+        "title": "-H, --header <header/@file>",
+        "description": "Pass custom header(s) to server"
+      },
+      {
+        "key": "h",
+        "title": "-h, --help <category>",
+        "description": "Get help for commands"
+      },
+      {
+        "key": "help",
+        "title": "-h, --help <category>",
+        "description": "Get help for commands"
+      },
+      {
+        "key": "hostpubmd5",
+        "title": "--hostpubmd5 <md5>",
+        "description": "Acceptable MD5 hash of the host public key"
+      },
+      {
+        "key": "hsts",
+        "title": "--hsts <file name>",
+        "description": "Enable HSTS with this cache file"
+      },
+      {
+        "key": "http0.9",
+        "title": "--http0.9",
+        "description": "Allow HTTP 0.9 responses"
+      },
+      {
+        "key": "0",
+        "title": "-0, --http1.0",
+        "description": "Use HTTP 1.0"
+      },
+      {
+        "key": "http1.0",
+        "title": "-0, --http1.0",
+        "description": "Use HTTP 1.0"
+      },
+      {
+        "key": "http1.1",
+        "title": "--http1.1",
+        "description": "Use HTTP 1.1"
+      },
+      {
+        "key": "http2-prior-knowledge",
+        "title": "--http2-prior-knowledge",
+        "description": "Use HTTP 2 without HTTP/1.1 Upgrade"
+      },
+      {
+        "key": "http2",
+        "title": "--http2",
+        "description": "Use HTTP 2"
+      },
+      {
+        "key": "http3",
+        "title": "--http3",
+        "description": "Use HTTP v3"
+      },
+      {
+        "key": "ignore-content-length",
+        "title": "--ignore-content-length",
+        "description": "Ignore the size of the remote resource"
+      },
+      {
+        "key": "i",
+        "title": "-i, --include",
+        "description": "Include protocol response headers in the output"
+      },
+      {
+        "key": "include",
+        "title": "-i, --include",
+        "description": "Include protocol response headers in the output"
+      },
+      {
+        "key": "k",
+        "title": "-k, --insecure",
+        "description": "Allow insecure server connections when using SSL"
+      },
+      {
+        "key": "insecure",
+        "title": "-k, --insecure",
+        "description": "Allow insecure server connections when using SSL"
+      },
+      {
+        "key": "interface",
+        "title": "--interface <name>",
+        "description": "Use network INTERFACE (or address)"
+      },
+      {
+        "key": "4",
+        "title": "-4, --ipv4",
+        "description": "Resolve names to IPv4 addresses"
+      },
+      {
+        "key": "ipv4",
+        "title": "-4, --ipv4",
+        "description": "Resolve names to IPv4 addresses"
+      },
+      {
+        "key": "6",
+        "title": "-6, --ipv6",
+        "description": "Resolve names to IPv6 addresses"
+      },
+      {
+        "key": "ipv6",
+        "title": "-6, --ipv6",
+        "description": "Resolve names to IPv6 addresses"
+      },
+      {
+        "key": "j",
+        "title": "-j, --junk-session-cookies",
+        "description": "Ignore session cookies read from file"
+      },
+      {
+        "key": "junk-session-cookies",
+        "title": "-j, --junk-session-cookies",
+        "description": "Ignore session cookies read from file"
+      },
+      {
+        "key": "keepalive-time",
+        "title": "--keepalive-time <seconds>",
+        "description": "Interval time for keepalive probes"
+      },
+      {
+        "key": "key-type",
+        "title": "--key-type <type>",
+        "description": "Private key file type (DER/PEM/ENG)"
+      },
+      {
+        "key": "key",
+        "title": "--key <key>",
+        "description": "Private key file name"
+      },
+      {
+        "key": "krb",
+        "title": "--krb <level>",
+        "description": "Enable Kerberos with security <level>"
+      },
+      {
+        "key": "libcurl",
+        "title": "--libcurl <file>",
+        "description": "Dump libcurl equivalent code of this command line"
+      },
+      {
+        "key": "limit-rate",
+        "title": "--limit-rate <speed>",
+        "description": "Limit transfer speed to RATE"
+      },
+      {
+        "key": "l",
+        "title": "-l, --list-only",
+        "description": "List only mode"
+      },
+      {
+        "key": "list-only",
+        "title": "-l, --list-only",
+        "description": "List only mode"
+      },
+      {
+        "key": "local-port",
+        "title": "--local-port <num/range>",
+        "description": "Force use of RANGE for local port numbers"
+      },
+      {
+        "key": "location-trusted",
+        "title": "--location-trusted",
+        "description": "Like --location, and send auth to other hosts"
+      },
+      {
+        "key": "L",
+        "title": "-L, --location",
+        "description": "Follow redirects"
+      },
+      {
+        "key": "location",
+        "title": "-L, --location",
+        "description": "Follow redirects"
+      },
+      {
+        "key": "login-options",
+        "title": "--login-options <options>",
+        "description": "Server login options"
+      },
+      {
+        "key": "mail-auth",
+        "title": "--mail-auth <address>",
+        "description": "Originator address of the original email"
+      },
+      {
+        "key": "mail-from",
+        "title": "--mail-from <address>",
+        "description": "Mail from this address"
+      },
+      {
+        "key": "mail-rcpt-allowfails",
+        "title": "--mail-rcpt-allowfails",
+        "description": "Allow RCPT TO command to fail for some recipients"
+      },
+      {
+        "key": "mail-rcpt",
+        "title": "--mail-rcpt <address>",
+        "description": "Mail to this address"
+      },
+      {
+        "key": "M",
+        "title": "-M, --manual",
+        "description": "Display the full manual"
+      },
+      {
+        "key": "manual",
+        "title": "-M, --manual",
+        "description": "Display the full manual"
+      },
+      {
+        "key": "max-filesize",
+        "title": "--max-filesize <bytes>",
+        "description": "Maximum file size to download"
+      },
+      {
+        "key": "max-redirs",
+        "title": "--max-redirs <num>",
+        "description": "Maximum number of redirects allowed"
+      },
+      {
+        "key": "m",
+        "title": "-m, --max-time <fractional seconds>",
+        "description": "Maximum time allowed for transfer"
+      },
+      {
+        "key": "max-time",
+        "title": "-m, --max-time <fractional seconds>",
+        "description": "Maximum time allowed for transfer"
+      },
+      {
+        "key": "metalink",
+        "title": "--metalink",
+        "description": "Process given URLs as metalink XML file"
+      },
+      {
+        "key": "negotiate",
+        "title": "--negotiate",
+        "description": "Use HTTP Negotiate (SPNEGO) authentication"
+      },
+      {
+        "key": "netrc-file",
+        "title": "--netrc-file <filename>",
+        "description": "Specify FILE for netrc"
+      },
+      {
+        "key": "netrc-optional",
+        "title": "--netrc-optional",
+        "description": "Use either .netrc or URL"
+      },
+      {
+        "key": "n",
+        "title": "-n, --netrc",
+        "description": "Must read .netrc for user name and password"
+      },
+      {
+        "key": "netrc",
+        "title": "-n, --netrc",
+        "description": "Must read .netrc for user name and password"
+      },
+      {
+        "key": ":",
+        "title": "-:, --next",
+        "description": "Make next URL use its separate set of options"
+      },
+      {
+        "key": "next",
+        "title": "-:, --next",
+        "description": "Make next URL use its separate set of options"
+      },
+      {
+        "key": "no-alpn",
+        "title": "--no-alpn",
+        "description": "Disable the ALPN TLS extension"
+      },
+      {
+        "key": "N",
+        "title": "-N, --no-buffer",
+        "description": "Disable buffering of the output stream"
+      },
+      {
+        "key": "no-buffer",
+        "title": "-N, --no-buffer",
+        "description": "Disable buffering of the output stream"
+      },
+      {
+        "key": "no-keepalive",
+        "title": "--no-keepalive",
+        "description": "Disable TCP keepalive on the connection"
+      },
+      {
+        "key": "no-npn",
+        "title": "--no-npn",
+        "description": "Disable the NPN TLS extension"
+      },
+      {
+        "key": "no-progress-meter",
+        "title": "--no-progress-meter",
+        "description": "Do not show the progress meter"
+      },
+      {
+        "key": "no-sessionid",
+        "title": "--no-sessionid",
+        "description": "Disable SSL session-ID reusing"
+      },
+      {
+        "key": "noproxy",
+        "title": "--noproxy <no-proxy-list>",
+        "description": "List of hosts which do not use proxy"
+      },
+      {
+        "key": "ntlm-wb",
+        "title": "--ntlm-wb",
+        "description": "Use HTTP NTLM authentication with winbind"
+      },
+      {
+        "key": "ntlm",
+        "title": "--ntlm",
+        "description": "Use HTTP NTLM authentication"
+      },
+      {
+        "key": "oauth2-bearer",
+        "title": "--oauth2-bearer <token>",
+        "description": "OAuth 2 Bearer Token"
+      },
+      {
+        "key": "output-dir",
+        "title": "--output-dir <dir>",
+        "description": "Directory to save files in"
+      },
+      {
+        "key": "o",
+        "title": "-o, --output <file>",
+        "description": "Write to file instead of stdout"
+      },
+      {
+        "key": "output",
+        "title": "-o, --output <file>",
+        "description": "Write to file instead of stdout"
+      },
+      {
+        "key": "parallel-immediate",
+        "title": "--parallel-immediate",
+        "description": "Do not wait for multiplexing (with --parallel)"
+      },
+      {
+        "key": "parallel-max",
+        "title": "--parallel-max <num>",
+        "description": "Maximum concurrency for parallel transfers"
+      },
+      {
+        "key": "Z",
+        "title": "-Z, --parallel",
+        "description": "Perform transfers in parallel"
+      },
+      {
+        "key": "parallel",
+        "title": "-Z, --parallel",
+        "description": "Perform transfers in parallel"
+      },
+      {
+        "key": "pass",
+        "title": "--pass <phrase>",
+        "description": "Pass phrase for the private key"
+      },
+      {
+        "key": "path-as-is",
+        "title": "--path-as-is",
+        "description": "Do not squash .. sequences in URL path"
+      },
+      {
+        "key": "pinnedpubkey",
+        "title": "--pinnedpubkey <hashes>",
+        "description": "FILE/HASHES Public key to verify peer against"
+      },
+      {
+        "key": "post301",
+        "title": "--post301",
+        "description": "Do not switch to GET after following a 301"
+      },
+      {
+        "key": "post302",
+        "title": "--post302",
+        "description": "Do not switch to GET after following a 302"
+      },
+      {
+        "key": "post303",
+        "title": "--post303",
+        "description": "Do not switch to GET after following a 303"
+      },
+      {
+        "key": "preproxy",
+        "title": "--preproxy [protocol://]host[:port]",
+        "description": "Use this proxy first"
+      },
+      {
+        "key": "#",
+        "title": "-#, --progress-bar",
+        "description": "Display transfer progress as a bar"
+      },
+      {
+        "key": "progress-bar",
+        "title": "-#, --progress-bar",
+        "description": "Display transfer progress as a bar"
+      },
+      {
+        "key": "proto-default",
+        "title": "--proto-default <protocol>",
+        "description": "Use PROTOCOL for any URL missing a scheme"
+      },
+      {
+        "key": "proto-redir",
+        "title": "--proto-redir <protocols>",
+        "description": "Enable/disable PROTOCOLS on redirect"
+      },
+      {
+        "key": "proto",
+        "title": "--proto <protocols>",
+        "description": "Enable/disable PROTOCOLS"
+      },
+      {
+        "key": "proxy-anyauth",
+        "title": "--proxy-anyauth",
+        "description": "Pick any proxy authentication method"
+      },
+      {
+        "key": "proxy-basic",
+        "title": "--proxy-basic",
+        "description": "Use Basic authentication on the proxy"
+      },
+      {
+        "key": "proxy-cacert",
+        "title": "--proxy-cacert <file>",
+        "description": "CA certificate to verify peer against for proxy"
+      },
+      {
+        "key": "proxy-capath",
+        "title": "--proxy-capath <dir>",
+        "description": "CA directory to verify peer against for proxy"
+      },
+      {
+        "key": "proxy-cert-type",
+        "title": "--proxy-cert-type <type>",
+        "description": "Client certificate type for HTTPS proxy"
+      },
+      {
+        "key": "proxy-cert",
+        "title": "--proxy-cert <cert[:passwd]>",
+        "description": "Set client certificate for proxy"
+      },
+      {
+        "key": "proxy-ciphers",
+        "title": "--proxy-ciphers <list>",
+        "description": "SSL ciphers to use for proxy"
+      },
+      {
+        "key": "proxy-crlfile",
+        "title": "--proxy-crlfile <file>",
+        "description": "Set a CRL list for proxy"
+      },
+      {
+        "key": "proxy-digest",
+        "title": "--proxy-digest",
+        "description": "Use Digest authentication on the proxy"
+      },
+      {
+        "key": "proxy-header",
+        "title": "--proxy-header <header/@file>",
+        "description": "Pass custom header(s) to proxy"
+      },
+      {
+        "key": "proxy-insecure",
+        "title": "--proxy-insecure",
+        "description": "Do HTTPS proxy connections without verifying the proxy"
+      },
+      {
+        "key": "proxy-key-type",
+        "title": "--proxy-key-type <type>",
+        "description": "Private key file type for proxy"
+      },
+      {
+        "key": "proxy-key",
+        "title": "--proxy-key <key>",
+        "description": "Private key for HTTPS proxy"
+      },
+      {
+        "key": "proxy-negotiate",
+        "title": "--proxy-negotiate",
+        "description": "Use HTTP Negotiate (SPNEGO) authentication on the proxy"
+      },
+      {
+        "key": "proxy-ntlm",
+        "title": "--proxy-ntlm",
+        "description": "Use NTLM authentication on the proxy"
+      },
+      {
+        "key": "proxy-pass",
+        "title": "--proxy-pass <phrase>",
+        "description": "Pass phrase for the private key for HTTPS proxy"
+      },
+      {
+        "key": "proxy-pinnedpubkey",
+        "title": "--proxy-pinnedpubkey <hashes>",
+        "description": "FILE/HASHES public key to verify proxy with"
+      },
+      {
+        "key": "proxy-service-name",
+        "title": "--proxy-service-name <name>",
+        "description": "SPNEGO proxy service name"
+      },
+      {
+        "key": "proxy-ssl-allow-beast",
+        "title": "--proxy-ssl-allow-beast",
+        "description": "Allow security flaw for interop for HTTPS proxy"
+      },
+      {
+        "key": "proxy-ssl-auto-client-cert",
+        "title": "--proxy-ssl-auto-client-cert",
+        "description": "Use auto client certificate for proxy (Schannel)"
+      },
+      {
+        "key": "proxy-tls13-ciphers",
+        "title": "--proxy-tls13-ciphers <ciphersuite list>",
+        "description": ""
+      },
+      {
+        "key": "proxy-tlsauthtype",
+        "title": "--proxy-tlsauthtype <type>",
+        "description": "TLS authentication type for HTTPS proxy"
+      },
+      {
+        "key": "proxy-tlspassword",
+        "title": "--proxy-tlspassword <string>",
+        "description": "TLS password for HTTPS proxy"
+      },
+      {
+        "key": "proxy-tlsuser",
+        "title": "--proxy-tlsuser <name>",
+        "description": "TLS username for HTTPS proxy"
+      },
+      {
+        "key": "proxy-tlsv1",
+        "title": "--proxy-tlsv1",
+        "description": "Use TLSv1 for HTTPS proxy"
+      },
+      {
+        "key": "U",
+        "title": "-U, --proxy-user <user:password>",
+        "description": "Proxy user and password"
+      },
+      {
+        "key": "proxy-user",
+        "title": "-U, --proxy-user <user:password>",
+        "description": "Proxy user and password"
+      },
+      {
+        "key": "x",
+        "title": "-x, --proxy [protocol://]host[:port]",
+        "description": "Use this proxy"
+      },
+      {
+        "key": "proxy",
+        "title": "-x, --proxy [protocol://]host[:port]",
+        "description": "Use this proxy"
+      },
+      {
+        "key": "proxy1.0",
+        "title": "--proxy1.0 <host[:port]>",
+        "description": "Use HTTP/1.0 proxy on given port"
+      },
+      {
+        "key": "p",
+        "title": "-p, --proxytunnel",
+        "description": "Operate through an HTTP proxy tunnel (using CONNECT)"
+      },
+      {
+        "key": "proxytunnel",
+        "title": "-p, --proxytunnel",
+        "description": "Operate through an HTTP proxy tunnel (using CONNECT)"
+      },
+      {
+        "key": "pubkey",
+        "title": "--pubkey <key>",
+        "description": "SSH Public key file name"
+      },
+      {
+        "key": "Q",
+        "title": "-Q, --quote <command>",
+        "description": "Send command(s) to server before transfer"
+      },
+      {
+        "key": "quote",
+        "title": "-Q, --quote <command>",
+        "description": "Send command(s) to server before transfer"
+      },
+      {
+        "key": "random-file",
+        "title": "--random-file <file>",
+        "description": "File for reading random data from"
+      },
+      {
+        "key": "r",
+        "title": "-r, --range <range>",
+        "description": "Retrieve only the bytes within RANGE"
+      },
+      {
+        "key": "range",
+        "title": "-r, --range <range>",
+        "description": "Retrieve only the bytes within RANGE"
+      },
+      {
+        "key": "raw",
+        "title": "--raw",
+        "description": "Do HTTP \"raw\"; no transfer decoding"
+      },
+      {
+        "key": "e",
+        "title": "-e, --referer <URL>",
+        "description": "Referrer URL"
+      },
+      {
+        "key": "referer",
+        "title": "-e, --referer <URL>",
+        "description": "Referrer URL"
+      },
+      {
+        "key": "J",
+        "title": "-J, --remote-header-name",
+        "description": "Use the header-provided filename"
+      },
+      {
+        "key": "remote-header-name",
+        "title": "-J, --remote-header-name",
+        "description": "Use the header-provided filename"
+      },
+      {
+        "key": "remote-name-all",
+        "title": "--remote-name-all",
+        "description": "Use the remote file name for all URLs"
+      },
+      {
+        "key": "O",
+        "title": "-O, --remote-name",
+        "description": "Write output to a file named as the remote file"
+      },
+      {
+        "key": "remote-name",
+        "title": "-O, --remote-name",
+        "description": "Write output to a file named as the remote file"
+      },
+      {
+        "key": "R",
+        "title": "-R, --remote-time",
+        "description": "Set the remote file's time on the local output"
+      },
+      {
+        "key": "remote-time",
+        "title": "-R, --remote-time",
+        "description": "Set the remote file's time on the local output"
+      },
+      {
+        "key": "request-target",
+        "title": "--request-target <path>",
+        "description": "Specify the target for this request"
+      },
+      {
+        "key": "X",
+        "title": "-X, --request <command>",
+        "description": "Specify request command to use"
+      },
+      {
+        "key": "request",
+        "title": "-X, --request <command>",
+        "description": "Specify request command to use"
+      },
+      {
+        "key": "resolve",
+        "title": "--resolve <[+]host:port:addr[,addr]...>",
+        "description": "Resolve the host+port to this address"
+      },
+      {
+        "key": "retry-all-errors",
+        "title": "--retry-all-errors",
+        "description": "Retry all errors (use with --retry)"
+      },
+      {
+        "key": "retry-connrefused",
+        "title": "--retry-connrefused",
+        "description": "Retry on connection refused (use with --retry)"
+      },
+      {
+        "key": "retry-delay",
+        "title": "--retry-delay <seconds>",
+        "description": "Wait time between retries"
+      },
+      {
+        "key": "retry-max-time",
+        "title": "--retry-max-time <seconds>",
+        "description": "Retry only within this period"
+      },
+      {
+        "key": "retry",
+        "title": "--retry <num>",
+        "description": "Retry request if transient problems occur"
+      },
+      {
+        "key": "sasl-authzid",
+        "title": "--sasl-authzid <identity>",
+        "description": "Identity for SASL PLAIN authentication"
+      },
+      {
+        "key": "sasl-ir",
+        "title": "--sasl-ir",
+        "description": "Enable initial response in SASL authentication"
+      },
+      {
+        "key": "service-name",
+        "title": "--service-name <name>",
+        "description": "SPNEGO service name"
+      },
+      {
+        "key": "S",
+        "title": "-S, --show-error",
+        "description": "Show error even when -s is used"
+      },
+      {
+        "key": "show-error",
+        "title": "-S, --show-error",
+        "description": "Show error even when -s is used"
+      },
+      {
+        "key": "s",
+        "title": "-s, --silent",
+        "description": "Silent mode"
+      },
+      {
+        "key": "silent",
+        "title": "-s, --silent",
+        "description": "Silent mode"
+      },
+      {
+        "key": "socks4",
+        "title": "--socks4 <host[:port]>",
+        "description": "SOCKS4 proxy on given host + port"
+      },
+      {
+        "key": "socks4a",
+        "title": "--socks4a <host[:port]>",
+        "description": "SOCKS4a proxy on given host + port"
+      },
+      {
+        "key": "socks5-basic",
+        "title": "--socks5-basic",
+        "description": "Enable username/password auth for SOCKS5 proxies"
+      },
+      {
+        "key": "socks5-gssapi-nec",
+        "title": "--socks5-gssapi-nec",
+        "description": "Compatibility with NEC SOCKS5 server"
+      },
+      {
+        "key": "socks5-gssapi-service",
+        "title": "--socks5-gssapi-service <name>",
+        "description": "SOCKS5 proxy service name for GSS-API"
+      },
+      {
+        "key": "socks5-gssapi",
+        "title": "--socks5-gssapi",
+        "description": "Enable GSS-API auth for SOCKS5 proxies"
+      },
+      {
+        "key": "socks5-hostname",
+        "title": "--socks5-hostname <host[:port]>",
+        "description": "SOCKS5 proxy, pass host name to proxy"
+      },
+      {
+        "key": "socks5",
+        "title": "--socks5 <host[:port]>",
+        "description": "SOCKS5 proxy on given host + port"
+      },
+      {
+        "key": "Y",
+        "title": "-Y, --speed-limit <speed>",
+        "description": "Stop transfers slower than this"
+      },
+      {
+        "key": "speed-limit",
+        "title": "-Y, --speed-limit <speed>",
+        "description": "Stop transfers slower than this"
+      },
+      {
+        "key": "y",
+        "title": "-y, --speed-time <seconds>",
+        "description": "Trigger 'speed-limit' abort after this time"
+      },
+      {
+        "key": "speed-time",
+        "title": "-y, --speed-time <seconds>",
+        "description": "Trigger 'speed-limit' abort after this time"
+      },
+      {
+        "key": "ssl-allow-beast",
+        "title": "--ssl-allow-beast",
+        "description": "Allow security flaw to improve interop"
+      },
+      {
+        "key": "ssl-auto-client-cert",
+        "title": "--ssl-auto-client-cert",
+        "description": "Use auto client certificate (Schannel)"
+      },
+      {
+        "key": "ssl-no-revoke",
+        "title": "--ssl-no-revoke",
+        "description": "Disable cert revocation checks (Schannel)"
+      },
+      {
+        "key": "ssl-reqd",
+        "title": "--ssl-reqd",
+        "description": "Require SSL/TLS"
+      },
+      {
+        "key": "ssl-revoke-best-effort",
+        "title": "--ssl-revoke-best-effort",
+        "description": "Ignore missing/offline cert CRL dist points"
+      },
+      {
+        "key": "ssl",
+        "title": "--ssl",
+        "description": "Try SSL/TLS"
+      },
+      {
+        "key": "2",
+        "title": "-2, --sslv2",
+        "description": "Use SSLv2"
+      },
+      {
+        "key": "sslv2",
+        "title": "-2, --sslv2",
+        "description": "Use SSLv2"
+      },
+      {
+        "key": "3",
+        "title": "-3, --sslv3",
+        "description": "Use SSLv3"
+      },
+      {
+        "key": "sslv3",
+        "title": "-3, --sslv3",
+        "description": "Use SSLv3"
+      },
+      {
+        "key": "stderr",
+        "title": "--stderr <file>",
+        "description": "Where to redirect stderr"
+      },
+      {
+        "key": "styled-output",
+        "title": "--styled-output",
+        "description": "Enable styled output for HTTP headers"
+      },
+      {
+        "key": "suppress-connect-headers",
+        "title": "--suppress-connect-headers",
+        "description": "Suppress proxy CONNECT response headers"
+      },
+      {
+        "key": "tcp-fastopen",
+        "title": "--tcp-fastopen",
+        "description": "Use TCP Fast Open"
+      },
+      {
+        "key": "tcp-nodelay",
+        "title": "--tcp-nodelay",
+        "description": "Use the TCP_NODELAY option"
+      },
+      {
+        "key": "t",
+        "title": "-t, --telnet-option <opt=val>",
+        "description": "Set telnet option"
+      },
+      {
+        "key": "telnet-option",
+        "title": "-t, --telnet-option <opt=val>",
+        "description": "Set telnet option"
+      },
+      {
+        "key": "tftp-blksize",
+        "title": "--tftp-blksize <value>",
+        "description": "Set TFTP BLKSIZE option"
+      },
+      {
+        "key": "tftp-no-options",
+        "title": "--tftp-no-options",
+        "description": "Do not send any TFTP options"
+      },
+      {
+        "key": "z",
+        "title": "-z, --time-cond <time>",
+        "description": "Transfer based on a time condition"
+      },
+      {
+        "key": "time-cond",
+        "title": "-z, --time-cond <time>",
+        "description": "Transfer based on a time condition"
+      },
+      {
+        "key": "tls-max",
+        "title": "--tls-max <VERSION>",
+        "description": "Set maximum allowed TLS version"
+      },
+      {
+        "key": "tls13-ciphers",
+        "title": "--tls13-ciphers <ciphersuite list>",
+        "description": ""
+      },
+      {
+        "key": "tlsauthtype",
+        "title": "--tlsauthtype <type>",
+        "description": "TLS authentication type"
+      },
+      {
+        "key": "tlspassword",
+        "title": "--tlspassword <string>",
+        "description": "TLS password"
+      },
+      {
+        "key": "tlsuser",
+        "title": "--tlsuser <name>",
+        "description": "TLS user name"
+      },
+      {
+        "key": "tlsv1.0",
+        "title": "--tlsv1.0",
+        "description": "Use TLSv1.0 or greater"
+      },
+      {
+        "key": "tlsv1.1",
+        "title": "--tlsv1.1",
+        "description": "Use TLSv1.1 or greater"
+      },
+      {
+        "key": "tlsv1.2",
+        "title": "--tlsv1.2",
+        "description": "Use TLSv1.2 or greater"
+      },
+      {
+        "key": "tlsv1.3",
+        "title": "--tlsv1.3",
+        "description": "Use TLSv1.3 or greater"
+      },
+      {
+        "key": "1",
+        "title": "-1, --tlsv1",
+        "description": "Use TLSv1.0 or greater"
+      },
+      {
+        "key": "tlsv1",
+        "title": "-1, --tlsv1",
+        "description": "Use TLSv1.0 or greater"
+      },
+      {
+        "key": "tr-encoding",
+        "title": "--tr-encoding",
+        "description": "Request compressed transfer encoding"
+      },
+      {
+        "key": "trace-ascii",
+        "title": "--trace-ascii <file>",
+        "description": "Like --trace, but without hex output"
+      },
+      {
+        "key": "trace-time",
+        "title": "--trace-time",
+        "description": "Add time stamps to trace/verbose output"
+      },
+      {
+        "key": "trace",
+        "title": "--trace <file>",
+        "description": "Write a debug trace to FILE"
+      },
+      {
+        "key": "unix-socket",
+        "title": "--unix-socket <path>",
+        "description": "Connect through this Unix domain socket"
+      },
+      {
+        "key": "T",
+        "title": "-T, --upload-file <file>",
+        "description": "Transfer local FILE to destination"
+      },
+      {
+        "key": "upload-file",
+        "title": "-T, --upload-file <file>",
+        "description": "Transfer local FILE to destination"
+      },
+      {
+        "key": "url",
+        "title": "--url <url>",
+        "description": "URL to work with"
+      },
+      {
+        "key": "B",
+        "title": "-B, --use-ascii",
+        "description": "Use ASCII/text transfer"
+      },
+      {
+        "key": "use-ascii",
+        "title": "-B, --use-ascii",
+        "description": "Use ASCII/text transfer"
+      },
+      {
+        "key": "A",
+        "title": "-A, --user-agent <name>",
+        "description": "Send User-Agent <name> to server"
+      },
+      {
+        "key": "user-agent",
+        "title": "-A, --user-agent <name>",
+        "description": "Send User-Agent <name> to server"
+      },
+      {
+        "key": "u",
+        "title": "-u, --user <user:password>",
+        "description": "Server user and password"
+      },
+      {
+        "key": "user",
+        "title": "-u, --user <user:password>",
+        "description": "Server user and password"
+      },
+      {
+        "key": "v",
+        "title": "-v, --verbose",
+        "description": "Make the operation more talkative"
+      },
+      {
+        "key": "verbose",
+        "title": "-v, --verbose",
+        "description": "Make the operation more talkative"
+      },
+      {
+        "key": "V",
+        "title": "-V, --version",
+        "description": "Show version number and quit"
+      },
+      {
+        "key": "version",
+        "title": "-V, --version",
+        "description": "Show version number and quit"
+      },
+      {
+        "key": "w",
+        "title": "-w, --write-out <format>",
+        "description": "Use output FORMAT after completion"
+      },
+      {
+        "key": "write-out",
+        "title": "-w, --write-out <format>",
+        "description": "Use output FORMAT after completion"
+      },
+      {
+        "key": "xattr",
+        "title": "--xattr",
+        "description": "Store metadata in extended file attributes"
+      }
+    ]
+  }
+]

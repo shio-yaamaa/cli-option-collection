@@ -6,6 +6,7 @@ import { bashBuiltin } from './fetchers/bash-builtin';
 import { brew } from './fetchers/brew';
 import { bundler } from './fetchers/bundler';
 import { cargo } from './fetchers/cargo';
+import { curl } from './fetchers/curl';
 import { daemontools } from './fetchers/daemontools';
 import { docker } from './fetchers/docker';
 import { ffmpeg } from './fetchers/ffmpeg';
@@ -76,6 +77,8 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['cp', gnuCoreutils.cp],
   ['csh', openbsd.csh],
   ['csplit', gnuCoreutils.csplit],
+  ['curl', curl.curl],
+  ['curl-config', curl.curlConfig],
   ['cut', gnuCoreutils.cut],
   ['date', gnuCoreutils.date],
   ['dc', openbsd.dc],
@@ -167,6 +170,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['mapfile', bashBuiltin.mapfile],
   ['md5', openbsd.md5],
   ['md5sum', gnuCoreutils.md5sum],
+  ['mk-ca-bundle', curl.mkCaBundle],
   ['mkdir', gnuCoreutils.mkdir],
   ['mkfifo', gnuCoreutils.mkfifo],
   ['mknod', gnuCoreutils.mknod],
