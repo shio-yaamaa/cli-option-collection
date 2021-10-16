@@ -7,20 +7,20 @@
 
 # Command Rankings
 
-## Ranking by Number of Options
+## Ranking by Number of Distinct Options
 
 ||Command Name|Count|
 |:--|:--|:--|
-|1|`curl`|301|
-|2|`magick convert`|246|
+|1|`magick convert`|246|
+|2|`curl`|242|
 |3|`magick mogrify`|242|
 |4|`magick`|241|
 |5|`magick-script`|237|
-|6|`rsync`|191|
-|7|`mysqldump`|160|
-|8|`ffmpeg`|159|
-|9|`mysql`|130|
-|10|`git diff-tree`|123|
+|6|`ffmpeg`|156|
+|7|`rsync`|144|
+|8|`mysqldump`|123|
+|9|`docker run`|103|
+|10|`docker container run`|103|
 
 ## Ranking by Number of Short (Single-Letter) Options
 

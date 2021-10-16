@@ -1,22 +1,22 @@
 import { Command } from '../types';
-import { buildRanking } from '../utils/utils';
+import { buildRanking, uniqueBy } from '../utils/utils';
 import { CommandRankings } from './types';
 
 export class CommandRankingsBuilder {
   private limit: number;
-  private optionCounts: { commandName: string; count: number }[];
+  private distinctOptionCounts: { commandName: string; count: number }[];
   private shortOptionCounts: { commandName: string; count: number }[];
 
   constructor(limit: number) {
     this.limit = limit;
-    this.optionCounts = [];
+    this.distinctOptionCounts = [];
     this.shortOptionCounts = [];
   }
 
   public addCommand(command: Command) {
-    this.optionCounts.push({
+    this.distinctOptionCounts.push({
       commandName: command.name,
-      count: command.options.length,
+      count: countDistinctOptions(command),
     });
     this.shortOptionCounts.push({
       commandName: command.name,
@@ -26,8 +26,8 @@ export class CommandRankingsBuilder {
 
   public build(): CommandRankings {
     return {
-      optionCountRanking: buildRanking(
-        this.optionCounts,
+      distinctOptionCountRanking: buildRanking(
+        this.distinctOptionCounts,
         (a, b) => b.count - a.count,
         this.limit
       ),
@@ -39,3 +39,7 @@ export class CommandRankingsBuilder {
     };
   }
 }
+
+// Distinct options are options with distinct titles.
+const countDistinctOptions = (command: Command): number =>
+  uniqueBy(command.options, (option) => option.title).length;
