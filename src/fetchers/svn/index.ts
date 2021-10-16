@@ -19,17 +19,17 @@ export const svn = {
       ),
     hasGlobalOptions: false,
   }),
+  svndumpfilter: buildForCommandWithSubcommands('svndumpfilter', {
+    buildOptionListURL: (version) =>
+      new URL(
+        `https://svnbook.red-bean.com/en/${version}/svn.ref.svndumpfilter.html`
+      ),
+    hasGlobalOptions: false,
+  }),
   svnlook: buildForCommandWithSubcommands('svnlook', {
     buildOptionListURL: (version) =>
       new URL(
         `https://svnbook.red-bean.com/en/${version}/svn.ref.svnlook.html`
-      ),
-    hasGlobalOptions: false,
-  }),
-  svnsync: buildForCommandWithSubcommands('svnsync', {
-    buildOptionListURL: (version) =>
-      new URL(
-        `https://svnbook.red-bean.com/en/${version}/svn.ref.svnsync.html`
       ),
     hasGlobalOptions: false,
   }),
@@ -46,10 +46,10 @@ export const svn = {
         `https://svnbook.red-bean.com/en/${version}/svn.ref.svnserve.html`
       ),
   }),
-  svndumpfilter: buildForCommandWithSubcommands('svndumpfilter', {
+  svnsync: buildForCommandWithSubcommands('svnsync', {
     buildOptionListURL: (version) =>
       new URL(
-        `https://svnbook.red-bean.com/en/${version}/svn.ref.svndumpfilter.html`
+        `https://svnbook.red-bean.com/en/${version}/svn.ref.svnsync.html`
       ),
     hasGlobalOptions: false,
   }),
