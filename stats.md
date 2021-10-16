@@ -3,7 +3,7 @@
 
 - Number of base commands: 299
 - Number of commands (including subcommands): 1058
-- Number of options: 15368
+- Number of options: 15414
 
 # Command Rankings
 
@@ -295,7 +295,7 @@
 |:--|:--|:--|
 |1|`revision`|63|
 |2|`remote`|10|
-|3|`recursive`|7|
+|3|`recursive`|8|
 |4|`reverse`|5|
 |5|`remove`|4|
 |6|`reference`|3|
@@ -402,11 +402,12 @@
 |2|`no-prompt`|2|
 |3|`assume-yes`|1|
 |4|`speed-time`|1|
-|5|`max-forw-scroll`|1|
-|6|`no-tablespaces`|1|
-|7|`number-int-cols`|1|
-|8|`fuzzy`|1|
-|9|`yydebug`|1|
+|5|`ignore-case`|1|
+|6|`max-forw-scroll`|1|
+|7|`no-tablespaces`|1|
+|8|`number-int-cols`|1|
+|9|`fuzzy`|1|
+|10|`yydebug`|1|
 
 ## z
 
@@ -417,9 +418,10 @@
 |3|`null`|3|
 |4|`elide-empty-files`|1|
 |5|`time-cond`|1|
-|6|`window`|1|
-|7|`suffix`|1|
-|8|`compress`|1|
+|6|`null-data`|1|
+|7|`window`|1|
+|8|`suffix`|1|
+|9|`compress`|1|
 
 ## A
 
@@ -478,8 +480,8 @@
 |6|`from-deb`|1|
 |7|`dump-header`|1|
 |8|`dereference-args`|1|
-|9|`directory`|1|
-|10|`database`|1|
+|9|`devices`|1|
+|10|`directory`|1|
 
 ## E
 
@@ -698,8 +700,8 @@
 |6|`show-tabs`|1|
 |7|`upload-file`|1|
 |8|`print-type`|1|
-|9|`tag-file`|1|
-|10|`tab`|1|
+|9|`initial-tab`|1|
+|10|`tag-file`|1|
 
 ## U
 

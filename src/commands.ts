@@ -16,6 +16,7 @@ import { git } from './fetchers/git';
 import { gnuCoreutils } from './fetchers/gnu-coreutils';
 import { go } from './fetchers/go';
 import { graphviz } from './fetchers/graphviz';
+import { grep } from './fetchers/grep';
 import { htop } from './fetchers/htop';
 import { imagemagick } from './fetchers/imagemagick';
 import { jq } from './fetchers/jq';
@@ -130,7 +131,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['getopts', bashBuiltin.getopts],
   ['git', git],
   ['go', go],
-  ['grep', openbsd.grep],
+  ['grep', join(openbsd.grep, grep)],
   ['groups', gnuCoreutils.groups],
   ['gunzip', openbsd.gunzip],
   ['gzcat', openbsd.gzcat],

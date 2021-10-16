@@ -167,6 +167,236 @@
         "key": "line-buffered",
         "title": "--line-buffered",
         "description": "Force output to be line buffered. By default, output is line buffered when standard output is a terminal and block buffered otherwise."
+      },
+      {
+        "key": "help",
+        "title": "--help",
+        "description": "Print a usage message briefly summarizing the command-line options and the bug-reporting address, then exit."
+      },
+      {
+        "key": "version",
+        "title": "-V, --version",
+        "description": "Print the version number of grep to the standard output stream. This version number should be included in all bug reports."
+      },
+      {
+        "key": "regexp",
+        "title": "-e patterns, --regexp=patterns",
+        "description": "Use patterns as one or more patterns; newlines within patterns separate each pattern from the next. If this option is used multiple times or is combined with the -f (--file) option, search for all patterns given. Typically patterns should be quoted when grep is used in a shell command. (-e is specified by POSIX.)"
+      },
+      {
+        "key": "file",
+        "title": "-f file, --file=file",
+        "description": "Obtain patterns from file, one per line. If this option is used multiple times or is combined with the -e (--regexp) option, search for all patterns given. The empty file contains zero patterns, and therefore matches nothing. (-f is specified by POSIX.)"
+      },
+      {
+        "key": "y",
+        "title": "-i, -y, --ignore-case",
+        "description": "Ignore case distinctions in patterns and input data, so that characters that differ only in case match each other. Although this is straightforward when letters differ in case only via lowercase-uppercase pairs, the behavior is unspecified in other situations. For example, uppercase “S” has an unusual lowercase counterpart “ſ” (Unicode character U+017F, LATIN SMALL LETTER LONG S) in many locales, and it is unspecified whether this unusual character matches “S” or “s” even though uppercasing it yields “S”. Another example: the lowercase German letter “ß” (U+00DF, LATIN SMALL LETTER SHARP S) is normally capitalized as the two-character string “SS” but it does not match “SS”, and it might not match the uppercase letter “ẞ” (U+1E9E, LATIN CAPITAL LETTER SHARP S) even though lowercasing the latter yields the former.\n\n-y is an obsolete synonym that is provided for compatibility. (-i is specified by POSIX.)"
+      },
+      {
+        "key": "ignore-case",
+        "title": "-i, -y, --ignore-case",
+        "description": "Ignore case distinctions in patterns and input data, so that characters that differ only in case match each other. Although this is straightforward when letters differ in case only via lowercase-uppercase pairs, the behavior is unspecified in other situations. For example, uppercase “S” has an unusual lowercase counterpart “ſ” (Unicode character U+017F, LATIN SMALL LETTER LONG S) in many locales, and it is unspecified whether this unusual character matches “S” or “s” even though uppercasing it yields “S”. Another example: the lowercase German letter “ß” (U+00DF, LATIN SMALL LETTER SHARP S) is normally capitalized as the two-character string “SS” but it does not match “SS”, and it might not match the uppercase letter “ẞ” (U+1E9E, LATIN CAPITAL LETTER SHARP S) even though lowercasing the latter yields the former.\n\n-y is an obsolete synonym that is provided for compatibility. (-i is specified by POSIX.)"
+      },
+      {
+        "key": "no-ignore-case",
+        "title": "--no-ignore-case",
+        "description": "Do not ignore case distinctions in patterns and input data. This is the default. This option is useful for passing to shell scripts that already use -i, in order to cancel its effects because the two options override each other."
+      },
+      {
+        "key": "invert-match",
+        "title": "-v, --invert-match",
+        "description": "Invert the sense of matching, to select non-matching lines. (-v is specified by POSIX.)"
+      },
+      {
+        "key": "word-regexp",
+        "title": "-w, --word-regexp",
+        "description": "Select only those lines containing matches that form whole words. The test is that the matching substring must either be at the beginning of the line, or preceded by a non-word constituent character. Similarly, it must be either at the end of the line or followed by a non-word constituent character. Word constituent characters are letters, digits, and the underscore. This option has no effect if -x is also specified.\n\nBecause the -w option can match a substring that does not begin and end with word constituents, it differs from surrounding a regular expression with ‘\\<’ and ‘\\>’. For example, although ‘grep -w @’ matches a line containing only ‘@’, ‘grep '\\<@\\>'’ cannot match any line because ‘@’ is not a word constituent. See The Backslash Character and Special Expressions."
+      },
+      {
+        "key": "line-regexp",
+        "title": "-x, --line-regexp",
+        "description": "Select only those matches that exactly match the whole line. For regular expression patterns, this is like parenthesizing each pattern and then surrounding it with ‘^’ and ‘$’. (-x is specified by POSIX.)"
+      },
+      {
+        "key": "count",
+        "title": "-c, --count",
+        "description": "Suppress normal output; instead print a count of matching lines for each input file. With the -v (--invert-match) option, count non-matching lines. (-c is specified by POSIX.)"
+      },
+      {
+        "key": "color",
+        "title": "--color[=WHEN], --colour[=WHEN]",
+        "description": "Surround the matched (non-empty) strings, matching lines, context lines, file names, line numbers, byte offsets, and separators (for fields and groups of context lines) with escape sequences to display them in color on the terminal. The colors are defined by the environment variable GREP_COLORS and default to ‘ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36’ for bold red matched text, magenta file names, green line numbers, green byte offsets, cyan separators, and default terminal colors otherwise. The deprecated environment variable GREP_COLOR is still supported, but its setting does not have priority; it defaults to ‘01;31’ (bold red) which only covers the color for matched text. WHEN is ‘never’, ‘always’, or ‘auto’."
+      },
+      {
+        "key": "colour",
+        "title": "--color[=WHEN], --colour[=WHEN]",
+        "description": "Surround the matched (non-empty) strings, matching lines, context lines, file names, line numbers, byte offsets, and separators (for fields and groups of context lines) with escape sequences to display them in color on the terminal. The colors are defined by the environment variable GREP_COLORS and default to ‘ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36’ for bold red matched text, magenta file names, green line numbers, green byte offsets, cyan separators, and default terminal colors otherwise. The deprecated environment variable GREP_COLOR is still supported, but its setting does not have priority; it defaults to ‘01;31’ (bold red) which only covers the color for matched text. WHEN is ‘never’, ‘always’, or ‘auto’."
+      },
+      {
+        "key": "files-without-match",
+        "title": "-L, --files-without-match",
+        "description": "Suppress normal output; instead print the name of each input file from which no output would normally have been printed."
+      },
+      {
+        "key": "files-with-matches",
+        "title": "-l, --files-with-matches",
+        "description": "Suppress normal output; instead print the name of each input file from which output would normally have been printed. Scanning each input file stops upon first match. (-l is specified by POSIX.)"
+      },
+      {
+        "key": "max-count",
+        "title": "-m num, --max-count=num",
+        "description": "Stop after the first num selected lines. If the input is standard input from a regular file, and num selected lines are output, grep ensures that the standard input is positioned just after the last selected line before exiting, regardless of the presence of trailing context lines. This enables a calling process to resume a search. For example, the following shell script makes use of it:\n\nwhile grep -m 1 'PATTERN'\ndo\n  echo xxxx\ndone < FILE\n\nBut the following probably will not work because a pipe is not a regular file:\n\n# This probably will not work.\ncat FILE |\nwhile grep -m 1 'PATTERN'\ndo\n  echo xxxx\ndone\n\nWhen grep stops after num selected lines, it outputs any trailing context lines. When the -c or --count option is also used, grep does not output a count greater than num. When the -v or --invert-match option is also used, grep stops after outputting num non-matching lines."
+      },
+      {
+        "key": "only-matching",
+        "title": "-o, --only-matching",
+        "description": "Print only the matched (non-empty) parts of matching lines, with each such part on a separate output line. Output lines use the same delimiters as input, and delimiters are null bytes if -z (--null-data) is also used (see Other Options)."
+      },
+      {
+        "key": "quiet",
+        "title": "-q, --quiet, --silent",
+        "description": "Quiet; do not write anything to standard output. Exit immediately with zero status if any match is found, even if an error was detected. Also see the -s or --no-messages option. (-q is specified by POSIX.)"
+      },
+      {
+        "key": "silent",
+        "title": "-q, --quiet, --silent",
+        "description": "Quiet; do not write anything to standard output. Exit immediately with zero status if any match is found, even if an error was detected. Also see the -s or --no-messages option. (-q is specified by POSIX.)"
+      },
+      {
+        "key": "no-messages",
+        "title": "-s, --no-messages",
+        "description": "Suppress error messages about nonexistent or unreadable files. Portability note: unlike GNU grep, 7th Edition Unix grep did not conform to POSIX, because it lacked -q and its -s option behaved like GNU grep’s -q option.1 USG-style grep also lacked -q but its -s option behaved like GNU grep’s. Portable shell scripts should avoid both -q and -s and should redirect standard and error output to /dev/null instead. (-s is specified by POSIX.)"
+      },
+      {
+        "key": "byte-offset",
+        "title": "-b, --byte-offset",
+        "description": "Print the 0-based byte offset within the input file before each line of output. If -o (--only-matching) is specified, print the offset of the matching part itself."
+      },
+      {
+        "key": "with-filename",
+        "title": "-H, --with-filename",
+        "description": "Print the file name for each match. This is the default when there is more than one file to search."
+      },
+      {
+        "key": "no-filename",
+        "title": "-h, --no-filename",
+        "description": "Suppress the prefixing of file names on output. This is the default when there is only one file (or only standard input) to search."
+      },
+      {
+        "key": "line-number",
+        "title": "-n, --line-number",
+        "description": "Prefix each line of output with the 1-based line number within its input file. (-n is specified by POSIX.)"
+      },
+      {
+        "key": "T",
+        "title": "-T, --initial-tab",
+        "description": "Make sure that the first character of actual line content lies on a tab stop, so that the alignment of tabs looks normal. This is useful with options that prefix their output to the actual content: -H, -n, and -b. This may also prepend spaces to output line numbers and byte offsets so that lines from a single file all start at the same column."
+      },
+      {
+        "key": "initial-tab",
+        "title": "-T, --initial-tab",
+        "description": "Make sure that the first character of actual line content lies on a tab stop, so that the alignment of tabs looks normal. This is useful with options that prefix their output to the actual content: -H, -n, and -b. This may also prepend spaces to output line numbers and byte offsets so that lines from a single file all start at the same column."
+      },
+      {
+        "key": "null",
+        "title": "-Z, --null",
+        "description": "Output a zero byte (the ASCII NUL character) instead of the character that normally follows a file name. For example, ‘grep -lZ’ outputs a zero byte after each file name instead of the usual newline. This option makes the output unambiguous, even in the presence of file names containing unusual characters like newlines. This option can be used with commands like ‘find -print0’, ‘perl -0’, ‘sort -z’, and ‘xargs -0’ to process arbitrary file names, even those that contain newline characters."
+      },
+      {
+        "key": "after-context",
+        "title": "-A num, --after-context=num",
+        "description": "Print num lines of trailing context after matching lines."
+      },
+      {
+        "key": "before-context",
+        "title": "-B num, --before-context=num",
+        "description": "Print num lines of leading context before matching lines."
+      },
+      {
+        "key": "group-separator",
+        "title": "--group-separator=string",
+        "description": "When -A, -B or -C are in use, print string instead of -- between groups of lines."
+      },
+      {
+        "key": "no-group-separator",
+        "title": "--no-group-separator",
+        "description": "When -A, -B or -C are in use, do not print a separator between groups of lines."
+      },
+      {
+        "key": "text",
+        "title": "-a, --text",
+        "description": "Process a binary file as if it were text; this is equivalent to the ‘--binary-files=text’ option."
+      },
+      {
+        "key": "D",
+        "title": "-D action, --devices=action",
+        "description": "If an input file is a device, FIFO, or socket, use action to process it. If action is ‘read’, all devices are read just as if they were ordinary files. If action is ‘skip’, devices, FIFOs, and sockets are silently skipped. By default, devices are read if they are on the command line or if the -R (--dereference-recursive) option is used, and are skipped if they are encountered recursively and the -r (--recursive) option is used. This option has no effect on a file that is read via standard input."
+      },
+      {
+        "key": "devices",
+        "title": "-D action, --devices=action",
+        "description": "If an input file is a device, FIFO, or socket, use action to process it. If action is ‘read’, all devices are read just as if they were ordinary files. If action is ‘skip’, devices, FIFOs, and sockets are silently skipped. By default, devices are read if they are on the command line or if the -R (--dereference-recursive) option is used, and are skipped if they are encountered recursively and the -r (--recursive) option is used. This option has no effect on a file that is read via standard input."
+      },
+      {
+        "key": "d",
+        "title": "-d action, --directories=action",
+        "description": "If an input file is a directory, use action to process it. By default, action is ‘read’, which means that directories are read just as if they were ordinary files (some operating systems and file systems disallow this, and will cause grep to print error messages for every directory or silently skip them). If action is ‘skip’, directories are silently skipped. If action is ‘recurse’, grep reads all files under each directory, recursively, following command-line symbolic links and skipping other symlinks; this is equivalent to the -r option."
+      },
+      {
+        "key": "directories",
+        "title": "-d action, --directories=action",
+        "description": "If an input file is a directory, use action to process it. By default, action is ‘read’, which means that directories are read just as if they were ordinary files (some operating systems and file systems disallow this, and will cause grep to print error messages for every directory or silently skip them). If action is ‘skip’, directories are silently skipped. If action is ‘recurse’, grep reads all files under each directory, recursively, following command-line symbolic links and skipping other symlinks; this is equivalent to the -r option."
+      },
+      {
+        "key": "exclude",
+        "title": "--exclude=glob",
+        "description": "Skip any command-line file with a name suffix that matches the pattern glob, using wildcard matching; a name suffix is either the whole name, or a trailing part that starts with a non-slash character immediately after a slash (‘/’) in the name. When searching recursively, skip any subfile whose base name matches glob; the base name is the part after the last slash. A pattern can use ‘*’, ‘?’, and ‘[’...‘]’ as wildcards, and \\ to quote a wildcard or backslash character literally."
+      },
+      {
+        "key": "exclude-from",
+        "title": "--exclude-from=file",
+        "description": "Skip files whose name matches any of the patterns read from file (using wildcard matching as described under --exclude)."
+      },
+      {
+        "key": "exclude-dir",
+        "title": "--exclude-dir=glob",
+        "description": "Skip any command-line directory with a name suffix that matches the pattern glob. When searching recursively, skip any subdirectory whose base name matches glob. Ignore any redundant trailing slashes in glob."
+      },
+      {
+        "key": "include",
+        "title": "--include=glob",
+        "description": "Search only files whose name matches glob, using wildcard matching as described under --exclude. If contradictory --include and --exclude options are given, the last matching one wins. If no --include or --exclude options match, a file is included unless the first such option is --include."
+      },
+      {
+        "key": "r",
+        "title": "-r, --recursive",
+        "description": "For each directory operand, read and process all files in that directory, recursively. Follow symbolic links on the command line, but skip symlinks that are encountered recursively. Note that if no file operand is given, grep searches the working directory. This is the same as the ‘--directories=recurse’ option."
+      },
+      {
+        "key": "recursive",
+        "title": "-r, --recursive",
+        "description": "For each directory operand, read and process all files in that directory, recursively. Follow symbolic links on the command line, but skip symlinks that are encountered recursively. Note that if no file operand is given, grep searches the working directory. This is the same as the ‘--directories=recurse’ option."
+      },
+      {
+        "key": "dereference-recursive",
+        "title": "-R, --dereference-recursive",
+        "description": "For each directory operand, read and process all files in that directory, recursively, following all symbolic links."
+      },
+      {
+        "key": "binary",
+        "title": "-U, --binary",
+        "description": "On platforms that distinguish between text and binary I/O, use the latter when reading and writing files other than the user’s terminal, so that all input bytes are read and written as-is. This overrides the default behavior where grep follows the operating system’s advice whether to use text or binary I/O. On MS-Windows when grep uses text I/O it reads a carriage return–newline pair as a newline and a Control-Z as end-of-file, and it writes a newline as a carriage return–newline pair.\n\nWhen using text I/O --byte-offset (-b) counts and --binary-files heuristics apply to input data after text-I/O processing. Also, the --binary-files heuristics need not agree with the --binary option; that is, they may treat the data as text even if --binary is given, or vice versa. See File and Directory Selection.\n\nThis option has no effect on GNU and other POSIX-compatible platforms, which do not distinguish text from binary I/O."
+      },
+      {
+        "key": "z",
+        "title": "-z, --null-data",
+        "description": "Treat input and output data as sequences of lines, each terminated by a zero byte (the ASCII NUL character) instead of a newline. Like the -Z or --null option, this option can be used with commands like ‘sort -z’ to process arbitrary file names."
+      },
+      {
+        "key": "null-data",
+        "title": "-z, --null-data",
+        "description": "Treat input and output data as sequences of lines, each terminated by a zero byte (the ASCII NUL character) instead of a newline. Like the -Z or --null option, this option can be used with commands like ‘sort -z’ to process arbitrary file names."
       }
     ]
   }
