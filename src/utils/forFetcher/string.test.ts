@@ -83,7 +83,7 @@ describe('countIndentWidth', () => {
 });
 
 describe('extractLines', () => {
-  test('test', () => {
+  test('Extract the specified range', () => {
     const extractedLines = extractLines(
       ['before', 'start', 'content', 'content', 'end', 'end'],
       (line) => line === 'start',
@@ -95,5 +95,14 @@ describe('extractLines', () => {
       'content',
       'end',
     ]);
+  });
+
+  test('Start and end cannot be the same line', () => {
+    const extractedLines = extractLines(
+      ['a', 'a', 'a'],
+      (line) => line === 'a',
+      (line) => line === 'a'
+    );
+    expect(extractedLines).toStrictEqual(['a', 'a']);
   });
 });

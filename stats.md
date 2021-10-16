@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 300
-- Number of commands (including subcommands): 1059
-- Number of options: 15424
+- Number of base commands: 302
+- Number of commands (including subcommands): 1061
+- Number of options: 15577
 
 # Command Rankings
 
@@ -29,13 +29,13 @@
 |1|`curl`|59|
 |2|`rsync`|50|
 |3|`less`|47|
-|4|`ssh`|44|
-|5|`dir`|40|
-|6|`ls`|40|
-|7|`vdir`|40|
-|8|`wget2`|40|
-|9|`nc`|39|
-|10|`wget`|39|
+|4|`zip`|46|
+|5|`ssh`|44|
+|6|`dir`|40|
+|7|`ls`|40|
+|8|`vdir`|40|
+|9|`wget2`|40|
+|10|`nc`|39|
 
 # Aliases
 
@@ -91,7 +91,7 @@
 |1|`detach`|12|
 |2|`directory`|8|
 |3|`debug`|7|
-|4|`delete`|6|
+|4|`delete`|7|
 |5|`decode`|3|
 |6|`delimiter`|3|
 |7|`driver`|3|
@@ -148,7 +148,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`help`|85|
+|1|`help`|86|
 |2|`host`|8|
 |3|`human-readable`|6|
 |4|`no-dereference`|4|
@@ -168,10 +168,10 @@
 |3|`input`|4|
 |4|`installed`|4|
 |5|`ignore-garbage`|3|
-|6|`inode`|3|
-|7|`install-dir`|3|
-|8|`regexp-ignore-case`|3|
-|9|`include`|2|
+|6|`include`|3|
+|7|`inode`|3|
+|8|`install-dir`|3|
+|9|`regexp-ignore-case`|3|
 |10|`input-file`|2|
 
 ## j
@@ -184,6 +184,7 @@
 |4|`jump-target`|1|
 |5|`syslog`|1|
 |6|`skip-bytes`|1|
+|7|`junk-paths`|1|
 
 ## k
 
@@ -224,11 +225,11 @@
 |3|`merge`|8|
 |4|`mode`|4|
 |5|`message-id`|2|
-|6|`canonicalize-missing`|2|
-|7|`mirror`|2|
-|8|`ignore-missing`|1|
-|9|`fix-missing`|1|
-|10|`max-time`|1|
+|6|`move`|2|
+|7|`canonicalize-missing`|2|
+|8|`mirror`|2|
+|9|`ignore-missing`|1|
+|10|`fix-missing`|1|
 
 ## n
 
@@ -279,7 +280,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`quiet`|204|
+|1|`quiet`|205|
 |2|`hide-control-chars`|3|
 |3|`silent`|3|
 |4|`quick`|3|
@@ -340,7 +341,7 @@
 |:--|:--|:--|
 |1|`user`|21|
 |2|`update-sources`|9|
-|3|`update`|5|
+|3|`update`|6|
 |4|`patch`|4|
 |5|`show-updates`|3|
 |6|`untracked-files`|2|
@@ -353,7 +354,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`verbose`|120|
+|1|`verbose`|121|
 |2|`version`|23|
 |3|`volume`|4|
 |4|`show-nonprinting`|2|
@@ -385,7 +386,7 @@
 |:--|:--|:--|
 |1|`extensions`|9|
 |2|`one-file-system`|3|
-|3|`exclude`|2|
+|3|`exclude`|3|
 |4|`force-directories`|2|
 |5|`regexp`|1|
 |6|`proxy`|1|
@@ -422,6 +423,7 @@
 |7|`window`|1|
 |8|`suffix`|1|
 |9|`compress`|1|
+|10|`archive-comment`|1|
 
 ## A
 
@@ -554,6 +556,7 @@
 |7|`ignore-dependencies`|1|
 |8|`IGNORE-CASE`|1|
 |9|`ignore-times`|1|
+|10|`no-image`|1|
 
 ## J
 
@@ -563,6 +566,7 @@
 |2|`status-column`|1|
 |3|`join-lines`|1|
 |4|`omit-link-times`|1|
+|5|`junk-sfx`|1|
 
 ## K
 
@@ -631,6 +635,7 @@
 |5|`format`|1|
 |6|`omit-dir-times`|1|
 |7|`optional`|1|
+|8|`output-file`|1|
 
 ## P
 
@@ -727,6 +732,7 @@
 |3|`verbose-versions`|1|
 |4|`version-control`|1|
 |5|`version-sort`|1|
+|6|`VMS-portable`|1|
 
 ## W
 
@@ -769,4 +775,5 @@
 |:--|:--|:--|
 |1|`context`|5|
 |2|`parallel`|1|
+|3|`compression-method`|1|
 

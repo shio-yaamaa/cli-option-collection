@@ -10,6 +10,7 @@ import { curl } from './fetchers/curl';
 import { daemontools } from './fetchers/daemontools';
 import { docker } from './fetchers/docker';
 import { ffmpeg } from './fetchers/ffmpeg';
+import { freebsd } from './fetchers/freebsd';
 import { fzf } from './fetchers/fzf';
 import { gem } from './fetchers/gem';
 import { git } from './fetchers/git';
@@ -315,6 +316,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['uniq', gnuCoreutils.uniq],
   ['unlink', gnuCoreutils.unlink],
   ['unset', bashBuiltin.unset],
+  ['unzip', freebsd.unzip],
   ['uptime', gnuCoreutils.uptime],
   ['users', gnuCoreutils.users],
   ['vdir', gnuCoreutils.vdir],
@@ -334,6 +336,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['zcat', openbsd.zcat],
   ['zegrep', openbsd.zegrep],
   ['zfgrep', openbsd.zfgrep],
+  ['zip', freebsd.zip],
   ['zgrep', openbsd.zgrep],
 ]);
 
