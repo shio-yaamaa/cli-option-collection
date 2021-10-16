@@ -1,6 +1,4 @@
-import path from 'path';
-import decompress from 'decompress';
-import { rmSync, moveSync } from 'fs-extra';
+import { downloadArchive, fetchDocumentFromURL } from './utils/forFetcher/http';
 
 import {
   download,
@@ -37,19 +35,5 @@ const prepareGNUCoreutils = async () => {
   if (!latest) {
     throw new Error('No version available for GNU CoreUtils');
   }
-  const filename = (() => {
-    const split = latest.href.split('/');
-    return split[split.length - 1];
-  })();
-
-  await download(new URL(latest.href), filename);
-  const archivePath = path.resolve(DOWNLOADS_DIRECTORY, filename);
-  await decompress(archivePath, DOWNLOADS_DIRECTORY, {
-    plugins: [decompressTarxz()],
-  });
-  rmSync(archivePath);
-  moveSync(
-    path.resolve(DOWNLOADS_DIRECTORY, filename.replace(/\.tar\.xz$/, '')),
-    path.resolve(DOWNLOADS_DIRECTORY, 'gnu-coreutils')
-  );
+  await downloadArchive(new URL(latest.href), '.tar.xz', 'gnu-coreutils');
 };
