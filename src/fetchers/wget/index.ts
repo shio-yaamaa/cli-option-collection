@@ -3,6 +3,7 @@ import { fetchWget2 } from './wget2';
 
 // BUG: Options with a single dash and multiple letters (e.g. "-nd", "-nH")
 //      are not recognized.
+// NOTE: "Not implemented" message is included in option titles.
 
 export const wget = {
   wget: {

@@ -317,6 +317,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['wall', openbsd.wall],
   ['wc', gnuCoreutils.wc],
   ['wget', wget.wget],
+  ['wget2', wget.wget2],
   ['whatis', openbsd.whatis],
   ['who', gnuCoreutils.who],
   ['whoami', gnuCoreutils.whoami],
