@@ -114,9 +114,11 @@ const fetchAllOptions = async (
   localOptions: Option[];
 }> => {
   const document = await fetchDocumentFromURL(url);
-  const [firstOptionList, secondOptionList] = Array.from(
-    document.querySelectorAll<HTMLDListElement>('.sect2 > div > dl')
+  const lists = Array.from(document.querySelectorAll('dl'));
+  const topLevelLists = lists.filter(
+    (list) => !list.parentElement?.closest('dl')
   );
+  const [firstOptionList, secondOptionList] = topLevelLists;
   return hasGlobalOptions
     ? {
         globalOptions: listToOptions(firstOptionList),

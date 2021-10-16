@@ -267,6 +267,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['svnrdump', svn.svnrdump],
   ['svnserve', svn.svnserve],
   ['svnsync', svn.svnsync],
+  ['svnversion', svn.svnversion],
   ['sync', gnuCoreutils.sync],
   ['systat', openbsd.systat],
   ['systemctl', systemd.systemctl],

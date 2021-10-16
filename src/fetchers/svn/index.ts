@@ -53,10 +53,10 @@ export const svn = {
       ),
     hasGlobalOptions: false,
   }),
-  // svnversion: buildForCommandWithoutSubcommands('svnversion', {
-  //   buildOptionListURL: (version) =>
-  //     new URL(
-  //       `https://svnbook.red-bean.com/en/${version}/svn.ref.svnversion.re.html`
-  //     ),
-  // }),
+  svnversion: buildForCommandWithoutSubcommands('svnversion', {
+    buildOptionListURL: (version) =>
+      new URL(
+        `https://svnbook.red-bean.com/en/${version}/svn.ref.svnversion.re.html`
+      ),
+  }),
 };
