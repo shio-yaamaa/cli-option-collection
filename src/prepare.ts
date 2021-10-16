@@ -1,23 +1,34 @@
-import path from 'path';
-import decompress from 'decompress';
-import { rmSync, moveSync } from 'fs-extra';
-
 import {
-  download,
+  downloadArchive,
   DOWNLOADS_DIRECTORY,
   fetchDocumentFromURL,
 } from './utils/forFetcher/http';
+import { findAnchorsWithPattern } from './utils/forFetcher/dom';
+import { rmSync } from 'fs-extra';
 
-const decompressTarxz = require('decompress-tarxz');
-
+const CURL_DOWNLOAD_URL = 'https://curl.se/download.html';
 const GNU_COREUTILS_INDEX_URL = 'https://ftp.gnu.org/gnu/coreutils/';
 
 export const prepare = async () => {
+  rmSync(DOWNLOADS_DIRECTORY, { recursive: true, force: true });
   await prepareGNUCoreutils();
+  await prepareCurl();
+};
+
+const prepareCurl = async () => {
+  const document = await fetchDocumentFromURL(new URL(CURL_DOWNLOAD_URL));
+  const downloadContainer = document.querySelector('.download');
+  const anchors =
+    downloadContainer &&
+    findAnchorsWithPattern(downloadContainer, /\.tar\.xz/, null);
+  if (!anchors || anchors.length === 0) {
+    throw new Error('Cannot find download link of curl');
+  }
+  downloadArchive(new URL(anchors[0].href), '.tar.xz', 'curl');
 };
 
 // Download and decompress the latest GNU coreutils from https://ftp.gnu.org/gnu/coreutils/
-// The directory name is download/gnu-coreutils
+// The directory name is downloads/gnu-coreutils
 const prepareGNUCoreutils = async () => {
   const document = await fetchDocumentFromURL(new URL(GNU_COREUTILS_INDEX_URL));
   const anchors = Array.from(document.querySelectorAll('a'));
@@ -37,19 +48,5 @@ const prepareGNUCoreutils = async () => {
   if (!latest) {
     throw new Error('No version available for GNU CoreUtils');
   }
-  const filename = (() => {
-    const split = latest.href.split('/');
-    return split[split.length - 1];
-  })();
-
-  await download(new URL(latest.href), filename);
-  const archivePath = path.resolve(DOWNLOADS_DIRECTORY, filename);
-  await decompress(archivePath, DOWNLOADS_DIRECTORY, {
-    plugins: [decompressTarxz()],
-  });
-  rmSync(archivePath);
-  moveSync(
-    path.resolve(DOWNLOADS_DIRECTORY, filename.replace(/\.tar\.xz$/, '')),
-    path.resolve(DOWNLOADS_DIRECTORY, 'gnu-coreutils')
-  );
+  await downloadArchive(new URL(latest.href), '.tar.xz', 'gnu-coreutils');
 };

@@ -1,0 +1,78 @@
+[
+  {
+    "name": "curl-config",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "ca",
+        "title": "--ca",
+        "description": "Displays the built-in path to the CA cert bundle this libcurl uses."
+      },
+      {
+        "key": "cc",
+        "title": "--cc",
+        "description": "Displays the compiler used to build libcurl."
+      },
+      {
+        "key": "cflags",
+        "title": "--cflags",
+        "description": "Set of compiler options (CFLAGS) to use when compiling files that use libcurl. Currently that is only the include path to the curl include files."
+      },
+      {
+        "key": "checkfor",
+        "title": "--checkfor [version]",
+        "description": "Specify the oldest possible libcurl version string you want, and this script will return 0 if the current installation is new enough or it returns 1 and outputs a text saying that the current version is not new enough. (Added in 7.15.4)"
+      },
+      {
+        "key": "configure",
+        "title": "--configure",
+        "description": "Displays the arguments given to configure when building curl."
+      },
+      {
+        "key": "feature",
+        "title": "--feature",
+        "description": "Lists what particular main features the installed libcurl was built with. At the time of writing, this list may include SSL, KRB4 or IPv6. Do not assume any particular order. The keywords will be separated by newlines. There may be none, one, or several keywords in the list."
+      },
+      {
+        "key": "help",
+        "title": "--help",
+        "description": "Displays the available options."
+      },
+      {
+        "key": "libs",
+        "title": "--libs",
+        "description": "Shows the complete set of libs and other linker options you will need in order to link your application with libcurl."
+      },
+      {
+        "key": "prefix",
+        "title": "--prefix",
+        "description": "This is the prefix used when libcurl was installed. Libcurl is then installed in $prefix/lib and its header files are installed in $prefix/include and so on. The prefix is set with \"configure --prefix\"."
+      },
+      {
+        "key": "protocols",
+        "title": "--protocols",
+        "description": "Lists what particular protocols the installed libcurl was built to support. At the time of writing, this list may include HTTP, HTTPS, FTP, FTPS, FILE, TELNET, LDAP, DICT. Do not assume any particular order. The protocols will be listed using uppercase and are separated by newlines. There may be none, one, or several protocols in the list. (Added in 7.13.0)"
+      },
+      {
+        "key": "ssl-backends",
+        "title": "--ssl-backends",
+        "description": "Lists the SSL backends that were enabled when libcurl was built. It might be no, one or several names. If more than one name, they will appear comma-separated. (Added in 7.58.0)"
+      },
+      {
+        "key": "static-libs",
+        "title": "--static-libs",
+        "description": "Shows the complete set of libs and other linker options you will need in order to link your application with libcurl statically. (Added in 7.17.1)"
+      },
+      {
+        "key": "version",
+        "title": "--version",
+        "description": "Outputs version information about the installed libcurl."
+      },
+      {
+        "key": "vernum",
+        "title": "--vernum",
+        "description": "Outputs version information about the installed libcurl, in numerical mode. This outputs the version number, in hexadecimal, with 8 bits for each part: major, minor, and patch. So that libcurl 7.7.4 would appear as 070704 and libcurl 12.13.14 would appear as 0c0d0e... Note that the initial zero might be omitted. (This option was broken in the 7.15.0 release.)"
+      }
+    ]
+  }
+]

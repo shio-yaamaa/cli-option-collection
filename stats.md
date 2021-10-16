@@ -1,9 +1,9 @@
 
 # Overview
 
-- Number of base commands: 280
-- Number of commands (including subcommands): 922
-- Number of options: 12963
+- Number of base commands: 283
+- Number of commands (including subcommands): 925
+- Number of options: 13292
 
 # Command Rankings
 
@@ -11,31 +11,31 @@
 
 ||Command Name|Count|
 |:--|:--|:--|
-|1|`magick convert`|246|
-|2|`magick mogrify`|242|
-|3|`magick`|241|
-|4|`magick-script`|237|
-|5|`rsync`|191|
-|6|`mysqldump`|160|
-|7|`ffmpeg`|159|
-|8|`mysql`|130|
-|9|`git diff-tree`|123|
-|10|`docker run`|117|
+|1|`curl`|301|
+|2|`magick convert`|246|
+|3|`magick mogrify`|242|
+|4|`magick`|241|
+|5|`magick-script`|237|
+|6|`rsync`|191|
+|7|`mysqldump`|160|
+|8|`ffmpeg`|159|
+|9|`mysql`|130|
+|10|`git diff-tree`|123|
 
 ## Ranking by Number of Short (Single-Letter) Options
 
 ||Command Name|Count|
 |:--|:--|:--|
-|1|`rsync`|50|
-|2|`less`|47|
-|3|`ssh`|44|
-|4|`dir`|40|
-|5|`ls`|40|
-|6|`vdir`|40|
-|7|`nc`|39|
-|8|`mysql`|34|
-|9|`mysqldump`|34|
-|10|`pax`|34|
+|1|`curl`|59|
+|2|`rsync`|50|
+|3|`less`|47|
+|4|`ssh`|44|
+|5|`dir`|40|
+|6|`ls`|40|
+|7|`vdir`|40|
+|8|`nc`|39|
+|9|`mysql`|34|
+|10|`mysqldump`|34|
 
 # Aliases
 
@@ -48,8 +48,8 @@
 |3|`text`|6|
 |4|`add`|4|
 |5|`archive`|4|
-|6|`all-tags`|4|
-|7|`append`|3|
+|6|`append`|4|
+|7|`all-tags`|4|
 |8|`author`|2|
 |9|`all-versions`|1|
 |10|`architecture`|1|
@@ -96,8 +96,8 @@
 |6|`delimiter`|3|
 |7|`driver`|3|
 |8|`details`|3|
-|9|`date`|2|
-|10|`dir`|2|
+|9|`data`|2|
+|10|`date`|2|
 
 ## e
 
@@ -109,10 +109,10 @@
 |4|`no-edit`|2|
 |5|`canonicalize-existing`|2|
 |6|`edges`|1|
-|7|`editor`|1|
-|8|`exclude`|1|
-|9|`email`|1|
-|10|`show-email`|1|
+|7|`referer`|1|
+|8|`editor`|1|
+|9|`exclude`|1|
+|10|`email`|1|
 
 ## f
 
@@ -139,16 +139,16 @@
 |4|`file`|2|
 |5|`gui`|2|
 |6|`generate`|1|
-|7|`goal`|1|
-|8|`gems-first`|1|
-|9|`guides`|1|
-|10|`geometric`|1|
+|7|`globoff`|1|
+|8|`goal`|1|
+|9|`gems-first`|1|
+|10|`guides`|1|
 
 ## h
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`help`|80|
+|1|`help`|81|
 |2|`host`|8|
 |3|`human-readable`|6|
 |4|`no-dereference`|4|
@@ -171,18 +171,19 @@
 |6|`inode`|3|
 |7|`install-dir`|3|
 |8|`regexp-ignore-case`|3|
-|9|`important`|1|
-|10|`invert`|1|
+|9|`include`|2|
+|10|`important`|1|
 
 ## j
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`jobs`|17|
-|2|`join-output`|1|
-|3|`jump-target`|1|
-|4|`syslog`|1|
-|5|`skip-bytes`|1|
+|2|`junk-session-cookies`|1|
+|3|`join-output`|1|
+|4|`jump-target`|1|
+|5|`syslog`|1|
+|6|`skip-bytes`|1|
 
 ## k
 
@@ -192,12 +193,12 @@
 |2|`keep`|4|
 |3|`kibibytes`|3|
 |4|`keep-files`|1|
-|5|`keep-subject`|1|
-|6|`keep-index`|1|
-|7|`no-keep-index`|1|
-|8|`keep-unreachable`|1|
-|9|`killed`|1|
-|10|`dmesg`|1|
+|5|`insecure`|1|
+|6|`keep-subject`|1|
+|7|`keep-index`|1|
+|8|`no-keep-index`|1|
+|9|`keep-unreachable`|1|
+|10|`killed`|1|
 
 ## l
 
@@ -226,8 +227,8 @@
 |6|`canonicalize-missing`|2|
 |7|`ignore-missing`|1|
 |8|`fix-missing`|1|
-|9|`multi`|1|
-|10|`man`|1|
+|9|`max-time`|1|
+|10|`multi`|1|
 
 ## n
 
@@ -248,7 +249,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`output`|15|
+|1|`output`|16|
 |2|`option`|3|
 |3|`server-option`|3|
 |4|`opt`|2|
@@ -283,9 +284,10 @@
 |3|`silent`|3|
 |4|`quick`|3|
 |5|`query`|2|
-|6|`qscale`|1|
-|7|`no-quiet`|1|
-|8|`count`|1|
+|6|`disable`|1|
+|7|`qscale`|1|
+|8|`no-quiet`|1|
+|9|`count`|1|
 
 ## r
 
@@ -307,7 +309,7 @@
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`source`|12|
-|2|`silent`|10|
+|2|`silent`|11|
 |3|`size`|9|
 |4|`strategy`|6|
 |5|`signoff`|5|
@@ -336,7 +338,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`user`|20|
+|1|`user`|21|
 |2|`update-sources`|9|
 |3|`update`|5|
 |4|`patch`|4|
@@ -351,7 +353,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`verbose`|98|
+|1|`verbose`|99|
 |2|`version`|23|
 |3|`volume`|4|
 |4|`show-nonprinting`|2|
@@ -374,8 +376,8 @@
 |6|`workspace`|2|
 |7|`wrappers`|2|
 |8|`wait`|2|
-|9|`web`|1|
-|10|`word-regexp`|1|
+|9|`write-out`|1|
+|10|`web`|1|
 
 ## x
 
@@ -384,13 +386,13 @@
 |1|`one-file-system`|3|
 |2|`exclude`|2|
 |3|`regexp`|1|
-|4|`exclude-type`|1|
-|5|`extended`|1|
-|6|`executables`|1|
-|7|`extcmd`|1|
-|8|`catalog`|1|
-|9|`tabs`|1|
-|10|`lock-all-tables`|1|
+|4|`proxy`|1|
+|5|`exclude-type`|1|
+|6|`extended`|1|
+|7|`executables`|1|
+|8|`extcmd`|1|
+|9|`catalog`|1|
+|10|`tabs`|1|
 
 ## y
 
@@ -399,11 +401,12 @@
 |1|`yes`|2|
 |2|`no-prompt`|2|
 |3|`assume-yes`|1|
-|4|`max-forw-scroll`|1|
-|5|`no-tablespaces`|1|
-|6|`number-int-cols`|1|
-|7|`fuzzy`|1|
-|8|`yydebug`|1|
+|4|`speed-time`|1|
+|5|`max-forw-scroll`|1|
+|6|`no-tablespaces`|1|
+|7|`number-int-cols`|1|
+|8|`fuzzy`|1|
+|9|`yydebug`|1|
 
 ## z
 
@@ -413,9 +416,10 @@
 |2|`zero-terminated`|10|
 |3|`null`|3|
 |4|`elide-empty-files`|1|
-|5|`window`|1|
-|6|`suffix`|1|
-|7|`compress`|1|
+|5|`time-cond`|1|
+|6|`window`|1|
+|7|`suffix`|1|
+|8|`compress`|1|
 
 ## A
 
@@ -425,12 +429,12 @@
 |2|`almost-all`|3|
 |3|`all-databases`|3|
 |4|`show-all`|1|
-|5|`no-ignore-removal`|1|
-|6|`authors-file`|1|
-|7|`SEARCH-SKIP-SCREEN`|1|
-|8|`no-auto-rehash`|1|
-|9|`address-radix`|1|
-|10|`auto-reference`|1|
+|5|`user-agent`|1|
+|6|`no-ignore-removal`|1|
+|7|`authors-file`|1|
+|8|`SEARCH-SKIP-SCREEN`|1|
+|9|`no-auto-rehash`|1|
+|10|`address-radix`|1|
 
 ## B
 
@@ -441,10 +445,11 @@
 |3|`block-size`|3|
 |4|`ignore-backups`|3|
 |5|`databases`|3|
-|6|`auto-buffers`|1|
-|7|`batch`|1|
-|8|`prefix`|1|
-|9|`binaries-only`|1|
+|6|`use-ascii`|1|
+|7|`auto-buffers`|1|
+|8|`batch`|1|
+|9|`prefix`|1|
+|10|`binaries-only`|1|
 
 ## C
 
@@ -454,12 +459,12 @@
 |2|`find-copies`|5|
 |3|`reuse-message`|2|
 |4|`caret`|2|
-|5|`chdir`|1|
-|6|`certificate`|1|
-|7|`ignore-space-change`|1|
-|8|`ignore-whitespace`|1|
-|9|`whitespace`|1|
-|10|`directory`|1|
+|5|`continue-at`|1|
+|6|`chdir`|1|
+|7|`certificate`|1|
+|8|`ignore-space-change`|1|
+|9|`ignore-whitespace`|1|
+|10|`whitespace`|1|
 
 ## D
 
@@ -470,11 +475,11 @@
 |3|`dired`|3|
 |4|`check-development`|2|
 |5|`from-deb`|1|
-|6|`dereference-args`|1|
-|7|`directory`|1|
-|8|`database`|1|
-|9|`delete`|1|
-|10|`ifdef`|1|
+|6|`dump-header`|1|
+|7|`dereference-args`|1|
+|8|`directory`|1|
+|9|`database`|1|
+|10|`delete`|1|
 
 ## E
 
@@ -486,10 +491,10 @@
 |4|`vertical`|2|
 |5|`exact`|2|
 |6|`show-ends`|1|
-|7|`basic-regexp`|1|
-|8|`QUIT-AT-EOF`|1|
-|9|`events`|1|
-|10|`remove-empty-files`|1|
+|7|`cert`|1|
+|8|`basic-regexp`|1|
+|9|`QUIT-AT-EOF`|1|
+|10|`events`|1|
 
 ## F
 
@@ -500,23 +505,24 @@
 |3|`classify`|3|
 |4|`fixed-string`|1|
 |5|`format`|1|
-|6|`filter`|1|
-|7|`field`|1|
-|8|`quit-if-one-screen`|1|
-|9|`directory`|1|
-|10|`fast`|1|
+|6|`form`|1|
+|7|`filter`|1|
+|8|`field`|1|
+|9|`quit-if-one-screen`|1|
+|10|`directory`|1|
 
 ## G
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`no-group`|3|
-|2|`extended-regexp`|1|
-|3|`basic-regexp`|1|
-|4|`groups`|1|
-|5|`HILITE-SEARCH`|1|
-|6|`named-commands`|1|
-|7|`traditional`|1|
+|2|`get`|1|
+|3|`extended-regexp`|1|
+|4|`basic-regexp`|1|
+|5|`groups`|1|
+|6|`HILITE-SEARCH`|1|
+|7|`named-commands`|1|
+|8|`traditional`|1|
 
 ## H
 
@@ -525,13 +531,13 @@
 |1|`dereference-command-line`|3|
 |2|`human`|2|
 |3|`home`|2|
-|4|`si`|1|
-|5|`human-readable`|1|
-|6|`help`|1|
-|7|`highlight-changes`|1|
-|8|`html`|1|
-|9|`hard-links`|1|
-|10|`auto-hosts`|1|
+|4|`header`|1|
+|5|`si`|1|
+|6|`human-readable`|1|
+|7|`help`|1|
+|8|`highlight-changes`|1|
+|9|`html`|1|
+|10|`hard-links`|1|
 
 ## I
 
@@ -540,27 +546,30 @@
 |1|`ignore-matching-lines`|5|
 |2|`ignore`|3|
 |3|`index-names`|1|
-|4|`iso-8601`|1|
-|5|`ignore-dependencies`|1|
-|6|`IGNORE-CASE`|1|
-|7|`ignore-times`|1|
+|4|`head`|1|
+|5|`iso-8601`|1|
+|6|`ignore-dependencies`|1|
+|7|`IGNORE-CASE`|1|
+|8|`ignore-times`|1|
 
 ## J
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`status-column`|1|
-|2|`join-lines`|1|
-|3|`omit-link-times`|1|
+|1|`remote-header-name`|1|
+|2|`status-column`|1|
+|3|`join-lines`|1|
+|4|`omit-link-times`|1|
 
 ## K
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`private-key`|1|
-|2|`quit-on-intr`|1|
-|3|`disable-keys`|1|
-|4|`keep-dirlinks`|1|
+|1|`config`|1|
+|2|`private-key`|1|
+|3|`quit-on-intr`|1|
+|4|`disable-keys`|1|
+|5|`keep-dirlinks`|1|
 
 ## L
 
@@ -569,13 +578,13 @@
 |1|`dereference`|7|
 |2|`logical`|3|
 |3|`follow-link`|2|
-|4|`files-with-matches`|1|
-|5|`name-only`|1|
-|6|`files-without-match`|1|
-|7|`no-lessopen`|1|
-|8|`skip-line-numbers`|1|
-|9|`local`|1|
-|10|`copy-links`|1|
+|4|`location`|1|
+|5|`files-with-matches`|1|
+|6|`name-only`|1|
+|7|`files-without-match`|1|
+|8|`no-lessopen`|1|
+|9|`skip-line-numbers`|1|
+|10|`local`|1|
 
 ## M
 
@@ -583,14 +592,14 @@
 |:--|:--|:--|
 |1|`find-renames`|5|
 |2|`machine`|2|
-|3|`no-mouse`|1|
-|4|`color-output`|1|
-|5|`monochrome-output`|1|
-|6|`LONG-PROMPT`|1|
-|7|`network-timeout`|1|
-|8|`macro-name`|1|
-|9|`remote-option`|1|
-|10|`month-sort`|1|
+|3|`manual`|1|
+|4|`no-mouse`|1|
+|5|`color-output`|1|
+|6|`monochrome-output`|1|
+|7|`LONG-PROMPT`|1|
+|8|`network-timeout`|1|
+|9|`macro-name`|1|
+|10|`remote-option`|1|
 
 ## N
 
@@ -598,24 +607,25 @@
 |:--|:--|:--|
 |1|`literal`|3|
 |2|`no-document`|2|
-|3|`intent-to-add`|1|
-|4|`no-numbered`|1|
-|5|`no-fetch`|1|
-|6|`fields`|1|
-|7|`LINE-NUMBERS`|1|
-|8|`skip-column-names`|1|
-|9|`no-set-names`|1|
-|10|`read-bytes`|1|
+|3|`no-buffer`|1|
+|4|`intent-to-add`|1|
+|5|`no-numbered`|1|
+|6|`no-fetch`|1|
+|7|`fields`|1|
+|8|`LINE-NUMBERS`|1|
+|9|`skip-column-names`|1|
+|10|`no-set-names`|1|
 
 ## O
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`open-files-in-pager`|1|
-|2|`LOG-FILE`|1|
-|3|`format`|1|
-|4|`omit-dir-times`|1|
-|5|`optional`|1|
+|1|`remote-name`|1|
+|2|`open-files-in-pager`|1|
+|3|`LOG-FILE`|1|
+|4|`format`|1|
+|5|`omit-dir-times`|1|
+|6|`optional`|1|
 
 ## P
 
@@ -628,18 +638,19 @@
 |5|`physical`|3|
 |6|`no-dereference`|2|
 |7|`build-profiles`|1|
-|8|`portability`|1|
-|9|`no-pager`|1|
-|10|`prune-tags`|1|
+|8|`ftp-port`|1|
+|9|`portability`|1|
+|10|`no-pager`|1|
 
 ## Q
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`quote-name`|3|
-|2|`QUIET`|1|
-|3|`SILENT`|1|
-|4|`quote-names`|1|
+|2|`quote`|1|
+|3|`QUIET`|1|
+|4|`SILENT`|1|
+|5|`quote-names`|1|
 
 ## R
 
@@ -648,13 +659,13 @@
 |1|`recursive`|16|
 |2|`reverse`|2|
 |3|`requirements`|1|
-|4|`rfc-email`|1|
-|5|`re-sign`|1|
-|6|`raw-input`|1|
-|7|`RAW-CONTROL-CHARS`|1|
-|8|`routines`|1|
-|9|`right-side-refs`|1|
-|10|`relative`|1|
+|4|`remote-time`|1|
+|5|`rfc-email`|1|
+|6|`re-sign`|1|
+|7|`raw-input`|1|
+|8|`RAW-CONTROL-CHARS`|1|
+|9|`routines`|1|
+|10|`right-side-refs`|1|
 
 ## S
 
@@ -664,12 +675,12 @@
 |2|`no-gpg-sign`|8|
 |3|`socket`|8|
 |4|`suffix`|4|
-|5|`separate-dirs`|1|
-|6|`split-string`|1|
-|7|`worktree`|1|
-|8|`staged`|1|
-|9|`since`|1|
-|10|`until`|1|
+|5|`show-error`|1|
+|6|`separate-dirs`|1|
+|7|`split-string`|1|
+|8|`worktree`|1|
+|9|`staged`|1|
+|10|`since`|1|
 
 ## T
 
@@ -680,31 +691,32 @@
 |3|`debug-info`|3|
 |4|`tilde`|2|
 |5|`show-tabs`|1|
-|6|`print-type`|1|
-|7|`tag-file`|1|
-|8|`tab`|1|
-|9|`omit-pagination`|1|
-|10|`temp-dir`|1|
+|6|`upload-file`|1|
+|7|`print-type`|1|
+|8|`tag-file`|1|
+|9|`tab`|1|
+|10|`omit-pagination`|1|
 
 ## U
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`unified`|5|
-|2|`no-unicode`|1|
-|3|`since`|1|
-|4|`until`|1|
-|5|`UNDERLINE-SPECIAL`|1|
-|6|`safe-updates`|1|
-|7|`i-am-a-dummy`|1|
-|8|`atimes`|1|
+|2|`proxy-user`|1|
+|3|`no-unicode`|1|
+|4|`since`|1|
+|5|`until`|1|
+|6|`UNDERLINE-SPECIAL`|1|
+|7|`safe-updates`|1|
+|8|`i-am-a-dummy`|1|
+|9|`atimes`|1|
 
 ## V
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`verbose`|35|
-|2|`version`|14|
+|2|`version`|15|
 |3|`verbose-versions`|1|
 |4|`version-control`|1|
 |5|`version-sort`|1|
@@ -731,18 +743,21 @@
 |2|`dirstat`|5|
 |3|`exclude-from`|3|
 |4|`xml`|2|
-|5|`no-init`|1|
-|6|`xattrs`|1|
-|7|`extra`|1|
+|5|`request`|1|
+|6|`no-init`|1|
+|7|`xattrs`|1|
+|8|`extra`|1|
 
 ## Y
 
 ||Full Name|Count|
 |:--|:--|:--|
+|1|`speed-limit`|1|
 
 ## Z
 
 ||Full Name|Count|
 |:--|:--|:--|
 |1|`context`|5|
+|2|`parallel`|1|
 

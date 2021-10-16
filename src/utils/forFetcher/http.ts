@@ -3,8 +3,11 @@ import fs from 'fs';
 import https from 'https';
 import { exec } from 'child_process';
 import axios from 'axios';
-import { ensureDirSync } from 'fs-extra';
+import { ensureDirSync, rmSync, moveSync } from 'fs-extra';
 import { JSDOM, VirtualConsole } from 'jsdom';
+import decompress from 'decompress';
+
+const decompressTarxz = require('decompress-tarxz');
 
 export const DOWNLOADS_DIRECTORY = path.resolve(process.cwd(), 'downloads');
 
@@ -81,4 +84,33 @@ export const download = async (url: URL, filename: string): Promise<string> => {
         reject(error);
       });
   });
+};
+
+const decompressPlugins = new Map<string, any[]>([
+  ['.tar.xz', [decompressTarxz()]],
+]);
+
+// Download and decompresses an archive.
+// ext: extension (e.g. ".tar.xz")
+export const downloadArchive = async (
+  url: URL,
+  ext: string,
+  filename: string
+) => {
+  const basename = path.basename(url.toString());
+  const basenameWithoutExt = path.basename(url.toString(), ext);
+
+  await download(url, basename);
+
+  const archivePath = path.resolve(DOWNLOADS_DIRECTORY, basename);
+  await decompress(archivePath, DOWNLOADS_DIRECTORY, {
+    plugins: decompressPlugins.get(ext),
+  });
+  rmSync(archivePath);
+
+  // Rename the decompressed directory.
+  moveSync(
+    path.resolve(DOWNLOADS_DIRECTORY, basenameWithoutExt),
+    path.resolve(DOWNLOADS_DIRECTORY, filename)
+  );
 };
