@@ -25,11 +25,11 @@ const commandRankingsMarkdown = (stats: CommandRankings): string =>
   `
 # Command Rankings
 
-## Ranking by Number of Options
+## Ranking by Number of Distinct Options
 
 ||Command Name|Count|
 |:--|:--|:--|
-${stats.optionCountRanking
+${stats.distinctOptionCountRanking
   .map(
     (item, index) =>
       `|${index + 1}|${backtick(item.commandName)}|${item.count}|`
