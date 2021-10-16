@@ -1,0 +1,124 @@
+[
+  {
+    "name": "svnrdump dump",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option FILE:SECTION:OPTION=[VALUE]",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "incremental",
+        "title": "--incremental",
+        "description": "Dump a revision or revision range only as a diff against the previous revision, instead of the default, which is begin a dumped revision range with a complete expansion of all contents of the repository as of that revision."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "password",
+        "title": "--password PASSWD",
+        "description": "Specifies the password to use when authenticating against a Subversion server. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Specifies a particular revision or revision range on which to operate."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Specifies a particular revision or revision range on which to operate."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      },
+      {
+        "key": "username",
+        "title": "--username NAME",
+        "description": "Specifies the username to use when authenticating against a Subversion server. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      }
+    ]
+  },
+  {
+    "name": "svnrdump help",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnrdump load",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "config-option",
+        "title": "--config-option FILE:SECTION:OPTION=[VALUE]",
+        "description": "Sets, for the duration of the command, the value of a runtime configuration option. FILE and SECTION are the runtime configuration file (either config or servers) and the section thereof, respectively, which contain the option whose value you wish to change. OPTION is, of course, the option itself, and VALUE the value (if any) you wish to assign to the option. For example, to temporarily disable the use of the compression in the HTTP protocol, use --config-option=servers:global:http-compression=no. You can use this option multiple times to change multiple option values simultaneously."
+      },
+      {
+        "key": "no-auth-cache",
+        "title": "--no-auth-cache",
+        "description": "Prevents caching of authentication information (e.g., username and password) in the Subversion runtime configuration directories."
+      },
+      {
+        "key": "non-interactive",
+        "title": "--non-interactive",
+        "description": "In the case of an authentication failure or insufficient credentials, prevents prompting for credentials (e.g., username or password). This is useful if you're running Subversion inside an automated script and it's more appropriate to have Subversion fail than to prompt for more information."
+      },
+      {
+        "key": "password",
+        "title": "--password PASSWD",
+        "description": "Specifies the password to use when authenticating against a Subversion server. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Requests that the client print only essential information while performing an operation."
+      },
+      {
+        "key": "trust-server-cert",
+        "title": "--trust-server-cert",
+        "description": "Used with --non-interactive to accept any unknown SSL server certificates without prompting."
+      },
+      {
+        "key": "username",
+        "title": "--username NAME",
+        "description": "Specifies the username to use when authenticating against a Subversion server. If not provided, or if incorrect, Subversion will prompt you for this information as needed."
+      }
+    ]
+  }
+]
