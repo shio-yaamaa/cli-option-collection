@@ -1,0 +1,347 @@
+[
+  {
+    "name": "svnadmin crashtest",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin create",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "bdb-log-keep",
+        "title": "--bdb-log-keep",
+        "description": "(Berkeley DB-specific.) Disable automatic log removal of database logfiles. Having these logfiles around can be convenient if you need to restore from a catastrophic repository failure."
+      },
+      {
+        "key": "bdb-txn-nosync",
+        "title": "--bdb-txn-nosync",
+        "description": "(Berkeley DB-specific.) Disables fsync when committing database transactions. Used with the svnadmin create command to create a Berkeley DB-backed repository with DB_TXN_NOSYNC enabled (which improves speed but has some risks associated with it)."
+      },
+      {
+        "key": "config-dir",
+        "title": "--config-dir DIR",
+        "description": "Instructs Subversion to read configuration information from the specified directory instead of the default location (.subversion in the user's home directory)."
+      },
+      {
+        "key": "fs-type",
+        "title": "--fs-type ARG",
+        "description": "When creating a repository, use ARG as the requested filesyste type. ARG may be either bdb or fsfs."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin deltify",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "memory-cache-size",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "M",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin dump",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "deltas",
+        "title": "--deltas",
+        "description": "When creating a repository dump file, specify changes in versioned properties and file contents as deltas against their previous state."
+      },
+      {
+        "key": "incremental",
+        "title": "--incremental",
+        "description": "Dump a revision only as a diff against the previous revision, instead of the usual fulltext."
+      },
+      {
+        "key": "memory-cache-size",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "M",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin help",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin h",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin ?",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin hotcopy",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "clean-logs",
+        "title": "--clean-logs",
+        "description": "Remove unused Berkeley DB logs."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin list-dblogs",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin list-unused-dblogs",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin load",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "bypass-prop-validation",
+        "title": "--bypass-prop-validation",
+        "description": "When loading a dump file, disable the logic which validates property values."
+      },
+      {
+        "key": "force-uuid",
+        "title": "--force-uuid",
+        "description": "By default, when loading data into a repository that already contains revisions, svnadmin will ignore the UUID from the dump stream. This option will cause the repository's UUID to be set to the UUID from the stream."
+      },
+      {
+        "key": "ignore-uuid",
+        "title": "--ignore-uuid",
+        "description": "By default, when loading data into an empty repository, svnadmin will set the repository's UUID to the UUID from the dump stream. This option will cause the UUID from the stream to be ignored."
+      },
+      {
+        "key": "memory-cache-size",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "M",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "parent-dir",
+        "title": "--parent-dir DIR",
+        "description": "When loading a dump file, root paths at DIR instead of /."
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "use-post-commit-hook",
+        "title": "--use-post-commit-hook",
+        "description": "When loading a dump file, runs the repository's post-commit hook after finalizing each newly loaded revision."
+      },
+      {
+        "key": "use-pre-commit-hook",
+        "title": "--use-pre-commit-hook",
+        "description": "When loading a dump file, runs the repository's pre-commit hook before finalizing each newly loaded revision. If the hook fails, aborts the commit and terminates the load process."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin lslocks",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin lstxns",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin pack",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin recover",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "wait",
+        "title": "--wait",
+        "description": "For operations which require exclusive repository access, wait until the requisite repository lock has been obtained instead of immediately erroring out when it cannot be."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin rmlocks",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin rmtxns",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin setlog",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "bypass-hooks",
+        "title": "--bypass-hooks",
+        "description": "Bypass the repository hook system."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin setrevprop",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      },
+      {
+        "key": "use-post-revprop-change-hook",
+        "title": "--use-post-revprop-change-hook",
+        "description": "When changing a revision property, runs the repository's post-revprop-change hook after changing the revision property."
+      },
+      {
+        "key": "use-pre-revprop-change-hook",
+        "title": "--use-pre-revprop-change-hook",
+        "description": "When changing a revision property, runs the repository's pre-revprop-change hook before changing the revision property. If the hook fails, aborts the modification and terminates."
+      }
+    ]
+  },
+  {
+    "name": "svnadmin setuuid",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin upgrade",
+    "optionStyle": "short-and-long",
+    "options": []
+  },
+  {
+    "name": "svnadmin verify",
+    "optionStyle": "short-and-long",
+    "options": [
+      {
+        "key": "memory-cache-size",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "M",
+        "title": "--memory-cache-size (-M) ARG",
+        "description": "Configures the size (in Megabytes) of the extra in-memory cache used to minimize redundant operations. The default value is 16. (This cache is used for FSFS-backed repositories only.)"
+      },
+      {
+        "key": "quiet",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "q",
+        "title": "--quiet (-q)",
+        "description": "Do not show normal progress—show only errors."
+      },
+      {
+        "key": "revision",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      },
+      {
+        "key": "r",
+        "title": "--revision (-r) ARG",
+        "description": "Specify a particular revision to operate on."
+      }
+    ]
+  }
+]

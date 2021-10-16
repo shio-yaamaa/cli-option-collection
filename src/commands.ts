@@ -261,6 +261,7 @@ export const baseCommandToFetcher = new Map<string, Fetcher>([
   ['suspend', bashBuiltin.suspend],
   ['svc', daemontools.svc],
   ['svn', svn.svn],
+  ['svnadmin', svn.svnadmin],
   ['sync', gnuCoreutils.sync],
   ['systat', openbsd.systat],
   ['systemctl', systemd.systemctl],

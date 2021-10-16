@@ -8,10 +8,14 @@ import { getLatestVersion } from './version';
 
 interface Config {
   buildOptionListURL: (version: string) => URL;
+
+  // If the command has a set of options that are available across all subcommands.
+  hasGlobalOptions: boolean;
 }
 
 export const build = (commandName: string, config: Config): Fetcher => ({
-  fetch: () => fetch(commandName, config.buildOptionListURL),
+  fetch: () =>
+    fetch(commandName, config.buildOptionListURL, config.hasGlobalOptions),
 });
 
 interface SubcommandLocation {
@@ -21,7 +25,8 @@ interface SubcommandLocation {
 
 const fetch = async (
   commandName: string,
-  buildOptionListURL: (version: string) => URL
+  buildOptionListURL: (version: string) => URL,
+  hasGlobalOptions: boolean
 ): Promise<Command[]> => {
   const version = await getLatestVersion();
   if (!version) {
@@ -29,7 +34,10 @@ const fetch = async (
   }
 
   const optionListURL = buildOptionListURL(version);
-  const { globalOptions, localOptions } = await fetchAllOptions(optionListURL);
+  const { globalOptions, localOptions } = await fetchAllOptions(
+    optionListURL,
+    hasGlobalOptions
+  );
   const localOptionMap = new Map<string, Option>(
     localOptions.map((option) => [option.key, option])
   );
@@ -99,19 +107,25 @@ const fetchSubcommands = async (
 // globalOptions: Options that are available with every subcommand
 // localOptions: Options that are only available with subset of subcommands
 const fetchAllOptions = async (
-  url: URL
+  url: URL,
+  hasGlobalOptions: boolean
 ): Promise<{
   globalOptions: Option[];
   localOptions: Option[];
 }> => {
   const document = await fetchDocumentFromURL(url);
-  const [globalOptionList, localOptionList] = Array.from(
+  const [firstOptionList, secondOptionList] = Array.from(
     document.querySelectorAll<HTMLDListElement>('.sect2 > div > dl')
   );
-  return {
-    globalOptions: listToOptions(globalOptionList),
-    localOptions: listToOptions(localOptionList),
-  };
+  return hasGlobalOptions
+    ? {
+        globalOptions: listToOptions(firstOptionList),
+        localOptions: listToOptions(secondOptionList),
+      }
+    : {
+        globalOptions: [],
+        localOptions: listToOptions(firstOptionList),
+      };
 };
 
 const fetchAvailableLocalOptionKeys = async (url: URL): Promise<string[]> => {
