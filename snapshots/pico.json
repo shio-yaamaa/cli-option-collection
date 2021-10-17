@@ -1,0 +1,138 @@
+[
+  {
+    "name": "pico",
+    "optionStyle": "single-dash",
+    "options": [
+      {
+        "key": "a",
+        "title": "-a",
+        "description": "Display all files including those beginning with a period (.)."
+      },
+      {
+        "key": "b",
+        "title": "-b",
+        "description": "Enable the option to Replace text matches found using the \"Where is\" command. This now does nothing. Instead, the option  is  al- ways turned on (as if the -b flag had been specified)."
+      },
+      {
+        "key": "d",
+        "title": "-d",
+        "description": "Rebind  the  \"delete\"  key  so the character the cursor is on is rubbed out rather than the character to its left."
+      },
+      {
+        "key": "e",
+        "title": "-e",
+        "description": "Enable file name completion."
+      },
+      {
+        "key": "f",
+        "title": "-f",
+        "description": "Use function keys for commands.  This option supported  only  in conjunction with UW Enhanced NCSA telnet."
+      },
+      {
+        "key": "h",
+        "title": "-h",
+        "description": "List valid command line options."
+      },
+      {
+        "key": "j",
+        "title": "-j",
+        "description": "Enable  \"Goto\"  command  in  the file browser.  This enables the command to permit explicitly telling pilot  which  directory  to visit."
+      },
+      {
+        "key": "g",
+        "title": "-g",
+        "description": "Enable  \"Show  Cursor\" mode in file browser.  Cause cursor to be positioned before the current selection rather  than  placed  at the lower left of the display."
+      },
+      {
+        "key": "k",
+        "title": "-k",
+        "description": "Causes  \"Cut  Text\" command to remove characters from the cursor position to the end of the line rather than  remove  the  entire line."
+      },
+      {
+        "key": "m",
+        "title": "-m",
+        "description": "Enable  mouse  functionality.   This only works when pico is run from within an X Window System \"xterm\" window."
+      },
+      {
+        "key": "nn",
+        "title": "-nn",
+        "description": "The -nn option enables new mail notification.  The n argument is optional,  and  specifies how often, in seconds, your mailbox is checked for new mail.  For example, -n60 causes  pico  to  check for  new  mail  once  every minute.  The default interval is 180 seconds, while the minimum allowed is 30. (Note:  no  space  be- tween \"n\" and the number)"
+      },
+      {
+        "key": "o",
+        "title": "-o dir Sets",
+        "description": "operating directory.  Only files within this directory are"
+      },
+      {
+        "key": "rn",
+        "title": "-rn",
+        "description": "Sets column used to limit the \"Justify\" command's right margin"
+      },
+      {
+        "key": "s",
+        "title": "-s speller",
+        "description": "Specify an alternate program spell to use when spell checking."
+      },
+      {
+        "key": "t",
+        "title": "-t",
+        "description": "Enable  \"tool\" mode.  Intended for when pico is used as the edi- tor within other tools (e.g., Elm, Pnews).  Pico will not prompt for  save  on  exit,  and  will not rename the buffer during the \"Write Out\" command."
+      },
+      {
+        "key": "v",
+        "title": "-v",
+        "description": "View the file only, disallowing any editing."
+      },
+      {
+        "key": "version",
+        "title": "-version",
+        "description": "Print Pico version and exit."
+      },
+      {
+        "key": "w",
+        "title": "-w",
+        "description": "Disable word wrap (thus allow editing of long lines)."
+      },
+      {
+        "key": "x",
+        "title": "-x",
+        "description": "Disable keymenu at the bottom of the screen."
+      },
+      {
+        "key": "z",
+        "title": "-z",
+        "description": "Enable ^Z suspension of pico."
+      },
+      {
+        "key": "p",
+        "title": "-p",
+        "description": "Preserve the \"start\" and \"stop\" characters, typically Ctrl-Q and Ctrl-S, which are sometimes used in communications paths to con- trol data flow between devices that operate at different speeds."
+      },
+      {
+        "key": "Q",
+        "title": "-Q quotestr",
+        "description": "Set the quote string.  Especially useful when  composing  email, setting this allows the quote string to be checked for when Jus- tifying paragraphs.  A common quote string is \"> \"."
+      },
+      {
+        "key": "W",
+        "title": "-W word_separators",
+        "description": "If characters listed here appear in the middle of  a  word  sur- rounded  by  alphanumeric characters that word is split into two words. This is used by the Forward and  Backward  word  commands and by the spell checker."
+      },
+      {
+        "key": "q",
+        "title": "-q",
+        "description": "Termcap  or  terminfo  definition for input escape sequences are used in preference to sequences defined by default.  This option is only available if pico was compiled with the TERMCAP_WINS de- fine turned on."
+      },
+      {
+        "key": "setlocale_ctype",
+        "title": "-setlocale_ctype",
+        "description": "Do setlocale(LC_CTYPE) if available. Default is to not  do  this setlocale."
+      },
+      {
+        "key": "no_setlocale_collate",
+        "title": "-no_setlocale_collate",
+        "description": "Do  not  do  setlocale(LC_COLLATE). Default is to do this setlo- cale."
+      }
+    ]
+  }
+]

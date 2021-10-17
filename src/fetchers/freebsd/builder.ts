@@ -21,18 +21,19 @@ import { mergeLists } from '../../utils/utils';
 
 interface Config {
   url: URL;
+  optionStyle: OptionStyle;
   optionsHeading: string;
 }
 
 export const build = (commandName: string, config: Config): Fetcher => ({
-  fetch: () => fetch(commandName, config.url, config.optionsHeading),
+  fetch: () =>
+    fetch(commandName, config.url, config.optionStyle, config.optionsHeading),
 });
-
-const OPTION_STYLE = OptionStyle.SHORT_AND_LONG;
 
 const fetch = async (
   commandName: string,
   url: URL,
+  optionStyle: OptionStyle,
   optionsHeading: string
 ): Promise<Command[]> => {
   const document = await fetchDocumentFromURL(url);
@@ -40,17 +41,21 @@ const fetch = async (
   if (!pre) {
     return [];
   }
-  const options = textToOptions(getInnerText(pre), optionsHeading);
+  const options = textToOptions(getInnerText(pre), optionStyle, optionsHeading);
   return [
     {
       name: commandName,
-      optionStyle: OPTION_STYLE,
+      optionStyle: optionStyle,
       options: uniqueOptions(options),
     },
   ];
 };
 
-const textToOptions = (text: string, optionsHeading: string): Option[] => {
+const textToOptions = (
+  text: string,
+  optionStyle: OptionStyle,
+  optionsHeading: string
+): Option[] => {
   const lines = text.split('\n').map((line) => tabToSpace(line, 8));
 
   const optionSectionLines = extractLines(
@@ -59,13 +64,15 @@ const textToOptions = (text: string, optionsHeading: string): Option[] => {
     (line) => countIndentWidth(line) === 0 && line.trim().length > 0
   ).slice(1, -1);
   const listItems = parseTextList(optionSectionLines);
-  return mergeLists(listItems.map((item) => listItemToOptions(item)));
+  return mergeLists(
+    listItems.map((item) => listItemToOptions(item, optionStyle))
+  );
 };
 
-const listItemToOptions = ({
-  titles,
-  descriptionLines,
-}: ListItem): Option[] => {
+const listItemToOptions = (
+  { titles, descriptionLines }: ListItem,
+  optionStyle: OptionStyle
+): Option[] => {
   const title = mergeOptionTitles(titles);
   const description = descriptionLines.join(' ');
   const optionStrings = transformOptionStrings(titles, [
@@ -74,5 +81,5 @@ const listItemToOptions = ({
     trimSpaceDelimitedArguments,
     trimEqualDelimitedArguments,
   ]);
-  return makeOptionList(optionStrings, OPTION_STYLE, title, description);
+  return makeOptionList(optionStrings, optionStyle, title, description);
 };
