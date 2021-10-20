@@ -8,28 +8,28 @@ import { build } from './builder';
 export const mysql = {
   mysql: build('mysql', {
     url: new URL(
-      'https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html'
+      'https://dev.mysql.com/doc/refman/en/mysql-command-options.html'
     ),
   }),
   mysqladmin: build('mysqladmin', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqladmin.html'),
   }),
   mysqlcheck: build('mysqlcheck', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqlcheck.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqlcheck.html'),
   }),
   mysqldump: build('mysqldump', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqldump.html'),
   }),
   mysqlimport: build('mysqlimport', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqlimport.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqlimport.html'),
   }),
   mysqlpump: build('mysqlpump', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqlpump.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqlpump.html'),
   }),
   mysqlshow: build('mysqlshow', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqlshow.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqlshow.html'),
   }),
   mysqlslap: build('mysqlslap', {
-    url: new URL('https://dev.mysql.com/doc/refman/8.0/en/mysqlslap.html'),
+    url: new URL('https://dev.mysql.com/doc/refman/en/mysqlslap.html'),
   }),
 };
