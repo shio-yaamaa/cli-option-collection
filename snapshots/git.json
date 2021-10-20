@@ -3388,6 +3388,11 @@
         "description": "Output an all-zero hash in each patch’s From header instead of the hash of the commit."
       },
       {
+        "key": "base",
+        "title": "--[no-]base[=<commit>]",
+        "description": "Record the base tree information to identify the state the patch series applies to. See the BASE TREE INFORMATION section below for details. If <commit> is \"auto\", a base commit is automatically chosen. The --no-base option overrides a format.useAutoBase configuration."
+      },
+      {
         "key": "root",
         "title": "--root",
         "description": "Treat the revision argument as a <revision range>, even if it is just a single commit (that would normally be treated as a <since>). Note that root commits included in the specified range are always formatted as creation patches, independently of this flag."
@@ -4782,6 +4787,11 @@
         "description": "Pass --verbose to git-fetch and git-merge."
       },
       {
+        "key": "recurse-submodules",
+        "title": "--[no-]recurse-submodules[=yes|on-demand|no]",
+        "description": "This option controls if new commits of populated submodules should be fetched, and if the working trees of active submodules should be updated, too (see git-fetch[1], git-config[1] and gitmodules[5]).\n\nIf the checkout is done via rebase, local submodule commits are rebased as well.\n\nIf the update is done via merge, the submodule conflicts are resolved and checked out."
+      },
+      {
         "key": "commit",
         "title": "--commit, --no-commit",
         "description": "Perform the merge and commit the result. This option can be used to override --no-commit. Only useful when merging.\n\nWith --no-commit perform the merge and stop just before creating a merge commit, to give the user a chance to inspect and further tweak the merge result before committing.\n\nNote that fast-forward updates do not create a merge commit and therefore there is no way to stop those merges with --no-commit. Thus, if you want to ensure your branch is not changed or updated by the merge command, use --no-ff with --no-commit."
@@ -5352,6 +5362,11 @@
         "key": "right-only",
         "title": "--right-only",
         "description": "Suppress commits that are missing from the second specified range (or the \"right range\" when using the <rev1>...<rev2> format)."
+      },
+      {
+        "key": "notes",
+        "title": "--[no-]notes[=<ref>]",
+        "description": "This flag is passed to the git log program (see git-log[1]) that generates the patches."
       }
     ]
   },
@@ -8230,6 +8245,11 @@
       },
       {
         "key": "g",
+        "title": "-g, --reflog[=<n>[, <base>]] [<ref>]",
+        "description": "Shows <n> most recent ref-log entries for the given ref. If <base> is given, <n> entries going back from that entry. <base> can be specified as count or date. When no explicit <ref> parameter is given, it defaults to the current branch (or HEAD if it is detached)."
+      },
+      {
+        "key": "reflog",
         "title": "-g, --reflog[=<n>[, <base>]] [<ref>]",
         "description": "Shows <n> most recent ref-log entries for the given ref. If <base> is given, <n> entries going back from that entry. <base> can be specified as count or date. When no explicit <ref> parameter is given, it defaults to the current branch (or HEAD if it is detached)."
       },

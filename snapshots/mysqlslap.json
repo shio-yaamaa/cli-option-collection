@@ -259,6 +259,21 @@
         "description": "Password to use when connecting to server"
       },
       {
+        "key": "password1",
+        "title": "--password1[=pass_val]",
+        "description": "First multifactor authentication password to use when connecting to server"
+      },
+      {
+        "key": "password2",
+        "title": "--password2[=pass_val]",
+        "description": "Second multifactor authentication password to use when connecting to server"
+      },
+      {
+        "key": "password3",
+        "title": "--password3[=pass_val]",
+        "description": "Third multifactor authentication password to use when connecting to server"
+      },
+      {
         "key": "pipe",
         "title": "--pipe, -W",
         "description": "Connect to server using named pipe (Windows only)"

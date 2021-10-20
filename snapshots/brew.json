@@ -1265,6 +1265,11 @@
         "description": "Search for text in the given database."
       },
       {
+        "key": "archlinux",
+        "title": "--archlinux",
+        "description": "Search for text in the given database."
+      },
+      {
         "key": "debian",
         "title": "--debian",
         "description": "Search for text in the given database."
@@ -1907,6 +1912,11 @@
         "key": "limit",
         "title": "--limit",
         "description": "Limit number of package results returned."
+      },
+      {
+        "key": "start-with",
+        "title": "--start-with",
+        "description": "Letter or word that the list of package results should alphabetically follow."
       }
     ]
   },
