@@ -9,7 +9,8 @@ module.exports = [
     mode: 'development',
     target: 'node',
     entry: {
-      index: './src/index.ts',
+      prepare: './src/prepare.ts',
+      collect: './src/collect.ts',
       preview: './src/preview/start.ts',
       stats: './src/stats/index.ts',
     },
