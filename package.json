@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "run": "node dist/index.js && yarn stats",
+    "prepare-data": "node dist/prepare.js",
+    "collect-all": "node dist/collect.js --mode=all && yarn stats",
+    "collect-some": "node dist/collect.js --mode=some && yarn stats",
     "preview": "node dist/preview.js",
     "stats": "node dist/stats.js",
     "build": "rm -rf ./dist && webpack",
