@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "run": "node dist/index.js && yarn stats",
+    "prepare-data": "node dist/prepare.js",
+    "collect-all": "node dist/collect.js --mode=all && yarn stats",
+    "collect-some": "node dist/collect.js --mode=some && yarn stats",
     "preview": "node dist/preview.js",
     "stats": "node dist/stats.js",
     "build": "rm -rf ./dist && webpack",
@@ -56,6 +58,7 @@
     "parenthesis": "^3.1.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tab-to-space": "^1.0.1"
+    "tab-to-space": "^1.0.1",
+    "yargs": "^17.2.1"
   }
 }

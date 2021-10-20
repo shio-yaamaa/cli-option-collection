@@ -169,6 +169,11 @@
         "description": "Execute the statement and quit"
       },
       {
+        "key": "fido-register-factor",
+        "title": "--fido-register-factor=value",
+        "description": "Multifactor authentication factors for which registration must be done"
+      },
+      {
         "key": "force",
         "title": "--force, -f",
         "description": "Continue even if an SQL error occurs"
@@ -332,6 +337,21 @@
         "key": "p",
         "title": "--password[=password], -p[password]",
         "description": "Password to use when connecting to server"
+      },
+      {
+        "key": "password1",
+        "title": "--password1[=pass_val]",
+        "description": "First multifactor authentication password to use when connecting to server"
+      },
+      {
+        "key": "password2",
+        "title": "--password2[=pass_val]",
+        "description": "Second multifactor authentication password to use when connecting to server"
+      },
+      {
+        "key": "password3",
+        "title": "--password3[=pass_val]",
+        "description": "Third multifactor authentication password to use when connecting to server"
       },
       {
         "key": "pipe",

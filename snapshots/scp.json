@@ -6,7 +6,7 @@
       {
         "key": "3",
         "title": "-3",
-        "description": "Copies between two remote hosts are transferred through the local host. Without this option the data is copied directly between the two remote hosts. Note that, when using the original SCP protocol (the default), this option selects batch mode for the second host as scp cannot ask for passwords or passphrases for both hosts. This mode is the default."
+        "description": "Copies between two remote hosts are transferred through the local host. Without this option the data is copied directly between the two remote hosts. Note that, when using the legacy SCP protocol (via the -O flag), this option selects batch mode for the second host as scp cannot ask for passwords or passphrases for both hosts. This mode is the default."
       },
       {
         "key": "4",
@@ -41,7 +41,7 @@
       {
         "key": "D",
         "title": "-D sftp_server_path",
-        "description": "When using the SFTP protocol support via -s, connect directly to a local SFTP server program rather than a remote one via ssh(1). This option may be useful in debugging the client and server."
+        "description": "When using the SFTP protocol support via -M, connect directly to a local SFTP server program rather than a remote one via ssh(1). This option may be useful in debugging the client and server."
       },
       {
         "key": "F",
@@ -66,7 +66,7 @@
       {
         "key": "O",
         "title": "-O",
-        "description": "Use the original SCP protocol for file transfers instead of the SFTP protocol. Forcing the use of the SCP protocol may be necessary for servers that do not implement SFTP, for backwards-compatibility for particular filename wildcard patterns and for expanding paths with a ‘~’ prefix for older SFTP servers. This mode is the default."
+        "description": "Use the legacy SCP protocol for file transfers instead of the SFTP protocol. Forcing the use of the SCP protocol may be necessary for servers that do not implement SFTP, for backwards-compatibility for particular filename wildcard patterns and for expanding paths with a ‘~’ prefix for older SFTP servers."
       },
       {
         "key": "o",
@@ -102,11 +102,6 @@
         "key": "S",
         "title": "-S program",
         "description": "Name of program to use for the encrypted connection. The program must understand ssh(1) options."
-      },
-      {
-        "key": "s",
-        "title": "-s",
-        "description": "Use the SFTP protocol for transfers rather than the original scp protocol."
       },
       {
         "key": "T",

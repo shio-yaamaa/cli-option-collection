@@ -1330,6 +1330,11 @@
         "key": "no-private",
         "title": "--no-private",
         "description": "Avoid running the command on private workspaces"
+      },
+      {
+        "key": "since",
+        "title": "--since",
+        "description": "Only include workspaces that have been changed since the specified ref."
       }
     ]
   },
@@ -1337,6 +1342,21 @@
     "name": "yarn workspaces list",
     "optionStyle": "short-and-long",
     "options": [
+      {
+        "key": "since",
+        "title": "--since",
+        "description": "Only include workspaces that have been changed since the specified ref."
+      },
+      {
+        "key": "R",
+        "title": "-R, --recursive",
+        "description": "Find packages via dependencies/devDependencies instead of using the workspaces field"
+      },
+      {
+        "key": "recursive",
+        "title": "-R, --recursive",
+        "description": "Find packages via dependencies/devDependencies instead of using the workspaces field"
+      },
       {
         "key": "v",
         "title": "-v, --verbose",

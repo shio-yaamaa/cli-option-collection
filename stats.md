@@ -3,7 +3,7 @@
 
 - Number of base commands: 304
 - Number of commands (including subcommands): 1063
-- Number of options: 15710
+- Number of options: 15744
 
 # Command Rankings
 
@@ -20,7 +20,7 @@
 |7|`ffmpeg`|156|
 |8|`wget`|153|
 |9|`rsync`|144|
-|10|`mysqldump`|123|
+|10|`mysqldump`|126|
 
 ## Ranking by Number of Short (Single-Letter) Options
 
@@ -674,7 +674,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`recursive`|37|
+|1|`recursive`|38|
 |2|`reverse`|2|
 |3|`accept`|2|
 |4|`reject`|2|
