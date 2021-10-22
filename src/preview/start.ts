@@ -1,7 +1,12 @@
 import path from 'path';
+import fs from 'fs';
 import express from 'express';
 
+import { Command } from '../types';
+import { render } from './commands';
+
 const PORT = '3000';
+const BASE_COMMAND_NAME_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
 const app = express();
 
@@ -20,8 +25,21 @@ app.get('/snapshots/:baseCommandName.json', (req, res) => {
   res.sendFile(path.resolve(__dirname, `../snapshots/${baseCommandName}.json`));
 });
 
-app.get('/*', (_req, res) => {
-  res.sendFile(path.resolve(__dirname, 'commands.html'));
+app.get('/:baseCommandName', (req, res) => {
+  const baseCommandName = req.params.baseCommandName;
+  if (!BASE_COMMAND_NAME_PATTERN.test(baseCommandName)) {
+    return res.send('Invalid base command name');
+  }
+
+  const json = JSON.parse(
+    fs
+      .readFileSync(
+        path.resolve(__dirname, `../snapshots/${baseCommandName}.json`)
+      )
+      .toString()
+  );
+  const rendered = render(json as Command[]);
+  res.send(rendered);
 });
 
 app.listen(PORT, () => {
