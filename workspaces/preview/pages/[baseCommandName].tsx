@@ -22,7 +22,9 @@ const CommandsPage = (props: Props) => {
 
 export default CommandsPage;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (
+  context
+) => {
   const baseCommandNameParam = context.params.baseCommandName;
   const baseCommandName = (() => {
     if (typeof baseCommandNameParam === 'string') {

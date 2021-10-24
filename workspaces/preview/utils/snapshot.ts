@@ -1,19 +1,19 @@
-import path from 'path';
 import fs from 'fs';
 
-import { Command } from '../../common/types';
-
-const SNAPSHOTS_PATH = path.resolve(__dirname, `../../../../../snapshots`);
+import { Command } from '../types';
+import { resolveRelativePathFromRoot } from './path';
 
 export const getBaseCommandNamesFromSnapshots = (): string[] => {
-  const filenames = fs.readdirSync(SNAPSHOTS_PATH);
+  const filenames = fs.readdirSync(resolveRelativePathFromRoot('snapshots'));
   return filenames.map((filename) => filename.replace(/\.json$/, ''));
 };
 
 export const getCommandsFromSnapshot = (baseCommandName: string): Command[] => {
   const json = JSON.parse(
     fs
-      .readFileSync(path.resolve(SNAPSHOTS_PATH, `${baseCommandName}.json`))
+      .readFileSync(
+        resolveRelativePathFromRoot(`snapshots/${baseCommandName}.json`)
+      )
       .toString()
   );
   return json as Command[];

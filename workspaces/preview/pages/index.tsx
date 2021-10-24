@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import Layout from '../components/Layout';
 import { getBaseCommandNamesFromSnapshots } from '../utils/snapshot';
-import { escapeHTML } from '../utils/string';
 
 type Props = {
   baseCommandNames: string[];
@@ -32,7 +31,7 @@ const IndexPage = (props: Props) => (
 
 export default IndexPage;
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return {
     props: {
       baseCommandNames: getBaseCommandNamesFromSnapshots(),
