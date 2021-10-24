@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './OptionItem.module.css';
-import { Option } from '../../common/types';
+import { Option } from '../types';
 import { escapeHTML } from '../utils/string';
 
 interface Props {

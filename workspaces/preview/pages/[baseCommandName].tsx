@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 
-import { Command } from '../../common/types';
+import { Command } from '../types';
 import Layout from '../components/Layout';
 import { CommandList } from '../components/CommandList';
 import { getCommandsFromSnapshot } from '../utils/snapshot';

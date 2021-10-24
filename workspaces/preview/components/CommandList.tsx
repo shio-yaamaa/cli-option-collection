@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Command } from '../../types';
+import { Command } from '../types';
 import { CommandItem } from './CommandItem';
 
 interface Props {
