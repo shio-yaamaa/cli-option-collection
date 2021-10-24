@@ -14,7 +14,7 @@ const IndexPage = (props: Props) => (
     <p>
       Access{' '}
       <code>
-        /{escapeHTML('{')}baseCommandName{escapeHTML('}')}
+        /{'{'}baseCommandName{'}'}
       </code>{' '}
       (e.g. <code>/ls</code>) to preview the command's options.
     </p>
