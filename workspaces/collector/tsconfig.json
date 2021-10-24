@@ -10,10 +10,8 @@
     ],
     "outDir": "./dist",
     "moduleResolution": "node",
-    "jsx": "react",
     "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*"]
 }
