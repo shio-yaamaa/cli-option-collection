@@ -25,6 +25,9 @@ const CommandsPage = (props: Props) => {
 
 export default CommandsPage;
 
+// Doing SSG instead of SSR because I couldn't figure out
+// how to add /snapshots directory to the build artifacts
+// so that it can be accessed at runtime.
 export const getStaticPaths: GetStaticPaths = async () => {
   const baseCommandNames = getBaseCommandNamesFromSnapshots();
   return {
