@@ -3,7 +3,7 @@
 
 - Number of base commands: 304
 - Number of commands (including subcommands): 1063
-- Number of options: 15744
+- Number of options: 15764
 
 # Command Rankings
 
@@ -266,7 +266,7 @@
 
 ||Full Name|Count|
 |:--|:--|:--|
-|1|`package`|15|
+|1|`package`|17|
 |2|`http-proxy`|13|
 |3|`patch`|10|
 |4|`password`|9|

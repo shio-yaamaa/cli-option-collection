@@ -1935,8 +1935,8 @@
         "description": "Print what would be done rather than doing it."
       },
       {
-        "key": "write",
-        "title": "--write",
+        "key": "write-only",
+        "title": "--write-only",
         "description": "Make the expected file modifications without taking any Git actions."
       },
       {
@@ -2291,6 +2291,11 @@
         "description": "Target tap repository (default: homebrew/core)."
       },
       {
+        "key": "timeout",
+        "title": "--timeout",
+        "description": "Build timeout (in minutes, default: 60)."
+      },
+      {
         "key": "issue",
         "title": "--issue",
         "description": "If specified, post a comment to this issue number if the job fails."
@@ -2340,6 +2345,11 @@
         "key": "cask",
         "title": "--cask",
         "description": "Treat all named arguments as casks."
+      },
+      {
+        "key": "print-path",
+        "title": "--print-path",
+        "description": "Print the file path to be edited, without opening an editor."
       }
     ]
   },
@@ -2746,6 +2756,11 @@
         "key": "warn-on-upload-failure",
         "title": "--warn-on-upload-failure",
         "description": "Warn instead of raising an error if the bottle upload fails. Useful for repairing bottle uploads that previously failed."
+      },
+      {
+        "key": "upload-only",
+        "title": "--upload-only",
+        "description": "Skip running brew bottle before uploading."
       },
       {
         "key": "committer",

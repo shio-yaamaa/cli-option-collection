@@ -70,12 +70,12 @@
       },
       {
         "key": "u",
-        "title": "-u --user=USERNAME",
+        "title": "-u --user=USERNAME|UID",
         "description": "Show only the processes of a given user"
       },
       {
         "key": "user",
-        "title": "-u --user=USERNAME",
+        "title": "-u --user=USERNAME|UID",
         "description": "Show only the processes of a given user"
       },
       {

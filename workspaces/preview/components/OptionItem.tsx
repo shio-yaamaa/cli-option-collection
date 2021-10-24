@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './OptionItem.css';
-import { Option } from '../../types';
-import { escapeHTML } from '../../utils/string';
+import styles from './OptionItem.module.css';
+import { Option } from '../types';
+import { escapeHTML } from '../utils/string';
 
 interface Props {
   option: Option;
@@ -17,8 +17,8 @@ export const OptionItem: React.VFC<Props> = (props) => {
   return (
     <div>
       <p>
-        <code className="title">{props.option.title}</code>
-        <span className={`type ${optionLengthType}`}>
+        <code className={styles.title}>{props.option.title}</code>
+        <span className={`${styles.type} ${styles[optionLengthType]}`}>
           {optionLengthType.toUpperCase()}
         </span>
         <code>{props.option.key}</code>

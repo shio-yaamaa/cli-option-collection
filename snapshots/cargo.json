@@ -211,6 +211,11 @@
         "description": "Benchmark for the given architecture. The default is the host architecture. The general format of the triple is <arch><sub>-<vendor>-<sys>-<abi>. Run rustc --print target-list for a list of supported targets.\n\nThis may also be specified with the build.target config value.\n\nNote that specifying this flag makes Cargo run in a different mode where the target artifacts are placed in a separate directory. See the build cache documentation for more details."
       },
       {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Benchmark the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
+      },
+      {
         "key": "target-dir",
         "title": "--target-dir directory",
         "description": "Directory for all generated artifacts and intermediate files. May also be specified with the CARGO_TARGET_DIR environment variable, or the build.target-dir config value. Defaults to target in the root of the workspace."
@@ -395,6 +400,11 @@
         "key": "release",
         "title": "--release",
         "description": "Build optimized artifacts with the release profile. See the PROFILES section for details on how this affects profile selection."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Build the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -596,6 +606,11 @@
         "key": "profile",
         "title": "--profile name",
         "description": "Changes check behavior. Currently only test is supported, which will check with the #[cfg(test)] attribute enabled. This is useful to have it check unit tests which are usually excluded via the cfg attribute. This does not change the actual profile used."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Check the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -835,6 +850,16 @@
         "description": "Document all binary targets."
       },
       {
+        "key": "example",
+        "title": "--example name...",
+        "description": "Document the specified example. This flag may be specified multiple times and supports common Unix glob patterns."
+      },
+      {
+        "key": "examples",
+        "title": "--examples",
+        "description": "Document all example targets."
+      },
+      {
         "key": "features",
         "title": "--features features",
         "description": "Space or comma separated list of features to activate. Features of workspace members may be enabled with package-name/feature-name syntax. This flag may be specified multiple times, which enables all specified features."
@@ -858,6 +883,11 @@
         "key": "release",
         "title": "--release",
         "description": "Document optimized artifacts with the release profile. See the PROFILES section for details on how this affects profile selection."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Document the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -1152,6 +1182,11 @@
         "description": "Changes fix behavior. Currently only test is supported, which will fix with the #[cfg(test)] attribute enabled. This is useful to have it fix unit tests which are usually excluded via the cfg attribute. This does not change the actual profile used."
       },
       {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Fix the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
+      },
+      {
         "key": "target-dir",
         "title": "--target-dir directory",
         "description": "Directory for all generated artifacts and intermediate files. May also be specified with the CARGO_TARGET_DIR environment variable, or the build.target-dir config value. Defaults to target in the root of the workspace."
@@ -1281,6 +1316,11 @@
         "key": "release",
         "title": "--release",
         "description": "Run optimized artifacts with the release profile. See the PROFILES section for details on how this affects profile selection."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Run the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -1452,6 +1492,11 @@
         "key": "release",
         "title": "--release",
         "description": "Build optimized artifacts with the release profile. See the PROFILES section for details on how this affects profile selection."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Build the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -1628,6 +1673,11 @@
         "key": "release",
         "title": "--release",
         "description": "Document optimized artifacts with the release profile. See the PROFILES section for details on how this affects profile selection."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Document the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -1829,6 +1879,11 @@
         "key": "release",
         "title": "--release",
         "description": "Test optimized artifacts with the release profile. See the PROFILES section for details on how this affects profile selection."
+      },
+      {
+        "key": "ignore-rust-version",
+        "title": "--ignore-rust-version",
+        "description": "Test the target even if the selected Rust compiler is older than the required Rust version as configured in the project's rust-version field."
       },
       {
         "key": "target-dir",
@@ -2657,7 +2712,7 @@
       {
         "key": "edition",
         "title": "--edition edition",
-        "description": "Specify the Rust edition to use. Default is 2018. Possible values: 2015, 2018, 2021"
+        "description": "Specify the Rust edition to use. Default is 2021. Possible values: 2015, 2018, 2021"
       },
       {
         "key": "name",
@@ -2924,7 +2979,7 @@
       {
         "key": "edition",
         "title": "--edition edition",
-        "description": "Specify the Rust edition to use. Default is 2018. Possible values: 2015, 2018, 2021"
+        "description": "Specify the Rust edition to use. Default is 2021. Possible values: 2015, 2018, 2021"
       },
       {
         "key": "name",
@@ -3282,6 +3337,26 @@
         "description": "Allow working directories with uncommitted VCS changes to be packaged."
       },
       {
+        "key": "p",
+        "title": "-p spec..., --package spec...",
+        "description": "Package only the specified packages. See cargo-pkgid(1) for the SPEC format. This flag may be specified multiple times and supports common Unix glob patterns like *, ? and []. However, to avoid your shell accidentally expanding glob patterns before Cargo handles them, you must use single quotes or double quotes around each pattern."
+      },
+      {
+        "key": "package",
+        "title": "-p spec..., --package spec...",
+        "description": "Package only the specified packages. See cargo-pkgid(1) for the SPEC format. This flag may be specified multiple times and supports common Unix glob patterns like *, ? and []. However, to avoid your shell accidentally expanding glob patterns before Cargo handles them, you must use single quotes or double quotes around each pattern."
+      },
+      {
+        "key": "workspace",
+        "title": "--workspace",
+        "description": "Package all members in the workspace."
+      },
+      {
+        "key": "exclude",
+        "title": "--exclude SPEC...",
+        "description": "Exclude the specified packages. Must be used in conjunction with the --workspace flag. This flag may be specified multiple times and supports common Unix glob patterns like *, ? and []. However, to avoid your shell accidentally expanding glob patterns before Cargo handles them, you must use single quotes or double quotes around each pattern."
+      },
+      {
         "key": "target",
         "title": "--target triple",
         "description": "Package for the given architecture. The default is the host architecture. The general format of the triple is <arch><sub>-<vendor>-<sys>-<abi>. Run rustc --print target-list for a list of supported targets.\n\nThis may also be specified with the build.target config value.\n\nNote that specifying this flag makes Cargo run in a different mode where the target artifacts are placed in a separate directory. See the build cache documentation for more details."
@@ -3411,6 +3486,16 @@
         "key": "registry",
         "title": "--registry registry",
         "description": "Name of the registry to publish to. Registry names are defined in Cargo config files. If not specified, and there is a package.publish field in Cargo.toml with a single registry, then it will publish to that registry. Otherwise it will use the default registry, which is defined by the registry.default config key which defaults to crates-io."
+      },
+      {
+        "key": "p",
+        "title": "-p spec, --package spec",
+        "description": "The package to publish. See cargo-pkgid(1) for the SPEC format."
+      },
+      {
+        "key": "package",
+        "title": "-p spec, --package spec",
+        "description": "The package to publish. See cargo-pkgid(1) for the SPEC format."
       },
       {
         "key": "target",

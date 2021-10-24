@@ -3,17 +3,20 @@
 import fs from 'fs-extra';
 
 import { Command } from './types';
+import { resolveRelativePathFromRoot } from './utils/path';
 
 const buildFilename = (baseCommandName: string): string =>
   `snapshots/${baseCommandName}.json`;
 
 export const readSnapshot = (baseCommandName: string): Command[] => {
   const filename = buildFilename(baseCommandName);
-  return fs.readJSONSync(filename);
+  return fs.readJSONSync(resolveRelativePathFromRoot(filename));
 };
 
 export const writeSnapshot = (baseCommandName: string, commands: Command[]) => {
   const filename = buildFilename(baseCommandName);
-  fs.outputJSONSync(filename, commands, { spaces: 2 });
+  fs.outputJSONSync(resolveRelativePathFromRoot(filename), commands, {
+    spaces: 2,
+  });
   console.log(`Saved ${filename}`);
 };
