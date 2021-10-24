@@ -1,9 +1,12 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Command } from '../types';
 import Layout from '../components/Layout';
 import { CommandList } from '../components/CommandList';
-import { getCommandsFromSnapshot } from '../utils/snapshot';
+import {
+  getBaseCommandNamesFromSnapshots,
+  getCommandsFromSnapshot,
+} from '../utils/snapshot';
 
 const BASE_COMMAND_NAME_PATTERN = /^[A-Za-z][A-Za-z0-9-]*$/;
 
@@ -22,9 +25,22 @@ const CommandsPage = (props: Props) => {
 
 export default CommandsPage;
 
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
-) => {
+// Doing SSG instead of SSR because I couldn't figure out
+// how to add /snapshots directory to the build artifacts
+// so that it can be accessed at runtime.
+export const getStaticPaths: GetStaticPaths = async () => {
+  const baseCommandNames = getBaseCommandNamesFromSnapshots();
+  return {
+    paths: baseCommandNames.map((baseCommandName) => ({
+      params: {
+        baseCommandName,
+      },
+    })),
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const baseCommandNameParam = context.params.baseCommandName;
   const baseCommandName = (() => {
     if (typeof baseCommandNameParam === 'string') {

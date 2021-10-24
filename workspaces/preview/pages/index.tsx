@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
 import Layout from '../components/Layout';
@@ -19,7 +19,7 @@ const IndexPage = (props: Props) => (
     </p>
     <ul>
       {props.baseCommandNames.map((baseCommandName) => (
-        <li>
+        <li key={baseCommandName}>
           <Link href={`/${baseCommandName}`}>
             <a>{baseCommandName}</a>
           </Link>
@@ -31,7 +31,7 @@ const IndexPage = (props: Props) => (
 
 export default IndexPage;
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       baseCommandNames: getBaseCommandNamesFromSnapshots(),
