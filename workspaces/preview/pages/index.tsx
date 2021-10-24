@@ -19,7 +19,7 @@ const IndexPage = (props: Props) => (
     </p>
     <ul>
       {props.baseCommandNames.map((baseCommandName) => (
-        <li>
+        <li key={baseCommandName}>
           <Link href={`/${baseCommandName}`}>
             <a>{baseCommandName}</a>
           </Link>
