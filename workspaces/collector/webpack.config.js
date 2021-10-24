@@ -1,17 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = [
-  // Node
   {
     mode: 'development',
     target: 'node',
     entry: {
       prepare: './src/prepare.ts',
       collect: './src/collect.ts',
-      preview: './src/preview/start.ts',
       stats: './src/stats/index.ts',
     },
     output: {
@@ -36,38 +33,10 @@ module.exports = [
         contextRegExp: /jsdom/,
       }),
     ],
-    externals: [nodeExternals()],
-  },
-  // Client
-  {
-    mode: 'development',
-    target: 'web',
-    entry: {
-      commands: './src/preview/commands.tsx',
-    },
-    output: {
-      filename: '[name].js',
-      path: path.resolve(__dirname, 'dist'),
-    },
-    module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          use: 'ts-loader',
-          exclude: /node_modules/,
-        },
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
-        },
-      ],
-    },
-    resolve: {
-      extensions: ['.ts', '.tsx', '.js'],
-    },
-    plugins: [
-      new CopyPlugin({
-        patterns: [{ from: '*.html', to: '.', context: 'src/preview' }],
+    externals: [
+      nodeExternals(),
+      nodeExternals({
+        modulesDir: path.resolve(__dirname, '../../node_modules'),
       }),
     ],
   },
