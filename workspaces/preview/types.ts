@@ -1,3 +1,5 @@
+// Copied from cli-option-collection/workspaces/collector/src/types.ts
+
 export enum OptionStyle {
   // POSIX (short) + GNU (long) style
   // Example: -v, --version
